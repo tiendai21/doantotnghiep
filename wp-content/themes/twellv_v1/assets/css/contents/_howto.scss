@@ -1,0 +1,785 @@
+.how_to {
+    .breadcrumb {
+        margin: 167px auto 7px 170px;
+
+        @include pc {
+            margin: get_pc(167) auto get_pc(7) get_pc(170);
+        }
+
+        @include sp {
+            margin: get_sp(106) auto get_sp(8) get_sp(11);
+        }
+
+        span {
+            color: #6A6A6A;
+        }
+
+        li {
+            padding: 0;
+        }
+    }
+
+    #how_to {
+        >.inner {
+
+            h1 {
+                content: " ";
+                font-size: 53px;
+                line-height: 76px;
+                letter-spacing: 7.95px;
+                font-weight: bold;
+                color: #FFFFFF;
+                padding: 28px 0 244px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include pc {
+                    @include bgsetup("../images/bg_howto.png", center center, 100% auto, no-repeat);
+                    font-size: get_pc(53);
+                    line-height: get_pc(76);
+                    letter-spacing: get_pc(7.95);
+                    padding: get_pc(28) 0 get_pc(244);
+                }
+
+                @include sp {
+                    @include bgsetup("../images/img_howto.png", center center, 100% auto, no-repeat);
+                    font-size: get_sp(21);
+                    line-height: get_sp(30);
+                    letter-spacing: get_sp(3.15);
+                    padding: get_sp(20) 0 get_sp(79);
+                    top: -10px;
+                    position: relative;
+                }
+
+                &::after {
+                    content: " ";
+                    @include bgsetup("../images/arrow_l.png", center center, 100% auto, no-repeat);
+                    width: 54px;
+                    height: 35px;
+                    display: inline-block;
+                    margin-left: 26px;
+
+                    @include pc {
+                        width: get_pc(54);
+                        height: get_pc(35);
+                        margin-left: get_pc(26);
+                    }
+
+                    @include sp {
+                        width: get_sp(29);
+                        height: get_sp(15);
+                        margin-left: get_sp(8.5);
+                    }
+                }
+
+                &::before {
+                    content: " ";
+                    @include bgsetup("../images/arrow_r.png", center center, 100% auto, no-repeat);
+                    width: 54px;
+                    height: 35px;
+                    display: inline-block;
+                    margin-right: 26px;
+
+                    @include pc {
+                        width: get_pc(54);
+                        height: get_pc(35);
+                        margin-right: get_pc(26);
+                    }
+
+                    @include sp {
+                        width: get_sp(29);
+                        height: get_sp(15);
+                        margin-right: get_sp(8.5);
+                    }
+                }
+            }
+
+            h3 {
+                margin-top: -111px;
+                font-size: 40px;
+                line-height: 58px;
+                letter-spacing: 4px;
+                margin-bottom: 36px;
+                font-weight: bold;
+                color: #004898;
+
+                @include pc {
+                    margin-top: get_pc(-111);
+                    font-size: get_pc(40);
+                    line-height: get_pc(58);
+                    letter-spacing: get_pc(4);
+                    margin-bottom: get_pc(36);
+                }
+
+                @include sp {
+                    margin-top: 0;
+                    font-size: get_sp(20);
+                    line-height: get_sp(29);
+                    letter-spacing: get_sp(2);
+                    margin-bottom: get_sp(31);
+                    margin-left: get_sp(16);
+                }
+            }
+
+            .list_content {
+                @include sp {
+                    padding: 0 get_sp(18) 0 get_sp(22);
+                }
+            }
+
+            .content_1 {
+                max-width: 1082px;
+                height: 1048px;
+                margin: 0 auto 82px;
+                background-color: #F2DB28;
+                border-radius: 52px;
+
+                @include pc {
+                    max-width: get_pc(1082);
+                    height: get_pc(1048);
+                    border-radius: get_pc(52);
+                    margin: 0 auto get_pc(82);
+                }
+
+                @include sp {
+                    max-width: 100%;
+                    height: get_sp(766);
+                    border-radius: get_sp(52);
+                    margin: 0 auto get_sp(82);
+                }
+
+                .inner {
+                    max-width: 1082px;
+                    height: 1048px;
+                    margin: 0 auto;
+                    background-color: #E8F3FF;
+                    border-radius: 52px;
+                    position: relative;
+                    bottom: 16px;
+                    right: 16px;
+                    padding: 71px 46px 40px;
+
+                    @include pc {
+                        max-width: get_pc(1082);
+                        height: get_pc(1048);
+                        border-radius: get_pc(52);
+                        bottom: get_pc(16);
+                        right: get_pc(16);
+                        padding: get_pc(71) get_pc(46) get_pc(40);
+                    }
+
+                    @include sp {
+                        max-width: 100%;
+                        height: get_sp(766);
+                        border-radius: get_sp(52);
+                        bottom: get_sp(6);
+                        right: get_sp(6);
+                        padding: get_sp(20) 0 get_sp(54);
+                    }
+
+                    .tlt_1,
+                    .tlt_2 {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 23px;
+
+                        @include pc {
+                            margin-bottom: get_pc(23);
+                        }
+
+                        @include sp {
+                            display: block;
+                            margin: 0 auto get_sp(20);
+                        }
+
+                        .number {
+                            font-size: 40px;
+                            letter-spacing: 4px;
+                            color: #004898;
+                            border: 2px solid #004898;
+                            width: 95px;
+                            height: 95px;
+                            display: flex;
+                            border-radius: 50%;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 40px;
+
+                            @include pc {
+                                font-size: get_pc(40);
+                                letter-spacing: get_pc(4);
+                                border: get_pc(2) solid #004898;
+                                width: get_pc(95);
+                                height: get_pc(95);
+                                margin-right: get_pc(40);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(24);
+                                letter-spacing: get_sp(2.4);
+                                border: get_sp(2) solid #004898;
+                                width: get_sp(58);
+                                height: get_sp(58);
+                                margin: 0 auto get_sp(19);
+                            }
+                        }
+
+                        span {
+                            font-size: 25px;
+                            color: #004898;
+                            letter-spacing: 2.5px;
+                            font-weight: bold;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                letter-spacing: get_pc(2.5);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(18);
+                                letter-spacing: get_sp(1.8);
+                                margin-bottom: get_sp(10);
+                                display: inline-block;
+                            }
+                        }
+
+                        h4 {
+                            font-size: 34px;
+                            color: #004898;
+                            letter-spacing: 3.4px;
+                            font-weight: bold;
+                            padding: 16px 40px;
+                            box-shadow: 0 3px 6px #00000029;
+                            border: 1px solid #004898;
+                            border-radius: 21px;
+                            margin: 0 24px;
+                            background-color: #FFFFFF;
+
+                            @include pc {
+                                font-size: get_pc(34);
+                                letter-spacing: get_pc(3.4);
+                                padding: get_pc(16) get_pc(40);
+                                border: get_pc(1) solid #004898;
+                                border-radius: get_pc(21);
+                                margin: 0 get_pc(24);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(18);
+                                letter-spacing: get_sp(1.8);
+                                padding: get_sp(11) get_sp(10);
+                                border: get_sp(1) solid #004898;
+                                border-radius: get_sp(21);
+                                margin-right: get_sp(6);
+                            }
+                        }
+                    }
+
+                    .txt {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include sp {
+                            display: flex;
+                        }
+
+                        span {
+                            @include sp {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    .tlt_2 {
+                        margin-left: 135px;
+                        margin-bottom: 58px;
+
+                        @include pc {
+                            margin-left: get_pc(135);
+                            margin-bottom: get_pc(58);
+                        }
+
+                        @include sp {
+                            margin: 0 auto get_sp(30);
+                        }
+
+                        h4 {
+                            @include sp {
+                                padding: get_sp(11) get_sp(28);
+                                margin-right: get_sp(11);
+                            }
+                        }
+                    }
+
+                    .thumb_1 {
+                        width: 345px;
+                        margin: 0 auto 57px;
+                        position: relative;
+
+                        @include pc {
+                            width: get_pc(345);
+                            margin: 0 auto get_pc(57);
+                        }
+
+                        @include sp {
+                            width: get_sp(193);
+                            margin: 0 auto get_sp(54);
+                        }
+
+                        &::after {
+                            content: " ";
+                            @include bgsetup("../images/hand_right.png", center center, 100% auto, no-repeat);
+                            width: 100px;
+                            height: 100px;
+                            position: absolute;
+                            right: -112px;
+                            top: 75px;
+
+                            @include pc {
+                                width: get_pc(100);
+                                height: get_pc(100);
+                                right: get_pc(-112);
+                                top: get_pc(75);
+                            }
+
+                            @include sp {
+                                width: get_sp(61);
+                                height: get_sp(61);
+                                right: get_sp(-74);
+                                top: get_sp(27);
+                            }
+                        }
+                    }
+
+                    .thumb_2 {
+                        width: 345px;
+                        margin: 0 auto;
+                        position: relative;
+
+                        @include pc {
+                            width: get_pc(345);
+                        }
+
+                        @include sp {
+                            width: get_sp(193);
+                        }
+
+                        &::before {
+                            content: " ";
+                            @include bgsetup("../images/hand_left.png", center center, 100% auto, no-repeat);
+                            width: 100px;
+                            height: 100px;
+                            position: absolute;
+                            left: -125px;
+                            bottom: 72px;
+
+                            @include pc {
+                                width: get_pc(100);
+                                height: get_pc(100);
+                                left: get_pc(-125);
+                                bottom: get_pc(72);
+                            }
+
+                            @include sp {
+                                width: get_sp(61);
+                                height: get_sp(61);
+                                left: get_sp(-65);
+                                bottom: get_sp(34);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .content_2 {
+                max-width: 1082px;
+                height: 579px;
+                margin: 0 auto 89px;
+                background-color: #F2DB28;
+                border-radius: 52px;
+
+                @include pc {
+                    max-width: get_pc(1082);
+                    height: get_pc(579);
+                    border-radius: get_pc(52);
+                    margin: 0 auto get_pc(89);
+                }
+
+                @include sp {
+                    max-width: 100%;
+                    height: get_sp(383);
+                    border-radius: get_sp(52);
+                    margin: 0 auto get_sp(51);
+                }
+
+                .inner {
+                    max-width: 1082px;
+                    height: 579px;
+                    margin: 0 auto;
+                    background-color: #E8F3FF;
+                    border-radius: 52px;
+                    position: relative;
+                    bottom: 16px;
+                    right: 16px;
+                    padding: 71px 46px 149px;
+
+                    @include pc {
+                        max-width: get_pc(1082);
+                        height: get_pc(579);
+                        border-radius: get_pc(52);
+                        bottom: get_pc(16);
+                        right: get_pc(16);
+                        padding: get_pc(71) get_pc(46) get_pc(149);
+                    }
+
+                    @include sp {
+                        max-width: 100%;
+                        height: get_sp(383);
+                        border-radius: get_sp(52);
+                        bottom: get_sp(6);
+                        right: get_sp(6);
+                        padding: get_sp(20) 0 get_sp(95);
+                    }
+
+                    .tlt_1 {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 38px;
+
+                        @include pc {
+                            margin-bottom: get_pc(38);
+                        }
+
+                        @include sp {
+                            display: block;
+                            margin-bottom: get_sp(28);
+                        }
+
+                        .number {
+                            font-size: 40px;
+                            letter-spacing: 4px;
+                            color: #004898;
+                            border: 2px solid #004898;
+                            width: 95px;
+                            height: 95px;
+                            display: flex;
+                            border-radius: 50%;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 40px;
+
+                            @include pc {
+                                font-size: get_pc(40);
+                                letter-spacing: get_pc(4);
+                                border: get_pc(2) solid #004898;
+                                width: get_pc(95);
+                                height: get_pc(95);
+                                margin-right: get_pc(40);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(24);
+                                letter-spacing: get_sp(2.4);
+                                border: get_sp(2) solid #004898;
+                                width: get_sp(58);
+                                height: get_sp(58);
+                                margin: 0 auto get_sp(19);
+                            }
+                        }
+
+                        span {
+                            font-size: 25px;
+                            color: #004898;
+                            letter-spacing: 2.5px;
+                            font-weight: bold;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                letter-spacing: get_pc(2.5);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(18);
+                                letter-spacing: get_sp(1.8);
+                                margin-bottom: 0;
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    .thumb {
+                        width: 437px;
+                        margin: 0 auto;
+                        position: relative;
+
+                        @include pc {
+                            width: get_pc(437);
+                        }
+
+                        @include sp {
+                            width: get_sp(265);
+                        }
+
+                        &::before {
+                            content: " ";
+                            @include bgsetup("../images/hand_right.png", center center, 100% auto, no-repeat);
+                            width: 100px;
+                            height: 100px;
+                            position: absolute;
+                            right: -55px;
+                            bottom: -80px;
+
+                            @include pc {
+                                width: get_pc(100);
+                                height: get_pc(100);
+                                right: get_pc(-55);
+                                bottom: get_pc(-80);
+                            }
+
+                            @include sp {
+                                width: get_sp(61);
+                                height: get_sp(61);
+                                right: get_sp(-34);
+                                bottom: get_sp(-48);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content_3 {
+                max-width: 1082px;
+                height: 579px;
+                margin: 0 auto 89px;
+                background-color: #F2DB28;
+                border-radius: 52px;
+
+                @include pc {
+                    max-width: get_pc(1082);
+                    height: get_pc(579);
+                    border-radius: get_pc(52);
+                    margin: 0 auto get_pc(89);
+                }
+
+                @include sp {
+                    max-width: 100%;
+                    height: get_sp(511);
+                    border-radius: get_sp(52);
+                    margin: 0 auto get_sp(52);
+                }
+
+                .inner {
+                    max-width: 1082px;
+                    height: 579px;
+                    margin: 0 auto;
+                    background-color: #E8F3FF;
+                    border-radius: 52px;
+                    position: relative;
+                    bottom: 16px;
+                    right: 16px;
+                    padding: 71px 46px 149px;
+
+                    @include pc {
+                        max-width: get_pc(1082);
+                        height: get_pc(579);
+                        border-radius: get_pc(52);
+                        bottom: get_pc(16);
+                        right: get_pc(16);
+                        padding: get_pc(71) get_pc(46) get_pc(149);
+                    }
+
+                    @include sp {
+                        max-width: 100%;
+                        height: get_sp(511);
+                        border-radius: get_sp(52);
+                        bottom: get_sp(6);
+                        right: get_sp(6);
+                        padding: get_sp(50) 0 get_sp(66);
+                    }
+
+                    .tlt_1,
+                    .tlt_2 {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 8px;
+
+                        @include pc {
+                            margin-bottom: get_pc(8);
+                        }
+
+                        @include sp {
+                            display: block;
+                            margin-bottom: get_sp(14);
+                        }
+
+                        .number {
+                            font-size: 40px;
+                            letter-spacing: 4px;
+                            color: #004898;
+                            border: 2px solid #004898;
+                            width: 95px;
+                            height: 95px;
+                            display: flex;
+                            border-radius: 50%;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 40px;
+
+                            @include pc {
+                                font-size: get_pc(40);
+                                letter-spacing: get_pc(4);
+                                border: get_pc(2) solid #004898;
+                                width: get_pc(95);
+                                height: get_pc(95);
+                                margin-right: get_pc(40);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(24);
+                                letter-spacing: get_sp(2.4);
+                                border: get_sp(2) solid #004898;
+                                width: get_sp(58);
+                                height: get_sp(58);
+                                margin: 0 auto get_sp(22);
+                            }
+                        }
+
+                        span {
+                            font-size: 25px;
+                            color: #004898;
+                            letter-spacing: 2.5px;
+                            font-weight: bold;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                letter-spacing: get_pc(2.5);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(18);
+                                letter-spacing: get_sp(1.8);
+                                margin-bottom: get_sp(6);
+                                display: inline-block;
+                            }
+                        }
+
+                        h4 {
+                            font-size: 34px;
+                            color: #004898;
+                            letter-spacing: 3.4px;
+                            font-weight: bold;
+                            padding: 16px 47px;
+                            box-shadow: 0 3px 6px #00000029;
+                            border: 1px solid #004898;
+                            border-radius: 21px;
+                            margin: 0 24px;
+
+                            @include pc {
+                                font-size: get_pc(34);
+                                letter-spacing: get_pc(3.4);
+                                padding: get_pc(16) get_pc(47);
+                                border: get_pc(1) solid #004898;
+                                border-radius: get_pc(21);
+                                margin: 0 get_pc(24);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(18);
+                                letter-spacing: get_sp(1.8);
+                                padding: get_sp(11) 0;
+                                border: get_sp(1) solid #004898;
+                                border-radius: get_sp(21);
+                                margin: 0 auto get_sp(14);
+                                width: get_sp(189);
+                            }
+                        }
+                    }
+
+                    .tlt_2 {
+                        margin-left: 135px;
+                        margin-bottom: 38px;
+
+                        @include pc {
+                            margin-left: get_pc(135);
+                            margin-bottom: get_pc(38);
+                        }
+
+                        @include sp {
+                            margin-left: get_sp(40);
+                            margin-bottom: get_sp(18.5);
+                        }
+                    }
+
+                    .thumb {
+                        width: 534px;
+                        margin: 0 auto;
+                        position: relative;
+
+                        @include pc {
+                            width: get_pc(534);
+                        }
+
+                        @include sp {
+                            width: get_sp(330);
+                        }
+
+                        &::before {
+                            content: " ";
+                            @include bgsetup("../images/hand_right.png", center center, 100% auto, no-repeat);
+                            width: 100px;
+                            height: 100px;
+                            position: absolute;
+                            right: -108px;
+                            bottom: 34px;
+
+                            @include pc {
+                                width: get_pc(100);
+                                height: get_pc(100);
+                                right: get_pc(-108);
+                                bottom: get_pc(34);
+                            }
+
+                            @include sp {
+                                width: get_sp(61);
+                                height: get_sp(61);
+                                right: get_sp(6);
+                                bottom: get_sp(-56);
+                            }
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                content: " ";
+                font-size: 51px;
+                line-height: 74px;
+                letter-spacing: 7.65px;
+                font-weight: bold;
+                padding: 269px 0 75px;
+                margin-bottom: 73px;
+                color: #FFFFFF;
+
+                @include pc {
+                    @include bgsetup("../images/bg_bottom_howto_pc.png", center center, 100% auto, no-repeat);
+                    font-size: get_pc(51);
+                    line-height: get_pc(74);
+                    letter-spacing: get_pc(7.65);
+                    padding: get_pc(269) 0 get_pc(75);
+                    margin-bottom: get_pc(73);
+                }
+
+                @include sp {
+                    @include bgsetup("../images/bg_howto_sp.png", center center, 100% auto, no-repeat);
+                    font-size: get_sp(21);
+                    line-height: get_sp(30);
+                    letter-spacing: get_sp(3.15);
+                    padding: get_sp(52) 0 get_sp(15);
+                    margin-bottom: get_sp(26);
+                }
+            }
+        }
+    }
+}

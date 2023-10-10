@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8cade423-b777-4754-9507-fd9940e45255" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2127843245">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.13" value="6" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="htaccess" value="1" />
+          <entry key="html" value="3" />
+          <entry key="js" value="8" />
+          <entry key="php" value="86" />
+          <entry key="scss" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="3" />
+          <entry key="JavaScript" value="8" />
+          <entry key="PHP" value="86" />
+          <entry key="SCSS" value="12" />
+          <entry key="htaccess" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="htaccess" value="1" />
+          <entry key="php" value="1602" />
+          <entry key="scss" value="99" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="4" />
+          <entry key="PHP" value="1598" />
+          <entry key="SCSS" value="99" />
+          <entry key="htaccess" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/front-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/other_top.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-end-line="51" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_top.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1110">
+              <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/archive-program.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3600">
+              <caret line="240" column="114" selection-start-line="240" selection-start-column="114" selection-end-line="240" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/program_air_top.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="150" column="12" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/single-program.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1035">
+              <caret line="69" column="48" selection-start-line="69" selection-end-line="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/program/program_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="915">
+              <caret line="61" selection-start-line="61" selection-end-line="61" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/common/header_content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>program_category</find>
+      <find>.item_slide</find>
+      <find>program_slide</find>
+      <find>.content_bottom</find>
+      <find>scrollSection</find>
+      <find>btn_watch</find>
+      <find>bs12_footer_scroll_pagetop</find>
+      <find>$html</find>
+      <find>modal</find>
+      <find>#modal</find>
+      <find>class=&quot;wrapper_modal&quot;</find>
+      <find>通販</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/index.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template_parts/banner_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template_parts/home/banner_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/notice_top.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/banner_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/brand_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/brow_history.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/program_air.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/single-news.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/news_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/ranking_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/ranking_inner.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/innerblock.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/templates-program.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/all.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/category-dorama.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/category-korea.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/rank_item.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/other_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/modules/_ui.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_list.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_release.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/add/add_info.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/common/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/theme-setup.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/common/footer_content.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/modal_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/base/_style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/ranking.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/pr_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/modal_program_air_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/program_air_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_china_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_korean_top.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/add/add_news.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/seo/category_famous_list.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/archive-program.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/contents/_list_program.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/single-program.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/program/program_list.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/wp-content/plugins/acf-code-field/js/codemirror-5.23.0/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="1440" />
+    <option name="height" value="825" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+              <item name="add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+              <item name="program" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+              <item name="ranking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wp_twellv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_twellv" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="twellv_v1" type="462c0819:PsiDirectoryNode" />
+              <item name="template-parts" type="462c0819:PsiDirectoryNode" />
+              <item name="seo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/inc" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/top" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/add" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/mod" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cade423-b777-4754-9507-fd9940e45255" name="Default Changelist" comment="" />
+      <created>1695870879227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695870879227</updated>
+      <workItem from="1695870880589" duration="2550000" />
+      <workItem from="1695882701779" duration="7024000" />
+      <workItem from="1695952042073" duration="15628000" />
+      <workItem from="1696209518993" duration="8000" />
+      <workItem from="1696211375764" duration="9604000" />
+      <workItem from="1696297167219" duration="13124000" />
+      <workItem from="1696390004383" duration="6423000" />
+      <workItem from="1696471654349" duration="8039000" />
+      <workItem from="1696572234212" duration="2570000" />
+      <workItem from="1696589055568" duration="104000" />
+      <workItem from="1696645546527" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="65085000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1440" height="825" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24391988" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/single.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/page.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/index.html" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/404.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/notice_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/clean_head.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret column="4281" lean-forward="true" selection-start-column="4281" selection-end-column="4281" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/banner_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/templates-common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/single-news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/brow_history.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/category_dorama.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/category_korea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/rank_item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/brand_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/modules/_ui.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="841" lean-forward="true" selection-start-line="841" selection-end-line="841" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_release.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/add/add_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/common/head_gtm.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/theme-setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="410" column="3" lean-forward="true" selection-start-line="410" selection-start-column="3" selection-end-line="410" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/common/footer_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="68" column="78" lean-forward="true" selection-start-line="68" selection-start-column="78" selection-end-line="68" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/templates-program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7483">
+          <caret line="142" column="67" selection-start-line="142" selection-start-column="67" selection-end-line="142" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/base/_style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="1847" lean-forward="true" selection-start-line="1847" selection-end-line="1847" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/pr_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/ranking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/ranking/all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="5" column="68" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_korean_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_china_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/modal_program_air_top.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/add/add_news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/seo/category_famous_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/assets/css/contents/_list_program.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/taxonomy-program_cat.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/other_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/recommend_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/archive-program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3600">
+          <caret line="240" column="114" selection-start-line="240" selection-start-column="114" selection-end-line="240" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/single-program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="48" selection-start-line="69" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/program/program_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/news/news_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" selection-start-line="61" selection-end-line="61" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/inc/common/header_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/twellv_v1/template-parts/home/program_air_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="150" column="12" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

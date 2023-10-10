@@ -1,0 +1,504 @@
+.program_schedule {
+    #main {
+        overflow-x: hidden;
+
+        @include sp {
+            margin-top: get_sp(100);
+        }
+
+        @include pc {
+            margin-top: get_pc(160);
+        }
+    }
+}
+
+#schedule {
+    width: 100%;
+    margin-top: 160px;
+
+    @include pc {
+        margin-top: get_pc(160);
+    }
+
+    @include sp {
+        margin-top: get_sp(88);
+    }
+
+    .header_section {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: 160px;
+
+        @include pc {
+            top: get_pc(160);
+        }
+
+        @include sp {
+            top: get_sp(99);
+        }
+    }
+
+    .tlt_section {
+        width: 100%;
+        height: 80px;
+        background-color: #004898;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+
+        @include pc {
+            height: get_pc(80);
+        }
+
+        @include sp {
+            height: get_sp(38);
+            padding-left: get_sp(30);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 35px;
+            line-height: 80px;
+            letter-spacing: 1.75px;
+            position: relative;
+
+            @include pc {
+                font-size: get_pc(35);
+                line-height: get_pc(80);
+                letter-spacing: get_pc(1.75);
+            }
+
+            @include sp {
+                font-size: get_sp(16);
+                line-height: get_sp(38);
+                letter-spacing: get_sp(1.6);
+            }
+
+            &::before {
+                content: "";
+                @include bgsetup("../images/icon_calendar.svg", center center, 100% auto, no-repeat);
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: -50px;
+                top: 25px;
+
+                @include pc {
+                    width: get_pc(35);
+                    height: get_pc(35);
+                    left: get_pc(-50);
+                    top: get_pc(25)
+                }
+
+                @include sp {
+                    width: get_sp(18);
+                    height: get_sp(18);
+                    left: get_sp(-23);
+                    top: get_sp(10);
+                }
+            }
+        }
+
+        span {
+            display: block;
+            width: 70px;
+            height: 32px;
+            background-color: #0B326E;
+            border-radius: 16px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            line-height: 29px;
+            color: #fff;
+            margin-left: 30px;
+            margin-top: 8px;
+            position: relative;
+            padding-right: 10px;
+
+            @include pc {
+                max-width: get_pc(98);
+                height: get_pc(32);
+                border-radius: get_pc(16);
+                font-size: get_pc(20);
+                letter-spacing: get_pc(2);
+                line-height: get_pc(29);
+                margin-left: get_pc(30);
+                margin-top: get_pc(8);
+                padding-right: get_pc(10);
+            }
+
+            @include sp {
+                max-width: get_sp(56);
+                height: get_sp(16);
+                border-radius: get_sp(16);
+                font-size: get_sp(11);
+                letter-spacing: get_sp(1.1);
+                line-height: get_sp(16);
+                margin-left: get_sp(5);
+                margin-top: get_sp(2);
+                padding-right: get_sp(6);
+            }
+
+            &::after {
+                content: "";
+                @include bgsetup("../images/arrow_slide_l.svg", center center, 100% auto, no-repeat);
+                width: 12px;
+                height: 15px;
+                position: absolute;
+                right: 9px;
+                top: 7px;
+                transform: rotate(-90deg);
+
+                @include pc {
+                    width: get_pc(15);
+                    height: get_pc(15);
+                    right: get_pc(9);
+                    top: get_pc(7);
+                }
+
+                @include sp {
+                    width: get_sp(10);
+                    height: get_sp(10);
+                    right: get_sp(5);
+                    top: get_sp(2);
+                }
+            }
+        }
+    }
+
+    .list_date {
+        display: flex;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 3px 6px #00000029;
+
+        i {
+            color: #fff;
+            font-size: 60px;
+            line-height: 80px;
+            width: 60px;
+            height: 80px;
+            background-color: #699BD3;
+
+            @include pc {
+                width: get_pc(60);
+                height: get_pc(80);
+                font-size: get_pc(60);
+                line-height: get_pc(80);
+            }
+
+            @include sp {
+                width: get_sp(42);
+                height: get_sp(50);
+                font-size: get_sp(30);
+                line-height: get_sp(50);
+            }
+        }
+
+        .inner {
+            width: 100%;
+            display: flex;
+
+            h3 {
+                height: 80px;
+                width: 14.3%;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 80px;
+                color: #000;
+                border: 1px solid #92bceb;
+
+                @include pc {
+                    height: get_pc(80);
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(80);
+                }
+
+                @include sp {
+                    width: 100%;
+                    height: get_sp(50);
+                    font-size: get_sp(18);
+                    letter-spacing: get_sp(1.8);
+                    line-height: get_sp(50);
+                }
+            }
+        }
+    }
+
+    .content_section {
+        display: flex;
+        width: 100%;
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 0.9px;
+            color: #004898;
+            font-family: "Noto Sans CJK JP";
+            font-weight: bold;
+            width: 64px;
+            background-color: #fff;
+            border: 1px solid #92bceb;
+            padding-top: 16px;
+
+            @include pc {
+                font-size: get_pc(18);
+                line-height: get_pc(25);
+                letter-spacing: get_pc(0.9);
+                width: get_pc(64);
+                padding-top: get_pc(16);
+            }
+        }
+
+        .list_content {
+            width: 100%;
+            display: flex;
+
+            .item_content {
+                border: 1px solid #92bceb;
+                width: 14.3%;
+
+                @include sp {
+                    width: 100%;
+                    padding: get_sp(31) get_sp(26);
+                }
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: #004898;
+                    font-family: "Noto Sans CJK JP";
+                    font-weight: bold;
+                    text-align: left;
+                    padding: 16px 20px 8px 20px;
+
+                    @include pc {
+                        font-size: get_pc(20);
+                        line-height: get_pc(25);
+                        padding: get_pc(16) get_pc(20) get_pc(8) get_pc(20);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(20);
+                        line-height: get_sp(28);
+                        letter-spacing: get_sp(2);
+                        padding: 0 0 get_sp(8);
+
+                    }
+                }
+
+                .tlt_content {
+                    font-size: 19px;
+                    line-height: 29px;
+                    text-align: left;
+                    font-weight: bold;
+                    letter-spacing: -0.5px;
+                    padding: 0 20px 18px;
+
+                    @include pc {
+                        font-size: get_pc(19);
+                        line-height: get_pc(29);
+                        padding: 0 get_pc(20) get_pc(18);
+                        letter-spacing: get_pc(-0.5);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(19);
+                        line-height: get_sp(29);
+                        padding: 0 0 get_sp(8);
+                        letter-spacing: get_sp(-0.5);
+                    }
+                }
+
+                .desp_content {
+                    font-size: 15px;
+                    line-height: 25px;
+                    letter-spacing: 0.8px;
+                    color: #000;
+                    text-align: left;
+                    padding: 0 20px 8px;
+
+                    @include pc {
+                        font-size: get_pc(15);
+                        line-height: get_pc(25);
+                        padding: 0 get_pc(20) get_pc(8);
+                        letter-spacing: get_pc(0.8);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(15);
+                        line-height: get_sp(25);
+                        padding: 0 0 get_sp(21);
+                        letter-spacing: get_sp(0.8);
+                    }
+                }
+
+                .thumb {
+                    img {
+                        width: 220px;
+                        height: 175px;
+                        object-fit: cover;
+                        padding-bottom: 18px;
+
+                        @include pc {
+                            width: get_pc(220);
+                            height: get_pc(175);
+                            padding-bottom: get_pc(18);
+                        }
+
+                        @include sp {
+                            width: get_sp(340);
+                            height: get_sp(200);
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content_section_2 {
+        background-color: #E8F3FF;
+
+        span {
+            background-color: #E8F3FF;
+        }
+    }
+
+    .btn_watch {
+        text-align: center;
+
+        a {
+            @include bgsetup("../images/btn_watch.svg", center center, 100% auto, no-repeat);
+            width: 554px;
+            margin: 0 auto 29px;
+            height: 86px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 65px;
+            color: #000000;
+            font-size: 25px;
+            letter-spacing: 1.25px;
+            line-height: 36px;
+            font-weight: bold;
+
+            @include sp {
+                width: get_sp(370);
+                padding: 0 get_sp(8);
+                margin: get_sp(10) auto get_sp(14);
+                height: get_sp(56);
+                padding-left: get_sp(69);
+                font-size: get_sp(17);
+                letter-spacing: get_sp(1.7);
+                line-height: get_sp(25);
+            }
+        }
+    }
+
+    .item_brand {
+        display: flex;
+        margin: 28px auto 100px;
+        justify-content: center;
+
+        @include pc {
+            margin: get_pc(28) auto get_pc(100);
+        }
+
+        @include sp {
+            margin: 0 0 get_sp(30);
+        }
+
+        .thumb {
+            width: 522px;
+            height: 216px;
+
+            @include pc {
+                width: get_pc(522);
+                height: get_pc(216);
+            }
+
+            @include sp {
+                width: get_sp(185);
+                height: get_sp(90);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .txt_desp {
+            background-color: #F2F2F2;
+            border-radius: 0 32px 32px 0;
+            padding: 50px 45px 30px 25px;
+            text-align: left;
+            color: #000000;
+            width: 1050px;
+            height: 216px;
+
+            @include pc {
+                border-radius: 0 get_pc(32) get_pc(32) 0;
+                padding: get_pc(50) get_pc(45) get_pc(30) get_pc(45);
+                width: get_pc(1050);
+                height: get_pc(216);
+            }
+
+            @include sp {
+                border-radius: 0;
+                padding: get_sp(11) get_sp(13) get_sp(11) get_sp(12);
+                width: get_sp(210);
+                height: get_sp(90);
+            }
+
+            h3 {
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 36px;
+                font-weight: bold;
+                margin-bottom: 14px;
+                @include txtClamp(1);
+
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(36);
+                    margin-bottom: get_pc(14);
+                }
+
+                @include sp {
+                    font-size: get_sp(16);
+                    line-height: get_sp(24);
+                    letter-spacing: get_sp(1);
+                    margin-bottom: get_sp(4);
+                }
+            }
+
+            p {
+                font-size: 20px;
+                letter-spacing: 2px;
+                line-height: 29px;
+                width: 944px;
+                font-weight: 600;
+
+                @include pc {
+                    font-size: get_pc(20);
+                    letter-spacing: get_pc(2);
+                    line-height: get_pc(29);
+                    width: get_pc(944);
+                }
+
+                @include sp {
+                    font-size: get_sp(14);
+                    line-height: get_sp(20);
+                    letter-spacing: get_sp(1.4);
+                    width: get_sp(185);
+                }
+            }
+        }
+    }
+}

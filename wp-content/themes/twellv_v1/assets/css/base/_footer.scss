@@ -1,0 +1,328 @@
+/*
+    footer
+*/
+footer {
+    background-color: #16345A;
+
+    .inner {
+        .content_footer {
+            max-width: 1475px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 70px 0 74px;
+
+            @include pc {
+                max-width: get_pc(1475);
+                padding: get_pc(70) 0 get_pc(74);
+            }
+
+            @include sp {
+                max-width: 100%;
+                padding: get_sp(13) 0;
+            }
+        }
+
+        a {
+            color: #FFFFFF;
+            text-align: left;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #FFFFFF;
+            font-size: 20px;
+            letter-spacing: 3px;
+            line-height: 30px;
+            font-weight: bold;
+            display: inline-block;
+            padding-bottom: 13px;
+            margin-bottom: 21.5px;
+            border-bottom: 1px solid #ffffff;
+
+            @include pc {
+                font-size: get_pc(20);
+                letter-spacing: get_pc(3);
+                line-height: get_pc(30);
+                padding-bottom: get_pc(13);
+                margin-bottom: get_pc(21.5);
+            }
+
+            @include sp {
+                font-size: get_sp(14);
+                letter-spacing: get_sp(0.7);
+                line-height: get_sp(40);
+                margin-bottom: get_sp(10);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 get_sp(12) get_sp(10);
+
+                &::after {
+                    content: '';
+                    @include bgsetup("../images/arrow_slide_l.svg", center center, 100% auto, no-repeat);
+                    width: 7px;
+                    height: 13px;
+                    display: inline-block;
+                    transform: rotate(-90deg);
+                    transition: all 0.5s;
+                }
+            }
+
+            &.active {
+                &::after {
+                    transform: rotate(90deg);
+                    transition: all 0.5s;
+                }
+            }
+        }
+
+        .start_footer {
+            display: flex;
+            text-align: left;
+            gap: 0 37px;
+            margin-bottom: 88px;
+
+            @include pc {
+                gap: 0 get_pc(37);
+                margin-bottom: get_pc(88);
+            }
+
+            @include sp {
+                display: block;
+                gap: 0 get_sp(37);
+                margin-bottom: 0;
+            }
+        }
+
+        .nav_list {
+            display: flex;
+
+            @include sp {
+                display: none;
+            }
+        }
+
+        .nav_footer {
+            &:first-child {
+                ul {
+                    width: 250px;
+
+                    @include pc {
+                        width: get_pc(250);
+                    }
+
+                    @include sp {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &:last-child {
+                ul {
+                    display: flex;
+                    width: 306px;
+                    margin: 0 18px;
+
+                    @include pc {
+                        width: get_pc(306);
+                        margin: 0 get_pc(18);
+                    }
+
+                    &:nth-child(01) {
+                        flex-direction: column;
+                    }
+
+                    &:nth-child(02) {
+                        width: 290px;
+
+                        @include pc {
+                            width: get_pc(290);
+                        }
+                    }
+
+                    &:nth-child(03) {
+                        flex-direction: column;
+                        width: 290px;
+
+                        @include pc {
+                            width: get_pc(290);
+                        }
+                    }
+
+                    &:nth-child(04) {
+                        flex-direction: column;
+                        width: 224px;
+
+                        @include pc {
+                            width: get_pc(224);
+                        }
+                    }
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        ul {
+            @include sp {
+                display: none;
+            }
+
+            li {
+                a {
+                    font-size: 16px;
+                    line-height: 30px;
+
+                    @include pc {
+                        font-size: get_pc(16);
+                        line-height: get_pc(30);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(14);
+                        letter-spacing: get_sp(0.7);
+                        line-height: get_sp(40);
+                        padding: 0 get_sp(12);
+                    }
+                }
+
+                ul {
+                    li {
+                        a {
+                            color: #BEBEBE;
+                        }
+                    }
+                }
+            }
+        }
+
+        .end_footer {
+            display: flex;
+            text-align: left;
+            gap: 0 37px;
+
+            @include pc {
+                gap: 0 get_pc(37);
+            }
+
+            @include sp {
+                display: block;
+            }
+
+            .nav_footer {
+                &:first-child {
+                    ul {
+                        width: 244px;
+
+                        @include pc {
+                            width: get_pc(244);
+                        }
+                    }
+                }
+
+                .nav_list {
+                    @include sp {
+                        display: none;
+                    }
+
+                    ul {
+                        width: 290px;
+                        margin: 0 22px;
+
+                        @include pc {
+                            width: get_pc(290);
+                            margin: 0 get_pc(22);
+                        }
+                    }
+                }
+            }
+        }
+
+        .social_footer {
+            margin: 0 -12px;
+            padding-top: 60px;
+
+            @include pc {
+                margin: 0 get_pc(-12);
+                padding-top: get_pc(60);
+            }
+
+            @include sp {
+                padding-top: 0;
+                justify-content: center;
+                display: flex;
+                margin: 0;
+            }
+
+            a {
+                display: inline-block;
+                margin: 0 12px;
+                width: 49px;
+
+                @include pc {
+                    margin: 0 get_pc(12);
+                    width: get_pc(49);
+
+                }
+
+                @include sp {
+                    width: get_sp(30);
+                    height: get_sp(30);
+                    padding: 0;
+                }
+
+                &:last-child {
+                    @include sp {
+                        margin-left: get_sp(16);
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            background-color: #E3F0FF2B;
+            padding: 15px;
+
+            @include pc {
+                padding: get_pc(15);
+            }
+
+            @include sp {
+                padding: get_sp(5);
+            }
+
+            p {
+                color: #FFFFFF;
+                font-size: 14px;
+                letter-spacing: 2.1px;
+                line-height: 20px;
+                text-align: center;
+
+                @include pc {
+                    font-size: get_pc(14);
+                    letter-spacing: get_pc(2.1);
+                    line-height: get_pc(20);
+                }
+
+                @include sp {
+                    font-size: get_sp(10);
+                    letter-spacing: get_sp(0.2);
+                    line-height: get_sp(12);
+                }
+
+                strong {
+                    @include sp {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,820 @@
+.search {
+    .breadcrumb {
+        margin: 7px auto 20px 170px;
+        @include pc {
+            margin: get_pc(7) auto get_pc(20) get_pc(170);
+        }
+        @include sp {
+            margin: get_sp(8) auto get_sp(8) get_sp(11);
+        }
+        span {
+            color: #6A6A6A;
+        }
+        li {
+            padding: 0;
+        }
+    }
+
+    #search {
+        background-color: #E8F3FF;
+
+        .inner {
+            max-width: 1520px;
+            margin: 0 auto 48px;
+            padding: 50px 0 23.5px;
+
+            @include pc {
+                max-width: get_pc(1520);
+                margin: 0 auto get_pc(48);
+                padding: get_pc(50) 0 get_pc(23.5);
+            }
+
+            @include sp {
+                max-width: 100%;
+                margin: 0 auto get_sp(31);
+                padding: get_sp(17) get_sp(15) get_sp(15) get_sp(15);
+            }
+
+            .tlt {
+                display: flex;
+                align-items: center;
+                padding-bottom: 16.5px;
+                border-bottom: 3px solid #FFFFFF;
+
+                @include pc {
+                    padding-bottom: get_pc(16.5);
+                    border-bottom: get_pc(3) solid #FFFFFF;
+                }
+
+                @include sp {
+                    display: block;
+                    padding-bottom: unset;
+                    border-bottom: unset;
+                    text-align: left;
+                }
+            }
+
+            h2 {
+                color: #004898;
+                font-size: 30px;
+                line-height: 44px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                margin-right: 57px;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    margin-right: get_pc(57);
+                }
+
+                @include sp {
+                    font-size: get_sp(18);
+                    line-height: get_sp(26);
+                    letter-spacing: get_sp(1.8);
+                    margin-right: 0;
+                    padding-bottom: get_sp(17);
+                    margin-bottom: get_sp(17);
+                    border-bottom: get_sp(2) solid #FFFFFF;
+                }
+            }
+
+            .box_search {
+                width: 315px;
+                position: relative;
+
+                @include pc {
+                    width: get_pc(315);
+                }
+
+                @include sp {
+                    width: 100%;
+                }
+
+                &.active {
+                    display: block;
+                }
+
+                input {
+                    border: 2px solid #004898;
+                    border-radius: 50px;
+                    background-color: #FFFFFF;
+                    padding: 11px 20px;
+                    color: #000000;
+                    font-size: 30px;
+                    letter-spacing: 1.5px;
+                    outline: none;
+                    width: 315px;
+
+                    @include pc {
+                        width: get_pc(315);
+                        border: get_pc(2) solid #004898;
+                        border-radius: get_pc(50);
+                        padding: get_pc(11) get_pc(20);
+                        font-size: get_pc(30);
+                        letter-spacing: get_pc(1.5);
+                    }
+
+                    @include sp {
+                        width: 100%;
+                        border: get_sp(2) solid #004898;
+                        border-radius: get_sp(50);
+                        padding: get_sp(14) get_sp(25) get_sp(13);
+                        font-size: get_sp(20);
+                        letter-spacing: get_sp(1);
+                    }
+
+                    &::placeholder {
+                        letter-spacing: 1.5px;
+                        color: #ADADAD;
+                        font-family: $font-roboto;
+                        font-size: 30px;
+                        font-weight: bold;
+
+                        @include pc {
+                            font-size: get_pc(30);
+                            letter-spacing: get_pc(1.5);
+                        }
+
+                        @include sp {
+                            font-size: get_sp(20);
+                            letter-spacing: get_sp(1);
+                        }
+                    }
+                }
+
+                .btn_search {
+                    @include bgsetup("../images/icon_search.svg", center center, 100% auto, no-repeat);
+                    width: 37px;
+                    height: 35px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    position: absolute;
+                    right: 23px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+
+                    @include pc {
+                        width: get_pc(37);
+                        height: get_pc(35);
+                        right: get_pc(23);
+                    }
+
+                    @include sp {
+                        width: get_sp(20);
+                        height: get_sp(19);
+                        right: get_sp(15);
+                    }
+                }
+            }
+        }
+    }
+
+    #programs_related {
+        .inner {
+            max-width: 1520px;
+            margin: 0 auto 73.5px;
+
+            @include pc {
+                max-width: get_pc(1520);
+                margin: 0 auto get_pc(73.5);
+            }
+
+            @include sp {
+                max-width: 100%;
+                margin: 0 auto get_sp(30);
+                padding: 0 get_sp(2);
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 44px;
+                color: #000000;
+                letter-spacing: 3px;
+                font-weight: bold;
+                margin-bottom: 30px;
+                text-align: left;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    margin-bottom: get_pc(30);
+                }
+
+                @include sp {
+                    font-size: get_sp(20);
+                    line-height: get_sp(29);
+                    letter-spacing: get_sp(2);
+                    margin-bottom: get_sp(16);
+                    padding: 0 get_sp(16);
+                }
+
+                span {
+                    color: #699BD3;
+                    margin-right: 16px;
+
+                    @include pc {
+                        margin-right: get_pc(16);
+                    }
+
+                    @include sp {
+                        margin-right: get_sp(5);
+                    }
+                }
+
+            }
+
+            .list_related {
+                position: relative;
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-left: 30px;
+
+                    @include pc {
+                        padding-left: get_pc(30);
+                    }
+
+                    @include sp {
+                        padding-left: 0;
+                        justify-content: space-between;
+                    }
+
+                    li {
+                        width: 352px;
+                        margin-left: 20px;
+                        margin-bottom: 25px;
+
+                        @include pc {
+                            width: get_pc(352);
+                            margin-left: get_pc(20);
+                            margin-bottom: get_pc(25);
+                        }
+
+                        @include sp {
+                            width: 50%;
+                            margin-left: 0;
+                            margin-bottom: get_sp(15);
+                        }
+
+                        a {
+                            .thumb {
+                                width: 352px;
+                                height: 198px;
+
+                                @include pc {
+                                    width: get_pc(352);
+                                    height: get_pc(198);
+                                }
+
+                                @include sp {
+                                    width: get_sp(192);
+                                    height: get_sp(108);
+                                }
+                            }
+
+                            .txt_desp {
+                                padding: 11px 10px 15px;
+                                background-color: #E8F3FF;
+                                text-align: left;
+
+                                @include pc {
+                                    padding: get_pc(11) get_pc(10) get_pc(15);
+                                }
+
+                                @include sp {
+                                    padding: get_sp(1) get_sp(6) get_sp(13);
+                                }
+
+                                h4 {
+                                    color: #004898;
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    letter-spacing: 1.8px;
+                                    font-weight: bold;
+
+                                    @include pc {
+                                        font-size: get_pc(18);
+                                        line-height: get_pc(26);
+                                        letter-spacing: get_pc(1.8);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(14);
+                                        line-height: get_sp(20);
+                                        letter-spacing: get_sp(0.7);
+                                    }
+                                }
+
+                                p {
+                                    color: #004898;
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    letter-spacing: 0.9px;
+                                    font-weight: 400;
+                                    padding-bottom: 10px;
+                                    margin-bottom: 3px;
+                                    border-bottom: 2px solid #004898;
+
+                                    @include pc {
+                                        font-size: get_pc(18);
+                                        line-height: get_pc(26);
+                                        letter-spacing: get_pc(0.9);
+                                        padding-bottom: get_pc(10);
+                                        margin-bottom: get_pc(3);
+                                        border-bottom: get_pc(2) solid #004898;
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(10);
+                                        line-height: get_sp(18);
+                                        letter-spacing: get_sp(1);
+                                        padding-bottom: get_sp(4);
+                                        margin-bottom: get_sp(4);
+                                        border-bottom: get_sp(2) solid #004898;
+                                    }
+                                }
+
+                                .date {
+                                    color: #004898;
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    letter-spacing: 1.8px;
+                                    font-weight: 400;
+                                    padding-bottom: unset;
+                                    margin-bottom: unset;
+                                    border-bottom: unset;
+
+                                    @include pc {
+                                        font-size: get_pc(18);
+                                        line-height: get_pc(26);
+                                        letter-spacing: get_pc(1.8);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(10);
+                                        line-height: get_sp(14);
+                                        letter-spacing: get_sp(1);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .btn_link {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    #articles_related {
+        .inner {
+            max-width: 1520px;
+            margin: 0 auto 109px;
+
+            @include pc {
+                max-width: get_pc(1520);
+                margin: 0 auto get_pc(109);
+            }
+
+            @include sp {
+                max-width: 100%;
+                margin: 0 auto get_sp(33);
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 44px;
+                color: #000000;
+                letter-spacing: 3px;
+                font-weight: bold;
+                margin-bottom: 53px;
+                text-align: left;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    margin-bottom: get_pc(53);
+                }
+
+                @include sp {
+                    font-size: get_sp(20);
+                    line-height: get_sp(29);
+                    letter-spacing: get_sp(2);
+                    margin-bottom: get_sp(16);
+                    padding: 0 get_sp(16);
+                }
+
+                span {
+                    color: #699BD3;
+                    margin-right: 16px;
+
+                    @include pc {
+                        margin-right: get_pc(16);
+                    }
+
+                    @include sp {
+                        margin-right: get_sp(5);
+                    }
+                }
+            }
+
+            .list_articles {
+                position: relative;
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+
+                    @include pc {
+                        margin-bottom: get_pc(5);
+                    }
+
+                    @include sp {
+                        margin-bottom: get_sp(4);
+                    }
+
+                    li {
+                        width: 736px;
+                        margin-bottom: 20px;
+
+                        @include pc {
+                            width: get_pc(736);
+                            margin-bottom: get_pc(20);
+                        }
+
+                        @include sp {
+                            width: 100%;
+                            margin-bottom: get_sp(20);
+                            padding: 0 get_sp(14.5) 0 get_sp(11);
+                        }
+
+                        a {
+                            display: flex;
+
+                            .thumb {
+                                width: 288px;
+                                height: 162px;
+
+                                @include pc {
+                                    width: get_pc(288);
+                                    height: get_pc(162);
+                                }
+
+                                @include sp {
+                                    width: get_sp(192);
+                                    height: get_sp(108);
+                                }
+
+                                img {
+                                    border-radius: 22px 0 0 22px;
+
+                                    @include pc {
+                                        border-radius: get_pc(22) 0 0 get_pc(22);
+                                    }
+
+                                    @include sp {
+                                        border-radius: get_sp(14) 0 0 get_sp(14);
+                                    }
+                                }
+                            }
+
+                            .txt_desp {
+                                flex: 1;
+                                padding: 17px 12px 42px 11px;
+                                text-align: left;
+                                background-color: #F2F2F2;
+
+                                @include pc {
+                                    padding: get_pc(17) get_pc(12) get_pc(42) get_pc(11);
+                                }
+
+                                @include sp {
+                                    padding: get_sp(10) get_sp(0) get_sp(16) get_sp(7);
+                                }
+
+                                h4 {
+                                    color: #0A5AB2;
+                                    font-size: 20px;
+                                    line-height: 29px;
+                                    font-weight: bold;
+                                    letter-spacing: 2px;
+
+                                    @include pc {
+                                        font-size: get_pc(20);
+                                        line-height: get_pc(29);
+                                        letter-spacing: get_pc(2);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(14);
+                                        line-height: get_sp(20);
+                                        letter-spacing: get_sp(1.4);
+                                    }
+                                }
+
+                                p {
+                                    @include txtClamp(3);
+                                    color: #000000;
+                                    font-size: 16px;
+                                    line-height: 25px;
+                                    font-weight: 500;
+                                    letter-spacing: 0.8px;
+
+                                    @include pc {
+                                        font-size: get_pc(16);
+                                        line-height: get_pc(25);
+                                        letter-spacing: get_pc(0.8);
+                                    }
+
+                                    @include sp {
+                                        @include txtClamp(4);
+                                        font-size: get_sp(12);
+                                        line-height: get_sp(15);
+                                        letter-spacing: get_sp(0.6);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #other_pages {
+        .inner {
+            max-width: 1520px;
+            margin: 0 auto 116px;
+
+            @include pc {
+                max-width: get_pc(1520);
+                margin: 0 auto get_pc(116);
+            }
+
+            @include pc {
+                max-width: get_pc(1520);
+                margin: 0 auto get_pc(32);
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 44px;
+                color: #000000;
+                letter-spacing: 3px;
+                font-weight: bold;
+                margin-bottom: 53px;
+                text-align: left;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    margin-bottom: get_pc(53);
+                }
+
+                @include sp {
+                    font-size: get_sp(20);
+                    line-height: get_sp(29);
+                    letter-spacing: get_sp(2);
+                    margin-bottom: get_sp(16);
+                    padding: 0 get_sp(16);
+                }
+
+                span {
+                    color: #699BD3;
+                    margin-right: 16px;
+
+                    @include pc {
+                        margin-right: get_pc(16);
+                    }
+
+                    @include sp {
+                        margin-right: get_sp(5);
+                    }
+                }
+            }
+
+            .list_other {
+                position: relative;
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-left: 30px;
+
+                    @include pc {
+                        padding-left: get_pc(30);
+                    }
+
+                    @include sp {
+                        padding-left: 0;
+                        justify-content: space-between;
+                        padding: 0 get_sp(2);
+                    }
+
+                    li {
+                        width: 352px;
+                        margin-right: 20px;
+                        margin-bottom: 25px;
+
+                        @include pc {
+                            width: get_pc(352);
+                            margin-right: get_pc(20);
+                            margin-bottom: get_pc(25);
+                        }
+
+                        @include sp {
+                            width: 50%;
+                            margin-right: 0;
+                            margin-bottom: get_sp(16);
+                        }
+
+                        a {
+                            .thumb {
+                                width: 352px;
+                                height: 198px;
+
+                                @include pc {
+                                    width: get_pc(352);
+                                    height: get_pc(198);
+                                }
+
+                                @include sp {
+                                    width: get_sp(192);
+                                    height: get_sp(108);
+                                }
+                            }
+
+                            .txt_desp {
+                                text-align: left;
+                                padding: 13px 13px 26px 10px;
+                                background-color: #F2F2F2;
+
+                                @include pc {
+                                    padding: get_pc(13) get_pc(13) get_pc(26) get_pc(10);
+                                }
+
+                                @include sp {
+                                    padding: get_sp(1) get_sp(6) get_sp(10);
+                                }
+
+                                h4 {
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    margin-bottom: 7px;
+                                    padding-bottom: 7px;
+                                    color: #004898;
+                                    border-bottom: 2px solid #004898;
+                                    font-weight: bold;
+                                    letter-spacing: 1.8px;
+
+                                    @include pc {
+                                        font-size: get_pc(18);
+                                        line-height: get_pc(26);
+                                        margin-bottom: get_pc(7);
+                                        padding-bottom: get_pc(7);
+                                        border-bottom: get_pc(2) solid #004898;
+                                        letter-spacing: get_pc(1.8);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(14);
+                                        line-height: get_sp(20);
+                                        padding-bottom: get_sp(1);
+                                        margin-bottom: get_sp(3.5);
+                                        border-bottom: get_sp(2) solid #004898;
+                                        letter-spacing: get_sp(0.7);
+                                    }
+                                }
+
+                                p {
+                                    font-size: 18px;
+                                    line-height: 25px;
+                                    font-weight: 500;
+                                    letter-spacing: 0.9px;
+                                    color: #000000;
+                                    @include txtClamp(5);
+
+                                    @include pc {
+                                        font-size: get_pc(18);
+                                        line-height: get_pc(25);
+                                        letter-spacing: get_pc(0.9);
+                                    }
+
+                                    @include sp {
+                                        @include txtClamp(3);
+                                        font-size: get_sp(12);
+                                        line-height: get_sp(15);
+                                        letter-spacing: get_sp(0.6);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn_link {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .btn_link {
+        display: flex;
+
+        @include sp {
+            margin-right: get_sp(7);
+        }
+
+        .btn_more {
+            border: 1px solid #004898;
+            border-radius: 50px;
+            margin-left: auto;
+
+            @include pc {
+                border: get_pc(1) solid #004898;
+                border-radius: get_pc(50);
+            }
+
+            @include sp {
+                border: get_sp(1) solid #004898;
+                border-radius: get_sp(50);
+            }
+
+            &:hover {
+                background-color: #004898;
+            }
+
+            span {
+                font-size: 22px;
+                letter-spacing: 1.1px;
+                line-height: 32px;
+                color: #134898;
+                display: block;
+                padding: 8px 19px 9px 31px;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+
+                @include pc {
+                    font-size: get_pc(22);
+                    letter-spacing: get_pc(1.1);
+                    line-height: get_pc(32);
+                    padding: get_pc(8) get_pc(19) get_pc(9) get_pc(31);
+                }
+
+                @include sp {
+                    font-size: get_sp(14);
+                    letter-spacing: get_sp(0.7);
+                    line-height: get_sp(20);
+                    padding: get_sp(5) get_sp(9) get_sp(6) get_sp(9);
+                }
+
+                &:hover {
+                    color: #FFFFFF;
+
+                    &:after {
+                        @include bgsetup("../images/btn_arrow_right_l.svg", center center, 100% auto, no-repeat);
+                    }
+                }
+
+                &:after {
+                    content: " ";
+                    @include bgsetup("../images/btn_arrow_right.svg", center center, 100% auto, no-repeat);
+                    width: 19px;
+                    height: 19px;
+                    display: inline-block;
+                    margin-left: 5px;
+                    position: unset;
+                    transform: rotate(90deg);
+
+                    @include pc {
+                        width: get_pc(19);
+                        height: get_pc(19);
+                        margin-left: get_pc(5);
+                    }
+
+                    @include sp {
+                        width: get_sp(12);
+                        height: get_sp(12);
+                        margin-left: get_sp(4);
+                    }
+                }
+            }
+        }
+    }
+}

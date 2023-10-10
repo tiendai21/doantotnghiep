@@ -1,0 +1,384 @@
+.news_detail {
+    #main {
+        overflow-x: hidden;
+
+        @include sp {
+            margin-top: get_sp(100);
+        }
+
+        @include pc {
+            margin-top: get_pc(160);
+        }
+    }
+
+    .breadcrumb {
+        margin: 7px auto 20px 170px;
+
+        @include pc {
+            margin: get_pc(7) auto get_pc(20) get_pc(170);
+        }
+
+        @include sp {
+            margin: get_sp(8) auto get_sp(8) get_sp(11);
+        }
+
+        span {
+            color: #6a6a6a;
+        }
+
+        li {
+            padding: 0;
+        }
+    }
+
+    #news_detail {
+        .inner {
+            .tlt {
+                padding: 52px 219px 36px 236px;
+                margin-bottom: 49px;
+                text-align: left;
+                background-color: #E8F3FF;
+
+                @include pc {
+                    padding: get_pc(52) get_pc(219) get_pc(36) get_pc(236);
+                    margin-bottom: get_pc(49);
+                }
+
+                @include sp {
+                    padding: get_sp(15) get_sp(11.5) get_sp(22) get_sp(7);
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 35px;
+                    letter-spacing: 3.5px;
+                    font-weight: bold;
+                    line-height: 51px;
+                    color: #004898;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1px;
+
+                    @include pc {
+                        font-size: get_pc(35);
+                        letter-spacing: get_pc(3.5);
+                        line-height: get_pc(51);
+                        margin-bottom: get_pc(1);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(18);
+                        line-height: get_sp(26);
+                        letter-spacing: get_sp(0.9);
+                        margin-bottom: get_sp(10);
+                    }
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        height: 2px;
+                        width: 100%;
+                        background: #004898;
+                        margin-left: 36.5px;
+
+                        @include pc {
+                            height: get_pc(2);
+                            margin-left: get_pc(36.5);
+                        }
+
+                        @include sp {
+                            height: get_sp(1);
+                            margin-left: get_sp(17.5);
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 35px;
+                    letter-spacing: 3.5px;
+                    font-weight: bold;
+                    line-height: 51px;
+                    color: #000000;
+
+                    @include pc {
+                        font-size: get_pc(35);
+                        letter-spacing: get_pc(3.5);
+                        line-height: get_pc(51);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(18);
+                        line-height: get_sp(26);
+                        letter-spacing: get_sp(0.9);
+                    }
+                }
+            }
+
+            .content {
+                max-width: 1348px;
+                margin: 0 auto;
+
+                @include pc {
+                    max-width: get_pc(1348);
+                }
+
+                @include sp {
+                    max-width: 100%;
+                }
+
+                .thumb {
+                    margin: 0 auto 63px;
+                    width: 794px;
+
+                    @include pc {
+                        margin: 0 auto get_pc(63);
+                        width: get_pc(794);
+                    }
+
+                    @include sp {
+                        margin: 0 auto get_sp(17);
+                        width: get_sp(393);
+                    }
+                }
+
+                .list_news_detail {
+                    text-align: left;
+                    margin-bottom: 104px;
+
+                    @include pc {
+                        margin-bottom: get_pc(104);
+                    }
+
+                    @include sp {
+                        margin-bottom: get_sp(24);
+                    }
+
+                    .list_news {
+                        h2 {
+                            font-size: 25px;
+                            letter-spacing: 2.5px;
+                            font-weight: bold;
+                            line-height: 35px;
+                            color: #004898;
+                            padding-bottom: 21.5px;
+                            margin-bottom: 30.5px;
+                            border-bottom: 2px solid #004898;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                letter-spacing: get_pc(2.5);
+                                line-height: get_pc(35);
+                                padding-bottom: get_pc(21.5);
+                                margin-bottom: get_pc(30.5);
+                                border-bottom: get_pc(2) solid #004898;
+                            }
+
+                            @include sp {
+                                font-size: get_sp(16);
+                                line-height: get_sp(24);
+                                letter-spacing: get_sp(0.8);
+                                padding-bottom: get_sp(8.5);
+                                border-bottom: get_sp(1) solid #004898;
+                                padding-left: get_sp(7.5);
+                                margin: 0 get_sp(11.5) get_sp(12.5) get_sp(7.5);
+                            }
+                        }
+
+                        p {
+                            font-size: 25px;
+                            letter-spacing: 2.5px;
+                            line-height: 35px;
+                            font-weight: 400;
+                            color: #000000;
+                            margin-bottom: 52px;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                letter-spacing: get_pc(2.5);
+                                line-height: get_pc(35);
+                                margin-bottom: get_pc(52);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(16);
+                                letter-spacing: get_sp(1.6);
+                                line-height: get_sp(25);
+                                margin-bottom: get_sp(20);
+                                padding: 0 get_sp(15);
+                            }
+                        }
+
+                        ul {
+                            margin-bottom: 62px;
+
+                            @include pc {
+                                margin-bottom: get_pc(62);
+                            }
+
+                            @include sp {
+                                margin-bottom: get_sp(20);
+                                padding: 0 get_sp(15);
+                            }
+
+                            li {
+                                margin-bottom: 32px;
+
+                                @include pc {
+                                    margin-bottom: get_pc(32);
+                                }
+
+                                @include sp {
+                                    margin-bottom: get_sp(32);
+                                }
+                                p {
+                                    font-size: 25px;
+                                    letter-spacing: 2.5px;
+                                    line-height: 35px;
+                                    font-weight: 400;
+                                    color: #000000;
+                                    margin-bottom: 0;
+
+                                    @include pc {
+                                        font-size: get_pc(25);
+                                        letter-spacing: get_pc(2.5);
+                                        line-height: get_pc(35);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(16);
+                                        letter-spacing: get_sp(1.6);
+                                        line-height: get_sp(25);
+                                        padding: 0;
+                                    }
+
+                                    span {
+                                        color: #004898;
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .thumb {
+                            width: 792px;
+                            margin: 0 auto 62px;
+
+                            @include pc {
+                                width: get_pc(792);
+                                margin: 0 auto get_pc(62);
+                            }
+
+                            @include sp {
+                                width: get_sp(393);
+                                margin: 0 auto get_sp(12.5);
+                            }
+                        }
+                    }
+                }
+
+                .social {
+                    display: flex;
+                    margin-left: auto;
+                    margin-bottom: 104px;
+
+                    @include pc {
+                        margin-bottom: get_pc(104);
+                    }
+
+                    @include sp {
+                        margin-bottom: get_sp(51);
+                        max-width: 100%;
+                        padding: 0 get_sp(49);
+                    }
+
+                    a {
+                        width: 83px;
+                        height: 83px;
+                        display: inline-block;
+                        margin-left: 34px;
+
+                        @include pc {
+                            width: get_pc(83);
+                            height: get_pc(83);
+                            margin-left: get_pc(34);
+                        }
+
+                        @include sp {
+                            width: get_sp(61);
+                            height: get_sp(59);
+                            margin-left: get_sp(58);
+                        }
+
+                        &:first-child {
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #mail_order {
+        .program_slide {
+            margin-bottom: 75px;
+
+            @include pc {
+                margin-bottom: get_pc(75);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(29);
+            }
+        }
+
+        .item_slide {
+            margin-right: 10px;
+
+            @include pc {
+                margin-right: get_pc(10);
+            }
+
+            @include sp {
+                margin-right: get_sp(5);
+            }
+
+            a {
+                width: 320px;
+                height: 180px;
+                display: inline-block;
+
+                @include pc {
+                    width: get_pc(320);
+                    height: get_pc(180);
+                }
+
+                @include sp {
+                    width: get_sp(160);
+                    height: get_sp(90);
+                }
+
+                img {
+                    box-shadow: 0 3px 6px #00000029;
+                    border-radius: 5px;
+
+                    @include pc {
+                        border-radius: get_pc(5);
+                    }
+
+                    @include sp {
+                        border-radius: get_sp(3);
+                    }
+                }
+            }
+        }
+
+        .slick-list {
+            padding: 0 !important;
+        }
+
+        .slick-prev.slick-disabled:before,
+        .slick-next.slick-disabled:before {
+            opacity: 0;
+        }
+    }
+}

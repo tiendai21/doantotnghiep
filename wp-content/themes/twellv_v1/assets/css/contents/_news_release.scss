@@ -1,0 +1,305 @@
+.news_detail {
+    .contain_head {
+        background-color: #E8F3FF;
+        padding: 35px 0 11px;
+        margin-bottom: 83px;
+        @include pc {
+            padding: get_pc(35) 0 get_pc(11);
+            margin-bottom: get_pc(83);
+        }
+        @include sp {
+            padding: get_sp(12) get_sp(15) get_sp(15);
+            margin-bottom: get_sp(33);
+        }
+    }
+    .tlt_section {
+        max-width: 1576px;
+        width: 100%;
+        padding-bottom: 20px;
+        margin: 0 auto 34px;
+        border-bottom: 2px solid #fff;
+        @include pc {
+            max-width: get_pc(1576);
+            margin-bottom: get_pc(34);
+            padding-bottom: get_pc(20);
+            border-bottom: get_pc(2) solid #fff;
+        }
+        @include sp {
+            margin-bottom: get_sp(14);
+            padding-bottom: get_sp(9);
+            border-bottom: get_sp(2) solid #fff;
+        }
+        
+        h2 {
+            display: flex;
+            align-items: center;
+            
+            &:before {
+                content: "";
+                @include bgsetup("../images/icon_book.svg", center center, 100% auto, no-repeat);
+                width: 75px;
+                height: 75px;
+                display: block;
+                margin-right: 16px;
+                
+                @include pc {
+                    width: get_pc(75);
+                    height: get_pc(75);
+                    margin-right: get_pc(16);
+                }
+                
+                @include sp {
+                    width: get_sp(35);
+                    height: get_sp(35);
+                    margin-right: get_sp(7);
+                }
+            }
+        }
+    }
+    .list_year {
+        max-width: 1576px;
+        width: 100%;
+        margin: 0 auto;
+        @include pc {
+            max-width: get_pc(1576);
+        }
+        @include sp {
+            max-width: 100%;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin-bottom: 18px;
+                @include pc {
+                    margin-bottom: get_pc(18);
+                }
+                @include sp {
+                    margin-bottom: 0;
+                }
+                &:nth-child(5n) {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    font-size: 25px;
+                    line-height: 36px;
+                    letter-spacing: 2.5px;
+                    margin-right: 19px;
+                    color: #004898;
+                    border: 1px solid;
+                    border-radius: 23px;
+                    padding: 3px 17px 4px 18px;
+                    display: inline-block;
+                    
+                    @include pc {
+                        font-size: get_pc(25);
+                        line-height: get_pc(36);
+                        letter-spacing: get_pc(2.5);
+                        margin-right: get_pc(19);
+                        border: get_pc(1) solid;
+                        border-radius: get_pc(23);
+                        padding: get_pc(3) get_pc(17) get_pc(4) get_pc(18);
+                    }
+                    
+                    @include sp {
+                        font-size: get_sp(14);
+                        line-height: get_sp(20);
+                        letter-spacing: get_sp(1.4);
+                        margin-right: get_sp(2);
+                        border: get_sp(1) solid;
+                        border-radius: get_sp(23);
+                        padding: get_sp(6) get_sp(8) get_sp(5);
+                        margin-bottom: get_sp(4);
+                    }
+                }
+            }
+        }
+    }
+    .list_introduce {
+        max-width: 1576px;
+        width: 100%;
+        margin: 0 auto;
+        @include pc {
+            max-width: get_pc(1576);
+        }
+        @include sp {
+            max-width: 100%;
+            padding: 0 get_sp(15);
+            margin-bottom: get_sp(36);
+        }
+        .inner {
+            background-color: #F2F2F2;
+        }
+        >ul {
+            >li {
+                transition: all 0.4s ease;
+                border-bottom: 14px solid #fff;
+                @include pc {
+                    border-bottom: get_pc(14) solid #fff;
+                }
+                @include sp {
+                    border-bottom: get_sp(5) solid #fff;
+                }
+                &.active {
+                    margin-bottom: 64px;
+                    border-bottom: none;
+                    @include pc {
+                        margin-bottom: get_pc(64);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(27);
+                    }
+                    h3 {
+                        &:after {
+                            transform: rotate(225deg);
+                            margin-top: 7px;
+                            transition: all 0.5s ease;
+                            @include pc {
+                                margin-top: get_pc(7);
+                            }
+                        }
+                    }
+                }
+                h3 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: left;
+                    font-size: 30px;
+                    line-height: 44px;
+                    letter-spacing: 3px;
+                    padding: 19px 73px 14px 56px;
+                    font-weight: bold;
+                    color: #004898;
+                    background-color: #E8F3FF;
+                    @include pc {
+                        font-size: get_pc(30);
+                        line-height: get_pc(44);
+                        letter-spacing: get_pc(3);
+                        padding: get_pc(19) get_pc(73) get_pc(14) get_pc(56);
+                    }
+                    @include sp {
+                        font-size: get_sp(18);
+                        line-height: get_sp(26);
+                        letter-spacing: get_sp(1.8);
+                        padding: get_sp(8) get_sp(14) get_sp(6) get_sp(12);
+                    }
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 23px;
+                        height: 23px;
+                        border-right: 3px solid #004898;
+                        border-bottom: 3px solid #004898;
+                        transform: rotate(45deg);
+                        margin-top: -15px;
+                        transition: all 0.5s ease;
+                        @include pc {
+                            width: get_pc(23);
+                            height: get_pc(23);
+                            border-right: get_pc(3) solid #004898;
+                            border-bottom: get_pc(3) solid #004898;
+                            margin-top: get_pc(-15);
+                        }
+                        @include sp {
+                            width: get_sp(13);
+                            height: get_sp(13);
+                            border-right: get_sp(2) solid #004898;
+                            border-bottom: get_sp(2) solid #004898;
+                            margin-top: get_sp(-15);
+                        }
+                    }
+                }
+                ul {
+                    background-color: #FFFFFF;
+                    padding: 33px 60px 30px;
+                    border-radius: 0 0 39px 39px;
+                    @include pc {
+                        padding: get_pc(33) get_pc(60) get_pc(30);
+                        border-radius: 0 0 get_pc(39) get_pc(39);
+                    }
+                    @include sp {
+                        padding: get_sp(8.5) get_sp(11) get_sp(10);
+                        border-radius: 0 0 get_sp(13) get_sp(13);
+                    }
+                    li {
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #b4b4b4;
+                        margin-bottom: 15px;
+            
+                        @include pc {
+                            padding-bottom: get_pc(20);
+                            margin-bottom: get_pc(15);
+                        }
+            
+                        @include sp {
+                            padding-bottom: get_sp(9);
+                            margin-bottom: get_sp(9);
+                        }
+            
+                        a {
+                            display: flex;
+                            align-items: flex-start;
+                            font-weight: 500;
+                            @include sp {
+                                align-items: flex-start;
+                            }
+                
+                            span {
+                                letter-spacing: 3.75px;
+                                color: #0079ff;
+                                font-size: 25px;
+                                line-height: 36px;
+                                margin-right: 23px;
+                    
+                                @include pc {
+                                    letter-spacing: get_pc(3.75);
+                                    font-size: get_pc(25);
+                                    line-height: get_pc(36);
+                                    margin-right: get_pc(23);
+                                }
+                    
+                                @include sp {
+                                    letter-spacing: get_sp(2.1);
+                                    font-size: get_sp(14);
+                                    line-height: get_sp(25);
+                                    margin: 0 get_sp(14.6) 0 get_sp(5);
+                                }
+                            }
+                
+                            p {
+                                letter-spacing: 3.45px;
+                                color: #000000;
+                                font-size: 25px;
+                                line-height: 36px;
+                                text-align: left;
+                    
+                                @include pc {
+                                    letter-spacing: get_pc(3.45);
+                                    font-size: get_pc(25);
+                                    line-height: get_pc(36);
+                                }
+                    
+                                @include sp {
+                                    letter-spacing: get_sp(2.1);
+                                    font-size: get_sp(14);
+                                    line-height: get_sp(25);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #other {
+        .tlt_section {
+            h2 {
+                display: flex;
+            }
+        }
+    }
+}
+

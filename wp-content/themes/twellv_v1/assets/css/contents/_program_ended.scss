@@ -1,0 +1,190 @@
+@import '../mixin/functions';
+
+/* Program ended */
+.program_ended {
+    #main {
+        overflow-x: hidden;
+
+        @include sp {
+            margin-top: get_sp(100);
+        }
+
+        @include pc {
+            margin-top: get_pc(160);
+        }
+    }
+}
+.header {
+    overflow: hidden;
+}
+/* Breadcrumb */
+.breadcrumb {
+    margin: 7px auto 28px 170px;
+    @include pc {
+        margin: get_pc(7) auto get_pc(28) get_pc(170);
+    }
+    @include sp {
+        margin: get_sp(8) auto get_sp(17) get_sp(11);
+    }
+    span {
+        color: #6A6A6A;
+    }
+    li {
+        padding: 0;
+    }
+}
+
+/* Broadcast Ended */
+#broadcast_ended {
+    .inner {
+        margin: 0 auto;
+        max-width: 1520px;
+        @include pc{
+            max-width: get_pc(1520);
+            margin: 0 auto;
+        }
+        @include sp {
+            width: 100%;
+            margin: 0 auto 0;
+        }
+        .tlt_section {
+            margin-bottom: 35px;
+            font-size: 30px;
+            letter-spacing: 3px;
+            line-height: 44px;
+            @include pc {
+                margin-bottom: get_pc(35);
+                font-size: get_pc(30);
+                letter-spacing: get_pc(3);
+                letter-spacing: get_pc(44);
+            }
+            @include sp {
+                margin-bottom: get_sp(16);
+                font-size: get_sp(18);
+                line-height: get_sp(45);
+                letter-spacing: get_sp(0.9);
+            }
+        }
+        .list_broadcast {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            @include pc {
+                margin: 0 auto;
+            }
+            @include sp {
+                margin: 0 get_sp(20);
+                justify-content: space-between;
+            }
+            li {
+                width: 25%;
+                padding-left: 31px;
+                @include pc {
+                    padding-left: get_pc(31);
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                        margin-bottom: get_pc(34);
+                    }
+                    &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+                        margin-bottom: get_pc(23);
+                    }
+                }
+                @include sp {
+                    width: 50%;
+                    margin-bottom: get_sp(10);
+                    padding-left: 0;
+                    &:nth-child(1), &:nth-child(3),&:nth-child(5), &:nth-child(7) { 
+                        padding-right: get_sp(5);
+                    }
+                    &:nth-child(2), &:nth-child(4),&:nth-child(6), &:nth-child(8) { 
+                        padding-left: get_sp(5);
+                    }
+                }
+                img {
+                    border-radius: 5px;
+                }
+            }
+        }
+        .btn_more {
+            float: right;
+            @include pc {
+            }
+            @include sp {
+                margin-right: get_sp(6.734);
+                margin-bottom: get_sp(29);
+            }
+        }
+    }
+    
+}
+
+#recommend {
+    margin-top: 102px;
+    @include pc {
+        margin-top: get_pc(102);
+    }
+    @include sp {
+        margin-top: 0;
+    }
+
+    .tlt_section {
+        margin: 0 auto 18px;
+        background: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @include pc {
+            margin: 0 auto get_pc(18);
+        }
+
+        @include sp {
+            margin: 0 auto get_sp(15);
+        }
+    }
+
+    .program_slide {
+        margin-bottom: 45px;
+        border-bottom: none;
+        background: transparent;
+        padding-bottom: 0;
+
+        @include pc {
+            margin-bottom: get_pc(45);
+        }
+
+        @include sp {
+            margin-bottom: get_sp(24);
+        }
+    }
+}
+/* Other */
+#other {
+    .list_other {
+        ul {
+            li:nth-child(9) {
+                a {
+                    @include sp {
+                        padding: get_sp(10) get_sp(12) get_sp(10);
+                    }
+                }
+            }
+            :last-child {
+                a {
+                    text-align: left;
+                    line-height: 25px;
+                    padding: 15px 15px 16px 23px;
+                    @include pc {
+                        line-height: get_pc(25) !important;
+                        padding: get_pc(15) get_pc(15) get_pc(16) get_pc(23);
+                    }
+                    @include sp {
+                        line-height: get_pc(64) !important;
+                        padding: get_sp(7) get_sp(9) get_sp(7) get_sp(15);
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
