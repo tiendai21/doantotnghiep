@@ -1,0 +1,319 @@
+/*
+    main
+*/
+.announce_broadcast_program {
+    #main {
+        overflow-x: hidden;
+        margin-top: 0;
+        padding-top: 160px;
+        @include pc {
+            padding-top: get_pc(160);
+        }
+        @include sp {
+            padding-top: get_sp(100);
+        }
+    }
+    .breadcrumb {
+          max-width: 1576px;
+          margin: 0 auto 20px;
+          padding-top: 7px;
+          @include pc {
+              padding-top: get_pc(7);
+              max-width: get_pc(1576);
+              margin: 0 auto get_pc(20);
+          }
+          @include sp {
+              padding: get_sp(8) 0 get_sp(8) get_sp(11);
+              margin: 0;
+          }
+          li {
+              &:nth-last-child(2) {
+                  &:before {
+                      content: none;
+                  }
+              }
+              &:last-child {
+                  @include sp {
+                      margin: 0;
+                  }
+              }
+          }
+      }
+
+
+    /*
+        announce_broadcast_program
+    */
+    #announce_broadcast_program {
+        .tlt_head {
+            margin-bottom: 0;
+        }
+        .content_section {
+            max-width: 1582px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 53px 0 96px;
+            @include pc {
+                max-width: get_pc(1582);
+                padding: get_pc(53) 0 get_pc(96);
+            }
+            @include sp {
+                padding: get_sp(32) 0 0;
+                flex-direction: column;
+            }
+        }
+        .content {
+            width: 1245px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            @include pc {
+                width: get_pc(1245);
+            }
+            @include sp {
+                width: 100%;
+                padding: 0 get_sp(12);
+            }
+            h3 {
+                text-align: left;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 36px;
+                margin-bottom: 39px;
+                font-weight: 400;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(36);
+                    margin-bottom: get_pc(39);
+                }
+                @include sp {
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(25);
+                    margin-bottom: get_sp(14);
+                }
+            }
+        }
+        .table {
+            border: 2px solid #004898;
+            width: 100%;
+            display: flex;
+            margin-bottom: 33px;
+            @include pc {
+                border: get_pc(2) solid #004898;
+                margin-bottom: get_pc(33);
+            }
+            @include sp {
+                border: 1px solid #004898;
+                margin-bottom: get_sp(14);
+            }
+            thead {
+                width: 346px;
+                background: #004898 0% 0% no-repeat padding-box;
+                @include pc {
+                    width: get_pc(346);
+                }
+                @include sp {
+                    width: get_sp(123);
+                }
+                tr {
+                    display: flex;
+                    align-items: center;
+                    padding: 27px 26px;
+                    @include pc {
+                        padding: get_pc(27) get_pc(26);
+                    }
+                    @include sp {
+                        padding: get_sp(14) get_sp(5);
+                    }
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #FFFFFF;
+                    }
+                    th {
+                        font-size: 25px;
+                        letter-spacing: 2.5px;
+                        line-height: 35px;
+                        font-weight: bold;
+                        color: #FFFFFF;
+                        @include pc {
+                            font-size: get_pc(25);
+                            letter-spacing: get_pc(2.5);
+                            line-height: get_pc(35);
+                        }
+                        @include sp {
+                            font-size: get_sp(14);
+                            letter-spacing: get_sp(0.7);
+                            line-height: get_sp(21);
+                        }
+                    }
+                }
+            }
+            tbody {
+                width: 927px;
+                @include pc {
+                    width: get_pc(927);
+                }
+                @include sp {
+                    width: get_sp(244);
+                }
+                tr {
+                    display: flex;
+                    align-items: center;
+                    padding: 27px 31px;
+                    border-bottom: 1px solid #004898;
+                    @include pc {
+                        padding: get_pc(27) get_pc(31);
+                    }
+                    @include sp {
+                        padding: get_sp(14) get_sp(11);
+                        width: 100%;
+                        height: get_sp(50);
+                    }
+                    &:first-child{
+                        background: #004898;
+                        border-left: 2px solid #ffffff;
+                        @include pc {
+                            border-left: get_pc(2) solid #ffffff;
+                        }
+                        @include sp {
+                            border-left: 1px solid #ffffff;
+                        }
+                    }
+                    &:last-child {
+                        border: 0;
+                    }
+                    th {
+                        font-size: 25px;
+                        letter-spacing: 2.5px;
+                        line-height: 35px;
+                        font-weight: bold;
+                        color: #FFFFFF;
+                        @include pc {
+                            font-size: get_pc(25);
+                            letter-spacing: get_pc(2.5);
+                            line-height: get_pc(35);
+                        }
+                        @include sp {
+                            font-size: get_sp(14);
+                            letter-spacing: get_sp(0.7);
+                            line-height: get_sp(31);
+                        }
+                    }
+
+                    td {
+                        font-size: 25px;
+                        letter-spacing: 2.5px;
+                        line-height: 35px;
+                        font-weight: 400;
+                        @include pc {
+                            font-size: get_pc(25);
+                            letter-spacing: get_pc(2.5);
+                            line-height: get_pc(35);
+                        }
+                        @include sp {
+                            font-size: get_sp(14);
+                            letter-spacing: 0;
+                            line-height: get_sp(20);
+                        }
+                    }
+                }
+            }
+        }
+        p {
+            text-align: left;
+            font-weight: 400;
+            font-size: 25px;
+            letter-spacing: 2.5px;
+            line-height: 35px;
+            margin-bottom: 47px;
+            @include pc {
+                font-size: get_pc(25);
+                letter-spacing: get_pc(2.5);
+                line-height: get_pc(35);
+                margin-bottom: get_pc(47);
+            }
+            @include sp {
+                font-size: get_sp(16);
+                letter-spacing: get_sp(1.6);
+                line-height: get_sp(25);
+                margin-bottom: get_sp(16);
+            }
+        }
+        ul{
+            li {
+                text-align: left;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 35px;
+                display: flex;
+                align-items: center;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(35);
+                }
+                @include sp {
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(0.8);
+                    line-height: get_sp(25);
+                }
+                &:last-child {
+                    @include sp {
+                        margin-bottom: get_sp(45);
+                    }
+                }
+                &:nth-last-child(2) {
+                    margin-bottom: 20px;
+                    @include pc {
+                        margin-bottom: get_pc(20);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(10);
+                    }
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    color: #004898;
+                    &:after {
+                        content: "";
+                        @include bgsetup("../images/icon_pdf.svg",center center,100% auto,no-repeat);
+                        display: block;
+                        width: 52px;
+                        height: 28px;
+                        margin-left: 10px;
+                        @include pc {
+                            width: get_pc(52);
+                            height: get_pc(28);
+                            margin-left: get_pc(10);
+                        }
+                        @include sp {
+                            width: get_sp(43);
+                            height: get_sp(23);
+                            margin-left: get_sp(5);
+                        }
+                    }
+                }
+            }
+        }
+        .tab_content {
+            @include sp {
+                margin: 0;
+            }
+            tr {
+                @include sp {
+                    padding: get_sp(11) get_sp(14);
+                }
+                &:nth-child(1) {
+                    @include pc {
+                        padding: get_pc(18) get_pc(9);
+                    }
+                }
+            }
+        }
+    }
+}

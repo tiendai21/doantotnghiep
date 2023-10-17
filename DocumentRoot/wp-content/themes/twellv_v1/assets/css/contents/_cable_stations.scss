@@ -1,0 +1,153 @@
+.cable_stations {
+    .content {
+        text-align: left;
+        max-width: 1580px;
+        margin: 0 auto 96px;
+        display: flex;
+        @include pc {
+            max-width: get_pc(1580);
+            margin: 0 auto get_pc(96);
+        }
+        @include sp {
+            display: block;
+            margin-bottom: 0;
+        }
+        h3 {
+            font-size: 30px;
+            line-height: 44px;
+            letter-spacing: 3px;
+            padding-bottom: 13.5px;
+            margin-bottom: 23.5px;
+            border-bottom: 3px solid;
+            color: #004898;
+            font-weight: bold;
+            @include pc {
+                font-size: get_pc(30);
+                line-height: get_pc(44);
+                letter-spacing: get_pc(3);
+                padding-bottom: get_pc(13.5);
+                margin-bottom: get_pc(23.5);
+                border-bottom: get_pc(3) solid;
+            }
+            @include sp {
+                font-size: get_sp(18);
+                line-height: get_sp(25);
+                letter-spacing: get_sp(1.8);
+                margin: 0 get_sp(15) get_sp(14);
+                padding-bottom: get_sp(17);
+                border-bottom: get_sp(3) solid;
+            }
+        }
+        .content_desp {
+            >p {
+                margin-bottom: 38px;
+                @include pc {
+                    margin-bottom: get_pc(38);
+                }
+                @include sp {
+                    margin-bottom: get_sp(28);
+                    padding: 0 get_sp(15);
+                }
+            }
+        }
+        p {
+            font-size: 25px;
+            line-height: 50px;
+            letter-spacing: 2.5px;
+            font-weight: 400;
+            @include pc {
+                font-size: get_pc(25);
+                line-height: get_pc(50);
+                letter-spacing: get_pc(2.5);
+            }
+            @include sp {
+                font-size: get_sp(15);
+                line-height: get_sp(25);
+                letter-spacing: get_sp(1.6);
+            }
+        }
+        .txt_desp {
+            text-align: center;
+            border-radius: 63px;
+            padding: 45px 136px 24px;
+            background-color: #F2F2F2;
+            @include pc {
+                border-radius: get_pc(63);
+                padding: get_pc(45) get_pc(136) get_pc(24);
+            }
+            @include sp {
+                border-radius: 0;
+                padding: get_sp(31) get_sp(19) get_sp(34) get_sp(15);
+            }
+
+            a {
+                color: #4594EB;
+                display: inline-flex;
+                align-items: center;
+                border: 2px solid #4594EB;
+                border-radius: 49px;
+                padding: 15px 19px 16px 33px;
+                font-size: 20px;
+                line-height: 29px;
+                margin-bottom: 48px;
+                font-weight: bold;
+                text-align: left;
+                background-color: #FFFFFF;
+
+                @include pc {
+                    border: get_pc(2) solid #4594EB;
+                    border-radius: get_pc(49);
+                    padding: get_pc(16) get_pc(19) get_pc(18) get_pc(34);
+                    font-size: get_pc(20);
+                    line-height: get_pc(29);
+                    margin-bottom: get_pc(48);
+                }
+
+                @include sp {
+                    border: get_sp(2) solid #4594EB;
+                    border-radius: get_sp(49);
+                    padding: get_sp(10) get_sp(15) get_sp(10) get_sp(18);
+                    font-size: get_sp(16);
+                    line-height: get_sp(24);
+                    margin-bottom: get_sp(19);
+                }
+
+                &:after {
+                    content: "";
+                    @include bgsetup("../images/icon_list.svg", center center, 100% auto, no-repeat);
+                    width: 31px;
+                    height: 31px;
+                    margin-left: 10px;
+                    display: inline-block;
+
+                    @include pc {
+                        width: get_pc(31);
+                        height: get_pc(31);
+                        margin-left: get_pc(10);
+                    }
+
+                    @include sp {
+                        width: get_sp(24);
+                        height: get_sp(24);
+                        margin-left: get_sp(8);
+                    }
+                }
+            }
+            p {
+                text-align: left;
+                line-height: 45px;
+                @include pc {
+                    line-height: get_pc(45);
+                }
+                @include sp {
+                    line-height: get_sp(22);
+                }
+            }
+        }
+    }
+    .tab_content {
+        @include sp {
+            margin: 0 0 get_sp(28);
+        }
+    }
+}

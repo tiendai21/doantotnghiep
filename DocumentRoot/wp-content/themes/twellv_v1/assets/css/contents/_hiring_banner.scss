@@ -1,0 +1,239 @@
+/*
+    main
+*/
+.hiring_banner {
+    #main {
+        overflow-x: hidden;
+        margin-top: 0;
+        padding-top: 160px;
+        @include pc {
+            padding-top: get_pc(160);
+        }
+        @include sp {
+            padding-top: get_sp(100);
+        }
+    }
+    .breadcrumb {
+        max-width: 1576px;
+        margin: 0 auto 20px;
+        padding-top: 7px;
+        @include pc {
+            padding-top: get_pc(7);
+            max-width: get_pc(1576);
+            margin: 0 auto get_pc(20);
+        }
+        @include sp {
+            padding: get_sp(8) 0 get_sp(8) get_sp(11);
+            margin: 0;
+        }
+        li {
+            &:last-child {
+                @include sp {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    /*
+        hiring banner content
+    */
+    #hiring_banner {
+        .tlt_head {
+            margin-bottom: 0;
+        }
+        .content_section {
+            max-width: 1582px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 51px 0 66px;
+            @include pc {
+                max-width: get_pc(1582);
+                padding: get_pc(51) 0 get_pc(66);
+            }
+            @include sp {
+                padding: get_sp(33.5) 0 0;
+                flex-direction: column;
+            }
+        }
+        .content {
+            width: 1242px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            @include pc {
+                width: get_pc(1242);
+            }
+            @include sp {
+                width: 100%;
+                padding: 0 get_sp(13);
+            }
+        }
+        .information_hiring {
+            h2 {
+                font-size: 30px;
+                letter-spacing: 3px;
+                line-height: 35px;
+                color: #004898;
+                font-weight: bold;
+                text-align: left;
+                padding-bottom: 13.5px;
+                margin-bottom: 13.5px;
+                border-bottom: 3px solid #004898;
+                @include pc {
+                    font-size: get_pc(30);
+                    letter-spacing: get_pc(3);
+                    line-height: get_pc(35);
+                    padding-bottom: get_pc(13.5);
+                    margin-bottom: get_pc(13.5);
+                    border-bottom: get_pc(3) solid #004898;
+                }
+                @include sp {
+                    font-size: get_sp(18);
+                    letter-spacing: get_sp(1.8);
+                    line-height: get_sp(26);
+                    padding-bottom: get_sp(9);
+                    margin-bottom: get_sp(12);
+                    border-bottom: get_sp(2) solid #004898;
+                }
+            }
+            p {
+                font-weight: 400;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 35px;
+                text-align: left;
+                padding-right: 40px;
+                margin-bottom: 50px;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(35);
+                    padding-right: get_pc(40);
+                    margin-bottom: get_pc(50);
+                }
+                @include sp {
+                    font-size: get_sp(16.5);
+                    letter-spacing: 0;
+                    line-height: get_sp(25);
+                    padding-right: 0;
+                    margin-bottom: get_sp(23.5);
+                }
+            }
+            .btn_bottom {
+                padding: 20px 73px 20px 28px;
+                width: 479px;
+                background: #004898;
+                border-radius: 119px;
+                @include pc {
+                    padding: get_pc(20) get_pc(73) get_pc(20) get_pc(28);
+                    width: get_pc(479);
+                    border-radius: get_pc(119);
+                }
+                @include sp {
+                    padding: get_sp(13) get_sp(62) get_sp(12) get_sp(16);
+                    width: 100%;
+                    border-radius: get_sp(119);
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: #FFFFFF;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    line-height: 29px;
+                    font-weight: bold;
+                    @include pc {
+                        font-size: get_pc(20);
+                        letter-spacing: get_pc(2);
+                        line-height: get_pc(29);
+                    }
+                    @include sp {
+                        font-size: get_sp(16);
+                        letter-spacing: get_sp(1.6);
+                        line-height: get_sp(24);
+                    }
+                    &:before {
+                        content: "";
+                        @include bgsetup("../images/img_group.png",center center, 100% auto, no-repeat);
+                        width: 73px;
+                        height: 73px;
+                        display: block;
+                        @include pc {
+                            width: get_pc(73);
+                            height: get_pc(73);
+                        }
+                        @include sp {
+                            width: get_sp(50);
+                            height: get_sp(50);
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        @include bgsetup("../images/icon_btn_next.png",center center, 100% auto, no-repeat);
+                        width: 15.37px;
+                        height: 18.62px;
+                        display: block;
+                        @include pc {
+                            width: get_pc(15.37);
+                            height: get_pc(18.62);
+                        }
+                        @include sp {
+                            width: get_sp(11.78);
+                            height: get_sp(14.27);
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                margin-bottom: 102px;
+                @include pc {
+                    margin-bottom: get_pc(102);
+                }
+                @include sp {
+                    margin-bottom: get_sp(57.5);
+                }
+                a {
+                    &:before {
+                        @include bgsetup("../images/img_school.png",center center, 100% auto, no-repeat);
+                    }
+                }
+            }
+            &:last-child {
+                p {
+                    margin-bottom: 33px;
+                    @include pc {
+                        margin-bottom: get_pc(33);
+                    }
+                }
+                .btn_bottom {
+                    padding: 21px 54px 19px 28px;
+                    @include pc {
+                        padding: get_pc(21) get_pc(54) get_pc(19) get_pc(28);
+                    }
+                    @include sp {
+                        padding: get_sp(13) get_sp(41) get_sp(12) get_sp(16);
+                        margin-bottom: get_sp(65);
+                    }
+                }
+            }
+        }
+        .tab_content {
+            @include sp {
+                margin: 0;
+            }
+            tr {
+                @include sp {
+                    padding: get_sp(11) get_sp(14);
+                }
+                &:nth-child(1) {
+                    @include pc {
+                        padding: get_pc(18) get_pc(9);
+                    }
+                }
+            }
+        }
+    }
+}

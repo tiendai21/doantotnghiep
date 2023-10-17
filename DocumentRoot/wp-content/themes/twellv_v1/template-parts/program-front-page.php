@@ -1,0 +1,33 @@
+<input class="id_single" type="hidden" value="<?php the_ID()?>">
+<?php
+$program_term = get_queried_object();
+
+global $bs12_program_top_parts_arr;
+$top = $bs12_program_top_parts_arr['top'];
+
+if( have_rows( 'page_flex_content', $top->ID ) ) {
+    ?>
+    <div class="program-contents-wrap">
+        <?php if( get_field( 'display_under_construction', $program_term ) ) { ?>
+                <div class="caution">
+                    <p>ただいまページ移行作業中につき、表示が崩れている場合がございます。<br>大変申し訳ありませんが今しばらくお待ちください。</p>
+                </div>
+        <?php } ?>
+        <?php
+
+
+
+
+        while( have_rows( 'page_flex_content', $top->ID ) ) {
+            the_row();
+            $layout = get_row_layout();
+            // var_dump( $layout );
+            get_template_part( 'template-parts/program/layouts/' . $layout );
+        }
+
+        ?>
+    </div>
+	<?php get_template_part( 'template-parts/ad/ad-news', 'ad-news' ); ?>
+
+    <?php
+} // if( have_rows ...

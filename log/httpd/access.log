@@ -1,0 +1,4 @@
+87325 - 27.3.144.200 - - [27/Jul/2023:16:41:06 +0900] "GET / HTTP/1.1" 302 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -
+546395 - 27.3.144.200 - - [27/Jul/2023:16:41:07 +0900] "GET /wp-admin/install.php HTTP/1.1" 200 3312 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -
+9697 - 45.145.167.102 - - [27/Jul/2023:16:43:13 +0900] "GET /.git/config HTTP/1.1" 302 - "-" "-" -
+107183 - 45.145.167.102 - - [27/Jul/2023:16:43:13 +0900] "GET /wp-admin/install.php HTTP/1.1" 200 9768 "-" "-" -

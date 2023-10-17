@@ -1,0 +1,707 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP KUSANAGI\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 12:00+0900\n"
+"PO-Revision-Date: 2021-10-29 12:34+0900\n"
+"Last-Translator: Prime Strategy Co.,Ltd.\n"
+"Language-Team: Prime Strategy Co.,Ltd.\n"
+"Language: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: modules/automatic-updates.php:151 templates/tab-automatic-updates.php:16
+msgid "Automatic Updates"
+msgstr "自動更新"
+
+#: modules/automatic-updates.php:186
+#: modules/page-cache.php:169
+#: modules/theme-switcher.php:47
+#: modules/theme-switcher.php:84 modules/translate-accelerator.php:170
+#: modules/misc.php:430
+msgid "Update settings successfully."
+msgstr "正常に更新されました"
+
+#: modules/automatic-updates.php:218
+msgid ""
+"Background updates are disabled. Change to define "
+"<code>('DISALLOW_FILE_MODS', false);</code> or comment out the definition."
+msgstr ""
+"バックグラウンド更新が無効になっている。<code>define('DISALLOW_FILE_MODS', "
+"false);</code>に変更またはコメントアウトしてください。"
+
+#: modules/automatic-updates.php:222
+msgid "WP is installing"
+msgstr "WPインストール中"
+
+#: modules/automatic-updates.php:236
+#, php-format
+msgid "Add <code>define('FS_METHOD', '%1s');</code> to the wp-config.php file."
+msgstr ""
+" <code>define('FS_METHOD', '%1s');</code> をwp-config.phpファイルに追加してく"
+"ださい。"
+
+#: modules/automatic-updates.php:240
+msgid ""
+"Add <code>define('FTP_HOST', 'Localhost');</code> to the wp-config.php file."
+msgstr ""
+"<code>define('FTP_HOST', 'Localhost');</code> をwp-config.phpファイルに追加し"
+"てください。"
+
+#: modules/automatic-updates.php:244
+msgid ""
+"Add <code>define('FTP_USER', 'kusanagi');</code> to the wp-config.php file."
+msgstr ""
+"<code>define('FTP_USER', 'kusanagi');</code> をwp-config.phpファイルに追加し"
+"てください。"
+
+#: modules/automatic-updates.php:248
+msgid ""
+"Add <code>define('FTP_PASS', '*****');</code> to the wp-config.php file and "
+"change <code>*****</code> part to login password."
+msgstr ""
+"<code>define('FTP_PASS', '*****');</code>  <code>*****</code>部分をログインパ"
+"スワードに変更し、wp-config.phpファイルに追加してください。"
+
+#: modules/automatic-updates.php:268
+#, php-format
+msgid ""
+"Failed to connect to FTP Server %s. If you do not remember your credentials, "
+"you should contact your web host."
+msgstr ""
+"FTP サーバー  %s への接続に失敗しました。接続情報が思い出せない場合は、ホス"
+"ティング担当者に問い合わせてください。"
+
+#: templates/tab-misc.php:8
+msgid "Image Optimizer"
+msgstr "画像最適化"
+
+#: modules/page-cache.php:64 templates/tab-home.php:15
+#: templates/tab-page-cache.php:9
+msgid "Page Cache"
+msgstr "ページキャッシュ"
+
+#: templates/tab-misc.php:92
+msgid "Performance Viewer"
+msgstr "パフォーマンス表示"
+
+#: templates/tab-misc.php:34
+msgid "Replacing"
+msgstr "置換"
+
+#: modules/security-checker.php:17
+msgid "wp-config.php is in the correct directory."
+msgstr "wp-config.php ファイルの位置は適正です。"
+
+#: modules/security-checker.php:18
+msgid ""
+"wp-config.php exist in the public folder. Please move wp-config.php to "
+"DocumentRoot and improve security."
+msgstr ""
+"公開ディレクトリにwp-config.phpが存在しています。wp-config.phpをDocumentRoot"
+"ディレクトリの上に移動させて安全性を向上させてください。"
+
+#: modules/security-checker.php:19
+msgid ""
+"WordPress installed the sub-directory. You can improve security by including "
+"wp-config.php."
+msgstr ""
+"WordPressがサブディレクトリにインストールされています。wp-config.phpの内容を"
+"includeさせると安全性を向上させることができます。"
+
+#: modules/security-checker.php:20 modules/security-checker.php:27
+msgid "wp-config.php not found."
+msgstr "wp-config.php ファイルの存在が確認できません。"
+
+#: modules/security-checker.php:23
+#, php-format
+msgid "wp-config.php permission is %1s."
+msgstr "wp-config.php ファイルの権限は %1s です。"
+
+#: modules/security-checker.php:24
+#, php-format
+msgid "wp-config.php permission is %1s. Recommend permission is 440."
+msgstr "wp-config.php ファイルの権限は %1s です、推奨ファイル権限は 440 です。"
+
+#: modules/security-checker.php:25
+#, php-format
+msgid "Administrator of wp-config.php is %1s.%2s."
+msgstr "wp-config.php ファイルのオーナーは %1s.%2s です。"
+
+#: modules/security-checker.php:26
+#, php-format
+msgid ""
+"Administrator of wp-config.php is %1s.%2s. Recommend administrator is "
+"kusanagi.www."
+msgstr ""
+"wp-config.php ファイルのオーナーは %1s.%2s です、推奨ファイルオーナーは "
+"kusanagi.www です。"
+
+#: modules/security-checker.php:30
+#, php-format
+msgid "%1s.htaccess permission is %2s."
+msgstr "%1s.htaccess ファイルの権限は %2s です。"
+
+#: modules/security-checker.php:31
+#, php-format
+msgid "%1s.htaccess permission is %2s. Recommend permission is 644."
+msgstr "%1s.htaccess ファイルの権限は %2s です、推奨ファイル権限は 644 です。"
+
+#: modules/security-checker.php:32
+#, php-format
+msgid "Administrator of %1s.htaccess is %2s.%3s."
+msgstr "%1s.htaccess ファイルのオーナーは %2s.%3s です。"
+
+#: modules/security-checker.php:33
+#, php-format
+msgid ""
+"Administrator of %1s.htaccess is %2s.%3s. Recommend administrator is "
+"kusanagi.kusanagi."
+msgstr ""
+"%1s.htaccess ファイルのオーナーは %2s.%3s です、推奨ファイルオーナーは "
+"kusanagi.kusanagi です。"
+
+#: modules/security-checker.php:34
+#, php-format
+msgid "Move configuration file .htaccess to %1s."
+msgstr "%1sに.htaccess ファイルを配置してください。"
+
+#: modules/security-checker.php:37
+#, php-format
+msgid "wp-content/ permission is %1s."
+msgstr "wp-content/ フォルダの権限は %1s です。"
+
+#: modules/security-checker.php:38
+#, php-format
+msgid "wp-content/ permission is %1s. Recommend permission is 755."
+msgstr "wp-content/ フォルダの権限は %1s です、推奨フォルダ権限は 755 です。"
+
+#: modules/security-checker.php:39
+#, php-format
+msgid "Administrator of wp-content/ is %1s.%2s."
+msgstr "wp-content/ フォルダのオーナーは %1s.%2s です。"
+
+#: modules/security-checker.php:40
+#, php-format
+msgid ""
+"Administrator of wp-content/ is %1s.%2s. Recommend administrator is kusanagi."
+"kusanagi."
+msgstr ""
+"wp-content/ フォルダのオーナーは %1s.%2s です、推奨フォルダオーナーは "
+"kusanagi.kusanagi です。"
+
+#: modules/security-checker.php:41
+msgid "wp-content/ not found."
+msgstr "wp-content/ フォルダの存在が確認できません。"
+
+#: modules/security-checker.php:44
+#, php-format
+msgid "HHVM/%1s"
+msgstr "HHVM/%1s"
+
+#: modules/security-checker.php:45
+#, php-format
+msgid "PHP/%1s"
+msgstr "PHP/%1s"
+
+#: modules/security-checker.php:48
+#, php-format
+msgid "Nginx/%1s"
+msgstr "Nginx/%1s"
+
+#: modules/security-checker.php:49
+#, php-format
+msgid "Apache/%1s"
+msgstr "Apache/%1s"
+
+#: modules/security-checker.php:50
+msgid "Web server information not found."
+msgstr "WEBサーバー情報が見つかりません。"
+
+#: modules/security-checker.php:56
+msgid "Current security setting"
+msgstr "セキュリティ状況"
+
+#: modules/security-checker.php:79
+#, php-format
+msgid "PHP status : %1s"
+msgstr "PHP実行環境 : %1s"
+
+#: modules/security-checker.php:80
+#, php-format
+msgid "Web server : %1s"
+msgstr "Webサーバ : %1s"
+
+#: modules/security-checker.php:215
+msgid "Failed to get version information."
+msgstr "バージョン情報取得できません。"
+
+#: modules/theme-switcher.php:40 templates/tab-home.php:27
+#: templates/tab-theme-switcher.php:2
+msgid "Device Theme Switcher"
+msgstr "デバイス切替"
+
+#: modules/theme-switcher.php:318
+msgid "Tablet"
+msgstr "タブレット"
+
+#: modules/theme-switcher.php:319
+msgid "Smart Phone"
+msgstr "スマートフォン"
+
+#: modules/theme-switcher.php:615 templates/theme-switcher-content-group.php:16
+msgid "Group Name"
+msgstr "グループ名"
+
+#: modules/theme-switcher.php:616 templates/theme-switcher-content-group.php:20
+msgid "Theme"
+msgstr "テーマ"
+
+#: modules/theme-switcher.php:617 templates/theme-switcher-content-group.php:43
+msgid "Slug"
+msgstr "スラッグ"
+
+#: modules/theme-switcher.php:618 templates/theme-switcher-content-group.php:47
+msgid "Priority"
+msgstr "優先度"
+
+#: modules/theme-switcher.php:619
+msgid "Devices"
+msgstr "デバイス"
+
+#: modules/theme-switcher.php:730
+#: templates/theme-switcher-content-device.php:20
+msgid "Device Name"
+msgstr "デバイス名"
+
+#: modules/theme-switcher.php:731
+msgid "Keywords"
+msgstr "キーワード"
+
+#: modules/theme-switcher.php:732
+#: templates/theme-switcher-content-device.php:28
+#: templates/theme-switcher-content-list.php:22
+msgid "Group"
+msgstr "グループ"
+
+#: modules/translate-accelerator.php:38 templates/tab-home.php:39
+#: templates/tab-translate-accelerator.php:3
+msgid "Translate Accelerator"
+msgstr "翻訳アクセラレーター"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:17
+msgctxt "automatic updates"
+msgid "Translations"
+msgstr "翻訳"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:20
+msgctxt "automatic updates"
+msgid "Disable"
+msgstr "無効"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:21
+msgctxt "automatic updates"
+msgid "Enable - Default"
+msgstr "有効 - デフォルト"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:26
+msgctxt "automatic updates"
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:29
+#: kusanagi-core/templates/tab-automatic-updates.php:38
+msgctxt "automatic updates"
+msgid "Disable - Default"
+msgstr "無効 - デフォルト"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:30
+#: kusanagi-core/templates/tab-automatic-updates.php:39
+msgctxt "automatic updates"
+msgid "Enable"
+msgstr "有効"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:35
+msgctxt "automatic updates"
+msgid "Themes"
+msgstr "テーマ"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:44
+msgctxt "automatic updates"
+msgid "WordPress core"
+msgstr "WordPressコア"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:47
+msgctxt "automatic updates"
+msgid "Disable all core updates"
+msgstr "すべて無効"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:48
+msgctxt "automatic updates"
+msgid "Enable only core minor updates - Default"
+msgstr "マイナー更新のみ有効 - デフォルト"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:49
+msgctxt "automatic updates"
+msgid "Enable all core updates"
+msgstr "すべて有効"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:54
+msgctxt "automatic updates"
+msgid "Automatic update schedule"
+msgstr "自動更新スケジュール"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:56
+msgctxt "automatic updates"
+msgid "Enable schedule settings"
+msgstr "スケジュール設定有効"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:57
+msgctxt "automatic updates"
+msgid ""
+"* If this field is unchecked, Automatic updates will be performed with the "
+"default schedule."
+msgstr "※有効ではない場合デフォルトのスケジュールで自動更新を行います。"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:63
+msgctxt "automatic updates"
+msgid "Sunday"
+msgstr "日曜日"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:64
+msgctxt "automatic updates"
+msgid "Monday"
+msgstr "月曜日"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:65
+msgctxt "automatic updates"
+msgid "Tuesday"
+msgstr "火曜日"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:66
+msgctxt "automatic updates"
+msgid "wednesday"
+msgstr "水曜日"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:67
+msgctxt "automatic updates"
+msgid "Thursday"
+msgstr "木曜日"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:68
+msgctxt "automatic updates"
+msgid "Friday"
+msgstr "金曜日"
+
+#: kusanagi-core/templates/tab-automatic-updates.php:69
+msgctxt "automatic updates"
+msgid "Saturday"
+msgstr "土曜日"
+
+#: modules/misc.php:50
+msgid "Misc."
+msgstr "その他"
+
+#: templates/tab-automatic-updates.php:81
+msgid "Hour"
+msgstr "時"
+
+#: templates/tab-automatic-updates.php:86
+msgid "Minute"
+msgstr "分"
+
+#: templates/tab-home.php:5
+msgid "http://en.kusanagi.tokyo/feed/"
+msgstr "http://kusanagi.tokyo/feed/"
+
+#: templates/tab-home.php:12
+msgid "Modules"
+msgstr "モジュール"
+
+#: templates/tab-home.php:18
+msgid ""
+"<p>Page cache is a function for saving an HTML to display as a temporary "
+"data and reusing it in order to improve the WordPress performance.</p>"
+msgstr ""
+"<p>ページキャッシュは、WordPressパフォーマンス向上のため、表示するHTMLを一時"
+"データとして保存し再利用する機能です。</p>"
+
+#: templates/tab-home.php:23 templates/tab-home.php:35
+#: templates/tab-home.php:47
+msgid "Settings"
+msgstr "設定"
+
+#: templates/tab-home.php:30
+msgid ""
+"<p>Device switching is a function to change and optimize a theme to display "
+"for mobile terminals such as a smartphone.</p>"
+msgstr ""
+"<p>デバイス切替は、スマートフォンなどのモバイル端末に対して表示するテーマを変"
+"更し、最適化を図るための機能です。</p>"
+
+#: templates/tab-home.php:42
+msgid ""
+"<p>Translate Accelerator makes the translation cache files, and shortens the "
+"execution time to display your WordPress site.</p>"
+msgstr ""
+"<p>翻訳の読み込みを高速化し、表示までにかかる実行時間を短縮します。</p>"
+
+#: templates/tab-home.php:52
+msgid "Information"
+msgstr "インフォメーション"
+
+#: templates/tab-misc.php:11
+msgid "Enable Image Optimize"
+msgstr "画像最適化を有効にする"
+
+#: templates/tab-translate-accelerator.php:10 templates/tab-misc.php:16
+#: templates/tab-misc.php:100 templates/tab-misc.php:124
+msgid "Enable"
+msgstr "有効"
+
+#: templates/tab-misc.php:21
+msgid "Jpeg quality"
+msgstr "JPEG画質"
+
+#: templates/tab-misc.php:27
+msgid "Max full image widh"
+msgstr "フルサイズ画像最大幅"
+
+#: templates/tab-misc.php:29
+msgid "* larger than 320px"
+msgstr "* 320px以上"
+
+#: templates/tab-page-cache.php:12
+msgid ""
+"The page cache system is not enabled. If you want to enable it, please input "
+"<code>kusanagi bcache on</code> on virtual machine console."
+msgstr ""
+"ページキャッシュは有効になっていません。有効にするには、仮想サーバのコンソー"
+"ル上で、 <code>kusanagi bcache on</code> と入力してください。"
+
+#: templates/tab-page-cache.php:22
+msgid "Front page"
+msgstr "トップページ"
+
+#: templates/tab-page-cache.php:24 templates/tab-page-cache.php:30
+#: templates/tab-page-cache.php:36
+msgid "minutes"
+msgstr "分"
+
+#: templates/tab-page-cache.php:28
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: templates/tab-page-cache.php:34
+msgid "Article"
+msgstr "記事詳細"
+
+#: templates/tab-page-cache.php:40
+msgid "Cache excluded URL"
+msgstr "キャッシュ除外URL"
+
+#: templates/tab-page-cache.php:43
+msgid ""
+"You can specify a URL pattern (regular expression is available) that you "
+"want to exclude the cache. If you specify multiple patterns, please insert "
+"line feeds."
+msgstr ""
+"キャッシュを除外したい、URLパターン（正規表現利用可）を指定できます。複数のパ"
+"ターンを指定する場合は、改行を入れてください。"
+
+#: templates/tab-page-cache.php:47
+msgid "Query string to cache"
+msgstr "キャッシュするクエリ文字列"
+
+#: templates/tab-page-cache.php:50
+msgid "Please enter a key of valid query string as a cache data."
+msgstr "キャッシュデータとして有効なクエリ文字列のキーを入力してください。"
+
+#: templates/tab-page-cache.php:55
+msgid "Range of cache to delete when disclosing article"
+msgstr "記事公開時に削除するキャッシュの範囲"
+
+#: templates/tab-page-cache.php:57
+msgid "Do not delete"
+msgstr "削除しない"
+
+#: templates/tab-page-cache.php:58
+msgid "Article only"
+msgstr "記事のみ"
+
+#: templates/tab-page-cache.php:59
+msgid "Article and front page"
+msgstr "記事とトップページ"
+
+#: templates/tab-page-cache.php:60
+msgid "All"
+msgstr "すべて"
+
+#: templates/tab-page-cache.php:64
+msgid "Clear Cache"
+msgstr "キャッシュのクリア"
+
+#: templates/tab-page-cache.php:65
+msgid "Clear all caches"
+msgstr "すべて"
+
+#: templates/tab-page-cache.php:69
+msgid "Regeneration of advanced-cache.php"
+msgstr "advanced-cache.phpの再生成"
+
+#: templates/tab-page-cache.php:71
+msgid "Regenerate advanced-cache.php"
+msgstr "advanced-cache.phpを生成する"
+
+#: templates/tab-page-cache.php:73
+#, php-format
+msgid ""
+"You do not have a write permission to write in advanced-cache.php or %1s. To "
+"regenerate advanced-cache.php, please set the write permission."
+msgstr ""
+"advanced-cache.php、または %1s に書き込み権限がありません。advanced-cache.php"
+"の再生成を行うには、書き込み権限を設定してください。"
+
+#: templates/tab-misc.php:95
+msgid "Display performance on admin-bar."
+msgstr "管理バーにパフォーマンスを表示する"
+
+#: templates/tab-misc.php:105
+msgid "Requierd capability to display performance"
+msgstr "パフォーマンスを表示する権限"
+
+#: templates/tab-misc.php:38
+msgid "Replacing at login/signup page"
+msgstr "ログイン/サインアップ画面の置換"
+
+#: templates/tab-misc.php:42
+msgid "Yes"
+msgstr "はい"
+
+#: templates/tab-misc.php:46
+msgid "No"
+msgstr "いいえ"
+
+#: templates/tab-misc.php:51 templates/tab-misc.php:56
+msgid "Replacement string"
+msgstr "置換文字列"
+
+#: templates/tab-misc.php:55
+msgid "Target string"
+msgstr "対象文字列"
+
+#: templates/tab-misc.php:69 templates/tab-misc.php:83
+msgid "Delete Rule"
+msgstr "ルールを削除"
+
+#: templates/tab-misc.php:87
+msgid "Add New Rule"
+msgstr "ルールを追加"
+
+#: templates/tab-theme-switcher.php:2
+msgid "Back"
+msgstr ""
+
+#: templates/tab-translate-accelerator.php:6
+msgid "Enable to accleration."
+msgstr "高速化を有効にする"
+
+#: templates/tab-translate-accelerator.php:15
+msgid "Type"
+msgstr "タイプ"
+
+#: templates/tab-translate-accelerator.php:18
+msgid "Files"
+msgstr "ファイル"
+
+#: templates/tab-translate-accelerator.php:19
+msgid "Cache directory :"
+msgstr "キャッシュのディレクトリ："
+
+#: templates/tab-translate-accelerator.php:21
+msgid "APC"
+msgstr "APC"
+
+#: templates/tab-translate-accelerator.php:26
+msgid "Translated text displayed in your site"
+msgstr "サイトに表示される翻訳された文章"
+
+#: templates/tab-translate-accelerator.php:29
+#: templates/tab-translate-accelerator.php:39
+#: templates/tab-translate-accelerator.php:49
+msgid "Enable cache"
+msgstr "キャッシュを使用"
+
+#: templates/tab-translate-accelerator.php:30
+#: templates/tab-translate-accelerator.php:40
+#: templates/tab-translate-accelerator.php:50
+msgid "Disable translation"
+msgstr "翻訳を停止"
+
+#: templates/tab-translate-accelerator.php:31
+#: templates/tab-translate-accelerator.php:41
+#: templates/tab-translate-accelerator.php:51
+msgid "Use language file's for translation"
+msgstr "通常翻訳"
+
+#: templates/tab-translate-accelerator.php:36
+msgid "Login/signup page translation"
+msgstr "ログイン/サインアップ画面の翻訳"
+
+#: templates/tab-translate-accelerator.php:46
+msgid "Admin pages translation"
+msgstr "管理画面の翻訳"
+
+#: templates/tab-translate-accelerator.php:56
+msgid "Delete cache"
+msgstr "キャッシュを削除"
+
+#: templates/tab-translate-accelerator.php:60
+msgid "Force deletion of all cache"
+msgstr "キャッシュの強制削除を行う"
+
+#: templates/theme-switcher-content-device.php:24
+msgid "Keyword"
+msgstr "キーワード"
+
+#: templates/theme-switcher-content-group.php:23
+msgid "Use current theme"
+msgstr "現在のテーマを利用"
+
+#: templates/theme-switcher-content-list.php:18
+msgid "Disable switch theme"
+msgstr "デバイスによるテーマ切替を停止"
+
+#: templates/theme-switcher-content-list.php:20
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: templates/theme-switcher-content-list.php:22
+#: templates/theme-switcher-content-list.php:24
+msgid "Add New"
+msgstr "新規追加"
+
+#: templates/theme-switcher-content-list.php:24
+msgid "Device"
+msgstr "デバイス"
+
+#: templates/tab-misc.php:6
+msgid "Miscellaneous"
+msgstr "その他"
+
+#: templates/tab-misc.php:116 templates/tab-misc.php:119
+msgid "Optimize wp-settings.php"
+msgstr "wp-settings.php の最適化"
+
+#: templates/tab-misc.php:128
+msgid "Theme Accelerator"
+msgstr "テーマアクセラレーター"
+
+#: templates/tab-misc.php:131
+msgid "Enable Theme Accelerator"
+msgstr "テーマアクセラレーターの有効化"
+
+#: templates/tab-misc.php:139
+msgid "Theme Accelerator caches functions that need to be accelerated. At the same time, it will speed up themes that supports FSE."
+msgstr "テーマアクセラレーターは高速化が必要な関数をキャッシュにする機能です。同時にFSE対応のテーマに対しても高速化を実施します。"

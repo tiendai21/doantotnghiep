@@ -1,0 +1,74 @@
+.handle_info {
+    .tlt_head {
+        @include sp {
+            margin-bottom: get_sp(19.5);
+        }
+    }
+    .content {
+        text-align: left;
+        max-width: 1580px;
+        margin: 0 auto;
+        display: flex;
+        @include pc {
+            max-width: get_pc(1580);
+        }
+        @include sp {
+            display: block;
+            margin-bottom: 0;
+            padding: 0 get_sp(15);
+        }
+        h3 {
+            font-size: 30px;
+            line-height: 44px;
+            letter-spacing: 3px;
+            padding-bottom: 13.5px;
+            margin-bottom: 21px;
+            border-bottom: 3px solid;
+            color: #004898;
+            font-weight: bold;
+            @include pc {
+                font-size: get_pc(30);
+                line-height: get_pc(44);
+                letter-spacing: get_pc(3);
+                padding-bottom: get_pc(13.5);
+                margin-bottom: get_pc(21);
+                border-bottom: get_pc(3) solid;
+            }
+            @include sp {
+                font-size: get_sp(18);
+                line-height: get_sp(25);
+                letter-spacing: get_sp(1.8);
+                margin-bottom: get_sp(15);
+                padding-bottom: get_sp(14);
+            }
+        }
+        p, span {
+            font-size: 25px;
+            line-height: 45px;
+            letter-spacing: 2.5px;
+            margin-bottom: 68px;
+            font-weight: 400;
+            @include pc {
+                font-size: get_pc(25);
+                line-height: get_pc(45);
+                letter-spacing: get_pc(2.5);
+                margin-bottom: get_pc(68);
+            }
+            @include sp {
+                font-size: get_sp(15);
+                line-height: get_sp(24);
+                letter-spacing: get_sp(1.6);
+                margin-bottom: get_sp(33);
+            }
+        }
+        span {
+            display: block;
+            text-align: right;
+            &.util_sp {
+                @include sp {
+                    margin-bottom: get_sp(20);
+                }
+            }
+        }
+    }
+}

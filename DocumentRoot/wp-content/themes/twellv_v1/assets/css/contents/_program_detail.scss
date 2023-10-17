@@ -1,0 +1,1768 @@
+.program_detail {
+    #main {
+        overflow-x: hidden;
+
+        @include sp {
+            margin-top: get_sp(100);
+        }
+
+        @include pc {
+            margin-top: get_pc(160);
+        }
+    }
+
+    .breadcrumb {
+        margin: 7px auto 20px;
+
+        @include pc {
+            margin: get_pc(7) auto get_pc(20) get_pc(170);
+        }
+
+        @include sp {
+            margin: get_sp(8) auto get_sp(8) get_sp(11);
+        }
+    }
+
+    #banner {
+        .inner {
+            margin-bottom: 78px;
+
+            @include pc {
+                margin-bottom: get_pc(78);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(35);
+            }
+
+            .banner_scroll {
+                overflow-x: scroll;
+                overflow-y: hidden;
+
+                &::-webkit-scrollbar-thumb {
+                    background: #699BD3;
+                    border-radius: 100px;
+                    box-shadow: 3px 0 6px #0000004B;
+
+                    @include pc {
+                        border-radius: get_pc(100);
+                    }
+
+                    @include sp {
+                        border-radius: get_sp(100);
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    width: 15px;
+
+                    @include pc {
+                        width: get_pc(15);
+                    }
+
+                    @include sp {
+                        width: get_sp(6);
+                    }
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: #FFFFFF;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 100px;
+
+                    @include pc {
+                        border-radius: get_pc(100);
+                    }
+
+                    @include sp {
+                        border-radius: get_sp(100);
+                    }
+                }
+
+                .thumb {
+                    width: 3000px;
+                    height: 988px;
+
+                    @include pc {
+                        width: get_pc(3000);
+                        height: get_pc(988);
+                    }
+
+                    @include sp {
+                        width: get_sp(3000);
+                        height: get_sp(287);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .content {
+                background-color: #E8F3FF;
+                padding: 40px 220px 54px 236px;
+
+                @include pc {
+                    padding: get_pc(40) get_pc(220) get_pc(54) get_pc(236);
+                }
+
+                @include sp {
+                    padding: get_sp(23) get_sp(7.5) get_sp(58);
+                }
+
+                h2 {
+                    font-size: 40px;
+                    color: #000000;
+                    font-weight: bold;
+                    line-height: 58px;
+                    letter-spacing: 4px;
+                    text-align: left;
+                    margin-bottom: 26.5px;
+
+                    @include pc {
+                        font-size: get_pc(40);
+                        line-height: get_pc(58);
+                        letter-spacing: get_pc(4);
+                        margin-bottom: get_pc(26.5);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(25);
+                        line-height: get_sp(36);
+                        letter-spacing: get_sp(2.5);
+                        margin-bottom: get_sp(5);
+                    }
+                }
+
+                .date {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 70.5px;
+
+                    @include pc {
+                        margin-bottom: get_pc(70.5);
+                    }
+
+                    @include sp {
+                        display: block;
+                        margin-bottom: get_sp(28.5);
+                    }
+
+                    h4 {
+                        font-size: 30px;
+                        color: #004898;
+                        font-weight: bold;
+                        line-height: 44px;
+                        letter-spacing: 3px;
+                        text-align: left;
+                        padding-top: 17.5px;
+                        border-top: 3px solid #FFFFFF;
+                        width: 793px;
+
+                        @include pc {
+                            font-size: get_pc(30);
+                            line-height: get_pc(44);
+                            letter-spacing: get_pc(3);
+                            padding-top: get_pc(17.5);
+                            border-top: get_pc(3) solid #FFFFFF;
+                            width: get_pc(793);
+                        }
+
+                        @include sp {
+                            font-size: get_sp(16);
+                            line-height: get_sp(24);
+                            letter-spacing: get_sp(1.6);
+                            padding-top: get_sp(11);
+                            border-top: get_sp(2) solid #FFFFFF;
+                            width: 100%;
+                            margin-bottom: get_sp(28.5);
+                        }
+                    }
+
+                    .btn_google {
+                        text-align: center;
+
+                        a {
+                            @include bgsetup("../images/btn_google_pc.png", center center, 100% auto, no-repeat);
+                            width: 554px;
+                            height: 86px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding-left: 65px;
+                            color: #000000;
+                            font-size: 25px;
+                            letter-spacing: 1.25px;
+                            line-height: 36px;
+                            font-weight: bold;
+
+                            @include pc {
+                                width: get_pc(554);
+                                height: get_pc(86);
+                                padding-left: get_pc(65);
+                                font-size: get_pc(25);
+                                letter-spacing: get_pc(1.25);
+                                line-height: get_pc(36);
+                            }
+
+                            @include sp {
+                                @include bgsetup("../images/btn_google_sp.png", center center, 100% auto, no-repeat);
+                                width: 100%;
+                                padding: 0 get_sp(8);
+                                height: get_sp(51);
+                                padding-left: get_sp(69);
+                                font-size: get_sp(17);
+                                letter-spacing: get_sp(1.7);
+                                line-height: get_sp(25);
+                            }
+                        }
+                    }
+                }
+
+                .txt_desp {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include sp {
+                        display: block;
+                    }
+
+                    .txt {
+                        width: 827px;
+                        text-align: left;
+
+                        @include pc {
+                            width: get_pc(827);
+                        }
+
+                        @include sp {
+                            width: 100%;
+                            padding: 0 get_sp(5);
+                            margin-bottom: get_sp(38);
+                        }
+
+                        p {
+                            font-size: 25px;
+                            line-height: 35px;
+                            letter-spacing: 2.5px;
+                            font-weight: 400;
+                            margin-bottom: 40px;
+                            color: #000000;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                line-height: get_pc(35);
+                                letter-spacing: get_pc(2.5);
+                                margin-bottom: get_pc(40);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(16);
+                                line-height: get_sp(25);
+                                letter-spacing: get_sp(1.6);
+                                margin-bottom: get_sp(28.5);
+                            }
+                        }
+
+                        .list {
+                            display: flex;
+                            margin-bottom: 8px;
+
+                            @include pc {
+                                margin-bottom: get_pc(8);
+                            }
+
+                            @include sp {
+                                margin-bottom: get_sp(4);
+                            }
+
+                            span {
+                                font-size: 25px;
+                                line-height: 35px;
+                                letter-spacing: 2.5px;
+                                color: #000000;
+                                font-weight: 400;
+
+                                @include pc {
+                                    font-size: get_pc(25);
+                                    line-height: get_pc(35);
+                                    letter-spacing: get_pc(2.5);
+                                }
+
+                                @include sp {
+                                    font-size: get_sp(16);
+                                    line-height: get_sp(25);
+                                    letter-spacing: get_sp(1.6);
+                                }
+                            }
+
+                            a {
+                                font-size: 25px;
+                                line-height: 35px;
+                                letter-spacing: 2.5px;
+                                color: #004898;
+                                font-weight: 400;
+                                margin-right: 10px;
+                                width: fit-content;
+                                border-bottom: 1px solid #004898;
+
+                                @include pc {
+                                    font-size: get_pc(25);
+                                    line-height: get_pc(35);
+                                    letter-spacing: get_pc(2.5);
+                                    margin-right: get_pc(10);
+                                    border-bottom: get_pc(1) solid #004898;
+                                }
+
+                                @include sp {
+                                    font-size: get_sp(16);
+                                    line-height: get_sp(25);
+                                    letter-spacing: get_sp(1.6);
+                                    margin-right: get_sp(8);
+                                    border-bottom: get_sp(1) solid #004898;
+                                }
+                            }
+
+                            .btn_more {
+                                background-color: #0A5AB2;
+
+                                span {
+                                    font-size: 20px;
+                                    line-height: 25px;
+                                    letter-spacing: 2px;
+                                    color: #FFFFFF;
+                                    font-weight: bold;
+                                    padding: 4px 30px 0 10px;
+
+                                    @include pc {
+                                        font-size: get_pc(20);
+                                        line-height: get_pc(25);
+                                        letter-spacing: get_pc(2);
+                                        padding: get_pc(4) get_pc(30) 0 get_pc(10);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(16);
+                                        line-height: get_sp(25);
+                                        letter-spacing: get_sp(1.6);
+                                        padding: 0 get_sp(26) 0 get_sp(6);
+                                    }
+
+
+                                    &::after {
+                                        content: " ";
+                                        @include bgsetup("../images/btn_arrow_right_l.svg", center center, 100% auto, no-repeat);
+                                        width: 14px;
+                                        height: 14px;
+                                        right: 10px;
+
+                                        @include pc {
+                                            width: get_pc(14);
+                                            height: get_pc(14);
+                                            right: get_pc(10);
+                                        }
+
+                                        @include sp {
+                                            width: get_sp(14);
+                                            height: get_sp(14);
+                                            right: get_sp(11);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .social_banner {
+                        text-align: center;
+                        width: 529px;
+
+                        @include pc {
+                            width: get_pc(529);
+                        }
+
+                        @include sp {
+                            width: 100%;
+                            padding: 0 get_sp(10);
+                        }
+
+                        h4 {
+                            color: #004898;
+                            font-weight: bold;
+                            font-size: 25px;
+                            font-weight: 35px;
+                            letter-spacing: 2.5px;
+                            margin-bottom: 32px;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                font-weight: get_pc(35);
+                                letter-spacing: get_pc(2.5);
+                                margin-bottom: get_pc(32);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(16);
+                                font-weight: get_sp(29);
+                                letter-spacing: get_sp(1.6);
+                                margin-bottom: get_sp(27);
+                                text-align: left;
+                            }
+                        }
+
+                        .social {
+                            @include sp {
+                                width: 100%;
+                                padding: 0 get_sp(30);
+                                display: flex;
+                                justify-content: space-between;
+                            }
+
+                            a {
+                                width: 83px;
+                                height: 83px;
+                                display: inline-block;
+                                margin-right: 61px;
+
+                                @include pc {
+                                    width: get_pc(83);
+                                    height: get_pc(83);
+                                    margin-right: get_pc(61);
+                                }
+
+                                @include sp {
+                                    width: get_sp(61);
+                                    height: get_sp(59);
+                                    margin-right: 0;
+                                }
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .brand {
+                display: flex;
+                margin-bottom: 19px;
+
+                @include pc {
+                    margin-bottom: get_pc(19);
+                }
+
+                @include sp {
+                    display: block;
+                    margin-bottom: get_sp(5);
+                }
+
+                .brand_left {
+                    width: 1288px;
+                    background-color: #004898;
+                    padding: 27px 275px 26px 236px;
+                    display: flex;
+                    align-items: center;
+
+                    @include pc {
+                        width: get_pc(1288);
+                        padding: get_pc(27) get_pc(275) get_pc(26) get_pc(236);
+                    }
+
+                    @include sp {
+                        width: 100%;
+                        padding: get_sp(11) get_sp(26.5) get_sp(11) get_sp(19);
+                    }
+
+                    .thumb {
+                        width: 332px;
+                        height: 207px;
+                        margin-right: 41px;
+
+                        @include pc {
+                            width: get_pc(332);
+                            height: get_pc(207);
+                            margin-right: get_pc(41);
+                        }
+
+                        @include sp {
+                            width: get_sp(155);
+                            height: get_sp(110);
+                            margin-right: get_sp(14.5);
+                        }
+                    }
+
+                    .txt_desp {
+                        text-align: left;
+
+                        @include sp {
+                            flex: 1;
+                        }
+
+                        h2 {
+                            font-size: 35px;
+                            color: #FFFFFF;
+                            font-weight: bold;
+                            line-height: 51px;
+                            letter-spacing: 1.75px;
+                            padding-bottom: 11.5px;
+                            margin-bottom: 9.5px;
+                            border-bottom: 2px solid #FFFFFF;
+                            width: 405.5px;
+
+                            @include pc {
+                                font-size: get_pc(35);
+                                line-height: get_pc(51);
+                                letter-spacing: get_pc(1.75);
+                                padding-bottom: get_pc(11.5);
+                                margin-bottom: get_pc(9.5);
+                                border-bottom: get_pc(2) solid #FFFFFF;
+                                width: get_pc(405.5);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(16);
+                                line-height: get_sp(24);
+                                letter-spacing: get_sp(0.8);
+                                padding-bottom: get_sp(10);
+                                margin-bottom: get_sp(5);
+                                border-bottom: get_sp(1) solid #FFFFFF;
+                                width: 100%;
+                            }
+                        }
+
+                        p {
+                            font-size: 25px;
+                            color: #FFFFFF;
+                            font-weight: bold;
+                            line-height: 35px;
+                            letter-spacing: 2.5px;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                line-height: get_pc(35);
+                                letter-spacing: get_pc(2.5);
+                            }
+
+                            @include sp {
+                                font-size: get_sp(16);
+                                line-height: get_sp(20);
+                                letter-spacing: get_sp(1.6);
+                            }
+                        }
+                    }
+                }
+
+                .brand_right {
+                    flex-shrink: 0;
+                    padding: 50px 45px;
+                    background-color: #16345A;
+
+                    @include pc {
+                        padding: get_pc(50) get_pc(45);
+                    }
+
+                    @include sp {
+                        padding: get_sp(8) get_sp(18);
+                    }
+
+                    h4 {
+                        position: relative;
+                        font-size: 35px;
+                        color: #FFFFFF;
+                        font-weight: bold;
+                        line-height: 51px;
+                        letter-spacing: 3.5px;
+                        border: 1px solid #E8C816;
+                        border-radius: 6px;
+                        padding: 53px 35px;
+
+                        @include pc {
+                            font-size: get_pc(35);
+                            line-height: get_pc(51);
+                            letter-spacing: get_pc(3.5);
+                            border: get_pc(1) solid #E8C816;
+                            border-radius: get_pc(6);
+                            padding: get_pc(53) get_pc(35);
+                        }
+
+                        @include sp {
+                            font-size: get_sp(18);
+                            line-height: get_sp(26);
+                            letter-spacing: get_sp(1.8);
+                            border: get_sp(1) solid #E8C816;
+                            border-radius: get_sp(6);
+                            padding: get_sp(14) 0;
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 26.5px;
+                            height: 20px;
+                            left: 11px;
+                            top: 43px;
+                            @include bgsetup("../images/icon_tlt_brand.png", center center, 100% auto, no-repeat);
+                            @include pc {
+                                width: get_pc(26.5);
+                                height: get_pc(20);
+                                left: get_pc(11);
+                                top: get_pc(43);
+                            }
+                            @include sp {
+                                width: get_sp(15.8);
+                                height: get_sp(12);
+                                left: get_sp(39);
+                                top: get_sp(10);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .broadcast_schedule {
+                a {
+                    font-size: 35px;
+                    line-height: 51px;
+                    color: #FFFFFF;
+                    letter-spacing: 1.75px;
+                    font-weight: bold;
+                    background-color: #004898;
+                    padding: 24px 0 25px;
+                    border-radius: 50px;
+                    width: 870px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include pc {
+                        font-size: get_pc(35);
+                        line-height: get_pc(51);
+                        letter-spacing: get_pc(1.75);
+                        padding: get_pc(24) 0 get_pc(25);
+                        border-radius: get_pc(50);
+                        width: get_pc(870);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(18);
+                        line-height: get_sp(26);
+                        letter-spacing: get_sp(1.8);
+                        padding: get_sp(21) 0 get_sp(24);
+                        border-radius: 0;
+                        width: 100%;
+                    }
+
+                    &:before {
+                        content: " ";
+                        @include bgsetup("../images/icon_calendar.svg", center center, 100% auto, no-repeat);
+                        width: 37px;
+                        height: 37px;
+                        display: inline-block;
+                        margin-right: 11px;
+
+                        @include pc {
+                            width: get_pc(37);
+                            height: get_pc(37);
+                            margin-right: get_pc(11);
+                        }
+
+                        @include sp {
+                            width: get_sp(18);
+                            height: get_sp(17);
+                            margin-right: get_sp(7);
+                        }
+                    }
+
+                    &:after {
+                        content: " ";
+                        @include bgsetup("../images/btn_arrow_right_l.svg", center center, 100% auto, no-repeat);
+                        width: 26px;
+                        height: 30px;
+                        display: inline-block;
+                        margin-left: 9px;
+                        transform: rotate(90deg);
+
+                        @include pc {
+                            width: get_pc(26);
+                            height: get_pc(30);
+                            margin-left: get_pc(9);
+                        }
+
+                        @include sp {
+                            width: get_sp(11);
+                            height: get_sp(13);
+                            margin-left: get_sp(3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #synopsis {
+        .inner {
+            max-width: 1476px;
+            margin: 0 auto;
+
+            @include pc {
+                max-width: get_pc(1476);
+            }
+
+            @include sp {
+                max-width: 100%;
+                padding: 0 get_sp(14);
+                margin: 0 auto get_sp(54);
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 44px;
+                letter-spacing: 3px;
+                font-weight: bold;
+                padding-bottom: 26px;
+                margin-bottom: 39.5px;
+                border-bottom: 3px solid #004898;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    padding-bottom: get_pc(26);
+                    margin-bottom: get_pc(39.5);
+                    border-bottom: get_pc(3) solid #004898;
+                }
+
+                @include sp {
+                    font-size: get_sp(18);
+                    line-height: get_sp(26);
+                    letter-spacing: get_sp(1.8);
+                    padding-bottom: get_sp(12);
+                    margin-bottom: get_sp(26);
+                    border-bottom: get_sp(2) solid #004898;
+                }
+            }
+
+            p {
+                font-size: 35px;
+                line-height: 70px;
+                letter-spacing: 3.5px;
+                font-weight: bold;
+                margin-bottom: 70px;
+                color: #699BD3;
+                text-align: left;
+                padding: 0 50px;
+
+                @include pc {
+                    font-size: get_pc(35);
+                    line-height: get_pc(70);
+                    letter-spacing: get_pc(3.5);
+                    margin-bottom: get_pc(70);
+                    padding: 0 get_pc(50);
+                }
+
+                @include sp {
+                    font-size: get_sp(20);
+                    line-height: get_sp(35);
+                    letter-spacing: get_sp(2);
+                    margin-bottom: get_sp(37);
+                    padding: 0;
+                }
+            }
+
+            .item_1,
+            .item_2 {
+                padding: 0 50px;
+                display: flex;
+                margin-bottom: 55px;
+
+                @include pc {
+                    padding: 0 get_pc(50);
+                    margin-bottom: get_pc(55);
+                }
+
+                @include sp {
+                    flex-direction: column-reverse;
+                    padding: 0;
+                    margin-bottom: get_sp(50);
+                }
+
+                .content {
+                    .thumb {
+                        width: 600px;
+                        height: 400px;
+                        margin-right: 60px;
+                        margin-bottom: 24px;
+
+                        @include pc {
+                            width: get_pc(600);
+                            height: get_pc(400);
+                            margin-right: get_pc(60);
+                            margin-bottom: get_pc(24);
+                        }
+
+                        @include sp {
+                            width: get_sp(360);
+                            height: get_sp(237);
+                            margin-right: 0;
+                            margin-bottom: get_sp(10);
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 25px;
+                    line-height: 50px;
+                    letter-spacing: 2.5px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    color: #000000;
+                    text-align: left;
+                    padding: 0;
+
+                    @include pc {
+                        font-size: get_pc(25);
+                        line-height: get_pc(50);
+                        letter-spacing: get_pc(2.5);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(16);
+                        line-height: get_sp(25);
+                        letter-spacing: get_sp(1.6);
+                        margin-bottom: get_sp(26);
+                    }
+                }
+
+                .txt {
+                    width: 600px;
+
+                    @include pc {
+                        width: get_pc(600);
+                    }
+
+                    @include sp {
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .item_2 {
+                @include sp {
+                    flex-direction: unset;
+                    display: block;
+                    margin-bottom: get_sp(46);
+                }
+
+                .content {
+                    .thumb {
+                        width: 604px;
+                        margin-left: 56px;
+                        margin-right: 0;
+
+                        @include pc {
+                            width: get_pc(604);
+                            margin-left: get_pc(56);
+                        }
+
+                        @include sp {
+                            width: get_sp(360);
+                            height: get_sp(237);
+                            margin-left: 0;
+                            margin-bottom: get_sp(18);
+                        }
+                    }
+                }
+
+                p {
+                    @include sp {
+                        margin-bottom: get_sp(29);
+                    }
+                }
+
+                .txt {
+                    margin-left: auto;
+                }
+            }
+
+            .item_3 {
+                @include sp {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+
+                p {
+                    font-size: 25px;
+                    line-height: 50px;
+                    letter-spacing: 2.5px;
+                    font-weight: 400;
+                    margin-bottom: 51px;
+                    color: #000000;
+                    text-align: left;
+                    padding: 0 50px;
+
+                    @include pc {
+                        font-size: get_pc(25);
+                        line-height: get_pc(50);
+                        letter-spacing: get_pc(2.5);
+                        margin-bottom: get_pc(51);
+                        padding: 0 get_pc(50);
+                    }
+
+                    @include sp {
+                        padding: 0;
+                        font-size: get_sp(16);
+                        line-height: get_sp(25);
+                        letter-spacing: get_sp(1.6);
+                        margin-bottom: 0;
+                    }
+                }
+
+                .program_slide {
+                    width: 600px;
+                    margin: 0 auto 204px;
+
+                    @include pc {
+                        width: get_pc(600);
+                        margin: 0 auto get_pc(204);
+                    }
+
+                    @include sp {
+                        width: get_sp(336);
+                        height: get_sp(221);
+                        margin: 0 auto get_sp(37);
+                    }
+                }
+
+                .item_slide {
+                    a {
+                        width: 600px;
+                        height: 400px;
+
+                        @include pc {
+                            width: get_pc(600);
+                            height: get_pc(400);
+                        }
+
+                        @include sp {
+                            width: get_sp(336);
+                            height: get_sp(221);
+                        }
+                    }
+
+                    .thumb {
+                        width: 600px;
+                        height: 400px;
+
+                        @include pc {
+                            width: get_pc(600);
+                            height: get_pc(400);
+                        }
+
+                        @include sp {
+                            width: get_sp(336);
+                            height: get_sp(221);
+                        }
+                    }
+                }
+
+                .slick-list {
+                    padding: 0 !important;
+                }
+
+                .slick-prev {
+                    width: 19px;
+                    height: 40px;
+                    left: -44px;
+                    z-index: 99;
+
+                    @include pc {
+                        width: get_pc(19);
+                        height: get_pc(40);
+                        left: get_pc(-44);
+                    }
+
+                    @include sp {
+                        width: get_sp(12);
+                        height: get_sp(24);
+                        left: get_sp(-16);
+                    }
+
+                    &:before {
+                        content: " ";
+                        @include bgsetup("../images/arrow_slide_l_b.svg", center center, 100% auto, no-repeat);
+                        width: 19px;
+                        height: 40px;
+                        display: inline-block;
+                        opacity: 1;
+                        font-size: 0;
+
+                        @include pc {
+                            width: get_pc(19);
+                            height: get_pc(40);
+                        }
+
+                        @include sp {
+                            width: get_sp(12);
+                            height: get_sp(24);
+                        }
+                    }
+                }
+
+                .slick-next {
+                    width: 19px;
+                    height: 40px;
+                    right: -44px;
+                    z-index: 99;
+
+                    @include pc {
+                        width: get_pc(19);
+                        height: get_pc(40);
+                        right: get_pc(-44);
+                    }
+
+                    @include sp {
+                        width: get_sp(12);
+                        height: get_sp(24);
+                        right: get_sp(-16);
+                    }
+
+                    &:before {
+                        content: " ";
+                        @include bgsetup("../images/arrow_slide_r_b.svg", center center, 100% auto, no-repeat);
+                        width: 19px;
+                        height: 40px;
+                        display: inline-block;
+                        opacity: 1;
+                        font-size: 0;
+
+                        @include pc {
+                            width: get_pc(19);
+                            height: get_pc(40);
+                        }
+
+                        @include sp {
+                            width: get_sp(12);
+                            height: get_sp(24);
+                        }
+                    }
+                }
+
+                .slick-dots li {
+                    background-color: #EDEDED;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    margin: 0 8.5px;
+
+                    @include pc {
+                        width: get_pc(18);
+                        height: get_pc(18);
+                        margin: 0 get_pc(8.5);
+                    }
+
+                    @include sp {
+                        width: get_sp(11);
+                        height: get_sp(11);
+                        margin: 0 get_sp(5.5);
+                    }
+
+                    &.slick-active {
+                        background-color: #004898;
+                    }
+                }
+
+                .slick-prev.slick-disabled:before,
+                .slick-next.slick-disabled:before {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    #correlation_diagram {
+        .inner {
+            max-width: 1476px;
+            margin: 0 auto 155px;
+
+            @include pc {
+                max-width: get_pc(1476);
+                margin: 0 auto get_pc(155);
+            }
+
+            @include sp {
+                max-width: 100%;
+                margin: 0 auto get_sp(54);
+                padding: 0 get_sp(16);
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 44px;
+                letter-spacing: 3px;
+                font-weight: bold;
+                padding-bottom: 26px;
+                margin-bottom: 66px;
+                border-bottom: 3px solid #004898;
+                color: #004898;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    padding-bottom: get_pc(26);
+                    margin-bottom: get_pc(66);
+                    border-bottom: get_pc(3) solid #004898;
+                }
+
+                @include sp {
+                    font-size: get_sp(18);
+                    line-height: get_sp(26);
+                    letter-spacing: get_sp(1.8);
+                    padding-bottom: get_sp(12);
+                    margin-bottom: get_sp(29);
+                    border-bottom: get_sp(2) solid #004898;
+                }
+            }
+        }
+    }
+
+    #episode {
+        .inner {
+            max-width: 1476px;
+            margin: 0 auto 104px;
+
+            @include pc {
+                max-width: get_pc(1476);
+                margin: 0 auto get_pc(104);
+            }
+
+            @include sp {
+                max-width: 100%;
+                margin: 0 auto get_sp(22);
+                padding: 0 get_sp(16);
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 44px;
+                letter-spacing: 3px;
+                font-weight: bold;
+                padding-bottom: 34px;
+                margin-bottom: 64px;
+                border-bottom: 3px solid #004898;
+                color: #004898;
+
+                @include pc {
+                    font-size: get_pc(30);
+                    line-height: get_pc(44);
+                    letter-spacing: get_pc(3);
+                    padding-bottom: get_pc(34);
+                    margin-bottom: get_pc(64);
+                    border-bottom: get_pc(3) solid #004898;
+                }
+
+                @include sp {
+                    font-size: get_sp(18);
+                    line-height: get_sp(26);
+                    letter-spacing: get_sp(1.8);
+                    padding-bottom: get_sp(12);
+                    margin-bottom: get_sp(22);
+                    border-bottom: get_sp(2) solid #004898;
+                }
+            }
+
+            .list_episode {
+                ul {
+                    margin-bottom: 104px;
+
+                    @include pc {
+                        margin-bottom: get_pc(104);
+                    }
+
+                    @include sp {
+                        margin-bottom: get_sp(22);
+                    }
+
+                    li {
+                        display: flex;
+                        padding: 0 152px 0 74px;
+                        margin-bottom: 113px;
+
+                        @include pc {
+                            padding: 0 get_pc(152) 0 get_pc(74);
+                            margin-bottom: get_pc(113);
+                        }
+
+                        @include sp {
+                            display: block;
+                            padding: 0;
+                            margin-bottom: get_sp(22);
+                        }
+
+                        .tlt {
+                            display: flex;
+
+                            @include sp {
+                                align-items: center;
+                                margin-bottom: get_sp(14);
+                            }
+                        }
+
+                        .thumb {
+                            width: 512px;
+                            height: 288px;
+                            margin-right: 46px;
+
+                            @include pc {
+                                width: get_pc(512);
+                                height: get_pc(288);
+                                margin-right: get_pc(46);
+                            }
+
+                            @include sp {
+                                width: get_sp(155);
+                                height: get_sp(110);
+                                margin-right: get_sp(21);
+                            }
+
+                            img {
+                                box-shadow: 0 3px 6px #00000029;
+                                border-radius: 26px;
+
+                                @include pc {
+                                    border-radius: get_pc(26);
+                                }
+
+                                @include sp {
+                                    border-radius: get_sp(9);
+                                }
+                            }
+                        }
+
+                        .txt_desp {
+                            text-align: left;
+                            flex: 1;
+                            position: relative;
+
+                            h4 {
+                                font-size: 30px;
+                                margin-bottom: 6px;
+                                line-height: 44px;
+                                font-weight: bold;
+                                color: #000000;
+                                letter-spacing: 3px;
+
+                                @include pc {
+                                    font-size: get_pc(30);
+                                    margin-bottom: get_pc(6);
+                                    line-height: get_pc(44);
+                                    letter-spacing: get_pc(3);
+                                }
+
+                                @include sp {
+                                    width: get_sp(190);
+                                    font-size: get_sp(18);
+                                    line-height: get_sp(26);
+                                    margin-bottom: get_sp(2);
+                                    letter-spacing: get_sp(0.9);
+                                }
+                            }
+
+                            span {
+                                font-size: 25px;
+                                margin-bottom: 25px;
+                                line-height: 36px;
+                                font-weight: 400;
+                                color: #6A6A6A;
+                                letter-spacing: 2.5px;
+                                display: inline-block;
+
+                                @include pc {
+                                    font-size: get_pc(25);
+                                    margin-bottom: get_pc(25);
+                                    line-height: get_pc(36);
+                                    letter-spacing: get_pc(2.5);
+                                }
+
+                                @include sp {
+                                    font-size: get_sp(16);
+                                    margin-bottom: get_sp(0);
+                                    line-height: get_sp(24);
+                                    letter-spacing: get_sp(0.8);
+                                }
+                            }
+
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            font-size: 25px;
+                            line-height: 35px;
+                            margin-bottom: 27px;
+                            font-weight: 400;
+                            color: #000000;
+                            letter-spacing: 2.5px;
+
+                            @include pc {
+                                font-size: get_pc(25);
+                                line-height: get_pc(35);
+                                margin-bottom: get_pc(27);
+                                letter-spacing: get_pc(2.5);
+                            }
+
+                            @include sp {
+                                text-align: left;
+                                font-size: get_sp(16);
+                                line-height: get_sp(25);
+                                margin-bottom: get_sp(6);
+                                letter-spacing: get_sp(1.6);
+                            }
+                        }
+
+                        .btn_more {
+                            margin-left: auto;
+                            background-color: #0A5AB2;
+                            position: absolute;
+                            right: 0;
+                            bottom: -32px;
+
+                            @include pc {
+                                bottom: get_pc(-32);
+                            }
+
+                            @include sp {
+                                position: unset;
+                                display: flex;
+                                width: get_sp(126);
+                                bottom: get_sp(-32);
+                            }
+
+                            span {
+                                font-size: 22px;
+                                line-height: 25px;
+                                font-weight: bold;
+                                color: #FFFFFF;
+                                letter-spacing: 2.2px;
+                                margin-bottom: 0;
+                                padding: 8px 36px 8px 22px;
+
+                                @include pc {
+                                    font-size: get_pc(22);
+                                    line-height: get_pc(25);
+                                    letter-spacing: get_pc(2.2);
+                                    padding: get_pc(8) get_pc(36) get_pc(8) get_pc(22);
+                                }
+
+                                @include sp {
+                                    font-size: get_sp(16);
+                                    line-height: get_sp(25);
+                                    letter-spacing: get_sp(1.6);
+                                    padding: get_sp(4) get_sp(10);
+                                    display: flex;
+                                    align-items: center;
+                                    margin-left: get_sp(5);
+                                }
+
+                                &::after {
+                                    @include bgsetup("../images/btn_arrow_right_l.svg", center center, 100% auto, no-repeat);
+                                    position: unset;
+                                    display: inline-block;
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn_all {
+                span {
+                    font-size: 22px;
+                    line-height: 32px;
+                    letter-spacing: 1.1px;
+                    font-weight: bold;
+                    border: 1px solid #004898;
+                    border-radius: 50px;
+                    padding: 6px 24px 9px 32px;
+                    color: #134898;
+
+                    @include pc {
+                        font-size: get_pc(22);
+                        line-height: get_pc(32);
+                        letter-spacing: get_pc(1.1);
+                        border: get_pc(1) solid #004898;
+                        border-radius: get_pc(50);
+                        padding: get_pc(6) get_pc(24) get_pc(9) get_pc(32);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(14);
+                        line-height: get_sp(20);
+                        letter-spacing: get_sp(0.7);
+                        border: get_sp(1) solid #004898;
+                        border-radius: get_sp(50);
+                        padding: get_sp(4) get_sp(13) get_sp(5) get_sp(13);
+                    }
+
+                    &::after {
+                        content: "";
+                        @include bgsetup("../images/btn_arrow_right.svg", center center, 100% auto, no-repeat);
+                        width: 16px;
+                        height: 19px;
+                        display: inline-block;
+                        transform: rotate(90deg);
+
+                        @include pc {
+                            width: get_pc(16);
+                            height: get_pc(19);
+                        }
+
+                        @include sp {
+                            width: get_sp(10);
+                            height: get_sp(12);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #kboard {
+        .inner {
+            display: flex;
+            max-width: 1576px;
+            margin: 0 auto 104px;
+
+            @include pc {
+                max-width: get_pc(1576);
+                margin: 0 auto get_pc(104);
+            }
+
+            @include sp {
+                max-width: 100%;
+                margin: 0 auto get_sp(28);
+            }
+
+            .thumb {
+                width: 522px;
+                height: 216px;
+
+                @include pc {
+                    width: get_pc(522);
+                    height: get_pc(216);
+                }
+
+                @include sp {
+                    width: get_sp(187);
+                    height: get_sp(91);
+                }
+            }
+
+            .txt_desp {
+                flex: 1;
+                background: #F2F2F2 0 0 no-repeat padding-box;
+                border-radius: 0 32px 32px 0;
+                padding: 42px 70px 0 40px;
+                text-align: left;
+
+                @include pc {
+                    border-radius: 0 get_pc(32) get_pc(32) 0;
+                    padding: get_pc(42) get_pc(70) 0 get_pc(40);
+                }
+
+                @include sp {
+                    border-radius: 0;
+                    padding: get_sp(11) get_sp(6.5) 0 get_sp(7.5);
+                }
+
+                h4 {
+                    font-size: 30px;
+                    line-height: 44px;
+                    letter-spacing: 3px;
+                    color: #000000;
+                    margin-bottom: 14px;
+
+                    @include pc {
+                        font-size: get_pc(30);
+                        line-height: get_pc(44);
+                        letter-spacing: get_pc(3);
+                        margin-bottom: get_pc(14);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(16);
+                        line-height: get_sp(24);
+                        letter-spacing: get_sp(1.6);
+                        margin-bottom: get_sp(4);
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 29px;
+                    letter-spacing: 2px;
+                    color: #000000;
+                    font-size: 400;
+
+                    @include pc {
+                        font-size: get_pc(20);
+                        line-height: get_pc(29);
+                        letter-spacing: get_pc(2);
+                    }
+
+                    @include sp {
+                        font-size: get_sp(14);
+                        line-height: get_sp(20);
+                        letter-spacing: get_sp(1.4);
+                    }
+                }
+            }
+        }
+    }
+
+    .opinions {
+        margin-bottom: 111px;
+
+        @include pc {
+            margin-bottom: get_pc(111);
+        }
+
+        @include sp {
+            margin-bottom: get_sp(42);
+        }
+
+        span {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            width: 506px;
+            font-size: 25px;
+            line-height: 36px;
+            font-weight: bold;
+            padding: 28.5px;
+            color: #004898;
+            border: 2px solid #004898;
+            border-radius: 49px;
+            position: relative;
+
+            @include pc {
+                width: get_pc(506);
+                font-size: get_pc(25);
+                line-height: get_pc(36);
+                padding: get_pc(28.5);
+                border: get_pc(2) solid #004898;
+                border-radius: get_pc(49);
+            }
+
+            @include sp {
+                width: get_sp(228);
+                font-size: get_sp(14);
+                line-height: get_sp(20);
+                padding: get_sp(10);
+                border: get_sp(2) solid #004898;
+                border-radius: get_sp(49);
+            }
+
+            &::after {
+                content: " ";
+                @include bgsetup("../images/icon_list_blu.svg", center center, 100% auto, no-repeat);
+                width: 43px;
+                height: 43px;
+                right: 26px;
+                position: absolute;
+
+                @include pc {
+                    width: get_pc(43);
+                    height: get_pc(43);
+                    right: get_pc(26);
+                }
+
+                @include sp {
+                    width: get_sp(19);
+                    height: get_sp(19);
+                    right: get_sp(15);
+                }
+            }
+        }
+    }
+
+    #chinese_drama,
+    #korean_drama,
+    #drama_movie {
+        .tlt_section {
+            margin: 0 auto 36px;
+
+            @include pc {
+                margin: 0 auto get_pc(36);
+            }
+
+            @include sp {
+                margin: 0 auto get_sp(15);
+            }
+
+            h2 {
+                display: flex;
+                align-items: center;
+
+                &:before {
+                    content: " ";
+                    @include bgsetup("../images/icon_ovice_left.svg", center center, 100% auto, no-repeat);
+                    width: 26px;
+                    height: 46px;
+                    display: inline-block;
+                    margin-right: 17px;
+
+                    @include pc {
+                        width: get_pc(26);
+                        height: get_pc(46);
+                        margin-right: get_pc(17);
+                    }
+
+                    @include sp {
+                        width: get_sp(13);
+                        height: get_sp(23);
+                        margin-right: get_sp(5);
+                    }
+                }
+
+                &:after {
+                    content: " ";
+                    @include bgsetup("../images/icon_ovice_right.svg", center center, 100% auto, no-repeat);
+                    width: 26px;
+                    height: 46px;
+                    display: inline-block;
+                    margin-left: 17px;
+
+                    @include pc {
+                        width: get_pc(26);
+                        height: get_pc(46);
+                        margin-left: get_pc(17);
+                    }
+
+                    @include sp {
+                        width: get_sp(13);
+                        height: get_sp(23);
+                        margin-left: get_sp(5);
+                    }
+                }
+            }
+        }
+
+        .program_slide {
+            margin-bottom: 61px;
+
+            @include pc {
+                margin-bottom: get_pc(61);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(22);
+            }
+
+        }
+
+        .item_slide {
+            margin-right: 10px;
+
+            @include pc {
+                margin-right: get_pc(10);
+            }
+
+            @include sp {
+                margin-right: get_sp(5);
+            }
+
+            a {
+                width: 320px;
+                height: 180px;
+                display: inline-block;
+
+                @include pc {
+                    width: get_pc(320);
+                    height: get_pc(180);
+                }
+
+                @include sp {
+                    width: get_sp(160);
+                    height: get_sp(90);
+                }
+            }
+        }
+
+        .slick-list {
+            padding: 0 !important;
+        }
+
+        .slick-prev.slick-disabled:before,
+        .slick-next.slick-disabled:before {
+            opacity: 0;
+        }
+    }
+
+    #korean_drama,
+    #drama_movie {
+        .tlt_section {
+            margin: 0 auto 26px;
+
+            @include pc {
+                margin: 0 auto get_pc(26);
+            }
+
+            @include sp {
+                margin: 0 auto get_sp(15);
+            }
+
+            h2 {
+                display: flex;
+                align-items: center;
+
+                &:before {
+                    content: unset;
+                }
+
+                &:after {
+                    content: unset;
+                }
+            }
+        }
+    }
+
+    #korean_drama {
+        .program_slide {
+            margin-bottom: 63px;
+
+            @include pc {
+                margin-bottom: get_pc(63);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(22);
+            }
+        }
+    }
+
+    #drama_movie {
+        .program_slide {
+            margin-bottom: 104px;
+
+            @include pc {
+                margin-bottom: get_pc(104);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(24);
+            }
+        }
+    }
+}

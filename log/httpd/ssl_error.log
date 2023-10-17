@@ -1,0 +1,2 @@
+[Thu Jul 27 16:40:36.943722 2023] [ssl:warn] [pid 11917:tid 139642580752192] AH01906: kusanagi.tsplus.asahi.co.jp:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Jul 27 16:40:36.943752 2023] [ssl:warn] [pid 11917:tid 139642580752192] AH01909: kusanagi.tsplus.asahi.co.jp:443:0 server certificate does NOT include an ID which matches the server name
