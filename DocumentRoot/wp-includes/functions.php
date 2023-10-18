@@ -3830,7 +3830,6 @@ function _default_wp_die_handler( $message, $title = '', $args = array() ) {
 			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 			margin: 2em auto;
 			padding: 1em 2em;
-			max-width: 700px;
 			-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
 			box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
 		}

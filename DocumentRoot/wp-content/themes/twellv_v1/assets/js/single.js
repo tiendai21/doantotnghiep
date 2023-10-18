@@ -1,8 +1,9 @@
 (function ($) {
     // loading after
-    window.onload = function () {
+
+    $( document ).ready(function() {
         history();
-    }
+    });
 
     function history() {
         var id = $(".id_single").val();
