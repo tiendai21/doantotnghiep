@@ -1,4 +1,45 @@
-.news_detail {
+.news_release {
+
+    #content_news_release {
+        .inner {
+            background: #F2F2F2;
+            padding-bottom: 96.07px;
+            margin-bottom: 80px;
+            @include pc {
+                padding-bottom: get_pc(96.07);
+                margin-bottom: get_pc(80);
+            }
+            @include sp {
+                padding-bottom: get_sp(36);
+                margin-bottom: get_sp(35.66);
+            }
+        }
+        .tlt_section {
+            h2 {
+                &:before {
+                    content: "";
+                    @include bgsetup("../images/icon_book.svg", center center, 100% auto, no-repeat);
+                    width: 75px;
+                    height: 75px;
+                    display: block;
+                    margin-right: 16px;
+
+                    @include pc {
+                        width: get_pc(75);
+                        height: get_pc(75);
+                        margin-right: get_pc(16);
+                    }
+
+                    @include sp {
+                        width: get_sp(35);
+                        height: get_sp(35);
+                        margin-right: get_sp(7);
+                    }
+                }
+
+            }
+        }
+    }
     .contain_head {
         background-color: #E8F3FF;
         padding: 35px 0 11px;
@@ -8,7 +49,7 @@
             margin-bottom: get_pc(83);
         }
         @include sp {
-            padding: get_sp(12) get_sp(15) get_sp(15);
+            padding: get_sp(12) get_sp(11) get_sp(15);
             margin-bottom: get_sp(33);
         }
     }
@@ -33,27 +74,6 @@
         h2 {
             display: flex;
             align-items: center;
-            
-            &:before {
-                content: "";
-                @include bgsetup("../images/icon_book.svg", center center, 100% auto, no-repeat);
-                width: 75px;
-                height: 75px;
-                display: block;
-                margin-right: 16px;
-                
-                @include pc {
-                    width: get_pc(75);
-                    height: get_pc(75);
-                    margin-right: get_pc(16);
-                }
-                
-                @include sp {
-                    width: get_sp(35);
-                    height: get_sp(35);
-                    margin-right: get_sp(7);
-                }
-            }
         }
     }
     .list_year {
@@ -76,11 +96,6 @@
                 }
                 @include sp {
                     margin-bottom: 0;
-                }
-                &:nth-child(5n) {
-                    a {
-                        margin-right: 0;
-                    }
                 }
                 a {
                     font-size: 25px;
@@ -127,7 +142,6 @@
         @include sp {
             max-width: 100%;
             padding: 0 get_sp(15);
-            margin-bottom: get_sp(36);
         }
         .inner {
             background-color: #F2F2F2;
@@ -174,6 +188,7 @@
                     font-weight: bold;
                     color: #004898;
                     background-color: #E8F3FF;
+                    cursor: pointer;
                     @include pc {
                         font-size: get_pc(30);
                         line-height: get_pc(44);
@@ -238,7 +253,29 @@
                             padding-bottom: get_sp(9);
                             margin-bottom: get_sp(9);
                         }
-            
+                        &:nth-child(2) {
+                            a {
+                                align-items: center;
+                                &:after {
+                                    content: '';
+                                    @include bgsetup("../images/icon_pdf.svg",center center,100% auto, no-repeat);
+                                    display: block;
+                                    width: 52px;
+                                    height: 28px;
+                                    margin-left: 20px;
+                                    @include pc {
+                                        width: get_pc(52);
+                                        height: get_pc(28);
+                                        margin-left: get_pc(20);
+                                    }
+                                    @include sp {
+                                        width: get_sp(43);
+                                        height: get_sp(23);
+                                        margin-left: get_sp(5);
+                                    }
+                                }
+                            }
+                        }
                         a {
                             display: flex;
                             align-items: flex-start;
@@ -246,7 +283,6 @@
                             @include sp {
                                 align-items: flex-start;
                             }
-                
                             span {
                                 letter-spacing: 3.75px;
                                 color: #0079ff;
@@ -295,9 +331,25 @@
         }
     }
     #other {
-        .tlt_section {
-            h2 {
-                display: flex;
+        .list_other {
+            ul {
+                li {
+                    &:last-child {
+                        a {
+                            position: relative;
+                            &:after {
+                                @include sp {
+                                    width: get_sp(19);
+                                    height: get_sp(19);
+                                    border-radius: 50%;
+                                    background: #699BD3 0% 0% no-repeat padding-box;
+                                    position: absolute;
+                                    right: get_sp(12);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

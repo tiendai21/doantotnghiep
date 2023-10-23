@@ -18,10 +18,11 @@
         toggleSearch();
         openIntro();
         faq();
-        scrollAnimation("#header #nav_list a");
-        scrollAnimation("#program ul li a");
-        scrollAnimation(".faq .tab_content a");
-        scrollAnimation(".broadcast_schedule a");
+        scrollAnimation("#header #nav_list a",100);
+        scrollAnimation("#program ul li a",100);
+        scrollAnimation(".faq .tab_content_faq a",100);
+        scrollAnimation(".broadcast_schedule a",100);
+        scrollAnimation(".list_year ul li a",167);
         handleSlide(".slide_top", false, false, true, true);
         slideBrand(".slide_brand ul", false);
         slideProgram(".slide_air", false, false);
@@ -107,21 +108,21 @@
 
     function toggleMenuFooter() {
         $(".nav_footer h3").click(function () {
-            $(this).siblings("ul").stop().slideToggle();
+            $_sibling = $(this).siblings();
+            $_sibling.stop().slideToggle();
+            $_sibling.find("ul").show();
             $(this).toggleClass("active");
-            $(this).siblings(".nav_list").stop().slideToggle();
-            $(".nav_list_last ul").slideToggle();
         });
     }
 
-    function scrollAnimation(selector) {
+    function scrollAnimation(selector,offsetTop) {
         $(selector).click(function (e) {
             const targetPage = $(this).attr("href");
             if (targetPage.includes("#")) {
                 e.preventDefault();
                 const currentPage = $(targetPage);
                 $("html, body").animate(
-                    { scrollTop: currentPage.offset().top - 100 },
+                    { scrollTop: currentPage.offset().top - offsetTop },
                     1000
                 );
             }
@@ -399,7 +400,6 @@
             ]
         });
     }
-
     //resize after
     window.onresize = function () {
         _width = $(window).width();
