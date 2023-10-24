@@ -46,19 +46,15 @@ class KUSANAGI_Page_Cache {
 		if ( ! $version ) {
 			$this->create_cache_table();
 			$this->generate_advanced_cache_file();
-		} else {
-			if ( $version < 2 ) {
-				$this->update_cache_table( 2 );
-			}
-			if ( $version < 3 ) {
-				$this->update_cache_table( 3 );
-			}
-			if ( $version < 4 ) {
-				$this->update_cache_table( 4 );
-			}
-			if ( $version < 5 ) {
-				$this->update_cache_table( 5 );
-			}
+		} elseif ( $version < 2 ) {
+			$this->update_cache_table( 2 );
+			$this->update_cache_table( 3 );
+			$this->update_cache_table( 4 );
+		} elseif ( $version < 3 ) {
+			$this->update_cache_table( 3 );
+			$this->update_cache_table( 4 );
+		} elseif ( $version < 4 ) {
+			$this->update_cache_table( 4 );
 		}
 	}
 
@@ -82,7 +78,6 @@ class KUSANAGI_Page_Cache {
 		$charset_collate = $cache_db->get_charset_collate();
 		$sql = "
 CREATE TABLE `{$cache_db->prefix}site_cache` (
- `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
  `hash` varchar(32) NOT NULL,
  `content` longtext NOT NULL,
  `device_url` text NOT NULL,
@@ -94,7 +89,6 @@ CREATE TABLE `{$cache_db->prefix}site_cache` (
  `updating` tinyint(1) NOT NULL DEFAULT '0',
  `create_time` datetime NOT NULL,
  `expire_time` datetime NOT NULL,
- PRIMARY KEY (`id`),
  KEY `hash` (`hash`),
  KEY `expire_time` (`expire_time`),
  KEY `type` (`type`,`post_type`),
@@ -106,7 +100,7 @@ CREATE TABLE `{$cache_db->prefix}site_cache` (
 		$sql = "SHOW TABLES FROM `{$cache_db->dbname}` LIKE '{$cache_db->prefix}site_cache'";
 		$table_exists = $cache_db->get_var( $sql );
 		if ( $table_exists ) {
-			update_option( 'site_manager_cache_installed', 5 );
+			update_option( 'site_manager_cache_installed', 3 );
 		}
 	}
 
@@ -141,13 +135,6 @@ ALTER TABLE `{$cache_db->prefix}site_cache`
 MODIFY		`type` VARCHAR( 20 )";
 				$cache_db->query( $sql );
 				update_option( 'site_manager_cache_installed', 4 );
-				break;
-			case 5 :
-				$sql = "
-ALTER TABLE `{$cache_db->prefix}site_cache`
-ADD			`id` BIGINT(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST";
-				$cache_db->query( $sql );
-				update_option( 'site_manager_cache_installed', 5 );
 				break;
 			default :
 		}

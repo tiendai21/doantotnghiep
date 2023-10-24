@@ -23,7 +23,6 @@ class KUSANAGI_Theme_Switcher {
 			if ( ! get_option( 'theme_switcher_disable', 0 ) ) {
 				add_action( 'plugins_loaded'    , array( $this, 'get_avaiable_themes' ), 9 );
 			}
-			add_action( 'init'              , array( $this, 'theme_switch_table_update' ) );
 			add_action( 'wpmu_new_blog'     , array( $this, 'do_ms_activation_module_hook' ) );
 
 			if ( ! is_admin() && ! get_option( 'theme_switcher_disable', 0 ) && isset( $_SERVER['HTTP_USER_AGENT'] ) && isset( $_SERVER['DOCUMENT_ROOT'] ) ) {
@@ -61,29 +60,6 @@ class KUSANAGI_Theme_Switcher {
 		// }
 	}
 
-	public function theme_switch_table_update() {
-		$version = get_option( 'site_manager_theme_switch_installed', false );
-		if ( ! $version ) {
-			$version = 1;
-		}
-		if ( $version < 2 ) {
-			$this->update_theme_switch_table( 2 );
-		}
-	}
-
-	public function update_theme_switch_table( $db_version ) {
-		global $wpdb;
-		switch ( $db_version ) {
-			case 2:
-				$sql = "
-ALTER TABLE `{$this->relation_table}`
-ADD			`id` BIGINT(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST";
-				$wpdb->query( $sql );
-				update_option( 'site_manager_theme_switch_installed', 2 );
-				break;
-			break;
-		}
-	}
 
 	public function save_options() {
 		global $WP_KUSANAGI;
@@ -350,10 +326,8 @@ INSERT INTO `{$this->group_table}` (`group_id`, `group_name`, `theme`, `slug`, `
 		if ( ! $table_exists ) {
 			$sql = "
 CREATE TABLE `{$this->relation_table}` (
-	`id` bigint(20) UNSIGNED NOT NULL auto_increment,
 	`group_id` bigint(20) NOT NULL,
 	`device_id` bigint(20) NOT NULL,
-	PRIMARY KEY (`id`),
 	KEY `group_id` (`group_id`,`device_id`)
 ) $charset_collate";
 			dbDelta( $sql, true );
@@ -372,7 +346,6 @@ INSERT INTO `{$this->relation_table}` (`group_id`, `device_id`) VALUES
 			$wpdb->query( $sql );
 		}
 		$this->build_device_rules();
-		update_option( 'site_manager_theme_switch_installed', 2 );
 	}
 
 
