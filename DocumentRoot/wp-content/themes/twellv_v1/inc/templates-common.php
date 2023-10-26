@@ -144,6 +144,7 @@ function replacement_asset_url_www($content){
 		'www.twellv.co.jp' => 'ram6vj87.user.webaccel.jp',
 		'live-twellv.s3-ap-northeast-1.amazonaws.com' => 'ram6vj87.user.webaccel.jp',
 		'edit.twellv.co.jp' => 'ram6vj87.user.webaccel.jp',
+        'localhost/twellv-wp/DocumentRoot' => 'ram6vj87.user.webaccel.jp',
 	);
 	$content = str_replace(array_keys($replace), $replace, $content);
 	return $content;
@@ -155,6 +156,15 @@ function replacement_asset_url_edit($content){
 	$content = str_replace(array_keys($replace), $replace, $content);
 	return $content;
 }
+//For local env
+function replacement_asset_url_www_local($content){
+    $local_url = (TWELLV_LOCAL) ? TWELLV_LOCAL : 'localhost/twellv-wp/DocumentRoot';
+    $replace = array(
+         $local_url => 'ram6vj87.user.webaccel.jp',
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
 // PRD環境で発火
 if($_SERVER["HTTP_HOST"]=='www.twellv.co.jp'){
 	add_filter('wp_get_attachment_url', 'replacement_asset_url_www',1);
@@ -162,6 +172,10 @@ if($_SERVER["HTTP_HOST"]=='www.twellv.co.jp'){
 // Edit環境で発火
 if($_SERVER["HTTP_HOST"]=='edit.twellv.co.jp'){
 	add_filter('wp_get_attachment_url', 'replacement_asset_url_edit',1);
+}
+// Local environment
+if($_SERVER["HTTP_HOST"]=='localhost' || TWELLV_LOCAL ){
+    add_filter('wp_get_attachment_url', 'replacement_asset_url_www_local',1);
 }
 
 // 20200619 agui add for dev environment

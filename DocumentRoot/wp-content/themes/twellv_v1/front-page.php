@@ -39,51 +39,6 @@ get_header();
     <?php get_template_part( 'template-parts/ranking/ranking' ); ?>
     <!-- /ranking -->
 
-    <!-- focus content -->
-    <section class="section" id="focus_content">
-        <div class="inner">
-            <div class="tlt_section">
-                <h2>注力コンテンツ</h2>
-                <div class="btn_more">
-                    <span>すべて見る</span>
-                </div>
-            </div>
-            <div class="program_slide side_brand">
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="brand slide">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="brand slide">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="brand slide">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="brand slide">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="brand slide">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="brand slide">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /focus content -->
-
     <!-- pr -->
     <?php get_template_part( 'template-parts/home/pr_top' ); ?>
     <!-- /pr -->
@@ -202,7 +157,7 @@ get_header();
     </section>
     <!-- /section infomation -->
     <?php get_template_part( 'template-parts/add/add_info' ); ?>
-    <?php get_template_part( 'template-parts/home/modal_category' ); ?>
+<!--    --><?php //get_template_part( 'template-parts/home/modal_category' ); ?>
     <?php if (function_exists('the_views')) { the_views(); } ?>
 </main>
 <!-- /main -->

@@ -121,11 +121,14 @@ $urlList = array();
 $data_array = array();
 $timeout = 20;
 $html = "";
+$modal = "";
 $program_s = "";
 $program_e = "";
 $program_w_str = "";
 $bangumi_s_data = array(); // 放送予定番組
 $bangumi_e_data = array(); // 放送中/放送終了番組
+$modal_s_data = array(); // 放送予定番組 for modal
+$modal_e_data = array(); // 放送中/放送終了番組 for modal
 
 // 現在日付取得 形式:yyyyMMddHHmmss
 $now_time = date("YmdHis");
@@ -163,7 +166,7 @@ if (is_array($nowonair_data_array["programs"])) {
 
     foreach ($nowonair_data_array["programs"] as $key => $nowonair_rec) {
 
-        // var_dump_pre($nowonair_rec);
+//         Hoangvv::var_dump($nowonair_rec);
 
         $tmp = trim($nowonair_rec["title"][0]["string"]);
         $tmp = trim(mb_convert_kana($tmp, "s", 'UTF-8'));
@@ -172,18 +175,12 @@ if (is_array($nowonair_data_array["programs"])) {
             continue;
         }
 
-        /*
-         * // now設定
-         * $now_icon_html = "";
-         * if ($key == 0) {
-         * $now_icon_html = "<span class=\"now\"><img src=\"/wp-content/themes/Twellv/assets/common/img/icon_now.png\" alt=\"\"></span>";
-         * }
-         */
-
         $program_id = $nowonair_rec["pid"]; // 番組ID
         $title = $nowonair_rec["title"][0]["string"]; // タイトル設定
-        $s_time = date('H:i', strtotime($nowonair_rec["s"])); // 放送開始時刻
-        $e_time = date('H:i', strtotime($nowonair_rec["e"])); // 放送終了時刻
+        $s_time = date('H:i', strtotime($nowonair_rec["s"])); // 放送開始時刻 start air
+        $e_time = date('H:i', strtotime($nowonair_rec["e"])); // 放送終了時刻 end air
+        $s_time_modal = date('Y年m月d日 ', strtotime($nowonair_rec["s"])); // 放送終了時刻 2022年10月28日
+        $e_time_modal = date('Y年m月d日 ', strtotime($nowonair_rec["e"])); // 放送終了時刻 2022年10月28日
         $description = $nowonair_rec["dt"]; // 番組概要
 
         // 画像情報
@@ -251,8 +248,11 @@ if (is_array($nowonair_data_array["programs"])) {
                 }
             }
         }
-
-
+        if (date(null) > strtotime($nowonair_rec["s"])) {
+            $modal_item_time = $e_time_modal;
+        }else {
+            $modal_item_time = $s_time_modal;
+        }
         // 放送予定Item要素作成
         $tmp_data = <<< HTML
 <div class="item_slide">
@@ -264,21 +264,33 @@ if (is_array($nowonair_data_array["programs"])) {
 </div>        
 
 HTML;
-        //echo $nowonair_rec["s"]."<>".$now_time."<>".$nowonair_rec["e"]."＝";
+        $modal_data = <<< HTML
+<li>
+    <a href="{$url}">
+        <div class="thumb">
+            <img src="{$picture}" width="338" height="198" alt="{$title}のサムネイル">
+        </div>
+        <div class="txt_desp">
+            <h4>{$title}</h4>
+            <p>{$description}</p>
+            <span>{$modal_item_time}放送</span>
+        </div>
+    </a>
+</li>   
+
+HTML;
         // 放送順にソートする。
         if ( $now_time > $nowonair_rec["e"]) { // 放送終了
-            //echo "放送終了<br>";
             $bangumi_e_data[] = $tmp_data;
+            $modal_e_data[] = $modal_data;
         } elseif ($nowonair_rec["s"] <= $now_time && $now_time <= $nowonair_rec["e"]) { // 放送中
-            //echo "放送中<br>";
             $bangumi_s_data[] = $tmp_data;
+            $modal_s_data[] = $modal_data;
         } elseif ($nowonair_rec["s"] > $now_time && $now_time < $nowonair_rec["e"]) { // 放送予定
-            //echo "放送予定<br>";
             $bangumi_s_data[] = $tmp_data;
+            $modal_s_data[] = $modal_data;
         }
     }
-
-    //var_dump_pre($tmp_data);
 }
 
 foreach ($bangumi_s_data as $key => $d) {
@@ -286,6 +298,12 @@ foreach ($bangumi_s_data as $key => $d) {
 }
 foreach ($bangumi_e_data as $key => $d) {
     $html .= $d;
+}
+foreach ($modal_s_data as $key => $d) {
+    $modal .= $d;
+}
+foreach ($modal_e_data as $key => $d) {
+    $modal .= $d;
 }
 
 ?>
@@ -303,5 +321,6 @@ foreach ($bangumi_e_data as $key => $d) {
         <div class="btn_watch">
             <a href="#">無料で見られる！BS12の視聴方法</a>
         </div>
+        <?php get_template_part( 'template-parts/home/modal_category' , null, array('modal' => $modal) ); ?>
     </div>
 </section>

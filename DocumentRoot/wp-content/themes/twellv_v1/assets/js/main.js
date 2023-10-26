@@ -18,11 +18,11 @@
         toggleSearch();
         openIntro();
         faq();
-        scrollAnimation("#header #nav_list a",100);
-        scrollAnimation("#program ul li a",100);
-        scrollAnimation(".faq .tab_content_faq a",100);
-        scrollAnimation(".broadcast_schedule a",100);
-        scrollAnimation(".list_year ul li a",167);
+        scrollAnimation("#header #nav_list a", 100);
+        scrollAnimation("#program ul li a", 100);
+        scrollAnimation(".faq .tab_content_faq a", 100);
+        scrollAnimation(".broadcast_schedule a", 100);
+        scrollAnimation(".list_year ul li a", 167);
         handleSlide(".slide_top", false, false, true, true);
         slideBrand(".slide_brand ul", false);
         slideProgram(".slide_air", false, false);
@@ -46,7 +46,7 @@
         slideProgram(".ranking_slide", false, false);
         slideBanner(".slide_top_odd", "15%");
         slideBanner(".slide_top_even", "45%");
-        sliderVideo(".slider_main",".slider_video");
+        sliderVideo(".slider_main", ".slider_video");
         $(".slide_next_time").slick();
         let itemFaq = $(".item_faq h3");
         itemFaq.click(function () {
@@ -68,6 +68,7 @@
             return false;
         });
     };
+
     function toggleMenuSp() {
         $(".hamburger").click(function () {
             $(this).toggleClass("active");
@@ -78,15 +79,20 @@
             $("#main").toggleClass("active");
         });
     }
+
+    /*
+    *   Handle HomePage modal
+    * */
     function showPopUp() {
         $(".btn_more").click(function () {
-            const classModal = $(this).attr("data-type");
-            $(".wrapper_modal").toggleClass("active");
-            $("body").css("overflow", "hidden");
-        })
-        $(".close").click(function () {
-            $(".wrapper_modal").removeClass("active");
-            $("body").removeAttr("style");
+            if (!$(this).find('a').attr("href")) {
+                $(this).parents(".inner").find(".wrapper_modal").toggleClass("active");
+                $("body").css("overflow", "hidden");
+                $(".close").on("click", function () {
+                    $(".wrapper_modal").removeClass("active");
+                    $("body").removeAttr("style");
+                });
+            }
         });
     }
 
@@ -115,14 +121,14 @@
         });
     }
 
-    function scrollAnimation(selector,offsetTop) {
+    function scrollAnimation(selector, offsetTop) {
         $(selector).click(function (e) {
             const targetPage = $(this).attr("href");
             if (targetPage.includes("#")) {
                 e.preventDefault();
                 const currentPage = $(targetPage);
                 $("html, body").animate(
-                    { scrollTop: currentPage.offset().top - offsetTop },
+                    {scrollTop: currentPage.offset().top - offsetTop},
                     1000
                 );
             }
@@ -158,10 +164,11 @@
                         }
                     });
                 },
-                { passive: true }
+                {passive: true}
             );
         }
     }
+
     /*
         Slide Top
     */
@@ -248,6 +255,7 @@
             ],
         });
     }
+
     function slideBanner(_sliderElm, _padding) {
         $(_sliderElm).slick({
             centerMode: true,
@@ -354,22 +362,24 @@
 
     function openIntro() {
         $('.list_introduce ul li ul:not(:first-child)').hide();
-        $('.list_introduce ul li h3').click(function(){
+        $('.list_introduce ul li h3').click(function () {
             $(this).siblings('.list_introduce ul li ul').stop().slideToggle();
             $(this).parent().toggleClass('active');
         });
     }
+
     function faq() {
         $('.faq .answer:not(:first-child)').hide();
-        $('.faq .question').click(function(){
+        $('.faq .question').click(function () {
             $(this).siblings('.faq .answer').stop().slideToggle();
             $(this).toggleClass('active');
         });
     }
+
     /*
         slider video
     */
-    function sliderVideo(_mainSlider,_sliderVideo) {
+    function sliderVideo(_mainSlider, _sliderVideo) {
         $(_mainSlider).slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -377,7 +387,7 @@
             fade: true,
             asNavFor: _sliderVideo,
         });
-        $(_mainSlider).on('beforeChange', function(event, slick, currentSlide){
+        $(_mainSlider).on('beforeChange', function (event, slick, currentSlide) {
             var currentSlideElement = slick.$slides.eq(currentSlide);
             var videoElement = currentSlideElement.find('video')[0];
             videoElement.pause();
@@ -400,13 +410,15 @@
             ]
         });
     }
+
     //resize after
     window.onresize = function () {
         _width = $(window).width();
     };
-    window.onscroll = function () {};
+    window.onscroll = function () {
+    };
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         $(".section-hidden").addClass("visibility")
     });
 })(jQuery);

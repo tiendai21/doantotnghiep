@@ -1,0 +1,28 @@
+.idea
+.DS_Store
+/DocumentRoot/wp-admin/
+/DocumentRoot/wp-content/index.php
+/DocumentRoot/wp-content/languages
+/DocumentRoot/wp-content/plugins/
+/DocumentRoot/wp-content/themes/index.php
+/DocumentRoot/wp-includes/
+/DocumentRoot/index.php
+/DocumentRoot/license.txt
+/DocumentRoot/readme.html
+/DocumentRoot/wp-*.php
+/DocumentRoot/xmlrpc.php
+
+# Configuration
+/DocumentRoot/wp-config.php
+
+# Example plugin
+/DocumentRoot/wp-content/plugins/hello.php
+
+# Uploads
+/DocumentRoot/wp-content/uploads/
+
+# Log files
+*.log
+
+# htaccess
+/DocumentRoot/.htaccess
