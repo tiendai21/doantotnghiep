@@ -11,7 +11,7 @@
         var date = Date.now();
         const findId = historyArr.findIndex(item =>
             item.id === id
-        )
+        );
         if (findId > -1) {
             historyArr[findId] = {id, date};
         }
@@ -43,4 +43,4 @@ const Cookie = {
         }
         return "";
     }
-}
+};

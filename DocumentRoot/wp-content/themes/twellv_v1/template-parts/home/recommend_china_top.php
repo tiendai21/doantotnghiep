@@ -5,6 +5,7 @@
  *  ② I-9-2.カテゴリおすすめ番組に表示する項目にチェックが付いている。
  *  ③ I-5.放送ステータスが「放送予定」、または、「放送中」である。
  */
+$modal = "";
 $program_cat_base_items = get_program_cat_base_items() ;
 // var_dump( $program_cat_base_items );
 
@@ -44,7 +45,12 @@ if ( ! empty( $term_query ) && ! is_wp_error( $term_query ) ) :
                 </div>
             </div>
             <div class="program_slide slide_chinese">
-                <?php foreach ( $term_arr as $term ) : ?>
+                <?php foreach ( $term_arr as $term ) :
+                    ob_start();
+                    get_template_part('template-parts/home/modal_category_item', null, array('term' => $term));
+                    $modal .= ob_get_contents();
+                    ob_end_clean();
+                    ?>
                     <div class="item_slide">
                         <a href="<?php echo get_term_link( $term ); ?>">
                             <div class="thumb">
@@ -54,6 +60,7 @@ if ( ! empty( $term_query ) && ! is_wp_error( $term_query ) ) :
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => '中国・アジアドラマ','modal' => $modal)); ?>
         </div>
     </section>
     <?php
