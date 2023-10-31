@@ -61,7 +61,8 @@ if ($relate_program) {
                     <p><?php the_title(); ?></p>
                 </div>
                 <div class="thumb">
-                    <img src="https://dummyimage.com/794x606/000000/fff" alt="">
+                    <?php $thumb = get_field("thumbnail");?>
+                    <img src="<?php echo $thumb["url"]?>" alt="<?php echo $thumb["title"]?>">
                 </div>
                 <div class="content">
                     <?php

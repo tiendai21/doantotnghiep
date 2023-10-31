@@ -334,7 +334,7 @@ foreach ($terms as $t) {
                 </div>
             </div>
             <div class="btn_watch">
-                <a href="#">無料で見られる！BS12の視聴方法</a>
+                <a href="<?php echo esc_url(home_url('/howtowatch'))?>">無料で見られる！BS12の視聴方法</a>
             </div>
         </div>
     </section>

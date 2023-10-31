@@ -714,7 +714,7 @@ $parent_term = get_term_by( 'id', $term->parent, 'program_cat' );
             <div class="tlt">
                 <h2>BS12おすすめ番組</h2>
                 <div class="btn_watch">
-                    <a href="#">無料で見られる！BS12の視聴方法</a>
+                    <a href="<?php echo esc_url(home_url('/howtowatch'))?>">無料で見られる！BS12の視聴方法</a>
                 </div>
             </div>
             <div class="list_watch">

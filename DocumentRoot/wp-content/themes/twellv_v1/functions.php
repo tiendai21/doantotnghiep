@@ -33,7 +33,6 @@ function theme_enqueue_styles()
         wp_enqueue_script('single-js', get_stylesheet_directory_uri() . '/assets/js/single.js', array(), $css_unti_cache);
     }
 }
-
 register_nav_menus(array(
     'main-menu' => 'nav-main',
     'menu-footer' => 'nav-footer',
@@ -42,12 +41,22 @@ register_nav_menus(array(
 add_filter('body_class', 'twellv_class');
 function twellv_class($classes)
 {
+    if (is_page()){
+        $classes[] = get_field('body_class');
+    }
     if (is_page_template('pages_template/page_contact.php')) {
         $classes[] = 'contact';
     }
-    if (is_archive('program/program-top.php')) {
-        $classes[] = 'program_detail';
+    if (is_tax('news_cat','release')) {
+        $classes[] = 'news_release';
     }
+    if (is_tax('news_cat','whatsnew')) {
+        $classes[] = 'list_new';
+    }
+    if (is_singular('news')) {
+        $classes[] = 'news_detail';
+    }
+
     $classes[] = '';
     return $classes;
 }

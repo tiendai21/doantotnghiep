@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="btn_sns">
-            <a href="#">SNS一覧</a>
+            <a href="<?php echo esc_url(home_url('/social'))?>">SNS一覧</a>
         </div>
     </div>
 </section>

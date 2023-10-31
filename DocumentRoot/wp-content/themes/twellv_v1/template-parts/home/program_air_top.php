@@ -319,7 +319,7 @@ foreach ($modal_e_data as $key => $d) {
             <?php echo $html; ?>
         </div>
         <div class="btn_watch">
-            <a href="#">無料で見られる！BS12の視聴方法</a>
+            <a href="<?php echo esc_url(home_url('/howtowatch'))?>">無料で見られる！BS12の視聴方法</a>
         </div>
         <?php get_template_part( 'template-parts/home/modal_category' , null, array('modal' => $modal) ); ?>
     </div>

@@ -169,7 +169,7 @@
                     }
                 }
 
-                h2 {
+                h2, h3 {
                     font-size: 25px;
                     letter-spacing: 2.5px;
                     font-weight: bold;
@@ -197,6 +197,11 @@
                         padding-left: get_sp(7.5);
                         margin: 0 get_sp(11.5) get_sp(12.5) get_sp(7.5);
                     }
+                    &:nth-last-child(2) {
+                        @include sp {
+                            margin-bottom: get_sp(20);
+                        }
+                    }
                 }
 
                 p {
@@ -221,15 +226,9 @@
                         margin-bottom: get_sp(20);
                         padding: 0 get_sp(15);
                     }
-                    &:nth-last-child(2) {
-                        margin-bottom: 104px;
-
-                        @include pc {
-                            margin-bottom: get_pc(104);
-                        }
-
+                    &:last-child {
                         @include sp {
-                            margin-bottom: get_sp(24);
+                            margin-bottom: get_sp(23.82);
                         }
                     }
                 }
@@ -254,7 +253,7 @@
                         }
 
                         @include sp {
-                            margin-bottom: get_sp(32);
+                            margin-bottom: get_sp(20);
                         }
                         p {
                             font-size: 25px;

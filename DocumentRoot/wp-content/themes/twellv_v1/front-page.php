@@ -55,7 +55,9 @@ get_header();
                     <div class="tlt_section">
                         <h2>よくあるご質問</h2>
                         <div class="btn_more">
-                            <span>すべて見る</span>
+                            <a href="<?php echo esc_url(home_url('/corporate/faq'))?>">
+                                <span>すべて見る</span>
+                            </a>
                         </div>
                     </div>
                     <div class="list_faq">
@@ -68,31 +70,17 @@ get_header();
                                 </div>
                             </div>
                             <div class="item_faq">
-                                <h3><span>q</span>BS12 トゥエルビではどんな番組を放送していますか？</h3>
+                                <h3><span>q</span>ワールド・ハイビジョン・チャンネルとBS12 トゥエルビは違うのですか？</h3>
                                 <div class="content">
                                     <span>a</span>
-                                    <p>ドラマ、スポーツ、アニメーション、ドキュメンタリー、音楽、ショッピングなど、各ジャンルから選りすぐりの番組を放送しています。</p>
+                                    <p>「ワールド・ハイビジョン・チャンネル」は社名で、「BS12 トゥエルビ」はチャンネル名になります。</p>
                                 </div>
                             </div>
                             <div class="item_faq">
-                                <h3><span>q</span>BS12 トゥエルビではどんな番組を放送していますか？</h3>
+                                <h3><span>q</span>BS12 トゥエルビを見るのにはお金がかかりますか？</h3>
                                 <div class="content">
                                     <span>a</span>
-                                    <p>ドラマ、スポーツ、アニメーション、ドキュメンタリー、音楽、ショッピングなど、各ジャンルから選りすぐりの番組を放送しています。</p>
-                                </div>
-                            </div>
-                            <div class="item_faq">
-                                <h3><span>q</span>BS12 トゥエルビではどんな番組を放送していますか？</h3>
-                                <div class="content">
-                                    <span>a</span>
-                                    <p>ドラマ、スポーツ、アニメーション、ドキュメンタリー、音楽、ショッピングなど、各ジャンルから選りすぐりの番組を放送しています。</p>
-                                </div>
-                            </div>
-                            <div class="item_faq">
-                                <h3><span>q</span>BS12 トゥエルビではどんな番組を放送していますか？</h3>
-                                <div class="content">
-                                    <span>a</span>
-                                    <p>ドラマ、スポーツ、アニメーション、ドキュメンタリー、音楽、ショッピングなど、各ジャンルから選りすぐりの番組を放送しています。</p>
+                                    <p>24時間完全無料放送です。現在BSデジタル放送を見られる方であればどなたでも無料で見ることができます。</p>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +122,9 @@ get_header();
                     <div class="tlt_section">
                         <h2>お知らせ</h2>
                         <div class="btn_more">
-                            <span>すべて見る</span>
+                            <a href="<?php echo esc_url(home_url('/news/announce'))?>">
+                                <span>すべて見る</span>
+                            </a>
                         </div>
                     </div>
                     <?php get_template_part( 'template-parts/news/news_list' ); ?>
@@ -144,7 +134,9 @@ get_header();
                 <div class="tlt_section">
                     <h2>ニュースリリース</h2>
                     <div class="btn_more">
-                        <span>すべて見る</span>
+                        <a href="<?php echo esc_url(home_url('/news/release/'))?>">
+                            <span>すべて見る</span>
+                        </a>
                     </div>
                 </div>
                 <?php get_template_part( 'template-parts/news/news_release' ); ?>
