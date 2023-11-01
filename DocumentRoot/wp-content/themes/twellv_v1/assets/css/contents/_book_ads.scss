@@ -438,22 +438,11 @@
             }
             ul {
                 li {
-                    &:nth-last-child(-n + 4) {
-                        @include pc {
-                            margin-bottom: 0;
-                        }
-                    }
                     &:nth-child(7) {
                         a {
                             @include sp {
-                                padding-right: get_sp(12);
-                                font-size: get_sp(13);
+                                letter-spacing: get_sp(-1.4);
                             }
-                        }
-                    }
-                    &:last-child {
-                        @include sp {
-                            margin-bottom: 0;
                         }
                     }
                 }

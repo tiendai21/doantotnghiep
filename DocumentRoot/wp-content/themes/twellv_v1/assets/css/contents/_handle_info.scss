@@ -1,4 +1,18 @@
 .handle_info {
+    .breadcrumb {
+        li {
+            &:nth-last-child(2) {
+                &:before {
+                    content: none;
+                }
+            }
+            &:last-child {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
     .tlt_head {
         @include sp {
             margin-bottom: get_sp(19.5);
@@ -14,7 +28,7 @@
         }
         @include sp {
             display: block;
-            margin-bottom: 0;
+            margin-bottom: get_sp(28.08);
             padding: 0 get_sp(15);
         }
         h3 {
@@ -70,5 +84,6 @@
                 }
             }
         }
+
     }
 }

@@ -265,6 +265,18 @@
         }
 
         .nav_list {
+            position: relative;
+            &::after {
+                @include sp {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: get_sp(31);
+                    height: get_sp(50);
+                    background: linear-gradient(271deg, rgba(41, 41, 41, 0.54) 0%, rgba(84, 84, 84, 0.00) 100%);
+                }
+            }
 
             ul {
                 display: flex;
@@ -355,6 +367,10 @@
                         letter-spacing: get_sp(0.8);
                         line-height: get_sp(24);
                         padding: get_sp(13) get_sp(12);
+                    }
+                    &:hover {
+                        opacity: 1;
+                        color: #004898;
                     }
 
                     span {
@@ -621,6 +637,7 @@
                             font-size: 22px;
                             line-height: 40px;
                             letter-spacing: 1.1px;
+                            font-weight: 500;
                             color: #004898;
                         }
                     }

@@ -47,8 +47,8 @@
             width: 100%;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
+            justify-content: space-between;
             padding: 51px 0 66px;
             @include pc {
                 max-width: get_pc(1582);
@@ -221,6 +221,10 @@
             }
         }
         .tab_content {
+            margin-left: 27.46px;
+            @include pc {
+                margin-left: get_pc(27.46);
+            }
             @include sp {
                 margin: 0;
             }

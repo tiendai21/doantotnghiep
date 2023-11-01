@@ -206,6 +206,7 @@
                 margin: 0 7.5px;
                 justify-content: center;
                 align-items: center;
+                transition: all .3s;
                 @include pc {
                     margin: 0 get_pc(7.5);
                 }
@@ -213,7 +214,9 @@
                 @include sp {
                     margin: 0 ;
                 }
-
+                &:hover {
+                    opacity: 0.7;
+                }
                 .thumb {
                     width: 430px;
                     height: 180px;
@@ -307,7 +310,7 @@
     */
     #dramas_on_air{
         @include sp {
-            margin-bottom: get_sp(32);
+            margin-bottom: get_sp(28.59);
         }
         .inner {
             max-width: 1920px;
@@ -386,14 +389,13 @@
                         }
                         @include sp{
                             padding-right: get_sp(7);
-                            padding-bottom: get_sp(7);
                         }
                         >a{
                             width: 320px;
+                            height: auto;
                             display: inline-block;
                             @include sp{
                                 width: get_sp(160);
-                                height: get_sp(90);
                             }
                             .content_dramas{
                                 padding-left: 10px;
@@ -408,7 +410,6 @@
                                 @include sp{
                                     padding-left: get_sp(4);
                                     padding-top: get_sp(2);
-                                    padding-bottom: get_sp(7);
                                 }
                                 h2{
                                     font-size: 20px;
@@ -476,49 +477,14 @@
             }
 
         }
-        .btn_watch{
-            display: flex;
-            justify-content: end;
-            margin-right: 204px;
-            @include pc{
-                margin-right: get_pc(204);
-            }
-            @include sp {
-                margin-right: get_sp(7);
-
-            }
-            a{
-                @include bgsetup("../images/btn_watch.svg",center center,100% auto,no-repeat);
-                width: 554px;
-                margin-bottom: 56px;
-                height: 86px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-left: 65px;
-                color: #000000;
-                font-size: 25px;
-                letter-spacing: 1.25px;
-                line-height: 36px;
-                font-weight: bold;
-                @include pc{
-                    width: get_pc(554);
-                    margin: 0 0 get_pc(56);
-                    height: get_pc(86);
-                    padding-left: get_pc(65);
-                    font-size: get_pc(25);
-                    letter-spacing: get_pc(1.25);
-                    line-height: get_pc(36);
+        .btn_watch {
+            a {
+                margin: 0 204px 60px auto;
+                @include pc {
+                    margin: 0 get_pc(204) get_pc(60) auto;
                 }
-                @include sp{
-                    width: 100%;
-                    height: get_sp(56);
-                    margin-bottom: 0;
-                    margin-left: get_sp(7);
-                    font-size: get_sp(17);
-                    letter-spacing: get_sp(1.7);
-                    line-height: get_sp(25);
-                    padding-left: get_sp(61);
+                @include sp {
+                    margin: 0 auto;
                 }
             }
         }
@@ -604,49 +570,6 @@
             @include sp {
                 margin-bottom: get_sp(22);
             }
-
-        }
-
-        .item_slide {
-            margin-right: 10px;
-
-            @include pc {
-                margin-right: get_pc(10);
-            }
-
-            @include sp {
-                margin-right: get_sp(5);
-            }
-
-            a {
-                width: 320px;
-                height: 180px;
-                display: inline-block;
-
-                @include pc {
-                    width: get_pc(320);
-                    height: get_pc(180);
-                }
-
-                @include sp {
-                    width: get_sp(160);
-                    height: get_sp(90);
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .slick-list {
-            padding: 0 !important;
-        }
-
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before {
-            opacity: 0;
         }
     }
 
@@ -695,48 +618,6 @@
             }
 
         }
-
-        .item_slide {
-            margin-right: 10px;
-
-            @include pc {
-                margin-right: get_pc(10);
-            }
-
-            @include sp {
-                margin-right: get_sp(5);
-            }
-
-            a {
-                width: 320px;
-                height: 180px;
-                display: inline-block;
-
-                @include pc {
-                    width: get_pc(320);
-                    height: get_pc(180);
-                }
-
-                @include sp {
-                    width: get_sp(160);
-                    height: get_sp(90);
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .slick-list {
-            padding: 0 !important;
-        }
-
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before {
-            opacity: 0;
-        }
     }
 
     /*
@@ -778,49 +659,6 @@
             @include sp {
                 margin-bottom: get_sp(22);
             }
-
-        }
-
-        .item_slide {
-            margin-right: 10px;
-
-            @include pc {
-                margin-right: get_pc(10);
-            }
-
-            @include sp {
-                margin-right: get_sp(5);
-            }
-
-            a {
-                width: 320px;
-                height: 180px;
-                display: inline-block;
-
-                @include pc {
-                    width: get_pc(320);
-                    height: get_pc(180);
-                }
-
-                @include sp {
-                    width: get_sp(160);
-                    height: get_sp(90);
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .slick-list {
-            padding: 0 !important;
-        }
-
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before {
-            opacity: 0;
         }
     }
 
@@ -869,45 +707,6 @@
             }
 
         }
-
-        .item_slide {
-            margin-right: 10px;
-
-            @include pc {
-                margin-right: get_pc(10);
-            }
-
-            @include sp {
-                margin-right: get_sp(5);
-            }
-            a {
-                width: 320px;
-                height: 180px;
-                display: inline-block;
-                @include pc {
-                    width: get_pc(320);
-                    height: get_pc(180);
-                }
-                @include sp {
-                    width: get_sp(160);
-                    height: get_sp(90);
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .slick-list {
-            padding: 0 !important;
-        }
-
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before {
-            opacity: 0;
-        }
     }
     /*
         ranking
@@ -942,26 +741,11 @@
                     margin-bottom: get_sp(17);
                 }
             }
-
-            .slick-slider .slick-track {
-                padding-left: 162px;
-                margin-left: 52px;
-
-                @include pc {
-                    padding-left: get_pc(162);
-                    margin-left: get_pc(52);
-                }
-
-                @include sp {
-                    padding-left: get_sp(16);
-                    margin-left: 16px;
-                }
-            }
-
             .item_slide {
                 .num {
                     @include sp {
-                        top: get_sp(12);
+                        top: get_sp(19);
+                        left: get_sp(-2);
                     }
                 }
             }
@@ -975,197 +759,6 @@
                 @include sp {
                     right: 50%;
                     transform: translateX(50%);
-                }
-            }
-        }
-    }
-
-    /*
-        drama ratings
-    */
-    #ranking_section{
-        margin-bottom: 60px;
-
-        @include pc {
-            margin-bottom: get_pc(60);
-        }
-
-        @include sp {
-            margin-bottom: get_sp(29);
-        }
-
-        .inner {
-            @include sp {
-                padding: 0 get_sp(6);
-            }
-        }
-
-        .content_ranking {
-            width: 1847px;
-            margin: 0 auto;
-            border-radius: 67px;
-            background-color: #F2F2F2;
-            padding: 34px 0 0 0;
-            position: relative;
-
-            @include pc {
-                width: get_pc(1847);
-                border-radius: get_pc(67);
-                padding: get_pc(34) 0 0 0;
-            }
-
-            @include sp {
-                width: 100%;
-                border-radius: get_sp(33);
-                padding: get_sp(8) 0 0;
-            }
-
-            .tlt_section {
-                justify-content: center;
-                @include pc {
-                    margin-bottom: get_pc(78);
-                }
-
-                @include sp {
-                    margin-bottom: get_sp(17);
-                }
-
-                h2 {
-                    display: inline-block;
-
-                    &:before {
-                        content: '';
-                        @include bgsetup("../images/icon_ranking.svg", center center, 100% auto, no-repeat);
-                        width: 89px;
-                        height: 58px;
-                        display: inline-block;
-                        vertical-align: bottom;
-                        margin-right: 13px;
-
-                        @include pc {
-                            width: get_pc(89);
-                            height: get_pc(58);
-                            margin-right: get_pc(13);
-                        }
-
-                        @include sp {
-                            width: get_sp(42);
-                            height: get_sp(27);
-                            margin-right: get_sp(6);
-                        }
-                    }
-                }
-            }
-
-            .program_slide {
-                margin-bottom: 31px;
-
-                @include pc {
-                    margin-bottom: get_pc(31);
-                }
-
-                @include sp {
-                    margin-bottom: get_sp(15);
-                }
-
-                .slick-prev {
-                    top: 32%;
-                    @include sp {
-                        width: get_sp(8);
-                        height: get_sp(17);
-                        left: get_sp(3);
-
-                    }
-                }
-
-                .slick-next {
-                    top: 32%;
-                    @include sp {
-                        width: get_sp(8);
-                        height: get_sp(17);
-                        right: get_sp(3);
-
-                    }
-                }
-            }
-
-            .slick-slider .slick-track {
-                padding-left: 162px;
-                margin-left: 52px;
-
-                @include pc {
-                    padding-left: get_pc(162);
-                    margin-left: get_pc(52);
-                }
-
-                @include sp {
-                    padding-left: get_sp(16);
-                    margin-left: 16px;
-                }
-            }
-
-            .item_slide {
-                position: relative;
-                padding-bottom: 150px;
-                margin: 0 22px;
-
-                @include pc {
-                    padding-bottom: get_pc(150);
-                    margin: 0 get_pc(22);
-                }
-
-                @include sp {
-                    padding-bottom: get_sp(60);
-                    margin: 0 get_sp(2);
-                }
-
-                .num {
-                    position: absolute;
-                    left: -45px;
-                    top: 12px;
-                    letter-spacing: 17.9px;
-                    color: #FFFFFF;
-                    text-shadow: 0 3px 10px #0000004A;
-                    font-size: 179px;
-                    line-height: 260px;
-                    text-stroke: 3px #E8C816;
-                    -webkit-text-stroke: 3px #E8C816;
-                    font-weight: bold;
-                    z-index: 99999999;
-                    font-family: 'Roboto', sans-serif;
-
-                    @include pc {
-                        left: get_pc(-45);
-                        top: get_pc(12);
-                        letter-spacing: get_pc(17.9);
-                        font-size: get_pc(179);
-                        line-height: get_pc(260);
-                    }
-
-                    @include sp {
-                        left: get_sp(-15);
-                        top: get_sp(12);
-                        letter-spacing: get_sp(6.5);
-                        font-size: get_sp(65);
-                        line-height: get_sp(94);
-                    }
-                }
-            }
-
-            .btn_link {
-                position: absolute;
-                right: 191px;
-                bottom: 26px;
-
-                @include pc {
-                    right: get_pc(191);
-                    bottom: get_pc(26);
-                }
-
-                @include sp {
-                    right: 50%;
-                    transform: translateX(50%);
-                    bottom: get_sp(12);
                 }
             }
         }
@@ -1285,48 +878,6 @@
             }
 
         }
-
-        .item_slide {
-            margin-right: 10px;
-
-            @include pc {
-                margin-right: get_pc(10);
-            }
-
-            @include sp {
-                margin-right: get_sp(5);
-            }
-
-            a {
-                width: 320px;
-                height: 180px;
-                display: inline-block;
-
-                @include pc {
-                    width: get_pc(320);
-                    height: get_pc(180);
-                }
-
-                @include sp {
-                    width: get_sp(160);
-                    height: get_sp(90);
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .slick-list {
-            padding: 0 !important;
-        }
-
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before {
-            opacity: 0;
-        }
     }
 
     /*
@@ -1365,6 +916,12 @@
                 max-width: get_pc(1920);
             }
         }
+        .program_slide {
+            &:after {
+                content: none;
+            }
+        }
+
     }
 
     /*
@@ -1388,13 +945,6 @@
             }
         }
         .list_other {
-            margin: 0 auto 79.31px;
-            @include pc {
-                margin: 0 auto get_pc(79.31);
-            }
-            @include sp {
-                margin-bottom: get_sp(49.57);
-            }
             ul {
                 li {
                     a {
@@ -1409,17 +959,11 @@
                             }
                         }
                     }
-                    &:nth-child(7) {
+                    &:nth-child(15) {
                         a {
                             @include sp {
-                                font-size: get_sp(13);
-                                padding-right: get_sp(12);
+                                letter-spacing: get_sp(0);
                             }
-                        }
-                    }
-                    &:nth-last-child(-n + 2) {
-                        @include sp {
-                            margin-bottom: 0;
                         }
                     }
                 }
@@ -1427,5 +971,205 @@
         }
     }
 
+}
+/*
+   drama ratings
+*/
+#ranking_section{
+    margin-bottom: 60px;
+
+    @include pc {
+        margin-bottom: get_pc(60);
+    }
+
+    @include sp {
+        margin-bottom: get_sp(29);
+    }
+
+    .inner {
+        @include sp {
+            padding: 0 get_sp(6);
+        }
+    }
+
+    .content_ranking {
+        width: 1847px;
+        margin: 0 auto;
+        border-radius: 67px;
+        background-color: #F2F2F2;
+        padding: 34px 0 0 0;
+        position: relative;
+
+        @include pc {
+            width: get_pc(1847);
+            border-radius: get_pc(67);
+            padding: get_pc(34) 0 0 0;
+        }
+
+        @include sp {
+            width: 100%;
+            border-radius: get_sp(33);
+            padding: get_sp(8) 0 0;
+        }
+
+        .tlt_section {
+            justify-content: center;
+            @include pc {
+                margin-bottom: get_pc(78);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(17);
+            }
+
+            h2 {
+                display: inline-block;
+
+                &:before {
+                    content: '';
+                    @include bgsetup("../images/icon_ranking.svg", center center, 100% auto, no-repeat);
+                    width: 89px;
+                    height: 58px;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    margin-right: 13px;
+
+                    @include pc {
+                        width: get_pc(89);
+                        height: get_pc(58);
+                        margin-right: get_pc(13);
+                    }
+
+                    @include sp {
+                        width: get_sp(42);
+                        height: get_sp(27);
+                        margin-right: get_sp(6);
+                    }
+                }
+            }
+        }
+
+        .program_slide {
+            margin-bottom: 31px;
+
+            @include pc {
+                margin-bottom: get_pc(31);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(15);
+            }
+            &:after {
+                height: 180px;
+                @include pc {
+                    height: get_pc(180);
+                }
+                @include sp {
+                    height: get_sp(90);
+                }
+            }
+            .slick-prev {
+                top: 32%;
+                @include sp {
+                    width: get_sp(8);
+                    height: get_sp(17);
+                    left: get_sp(3);
+
+                }
+            }
+
+            .slick-next {
+                top: 32%;
+                @include sp {
+                    width: get_sp(8);
+                    height: get_sp(17);
+                    right: get_sp(3);
+
+                }
+            }
+        }
+
+        .slick-slider .slick-track {
+            padding-left: 0;
+            margin-left: 40px;
+
+            @include pc {
+                margin-left: get_pc(40);
+            }
+
+            @include sp {
+                margin-left: get_sp(4);
+            }
+        }
+
+        .item_slide {
+            position: relative;
+            padding-bottom: 150px;
+            margin: 0 26px;
+            padding-right: 0;
+            @include pc {
+                padding-bottom: get_pc(150);
+                margin: 0 get_pc(26);
+            }
+
+            @include sp {
+                padding-bottom: get_sp(60);
+                margin: 0 get_sp(2);
+            }
+            &:nth-child(3) {
+                @include sp {
+                    padding-left: get_sp(15);
+                }
+            }
+            .num {
+                position: absolute;
+                left: -45px;
+                top: 12px;
+                letter-spacing: 17.9px;
+                color: #FFFFFF;
+                text-shadow: 0 3px 10px #0000004A;
+                font-size: 179px;
+                line-height: 260px;
+                text-stroke: 3px #E8C816;
+                -webkit-text-stroke: 3px #E8C816;
+                font-weight: bold;
+                z-index: 99999999;
+                font-family: 'Roboto', sans-serif;
+
+                @include pc {
+                    left: get_pc(-45);
+                    top: get_pc(12);
+                    letter-spacing: get_pc(17.9);
+                    font-size: get_pc(179);
+                    line-height: get_pc(260);
+                }
+
+                @include sp {
+                    left: get_sp(-2);
+                    top: get_sp(12);
+                    letter-spacing: get_sp(6.5);
+                    font-size: get_sp(65);
+                    line-height: get_sp(94);
+                }
+            }
+        }
+
+        .btn_link {
+            position: absolute;
+            right: 191px;
+            bottom: 26px;
+
+            @include pc {
+                right: get_pc(191);
+                bottom: get_pc(26);
+            }
+
+            @include sp {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: get_sp(12);
+            }
+        }
+    }
 }
 

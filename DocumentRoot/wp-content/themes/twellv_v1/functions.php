@@ -6,6 +6,7 @@ require get_template_directory() . '/inc/theme-json-ld.php';
 require get_template_directory() . '/inc/templates-common.php';
 require get_template_directory() . '/inc/templates-program.php';
 require get_template_directory() . '/inc/templates-news.php';
+require get_template_directory() . '/inc/shortcode.php';
 
 add_theme_support('post-thumbnails');
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
@@ -41,6 +42,7 @@ register_nav_menus(array(
 add_filter('body_class', 'twellv_class');
 function twellv_class($classes)
 {
+    // Define single-page body class in itself admin page
     if (is_page()){
         $classes[] = get_field('body_class');
     }
@@ -55,6 +57,15 @@ function twellv_class($classes)
     }
     if (is_singular('news')) {
         $classes[] = 'news_detail';
+    }
+    if (is_tax('news_cat','whatsnew')) {
+        $classes[] = 'list_new';
+    }
+    if (is_post_type_archive('program')) {
+        $classes[] = 'list_program';
+    }
+    if (is_tax('program_cat')) {
+        $classes[] = 'program_detail';
     }
 
     $classes[] = '';

@@ -760,7 +760,6 @@
                 }
             }
             a {
-                display: inline-block;
                 font-weight: bold;
                 text-decoration: underline;
                 color: #004898;
@@ -826,6 +825,9 @@
                         &:nth-child(2) {
                             p {
                                 margin-bottom: 0;
+                                @include sp {
+                                    margin-bottom: get_sp(31.5);
+                                }
                             }
                         }
                     }
@@ -1009,6 +1011,7 @@
                         position: relative;
                         @include sp {
                             padding-right: get_sp(35);
+                            padding-left: get_sp(12);
                         }
                         &:after {
                             @include sp {
@@ -1020,14 +1023,6 @@
                     &:nth-last-child(-n + 2) {
                         @include sp {
                             margin-bottom: 0;
-                        }
-                    }
-                    &:nth-child(7) {
-                        a {
-                            @include sp {
-                                font-size: get_sp(13);
-                                padding-right: get_sp(12);
-                            }
                         }
                     }
                 }

@@ -15,10 +15,18 @@
     }
 
     .breadcrumb {
+        margin: 0 auto 20px;
+        max-width: 1576px;
+        padding-top: 7px;
+        @include pc {
+            margin: 0 auto get_pc(20);
+            max-width: get_pc(1576);
+            padding-top: get_pc(7);
+        }
         @include sp {
             flex-wrap: nowrap;
-            overflow-x: auto;
-
+            margin: 0;
+            padding: get_sp(8) 0 get_sp(8) get_sp(11);
             li {
                 flex-shrink: 0;
             }
@@ -39,14 +47,14 @@
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
         align-items: flex-start;
+        justify-content: space-between;
         padding-bottom: 130px;
-        padding-top: 128px;
+        padding-top: 51px;
         @include pc {
             max-width: get_pc(1582);
             padding-bottom: get_pc(130);
-            padding-top: get_pc(128);
+            padding-top: get_pc(51);
         }
 
         @include sp {
@@ -76,7 +84,7 @@
             letter-spacing: 7px;
             margin-bottom: 48px;
             color: #000000;
-
+            font-family: 'Shippori Mincho', serif;
             @include pc {
                 font-size: get_pc(70);
                 line-height: get_pc(70);
@@ -123,7 +131,7 @@
 
                 @include sp {
                     font-size: get_sp(25);
-                    line-height: get_sp(46);
+                    line-height: get_sp(36);
                     letter-spacing: get_sp(1.25);
                     margin-bottom: get_sp(35);
                 }
@@ -204,7 +212,7 @@
             font-size: 20px;
             line-height: 30px;
             color: #000000;
-            font-weight: 500;
+            font-weight: 400;
             flex: 1;
 
             @include pc {

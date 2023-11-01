@@ -128,17 +128,18 @@
     }
 
     .tlt_section {
-        margin: 0 auto 18px;
+        max-width: 1520px;
+        margin: 0 auto 25px;
+        padding: 0;
         background: transparent;
-        padding-top: 0;
-        padding-bottom: 0;
-
         @include pc {
-            margin: 0 auto get_pc(18);
+            max-width: get_pc(1520);
+            margin: 0 auto get_pc(25);
         }
 
         @include sp {
-            margin: 0 auto get_sp(15);
+            margin: 0 auto get_sp(18);
+            padding: 0 get_sp(6.734);
         }
     }
 
@@ -158,13 +159,13 @@
     }
 }
 /* Other */
-#other {
+.program_ended #other {
     .list_other {
         ul {
             li:nth-child(9) {
                 a {
                     @include sp {
-                        padding: get_sp(10) get_sp(12) get_sp(10);
+                        letter-spacing: get_sp(0);
                     }
                 }
             }

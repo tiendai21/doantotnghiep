@@ -51,11 +51,11 @@ footer {
                 font-size: get_sp(14);
                 letter-spacing: get_sp(0.7);
                 line-height: get_sp(40);
-                margin-bottom: get_sp(10);
+                margin-bottom: 0;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0 get_sp(12) get_sp(10);
+                padding: get_sp(10) get_sp(12);
 
                 &::after {
                     content: '';
@@ -91,6 +91,44 @@ footer {
                 display: block;
                 gap: 0 get_sp(37);
                 margin-bottom: 0;
+            }
+            .nav_footer {
+                &:first-child {
+                    h3 {
+                        @include sp {
+                            padding-top: 0;
+                        }
+                    }
+                    ul {
+                        @include sp {
+                            background: #1E4576;
+                        }
+                    }
+                    li {
+                        @include sp {
+                            padding-right: get_sp(12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #3c669b;
+                        }
+                        &:after {
+                            @include sp {
+                                content: "";
+                                display: block;
+                                @include bgsetup("../images/arrow_slide_l.svg",center center ,100% auto,no-repeat);
+                                transform: rotate(180deg);
+                                width: get_sp(6);
+                                height: get_sp(10);
+                            }
+                        }
+                    }
+                }
+                >ul,.nav_list {
+                    @include sp {
+                        border-bottom: 1px solid #FFFFFF;
+                    }
+                }
             }
         }
 
@@ -224,6 +262,16 @@ footer {
                         @include pc {
                             width: get_pc(244);
                         }
+                        @include sp {
+                            width: 100%;
+                            border-bottom: 1px solid #FFFFFF;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    @include sp {
+                        margin-bottom: get_sp(12);
                     }
                 }
 
@@ -248,14 +296,13 @@ footer {
         .social_footer {
             margin: 0 -12px;
             padding-top: 60px;
-
             @include pc {
                 margin: 0 get_pc(-12);
                 padding-top: get_pc(60);
             }
 
             @include sp {
-                padding-top: 0;
+                padding-top: get_sp(13);
                 justify-content: center;
                 display: flex;
                 margin: 0;
@@ -265,9 +312,10 @@ footer {
                 display: inline-block;
                 margin: 0 12px;
                 width: 49px;
-
+                height: 49px;
                 @include pc {
                     margin: 0 get_pc(12);
+                    height: get_pc(49);
                     width: get_pc(49);
 
                 }
@@ -279,10 +327,23 @@ footer {
                 }
 
                 &:last-child {
+                    @include bgsetup("../images/icon_fb.svg",center center,100% auto, no-repeat);
+                    &:hover {
+                        opacity: 1;
+                        @include bgsetup("../images/icon_fb_top.svg",center center,100% auto, no-repeat);
+                    }
+                }
+                &:first-child {
+                    @include bgsetup("../images/logo_x.svg",center center,100% auto, no-repeat);
+                    &:hover {
+                        opacity: 1;
+                        @include bgsetup("../images/logo_x_dark.svg",center center,100% auto, no-repeat);
+                    }
                     @include sp {
                         margin-left: get_sp(16);
                     }
                 }
+
             }
         }
 
@@ -318,8 +379,13 @@ footer {
                 }
 
                 strong {
+                    margin-left: 10px;
+                    @include pc {
+                        margin-left: get_pc(10);
+                    }
                     @include sp {
                         display: block;
+                        margin-left: 0;
                     }
                 }
             }

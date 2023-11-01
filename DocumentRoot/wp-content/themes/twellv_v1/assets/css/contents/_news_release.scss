@@ -58,17 +58,14 @@
         width: 100%;
         padding-bottom: 20px;
         margin: 0 auto 34px;
-        border-bottom: 2px solid #fff;
         @include pc {
             max-width: get_pc(1576);
             margin-bottom: get_pc(34);
             padding-bottom: get_pc(20);
-            border-bottom: get_pc(2) solid #fff;
         }
         @include sp {
             margin-bottom: get_sp(14);
             padding-bottom: get_sp(9);
-            border-bottom: get_sp(2) solid #fff;
         }
         
         h2 {
@@ -146,8 +143,8 @@
         .inner {
             background-color: #F2F2F2;
         }
-        >ul {
-            >li {
+        ul {
+            li {
                 transition: all 0.4s ease;
                 border-bottom: 14px solid #fff;
                 @include pc {
@@ -155,6 +152,11 @@
                 }
                 @include sp {
                     border-bottom: get_sp(5) solid #fff;
+                }
+                &:last-child {
+                   &.active {
+                       margin-bottom: 0;
+                   }
                 }
                 &.active {
                     margin-bottom: 64px;
@@ -227,6 +229,49 @@
                         }
                     }
                 }
+                a {
+                    display: flex;
+                    align-items: flex-start;
+                    font-weight: 500;
+                    font-size: 25px;
+                    letter-spacing: 3.75px;
+                    line-height: 36px;
+                    color: #000000;
+                    text-align: left;
+                    @include pc {
+                        font-size: get_pc(25);
+                        letter-spacing: get_pc(2.5);
+                        line-height: get_pc(36);
+                    }
+                    @include sp {
+                        align-items: flex-start;
+                        font-size: get_sp(14);
+                        letter-spacing: get_sp(2.1);
+                        line-height: get_sp(25);
+                    }
+                    span {
+                        letter-spacing: 3.75px;
+                        color: #0079ff;
+                        font-size: 25px;
+                        line-height: 36px;
+                        margin-right: 23px;
+
+                        @include pc {
+                            letter-spacing: get_pc(3.75);
+                            font-size: get_pc(25);
+                            line-height: get_pc(36);
+                            margin-right: get_pc(23);
+                        }
+
+                        @include sp {
+                            letter-spacing: get_sp(2.1);
+                            font-size: get_sp(14);
+                            line-height: get_sp(25);
+                            margin: 0 get_sp(14.6) 0 get_sp(5);
+                        }
+                    }
+
+                }
                 ul {
                     background-color: #FFFFFF;
                     padding: 33px 60px 30px;
@@ -253,79 +298,28 @@
                             padding-bottom: get_sp(9);
                             margin-bottom: get_sp(9);
                         }
-                        &:nth-child(2) {
-                            a {
-                                align-items: center;
-                                &:after {
-                                    content: '';
-                                    @include bgsetup("../images/icon_pdf.svg",center center,100% auto, no-repeat);
-                                    display: block;
-                                    width: 52px;
-                                    height: 28px;
-                                    margin-left: 20px;
-                                    @include pc {
-                                        width: get_pc(52);
-                                        height: get_pc(28);
-                                        margin-left: get_pc(20);
-                                    }
-                                    @include sp {
-                                        width: get_sp(43);
-                                        height: get_sp(23);
-                                        margin-left: get_sp(5);
-                                    }
-                                }
-                            }
-                        }
-                        a {
-                            display: flex;
-                            align-items: flex-start;
-                            font-weight: 500;
-                            @include sp {
-                                align-items: flex-start;
-                            }
-                            span {
-                                letter-spacing: 3.75px;
-                                color: #0079ff;
-                                font-size: 25px;
-                                line-height: 36px;
-                                margin-right: 23px;
-                    
-                                @include pc {
-                                    letter-spacing: get_pc(3.75);
-                                    font-size: get_pc(25);
-                                    line-height: get_pc(36);
-                                    margin-right: get_pc(23);
-                                }
-                    
-                                @include sp {
-                                    letter-spacing: get_sp(2.1);
-                                    font-size: get_sp(14);
-                                    line-height: get_sp(25);
-                                    margin: 0 get_sp(14.6) 0 get_sp(5);
-                                }
-                            }
-                
-                            p {
-                                letter-spacing: 3.45px;
-                                color: #000000;
-                                font-size: 25px;
-                                line-height: 36px;
-                                text-align: left;
-                    
-                                @include pc {
-                                    letter-spacing: get_pc(3.45);
-                                    font-size: get_pc(25);
-                                    line-height: get_pc(36);
-                                }
-                    
-                                @include sp {
-                                    letter-spacing: get_sp(2.1);
-                                    font-size: get_sp(14);
-                                    line-height: get_sp(25);
-                                }
-                            }
-                        }
                     }
+                }
+            }
+        }
+        .pdf {
+            align-items: center;
+            &:after {
+                content: '';
+                @include bgsetup("../images/icon_pdf.svg",center center,100% auto, no-repeat);
+                display: block;
+                width: 52px;
+                height: 28px;
+                margin-left: 20px;
+                @include pc {
+                    width: get_pc(52);
+                    height: get_pc(28);
+                    margin-left: get_pc(20);
+                }
+                @include sp {
+                    width: get_sp(43);
+                    height: get_sp(23);
+                    margin-left: get_sp(5);
                 }
             }
         }
@@ -334,18 +328,10 @@
         .list_other {
             ul {
                 li {
-                    &:last-child {
+                    &:nth-child(7) {
                         a {
-                            position: relative;
-                            &:after {
-                                @include sp {
-                                    width: get_sp(19);
-                                    height: get_sp(19);
-                                    border-radius: 50%;
-                                    background: #699BD3 0% 0% no-repeat padding-box;
-                                    position: absolute;
-                                    right: get_sp(12);
-                                }
+                            @include sp {
+                                letter-spacing: get_sp(-1.4);
                             }
                         }
                     }

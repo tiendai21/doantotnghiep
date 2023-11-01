@@ -1,0 +1,328 @@
+.correlation_diagrams {
+    #main {
+        overflow-x: hidden;
+
+        @include sp {
+            margin-top: get_sp(100);
+        }
+
+        @include pc {
+            margin-top: get_pc(160);
+        }
+    }
+    .breadcrumb {
+        margin: 7px auto 20px;
+
+        @include pc {
+            margin: get_pc(7) auto get_pc(20) get_pc(170);
+        }
+
+        @include sp {
+            margin: get_sp(8) auto get_sp(8) get_sp(11);
+        }
+        li {
+            &:last-child {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+            &:nth-last-child(2) {
+                &:before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    /*
+        banner
+    */
+    #banner {
+        .inner {
+            max-width: 1920px;
+            margin: 0 auto 61.78px;
+            @include pc {
+                max-width: get_pc(1920);
+                margin: 0 auto get_pc(61.78);
+            }
+            @include sp {
+                margin-bottom: 0;
+            }
+        }
+        .thumb {
+            width: 1920px;
+            height: 175px;
+            @include pc {
+                width: get_pc(1920);
+                height: get_pc(175);
+            }
+            @include sp {
+                width: 100%;
+                height: get_sp(115);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .items_link {
+            padding: 20px 0 20px 222px;
+            @include pc {
+                padding: get_pc(20) 0 get_pc(20) get_pc(222);
+            }
+            @include sp {
+                margin-bottom: get_sp(24.33);
+                padding: get_sp(10) 0 get_sp(9);
+            }
+        }
+    }
+
+    /*
+        correlation_diagrams
+    */
+    #correlation_diagrams {
+        .inner {
+            max-width: 1469px;
+            margin: 0 auto 82px;
+            @include pc {
+                max-width: get_pc(1469);
+                margin: 0 auto get_pc(82);
+            }
+            @include sp {
+                width: 100%;
+                padding: 0 get_sp(16);
+                margin-bottom: get_sp(16);
+            }
+        }
+        h2 {
+            font-size: 30px;
+            letter-spacing: 3px;
+            line-height: 44px;
+            font-weight: bold;
+            color: #004898;
+            padding-bottom: 26px;
+            border-bottom: 3px solid #004898;
+            margin-bottom: 50px;
+            @include pc {
+                font-size: get_pc(30);
+                letter-spacing: get_pc(3);
+                line-height: get_pc(44);
+                padding-bottom: get_pc(26);
+                border-bottom: get_pc(3) solid #004898;
+                margin-bottom: get_pc(50);
+            }
+            @include sp {
+                font-size: get_sp(18);
+                letter-spacing: get_sp(1.8);
+                line-height: get_sp(26);
+                padding-bottom: get_sp(11.79);
+                border-bottom: get_sp(2) solid #004898;
+                margin-bottom: get_sp(15.88);
+            }
+        }
+        .thumb {
+            width: 1469px;
+            height: 1027px;
+            margin-bottom: 50px;
+            @include pc {
+                width: get_pc(1469);
+                height: get_pc(1027);
+                margin-bottom: get_pc(50);
+            }
+            @include sp {
+                width: 100%;
+                height: get_sp(252);
+                margin-bottom: get_sp(16);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-bottom: 82px;
+            @include pc {
+                margin-bottom: get_pc(82);
+            }
+            @include sp {
+                justify-content: space-between;
+                padding: 0 get_sp(56);
+                margin-bottom: get_sp(16);
+            }
+            li {
+                &:not(:last-child) {
+                    margin-right: 61px;
+                    @include pc {
+                        margin-right: get_pc(61);
+                    }
+                    @include sp {
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 83px;
+                    height: 83px;
+                    @include pc {
+                        width: get_pc(83);
+                        height: get_pc(83);
+                    }
+                    @include sp {
+                        width: get_sp(51);
+                        height: get_sp(51);
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+        kboard
+    */
+    #kboard {
+        .inner {
+            margin-bottom: 82px;
+            @include pc {
+                margin-bottom: get_pc(82);
+            }
+            @include sp {
+                margin-bottom: get_sp(41.42);
+            }
+        }
+    }
+    #ranking {
+        @include sp {
+            margin-bottom: get_sp(40);
+        }
+        .content_ranking {
+            padding-top: 34px;
+            @include pc {
+                padding-top: get_pc(34);
+            }
+            @include sp {
+                padding-top: get_sp(12);
+            }
+        }
+        .tlt_section {
+            margin-bottom: 78px;
+            @include pc {
+                margin-bottom: get_pc(78);
+            }
+            @include sp {
+                margin-bottom: get_sp(16.91);
+            }
+        }
+    }
+    #ranking_section {
+        margin-bottom: 87px;
+        @include pc {
+            margin-bottom: get_pc(87);
+        }
+        @include sp {
+            margin-bottom: get_sp(32.59);
+        }
+        .content_ranking {
+            @include sp {
+                padding-top: get_sp(12);
+            }
+            .btn_link {
+                right: 164px;
+                @include pc {
+                    right: get_pc(164);
+                }
+                @include sp {
+                    right: 50%;
+                }
+            }
+        }
+    }
+    #recommended_movies {
+        .tlt_section {
+            @include sp {
+                margin-bottom: get_sp(20);
+            }
+        }
+        .program_slide {
+            margin-bottom: 104px;
+            @include pc {
+                margin-bottom: get_pc(104);
+            }
+            @include sp {
+                margin-bottom: get_sp(24);
+            }
+        }
+    }
+    #pr {
+        .inner {
+            margin-bottom: 104px;
+            @include pc {
+                margin-bottom: get_pc(104);
+            }
+            @include sp {
+                margin-bottom: get_sp(36);
+            }
+        }
+        .tlt_section {
+            margin-bottom: 37px;
+            @include pc {
+                margin-bottom: get_pc(37);
+            }
+            @include sp {
+                margin-bottom: get_sp(14);
+            }
+        }
+    }
+    #other {
+        .tlt_section {
+            margin-bottom: 70px;
+            @include pc {
+                margin-bottom: get_pc(70);
+            }
+            @include sp {
+                margin-bottom: get_sp(16);
+            }
+        }
+        .list_other {
+            margin-bottom: 79px;
+            @include pc {
+                margin-bottom: get_pc(79);
+            }
+            @include sp {
+                margin-bottom: get_sp(50);
+            }
+            ul {
+                li {
+                    &:nth-child(8) {
+                        a {
+                            @include sp {
+                                padding-left: get_sp(12);
+                            }
+                        }
+                    }
+                    &:nth-last-child(-n + 2) {
+                        @include sp {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .thumb {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

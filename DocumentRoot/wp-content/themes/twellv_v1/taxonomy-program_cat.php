@@ -16,7 +16,7 @@ if ( $term_obj ) {
     $code = get_field( 'code',  $term_obj );
     if ( $code != '' ){
         // 番組トップ
-        get_template_part( 'template-parts/program', 'top' );
+        get_template_part( 'template-parts/program-top' );
     } elseif( $term_obj->parent === 0) {
         // 番組大カテゴリ一覧: ドラマ、スポーツ等
 		if ( $term_obj->slug === 'entertainment' ) {

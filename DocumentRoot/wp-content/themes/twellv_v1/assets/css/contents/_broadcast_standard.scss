@@ -52,8 +52,8 @@
             width: 100%;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
+            justify-content: space-between;
             padding: 51px 0 80px;
             @include pc {
                 max-width: get_pc(1582);
@@ -115,14 +115,14 @@
                         font-size: 20px;
                         letter-spacing: 2px;
                         line-height: 29px;
-                        padding: 16px 0 16px 31px;
+                        padding: 16px 29px 16px 31px;
                         border-bottom: 1px solid #004898;
                         vertical-align: middle;
                         @include pc {
                             font-size: get_pc(20);
                             letter-spacing: get_pc(2);
                             line-height: get_pc(29);
-                            padding: get_pc(16) 0 get_pc(16) get_pc(31);
+                            padding: get_pc(16) get_pc(29) get_pc(16) get_pc(31);
                         }
                         @include sp {
                             font-size: get_sp(14);
@@ -244,6 +244,10 @@
             }
         }
         .tab_content {
+            margin-left: 22px;
+            @include pc {
+                margin-left: get_pc(22);
+            }
             @include sp {
                 margin: 0;
             }

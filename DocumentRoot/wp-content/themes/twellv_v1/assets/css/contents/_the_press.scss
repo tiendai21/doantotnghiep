@@ -169,26 +169,33 @@
     ul {
         &.pdf {
             li {
-                &:after {
-                    content: "";
-                    display: inline-block;
-                    position: relative;
-                    top: 4px;
-                    margin-left: 8px;
-                    width: 52px;
-                    height: 28px;
-                    @include bgsetup("../images/icon_pdf.svg", center center, 100% auto, no-repeat);
-                    @include pc {
-                        top: get_pc(4);
-                        margin-left: get_pc(8);
-                        width: get_pc(52);
-                        height: get_pc(28);
-                    }
+                display: flex;
+                align-items: center;
+                .link_pdf {
                     @include sp {
-                        top: get_sp(4);
-                        margin-left: 0;
-                        width: get_sp(37);
-                        height: get_sp(20);
+                        margin-left: get_sp(5);
+                    }
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        position: relative;
+                        top: 5px;
+                        margin-left: 8px;
+                        width: 52px;
+                        height: 28px;
+                        @include bgsetup("../images/icon_pdf.svg", center center, 100% auto, no-repeat);
+                        @include pc {
+                            top: get_pc(5);
+                            margin-left: get_pc(8);
+                            width: get_pc(52);
+                            height: get_pc(28);
+                        }
+                        @include sp {
+                            top: get_sp(4);
+                            margin-left: 0;
+                            width: get_sp(37);
+                            height: get_sp(20);
+                        }
                     }
                 }
             }
@@ -208,6 +215,13 @@
                 padding-bottom: get_sp(18);
                 margin-bottom: get_sp(15);
                 border-bottom: get_sp(2) solid #F2F2F2;
+            }
+        }
+        .pdf {
+            li {
+                @include sp {
+                    align-items: start;
+                }
             }
         }
     }

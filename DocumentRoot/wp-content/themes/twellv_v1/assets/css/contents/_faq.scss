@@ -1,5 +1,31 @@
 .faq {
     text-align: left;
+    #header {
+        .inner {
+            text-align: center;
+        }
+    }
+    .breadcrumb {
+        margin-bottom: 20px;
+        @include pc {
+            margin-bottom: get_pc(20);
+        }
+        @include sp {
+            margin-bottom: get_sp(8);
+        }
+        li {
+            &:nth-last-child(2) {
+                &:before {
+                    content: none;
+                }
+            }
+            &:last-child {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
     .inner {
         text-align: right;
         max-width: 1576px;
@@ -416,6 +442,43 @@
         @include sp {
             padding-bottom: get_sp(33);
             margin-bottom: get_sp(25);
+        }
+    }
+
+    #pr {
+        .inner {
+            @include sp {
+                padding: 0;
+            }
+        }
+    }
+    #other {
+        .inner {
+            @include sp {
+                padding: 0;
+            }
+        }
+        .list_other {
+            @include sp {
+                margin-bottom: get_sp(40.21);
+            }
+            ul {
+                li {
+                    &:nth-child(7) {
+                        a {
+                            @include sp {
+                                letter-spacing: get_sp(-1.4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .inner {
+            max-width: unset;
+            padding: unset;
         }
     }
 }

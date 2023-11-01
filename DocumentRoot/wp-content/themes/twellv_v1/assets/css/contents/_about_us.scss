@@ -55,12 +55,12 @@
             width: 100%;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
-            padding: 50px 0;
+            justify-content: space-between;
+            padding: 51px 0;
             @include pc {
                 max-width: get_pc(1582);
-                padding: get_pc(50) 0;
+                padding: get_pc(51) 0;
             }
             @include sp {
                 padding: get_sp(31) get_sp(11) get_sp(43);
@@ -143,7 +143,7 @@
                             line-height: get_pc(35);
                         }
                         @include sp {
-                            font-size: get_sp(16);
+                            font-size: get_sp(15.5);
                             letter-spacing: get_sp(0.6);
                             line-height: get_sp(24);
                             text-align: left;
@@ -303,17 +303,33 @@
                     display: flex;
                     align-items: center;
                     margin-right: 60px;
-                    padding: 27px 0 27px 31px;
+                    padding:  0 27px;
                     @include pc {
                         margin-right: get_pc(60);
-                        padding: get_pc(27) 0 get_pc(27) get_pc(31);
+                        padding: 0 get_pc(27);
                     }
                     @include sp {
-                        padding: get_sp(10) get_sp(5) get_sp(10) get_sp(5);
+                        padding: 0 get_sp(5);
                         margin-right: 0;
                     }
                     &:not(:last-child) {
                         border-bottom: 1px solid #FFFFFF;
+                        height: 90px;
+                        @include pc {
+                            height: get_pc(90);
+                        }
+                        @include sp {
+                            height: get_sp(52);
+                        }
+                    }
+                    &:last-child {
+                        padding-top: 34px;
+                        @include pc {
+                            padding-top: get_pc(34);
+                        }
+                        @include sp {
+                            padding-top: get_sp(11);
+                        }
                     }
                     th {
                         font-size: 25px;
@@ -329,7 +345,7 @@
                         @include sp {
                             font-size: get_sp(14);
                             letter-spacing: get_sp(0.7);
-                            line-height: get_sp(31);
+                            line-height: get_sp(20);
                         }
                     }
                 }
@@ -344,15 +360,16 @@
                 }
                 @include sp {
                     left: 0;
-                    width: get_sp(254);
+                    width: get_sp(257);
                 }
                 tr {
                     display: flex;
                     align-items: center;
-                    padding: 27px 0 27px 100px;
+                    padding: 0 20px 0 100px;
                     width: 987px;
                     @include pc {
-                        padding: get_pc(27) 0 get_pc(27) get_pc(100);
+                        padding: 0 get_pc(20) 0 get_pc(100);
+                        //padding: get_pc(27) 0 get_pc(27) get_pc(100);
                         width: get_pc(987);
                     }
                     @include sp {
@@ -362,10 +379,32 @@
                     }
                     &:not(:last-child) {
                         border-bottom: 1px solid #4c86c7;
-                    }
-                    &:last-child {
+                        height: 90px;
+                        @include pc {
+                            height: get_pc(90);
+                        }
                         @include sp {
+                            height: get_sp(52);
+                        }
+                    }
+                    //&:nth-child(2) {
+                    //    padding: 10px 0 9px 100px;
+                    //    @include pc {
+                    //        padding: get_pc(10) 0 get_pc(9) get_pc(100);
+                    //    }
+                    //    @include sp {
+                    //        padding: 0 0 0 get_sp(8);
+                    //    }
+                    //}
+                    &:last-child {
+                        padding: 34px 20px 46px 100px;
+                        @include pc {
+                            padding: get_pc(34) get_pc(20) get_pc(46) get_pc(100);
+                        }
+                        @include sp {
+                            align-items: flex-start;
                             height: get_sp(169);
+                            padding: 0 0 0 get_sp(8);
                         }
                         td {
                             width: 341px;
@@ -391,7 +430,7 @@
                         @include sp {
                             font-size: get_sp(14);
                             letter-spacing: get_sp(0.7);
-                            line-height: get_sp(26);
+                            line-height: get_sp(20);
                         }
                     }
                 }
@@ -473,18 +512,22 @@
                 }
             }
         }
-        .tab_content {
+    }
+    .tab_content {
+        margin-left: 29.89px;
+        @include pc {
+            margin-left: get_pc(29.89);
+        }
+        @include sp {
+            margin: 0;
+        }
+        tr {
             @include sp {
-                margin: 0;
+                padding: get_sp(11) get_sp(14);
             }
-            tr {
-                @include sp {
-                    padding: get_sp(11) get_sp(14);
-                }
-                &:nth-child(1) {
-                    @include pc {
-                        padding: get_pc(18) get_pc(9);
-                    }
+            &:nth-child(1) {
+                @include pc {
+                    padding: get_pc(18) get_pc(9);
                 }
             }
         }

@@ -17,7 +17,6 @@
     .breadcrumb {
         @include sp {
             flex-wrap: nowrap;
-            overflow-x: auto;
 
             li {
                 flex-shrink: 0;

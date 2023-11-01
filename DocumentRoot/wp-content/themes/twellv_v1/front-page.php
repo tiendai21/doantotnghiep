@@ -149,7 +149,6 @@ get_header();
     </section>
     <!-- /section infomation -->
     <?php get_template_part( 'template-parts/add/add_info' ); ?>
-<!--    --><?php //get_template_part( 'template-parts/home/modal_category' ); ?>
     <?php if (function_exists('the_views')) { the_views(); } ?>
 </main>
 <!-- /main -->

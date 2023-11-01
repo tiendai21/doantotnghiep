@@ -1,4 +1,18 @@
 .info_detail {
+    .breadcrumb {
+        li {
+            &:nth-child(2) {
+                &:before {
+                    content: none;
+                }
+            }
+            &:last-child {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
     #banner_info {
         .tlt {
             padding: 25px 172px;
@@ -255,6 +269,21 @@
                             letter-spacing: get_sp(2.1);
                             font-size: get_sp(14);
                             line-height: get_sp(25);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #other {
+        .list_other {
+            ul {
+                li {
+                    &:nth-child(7) {
+                        a {
+                            @include sp {
+                                letter-spacing: get_sp(-1.4);
+                            }
                         }
                     }
                 }

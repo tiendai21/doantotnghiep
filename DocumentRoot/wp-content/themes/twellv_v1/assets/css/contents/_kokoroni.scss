@@ -362,48 +362,6 @@
             @include sp {
                 margin-bottom: get_sp(39.58);
             }
-            ul {
-                li {
-                    &:nth-last-child(-n + 4) {
-                        @include pc {
-                            margin-bottom: 0;
-                        }
-                    }
-                    &:last-child {
-                        @include sp {
-                            margin-bottom: 0;
-                        }
-                        a {
-                            @include sp {
-                                padding-right: get_sp(12);
-                                justify-content: end;
-                            }
-                            &:after{
-                                @include sp {
-                                    content: none;
-                                }
-                            }
-                            span{
-                                @include sp {
-                                    display: block;
-                                    width: get_sp(19);
-                                    height: get_sp(19);
-                                    border-radius: 50%;
-                                    background: #699BD3;
-                                }
-                            }
-                        }
-                    }
-                    &:nth-child(7) {
-                        a {
-                            @include sp {
-                                font-size: get_sp(13);
-                                padding-right: get_sp(12);
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

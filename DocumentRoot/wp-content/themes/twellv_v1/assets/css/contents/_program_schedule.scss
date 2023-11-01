@@ -14,14 +14,14 @@
 
 #schedule {
     width: 100%;
-    margin-top: 160px;
+    margin-top: 240px;
 
     @include pc {
-        margin-top: get_pc(160);
+        margin-top: get_pc(240);
     }
 
     @include sp {
-        margin-top: get_sp(88);
+        margin-top: 0;
     }
 
     .header_section {
@@ -29,6 +29,7 @@
         left: 0;
         width: 100%;
         top: 160px;
+        z-index: 999;
 
         @include pc {
             top: get_pc(160);
@@ -36,6 +37,7 @@
 
         @include sp {
             top: get_sp(99);
+            position: unset;
         }
     }
 
@@ -46,26 +48,29 @@
         display: flex;
         justify-content: center;
         margin-bottom: 0;
+        border-bottom: 1px solid #FFFFFF;
 
         @include pc {
             height: get_pc(80);
+            border-bottom: get_pc(1) solid #FFFFFF;
         }
 
         @include sp {
             height: get_sp(38);
-            padding-left: get_sp(30);
+            border-bottom: none;
         }
 
         h2 {
             color: #fff;
             font-size: 35px;
-            line-height: 80px;
+            line-height: 51px;
             letter-spacing: 1.75px;
+            font-weight: 500;
             position: relative;
 
             @include pc {
                 font-size: get_pc(35);
-                line-height: get_pc(80);
+                line-height: get_pc(51);
                 letter-spacing: get_pc(1.75);
             }
 
@@ -74,117 +79,155 @@
                 line-height: get_sp(38);
                 letter-spacing: get_sp(1.6);
             }
+        }
+    }
 
-            &::before {
-                content: "";
-                @include bgsetup("../images/icon_calendar.svg", center center, 100% auto, no-repeat);
-                width: 35px;
-                height: 35px;
-                position: absolute;
-                left: -50px;
-                top: 25px;
+    .choose_date {
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        background-color: #0D326E;
+        @include pc {
+            padding: 0 get_pc(24);
+            height: get_pc(80);
+        }
+        @include sp {
+            padding: 0 get_sp(15);
+            height: get_sp(40);
+        }
+        .prev_btn {
+            @include bgsetup("../images/arrow_thin_l.png", center center, 100% auto, no-repeat);
+            width: 13px;
+            height: 27px;
+            transition: all ease 0.3s;
+            @include pc {
+                width: get_pc(13);
+                height: get_pc(27);
+            }
+            @include sp {
+                width: get_sp(17);
+                height: get_sp(17);
+            }
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        p {
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: 1.25px;
+            line-height: 36px;
+            display: flex;
+            @include pc {
+                font-size: get_pc(25);
+                letter-spacing: get_pc(1.25);
+                line-height: get_pc(36);
+            }
+            @include sp {
+                font-size: get_sp(16);
+                letter-spacing: get_sp(1.6);
+                line-height: get_sp(24);
+            }
+            span {
+                display: block;
+                background-color: #0B326E;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 36px;
+                color: #fff;
+                margin-left: 35px;
+                position: relative;
+                padding-right: 10px;
 
                 @include pc {
-                    width: get_pc(35);
-                    height: get_pc(35);
-                    left: get_pc(-50);
-                    top: get_pc(25)
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(36);
+                    margin-left: get_pc(35);
+                    padding-right: get_pc(10);
                 }
 
                 @include sp {
-                    width: get_sp(18);
-                    height: get_sp(18);
-                    left: get_sp(-23);
-                    top: get_sp(10);
+                    border-radius: get_sp(16);
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(24);
+                    margin-left: get_sp(20);
+                }
+
+                &::after {
+                    content: "";
+                    @include bgsetup("../images/arrow_slide_l.svg", center center, 100% auto, no-repeat);
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    right: -16px;
+                    top: 8px;
+                    transform: rotate(-90deg);
+
+                    @include pc {
+                        width: get_pc(18);
+                        height: get_pc(18);
+                        right: get_pc(-16);
+                        top: get_pc(8);
+                    }
+
+                    @include sp {
+                        width: get_sp(10);
+                        height: get_sp(10);
+                        right: get_sp(-5);
+                        top: get_sp(4);
+                    }
                 }
             }
         }
 
-        span {
-            display: block;
-            width: 70px;
-            height: 32px;
-            background-color: #0B326E;
-            border-radius: 16px;
-            font-size: 20px;
-            letter-spacing: 2px;
-            line-height: 29px;
-            color: #fff;
-            margin-left: 30px;
-            margin-top: 8px;
-            position: relative;
-            padding-right: 10px;
-
+        .next_btn {
+            @include bgsetup("../images/arrow_thin_r.png", center center, 100% auto, no-repeat);
+            width: 13px;
+            height: 27px;
+            transition: all ease 0.3s;
             @include pc {
-                max-width: get_pc(98);
-                height: get_pc(32);
-                border-radius: get_pc(16);
-                font-size: get_pc(20);
-                letter-spacing: get_pc(2);
-                line-height: get_pc(29);
-                margin-left: get_pc(30);
-                margin-top: get_pc(8);
-                padding-right: get_pc(10);
+                width: get_pc(13);
+                height: get_pc(27);
             }
-
             @include sp {
-                max-width: get_sp(56);
-                height: get_sp(16);
-                border-radius: get_sp(16);
-                font-size: get_sp(11);
-                letter-spacing: get_sp(1.1);
-                line-height: get_sp(16);
-                margin-left: get_sp(5);
-                margin-top: get_sp(2);
-                padding-right: get_sp(6);
+                 width: get_sp(17);
+                 height: get_sp(17);
             }
-
-            &::after {
-                content: "";
-                @include bgsetup("../images/arrow_slide_l.svg", center center, 100% auto, no-repeat);
-                width: 12px;
-                height: 15px;
-                position: absolute;
-                right: 9px;
-                top: 7px;
-                transform: rotate(-90deg);
-
-                @include pc {
-                    width: get_pc(15);
-                    height: get_pc(15);
-                    right: get_pc(9);
-                    top: get_pc(7);
-                }
-
-                @include sp {
-                    width: get_sp(10);
-                    height: get_sp(10);
-                    right: get_sp(5);
-                    top: get_sp(2);
-                }
+            &:hover {
+                opacity: 0.7;
             }
         }
     }
 
     .list_date {
         display: flex;
-        background-color: #fff;
         width: 100%;
         box-shadow: 0 3px 6px #00000029;
+        background-color: #E8F3FF;
+        
+        @include sp {
+            display: none;
+        }
 
         i {
             color: #fff;
             font-size: 60px;
             line-height: 80px;
-            width: 60px;
+            width: 64px;
             height: 80px;
-            background-color: #699BD3;
+            border: 1px solid #92bceb;
 
             @include pc {
-                width: get_pc(60);
+                width: get_pc(64);
                 height: get_pc(80);
                 font-size: get_pc(60);
                 line-height: get_pc(80);
+                border: get_pc(1) solid #92bceb;
             }
 
             @include sp {
@@ -250,6 +293,13 @@
                 width: get_pc(64);
                 padding-top: get_pc(16);
             }
+            @include sp {
+                font-size: get_sp(20);
+                line-height: get_sp(29);
+                letter-spacing: get_sp(2);
+                width: get_sp(32);
+                padding-top: get_sp(10);
+            }
         }
 
         .list_content {
@@ -263,6 +313,9 @@
                 @include sp {
                     width: 100%;
                     padding: get_sp(31) get_sp(26);
+                }
+                @include sp {
+                    padding: get_sp(10) get_sp(15) get_sp(15) get_sp(8);
                 }
 
                 h3 {
@@ -282,7 +335,7 @@
 
                     @include sp {
                         font-size: get_sp(20);
-                        line-height: get_sp(28);
+                        line-height: get_sp(29);
                         letter-spacing: get_sp(2);
                         padding: 0 0 get_sp(8);
 
@@ -296,6 +349,7 @@
                     font-weight: bold;
                     letter-spacing: -0.5px;
                     padding: 0 20px 18px;
+                    transition: all ease 0.3s;
 
                     @include pc {
                         font-size: get_pc(19);
@@ -319,6 +373,7 @@
                     color: #000;
                     text-align: left;
                     padding: 0 20px 8px;
+                    transition: all ease 0.3s;
 
                     @include pc {
                         font-size: get_pc(15);
@@ -336,6 +391,7 @@
                 }
 
                 .thumb {
+                    transition: all ease 0.3s;
                     img {
                         width: 220px;
                         height: 175px;
@@ -353,6 +409,17 @@
                             height: get_sp(200);
                             padding-bottom: 0;
                         }
+                    }
+                }
+                &:hover {
+                    .tlt_content {
+                        color: #004898;
+                    }
+                    .desp_content {
+                        color: #004898;
+                    }
+                    .thumb {
+                        opacity: 0.7;
                     }
                 }
             }

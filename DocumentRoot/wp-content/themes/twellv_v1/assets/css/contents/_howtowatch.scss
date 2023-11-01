@@ -239,7 +239,7 @@
                     font-size: get_sp(16);
                     line-height: get_sp(24);
                     letter-spacing: get_sp(0.8);
-                    margin: 0 0 get_sp(12);
+                    margin: 0 0 get_sp(19);
                 }
             }
 
@@ -264,6 +264,127 @@
 
                 small {
                     color: #004898;
+                }
+            }
+        }
+
+        .border_bottom {
+            padding-bottom: 88.08px;
+            margin-bottom: 59.92px;
+            border-bottom: 2px solid #FFFFFF;
+            @include pc {
+                padding-bottom: get_pc(88.08);
+                margin-bottom: get_pc(59.92);
+                border-bottom: get_pc(2) solid #FFFFFF;
+            }
+            @include sp {
+                padding-bottom: get_sp(40);
+                margin-bottom: get_sp(32);
+                border-bottom: get_sp(2) solid #FFFFFF;
+            }
+            .txt_content {
+                margin-bottom: 0;
+                p {
+                    margin-bottom: 32px;
+
+                    @include pc {
+                        margin-bottom: get_pc(32);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(23);
+                    }
+                    &:nth-child(3) {
+                        @include sp {
+                            margin-bottom: get_sp(18);
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                span {
+                    margin: 0 5px -15px;
+                    @include pc {
+                        margin: 0 get_pc(5) get_pc(-15);
+                    }
+                    @include sp {
+                        margin: 0 get_sp(5) get_sp(-7);
+                    }
+                }
+
+                p:nth-child(3) {
+                    span {
+                        display: inline-block;
+                        @include bgsetup("../images/img_btn_04.png", center center, 100% auto, no-repeat);
+                        width: 188px;
+                        height: 51px;
+                        @include pc {
+                            width: get_pc(188);
+                            height: get_pc(51);
+                        }
+                        @include sp {
+                            width: get_sp(103);
+                            height: get_sp(28);
+                        }
+                    }
+                }
+
+                p:nth-child(4) {
+                    margin-bottom: 68px;
+
+                    @include pc {
+                        margin-bottom: get_pc(68);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(32);
+                    }
+                    span {
+                        &:nth-of-type(1) {
+                            display: inline-block;
+                            @include bgsetup("../images/img_btn_01.png", center center, 100% auto, no-repeat);
+                            width: 157px;
+                            height: 48px;
+                            @include pc {
+                                width: get_pc(157);
+                                height: get_pc(48);
+                            }
+                            @include sp {
+                                width: get_sp(77);
+                                height: get_sp(24);
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            display: inline-block;
+                            @include bgsetup("../images/img_btn_02.png", center center, 100% auto, no-repeat);
+                            width: 179px;
+                            height: 47px;
+                            @include pc {
+                                width: get_pc(179);
+                                height: get_pc(47);
+                            }
+                            @include sp {
+                                width: get_sp(90);
+                                height: get_sp(24);
+                            }
+                        }
+
+                        &:nth-of-type(3) {
+                            display: inline-block;
+                            @include bgsetup("../images/img_btn_03.png", center center, 100% auto, no-repeat);
+                            width: 153px;
+                            height: 44px;
+                            @include pc {
+                                width: get_pc(153);
+                                height: get_pc(44);
+                            }
+                            @include sp {
+                                width: get_sp(70);
+                                height: get_sp(20);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -302,108 +423,6 @@
                 margin-left: -15px;
                 @include pc {
                     margin-left: get_pc(-15);
-                }
-            }
-        }
-
-        .txt_content:nth-child(4) {
-            @include sp {
-                padding-bottom: get_sp(40);
-                margin-bottom: get_sp(32);
-                border-bottom: get_sp(2) solid #fff;
-            }
-            p {
-                margin-bottom: 32px;
-
-                @include pc {
-                    margin-bottom: get_pc(32);
-                }
-                @include sp {
-                    margin-bottom: 0;
-                }
-            }
-
-            span {
-                margin: 0 5px -15px;
-                @include pc {
-                    margin: 0 get_pc(5) get_pc(-15);
-                }
-                @include sp {
-                    margin: 0 get_sp(5) get_sp(-7);
-                }
-            }
-
-            p:nth-child(3) {
-                span {
-                    display: inline-block;
-                    @include bgsetup("../images/img_btn_04.png", center center, 100% auto, no-repeat);
-                    width: 188px;
-                    height: 51px;
-                    @include pc {
-                        width: get_pc(188);
-                        height: get_pc(51);
-                    }
-                    @include sp {
-                        width: get_sp(103);
-                        height: get_sp(28);
-                    }
-                }
-            }
-
-            p:nth-child(4) {
-                margin-bottom: 68px;
-
-                @include pc {
-                    margin-bottom: get_pc(68);
-                }
-                @include sp {
-                    margin-bottom: get_sp(32);
-                }
-                span {
-                    &:nth-of-type(1) {
-                        display: inline-block;
-                        @include bgsetup("../images/img_btn_01.png", center center, 100% auto, no-repeat);
-                        width: 157px;
-                        height: 48px;
-                        @include pc {
-                            width: get_pc(157);
-                            height: get_pc(48);
-                        }
-                        @include sp {
-                            width: get_sp(77);
-                            height: get_sp(24);
-                        }
-                    }
-    
-                    &:nth-of-type(2) {
-                        display: inline-block;
-                        @include bgsetup("../images/img_btn_02.png", center center, 100% auto, no-repeat);
-                        width: 179px;
-                        height: 47px;
-                        @include pc {
-                            width: get_pc(179);
-                            height: get_pc(47);
-                        }
-                        @include sp {
-                            width: get_sp(90);
-                            height: get_sp(24);
-                        }
-                    }
-    
-                    &:nth-of-type(3) {
-                        display: inline-block;
-                        @include bgsetup("../images/img_btn_03.png", center center, 100% auto, no-repeat);
-                        width: 153px;
-                        height: 44px;
-                        @include pc {
-                            width: get_pc(153);
-                            height: get_pc(44);
-                        }
-                        @include sp {
-                            width: get_sp(70);
-                            height: get_sp(20);
-                        }
-                    }
                 }
             }
         }
@@ -575,6 +594,30 @@
             }
             @include sp {
                 margin-bottom: get_sp(27);
+            }
+        }
+    }
+
+    #other {
+        .list_other {
+            li {
+                a {
+                    position: relative;
+                    &:after {
+                        @include sp {
+                            position: absolute;
+                            right: get_sp(10);
+                        }
+                    }
+                }
+                &:nth-child(7) {
+                    a {
+                        @include sp {
+                            padding-left: get_sp(5);
+                            font-size: get_sp(13.5);
+                        }
+                    }
+                }
             }
         }
     }

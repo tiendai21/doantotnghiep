@@ -1,0 +1,518 @@
+.limited_rewards {
+    #main {
+        overflow-x: hidden;
+
+        @include sp {
+            margin-top: get_sp(100);
+        }
+
+        @include pc {
+            margin-top: get_pc(160);
+        }
+    }
+    .breadcrumb {
+        margin: 7px auto 20px;
+
+        @include pc {
+            margin: get_pc(7) auto get_pc(20) get_pc(170);
+        }
+
+        @include sp {
+            margin: get_sp(8) auto get_sp(8) get_sp(11);
+        }
+        li {
+            &:nth-child(2) {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    /*
+        banner
+    */
+    #banner {
+        .inner {
+            max-width: 1920px;
+            margin: 0 auto 24.87px;
+            @include pc {
+                max-width: get_pc(1920);
+                margin: 0 auto get_pc(24.87);
+            }
+            @include sp {
+                width: 100%;
+                margin-bottom: get_sp(22);
+            }
+        }
+        .thumb {
+            width: 100%;
+            height: 163px;
+            @include pc {
+                height: 163px;
+            }
+            @include sp {
+                height: get_sp(115);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .items_link {
+            padding: 28px 0 28px 236px;
+            @include pc {
+                padding: get_pc(28) 0 get_pc(28)get_pc(236);
+            }
+            @include sp {
+                padding: get_sp(8) 0;
+            }
+            li {
+                padding: 19px 12px;
+                margin: 0 7px 0 0;
+                @include pc {
+                    padding: get_pc(19) get_pc(12);
+                    margin: 0 get_pc(7) 0 0;
+                }
+                @include sp {
+                    padding: get_sp(10) get_sp(3);
+                    margin-right: 0;
+                }
+                &:nth-child(-n + 5) {
+                    margin-bottom: 10px;
+                    @include pc {
+                        margin-bottom: get_pc(10);
+                    }
+                    @include sp {
+                        margin-bottom:0;
+                    }
+                }
+                &:not(:last-child) {
+                    @include sp {
+                        margin-bottom: get_sp(5);
+                    }
+                }
+                &:nth-child(even),&:first-child {
+                    @include sp {
+                        margin-right: get_sp(5);
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+        limited_rewards
+    */
+    #limited_rewards {
+        .inner {
+            max-width: 1577px;
+            text-align: left;
+            margin: 0 auto 87.28px;
+            @include pc {
+                max-width: get_pc(1577);
+                margin: 0 auto get_pc(87.28);
+            }
+            @include sp {
+                width: 100%;
+                margin-bottom: get_sp(52);
+            }
+        }
+        .thumb {
+            width: 100%;
+            height: 717px;
+            margin-bottom: 54.08px;
+            @include pc {
+                height: get_pc(717);
+                margin-bottom: get_pc(54.08);
+            }
+            @include sp {
+                height: get_sp(179);
+                margin-bottom: get_sp(26.5);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        ul {
+            @include sp {
+                padding: 0 get_sp(13);
+            }
+            li {
+                position: relative;
+                margin-bottom: 39px;
+                padding-bottom: 105.33px;
+                @include pc {
+                    margin-bottom: get_pc(39);
+                    padding-bottom: get_pc(105.33);
+                }
+                @include sp {
+                    margin-bottom: get_sp(26.5);
+                    padding-bottom: get_sp(50);
+                }
+
+                &:nth-last-child(2) {
+                    padding-bottom: 43px;
+                    @include pc {
+                        padding-bottom: get_pc(43);
+                    }
+                    @include sp {
+                        padding-bottom: get_sp(47);
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 89.67px;
+                    @include pc {
+                        margin-bottom: get_pc(89.67);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(34.98);
+                    }
+                }
+            }
+            span {
+                display: block;
+                font-size: 24px;
+                letter-spacing: 2.4px;
+                line-height: 35px;
+                font-weight: bold;
+                margin-bottom: 22.5px;
+                @include pc {
+                    font-size: get_pc(24);
+                    letter-spacing: get_pc(2.4);
+                    line-height: get_pc(35);
+                    margin-bottom: get_pc(22.5);
+                }
+                @include sp {
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(24);
+                    margin-bottom: get_sp(8.79);
+                }
+            }
+            h2 {
+                font-size: 30px;
+                letter-spacing: 3px;
+                line-height: 44px;
+                font-weight: bold;
+                color: #004898;
+                padding-top: 23.5px;
+                margin-bottom: 23.5px;
+                border-top: 3px solid #004898;
+                @include pc {
+                    font-size: get_pc(30);
+                    letter-spacing: get_pc(3);
+                    line-height: get_pc(44);
+                    padding-top: get_pc(23.5);
+                    margin-bottom: get_pc(23.5);
+                    border-top: get_pc(3) solid #004898;
+                }
+                @include sp {
+                    font-size: get_sp(18);
+                    letter-spacing: 0;
+                    line-height: get_sp(25);
+                    padding-top: get_sp(8.79);
+                    margin-bottom: get_sp(8.79);
+                    border-top: get_sp(2) solid #004898;
+                }
+            }
+            p {
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 50px;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(50);
+                }
+                @include sp {
+                    font-size: get_sp(16);
+                    letter-spacing: 0;
+                    line-height: get_sp(25);
+                }
+            }
+            .btn_more {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                span {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    line-height: 25px;
+                    padding-top: 8px;
+                    margin-bottom: 0;
+                    @include pc {
+                        font-size: get_pc(20);
+                        letter-spacing: get_pc(2);
+                        line-height: get_pc(25);
+                        padding-top: get_pc(8);
+                    }
+                    @include sp {
+                        font-size: get_sp(16);
+                        letter-spacing: get_sp(1.6);
+                        line-height: get_sp(25);
+                        padding: get_sp(3) get_sp(25) get_sp(3) get_sp(9);
+                    }
+                }
+            }
+        }
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 101px;
+            @include pc {
+                margin-bottom: get_pc(101);
+            }
+            @include sp {
+                margin-bottom: get_sp(45);
+            }
+            li {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                margin-left: 11px;
+                @include pc {
+                    margin-left: get_pc(11);
+                }
+                @include sp {
+                    margin-left: get_sp(11);
+                }
+                &.active {
+                   a {
+                       color: #0A5AB2;
+                   }
+                }
+                &:nth-last-child(2) {
+                    padding-bottom: 0;
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-left: 19px;
+                    margin-bottom: 0;
+                    @include pc {
+                        margin-left: get_pc(19);
+                    }
+                    @include sp {
+                        margin-left: get_sp(19);
+                    }
+                    a {
+                        color: #0A5AB2;
+                        font-size: 25px;
+                        letter-spacing: 2.5px;
+                        @include pc {
+                            font-size: get_pc(25);
+                            letter-spacing: get_pc(2.5);
+                        }
+                        @include sp {
+                            font-size: get_sp(16);
+                            letter-spacing: get_sp(1.6);
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        @include bgsetup("../images/btn_arrow_right.svg",center center,100% auto,no-repeat);
+                        display: inline-block;
+                        width: 20px;
+                        height: 23px;
+                        margin-left: 7px;
+                        @include pc {
+                            width: get_pc(20);
+                            height: get_pc(23);
+                            margin-left: get_pc(7);
+                        }
+                        @include sp {
+                            width: get_sp(12);
+                            height: get_sp(13);
+                            margin-left: get_sp(2);
+                        }
+                    }
+                }
+                a,span {
+                    color: #B4B4B4;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    line-height: 50px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    @include pc {
+                        font-size: get_pc(20);
+                        letter-spacing: get_pc(2);
+                        line-height: get_pc(50);
+                    }
+                    @include sp {
+                        font-size: get_sp(20);
+                        letter-spacing: get_sp(2);
+                        line-height: get_sp(50);
+                    }
+                }
+            }
+        }
+        .link_social {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include sp {
+                justify-content: space-between;
+                padding: 0 get_sp(81) 0 get_sp(63);
+            }
+            li {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                &:not(:last-child) {
+                    margin-right: 61px;
+                    @include pc {
+                        margin-right: get_pc(61);
+                    }
+                    @include sp {
+                        margin-right: 0;
+                    }
+                }
+                &:nth-last-child(2) {
+                    padding-bottom: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    display: block;
+                    width: 83px;
+                    height: 83px;
+                    @include pc {
+                        width: get_pc(83);
+                        height: get_pc(83);
+                    }
+                    @include sp {
+                        width: get_sp(50);
+                        height: get_sp(50);
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    #ranking {
+        @include sp {
+            margin-bottom: get_sp(40);
+        }
+        .content_ranking {
+            padding-top: 34px;
+            @include pc {
+                padding-top: get_pc(34);
+            }
+            @include sp {
+                padding-top: get_sp(12);
+            }
+        }
+        .tlt_section {
+            margin-bottom: 78px;
+            @include pc {
+                margin-bottom: get_pc(78);
+            }
+            @include sp {
+                margin-bottom: get_sp(16.91);
+            }
+        }
+    }
+    #ranking_section {
+        margin-bottom: 87px;
+        @include pc {
+            margin-bottom: get_pc(87);
+        }
+        @include sp {
+            margin-bottom: get_sp(32.59);
+        }
+        .content_ranking {
+            @include sp {
+                padding-top: get_sp(12);
+            }
+            .btn_link {
+                right: 164px;
+                @include pc {
+                    right: get_pc(164);
+                }
+                @include sp {
+                    right: 50%;
+                }
+            }
+        }
+    }
+    #recommended_movies {
+        .tlt_section {
+            @include sp {
+                margin-bottom: get_sp(20);
+            }
+        }
+        .program_slide {
+            margin-bottom: 104px;
+            @include pc {
+                margin-bottom: get_pc(104);
+            }
+            @include sp {
+                margin-bottom: get_sp(24);
+            }
+        }
+    }
+    #pr {
+        .inner {
+            margin-bottom: 104px;
+            @include pc {
+                margin-bottom: get_pc(104);
+            }
+            @include sp {
+                margin-bottom: get_sp(36);
+            }
+        }
+        .tlt_section {
+            margin-bottom: 37px;
+            @include pc {
+                margin-bottom: get_pc(37);
+            }
+            @include sp {
+                margin-bottom: get_sp(14);
+            }
+        }
+    }
+    #other {
+        .tlt_section {
+            margin-bottom: 70px;
+            @include pc {
+                margin-bottom: get_pc(70);
+            }
+            @include sp {
+                margin-bottom: get_sp(16);
+            }
+        }
+        .list_other {
+            margin-bottom: 79px;
+            @include pc {
+                margin-bottom: get_pc(79);
+            }
+            @include sp {
+                margin-bottom: get_sp(50);
+            }
+            ul {
+                li {
+                    &:nth-child(8) {
+                        a {
+                            @include sp {
+                                padding-left: get_sp(12);
+                            }
+                        }
+                    }
+                    &:nth-last-child(-n + 2) {
+                        @include sp {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -169,7 +169,7 @@
                     }
                 }
 
-                h2, h3 {
+                h2 {
                     font-size: 25px;
                     letter-spacing: 2.5px;
                     font-weight: bold;
@@ -354,14 +354,11 @@
                             }
                         }
                     }
-                    &:nth-last-child(-n +5) {
-                        @include pc {
-                            margin-bottom: 0;
-                        }
-                    }
-                    &:nth-last-child(-n +3) {
-                        @include sp {
-                            margin-bottom: 0;
+                    &:nth-child(15) {
+                        a {
+                            @include sp {
+                                letter-spacing: get_sp(0);
+                            }
                         }
                     }
                 }

@@ -1,10 +1,47 @@
 .broadcast_edit_standard {
+    #main {
+        overflow-x: hidden;
+        margin-top: 0;
+        padding-top: 160px;
+        @include pc {
+            padding-top: get_pc(160);
+        }
+        @include sp {
+            padding-top: get_sp(100);
+        }
+    }
+    .breadcrumb {
+        max-width: 1576px;
+        margin: 0 auto 20px;
+        padding-top: 7px;
+        @include pc {
+            max-width: get_pc(1576);
+            margin: 0 auto get_pc(20);
+            padding-top: get_pc(7);
+        }
+        @include sp {
+            margin: 0;
+            padding: get_sp(8) 0 get_sp(8) get_sp(11);
+        }
+        li {
+            &:nth-last-child(2) {
+                &:before {
+                    content: none;
+                }
+            }
+            &:last-child {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
     .tlt_head {
         background-color: #E8F3FF;
         padding: 54px 0 25.5px;
-        margin-bottom: 69px;
+        margin-bottom: 51px;
         @include pc {
-            margin-bottom: get_pc(69);
+            margin-bottom: get_pc(51);
             padding: get_pc(54) 0 get_pc(25.5);
         }
         @include sp {
@@ -41,22 +78,24 @@
     .content {
         display: flex;
         text-align: left;
-        max-width: 1584px;
+        justify-content: space-between;
+        max-width: 1582px;
         margin: 0 auto 104px;
         width: 100%;
         @include pc {
-            max-width: get_pc(1584);
+            max-width: get_pc(1582);
             margin: 0 auto get_pc(104);
         }
         @include sp {
             display: block;
-            max-width: auto;
             padding: 0 get_sp(16);
             margin-bottom: 0;
         }
         .txt_desp {
             padding-top: 24px;
+            width: 1242px;
             @include pc {
+                width: get_pc(1242);
                 padding-top: get_pc(24);
             }
             @include sp {

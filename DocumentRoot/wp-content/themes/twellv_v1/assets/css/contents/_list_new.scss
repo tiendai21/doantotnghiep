@@ -20,6 +20,19 @@
             @include sp {
                 margin: get_sp(7) get_sp(11) get_sp(13);
             }
+            li {
+                &:nth-child(2) {
+                    &:before {
+                        content: none;
+                    }
+
+                }
+                &:last-child {
+                    @include sp {
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
 
@@ -110,6 +123,12 @@
                                 border-radius: get_sp(23);
                                 padding: get_sp(3) get_sp(15) get_sp(4) get_sp(15);
                                 margin-bottom: get_sp(5);
+                            }
+
+                            &:hover {
+                                background-color: #699BD3;
+                                color: #FFFFFF;
+                                transition: 0.3s;
                             }
                         }
                     }
@@ -225,6 +244,10 @@
                                     }
                                 }
                             }
+                            &:hover {
+                                opacity: 0.7;
+                                transition: 0.3s;
+                            }
                         }
                     }
                 }
@@ -311,6 +334,28 @@
                         width: get_sp(12);
                         height: get_sp(12);
                         margin-left: get_sp(4);
+                    }
+                }
+            }
+        }
+    }
+
+    #other {
+        .list_other {
+            ul {
+
+                li {
+                    a {
+                        @include sp {
+                            position: relative;
+                            padding: 0 get_sp(35) 0 get_sp(12);
+                        }
+                        &:after {
+                            @include sp {
+                                position: absolute;
+                                right: get_sp(12);
+                            }
+                        }
                     }
                 }
             }

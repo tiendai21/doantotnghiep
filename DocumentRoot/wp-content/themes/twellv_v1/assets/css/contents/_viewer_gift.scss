@@ -1,7 +1,7 @@
 /*
   main
 */
-.viewer_gift{
+.viewer_gift {
     #main {
         overflow-x: hidden;
         margin-top: 0;
@@ -30,12 +30,12 @@
         li {
             &:nth-last-child(2) {
                 &:before {
-                  content: none;
+                    content: none;
                 }
             }
             &:last-child {
                 @include sp {
-                  margin: 0;
+                    margin: 0;
                 }
             }
         }
@@ -49,7 +49,7 @@
             background: #E8F3FF 0% 0% no-repeat padding-box;
             padding: 0 172px 32px;
             margin-bottom: 70px;
-            @include pc{
+            @include pc {
                 margin-bottom: get_pc(70);
                 padding: 0 get_pc(172) get_pc(32);
             }
@@ -93,7 +93,7 @@
                 max-width: get_pc(1090);
                 margin: 0 auto get_pc(109);
             }
-            @include sp{
+            @include sp {
                 margin: 0 0 get_sp(40);
             }
         }
@@ -107,6 +107,7 @@
             @include sp {
                 flex-direction: column;
                 margin-bottom: get_sp(37);
+                padding: 0 get_sp(5);
             }
             .thumb {
                 width: 448px;
@@ -119,13 +120,13 @@
                     width: 100%;
                     height: get_sp(216);
                 }
-                img{
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
             }
-            .txt_desp{
+            .txt_desp {
                 padding: 12px 52px 30px 20px;
                 background: #F2F2F2 0% 0% no-repeat padding-box;
                 border-radius: 0 32px 32px 0;
@@ -213,7 +214,7 @@
                         right: get_sp(20);
                         padding: get_sp(7) 0 get_sp(10) get_sp(120);
                     }
-                    a{
+                    a {
                         font-size: 18px;
                         letter-spacing: 1.8px;
                         line-height: 26px;
@@ -231,9 +232,9 @@
                             letter-spacing: get_sp(1.4);
                             line-height: get_sp(20);
                         }
-                        &:after{
+                        &:after {
                             content: "";
-                            @include bgsetup("../images/btn_arrow_right.svg", center center , 100% auto, no-repeat);
+                            @include bgsetup("../images/btn_arrow_right.svg", center center, 100% auto, no-repeat);
                             width: 15px;
                             height: 18px;
                             display: block;
@@ -258,7 +259,7 @@
     /*
        program_broadcast
     */
-    #program_broadcast{
+    #program_broadcast {
         .inner {
             max-width: 1920px;
             margin: 0 auto;
@@ -328,42 +329,6 @@
             }
 
         }
-
-        .item_slide {
-            margin-right: 10px;
-            @include pc {
-                margin-right: get_pc(10);
-            }
-            @include sp {
-                margin-right: get_sp(5);
-            }
-            a {
-                width: 320px;
-                height: 180px;
-                display: inline-block;
-                @include pc {
-                    width: get_pc(320);
-                    height: get_pc(180);
-                }
-
-                @include sp {
-                    width: get_sp(160);
-                    height: get_sp(90);
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-        .slick-list {
-            padding: 0 !important;
-        }
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before {
-            opacity: 0;
-        }
     }
 
     /*
@@ -395,12 +360,11 @@
                     margin-bottom: get_pc(78);
                 }
                 @include sp {
-                    margin-bottom: get_sp(15);
+                    margin-bottom: get_sp(16);
                 }
             }
 
             .program_slide {
-
                 .slick-prev {
                     top: 32%;
                 }
@@ -408,24 +372,11 @@
                     top: 32%;
                 }
             }
-
-            .slick-slider .slick-track {
-                padding-left: 162px;
-                margin-left: 52px;
-                @include pc {
-                    padding-left: get_pc(162);
-                    margin-left: get_pc(52);
-                }
-                @include sp {
-                    padding-left: get_sp(16);
-                    margin-left: 16px;
-                }
-            }
-
             .item_slide {
                 .num {
                     @include sp {
-                        top: get_sp(12);
+                        top: get_sp(19);
+                        left: get_sp(-2);
                     }
                 }
             }
@@ -454,23 +405,23 @@
             @include pc {
                 max-width: get_pc(1920);
             }
-            .tlt_section{
+            .tlt_section {
                 margin-bottom: 25px;
                 @include pc {
                     margin-bottom: get_pc(25);
                 }
             }
             .program_slide {
-                @include sp{
-                  margin-bottom: get_sp(36);
+                @include sp {
+                    margin-bottom: get_sp(36);
                 }
                 .item_slide {
-                    .txt_desp{
+                    .txt_desp {
                         font-weight: 400;
                     }
                     a {
                         p {
-                            @include sp{
+                            @include sp {
                                 padding-bottom: get_sp(3);
                             }
                         }
@@ -483,7 +434,7 @@
     /*
        pr
     */
-    #pr{
+    #pr {
         .inner {
             @include sp {
                 margin-bottom: get_sp(34);
@@ -496,20 +447,12 @@
       */
     #other {
         .list_other {
-            margin: 0 auto 85px;
-            @include pc {
-                margin: 0 auto get_pc(85);
-            }
-            @include sp {
-                margin-bottom: get_sp(39.8);
-            }
             ul {
                 li {
                     &:nth-child(7) {
                         a {
                             @include sp {
-                                font-size: get_sp(13);
-                                padding-right: get_sp(12);
+                                letter-spacing: get_sp(-1.4);
                             }
                         }
                     }

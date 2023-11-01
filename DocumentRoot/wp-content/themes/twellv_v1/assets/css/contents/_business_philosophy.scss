@@ -41,44 +41,19 @@
     */
     #business_philosophy {
         .tlt_head {
-            padding: 41px 0 41px;
             margin-bottom: 0;
-            @include pc {
-                padding: get_pc(41) 0 get_pc(41);
-            }
-            @include sp {
-                padding: get_sp(16);
-            }
-        }
-        h2 {
-            padding-bottom: 13.5px;
-            font-size: 30px;
-            line-height: 44px;
-            letter-spacing: 3px;
-            @include pc {
-                font-size: get_pc(30);
-                line-height: get_pc(44);
-                letter-spacing: get_pc(3);
-                padding-bottom: get_pc(13.5);
-            }
-            @include sp {
-                font-size: get_sp(18);
-                line-height: get_sp(26);
-                letter-spacing: get_sp(1.8);
-                padding-bottom: get_sp(5);
-            }
         }
         .content_section {
             max-width: 1582px;
             width: 100%;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
-            padding: 65px 0 133px;
+            justify-content: space-between;
+            padding: 51px 0 133px;
             @include pc {
                 max-width: get_pc(1582);
-                padding: get_pc(65) 0 get_pc(133);
+                padding: get_pc(51) 0 get_pc(133);
             }
             @include sp {
                 padding: get_sp(30) 0 0;
@@ -222,15 +197,20 @@
                                 margin-bottom: get_sp(57);
                             }
                             p {
-                                padding: 17px 0 17px 32px;
+                                padding: 0 0 0 32px;
                                 line-height: 30px;
+                                margin-bottom: 0;
+                                display: flex;
                                 @include pc {
-                                    padding: get_pc(17) 0 get_pc(17) get_pc(32);
+                                    padding: 0 0 0 get_pc(32);
                                     line-height: get_pc(30);
                                 }
                                 @include sp {
                                     padding: 0 0 get_sp(4) 0;
                                     line-height: get_sp(19);
+                                }
+                                &:before {
+                                    content: "・";
                                 }
                             }
                         }
@@ -286,6 +266,10 @@
             }
         }
         .tab_content {
+            margin-left: 36.08px;
+            @include pc {
+                margin-left: get_pc(36.08);
+            }
             @include sp {
                 margin: 0;
             }

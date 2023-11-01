@@ -1,4 +1,18 @@
 .cable_stations {
+    .breadcrumb {
+        li {
+            &:nth-last-child(2) {
+                &:before {
+                    content: none;
+                }
+            }
+            &:last-child {
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
     .content {
         text-align: left;
         max-width: 1580px;
