@@ -20,7 +20,6 @@
                     </a>
                     <p><?php echo $banner_desc ?></p>
                 </div>
-
             </div>
         <?php endwhile; ?>
     </div>
