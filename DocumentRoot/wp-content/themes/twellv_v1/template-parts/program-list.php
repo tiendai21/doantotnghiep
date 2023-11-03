@@ -27,8 +27,8 @@ foreach ($terms as $t) {
     if (is_display_program_archive($t, $term_list_object->term_id)) {
         // 対象カテゴリの番組または 親番組カテゴリ以外のアーカイブに表示するで指定された番組
 
-        $status = (int) get_field('onair', $t); // 1: 放送予定, 2: 放送中, 3: 放送終了
-        if ((int) $status > 0) {
+        $status = (int)get_field('onair', $t); // 1: 放送予定, 2: 放送中, 3: 放送終了
+        if ((int)$status > 0) {
             // 放送ステータスで分離
             $programs_arr[$status][] = $t;
         }
@@ -50,300 +50,300 @@ foreach ($terms as $t) {
 // var_dump( $programs_arr );
 
 ?>
-
-<div id="tpl-topicpath">
-    <div class="tpl-inner-wrap">
-        <ul>
-            <li><a href="/"><?php bs12_pankuzu_text_top(); ?></a> </li>
-            <?php if (preg_match('/(korea|china)/', $term_list_object->slug)) { ?>
-                <li><a href="/program/drama/">ドラマ・映画</a></li>
-            <?php } ?>
-            <li><?php echo esc_attr($term_list_object_name); ?></li>
-        </ul>
-    </div>
-</div><!-- /tpl-topicpath -->
-
-
-<div id="tpl-contents">
-    <div class="tpl-inner-wrap">
-        <h1 class="category-title"><?php echo esc_attr($term_list_object_name); ?></h1>
-        <?php
-        if ($top_view) {
-        ?>
-            <div class="category-hero-wrap">
-                <section class="category-hero archive-mv">
-                    <p class="img"><a href="<?php echo get_term_link($top_view); ?>"><?php echo get_program_thumbnail($top_view, 'top'); ?></a></p>
-                    <div class="description">
-                        <div class="heading">
-                            <h2 class="title"><?php echo $top_view->name; ?></h2>
-                            <p class="onair-date"><?php echo get_field('onairtime', $top_view); ?></p>
-                            <p class="text"><?php echo get_field('pg_text', $top_view); ?></p>
-                        </div>
-                        <div class="btn-wrap w300">
-                            <p class="btn"><a href="<?php echo get_term_link($top_view); ?>">番組詳細はこちら</a></p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        <?php
-        }
-        ?>
-
-        <?php
-        /**
-         * add 20200127 ishizaki ↓
-         * BS12_RENEWAL-201 【施策ID：34-1】旅・グルメページ > 上部テキスト追加
-         */
-        $mv_bottom_text = get_field('mv_bottom_text_parent_cat', $term_list_object);
-        if ($mv_bottom_text) {
-        ?>
-            <div class="program-list-mv-lead">
-                <p><?php echo $mv_bottom_text; ?></p>
-            </div>
-        <?php }
-        // add 20200127 ishizaki ↑
-        ?>
-		<?php
-            // バナー
-            get_template_part( 'template-parts/top', 'banner' );
-		?>
-        <!-- 放送中の韓国ドラマ -->
-        <section class="section-wrap">
-            <div class="program-list-wrap">
-                <h2 class="section-ttl">放送中の<?php echo esc_attr($term_list_object_name); ?></h2>
-
-                <div class="program-list w320 type-B slider">
-                    <?php
-                    if (!empty($programs_arr[2])) {
-                        foreach ($programs_arr[2] as $t) {
-                            tpl_program_list_item($t);
-                        }
-                    }
-                    ?>
+<main id="main">
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+        </li>
+        <li>
+            <a href="#">ドラマ・映画</a>
+        </li>
+        <li>
+            <span>韓国・</span>
+        </li>
+    </ul>
+    <!-- banner catefory -->
+    <section class="section" id="banner_category">
+        <div class="inner">
+            <div class="siler_category_top">
+                <div class="txt_fixed">
+                    <h2>韓国・韓流ドラマ</h2>
                 </div>
-            </div>
-
-            <div class="btn-wrap w300">
-                <p class="btn"><a href="/program_schedule/">番組表を見る</a></p>
-            </div>
-            <?php //BS12_RENEWAL-291 【施策6】よくある質問追加（カテゴリTOP) add 20210406 ishizaki　↓ ?>
-            <div class="btn-wrap w300">
-                <p class="btn"><a href="/corporate/faq/">よくあるご質問</a></p>
-            </div>
-            <?php //add 20210406 ishizaki　↑ ?>
-        </section>
-        <!-- /放送中の韓国ドラマ -->
-
-
-        <!-- 放送予定の%%% -->
-        <section class="section-wrap">
-            <div class="program-list-wrap">
-                <h2 class="section-ttl">放送予定の<?php echo esc_attr($term_list_object_name); ?></h2>
-
-                <div class="program-list w320 type-B slider">
-                    <?php
-                    if (!empty($programs_arr[1])) {
-                        foreach ($programs_arr[1] as $t) {
-                            tpl_program_list_item($t);
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <div class="btn-wrap w300">
-                <p class="btn"><a href="/program_schedule/">番組表を見る</a></p>
-            </div>
-        </section>
-        <!-- /放送予定の韓国ドラマ -->
-
-        <?php get_template_part('template-parts/ad/ad-news-single', 'ad-news-single'); ?>
-
-        <!-- おすすめ -->
-        <?php display_program_recommend_by_category_slug($term_list_object->slug); ?>
-
-        <!-- /おすすめ%カテゴリー名% -->
-
-        <!-- 動画 -->
-        <?php
-        /**
-         * add 20200305 yanagi ↓
-         * BS12_RENEWAL-209 【施策ID：41-1】スポーツ一覧ページ > 配下動画の表示
-         */
-        if (have_rows('movie_area', $term_list_object)) : ?>
-            <section class="section-wrap">
-                <h2 class="section-ttl">おすすめ動画</h2>
-                <div class="net-video program-list w320">
-                    <?php while (have_rows('movie_area', $term_list_object)) : the_row(); ?>
-                        <article class="item">
-                            <?php the_sub_field('movie_tag', $term_list_object); ?>
-                        </article>
-                    <?php endwhile; ?>
-                </div>
-            </section>
-        <?php endif;
-        // add 20200305 yanagi ↑
-        ?>
-        <!-- /動画 -->
-
-        <!-- ランキング -->
-        <section class="section-wrap">
-            <div class="program-ranking-wrap">
-                <div class="program-list-wrap">
-                    <h2 class="section-ttl"><?php echo esc_attr($term_list_object_name); ?>ランキング</h2>
-                    <?php display_program_ranking_by_category_slug($term_list_object->slug); ?>
-                </div>
-
-                <div class="program-list-wrap">
-                    <h2 class="section-ttl">アクセスランキング</h2>
-                    <?php // get_template_part( 'template-parts/ranking/all' );
-                    ?>
-                    <?php display_program_ranking_by_category_slug('all'); ?>
-                </div>
-            </div>
-        </section>
-        <!-- /ランキング -->
-
-        <?php get_template_part('template-parts/ad/ad-news', 'ad-news'); ?>
-
-
-
-
-        <!-- お客様の声 -->
-        <?php
-        /**
-         * add 20200306 yanagi
-         * BS12_RENEWAL-202 【施策ID：39-1】お客様の声コンテンツ作成
-         */
-        ?>
-        <?php display_program_voice_by_category_slug($term_list_object->slug); ?>
-        <!-- お客様の声 -->
-
-
-        <!-- 人気の番組カテゴリ -->
-        <section class="section-wrap">
-            <div class="program-list-wrap">
-                <h2 class="section-ttl">人気の番組カテゴリ</h2>
-                <div class="white-wrap">
-                    <?php get_template_part('template-parts/seo/category', 'famous-list'); ?>
-                </div>
-            </div>
-        </section>
-        <!-- /人気の番組カテゴリ -->
-
-        <!-- BS12 特選情報 -->
-        <?php 
-        //BS12_RENEWAL-269 【タスク】レイアウト変更ならびにWP機能追加 edit 20201012 yanagi
-        get_template_part('template-parts/top', 'special-select');
-         ?>
-        <!-- /BS12 特選情報 -->
-
-        <!-- 放送終了の韓国ドラマ -->
-        <section class="section-wrap">
-        <?php
-        /**
-         * add function 20200317 yanagi ↓↓
-         * BS12_RENEWAL-212 【施策ID：47-1】韓国ドラマ > 放送終了番組の統合
-         * 
-         * edit 20201012 yanagi
-         * BS12_RENEWAL-269 【タスク】レイアウト変更ならびにWP機能追加 
-         * 
-         */
-        ?>
-            <?php if (preg_match('/korea/', $term_list_object->slug)) { ?>
-                <section class="section-wrap">
-                    <div class="program-list-wrap">
-                        <h2 class="section-ttl">放送終了の韓国ドラマ</h2>
-
-                        <div class="program-list-accordion-wrap" data-pc="3" data-sp="3" data-btn="ac1">
-
-                            <div class="program-list w320 type-C end">
-
-                                <?php
-                                if (!empty($programs_arr[3])) {
-                                    foreach ($programs_arr[3] as $t) {
-                                        tpl_program_list_accordion_item($t);
-                                    }
-                                }
+                <div class="siler_top_content">
+                    <?php if (have_rows('listcategory_field_banner_01', 'option')): ?>
+                        <div class="slide_top_odd">
+                            <?php while (have_rows('listcategory_field_banner_01', 'option')): the_row();
+                                $image = get_sub_field('listcategory_image');
+                                $urlItem = get_sub_field('listcategory_url');
                                 ?>
-                            </div>
-
+                                <a href="<?php echo $urlItem; ?>">
+                                    <div class="thumb">
+                                        <img src="<?php echo $image; ?>" width="448px" height="252px"
+                                             alt="thumb slide top 01">
+                                    </div>
+                                </a>
+                            <?php endwhile; ?>
                         </div>
-
-                        <div class="btn-wrap w300">
-                            <p class="btn accordion-btn"><a href="#" rel="ac1" class="non-scroll">もっと見る</a></p>
+                    <?php endif; ?>
+                    <?php if (have_rows('listcategory_field_banner_02', 'option')): ?>
+                        <div class="slide_top_even">
+                            <?php while (have_rows('listcategory_field_banner_02', 'option')): the_row();
+                                $image = get_sub_field('listcategory_image');
+                                $urlItem = get_sub_field('listcategory_url');
+                                ?>
+                                <a href="<?php echo $urlItem; ?>">
+                                    <div class="thumb">
+                                        <img src="<?php echo $image; ?>" width="448px" height="252px"
+                                             alt="thumb slide top 01">
+                                    </div>
+                                </a>
+                            <?php endwhile; ?>
                         </div>
-
-                    </div>
-
-                    <div class="btn-wrap w300">
-                        <p class="btn"><a href="/program/">番組一覧</a></p>
-                    </div>
-                </section>
-        <?php // add function 20200317 yanagi ↑↑ ?>
-            <?php } else { ?>
-                <div class="program-list-wrap">
-                    <h2 class="section-ttl">放送終了の<?php echo esc_attr($term_list_object_name); ?></h2>
-
-                    <div class="program-list w320 type-C end">
+                    <?php endif; ?>
+                </div>
+            </div>
+            <!-- brand -->
+            <?php get_template_part('template-parts/home/brand_top'); ?>
+            <!-- /brand -->
+            <!--      List brand banners        -->
+            <?php get_template_part('template-parts/home/brand-banner'); ?>
+            <!--      /List brand banners        -->
+        </div>
+    </section>
+    <!-- /banner category -->
+    <!-- Korean dramas on air -->
+    <section class="section" id="dramas_on_air">
+        <div class="inner">
+            <div class="tlt_section">
+                <h2><?php echo esc_attr($term_list_object_name); ?></h2>
+                <div class="btn_more">
+                    <span>すべて見る</span>
+                </div>
+            </div>
+            <div class="dramas_slides">
+                <div class="dramas_slide_top">
+                    <div class="program_slide dramas_top">
                         <?php
-                        if (!empty($programs_arr[3])) {
-                            $i = 0;
-                            foreach ($programs_arr[3] as $t) {
-                                if ($i > 5) break; // 6件のみ表示
+                        if (!empty($programs_arr[2])) {
+                            foreach ($programs_arr[2] as $t) {
+                                ob_start();
+                                get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                                $dramas_on_air_modal .= ob_get_contents();
+                                ob_end_clean();
                                 tpl_program_list_item($t);
-                                $i++;
                             }
                         }
                         ?>
                     </div>
                 </div>
-
-                <div class="btn-wrap w300">
-                    <p class="btn"><a href="/program/">番組一覧</a></p>
-                    <p class="btn"><a href="/program/archive/#<?php echo $term_list_object->slug; ?>"><?php echo $term_list_object_name; ?>終了番組一覧</a></p>
-                </div>
-            <?php } ?>
-        </section>
-        <!-- /放送終了の韓国ドラマ -->
-
-        <!-- 新着情報 -->
-        <?php //BS12_RENEWAL-269 【タスク】レイアウト変更ならびにWP機能追加 edit 20201012 yanagi ?>
-        <section class="section-wrap">
-            <div class="program-list-wrap">
-                <h2 class="section-ttl">新着情報</h2>
-                <div class="program-mini-list twin">
-                    <?php get_template_part('template-parts/news/program', 'whatsnew-list'); ?>
-                </div>
-            </div>
-
-            <div class="btn-wrap w300">
-                <p class="btn"><a href="/news/whatsnew/">新着情報一覧</a></p>
-            </div>
-        </section>
-        <!-- /新着情報 -->
-
-        <!-- BS12 サキドリ情報 -->
-        <?php get_template_part('template-parts/top', 'sakidori'); ?>
-        <!-- /BS12 サキドリ情報 -->
-
-        <section class="section-wrap">
-            <div class="information">
-                <h2 class="section-ttl">お知らせ</h2>
-                <div class="info-box">
-                    <div class="info-list-wrap info-scroll">
-                        <?php get_template_part('template-parts/news/announce', 'list'); ?>
+                <div class="dramas_slide_bottom">
+                    <div class="program_slide dramas_bottom">
+                        <?php
+                        if (!empty($programs_arr[2])) {
+                            $programs_arr_reverse = array_reverse($programs_arr[2]);
+                            foreach ($programs_arr_reverse as $t) {
+                                ob_start();
+                                get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                                $dramas_on_air_modal .= ob_get_contents();
+                                ob_end_clean();
+                                tpl_program_list_item($t);
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'test', 'modal' => $dramas_on_air_modal)); ?>
+            <div class="btn_watch">
+                <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">無料で見られる！BS12の視聴方法
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- /Korean dramas on air -->
+    <!-- broadcast schedule -->
+    <section class="section" id="broadcast_schedule">
+        <div class="inner">
+            <div class="tlt_section">
+                <h2>ドラマ・映画</h2>
+                <div class="btn_more">
+                    <span>すべて見る</span>
+                </div>
+            </div>
+            <div class="program_slide side_brand">
+                <div class="item_slide">
+                    <a href="#">
+                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
+                    </a>
+                </div>
+                <div class="item_slide">
+                    <a href="#">
+                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
+                    </a>
+                </div>
+                <div class="item_slide">
+                    <a href="#">
+                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
+                    </a>
+                </div>
+                <div class="item_slide">
+                    <a href="#">
+                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
+                    </a>
+                </div>
+                <div class="item_slide">
+                    <a href="#">
+                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
+                    </a>
+                </div>
+                <div class="item_slide">
+                    <a href="#">
+                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /broadcast schedule -->
+    <!-- ranking -->
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => 'ランキング', 'sns' => true)); ?>
+    <!-- /ranking -->
+    <!-- ranking -->
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
+    <!-- /ranking -->
+    <!-- Recommended movies -->
+    <?php display_program_recommend_by_category_slug($term_list_object->slug); ?>
+    <!-- /Recommended movies -->
+    <!-- look at the program -->
+    <?php
+    /**
+     * add 20200305 yanagi ↓
+     * BS12_RENEWAL-209 【施策ID：41-1】スポーツ一覧ページ > 配下動画の表示
+     */
+    if (have_rows('movie_area', $term_list_object)) : ?>
+        <section class="section" id="look_program">
+            <div class="inner">
+                <div class="tlt_section">
+                    <h2>番組のぞき見</h2>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
+                </div>
+                <div class="program_content">
+                    <?php while (have_rows('movie_area', $term_list_object)) : the_row(); ?>
+                        <?php the_sub_field('movie_tag', $term_list_object); ?>
+                    <?php endwhile; ?>
+                </div>
+            </div>
         </section>
+    <?php endif;
+    // add 20200305 yanagi ↑
+    ?>
+    <!-- /look at the program -->
+    <!-- Korean dramas scheduled to air -->
+    <section class="section" id="dramas_scheduled">
+        <div class="inner">
+            <div class="tlt_section">
+                <h2><?php echo esc_attr($term_list_object_name); ?></h2>
+                <div class="btn_more">
+                    <span>すべて見る</span>
+                </div>
+            </div>
+            <div class="program_slide side_brand">
+                <?php
+                if (!empty($programs_arr[1])) {
+                    foreach ($programs_arr[1] as $t) {
+                        ob_start();
+                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                        $scheduled_modal .= ob_get_contents();
+                        ob_end_clean();
+                        tpl_program_list_item_pre($t);
+                    }
+                }
+                ?>
+            </div>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
+        </div>
+    </section>
+    <!-- /Korean dramas scheduled to air -->
+    <!-- The Korean drama has ended its broadcast -->
+    <?php
+    /**
+     * add function 20200317 yanagi ↓↓
+     * BS12_RENEWAL-212 【施策ID：47-1】韓国ドラマ > 放送終了番組の統合
+     *
+     * edit 20201012 yanagi
+     * BS12_RENEWAL-269 【タスク】レイアウト変更ならびにWP機能追加
+     *
+     */
+    ?>
+    <?php if (preg_match('/korea/', $term_list_object->slug)) : ?>
+        <section class="section" id="dramas_ended">
+            <div class="inner">
+                <div class="tlt_section">
+                    <h2>放送終了の韓国ドラマ</h2>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
+                </div>
+                <div class="program_slide side_brand">
+                    <?php
+                    if (!empty($programs_arr[3])) {
+                        foreach ($programs_arr[3] as $t) {
+                            ob_start();
+                            get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                            $dramas_ended_modal .= ob_get_contents();
+                            ob_end_clean();
+                            tpl_program_list_item_pre($t);
+                        }
+                    }
+                    ?>
+                </div>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'test', 'modal' => $dramas_ended_modal)); ?>
+            </div>
+        </section>
+        <?php // add function 20200317 yanagi ↑↑ ?>
+    <?php else : ?>
+        <section class="section" id="dramas_ended">
+            <div class="inner">
+                <div class="tlt_section">
+                    <h2>放送終了の<?php echo esc_attr($term_list_object_name); ?></h2>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
+                </div>
+                <div class="program_slide side_brand">
+                    <?php
+                    if (!empty($programs_arr[3])) {
+                        $i = 0;
+                        foreach ($programs_arr[3] as $t) {
+                            if ($i > 5) break; // 6件のみ表示
+                            tpl_program_list_item_pre($t);
+                            $i++;
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
 
-        <?php get_template_part('template-parts/ad/ad-info', 'ad-info'); ?>
+    <!-- /The Korean drama has ended its broadcast -->
+    <!-- customer voice -->
+    <?php display_program_voice_by_category_slug($term_list_object->slug); ?>
+    <!-- /customer voice -->
+    <!-- recommended_program -->
+    <!-- recommend -->
+    <?php get_template_part( 'template-parts/home/recommend_top' ); ?>
+    <!-- /recommend -->
+    <!-- /recommended_program -->
+    <!-- PR -->
+    <?php get_template_part( 'template-parts/home/pr_top' ); ?>
+    <!-- /PR -->
+    <!-- other -->
+    <?php get_template_part( 'template-parts/home/other_top' ); ?>
+    <!-- /other -->
+</main>
 
-
-
-        <?php get_template_part('template-parts/uiux/bottom', 'roll-link'); ?>
-
-    </div>
-
-</div>

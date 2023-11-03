@@ -75,7 +75,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
 }
 ?>
 
-<?php if (get_query_var('onair_status') !== 'finished') :?>
+<?php if (get_query_var('onair_status') !== 'finished') : ?>
     <!-- main -->
     <main id="main">
         <ul class="breadcrumb">
@@ -123,7 +123,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <!-- program list -->
         <?php foreach ($base_terms as $base_t) {
             if (isset($program_cat_lists[$base_t->term_id]) && count($program_cat_lists[$base_t->term_id]) > 0) {
-                $modal = "";
+                $archive_modal = "";
                 ?>
                 <section class="section slide_program_wrapper" id="<?php echo $base_t->slug; ?>">
                     <div class="inner">
@@ -134,10 +134,11 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                             </div>
                         </div>
                         <div class="program_slide side_brand">
-                            <?php foreach ($program_cat_lists[$base_t->term_id] as $t) :
+                            <?php
+                            foreach ($program_cat_lists[$base_t->term_id] as $t) :
                                 ob_start();
                                 get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
-                                $modal .= ob_get_contents();
+                                $archive_modal .= ob_get_contents();
                                 ob_end_clean();
                                 ?>
                                 <div class="item_slide">
@@ -149,7 +150,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <?php get_template_part('template-parts/home/modal_category', null, array('title' => $base_t->name, 'modal' => $modal)); ?>
+                        <?php get_template_part('template-parts/home/modal_category', null, array('title' => $base_t->name , 'modal' => $archive_modal)); ?>
                     </div>
                 </section>
                 <?php
@@ -183,10 +184,96 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <!-- /other -->
     </main>
     <!-- /main -->
-<?php else: ?>
+<?php else:
+    /**
+     * ***************************************************************************
+     *
+     *                         PROGRAM ARCHIVE
+     *
+     * **************************************************************************
+     */
+    ?>
+    <main id="main">
+        <div class="inner">
+            <!-- Breadcrum List -->
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                </li>
+                <li>
+                    <span>放送終了</span>
+                </li>
+            </ul>
 
-<!-- Ended page goes here-->
+            <!-- Breadcrum List -->
 
-<?php endif;?>
+            <!-- Broadcast Ended-->
+            <section class="section" id="broadcast_ended">
+                <div class="inner">
+                    <div class="tlt_section">
+                        <h2>放送終了</h2>
+                    </div>
+                    <ul class="list_broadcast">
+                        <?php
+                        $total = 0;
+                        // for slide
+                        foreach ($base_terms as $base_t) :
+                            if (++$total > 8) break;
+                            if (isset($program_cat_lists[$base_t->term_id]) && count($program_cat_lists[$base_t->term_id]) > 0) :
+                                $modal = "";
+                                if (count($program_cat_lists[$base_t->term_id]) > 0) :
+                                    $index = 0;
+                                    foreach ($program_cat_lists[$base_t->term_id] as $t) :
+                                        if (++$index > 1) break;
+                                        ?>
+                                        <li>
+                                            <a href="<?php echo get_term_link($t); ?>">
+                                                <div class="thumb">
+                                                    <?php echo get_acf_img_tag('list_thumb', $t); ?>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <?php endforeach;
+                                endif;
+                            endif;
+                        endforeach;
+                        // for modal
+                        foreach ($base_terms as $base_t) :
+                            foreach ($program_cat_lists[$base_t->term_id] as $t) :
+                                ob_start();
+                                get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                                $modal .= ob_get_contents();
+                                ob_end_clean();
+                            endforeach;
+                        endforeach;
+                        ?>
+                    </ul>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
+                    <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送終了', 'modal' => $modal)); ?>
+                </div>
+            </section>
+            <!-- Broadcast Ended-->
+            <!-- recommend -->
+            <?php get_template_part('template-parts/home/recommend_top'); ?>
+            <!-- /recommend -->
+
+            <!-- pr -->
+            <?php get_template_part('template-parts/home/pr_top'); ?>
+            <!-- /pr -->
+            <!-- other -->
+            <section class="section" id="other">
+                <div class="inner">
+                    <div class="tlt_section">
+                        <h2>人気の番組カテゴリ</h2>
+                    </div>
+                    <?php get_template_part('template-parts/seo/category_famous_list'); ?>
+                </div>
+            </section>
+            <!-- /other -->
+        </div>
+    </main>
+<?php endif; ?>
 <?php
 get_footer();

@@ -86,7 +86,7 @@
     function showPopUp() {
         $(".btn_more").click(function () {
             if (!$(this).find('a').attr("href")) {
-                $(this).parents(".inner").find(".wrapper_modal").toggleClass("active");
+                $(this).parents("section").find(".inner .wrapper_modal").toggleClass("active");
                 $("body").css("overflow", "hidden");
                 $(".close").on("click", function () {
                     $(".wrapper_modal").removeClass("active");

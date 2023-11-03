@@ -21,23 +21,28 @@ function get_program_cat_base_items()
 function tpl_program_list_item($t)
 {
 ?>
-    <article class="item">
+    <div class="item_slide">
         <a href="<?php echo get_term_link($t); ?>">
-            <figure>
-                <div class="img"><?php echo get_program_thumbnail($t, 'item'); ?></div>
-                <figcaption class="text-block">
-                    <div class="heading">
-                        <h3 class="program-title"><?php echo esc_attr($t->name); ?></h3>
-                            <p class="onair-date"><?php echo get_field('onairtime', $t); ?></p>
-                    </div>
-                    <p class="description"><?php echo get_field('pg_text', $t); ?></p>
-                </figcaption>
-            </figure>
+            <?php echo get_program_thumbnail($t, 'item'); ?>
+            <div class="content_dramas">
+                <h2><?php echo esc_attr($t->name); ?></h2>
+                <span><?php echo get_field('pg_text', $t); ?></span>
+                <p><?php echo get_field('onairtime', $t); ?></p>
+            </div>
         </a>
-    </article>
+    </div>
     <?php
 }
-
+function tpl_program_list_item_pre($t)
+{
+    ?>
+    <div class="item_slide">
+        <a href="<?php echo get_term_link($t); ?>">
+            <?php echo get_program_thumbnail($t, 'item'); ?>
+        </a>
+    </div>
+    <?php
+}
 /**
  * 番組画像
  * @param $term term object
@@ -228,36 +233,32 @@ function display_program_recommend_by_category_slug($slug)
 
     $term_arr = array_merge($term_arr, $term_arr_others);
     if (!empty($term_arr)) {
+        /*<?php echo $category_term->name; ?>*/
     ?>
-        <section class="section-wrap">
-            <div class="program-list-wrap">
-                <h2 class="section-ttl">おすすめ<?php echo $category_term->name; ?></h2>
-                <div class="program-list w320 type-B slider">
-                    <?php foreach ($term_arr as $term) { ?>
-                        <article class="item">
-                            <a href="<?php echo get_term_link($term); ?>">
-                                <figure>
-                                    <div class="img"><?php echo get_acf_img_tag('list_thumb', $term, $term->name . 'のサムネイル'); ?></div>
-                                    <figcaption class="text-block">
-                                        <div class="heading">
-                                            <p class="category"><?php echo get_term($term->parent, 'program_cat')->name; ?></p>
-                                            <h3 class="program-title"><?php echo $term->name; ?></h3>
-                                                <p class="onair-date"><?php echo get_field('onairtime', $term); ?></p>
-                                        </div>
-                                        <p class="description"><?php echo get_field('pg_text', $term); ?></p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </article>
-                    <?php } ?>
-
+        <section class="recommended_movies">
+            <div class="inner">
+                <div class="tlt_section">
+                    <h2>おすすめ韓国・韓流ドラマ</h2>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="btn-wrap w300">
-                <p class="btn">
-                    <a href="<?php echo get_term_link($category_term); ?>"><?php echo $category_term->name; ?>一覧を見る</a>
-                </p>
+                <div class="program_slide side_brand">
+                    <?php foreach ($term_arr as $term) {
+                        $archive_modal = "";
+                        ob_start();
+                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                        $archive_modal .= ob_get_contents();
+                        ob_end_clean();
+                        ?>
+                        <div class="item_slide">
+                            <a href="<?php echo get_term_link($term); ?>">
+                                <?php echo get_acf_img_tag('list_thumb', $term, $term->name . 'のサムネイル'); ?>
+                            </a>
+                        </div>
+                    <?php } ?>
+                </div>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'おすすめ韓国・韓流ドラマ', 'modal' => $archive_modal)); ?>
             </div>
         </section>
     <?php
@@ -545,33 +546,34 @@ function display_program_voice_by_category_slug($slug)
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) {
     ?>
-        <section class="section-wrap">
-            <div class="customers-voice">
-                <h2 class="section-ttl">お客様の声</h2>
-                <div class="info-box">
-                    <div class="info-list-wrap info-scroll">
-                        <ul class="info-list">
-                            <?php
-                            while ($the_query->have_posts()) {
-                                $the_query->the_post(); ?>
-                                <?php while (have_rows('customer_voice')) : the_row(); ?>
-                                    <li>
-                                        <dl>
-                                            <dt><?php the_sub_field('updateday'); ?></dt>
-                                            <dd>
-                                                <p class="title"><?php the_sub_field('program_name'); ?></p>
-                                                <p class="body"><?php the_sub_field('voice'); ?></p>
-                                                <p class="info"><?php the_sub_field('age'); ?></p>
-                                            </dd>
-                                        </dl>
-                                    </li>
-                            <?php endwhile;
-                            }
-                            wp_reset_postdata();
-                            ?>
-                            </li>
-                        </ul>
+        <section class="section" id="customer_voice">
+            <div class="inner">
+                <div class="tlt_section">
+                    <h2>お客様の声</h2>
+                    <div class="btn_more">
+                        <a href="<?php echo esc_url(home_url('/faq'))?>">
+                            <span>すべて見る</span>
+                        </a>
                     </div>
+                </div>
+                <div class="program_slide voice_list">
+                    <?php
+                    while ($the_query->have_posts()) {
+                        $the_query->the_post(); ?>
+                        <?php while (have_rows('customer_voice')) :
+                            the_row(); ?>
+                            <div class="item_slide">
+                                <a href="#">
+                                    <span class="date"><?php the_sub_field('updateday'); ?></span>
+                                    <h4><?php the_sub_field('program_name'); ?></h4>
+                                    <p><?php the_sub_field('voice'); ?></p>
+                                    <span class="note"><?php the_sub_field('age'); ?></span>
+                                </a>
+                            </div>
+                        <?php endwhile;
+                    }
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </section>
