@@ -36,3 +36,12 @@ function singlePageOther( ) {
     ob_end_clean();
     return $content;
 }
+add_shortcode( 'single-page-PR', 'singlePagePR' );
+function singlePagePR( ) {
+    $content = "";
+    ob_start();
+    get_template_part('template-parts/home/pr_top');
+    $content .= ob_get_contents();
+    ob_end_clean();
+    return $content;
+}

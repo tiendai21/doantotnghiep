@@ -1,26 +1,29 @@
 <?php
+/*
+ * There is a same block in one_program_block.php for block selecting inside admin cms. This template part was made for static next episode rendered under banner in new design.
+ * */
 /* 記事情報を1件表示（次回予告など） */
-if (get_sub_field('display_switch')) :
-    $program_term_id = get_sub_field('target_program');
-
-    $args['post_type'] = 'program';
-    $args['posts_per_page'] = 1;
-    $args['orderby'] = array('post_date' => 'DESC', 'ID' => 'DESC');
-    $args['tax_query'] = [
-        [
-            'taxonomy' => 'program_cat',
-            'field' => 'term_id',
-            'terms' => $program_term_id
-        ]
-    ];
-    $args['meta_query'] = [
-        [
-            'key' => 'display_next_program',
-            'value' => '1',
-            'compare' => '=',
-        ]
-    ];
-    ?>
+if (get_field('display_next_program', get_the_ID())) :
+$program_term_id = get_the_terms(get_the_ID(), 'program_cat')[0]->term_id;
+$args['post_type'] = 'program';
+$args['posts_per_page'] = 1;
+$args['orderby'] = array('post_date' => 'DESC', 'ID' => 'DESC');
+$args['tax_query'] = [
+    [
+        'taxonomy' => 'program_cat',
+        'field' => 'term_id',
+        'terms' => $program_term_id
+    ]
+];
+$args['meta_query'] = [
+    [
+        'key' => 'display_next_program',
+        'value' => '1',
+        'compare' => '=',
+    ]
+];
+?>
+<div class="content">
     <?php
     $the_query = new WP_Query($args);
     while ($the_query->have_posts()) :
@@ -63,11 +66,12 @@ if (get_sub_field('display_switch')) :
             </div>
         </div>
     <?php endwhile;
-endif;
-?>
-<div class="broadcast_schedule util_pc">
-    <a class="util_pc" href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送スケジュール</a>
-</div>
-<div class="broadcast_schedule util_sp">
-    <a class="util_sp" href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送ラインアップ</a>
+    endif;
+    ?>
+    <div class="broadcast_schedule util_pc">
+        <a class="util_pc" href="<?php echo esc_url(home_url('/program_schedule'))?>">放送スケジュール</a>
+    </div>
+    <div class="broadcast_schedule util_sp">
+        <a class="util_sp" href="<?php echo esc_url(home_url('/program_schedule'))?>">放送ラインアップ</a>
+    </div>
 </div>

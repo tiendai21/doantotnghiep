@@ -41,19 +41,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="box_search box_search_active gsc-control-searchbox-only gsc-control-searchbox-only-ja">
-                    <script>
-                        (function() {
-                            var cx = '004796445106652204294:_ts3nnisbki';
-                            var gcse = document.createElement('script');
-                            gcse.type = 'text/javascript';
-                            gcse.async = true;
-                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                            var s = document.getElementsByTagName('script')[0];
-                            s.parentNode.insertBefore(gcse, s);
-                        })();
+                    <script async src="https://cse.google.com/cse.js?cx=a788cdaa4e6e54b84">
                     </script>
-                    <gcse:searchbox-only></gcse:searchbox-only>
+                    <div class="gcse-searchbox-only" data-resultsUrl="<?php echo esc_url(home_url('/search'))?>" data-newWindow="true" data-queryParameterName="q">
                 </div>
                 <div class="util_sp">
                     <div class="box_search_sp">
