@@ -48,8 +48,8 @@ if( get_field( 'main_visual_list' ) ) : ?>
             <?php endwhile; ?>
         </div>
         <div class="program_list_top">
-            <a href="<?php echo esc_url(home_url('/program'))?>">番組表</a>
-            <a href="<?php echo esc_url(home_url('/program_schedule'))?>">番組一覧</a>
+            <a href="<?php echo esc_url(home_url('/program_schedule'))?>">番組表</a>
+            <a href="<?php echo esc_url(home_url('/program'))?>">番組一覧</a>
         </div>
     </div>
 </section>
