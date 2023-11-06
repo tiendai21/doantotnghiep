@@ -2080,21 +2080,23 @@
                             img {
                                 width: 100%;
                                 height: 100%;
-                                object-fit: contain;
+                                object-fit: cover;
                             }
                         }
 
                         .txt_desp {
                             text-align: left;
-                            padding: 9px 8px 21px 13px;
+                            padding: 8px;
                             background-color: #e8f3ff;
-                            height: calc(100% - 198px);
+                            min-height: 116px;
                             @include pc {
-                                padding: get_pc(9) get_pc(8) get_pc(21) get_pc(13);
+                                min-height: get_pc(116);
+                                padding: get_pc(8);
                             }
 
                             @include sp {
-                                padding: get_sp(3) get_sp(6) get_sp(11) get_sp(3);
+                                min-height: get_sp(70);
+                                padding: get_sp(6);
                             }
 
                             h4 {
@@ -2124,7 +2126,7 @@
                                 letter-spacing: 1.6px;
                                 font-weight: 400;
                                 padding-bottom: 5px;
-                                margin-bottom: 2px;
+                                margin-bottom: 5px;
                                 border-bottom: 2px solid #004898;
                                 @include txtClamp(1);
                                 @include pc {
@@ -2132,7 +2134,7 @@
                                     line-height: get_pc(24);
                                     letter-spacing: get_pc(1.6);
                                     padding-bottom: get_pc(4);
-                                    margin-bottom: get_pc(3);
+                                    margin-bottom: get_pc(5);
                                     border-bottom: get_pc(2) solid #004898;
                                 }
 
@@ -2141,7 +2143,7 @@
                                     line-height: get_sp(16);
                                     letter-spacing: get_sp(1);
                                     padding-bottom: get_sp(5);
-                                    margin-bottom: get_sp(2);
+                                    margin-bottom: get_sp(5);
                                     border-bottom: get_sp(2) solid #004898;
                                 }
                             }
@@ -2150,19 +2152,16 @@
                                 display: inline-block;
                                 color: #004898;
                                 font-size: 16px;
-                                line-height: 24px;
                                 letter-spacing: 1.6px;
                                 font-weight: 400;
 
                                 @include pc {
                                     font-size: get_pc(16);
-                                    line-height: get_pc(24);
                                     letter-spacing: get_pc(1.6);
                                 }
 
                                 @include sp {
                                     font-size: get_sp(10);
-                                    line-height: get_sp(14);
                                     letter-spacing: get_sp(1);
                                 }
                             }
