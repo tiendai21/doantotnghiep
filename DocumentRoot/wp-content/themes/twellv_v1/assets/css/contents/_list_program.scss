@@ -141,22 +141,29 @@
 
         .item_slide {
             a {
-                width: auto;
+                width: 352px;
                 height: auto;
+    
+                @include pc {
+                    width: get_pc(352);
+                }
+    
+                @include sp {
+                    width: get_sp(160);
+                }
                 .thumb {
                     margin: 0;
-                    width: 352px;
+                    width: 100%;
                     height: 198px;
-
+    
                     @include pc {
-                        width: get_pc(352);
                         height: get_pc(198);
                     }
-
+    
                     @include sp {
-                        width: get_sp(160);
                         height: get_sp(90);
                     }
+                    
                 }
 
                 .txt_desp {

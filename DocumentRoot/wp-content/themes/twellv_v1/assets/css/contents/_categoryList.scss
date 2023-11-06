@@ -1,4 +1,4 @@
-.list_category{
+.tax-program_cat{
     #main {
         overflow-x: hidden;
         margin-top: 0;
@@ -818,20 +818,27 @@
             justify-content: center;
             @include sp {
                 display: block;
-                iframe{
-                    &:nth-child(1){
-                        margin-bottom: get_sp(36);
-                    }
-                    width: get_sp(365);
-                    height: get_sp(195);
-                    margin: 0 get_sp(14);
-                }
+                padding: 0 get_sp(14);
             }
             iframe{
+                width: 753px;
+                height: 402px;
+                @include pc {
+                    width: get_pc(753);
+                    height: get_pc(402);
+                }
+                @include sp {
+                    width: 100%;
+                    height: get_sp(195);
+                }
                 &:nth-child(1){
                     margin-right: 57px;
                     @include pc{
                         margin-right: get_pc(57);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(36);
+                        margin-right: 0;
                     }
                 }
             }

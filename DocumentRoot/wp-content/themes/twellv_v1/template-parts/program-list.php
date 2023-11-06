@@ -94,7 +94,7 @@ foreach ($terms as $t) {
                                 <a href="<?php echo $urlItem; ?>">
                                     <div class="thumb">
                                         <img src="<?php echo $image; ?>" width="448px" height="252px"
-                                             alt="thumb slide top 01">
+                                             alt="thumb slide top 02">
                                     </div>
                                 </a>
                             <?php endwhile; ?>
