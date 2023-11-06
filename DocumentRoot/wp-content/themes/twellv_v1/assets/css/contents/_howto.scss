@@ -47,8 +47,8 @@
                     font-size: get_sp(21);
                     line-height: get_sp(30);
                     letter-spacing: get_sp(3.15);
-                    padding: get_sp(20) 0 get_sp(79);
-                    top: -10px;
+                    padding: get_sp(36) 0 get_sp(68);
+                    top: get_sp(-16);
                     position: relative;
                 }
 
@@ -67,8 +67,8 @@
                     }
 
                     @include sp {
-                        width: get_sp(29);
-                        height: get_sp(15);
+                        width: get_sp(28.5);
+                        height: get_sp(18);
                         margin-left: get_sp(8.5);
                     }
                 }
@@ -88,8 +88,8 @@
                     }
 
                     @include sp {
-                        width: get_sp(29);
-                        height: get_sp(15);
+                        width: get_sp(28.5);
+                        height: get_sp(18);
                         margin-right: get_sp(8.5);
                     }
                 }

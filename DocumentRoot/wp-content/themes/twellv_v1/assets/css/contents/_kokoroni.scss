@@ -89,7 +89,7 @@
                 margin: 0 auto get_pc(33);
             }
             @include sp {
-                max-width: get_sp(390);
+                width: 100%;
                 margin: 0 auto get_sp(10);
             }
         }
@@ -215,6 +215,8 @@
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            margin-bottom: 0;
+            width: auto;
             .item_brand {
                 display: flex;
                 margin-bottom: 64px;
@@ -293,6 +295,7 @@
                             font-size: get_sp(16);
                             letter-spacing: get_sp(1.6);
                             line-height: get_sp(25);
+                            -webkit-line-clamp: unset;
                         }
                     }
                     span {
@@ -351,16 +354,37 @@
         }
     }
 
-    /*
-      other
-    */
-    #other{
+    #other {
         .list_other {
+            margin-bottom: 85px;
             @include pc {
                 margin-bottom: get_pc(85);
             }
             @include sp {
                 margin-bottom: get_sp(39.58);
+            }
+            ul {
+                li {
+                    &:nth-last-child(-n + 3) {
+                        margin-bottom: 0;
+                        @include sp {
+                            margin-bottom: get_sp(7);
+                        }
+                    }
+                    &:last-child {
+                        @include sp {
+                            margin-bottom: 0;
+                        }
+                    }
+                    &:nth-child(7) {
+                        a {
+                            @include sp {
+                                padding-left: get_sp(5);
+                                font-size: get_sp(13.5);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

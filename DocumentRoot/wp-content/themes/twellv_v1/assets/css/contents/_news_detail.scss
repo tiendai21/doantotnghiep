@@ -303,6 +303,9 @@
                     height: 83px;
                     display: inline-block;
                     margin-left: 34px;
+                    background-position: center center;
+                    background-size: 100% auto;
+                    background-repeat: no-repeat;
 
                     @include pc {
                         width: get_pc(83);
@@ -318,6 +321,25 @@
 
                     &:first-child {
                         margin-left: auto;
+                        background-image: url("../images/logo_x.png");
+                    }
+                    &:nth-child(2) {
+                        background-image: url("../images/logo_fb.png");
+                    }
+                    &:last-child {
+                        background-image: url("../images/logo_line.png");
+                    }
+                    &:hover {
+                        opacity: initial;
+                        &:first-child {
+                            background-image: url("../images/logo_x_hover.png");
+                        }
+                        &:nth-child(2) {
+                            background-image: url("../images/logo_fb_hover.png");
+                        }
+                        &:last-child {
+                            background-image: url("../images/logo_line_hover.png");
+                        }
                     }
                 }
             }

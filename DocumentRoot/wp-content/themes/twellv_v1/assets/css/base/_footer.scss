@@ -65,6 +65,10 @@ footer {
                     display: inline-block;
                     transform: rotate(-90deg);
                     transition: all 0.5s;
+                    @include sp {
+                        width: get_sp(7);
+                        height: get_sp(13);
+                    }
                 }
             }
 

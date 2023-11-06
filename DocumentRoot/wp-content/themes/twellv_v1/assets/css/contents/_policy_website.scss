@@ -44,11 +44,6 @@
         policy_website
     */
     #policy_website {
-        .inner {
-            @include sp {
-                margin-bottom: get_sp(28.08);
-            }
-        }
         .tlt_head {
             background-color: #E8F3FF;
             padding: 54px 0 25px;
@@ -95,10 +90,10 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 53px 0 72px;
+            padding: 53px 0 70px;
             @include pc {
                 max-width: get_pc(1582);
-                padding: get_pc(53) 0 get_pc(72);
+                padding: get_pc(53) 0 get_pc(70);
             }
             @include sp {
                 padding: get_sp(28.29) 0 0;
@@ -114,7 +109,6 @@
             }
             @include sp {
                 width: 100%;
-                padding: 0 get_sp(14);
             }
             p {
                 font-size: 25px;
@@ -130,6 +124,7 @@
                     font-size: get_sp(16);
                     letter-spacing: get_sp(1.6);
                     line-height: get_sp(25);
+                    padding: 0 get_sp(14);
                 }
                 &:nth-child(1) {
                     margin-bottom: 78px;
@@ -142,6 +137,9 @@
                 }
             }
             li {
+                @include sp {
+                    padding: 0 get_sp(14);
+                }
                 h3 {
                     font-size: 30px;
                     letter-spacing: 3px;
@@ -171,18 +169,23 @@
                 span {
                     font-size: 25px;
                     letter-spacing: 2.5px;
-                    line-height: 50px;
+                    line-height: 36px;
                     display: block;
                     font-weight: 400;
                     @include pc {
                         font-size: get_pc(25);
                         letter-spacing: get_pc(2.5);
-                        line-height: get_pc(50);
+                        line-height: get_pc(36);
                     }
                     @include sp {
                         font-size: get_sp(16);
                         letter-spacing: get_sp(1.6);
                         line-height: get_sp(25);
+                    }
+                }
+                p {
+                    @include sp {
+                        padding: 0;
                     }
                 }
                 &:first-child {
@@ -207,6 +210,13 @@
                     .item {
                         p {
                             margin-bottom: 0;
+                            line-height: 35px;
+                            @include pc {
+                                line-height: get_pc(35);
+                            }
+                            @include sp {
+                                line-height: get_sp(25);
+                            }
                         }
                     }
                 }
@@ -253,7 +263,8 @@
                         margin-bottom: get_pc(72);
                     }
                     @include sp {
-                        margin-bottom: get_sp(49.28);
+                        margin-bottom: get_sp(70);
+                        padding: 0 get_sp(10);
                     }
                     p {
                         &:nth-child(2) {
@@ -385,51 +396,6 @@
                 &:nth-child(1) {
                     @include pc {
                         padding: get_pc(18) get_pc(9);
-                    }
-                }
-            }
-        }
-    }
-
-    /*
-        other
-    */
-    #other {
-        .tlt_section {
-            margin-bottom: 70px;
-            @include pc {
-                margin-bottom: get_pc(70);
-            }
-            @include sp {
-                margin-bottom: get_sp(16);
-            }
-        }
-        .list_other {
-            @include pc {
-                margin-bottom: get_pc(86.11);
-            }
-            @include sp {
-                margin-bottom: get_sp(29.48);
-            }
-            ul {
-                li {
-                    a {
-                        position: relative;
-                        @include sp {
-                            padding-right: get_sp(35);
-                            padding-left: get_sp(12);
-                        }
-                        &:after {
-                            @include sp {
-                                position: absolute;
-                                right: get_sp(12);
-                            }
-                        }
-                    }
-                    &:nth-last-child(-n + 2) {
-                        @include sp {
-                            margin-bottom: 0;
-                        }
                     }
                 }
             }

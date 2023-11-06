@@ -137,7 +137,7 @@
                     width: 50%;
                     @include sp {
                         width: 100%;
-                        padding-top: get_sp(14);
+                        padding-top: get_sp(10);
                     }
                     a{
                         padding-right: 0 !important;
@@ -152,9 +152,11 @@
 
         .list_brand {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             padding: 31px 189px 0 209px;
+            margin: 0;
+            width: 100%;
             background: #E8F3FF 0% 0% no-repeat padding-box;
             @include pc {
                 padding: get_pc(31) get_pc(189) 0 get_pc(209);
@@ -286,20 +288,15 @@
                 position: absolute;
                 right: 0;
                 bottom: 28px;
-                padding: 12px 31px 11px 29px;
-                border: 1px solid #004898;
-                border-radius: 50px;
+                width: auto;
                 @include pc {
                     bottom: get_pc(28);
-                    padding: get_pc(12) get_pc(31) get_pc(11) get_pc(29);
-                    border-radius: get_pc(50);
                 }
                 @include sp {
                     bottom: get_sp(19.75);
-                    padding: get_sp(5) get_sp(9);
-                    border-radius: get_sp(50);
                 }
-                a {
+                span {
+                    cursor: pointer;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -308,15 +305,36 @@
                     line-height: 26px;
                     color: #134898;
                     font-weight: bold;
+                    padding: 12px 31px 11px 29px;
+                    border: 1px solid #004898;
+                    border-radius: 50px;
+                    transition: all .3s ease;
                     @include pc {
                         font-size: get_pc(18);
                         letter-spacing: get_pc(0.9);
                         line-height: get_pc(26);
+                        padding: get_pc(12) get_pc(31) get_pc(11) get_pc(29);
+                        border-radius: get_pc(50);
                     }
                     @include sp {
                         font-size: get_sp(14);
                         letter-spacing: get_sp(0.7);
                         line-height: get_sp(20);
+                        padding: get_sp(5) get_sp(9);
+                        border-radius: get_sp(50);
+                    }
+                    &.link_active {
+                        &:after {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    &:hover {
+                        opacity: 1;
+                        background: #134898;
+                        color: #FFFFFF;
+                        &:after {
+                            @include bgsetup("../images/btn_arrow_right_l.svg",center center,100% auto,no-repeat);
+                        }
                     }
                     &:after {
                         content: "";
@@ -333,7 +351,7 @@
                         }
                         @include sp {
                             width: get_sp(10);
-                            height: get_sp(10);
+                            height: get_sp(12);
                             margin-left: get_sp(5.55);
                         }
                     }
@@ -850,21 +868,23 @@
             }
             ul {
                 li {
-                    &:nth-child(7) {
-                        a {
-                            @include sp {
-                                font-size: get_sp(13);
-                            }
-                        }
-                    }
-                    a {
+                    &:nth-last-child(-n + 3) {
+                        margin-bottom: 0;
                         @include sp {
-                            padding: get_sp(10);
+                            margin-bottom: get_sp(7);
                         }
                     }
                     &:last-child {
                         @include sp {
                             margin-bottom: 0;
+                        }
+                    }
+                    &:nth-child(7) {
+                        a {
+                            @include sp {
+                                padding-left: get_sp(5);
+                                font-size: get_sp(13.5);
+                            }
                         }
                     }
                 }

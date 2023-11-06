@@ -15,9 +15,13 @@
     }
 
     .breadcrumb {
+        margin-bottom: 20px;
+        @include pc {
+            margin-bottom: get_pc(20);
+        }
         @include sp {
+            margin-bottom: get_sp(8);
             flex-wrap: nowrap;
-
             li {
                 flex-shrink: 0;
             }
@@ -34,7 +38,7 @@
 
     /*
     program_youth
-*/
+    */
     #program_youth {
         .wrapper_content {
             max-width: 1576px;
@@ -43,17 +47,17 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding-bottom: 65px;
+            padding-bottom: 120px;
             padding-top: 67px;
             @include pc {
                 max-width: get_pc(1576);
-                padding-bottom: get_pc(65);
+                padding-bottom: get_pc(120);
                 padding-top: get_pc(67);
             }
 
             @include sp {
                 display: block;
-                padding: get_sp(20) 0 get_sp(28);
+                padding: get_sp(20) 0 0;
             }
         }
         .content {
@@ -88,6 +92,16 @@
                         margin-bottom: get_sp(37);
                     }
                 }
+                &:not(:last-child):not(:first-child) {
+                    @include sp {
+                        margin-bottom: get_sp(34);
+                    }
+                }
+                &:last-child {
+                    @include sp {
+                        margin-bottom: get_sp(55);
+                    }
+                }
             }
 
             .thumb {
@@ -98,8 +112,7 @@
                 }
 
                 @include sp {
-                    width: get_sp(384);
-                    padding-right: get_sp(4);
+                    width: 100%;
                 }
 
                 img {
@@ -128,7 +141,6 @@
                     border-top-right-radius: 0;
                     border-bottom-right-radius: get_sp(18);
                     border-bottom-left-radius: get_sp(18);
-                    margin-bottom: get_sp(55);
                 }
             }
 
@@ -260,32 +272,6 @@
                 @include sp {
                     margin-bottom: get_sp(19);
                 }
-            }
-        }
-    }
-
-    #other {
-        .tlt_section {
-            margin-bottom: 70px;
-
-            @include pc {
-                margin-bottom: get_pc(70);
-            }
-
-            @include sp {
-                margin-bottom: get_sp(17);
-            }
-        }
-
-        .list_other {
-            margin-bottom: 79px;
-
-            @include pc {
-                margin-bottom: get_pc(79);
-            }
-
-            @include sp {
-                margin-bottom: get_sp(30);
             }
         }
     }

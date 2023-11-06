@@ -137,12 +137,12 @@
         .inner {
             max-width: 1576px;
             width: 100%;
-            margin: 0 auto 30px;
+            margin: 0 auto 80px;
             padding: 70px 0;
     
             @include pc {
                 width: get_pc(1576);
-                margin-bottom: get_pc(30);
+                margin-bottom: get_pc(80);
                 padding: get_pc(70) 0;
             }
     
@@ -275,14 +275,37 @@
             }
         }
     }
+    #pr {
+        .tlt_section {
+            margin-bottom: 37px;
+            @include pc {
+                margin-bottom: get_pc(37);
+            }
+            @include sp {
+                margin-bottom: get_sp(14);
+            }
+        }
+    }
     #other {
         .list_other {
             ul {
                 li {
+                    &:nth-last-child(-n + 3) {
+                        margin-bottom: 0;
+                        @include sp {
+                            margin-bottom: get_sp(7);
+                        }
+                    }
+                    &:last-child {
+                        @include sp {
+                            margin-bottom: 0;
+                        }
+                    }
                     &:nth-child(7) {
                         a {
                             @include sp {
-                                letter-spacing: get_sp(-1.4);
+                                padding-left: get_sp(5);
+                                font-size: get_sp(13.5);
                             }
                         }
                     }

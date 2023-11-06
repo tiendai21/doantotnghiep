@@ -988,45 +988,4 @@
             }
         }
     }
-    #other {
-        .tlt_section {
-            margin-bottom: 70px;
-            @include pc {
-                margin-bottom: get_pc(70);
-            }
-            @include sp {
-                margin-bottom: get_sp(16);
-            }
-        }
-        .list_other {
-            @include pc {
-                margin-bottom: get_pc(86.11);
-            }
-            @include sp {
-                margin-bottom: get_sp(29);
-            }
-            ul {
-                li {
-                    a {
-                        position: relative;
-                        @include sp {
-                            padding-right: get_sp(35);
-                            padding-left: get_sp(12);
-                        }
-                        &:after {
-                            @include sp {
-                                position: absolute;
-                                right: get_sp(12);
-                            }
-                        }
-                    }
-                    &:nth-last-child(-n + 2) {
-                        @include sp {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

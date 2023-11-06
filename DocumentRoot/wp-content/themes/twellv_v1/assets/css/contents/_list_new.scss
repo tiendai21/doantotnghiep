@@ -255,6 +255,22 @@
         }
     }
 
+    #other {
+        .list_other {
+            ul {
+                li {
+                    &:nth-child(9) {
+                        a {
+                            @include sp {
+                                letter-spacing: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .btn_link {
         display: flex;
 
@@ -334,28 +350,6 @@
                         width: get_sp(12);
                         height: get_sp(12);
                         margin-left: get_sp(4);
-                    }
-                }
-            }
-        }
-    }
-
-    #other {
-        .list_other {
-            ul {
-
-                li {
-                    a {
-                        @include sp {
-                            position: relative;
-                            padding: 0 get_sp(35) 0 get_sp(12);
-                        }
-                        &:after {
-                            @include sp {
-                                position: absolute;
-                                right: get_sp(12);
-                            }
-                        }
                     }
                 }
             }
