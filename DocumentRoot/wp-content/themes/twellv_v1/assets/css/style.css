@@ -759,7 +759,7 @@ a:focus {
 }
 #customer_voice .inner .item_slide a {
   width: 533px;
-  height: 346px;
+  height: 355px;
   padding: 25px 15px 30px 28px;
   display: inline-block;
   text-align: left;
@@ -770,7 +770,7 @@ a:focus {
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   #customer_voice .inner .item_slide a {
-    width: 27.7604166667vw;
+    width: 18.4895833333vw;
     height: 18.0208333333vw;
     padding: 1.3020833333vw 0.78125vw 1.5625vw 1.4583333333vw;
     border-radius: 1.0416666667vw;
@@ -831,15 +831,19 @@ a:focus {
 }
 #customer_voice .inner .item_slide a p {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 28px;
   letter-spacing: 1.6px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
   font-weight: 400;
   color: #000000;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   #customer_voice .inner .item_slide a p {
     font-size: 0.8333333333vw;
-    line-height: 1.5625vw;
+    line-height: 1.4583333333vw;
     letter-spacing: 0.0833333333vw;
   }
 }
@@ -852,7 +856,7 @@ a:focus {
 }
 #customer_voice .inner .item_slide a .note {
   font-size: 16px;
-  line-height: 42px;
+  line-height: 24px;
   letter-spacing: 1.6px;
   font-weight: 400;
   color: #000000;
@@ -863,7 +867,7 @@ a:focus {
 @media (max-width: 1920px) and (min-width: 961px) {
   #customer_voice .inner .item_slide a .note {
     font-size: 0.8333333333vw;
-    line-height: 2.1875vw;
+    line-height: 1.25vw;
     letter-spacing: 0.0833333333vw;
     right: 0.78125vw;
     bottom: 1.5625vw;
@@ -1077,17 +1081,21 @@ a:focus {
   }
 }
 .content_bottom .slide_brand .slick-slide a img {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-radius: 5px;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .content_bottom .slide_brand .slick-slide a img {
     border-radius: 0.2604166667vw;
+    box-shadow: 0 0.15625vw 0.3125vw rgba(0, 0, 0, 0.16);
   }
 }
 @media (max-width: 960px) {
   .content_bottom .slide_brand .slick-slide a img {
     border-radius: 1.2820512821vw;
+    box-shadow: 0 0.7692307692vw 1.5384615385vw rgba(0, 0, 0, 0.16);
   }
 }
 .content_bottom .slide_brand .slick-next {
@@ -5574,22 +5582,24 @@ footer .inner .copyright p strong {
 .wrapper_modal .modal_content .list_watch ul li a .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .wrapper_modal .modal_content .list_watch ul li a .txt_desp {
   text-align: left;
-  padding: 9px 8px 21px 13px;
+  padding: 8px;
   background-color: #e8f3ff;
-  height: calc(100% - 198px);
+  min-height: 116px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .wrapper_modal .modal_content .list_watch ul li a .txt_desp {
-    padding: 0.46875vw 0.4166666667vw 1.09375vw 0.6770833333vw;
+    min-height: 6.0416666667vw;
+    padding: 0.4166666667vw;
   }
 }
 @media (max-width: 960px) {
   .wrapper_modal .modal_content .list_watch ul li a .txt_desp {
-    padding: 0.7692307692vw 1.5384615385vw 2.8205128205vw 0.7692307692vw;
+    min-height: 17.9487179487vw;
+    padding: 1.5384615385vw;
   }
 }
 .wrapper_modal .modal_content .list_watch ul li a .txt_desp h4 {
@@ -5620,7 +5630,7 @@ footer .inner .copyright p strong {
   letter-spacing: 1.6px;
   font-weight: 400;
   padding-bottom: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   border-bottom: 2px solid #004898;
   overflow: hidden;
   display: -webkit-box;
@@ -5633,7 +5643,7 @@ footer .inner .copyright p strong {
     line-height: 1.25vw;
     letter-spacing: 0.0833333333vw;
     padding-bottom: 0.2083333333vw;
-    margin-bottom: 0.15625vw;
+    margin-bottom: 0.2604166667vw;
     border-bottom: 0.1041666667vw solid #004898;
   }
 }
@@ -5643,7 +5653,7 @@ footer .inner .copyright p strong {
     line-height: 4.1025641026vw;
     letter-spacing: 0.2564102564vw;
     padding-bottom: 1.2820512821vw;
-    margin-bottom: 0.5128205128vw;
+    margin-bottom: 1.2820512821vw;
     border-bottom: 0.5128205128vw solid #004898;
   }
 }
@@ -5651,21 +5661,18 @@ footer .inner .copyright p strong {
   display: inline-block;
   color: #004898;
   font-size: 16px;
-  line-height: 24px;
   letter-spacing: 1.6px;
   font-weight: 400;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .wrapper_modal .modal_content .list_watch ul li a .txt_desp span {
     font-size: 0.8333333333vw;
-    line-height: 1.25vw;
     letter-spacing: 0.0833333333vw;
   }
 }
 @media (max-width: 960px) {
   .wrapper_modal .modal_content .list_watch ul li a .txt_desp span {
     font-size: 2.5641025641vw;
-    line-height: 3.5897435897vw;
     letter-spacing: 0.2564102564vw;
   }
 }
@@ -5829,23 +5836,31 @@ footer .inner .copyright p strong {
   }
 }
 .list_program #program_list .item_slide a {
-  width: auto;
+  width: 352px;
   height: auto;
+}
+@media (max-width: 1920px) and (min-width: 961px) {
+  .list_program #program_list .item_slide a {
+    width: 18.3333333333vw;
+  }
+}
+@media (max-width: 960px) {
+  .list_program #program_list .item_slide a {
+    width: 41.0256410256vw;
+  }
 }
 .list_program #program_list .item_slide a .thumb {
   margin: 0;
-  width: 352px;
+  width: 100%;
   height: 198px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .list_program #program_list .item_slide a .thumb {
-    width: 18.3333333333vw;
     height: 10.3125vw;
   }
 }
 @media (max-width: 960px) {
   .list_program #program_list .item_slide a .thumb {
-    width: 41.0256410256vw;
     height: 23.0769230769vw;
   }
 }
@@ -8609,7 +8624,7 @@ footer .inner .copyright p strong {
   }
 }
 
-.list_category {
+.tax-program_cat {
   /*
   banner category
   */
@@ -8647,90 +8662,90 @@ footer .inner .copyright p strong {
       other
   */
 }
-.list_category #main {
+.tax-program_cat #main {
   overflow-x: hidden;
   margin-top: 0;
   padding-top: 160px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #main {
+  .tax-program_cat #main {
     padding-top: 8.3333333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #main {
+  .tax-program_cat #main {
     padding-top: 25.641025641vw;
   }
 }
-.list_category .breadcrumb {
+.tax-program_cat .breadcrumb {
   max-width: 1576px;
   margin: 0 auto 12px;
   padding-top: 7px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category .breadcrumb {
+  .tax-program_cat .breadcrumb {
     padding-top: 0.3645833333vw;
     max-width: 82.0833333333vw;
     margin: 0 auto 0.625vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category .breadcrumb {
+  .tax-program_cat .breadcrumb {
     padding: 2.0512820513vw 0 2.0512820513vw 2.8205128205vw;
     margin: 0;
   }
 }
 @media (max-width: 960px) {
-  .list_category .breadcrumb li:not(:last-child) {
+  .tax-program_cat .breadcrumb li:not(:last-child) {
     margin-right: 4.6153846154vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category .breadcrumb li:last-child {
+  .tax-program_cat .breadcrumb li:last-child {
     margin: 0;
   }
 }
-.list_category #banner_category {
+.tax-program_cat #banner_category {
   margin-bottom: 38px;
 }
-.list_category #banner_category .inner {
+.tax-program_cat #banner_category .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .inner {
+  .tax-program_cat #banner_category .inner {
     max-width: 100vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category {
+  .tax-program_cat #banner_category {
     margin-bottom: 1.9791666667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category {
+  .tax-program_cat #banner_category {
     margin-bottom: 4.358974359vw;
   }
 }
-.list_category #banner_category .siler_category_top {
+.tax-program_cat #banner_category .siler_category_top {
   background: #004898;
   display: flex;
   width: 100%;
   margin-bottom: 19px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .siler_category_top {
+  .tax-program_cat #banner_category .siler_category_top {
     margin-bottom: 0.9895833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .siler_category_top {
+  .tax-program_cat #banner_category .siler_category_top {
     display: block;
     padding-bottom: 7.1794871795vw;
     margin-bottom: 2.3076923077vw;
   }
 }
-.list_category #banner_category .siler_category_top .txt_fixed {
+.tax-program_cat #banner_category .siler_category_top .txt_fixed {
   width: 50%;
   font-size: 40px;
   letter-spacing: 4px;
@@ -8742,7 +8757,7 @@ footer .inner .copyright p strong {
   font-weight: bold;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .siler_category_top .txt_fixed {
+  .tax-program_cat #banner_category .siler_category_top .txt_fixed {
     font-size: 2.0833333333vw;
     letter-spacing: 0.2083333333vw;
     line-height: 3.0208333333vw;
@@ -8750,7 +8765,7 @@ footer .inner .copyright p strong {
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .siler_category_top .txt_fixed {
+  .tax-program_cat #banner_category .siler_category_top .txt_fixed {
     width: 100%;
     font-size: 5.1282051282vw;
     letter-spacing: 0.5128205128vw;
@@ -8759,98 +8774,98 @@ footer .inner .copyright p strong {
     padding-top: 5.1282051282vw;
   }
 }
-.list_category #banner_category .siler_category_top .siler_top_content {
+.tax-program_cat #banner_category .siler_category_top .siler_top_content {
   height: 601px;
   overflow-y: hidden;
   width: 50%;
   display: flex;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .siler_category_top .siler_top_content {
+  .tax-program_cat #banner_category .siler_category_top .siler_top_content {
     height: 31.7708333333vw;
     width: 55%;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .siler_category_top .siler_top_content {
+  .tax-program_cat #banner_category .siler_category_top .siler_top_content {
     width: 100%;
     height: 57.9487179487vw;
   }
 }
-.list_category #banner_category .siler_category_top .siler_top_content .slick-vertical .slick-slide {
+.tax-program_cat #banner_category .siler_category_top .siler_top_content .slick-vertical .slick-slide {
   padding: 7.5px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .siler_category_top .siler_top_content .slick-vertical .slick-slide {
+  .tax-program_cat #banner_category .siler_category_top .siler_top_content .slick-vertical .slick-slide {
     padding: 0.390625vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .siler_category_top .siler_top_content .slick-vertical .slick-slide {
+  .tax-program_cat #banner_category .siler_category_top .siler_top_content .slick-vertical .slick-slide {
     padding: 1.0256410256vw;
   }
 }
-.list_category #banner_category .siler_category_top .siler_top_content .slide_top_odd {
+.tax-program_cat #banner_category .siler_category_top .siler_top_content .slide_top_odd {
   width: 50%;
 }
-.list_category #banner_category .siler_category_top .siler_top_content .slide_top_odd a {
+.tax-program_cat #banner_category .siler_category_top .siler_top_content .slide_top_odd a {
   display: inline-block;
   padding-left: 0 !important;
 }
-.list_category #banner_category .siler_category_top .siler_top_content .slide_top_even {
+.tax-program_cat #banner_category .siler_category_top .siler_top_content .slide_top_even {
   width: 50%;
 }
-.list_category #banner_category .siler_category_top .siler_top_content .slide_top_even a {
+.tax-program_cat #banner_category .siler_category_top .siler_top_content .slide_top_even a {
   padding-right: 0 !important;
   display: inline-block;
 }
-.list_category #banner_category .content_bottom .slide_brand {
+.tax-program_cat #banner_category .content_bottom .slide_brand {
   width: 100%;
   max-width: 855px;
   margin: 0 auto 26px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .slide_brand {
+  .tax-program_cat #banner_category .content_bottom .slide_brand {
     max-width: 44.53125vw;
     margin-bottom: 1.3541666667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .slide_brand {
+  .tax-program_cat #banner_category .content_bottom .slide_brand {
     max-width: 219.2307692308vw;
     margin-bottom: 4.358974359vw;
     padding-left: 1.2820512821vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .slide_brand .slick-list {
+  .tax-program_cat #banner_category .content_bottom .slide_brand .slick-list {
     margin-right: 3.5897435897vw;
   }
 }
-.list_category #banner_category .content_bottom .slide_brand ul .slick-prev {
+.tax-program_cat #banner_category .content_bottom .slide_brand ul .slick-prev {
   display: none !important;
 }
-.list_category #banner_category .content_bottom .slide_brand ul button {
+.tax-program_cat #banner_category .content_bottom .slide_brand ul button {
   right: -36px;
   background: #C5DBF4;
   width: 29px;
   height: 105px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .slide_brand ul button {
+  .tax-program_cat #banner_category .content_bottom .slide_brand ul button {
     right: -1.875vw;
     width: 1.5104166667vw;
     height: 5.46875vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .slide_brand ul button {
+  .tax-program_cat #banner_category .content_bottom .slide_brand ul button {
     right: 0;
     width: 3.0769230769vw;
     height: 100%;
   }
 }
-.list_category #banner_category .content_bottom .slide_brand ul button:before {
+.tax-program_cat #banner_category .content_bottom .slide_brand ul button:before {
   content: "";
   background-image: url("../images/arrow_w_right.svg");
   background-position: center center;
@@ -8863,28 +8878,28 @@ footer .inner .copyright p strong {
   font-size: 0;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .slide_brand ul button:before {
+  .tax-program_cat #banner_category .content_bottom .slide_brand ul button:before {
     width: 0.6770833333vw;
     height: 1.25vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .slide_brand ul button:before {
+  .tax-program_cat #banner_category .content_bottom .slide_brand ul button:before {
     width: 1.2820512821vw;
     height: 3.0769230769vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .slide_brand ul li {
+  .tax-program_cat #banner_category .content_bottom .slide_brand ul li {
     margin: 0.5128205128vw;
   }
 }
-.list_category #banner_category .content_bottom .slide_brand ul li img {
+.tax-program_cat #banner_category .content_bottom .slide_brand ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.list_category #banner_category .content_bottom .item_brand {
+.tax-program_cat #banner_category .content_bottom .item_brand {
   display: flex;
   margin: 0 7.5px;
   justify-content: center;
@@ -8892,40 +8907,40 @@ footer .inner .copyright p strong {
   transition: all 0.3s;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .item_brand {
+  .tax-program_cat #banner_category .content_bottom .item_brand {
     margin: 0 0.390625vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .item_brand {
+  .tax-program_cat #banner_category .content_bottom .item_brand {
     margin: 0;
   }
 }
-.list_category #banner_category .content_bottom .item_brand:hover {
+.tax-program_cat #banner_category .content_bottom .item_brand:hover {
   opacity: 0.7;
 }
-.list_category #banner_category .content_bottom .item_brand .thumb {
+.tax-program_cat #banner_category .content_bottom .item_brand .thumb {
   width: 430px;
   height: 180px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .item_brand .thumb {
+  .tax-program_cat #banner_category .content_bottom .item_brand .thumb {
     width: 22.3958333333vw;
     height: 9.375vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .item_brand .thumb {
+  .tax-program_cat #banner_category .content_bottom .item_brand .thumb {
     width: 47.4358974359vw;
     height: 23.0769230769vw;
   }
 }
-.list_category #banner_category .content_bottom .item_brand .thumb img {
+.tax-program_cat #banner_category .content_bottom .item_brand .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.list_category #banner_category .content_bottom .item_brand .txt_desp {
+.tax-program_cat #banner_category .content_bottom .item_brand .txt_desp {
   background-color: #F2F2F2;
   border-radius: 0 32px 32px 0;
   padding: 45px 16px;
@@ -8934,20 +8949,20 @@ footer .inner .copyright p strong {
   width: 360px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .item_brand .txt_desp {
+  .tax-program_cat #banner_category .content_bottom .item_brand .txt_desp {
     border-radius: 0 1.6666666667vw 1.6666666667vw 0;
     padding: 2.34375vw 0.8333333333vw;
     width: 18.75vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .item_brand .txt_desp {
+  .tax-program_cat #banner_category .content_bottom .item_brand .txt_desp {
     border-radius: 0;
     padding: 2.8205128205vw 3.3333333333vw 2.8205128205vw 3.0769230769vw;
     width: 53.8461538462vw;
   }
 }
-.list_category #banner_category .content_bottom .item_brand .txt_desp h3 {
+.tax-program_cat #banner_category .content_bottom .item_brand .txt_desp h3 {
   font-size: 25px;
   letter-spacing: 2.5px;
   line-height: 36px;
@@ -8959,7 +8974,7 @@ footer .inner .copyright p strong {
   -webkit-line-clamp: 1;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .item_brand .txt_desp h3 {
+  .tax-program_cat #banner_category .content_bottom .item_brand .txt_desp h3 {
     font-size: 1.3020833333vw;
     letter-spacing: 0.1302083333vw;
     line-height: 1.875vw;
@@ -8967,14 +8982,14 @@ footer .inner .copyright p strong {
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .item_brand .txt_desp h3 {
+  .tax-program_cat #banner_category .content_bottom .item_brand .txt_desp h3 {
     font-size: 4.1025641026vw;
     line-height: 6.1538461538vw;
     letter-spacing: 0.4102564103vw;
     margin-bottom: 1.0256410256vw;
   }
 }
-.list_category #banner_category .content_bottom .item_brand .txt_desp p {
+.tax-program_cat #banner_category .content_bottom .item_brand .txt_desp p {
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 24px;
@@ -8984,49 +8999,49 @@ footer .inner .copyright p strong {
   -webkit-line-clamp: 2;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #banner_category .content_bottom .item_brand .txt_desp p {
+  .tax-program_cat #banner_category .content_bottom .item_brand .txt_desp p {
     font-size: 0.8333333333vw;
     letter-spacing: 0.0833333333vw;
     line-height: 1.25vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #banner_category .content_bottom .item_brand .txt_desp p {
+  .tax-program_cat #banner_category .content_bottom .item_brand .txt_desp p {
     font-size: 3.5897435897vw;
     line-height: 5.1282051282vw;
     letter-spacing: 0.358974359vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air {
+  .tax-program_cat #dramas_on_air {
     margin-bottom: 7.3307692308vw;
   }
 }
-.list_category #dramas_on_air .inner {
+.tax-program_cat #dramas_on_air .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .inner {
+  .tax-program_cat #dramas_on_air .inner {
     max-width: 100vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .tlt_section {
+  .tax-program_cat #dramas_on_air .tlt_section {
     margin: 0 11.875vw 1.71875vw 8.9583333333vw;
   }
 }
-.list_category #dramas_on_air .tlt_section h2 {
+.tax-program_cat #dramas_on_air .tlt_section h2 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .tlt_section h2 {
+  .tax-program_cat #dramas_on_air .tlt_section h2 {
     width: 44.358974359vw;
   }
 }
-.list_category #dramas_on_air .tlt_section h2::before {
+.tax-program_cat #dramas_on_air .tlt_section h2::before {
   content: " ";
   background-image: url("../images/icon_ovice_left.svg");
   background-position: center center;
@@ -9038,20 +9053,20 @@ footer .inner .copyright p strong {
   margin-right: 17px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .tlt_section h2::before {
+  .tax-program_cat #dramas_on_air .tlt_section h2::before {
     width: 1.3541666667vw;
     height: 2.3958333333vw;
     margin-right: 0.8854166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .tlt_section h2::before {
+  .tax-program_cat #dramas_on_air .tlt_section h2::before {
     width: 5.3846153846vw;
     height: 6.1538461538vw;
     margin-right: 2.0512820513vw;
   }
 }
-.list_category #dramas_on_air .tlt_section h2::after {
+.tax-program_cat #dramas_on_air .tlt_section h2::after {
   content: " ";
   background-image: url("../images/icon_ovice_right.svg");
   background-position: center center;
@@ -9063,59 +9078,59 @@ footer .inner .copyright p strong {
   margin-left: 17px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .tlt_section h2::after {
+  .tax-program_cat #dramas_on_air .tlt_section h2::after {
     width: 1.3541666667vw;
     height: 2.3958333333vw;
     margin-left: 0.8854166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .tlt_section h2::after {
+  .tax-program_cat #dramas_on_air .tlt_section h2::after {
     width: 5.3846153846vw;
     height: 6.1538461538vw;
     margin-left: 0;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom {
   margin-bottom: 35px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom {
     margin-bottom: 1.8229166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom {
     margin-bottom: 4.6153846154vw;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide {
   margin: 0;
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide {
   padding-right: 15px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide {
     padding-right: 0.78125vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide {
     padding-right: 1.7948717949vw;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a {
   width: 320px;
   height: auto;
   display: inline-block;
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a {
     width: 41.0256410256vw;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas {
   padding-left: 10px;
   padding-top: 11px;
   text-align: left;
@@ -9123,37 +9138,37 @@ footer .inner .copyright p strong {
   background: #F2F2F2;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas {
     padding-left: 0.5208333333vw;
     padding-top: 0.5729166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas {
     padding-left: 1.0256410256vw;
     padding-top: 0.5128205128vw;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas h2, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas h2 {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas h2, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas h2 {
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 29px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas h2, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas h2 {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas h2, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas h2 {
     font-size: 1.0416666667vw;
     letter-spacing: 0.1041666667vw;
     line-height: 1.5104166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas h2, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas h2 {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas h2, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas h2 {
     font-size: 3.0769230769vw;
     letter-spacing: 0.3076923077vw;
     line-height: 4.358974359vw;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas span, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas span {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas span, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas span {
   display: block;
   font-size: 18px;
   letter-spacing: 1.8px;
@@ -9162,7 +9177,7 @@ footer .inner .copyright p strong {
   border-bottom: 2px solid #004898;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas span, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas span {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas span, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas span {
     font-size: 0.9375vw;
     letter-spacing: 0.09375vw;
     line-height: 1.3541666667vw;
@@ -9171,14 +9186,14 @@ footer .inner .copyright p strong {
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas span, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas span {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas span, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas span {
     font-size: 2.5641025641vw;
     letter-spacing: 0.2564102564vw;
     line-height: 4.1025641026vw;
     padding-bottom: 0.7692307692vw;
   }
 }
-.list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas p, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas p {
+.tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas p, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas p {
   margin-top: 5px;
   font-size: 16px;
   letter-spacing: 1.6px;
@@ -9186,7 +9201,7 @@ footer .inner .copyright p strong {
   padding-bottom: 20px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas p, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas p {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas p, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas p {
     margin-top: 0.2604166667vw;
     font-size: 0.8333333333vw;
     letter-spacing: 0.0833333333vw;
@@ -9195,7 +9210,7 @@ footer .inner .copyright p strong {
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas p, .list_category #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas p {
+  .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_top .program_slide .item_slide > a .content_dramas p, .tax-program_cat #dramas_on_air .dramas_slides .dramas_slide_bottom .program_slide .item_slide > a .content_dramas p {
     margin-top: 0.7692307692vw;
     font-size: 2.5641025641vw;
     letter-spacing: 0.2564102564vw;
@@ -9203,46 +9218,46 @@ footer .inner .copyright p strong {
     padding-bottom: 1.7948717949vw;
   }
 }
-.list_category #dramas_on_air .btn_watch a {
+.tax-program_cat #dramas_on_air .btn_watch a {
   margin: 0 204px 60px auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_on_air .btn_watch a {
+  .tax-program_cat #dramas_on_air .btn_watch a {
     margin: 0 10.625vw 3.125vw auto;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_on_air .btn_watch a {
+  .tax-program_cat #dramas_on_air .btn_watch a {
     margin: 0 auto;
   }
 }
-.list_category #broadcast_schedule .inner {
+.tax-program_cat #broadcast_schedule .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #broadcast_schedule .inner {
+  .tax-program_cat #broadcast_schedule .inner {
     max-width: 100vw;
   }
 }
-.list_category #broadcast_schedule .tlt_section {
+.tax-program_cat #broadcast_schedule .tlt_section {
   margin: 0 auto 36px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #broadcast_schedule .tlt_section {
+  .tax-program_cat #broadcast_schedule .tlt_section {
     margin: 0 auto 1.875vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #broadcast_schedule .tlt_section {
+  .tax-program_cat #broadcast_schedule .tlt_section {
     margin: 0 auto 3.8461538462vw;
   }
 }
-.list_category #broadcast_schedule .tlt_section h2 {
+.tax-program_cat #broadcast_schedule .tlt_section h2 {
   display: flex;
   align-items: center;
 }
-.list_category #broadcast_schedule .tlt_section h2:before {
+.tax-program_cat #broadcast_schedule .tlt_section h2:before {
   content: " ";
   background-image: url("../images/icon_ovice_left.svg");
   background-position: center center;
@@ -9254,20 +9269,20 @@ footer .inner .copyright p strong {
   margin-right: 17px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #broadcast_schedule .tlt_section h2:before {
+  .tax-program_cat #broadcast_schedule .tlt_section h2:before {
     width: 1.3541666667vw;
     height: 2.3958333333vw;
     margin-right: 0.8854166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #broadcast_schedule .tlt_section h2:before {
+  .tax-program_cat #broadcast_schedule .tlt_section h2:before {
     width: 3.3333333333vw;
     height: 5.8974358974vw;
     margin-right: 1.2820512821vw;
   }
 }
-.list_category #broadcast_schedule .tlt_section h2:after {
+.tax-program_cat #broadcast_schedule .tlt_section h2:after {
   content: " ";
   background-image: url("../images/icon_ovice_right.svg");
   background-position: center center;
@@ -9279,273 +9294,273 @@ footer .inner .copyright p strong {
   margin-left: 17px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #broadcast_schedule .tlt_section h2:after {
+  .tax-program_cat #broadcast_schedule .tlt_section h2:after {
     width: 1.3541666667vw;
     height: 2.3958333333vw;
     margin-left: 0.8854166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #broadcast_schedule .tlt_section h2:after {
+  .tax-program_cat #broadcast_schedule .tlt_section h2:after {
     width: 3.3333333333vw;
     height: 5.8974358974vw;
     margin-left: 1.2820512821vw;
   }
 }
-.list_category #broadcast_schedule .program_slide {
+.tax-program_cat #broadcast_schedule .program_slide {
   margin-bottom: 61px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #broadcast_schedule .program_slide {
+  .tax-program_cat #broadcast_schedule .program_slide {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #broadcast_schedule .program_slide {
+  .tax-program_cat #broadcast_schedule .program_slide {
     margin-bottom: 5.641025641vw;
   }
 }
-.list_category #dramas_ended {
+.tax-program_cat #dramas_ended {
   margin-bottom: 61px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_ended {
+  .tax-program_cat #dramas_ended {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_ended {
+  .tax-program_cat #dramas_ended {
     margin-bottom: 11.5384615385vw;
   }
 }
-.list_category #dramas_ended .inner {
+.tax-program_cat #dramas_ended .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_ended .inner {
+  .tax-program_cat #dramas_ended .inner {
     max-width: 100vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_ended .tlt_section {
+  .tax-program_cat #dramas_ended .tlt_section {
     margin: 0 11.875vw 1.3541666667vw 8.9583333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_ended .tlt_section {
+  .tax-program_cat #dramas_ended .tlt_section {
     margin-bottom: 5.641025641vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_ended .tlt_section h2 {
+  .tax-program_cat #dramas_ended .tlt_section h2 {
     font-size: 4.6153846154vw;
     letter-spacing: 0.4615384615vw;
     line-height: 6.6666666667vw;
   }
 }
-.list_category #dramas_ended .program_slide {
+.tax-program_cat #dramas_ended .program_slide {
   margin-bottom: 61px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_ended .program_slide {
+  .tax-program_cat #dramas_ended .program_slide {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_ended .program_slide {
+  .tax-program_cat #dramas_ended .program_slide {
     margin-bottom: 5.641025641vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_scheduled {
+  .tax-program_cat #dramas_scheduled {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_scheduled {
+  .tax-program_cat #dramas_scheduled {
     margin-bottom: 8.2051282051vw;
   }
 }
-.list_category #dramas_scheduled .inner {
+.tax-program_cat #dramas_scheduled .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_scheduled .inner {
+  .tax-program_cat #dramas_scheduled .inner {
     max-width: 100vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_scheduled .tlt_section {
+  .tax-program_cat #dramas_scheduled .tlt_section {
     margin: 0 11.875vw 1.3020833333vw 8.9583333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_scheduled .tlt_section {
+  .tax-program_cat #dramas_scheduled .tlt_section {
     margin-bottom: 4.6153846154vw;
   }
-  .list_category #dramas_scheduled .tlt_section h2 {
+  .tax-program_cat #dramas_scheduled .tlt_section h2 {
     width: 43.5897435897vw;
     line-height: 6.6666666667vw;
   }
 }
-.list_category #dramas_scheduled .program_slide {
+.tax-program_cat #dramas_scheduled .program_slide {
   margin-bottom: 61px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #dramas_scheduled .program_slide {
+  .tax-program_cat #dramas_scheduled .program_slide {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #dramas_scheduled .program_slide {
+  .tax-program_cat #dramas_scheduled .program_slide {
     margin-bottom: 5.641025641vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_movies {
+  .tax-program_cat #recommended_movies {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_movies {
+  .tax-program_cat #recommended_movies {
     margin-bottom: 10.2564102564vw;
   }
 }
-.list_category #recommended_movies .inner {
+.tax-program_cat #recommended_movies .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_movies .inner {
+  .tax-program_cat #recommended_movies .inner {
     max-width: 100vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_movies .tlt_section {
+  .tax-program_cat #recommended_movies .tlt_section {
     margin: 0 11.875vw 1.3020833333vw 8.9583333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_movies .tlt_section {
+  .tax-program_cat #recommended_movies .tlt_section {
     margin-bottom: 5.1282051282vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_movies .tlt_section h2 {
+  .tax-program_cat #recommended_movies .tlt_section h2 {
     font-size: 4.6153846154vw;
     letter-spacing: 0.4615384615vw;
     line-height: 6.6666666667vw;
     width: 35.8974358974vw;
   }
 }
-.list_category #recommended_movies .program_slide {
+.tax-program_cat #recommended_movies .program_slide {
   margin-bottom: 61px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_movies .program_slide {
+  .tax-program_cat #recommended_movies .program_slide {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_movies .program_slide {
+  .tax-program_cat #recommended_movies .program_slide {
     margin-bottom: 5.641025641vw;
   }
 }
-.list_category #ranking {
+.tax-program_cat #ranking {
   margin-bottom: 60px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #ranking {
+  .tax-program_cat #ranking {
     margin-bottom: 3.125vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #ranking {
+  .tax-program_cat #ranking {
     margin-bottom: 7.4358974359vw;
   }
 }
-.list_category #ranking .content_ranking {
+.tax-program_cat #ranking .content_ranking {
   padding: 34px 0 0 0;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #ranking .content_ranking {
+  .tax-program_cat #ranking .content_ranking {
     padding: 1.7708333333vw 0 0 0;
   }
 }
 @media (max-width: 960px) {
-  .list_category #ranking .content_ranking {
+  .tax-program_cat #ranking .content_ranking {
     padding: 2.0512820513vw 0 0;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #ranking .content_ranking .tlt_section {
+  .tax-program_cat #ranking .content_ranking .tlt_section {
     margin-bottom: 4.0625vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #ranking .content_ranking .tlt_section {
+  .tax-program_cat #ranking .content_ranking .tlt_section {
     margin-bottom: 4.358974359vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #ranking .content_ranking .item_slide .num {
+  .tax-program_cat #ranking .content_ranking .item_slide .num {
     top: 4.8717948718vw;
     left: -0.5128205128vw;
   }
 }
-.list_category #ranking .content_ranking .btn_link {
+.tax-program_cat #ranking .content_ranking .btn_link {
   position: absolute;
   right: 191px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #ranking .content_ranking .btn_link {
+  .tax-program_cat #ranking .content_ranking .btn_link {
     right: 9.9479166667vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #ranking .content_ranking .btn_link {
+  .tax-program_cat #ranking .content_ranking .btn_link {
     right: 50%;
     transform: translateX(50%);
   }
 }
-.list_category #look_program {
+.tax-program_cat #look_program {
   margin-bottom: 60px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #look_program {
+  .tax-program_cat #look_program {
     margin-bottom: 3.125vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #look_program {
+  .tax-program_cat #look_program {
     margin-bottom: 5.641025641vw;
   }
 }
-.list_category #look_program .inner {
+.tax-program_cat #look_program .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #look_program .inner {
+  .tax-program_cat #look_program .inner {
     max-width: 100vw;
   }
 }
-.list_category #look_program .tlt_section {
+.tax-program_cat #look_program .tlt_section {
   margin-bottom: 50px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #look_program .tlt_section {
+  .tax-program_cat #look_program .tlt_section {
     margin: 0 11.875vw 2.6041666667vw 8.9583333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #look_program .tlt_section {
+  .tax-program_cat #look_program .tlt_section {
     margin-bottom: 5.641025641vw;
   }
 }
-.list_category #look_program .tlt_section h2::before {
+.tax-program_cat #look_program .tlt_section h2::before {
   content: "";
   background-image: url("../images/icon_eye.png");
   background-position: center center;
@@ -9558,131 +9573,146 @@ footer .inner .copyright p strong {
   margin-right: 22px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #look_program .tlt_section h2::before {
+  .tax-program_cat #look_program .tlt_section h2::before {
     width: 5.2083333333vw;
     height: 4.0104166667vw;
     margin-right: 1.1458333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #look_program .tlt_section h2::before {
+  .tax-program_cat #look_program .tlt_section h2::before {
     width: 10.7692307692vw;
     height: 8.4615384615vw;
     margin-right: 2.3076923077vw;
   }
 }
-.list_category #look_program .program_content {
+.tax-program_cat #look_program .program_content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media (max-width: 960px) {
-  .list_category #look_program .program_content {
+  .tax-program_cat #look_program .program_content {
     display: block;
-  }
-  .list_category #look_program .program_content iframe {
-    width: 93.5897435897vw;
-    height: 50vw;
-    margin: 0 3.5897435897vw;
-  }
-  .list_category #look_program .program_content iframe:nth-child(1) {
-    margin-bottom: 9.2307692308vw;
+    padding: 0 3.5897435897vw;
   }
 }
-.list_category #look_program .program_content iframe:nth-child(1) {
+.tax-program_cat #look_program .program_content iframe {
+  width: 753px;
+  height: 402px;
+}
+@media (max-width: 1920px) and (min-width: 961px) {
+  .tax-program_cat #look_program .program_content iframe {
+    width: 39.21875vw;
+    height: 20.9375vw;
+  }
+}
+@media (max-width: 960px) {
+  .tax-program_cat #look_program .program_content iframe {
+    width: 100%;
+    height: 50vw;
+  }
+}
+.tax-program_cat #look_program .program_content iframe:nth-child(1) {
   margin-right: 57px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #look_program .program_content iframe:nth-child(1) {
+  .tax-program_cat #look_program .program_content iframe:nth-child(1) {
     margin-right: 2.96875vw;
   }
 }
-.list_category #recommended_program {
+@media (max-width: 960px) {
+  .tax-program_cat #look_program .program_content iframe:nth-child(1) {
+    margin-bottom: 9.2307692308vw;
+    margin-right: 0;
+  }
+}
+.tax-program_cat #recommended_program {
   margin: 55px 0 70px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_program {
+  .tax-program_cat #recommended_program {
     margin: 2.8645833333vw 0 3.6458333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_program {
+  .tax-program_cat #recommended_program {
     margin: 7.9487179487vw 0 7.4358974359vw;
   }
 }
-.list_category #recommended_program .inner {
+.tax-program_cat #recommended_program .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_program .inner {
+  .tax-program_cat #recommended_program .inner {
     max-width: 100vw;
   }
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_program .tlt_section {
+  .tax-program_cat #recommended_program .tlt_section {
     margin: 0 11.875vw 1.3541666667vw 8.9583333333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_program .tlt_section {
+  .tax-program_cat #recommended_program .tlt_section {
     margin-bottom: 4.358974359vw;
   }
 }
-.list_category #recommended_program .program_slide {
+.tax-program_cat #recommended_program .program_slide {
   margin-bottom: 61px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #recommended_program .program_slide {
+  .tax-program_cat #recommended_program .program_slide {
     margin-bottom: 3.1770833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #recommended_program .program_slide {
+  .tax-program_cat #recommended_program .program_slide {
     margin-bottom: 5.641025641vw;
   }
 }
-.list_category #pr .tlt_section {
+.tax-program_cat #pr .tlt_section {
   margin-bottom: 37px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #pr .tlt_section {
+  .tax-program_cat #pr .tlt_section {
     margin-bottom: 1.9270833333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #pr .tlt_section {
+  .tax-program_cat #pr .tlt_section {
     margin-bottom: 3.5897435897vw;
   }
 }
-.list_category #pr .inner {
+.tax-program_cat #pr .inner {
   margin: 0 auto 79.57px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #pr .inner {
+  .tax-program_cat #pr .inner {
     margin-bottom: 4.1442708333vw;
   }
 }
 @media (max-width: 960px) {
-  .list_category #pr .inner {
+  .tax-program_cat #pr .inner {
     width: 100%;
     margin-bottom: 10.3871794872vw;
   }
 }
-.list_category #customer_voice .inner {
+.tax-program_cat #customer_voice .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
-  .list_category #customer_voice .inner {
+  .tax-program_cat #customer_voice .inner {
     max-width: 100vw;
   }
 }
-.list_category #customer_voice .program_slide:after {
+.tax-program_cat #customer_voice .program_slide:after {
   content: none;
 }
 @media (max-width: 960px) {
-  .list_category #other .list_other ul li:nth-child(8) a, .list_category #other .list_other ul li:nth-child(9) a {
+  .tax-program_cat #other .list_other ul li:nth-child(8) a, .tax-program_cat #other .list_other ul li:nth-child(9) a {
     letter-spacing: 0;
   }
 }
