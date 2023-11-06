@@ -11,43 +11,44 @@ $args = [
         ]
     ]
 ];
-$the_query = new WP_Query( $args );
-if ( $the_query->have_posts() ) : ?>
+$the_query = new WP_Query($args);
+if ($the_query->have_posts()) : ?>
     <div class="list_news_release">
         <ul>
             <?php
-            while ( $the_query->have_posts() ) : $the_query->the_post();
+            while ($the_query->have_posts()) : $the_query->the_post();
                 $title = get_the_title();
                 $class_pdf = '';
-                $pdf_url = get_field( 'pdf' );
-                $newsurl = get_news__title_link_tag();
+                $pdf_url = get_field('pdf');
                 $link_url = null;
-                if( $pdf_url ) {
+                if ($pdf_url) {
                     $link_url = $pdf_url['url'];
                     $class_pdf = 'pdf';
                 } else {
-                    $url = get_field( 'url' );
-                    if( $url ) {
+                    $url = get_field('url');
+                    if ($url) {
                         $link_url = $url;
                     }
                 }
-                $target_blank = get_field( 'target_blank' ) ? ' target="_blank" ' : '';
+                $target_blank = get_field('target_blank') ? ' target="_blank" ' : '';
                 ?>
                 <li>
-                    <a href="<?php
-                    if ( $link_url !== null ) {
-                        echo sprintf( '%s', $link_url, $class_pdf, $target_blank, $title );
+                    <a <?php
+                    if ($link_url) {
+                        echo 'href="{$link_url}" class="pdf"';
+                    } else {
+                       echo 'href="{get_the_permalink()}"';
                     }
-                    ?>">
-                        <span><?php echo str_replace( '/', '.', get_field( 'display_date' ) ); ?></span>
-                        <p><?php echo sprintf( '%s', $title ); ?></p>
+                    ?>>
+                        <span><?php echo str_replace('/', '.', get_field('display_date')); ?></span>
+                        <p><?php echo sprintf('%s', $title); ?></p>
                     </a>
                 </li>
-                <?php
+            <?php
             endwhile;
             wp_reset_postdata();
             ?>
         </ul>
     </div>
-    <?php
+<?php
 endif;
