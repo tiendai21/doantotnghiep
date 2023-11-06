@@ -85,7 +85,7 @@ a {
         border-radius: get_pc(50);
     }
 
-    span,a {
+    span {
         font-size: 22px;
         letter-spacing: 1.1px;
         line-height: 32px;
@@ -180,12 +180,12 @@ a {
         }
     }
     .item_slide {
-        padding-right: 10px;
+        margin-right: 10px;
         @include pc {
-            padding-right: get_pc(10);
+            margin-right: get_pc(10);
         }
         @include sp {
-            padding-right: get_sp(5);
+            margin-right: get_sp(5);
         }
         .thumb {
             width: 320px;

@@ -1015,6 +1015,10 @@
                         width: get_sp(160);
                         height: get_sp(90);
                     }
+                    .thumb {
+                        width: 100%;
+                        margin: 0;
+                    }
                     img {
                         border-radius: 10px 10px 0 0;
                         @include pc {

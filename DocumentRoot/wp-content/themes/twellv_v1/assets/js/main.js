@@ -8,6 +8,7 @@
         _speed = 1000;
 
     if (_width <= _spmode) {
+        slideNavList();
     }
     scrollInAnime(window, ".anime", "animated");
     scrollInAnime(window, ".anime2", "animated");
@@ -101,12 +102,12 @@
             $(".box_search_sp").click(function () {
                 $(this).addClass("active");
                 // $(".box_search").slideToggle("active");
-                $(".box_search_active").toggle("slide");
+                $("#___gcse_0").toggle("slide");
                 $(".header_link ul").addClass("active");
             });
-            $(".box_search_active").click(function () {
+            $("#___gcse_0").click(function () {
                 $(".box_search_sp").removeClass("active");
-                $(".box_search_active").toggle("slide");
+                $("#___gcse_0").toggle("slide");
                 $(".header_link ul").removeClass("active");
             });
         }
@@ -326,14 +327,15 @@
             infinite: false,
             responsive: [
                 {
-                    breakpoint: 1921,
-                    settings: "unslick",
-                },
-                {
                     breakpoint: 960,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 5,
+                        slidesToScroll: 1
                     },
+                },
+                {
+                    breakpoint: 1921,
+                    settings: "unslick",
                 },
             ],
         });
