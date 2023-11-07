@@ -70,6 +70,9 @@ function twellv_class($classes)
     if (is_tax('program_cat')) {
         $classes[] = 'program_detail';
     }
+    if (is_post_type_archive('press')) {
+        $classes[] = 'the_press';
+    }
 
     $classes[] = '';
     return $classes;
