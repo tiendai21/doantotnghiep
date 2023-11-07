@@ -56,7 +56,7 @@ get_header();
                         <h2>よくあるご質問</h2>
                         <div class="btn_more">
                             <a href="<?php echo esc_url(home_url('/corporate/faq')) ?>">
-                                <span>すべて見る</span>
+                                すべて見る
                             </a>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ get_header();
                         <h2>お知らせ</h2>
                         <div class="btn_more">
                             <a href="<?php echo esc_url(home_url('/news/announce')) ?>">
-                                <span>すべて見る</span>
+                                すべて見る
                             </a>
                         </div>
                     </div>
@@ -136,7 +136,7 @@ get_header();
                     <h2>ニュースリリース</h2>
                     <div class="btn_more">
                         <a href="<?php echo esc_url(home_url('/news/release/')) ?>">
-                            <span>すべて見る</span>
+                            すべて見る
                         </a>
                     </div>
                 </div>

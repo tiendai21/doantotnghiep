@@ -761,7 +761,7 @@
 
                 @include sp {
                     left: get_sp(-2);
-                    top: get_sp(19);
+                    top: get_sp(20);
                     letter-spacing: get_sp(6.5);
                     font-size: get_sp(65);
                     line-height: get_sp(94);
@@ -1730,7 +1730,7 @@
     }
     .modal_content {
         width: 1586px;
-        height: 900px;
+        height: 1044px;
         margin: 0 auto;
         position: relative;
         overflow: hidden;
@@ -1743,7 +1743,7 @@
             width: get_pc(1586);
             padding: get_pc(102) get_pc(25) 0 get_pc(45);
             border-radius: get_pc(33);
-            height: get_pc(900);
+            height: get_pc(1044);
         }
 
         @include sp {
@@ -1986,16 +1986,14 @@
             ul {
                 width: 100%;
                 margin: 0 auto;
-                height: 800px;
                 overflow-y: scroll;
                 display: flex;
                 flex-wrap: wrap;
                 overscroll-behavior-y: none;
-                padding-bottom: 65px;
+                height: 800px;
 
                 @include pc {
                     height: get_pc(800);
-                    padding-bottom: get_pc(80);
                 }
 
                 @include sp {
@@ -2050,9 +2048,13 @@
                     margin-bottom: 27px;
                     margin-right: 23px;
                     background-color: #e8f3ff;
+                    height: fit-content;
+                    border-radius: 15px 15px 0 0;
+                    overflow: hidden;
                     @include pc {
                         margin-bottom: get_pc(27);
                         margin-right: get_pc(23);
+                        border-radius: get_pc(15) get_pc(15) 0 0;
                     }
 
                     @include sp {
@@ -2060,7 +2062,6 @@
                         margin-bottom: get_sp(15);
                         margin-right: get_sp(8);
                         border-radius: get_sp(5) get_sp(5) 0 0;
-                        overflow: hidden;
                     }
 
                     a {
@@ -2107,6 +2108,7 @@
                                 line-height: 25px;
                                 letter-spacing: 1px;
                                 font-weight: bold;
+                                @include txtClamp(1);
 
                                 @include pc {
                                     font-size: get_pc(20);
@@ -2118,7 +2120,6 @@
                                     font-size: get_sp(12);
                                     line-height: get_sp(17);
                                     letter-spacing: get_sp(1.2);
-                                    @include txtClamp(1)
                                 }
                             }
 
@@ -2131,6 +2132,7 @@
                                 padding-bottom: 5px;
                                 margin-bottom: 5px;
                                 border-bottom: 2px solid #004898;
+                                @include txtClamp(1);
                                 @include pc {
                                     font-size: get_pc(16);
                                     line-height: get_pc(24);
@@ -2147,7 +2149,6 @@
                                     padding-bottom: get_sp(3);
                                     margin-bottom: get_sp(2);
                                     border-bottom: get_sp(2) solid #004898;
-                                    @include txtClamp(1)
                                 }
                             }
 
