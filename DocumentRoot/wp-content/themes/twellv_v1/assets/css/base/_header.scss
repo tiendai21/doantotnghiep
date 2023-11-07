@@ -122,7 +122,7 @@
         #___gcse_0 {
             width: 415px;
             margin-left: 20px;
-
+            position: relative;
             @include pc {
                 width: get_pc(415);
                 margin-left: get_pc(20);
@@ -224,7 +224,7 @@
                 @include pc {
                     width: get_pc(27);
                     height: get_pc(28);
-                    right: get_pc(34);
+                    right: get_pc(17);
                 }
 
                 @include sp {

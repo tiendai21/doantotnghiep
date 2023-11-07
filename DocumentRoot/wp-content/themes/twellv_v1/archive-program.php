@@ -117,7 +117,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <!-- /Broadcast schedule -->
 
         <!-- ranking -->
-        <?php get_template_part('template-parts/ranking/ranking'); ?>
+        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
         <!-- /ranking -->
 
         <!-- program list -->
