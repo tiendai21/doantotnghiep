@@ -12,7 +12,7 @@ add_theme_support('post-thumbnails');
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles()
 {
-    $css_unti_cache = '231012';
+//    $css_unti_cache = '231012';
     // Get the theme data
     $the_theme = wp_get_theme();
     wp_enqueue_style('wp_style', get_stylesheet_uri());
