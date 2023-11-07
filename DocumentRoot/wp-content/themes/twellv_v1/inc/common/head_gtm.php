@@ -14,7 +14,7 @@
 })(window, document, 'script', 'dataLayer', 'GTM-P3N9BL');</script>
 
 
-<script src="https://log.ma-jin.jp/ma.js?acid=847"></script>
+<script src="https://log.ma-jin.jp/ma.js?acid=847&appid=109" ></script>
 
 <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <?php if ( wp_is_mobile() ) : ?>
