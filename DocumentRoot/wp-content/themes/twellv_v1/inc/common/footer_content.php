@@ -13,7 +13,7 @@
                         <li><a href="<?php echo esc_url(home_url('/client/'))?>">広告出稿について</a></li>
                     </ul>
                 </div>
-                <div class="nav_footer">
+                <div class="nav_footer util_pc">
                     <h3>ジャンル別</h3>
                     <div class="nav_list">
                         <ul>
@@ -98,9 +98,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="end_footer">
-                <div class="nav_footer">
+                <div class="nav_footer util_sp">
                     <h3>番組関連情報</h3>
                     <ul>
                         <li><a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a></li>
@@ -110,6 +108,104 @@
                         <li><a href="<?php echo esc_url(home_url('/social/'))?>">Twitter・Facebook</a></li>
                         <li><a href="<?php echo esc_url(home_url('/list_account'))?>">アカウント一覧</a></li>
                     </ul>
+                </div>
+            </div>
+            <div class="end_footer">
+                <div class="nav_footer util_pc">
+                    <h3>番組関連情報</h3>
+                    <ul>
+                        <li><a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program_schedule'))?>">番組表</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/news/whatsnew'))?>">新着情報一覧</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/present_event/'))?>">プレゼント・イベント情報一覧</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/social/'))?>">Twitter・Facebook</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/list_account'))?>">アカウント一覧</a></li>
+                    </ul>
+                </div>
+                <div class="nav_footer util_sp">
+                    <h3>ジャンル別</h3>
+                    <div class="nav_list">
+                        <ul>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
+                                <ul>
+                                    <li><a href="<?php echo esc_url(home_url('/program/drama/umechan'))?>">連続テレビ小説「梅ちゃん先生」</a></li>
+                                    <li><a href="<?php echo esc_url(home_url('/program/drama/doyou-youga/'))?>">土曜洋画劇場（海外映画テレビ番組）</a></li>
+                                    <li><a href="<?php echo esc_url(home_url('/program/drama/fridayskiller'))?>">金曜キラー通り（無料海外ドラマ）</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('//program/korea/'))?>">韓国・韓流ドラマ</a>
+                                <ul>
+                                    <li><a href="<?php echo esc_url(home_url('/program/korea/chimera/'))?>">韓国ドラマ「キマイラ」</a></li>
+                                    <li><a href="<?php echo esc_url(home_url('/program/korea/aono-pianist/'))?>">韓国ドラマ「蒼のピアニスト」</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('//program/china/'))?>">中国・アジアドラマ</a>
+                                <ul>
+                                    <li><a href="<?php echo esc_url(home_url('/program/china/storm-eye/'))?>">中国ドラマ「暴風眼－特命捜査官－」　（日曜アジアドラマ）</a></li>
+                                    <li><a href="<?php echo esc_url(home_url('/program/china/tora-tairiku/'))?>">中国ドラマ「斗羅大陸～7つの光と武　魂の謎～」（金曜アジアドラマ）</a></li>
+                                    <li><a href="<?php echo esc_url(home_url('/program/china/kouranden/'))?>">中国ドラマ「コウラン伝 始皇帝の母」（月・火アジアドラマ）</a></li>
+                                    <li><a href="<?php echo esc_url(home_url('/program/china/gyokushorei/'))?>">中国ファンタジー時代劇「玉昭令」</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/sports/baseball/'))?>">プロ野球中継</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/tabi/'))?>">旅・グルメ</a>
+                                <ul>
+                                    <li>
+                                        <a href="<?php echo esc_url(home_url('/program/tabi/hawakoi3/'))?>">ハワイに恋して！</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo esc_url(home_url('/program/tabi/next-trip/'))?>">NEXT TRIP</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ドキュメンタリー</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組(演歌・歌謡)</a>
+                                <ul>
+                                    <li>
+                                        <a href="<?php echo esc_url(home_url('/program/music/cassettetapemusic/'))?>">ザ・カセットテープ・ミュージック</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
+                                <ul>
+                                    <li>
+                                        <a href="<?php echo esc_url(home_url('/program/anime/anime26'))?>">アニメ26</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo esc_url(home_url('/program/anime/sunday-animation/'))?>">日曜アニメ劇場</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・BS12 知っ得</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="nav_footer">
                     <h3>ワールド・ハイビジョン・チャンネルについて</h3>
@@ -134,22 +230,24 @@
                             <li>
                                 <a href="https://korea.kaigai-drama-board.com/" target="_blank">K-board | 韓流ドラマのニュースやおすすめ情報を毎日お届け</a>
                                 <ul>
-                                    <li><a href="https://korea.kaigai-drama-board.com/vod/" target="_blank">>VOD board｜VOD比較メディア</a></li>
+                                    <li><a href="https://korea.kaigai-drama-board.com/vod/" target="_blank">VOD board｜VOD比較メディア</a></li>
                                 </ul>
                             </li>
                         </ul>
                         <ul>
-                            <li><a href="<?php echo esc_url(home_url('/site_map'))?>">サイトマッ</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/the_press'))?>">プ プレス</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/site_map'))?>">サイトマップ</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/the_press'))?>">プレス</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="social_footer">
                     <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_tw.svg' ?>" width="49" height="49" alt="twitter">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_x.svg' ?>" width="49" height="49" alt="twitter">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_x_dark.svg' ?>" width="49" height="49" alt="twitter">
                     </a>
                     <a href="">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_fb.svg' ?>" width="48" height="47" alt="facebook">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_fb_top.svg' ?>" width="48" height="47" alt="facebook">
                     </a>
                 </div>
             </div>

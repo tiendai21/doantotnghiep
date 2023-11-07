@@ -35,34 +35,56 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
     ?>
     <section class="section" id="recommend">
         <div class="inner">
-            <div class="tlt_section">
-                <h2>BS12おすすめ番組</h2>
-                <div class="btn_more">
-                    <span>すべて見る</span>
+            <div class="bg_gray">
+                <div class="tlt_section">
+                    <h2>BS12おすすめ番組</h2>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
+                </div>
+                <div class="program_slide slide_recommend">
+                    <?php
+                    foreach ($term_arr as $term) :
+                        ob_start();
+                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $term));
+                        $modal .= ob_get_contents();
+                        ob_end_clean();
+                        ?>
+                        <div class="item_slide">
+                            <a href="<?php echo get_term_link($term); ?>">
+                                <div class="thumb">
+                                    <?php echo get_acf_img_tag('list_thumb', $term, $term->name . 'のサムネイル'); ?>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <!--      List brand banners        -->
+                <?php get_template_part('template-parts/home/brand-banner'); ?>
+                <!--      /List brand banners        -->
+
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'BS12おすすめ番組', 'modal' => $modal)); ?>
+            </div>
+            <div class="list_brand">
+                <div class="item_brand">
+                    <div class="thumb">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="430" height="180" alt="韓国情報なら！Kboard">
+                    </div>
+                    <div class="txt_desp">
+                        <h3>韓国情報なら！Kboard</h3>
+                        <p>説明を入ります説明を入ります説明を入ります説明を入ります説明を入ります。</p>
+                    </div>
+                </div>
+                <div class="item_brand">
+                    <div class="thumb">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="原宿STREET GAMERS">
+                    </div>
+                    <div class="txt_desp">
+                        <h3>原宿STREET GAMERS</h3>
+                        <p>説明を入ります説明を入ります説明を入ります説明を入ります説明を入ります。</p>
+                    </div>
                 </div>
             </div>
-            <div class="program_slide slide_recommend">
-                <?php
-                foreach ($term_arr as $term) :
-                    ob_start();
-                    get_template_part('template-parts/home/modal_category_item', null, array('term' => $term));
-                    $modal .= ob_get_contents();
-                    ob_end_clean();
-                    ?>
-                    <div class="item_slide">
-                        <a href="<?php echo get_term_link($term); ?>">
-                            <div class="thumb">
-                                <?php echo get_acf_img_tag('list_thumb', $term, $term->name . 'のサムネイル'); ?>
-                            </div>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <!--      List brand banners        -->
-            <?php get_template_part('template-parts/home/brand-banner'); ?>
-            <!--      /List brand banners        -->
-
-            <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'BS12おすすめ番組', 'modal' => $modal)); ?>
         </div>
     </section>
 <?php
