@@ -63,3 +63,45 @@ function announceList() {
     ob_end_clean();
     return $content;
 }
+/**
+ *   Test program schedule table
+ **/
+add_shortcode( 'test-rakuraku', 'testRaku' );
+function testRaku( ) {
+    $url = 'https://rakuraku2.bangumi.org/tablePage';
+    $data = 'platform=D&isSamplePage=false&referer=www.twellv.co.jp&channelIndex=1&fromArrow=&getPrevious=&getNext=';
+
+    $headers = array(
+        'authority: rakuraku2.bangumi.org',
+        'accept: */*',
+        'accept-language: vi,en;q=0.9,ja;q=0.8,en-US;q=0.7',
+        'content-type: application/x-www-form-urlencoded; charset=UTF-8',
+        'origin: https://www.twellv.co.jp',
+        'referer: https://www.twellv.co.jp/',
+        'sec-ch-ua: "Chromium";v="118", "Microsoft Edge";v="118", "Not=A?Brand";v="99"',
+        'sec-ch-ua-mobile: ?0',
+        'sec-ch-ua-platform: "macOS"',
+        'sec-fetch-dest: empty',
+        'sec-fetch-mode: cors',
+        'sec-fetch-site: cross-site',
+        'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76',
+    );
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+    $response = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        echo 'cURL Error: ' . curl_error($ch);
+    }
+
+    curl_close($ch);
+
+    return $response;
+}
