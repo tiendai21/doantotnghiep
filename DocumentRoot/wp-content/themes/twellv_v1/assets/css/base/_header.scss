@@ -46,6 +46,11 @@
         .header_link {
             display: flex;
             align-items: center;
+            form {
+                &.gsc-search-box {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         ul {
@@ -114,8 +119,7 @@
                 }
             }
         }
-
-        .box_search {
+        #___gcse_0 {
             width: 415px;
             margin-left: 20px;
 
@@ -136,7 +140,29 @@
             &.active {
                 display: block;
             }
-
+            .gsc-input {
+                width: 100%;
+                line-height: 1px;
+            }
+            .gsst_b {
+                display: none;
+            }
+            .gsc-input-box {
+                padding: 8px 21px;
+                border-radius: 24px;
+                border-color: #004898;
+                @include pc {
+                    padding: get_pc(8) get_pc(21);
+                    border-radius: get_pc(24);
+                }
+                @include sp {
+                    border-radius: get_sp(24);
+                    padding: get_sp(8) get_sp(31);
+                }
+            }
+            .gsib_a {
+                padding: 0;
+            }
             input {
                 border: 1px solid #004898;
                 border-radius: 24px;
@@ -147,7 +173,6 @@
                 letter-spacing: 2.3px;
                 outline: none;
                 width: 415px;
-
                 @include pc {
                     width: get_pc(415);
                     border-radius: get_pc(24);
@@ -183,10 +208,10 @@
                 }
             }
 
-            .btn_search {
+            .gsc-search-button-v2 {
                 @include bgsetup("../images/icon_search.svg", center center, 100% auto, no-repeat);
                 width: 27px;
-                height: 26px;
+                height: 28px;
                 border: none;
                 outline: none;
                 cursor: pointer;
@@ -195,10 +220,10 @@
                 right: 17px;
                 top: 50%;
                 transform: translate(0, -50%);
-
+                padding: 0;
                 @include pc {
                     width: get_pc(27);
-                    height: get_pc(26);
+                    height: get_pc(28);
                     right: get_pc(34);
                 }
 
@@ -206,8 +231,10 @@
                     width: get_sp(16);
                     height: get_sp(16);
                     right: 0;
-                    padding: 0;
                     left: get_sp(12);
+                }
+                svg {
+                    display: none;
                 }
             }
         }
@@ -557,7 +584,7 @@
             margin: 0 auto;
             text-align: left;
 
-            .box_search {
+            .gsc-control-searchbox-only {
                 width: 415px;
                 margin-left: 20px;
                 position: relative;
@@ -568,7 +595,26 @@
                     margin-right: get_sp(3);
                     margin-bottom: get_sp(19);
                 }
-
+                .gsc-input {
+                    width: 100%;
+                }
+                .gsc-input-box {
+                    @include sp {
+                        border-radius: get_sp(24);
+                        border-color: #004898;
+                    }
+                }
+                .gsib_a {
+                    @include sp {
+                        padding-left: get_sp(18);
+                        padding-right: get_sp(18);
+                    }
+                }
+                .gsst_b {
+                    @include sp {
+                        display: none;
+                    }
+                }
                 input {
                     border: 1px solid #004898;
                     border-radius: 24px;
@@ -602,7 +648,7 @@
                     }
                 }
 
-                .btn_search {
+                .gsc-search-button-v2 {
                     @include bgsetup("../images/icon_search.svg", center center, 100% auto, no-repeat);
                     width: 27px;
                     height: 26px;
@@ -618,10 +664,12 @@
 
                     @include sp {
                         width: get_sp(25);
-                        height: get_sp(25);
-                        right: 0;
+                        height: get_sp(26);
                         padding: 0;
                         right: get_sp(17);
+                    }
+                    svg {
+                        display: none;
                     }
                 }
             }

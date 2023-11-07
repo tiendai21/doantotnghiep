@@ -48,7 +48,7 @@
                 <div class="util_sp">
                     <div class="box_search_sp">
                         <div class="thumb">
-                            <img src="assets/images/icon_search.svg" width="750" height="573" alt="icon search">
+                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_search.svg' ?>" width="750" height="573" alt="icon search">
                         </div>
                         <span>検索</span>
                     </div>
