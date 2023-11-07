@@ -4,7 +4,7 @@
             <h2>新着情報</h2>
             <div class="btn_more">
                 <a href="<?php echo esc_url(home_url('/news/whatsnew'))?>">
-                    <span>すべて見る</span>
+                    すべて見る
                 </a>
             </div>
         </div>
