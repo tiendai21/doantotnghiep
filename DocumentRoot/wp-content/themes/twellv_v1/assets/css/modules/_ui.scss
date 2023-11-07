@@ -85,7 +85,7 @@ a {
         border-radius: get_pc(50);
     }
 
-    span {
+    span, a {
         font-size: 22px;
         letter-spacing: 1.1px;
         line-height: 32px;
@@ -166,7 +166,7 @@ a {
         right: 0;
         width: 141px;
         height: 100%;
-        background: linear-gradient(271deg, #000, rgba(41,41,41,0.54) 59%, rgba(84,84,84,0) 100%);
+        background: linear-gradient(271deg, #000, rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0) 100%);
         @include pc {
             width: get_pc(141);
         }
@@ -290,6 +290,7 @@ a {
                         font-size: get_sp(14);
                         line-height: get_sp(18);
                         letter-spacing: get_sp(0.7);
+                        padding-bottom: get_sp(3);
                     }
                 }
             }
@@ -425,9 +426,9 @@ a {
             }
         }
         .thumb {
-            @include bgsetup("../images/icon_notice_top_w.svg",center center , 100% auto,no-repeat);
+            @include bgsetup("../images/icon_notice_top_w.svg", center center, 100% auto, no-repeat);
             img {
-                display : none;
+                display: none;
             }
         }
     }
@@ -932,6 +933,7 @@ a {
         }
     }
 }
+
 //content_bottom
 .content_bottom {
     .slide_brand {
@@ -1059,151 +1061,169 @@ a {
         }
     }
 }
+
 .btn_watch {
-    text-align: center;
-    @include sp {
-        padding: 0 get_sp(7.5);
-    }
-    strong {
-        position: relative;
-    }
-    span {
-        background: #C5DBF4;
-        border-radius: 50%;
-        position: absolute;
-        left: -5px;
-        top: 50%;
-        border: 8px solid #ffffff;
-        transform: translateY(-50%);
-        width: 97px;
-        height: 97px;
-        z-index: 3;
-        @include pc {
-            left: get_pc(-5);
-            border: get_pc(8) solid #ffffff;
-            width: get_pc(97);
-            height: get_pc(97);
-        }
-        @include sp {
-              left: get_sp(-5);
-              border: get_sp(5) solid #ffffff;
-              width: get_sp(60);
-              height: get_sp(61);
-        }
-        &:before {
-            content: "";
-            @include bgsetup("../images/icon_hand_blue.png",center center,100% auto,no-repeat);
-            display: block;
-            width: 38px;
-            height: 55px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 10;
-            @include pc {
-                width: get_pc(38);
-                height: get_pc(55);
-            }
-            @include sp {
-                width: get_sp(22);
-                height: get_sp(32);
-            }
-        }
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0;
-            border-radius: 50%;
-            background: #004898;
-            transition: all ease .3s;
-            z-index: 6;
-        }
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    @include pc {
+        margin-bottom: get_pc(30);
     }
     a {
-        position: relative;
-        border-radius: 50px;
-        width: 554px;
-        margin: 0 auto 29px;
-        height: 86px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        padding-left: 65px;
-        color: #000000;
-        font-size: 25px;
-        letter-spacing: 1.25px;
-        line-height: 36px;
-        font-weight: bold;
-        background: #C5DBF4;
-
-        @include pc {
-            border-radius: get_pc(50);
-            width: get_pc(554);
-            margin: 0 auto get_pc(29);
-            height: get_pc(86);
-            padding-left: get_pc(65);
-            font-size: get_pc(25);
-            letter-spacing: get_pc(1.25);
-            line-height: get_pc(36);
-        }
-
+        justify-content: center;
+        width: fit-content;
         @include sp {
-            border-radius: get_sp(50);
-            width: 100%;
-            padding: 0 get_sp(8) 0 get_sp(60);
-            margin: 0 auto get_sp(14);
-            height: get_sp(50);
-            font-size: get_sp(17);
-            letter-spacing: get_sp(1.7);
-            line-height: get_sp(25);
+            transform: translateX(get_sp(-9));
         }
-        &:before {
-            content: "";
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 30px;
-            height: 100%;
-            width: 0%;
-            transition: 0.3s ease-in-out;
-            background: #004898;
-            border-radius: 50px;
+        span {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 1.25px;
+            line-height: 36px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #000;
+            overflow: hidden;
+            width: 494px;
+            height: 86px;
+            margin-right: -20px;
             @include pc {
-                border-radius: get_pc(50);
-                left: get_pc(30);
+                letter-spacing: get_pc(1.25);
+                line-height: get_pc(36);
+                font-size: get_pc(25);
+                width: get_pc(494);
+                height: get_pc(86);
+                margin-right: get_pc(-20);
             }
             @include sp {
-                left: get_sp(20);
-                border-radius: get_sp(50);
+                width: get_sp(343);
+                height: get_sp(51);
+                margin-right: get_sp(-16);
+                font-size: get_sp(17);
+                letter-spacing: get_sp(1.7);
+                line-height: get_sp(25);
+            }
+            &:first-child {
+                width: 82px;
+                height: 82px;
+                border-radius: 50%;
+                z-index: 1;
+                transition: all .3s;
+                overflow: hidden;
+                background-color: #C5DBF4;
+                @include pc {
+                    width: get_pc(82);
+                    height: get_pc(82);
+                }
+                @include sp {
+                    width: get_sp(48.3);
+                    height: get_sp(48.3);
+                }
+                &::before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 82px;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    background-color: #004898;
+                    border-radius: 50%;
+                    transition: all .3s;
+                    @include pc {
+                        height: get_pc(82);
+                    }
+                    @include sp {
+                        height: get_sp(48.3);
+                    }
+                }
+                &::after {
+                    display: block;
+                    content: '';
+                    @include bgsetup("../images/icon_hand_blue.png", center center, 100% auto, no-repeat);
+                    width: 38px;
+                    height: 56px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    z-index: 3;
+                    transition: all .3s;
+                    @include pc {
+                        width: get_pc(38);
+                        height: get_pc(56);
+                    }
+                    @include sp {
+                        width: get_sp(22.39);
+                        height: get_sp(32.45);
+                    }
+                }
+            }
+            &:last-child {
+                z-index: 1;
+                transition: all .3s;
+                overflow: hidden;
+                background-color: #C5DBF4;
+                clip-path: url("#myClip");
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    content: '';
+                    width: 0;
+                    height: 86px;
+                    z-index: -1;
+                    transition: all .3s;
+                    @include bgsetup("../images/btn_watch_hover.png", center center, 100% 100%, no-repeat);
+                    @include pc {
+                        height: get_pc(86);
+                    }
+                    @include sp {
+                        height: get_sp(51);
+                    }
+                }
             }
         }
         &:hover {
-            color: #FFFFFF;
-            opacity: 1;
-            &:before {
-                width: 523px;
-                @include pc {
-                    width: get_pc(523);
+            opacity: initial;
+            span {
+                color: #fff;
+            }
+            span:first-child {
+                &::before {
+                    width: 82px;
+                    @include pc {
+                        width: get_pc(82);
+                    }
+                    @include sp {
+                        width: get_sp(48.3);
+                    }
                 }
-                @include sp {
-                    width: get_sp(355);
+                &::after {
+                    @include bgsetup("../images/icon_hand_top.png", center center, 100% auto, no-repeat);
                 }
             }
-            span {
-                &:before {
-                    @include bgsetup("../images/icon_hand_top.png",center center,100% auto,no-repeat);
-                }
-                &:after {
-                    width: 100%;
+            span:last-child {
+                &::before {
+                    width: 494px;
+                    @include pc {
+                        width: get_pc(494);
+                    }
+                    @include sp {
+                        width: get_sp(343);
+                    }
                 }
             }
         }
     }
+
 }
 
 //header design part 3 4
@@ -1338,6 +1358,7 @@ a {
         background: #e8f3ff;
     }
 }
+
 /*
     items_link
 */
@@ -1349,7 +1370,7 @@ a {
     justify-content: flex-start;
     flex-wrap: wrap;
     @include pc {
-        padding: get_pc(30) 0 get_pc(30)get_pc(242);
+        padding: get_pc(30) 0 get_pc(30) get_pc(242);
     }
     @include sp {
         padding: get_sp(9) 0 get_sp(12);
@@ -1411,6 +1432,7 @@ a {
         background: #699BD3;
     }
 }
+
 /*
     ranking
 */
@@ -1738,10 +1760,10 @@ a {
                     }
                     &:hover {
                         opacity: 1;
-                        background-color:#004898;
+                        background-color: #004898;
                         color: #FFFFFF;
                         &:after {
-                            @include bgsetup("../images/icon_right_hover.png",center center,100% auto,no-repeat);
+                            @include bgsetup("../images/icon_right_hover.png", center center, 100% auto, no-repeat);
                         }
                     }
                     &:after {

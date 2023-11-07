@@ -29,7 +29,7 @@
         opacity: 1;
     }
 }
- 
+
 /*
     banner
 */
@@ -144,7 +144,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: transparent linear-gradient(92deg, #000, rgba(41,41,41,0.54) 59%, rgba(84,84,84,0) 100%);
+            background: transparent linear-gradient(92deg, #000, rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0) 100%);
             width: 141px;
             height: 693px;
             z-index: 1;
@@ -162,7 +162,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: linear-gradient(271deg, #000, rgba(41,41,41,0.54) 59%, rgba(84,84,84,0) 100%);
+            background: linear-gradient(271deg, #000, rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0) 100%);
             width: 141px;
             height: 693px;
             @include pc {
@@ -413,7 +413,7 @@
                 border-radius: unset;
             }
             &:hover {
-                background-color:#06376E;
+                background-color: #06376E;
                 opacity: 1;
             }
             &:before {
@@ -787,143 +787,92 @@
         }
     }
 
-    .btn_sns {
-        display: flex;
-        justify-content: center;
-        span {
-            background: #4AA253;
-            border-radius: 50%;
-            position: absolute;
-            left: -2px;
-            top: 49%;
-            padding: 12px 0;
-            border: 8px solid #ffffff;
-            transform: translateY(-50%);
-            width: 94px;
-            height: 94px;
-            z-index: 3;
-            @include pc {
-                width: get_pc(94);
-                height: get_pc(94);
-                left: get_pc(-2);
-                padding: get_pc(12) 0;
-                border: get_pc(8) solid #ffffff;
-            } @include sp {
-                  width: get_sp(60);
-                  height: get_sp(61);
-                  left: get_sp(-2);
-                  padding: get_sp(8.2) get_sp(2.5);
-                  border: get_sp(5) solid #ffffff;
-              }
-            &:before {
-                content: "";
-                @include bgsetup("../images/icon_comment.png",center center,100% auto,no-repeat);
-                display: block;
-                width: 100%;
-                height: 100%;
-                z-index: 10;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                border-radius: 50%;
-            }
-            &:after {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 0;
-                border-radius: 50%;
-                background: #1F5824;
-                transition: all .3s;
-                z-index: 6;
-            }
-        }
+    .btn_watch {
         a {
-            position: relative;
-            width: 512px;
-            height: 86px;
-            color: #ffffff;
-            font-size: 25px;
-            letter-spacing: 2.5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            border-radius: 50px;
-
-            @include pc {
-                width: get_pc(512);
-                height: get_pc(86);
-                font-size: get_pc(25);
-                letter-spacing: get_pc(2.5);
-                border-radius: get_pc(50);
-            }
-
             @include sp {
-                width: 100%;
-                height: get_sp(51);
-                font-size: get_sp(17);
-                letter-spacing: get_sp(1.7);
-                line-height: get_sp(25);
-                background-size: contain;
-                border-radius: get_sp(50);
+                transform: translateX(get_sp(-9));
             }
-            &:before {
-                content: '';
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 30px;
-                height: 100%;
-                width: 0;
-                background: #1F5824;
-                transition: 0.3s ease-in-out;
-                z-index: -1;
-                border-radius: 50px;
+            span {
+                letter-spacing: 2.5px;
+                color: #fff;
+                width: 465px;
+                height: 86px;
                 @include pc {
-                    left: get_pc(30);
-                    border-radius: get_pc(50);
+                    letter-spacing: get_pc(2.5);
+                    width: get_pc(465);
+                    height: get_pc(86);
                 }
                 @include sp {
-                    left: get_sp(20);
-                    border-radius: get_sp(50);
+                    width: get_sp(343);
+                    height: get_sp(51);
+                    margin-right: get_sp(-16);
+                    font-size: get_sp(17);
+                    letter-spacing: get_sp(1.7);
+                    line-height: get_sp(25);
                 }
-            }
-            &:after {
-                content: "";
-                background: #4AA253;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                border-radius: 50px;
-                width: 100%;
-                height: 100%;
-                z-index: -2;
-                @include pc {
-                    border-radius: get_pc(50);
+
+                &:first-child {
+                    width: 82px;
+                    height: 82px;
+                    background-color: #4AA253;
+                    @include pc {
+                        width: get_pc(82);
+                        height: get_pc(82);
+                    }
+                    @include sp {
+                        width: get_sp(48.3);
+                        height: get_sp(48.3);
+                    }
+
+                    &::before {
+                        background-color: #1F5824;
+                    }
+
+                    &::after {
+                        @include bgsetup("../images/btn_watch_sns_icon.png", center center, 100% auto, no-repeat);
+                        width: 82px;
+                        height: 62px;
+                        @include pc {
+                            width: get_pc(82);
+                            height: get_pc(62);
+                        }
+                        @include sp {
+                            width: get_sp(42.75);
+                            height: get_sp(32.06);
+                        }
+                    }
                 }
-                @include sp {
-                    border-radius: get_sp(50);
+                &:last-child {
+                    background-color: #4AA253;
+                    clip-path: url("#myClip2");
+
+                    &::before {
+                        @include bgsetup("../images/btn_watch_sns_hover.png", center center, 100% 100%, no-repeat);
+                    }
                 }
             }
             &:hover {
-                opacity: 1;
-                &:before {
-                    width: 482px;
-                    @include pc {
-                        width: get_pc(482);
-                    }
-                    @include sp {
-                        width: get_sp(358);
+                opacity: initial;
+                span:first-child {
+                    &::before {
+                        width: 82px;
+                        @include pc {
+                            width: get_pc(82);
+                        }
+                        @include sp {
+                            width: get_sp(48.3);
+                        }
                     }
                 }
-                span {
-                    &:after {
-                        width: 100%;
+                span:last-child {
+                    &::before {
+                        width: 465px;
+                        @include pc {
+                            width: get_pc(465);
+                        }
+                        @include sp {
+                            width: get_sp(343);
+                        }
                     }
                 }
             }
@@ -944,7 +893,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            background: linear-gradient(271deg,rgb(0, 0, 0),rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0.00) 100%);
+            background: linear-gradient(271deg, rgb(0, 0, 0), rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0.00) 100%);
             @include pc {
                 width: get_pc(153);
                 height: get_pc(180);
@@ -1746,7 +1695,6 @@
     }
 }
 
-
 .wrapper_modal {
     position: fixed;
     top: 0;
@@ -1970,19 +1918,63 @@
             }
 
             .btn_watch {
-                text-align: center;
-
                 a {
-                    margin-bottom: 0;
+                    transform: translateX(-85px);
+                    @include pc {
+                        transform: translateX(get_pc(-85));
+                    }
                     @include sp {
-                        font-size: get_sp(14);
-                        letter-spacing: get_sp(1.4);
-                        line-height: get_sp(20);
+                        transform: translateX(get_sp(-10));
+                    }
+                    span {
+                        @include sp {
+                            width: get_sp(300);
+                            height: get_sp(48);
+                            margin-right: get_sp(-13);
+                        }
+                        &:first-child {
+                            @include sp {
+                                width: get_sp(45);
+                                height: get_sp(45);
+                            }
+                            &::before {
+                                @include sp {
+                                    height: get_sp(45);
+                                }
+                            }
+                            &::after {
+                                @include sp {
+                                    width: get_sp(21);
+                                    height: get_sp(31);
+                                }
+                            }
+                        }
+                        &:last-child {
+                            @include sp {
+                                font-size: get_sp(14);
+                                letter-spacing: get_sp(1.4);
+                                line-height: get_sp(20);
+                            }
+                            &::before {
+                                @include sp {
+                                    height: get_sp(48);
+                                }
+                            }
+                        }
                     }
                     &:hover {
-                        &:before {
-                            @include sp {
-                                width: get_sp(308);
+                        span:first-child {
+                            &::before {
+                                @include sp {
+                                    width: get_sp(45);
+                                }
+                            }
+                        }
+                        span:last-child {
+                            &::before {
+                                @include sp {
+                                    width: get_sp(300);
+                                }
                             }
                         }
                     }
@@ -2004,6 +1996,10 @@
                 @include pc {
                     height: get_pc(800);
                     padding-bottom: get_pc(80);
+                }
+
+                @include sp {
+                    height: initial;
                 }
 
                 &::-webkit-scrollbar-thumb {
@@ -2060,9 +2056,11 @@
                     }
 
                     @include sp {
-                        width: 50%;
+                        width: 47%;
                         margin-bottom: get_sp(15);
                         margin-right: get_sp(8);
+                        border-radius: get_sp(5) get_sp(5) 0 0;
+                        overflow: hidden;
                     }
 
                     a {
@@ -2079,7 +2077,7 @@
                             }
 
                             @include sp {
-                                height: get_sp(198);
+                                height: get_sp(90);
                             }
                             img {
                                 width: 100%;
@@ -2120,6 +2118,7 @@
                                     font-size: get_sp(12);
                                     line-height: get_sp(17);
                                     letter-spacing: get_sp(1.2);
+                                    @include txtClamp(1)
                                 }
                             }
 
@@ -2132,7 +2131,6 @@
                                 padding-bottom: 5px;
                                 margin-bottom: 5px;
                                 border-bottom: 2px solid #004898;
-                                @include txtClamp(1);
                                 @include pc {
                                     font-size: get_pc(16);
                                     line-height: get_pc(24);
@@ -2146,9 +2144,10 @@
                                     font-size: get_sp(10);
                                     line-height: get_sp(16);
                                     letter-spacing: get_sp(1);
-                                    padding-bottom: get_sp(5);
-                                    margin-bottom: get_sp(5);
+                                    padding-bottom: get_sp(3);
+                                    margin-bottom: get_sp(2);
                                     border-bottom: get_sp(2) solid #004898;
+                                    @include txtClamp(1)
                                 }
                             }
 

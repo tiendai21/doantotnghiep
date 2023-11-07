@@ -208,17 +208,17 @@ if (is_array($nowonair_data_array["programs"])) {
         // echo "-------------------------------------------------------------------\n";
         // var_dump_pre($program_data_array);
 
-        if (! empty($data_array[$key])) {
+        if (!empty($data_array[$key])) {
             $program_data_array = $data_array[$key];
             // 番組マスタの情報をセット
-            if (! empty($program_data_array["s"])) {
+            if (!empty($program_data_array["s"])) {
                 $program_s = substr($program_data_array["s"], 0, 2) . ":" . substr($program_data_array["s"], 2, 2) . "〜";
             } // 放送開始時刻
-            if (! empty($program_data_array["e"])) {
+            if (!empty($program_data_array["e"])) {
                 $program_e = $program_data_array["e"];
             } // 放送終了時刻
 
-            if (! empty($program_data_array["w"])) {
+            if (!empty($program_data_array["w"])) {
                 $program_w = array();
                 // 放送曜日
                 foreach ($program_data_array["w"] as $key => $w) {
@@ -250,7 +250,7 @@ if (is_array($nowonair_data_array["programs"])) {
         }
         if (date(null) > strtotime($nowonair_rec["s"])) {
             $modal_item_time = $e_time_modal;
-        }else {
+        } else {
             $modal_item_time = $s_time_modal;
         }
         // 放送予定Item要素作成
@@ -280,7 +280,7 @@ HTML;
 
 HTML;
         // 放送順にソートする。
-        if ( $now_time > $nowonair_rec["e"]) { // 放送終了
+        if ($now_time > $nowonair_rec["e"]) { // 放送終了
             $bangumi_e_data[] = $tmp_data;
             $modal_e_data[] = $modal_data;
         } elseif ($nowonair_rec["s"] <= $now_time && $now_time <= $nowonair_rec["e"]) { // 放送中
@@ -319,8 +319,20 @@ foreach ($modal_e_data as $key => $d) {
             <?php echo $html; ?>
         </div>
         <div class="btn_watch">
-            <a href="<?php echo esc_url(home_url('/howtowatch'))?>">無料で見られる！BS12の視聴方法</a>
+            <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
+                <span></span>
+                <span>無料で見られる！BS12の視聴方法</span>
+            </a>
         </div>
-        <?php get_template_part( 'template-parts/home/modal_category' , null, array('modal' => $modal) ); ?>
+
+        <svg style="position: absolute; opacity: 0; width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg" width="494"
+             height="86" viewBox="40 0 494 86">
+            <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+                <path id="Subtraction_12" data-name="Subtraction 12"
+                      d="m0.913,1 h-0.907 q-0.003,0,-0.006,-0.001 q0.003,-0.005,0.006,-0.012 q0.003,-0.007,0.006,-0.015 q0.003,-0.008,0.006,-0.017 q0.003,-0.01,0.006,-0.021 q0.003,-0.012,0.005,-0.024 q0.003,-0.014,0.005,-0.028 q0.002,-0.014,0.005,-0.029 q0.002,-0.015,0.004,-0.031 q0.002,-0.016,0.004,-0.035 q0.002,-0.017,0.003,-0.036 q0.002,-0.019,0.003,-0.037 q0.001,-0.02,0.002,-0.04 q0.002,-0.042,0.003,-0.086 q0.001,-0.043,0.001,-0.087 q0,-0.044,-0.001,-0.087 q-0.001,-0.044,-0.003,-0.086 q-0.001,-0.02,-0.002,-0.04 q-0.001,-0.019,-0.003,-0.037 q-0.001,-0.019,-0.003,-0.036 q-0.002,-0.019,-0.004,-0.035 q-0.002,-0.016,-0.004,-0.031 q-0.002,-0.015,-0.005,-0.029 q-0.002,-0.014,-0.005,-0.027 q-0.003,-0.014,-0.005,-0.026 q-0.003,-0.01,-0.006,-0.021 q-0.003,-0.009,-0.006,-0.017 q-0.003,-0.008,-0.006,-0.015 q-0.003,-0.007,-0.006,-0.012 q0.003,-0.001,0.006,-0.001 h0.907 c0.023,0,0.045,0.052,0.062,0.147 c0.016,0.094,0.026,0.221,0.026,0.353 c0,0.133,-0.009,0.259,-0.026,0.353 c-0.016,0.094,-0.038,0.147,-0.062,0.147"
+                      fill="#c5dbf4"/>
+            </clipPath>
+        </svg>
+        <?php get_template_part('template-parts/home/modal_category', null, array('modal' => $modal)); ?>
     </div>
 </section>
