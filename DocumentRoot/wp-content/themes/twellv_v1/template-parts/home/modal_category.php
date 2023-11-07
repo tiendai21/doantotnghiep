@@ -11,7 +11,10 @@ $modal_title = $args['title'];
             <div class="tlt">
                 <h2><?php echo $modal_title?></h2>
                 <div class="btn_watch">
-                    <a href="<?php echo esc_url(home_url('/howtowatch'))?>">無料で見られる！BS12の視聴方法</a>
+                    <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
+                        <span></span>
+                        <span>無料で見られる！BS12の視聴方法</span>
+                    </a>
                 </div>
             </div>
             <div class="list_watch">
