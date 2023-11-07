@@ -128,7 +128,18 @@ footer {
                         }
                     }
                 }
-                >ul,.nav_list {
+                &:last-child {
+                    ul {
+                        &:nth-child(2) {
+                            @include sp {
+                                display: none;
+                                width: 100%;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                >ul{
                     @include sp {
                         border-bottom: 1px solid #FFFFFF;
                     }
@@ -159,7 +170,7 @@ footer {
                 }
             }
 
-            &:last-child {
+            .nav_list {
                 ul {
                     display: flex;
                     width: 306px;
@@ -277,6 +288,11 @@ footer {
                     @include sp {
                         margin-bottom: get_sp(12);
                     }
+                    .nav_list {
+                        @include sp {
+                            border-bottom: 1px solid #ffffff;
+                        }
+                    }
                 }
 
                 .nav_list {
@@ -287,7 +303,7 @@ footer {
                     ul {
                         width: 290px;
                         margin: 0 22px;
-
+                        display: block;
                         @include pc {
                             width: get_pc(290);
                             margin: 0 get_pc(22);
@@ -317,6 +333,7 @@ footer {
                 margin: 0 12px;
                 width: 49px;
                 height: 49px;
+                position: relative;
                 @include pc {
                     margin: 0 get_pc(12);
                     height: get_pc(49);
@@ -329,25 +346,26 @@ footer {
                     height: get_sp(30);
                     padding: 0;
                 }
-
-                &:last-child {
-                    @include bgsetup("../images/icon_fb.svg",center center,100% auto, no-repeat);
-                    &:hover {
-                        opacity: 1;
-                        @include bgsetup("../images/icon_fb_top.svg",center center,100% auto, no-repeat);
+                img {
+                    &:last-child {
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: scale(1.05);
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: all .3s ease;
                     }
                 }
-                &:first-child {
-                    @include bgsetup("../images/logo_x.svg",center center,100% auto, no-repeat);
-                    &:hover {
-                        opacity: 1;
-                        @include bgsetup("../images/logo_x_dark.svg",center center,100% auto, no-repeat);
-                    }
-                    @include sp {
-                        margin-left: get_sp(16);
+                &:hover {
+                    opacity: 1;
+                    img {
+                        &:last-child {
+                            opacity: 1;
+                            visibility: visible;
+                        }
                     }
                 }
-
             }
         }
 
