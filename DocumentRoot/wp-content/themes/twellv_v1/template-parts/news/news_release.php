@@ -35,9 +35,9 @@ if ($the_query->have_posts()) : ?>
                 <li>
                     <a <?php
                     if ($link_url) {
-                        echo 'href="{$link_url}" class="pdf"';
+                        echo 'href="' . $link_url . '" class="pdf"';
                     } else {
-                       echo 'href="{get_the_permalink()}"';
+                        echo 'href="' . get_the_permalink() . '"';
                     }
                     ?>>
                         <span><?php echo str_replace('/', '.', get_field('display_date')); ?></span>

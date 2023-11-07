@@ -45,3 +45,21 @@ function singlePagePR( ) {
     ob_end_clean();
     return $content;
 }
+add_shortcode( 'single-ranking', 'singleRanking' );
+function singleRanking($args) {
+    $content = "";
+    ob_start();
+    get_template_part('template-parts/ranking/ranking', null, array('cat' => $args['cat'], 'title' => $args['title'], 'sns' => false));
+    $content .= ob_get_contents();
+    ob_end_clean();
+    return $content;
+}
+add_shortcode( 'announce-list', 'announceList' );
+function announceList() {
+    $content = "";
+    ob_start();
+    get_template_part('template-parts/oshirase-announce-list');
+    $content .= ob_get_contents();
+    ob_end_clean();
+    return $content;
+}

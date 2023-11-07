@@ -34,11 +34,13 @@ if ( $the_query->have_posts() ) : ?>
 
                 ?>
                 <li>
-                    <a href="<?php
-                    if ( $link_url !== null ) {
-                        echo sprintf( '%s', $link_url, $class_pdf, $target_blank, $title );
+                    <a <?php
+                    if ($link_url) {
+                        echo 'href="' . $link_url . '" class="pdf"';
+                    } else {
+                        echo 'href="' . get_the_permalink() . '"';
                     }
-                    ?>">
+                    ?>>
                         <span><?php echo str_replace( '/', '.', get_field( 'display_date' ) ); ?></span>
                         <p><?php echo sprintf( '%s', $title ); ?></p>
                     </a>
