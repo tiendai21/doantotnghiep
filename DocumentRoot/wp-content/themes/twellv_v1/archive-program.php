@@ -101,7 +101,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                         <span>すべて見る</span>
                     </div>
                 </div>
-                <div class="program_slide side_brand">
+                <div class="program_slide brand_schedule">
                     <div class="item_slide">
                         <a href="#">
                             <img src="https://dummyimage.com/320x180/000000/fff" alt="">
@@ -133,7 +133,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                                 <span>すべて見る</span>
                             </div>
                         </div>
-                        <div class="program_slide side_brand">
+                        <div class="program_slide <?php echo 'brand_' . $base_t->slug; ?>">
                             <?php
                             foreach ($program_cat_lists[$base_t->term_id] as $t) :
                                 ob_start();

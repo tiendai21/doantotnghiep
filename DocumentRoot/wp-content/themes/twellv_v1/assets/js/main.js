@@ -34,6 +34,18 @@
         slideProgram(".slide_korean", false, false);
         slideProgram(".slide_ranking", false, false);
         slideProgram(".side_brand", false, false);
+        slideProgram(".brand_schedule", false, false);
+        slideProgram(".brand_korea", false, false);
+        slideProgram(".brand_drama", false, false);
+        slideProgram(".brand_china", false, false);
+        slideProgram(".brand_sports", false, false);
+        slideProgram(".brand_tabi", false, false);
+        slideProgram(".brand_variety",false, false);
+        slideProgram(".brand_documentary",false, false);
+        slideProgram(".brand_music", false, false);
+        slideProgram(".brand_anime",false,false);
+        slideProgram(".brand_entertainment",false,false);
+        slideProgram(".brand_qvc",false,false);
         slideNavList(".side_header", false, false);
         slideList(".slide_list", false, false);
         voiceList(".voice_list", false, false);
@@ -232,7 +244,7 @@
             $(this).siblings(".slick-prev").addClass("active");
         });
         if ($(_sliderElm).find(".item_slide").length < 7) {
-            $(_sliderElm).addClass('no-slide')
+            $(_sliderElm).addClass('no-slide');
         }
     }
 
