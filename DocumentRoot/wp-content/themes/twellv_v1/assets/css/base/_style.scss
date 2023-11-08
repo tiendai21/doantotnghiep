@@ -19,6 +19,15 @@
                 margin-top: 0;
             }
         }
+        #news {
+            .slide_news {
+                .slick-track {
+                    @include sp {
+                        height: get_sp(172);
+                    }
+                }
+            }
+        }
     }
 }
 
