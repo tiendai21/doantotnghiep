@@ -63,6 +63,15 @@ function announceList() {
     ob_end_clean();
     return $content;
 }
+add_shortcode( 'single-banner-double-slide', 'doubleSlide' );
+function doubleSlide() {
+    $content = "";
+    ob_start();
+    get_template_part('template-parts/banner-double-slide');
+    $content .= ob_get_contents();
+    ob_end_clean();
+    return $content;
+}
 /**
  *   Test program schedule table
  **/
