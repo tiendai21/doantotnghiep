@@ -59,32 +59,11 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <!--      List brand banners        -->
-                <?php get_template_part('template-parts/home/brand-banner'); ?>
-                <!--      /List brand banners        -->
-
                 <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'BS12おすすめ番組', 'modal' => $modal)); ?>
             </div>
-            <div class="list_brand">
-                <div class="item_brand">
-                    <div class="thumb">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="430" height="180" alt="韓国情報なら！Kboard">
-                    </div>
-                    <div class="txt_desp">
-                        <h3>韓国情報なら！Kboard</h3>
-                        <p>説明を入ります説明を入ります説明を入ります説明を入ります説明を入ります。</p>
-                    </div>
-                </div>
-                <div class="item_brand">
-                    <div class="thumb">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/brand_01.jpg' ?>" width="338" height="198" alt="原宿STREET GAMERS">
-                    </div>
-                    <div class="txt_desp">
-                        <h3>原宿STREET GAMERS</h3>
-                        <p>説明を入ります説明を入ります説明を入ります説明を入ります説明を入ります。</p>
-                    </div>
-                </div>
-            </div>
+            <!--      List brand banners        -->
+            <?php get_template_part('template-parts/home/brand-banner'); ?>
+            <!--      /List brand banners        -->
         </div>
     </section>
 <?php
