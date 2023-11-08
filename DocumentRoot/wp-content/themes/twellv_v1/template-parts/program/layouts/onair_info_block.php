@@ -28,8 +28,8 @@ if (get_sub_field('onair_info_switch')) {
     $context = stream_context_create(array(
         'http' => array(
             'ignore_errors' => true,                                            // 403にならないようにするおまじない
-            'header' => "Referer: http://renew.www.twellv.co.jp.5639.jp/\r\n"    // リファラー設定
-//		'header' => "Referer: http://www.twellv.co.jp/\r\n"					// リファラー設定(本番用)
+//            'header' => "Referer: http://renew.www.twellv.co.jp.5639.jp/\r\n"    // リファラー設定
+            'header' => "Referer: http://www.twellv.co.jp/"                    // リファラー設定(本番用)
         )
     ));
 
@@ -42,14 +42,15 @@ if (get_sub_field('onair_info_switch')) {
 //if(!empty($_GET["mode"])){
 //	$program_id = @$_GET["pid"];
 //}
+    $hasEpisode = false;
     $html = <<< HTML
-<div class="gray-box"><h4 class="heading-title_lv3">放送日程が決まり次第、お知らせ致します。 </h4></div>
+<div class="no-episode"><h4>放送日程が決まり次第、お知らせ致します。 </h4></div>
 HTML;
     if (!empty($program_id)) {
-        $json_data = file_get_contents("http://rakuraku2.bangumi/programlist?channelIndex=1&programId=" . $program_id, false, $context);
+        $json_data = file_get_contents("http://rakuraku2.bangumi.org/programlist?channelIndex=1&programId=" . $program_id, false, $context);
         $data_r = json_decode($json_data, true);
-
         if (is_array($data_r["programs"])) {
+            $hasEpisode = true;
             $week = array("0" => "日", "1" => "月", "2" => "火", "3" => "水", "4" => "木", "5" => "金", "6" => "土");
 
             $tmp_data = "";
@@ -65,13 +66,35 @@ HTML;
                 $onair_week = "(" . $week[date("w", strtotime($v["s"]))] . ")";
                 $onair_startdate = date("H:i", strtotime($v["s"]));
                 $onair_enddate = date("H:i", strtotime($v["e"]));
-
+                $image = 'https:' . $v['pictures'][0]['url'];
+                $url = $v['rurls'][1]['url'];
                 $tmp_data .= <<< HTML
-	<div class="gray-box">
-		<h4 class="heading-title_lv3">{$v["title"][0]["string"]}</h4>
-		<p>{$v["dt"]}</p>
-		<p>{$onair_day} {$onair_week} {$onair_startdate} ～ {$onair_enddate}</p>
-	</div>
+<li>
+    <div class="tlt">
+        <div class="thumb">
+            <img class="util_pc" src={$image} alt="">
+            <img class="util_sp" src={$image} alt="">
+        </div>
+        <div class="txt_desp">
+            <h4>{$v["title"][0]["string"]}</h4>
+            <span>{$onair_day} {$onair_week} {$onair_startdate} ～ {$onair_enddate}</span>
+            <div class="util_pc">
+                <p>{$v["dt"]}</p>
+                    <a href={$url}>
+                        <div class="btn_more">
+                                <span>詳しく見る</span>
+                        </div>
+                    </a>
+            </div>
+        </div>
+    </div>
+    <div class="util_sp">
+        <p>{$v["dt"]}</p>
+        <div class="btn_more">
+            <span>詳しく見る</span>
+        </div>
+    </div>
+</li>
 HTML;
             }
             if (!empty($tmp_data)) {
@@ -79,10 +102,25 @@ HTML;
             }
         }
     }
-    echo $html;
+
     ?>
 
     <!-- end -->
 
     <?php
-}
+} ?>
+<section class="section" id="episode">
+    <div class="inner">
+        <h2>エピソード</h2>
+        <div class="list_episode">
+            <ul>
+                <?php echo $html; ?>
+            </ul>
+        </div>
+        <?php if ($hasEpisode): ?>
+            <div class="btn_all">
+                <span>エピソードをすべて見る</span>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>

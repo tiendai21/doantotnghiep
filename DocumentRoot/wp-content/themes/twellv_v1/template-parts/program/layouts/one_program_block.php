@@ -27,7 +27,7 @@ if (get_sub_field('display_switch')) :
         $the_query->the_post();
         $movietag = get_field('next_program_movietag');
         ?>
-        <div class="next-ep">
+        <div class="one_program_block next-ep">
             <div class="brand_left">
                 <?php
                 if ($movietag) {
