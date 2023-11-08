@@ -446,6 +446,7 @@ a {
         width: get_sp(73);
         height: get_sp(73);
         border: get_sp(2) solid #134898;
+        padding-bottom: get_sp(10);
     }
 
     a {
@@ -462,6 +463,8 @@ a {
             }
 
             @include sp {
+                position: relative;
+                top: get_sp(1);
                 width: get_sp(36);
                 height: get_sp(2);
             }
