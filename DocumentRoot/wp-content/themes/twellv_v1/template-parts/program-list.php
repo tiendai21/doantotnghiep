@@ -208,7 +208,7 @@ foreach ($terms as $t) {
     </section>
     <!-- /broadcast schedule -->
     <!-- ranking -->
-    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => 'ランキング', 'sns' => true)); ?>
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => 'ランキング', 'sns' => false)); ?>
     <!-- /ranking -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
@@ -269,16 +269,6 @@ foreach ($terms as $t) {
     </section>
     <!-- /Korean dramas scheduled to air -->
     <!-- The Korean drama has ended its broadcast -->
-    <?php
-    /**
-     * add function 20200317 yanagi ↓↓
-     * BS12_RENEWAL-212 【施策ID：47-1】韓国ドラマ > 放送終了番組の統合
-     *
-     * edit 20201012 yanagi
-     * BS12_RENEWAL-269 【タスク】レイアウト変更ならびにWP機能追加
-     *
-     */
-    ?>
     <?php if (preg_match('/korea/', $term_list_object->slug)) : ?>
         <section class="section" id="dramas_ended">
             <div class="inner">
@@ -301,7 +291,7 @@ foreach ($terms as $t) {
                     }
                     ?>
                 </div>
-                <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'test', 'modal' => $dramas_ended_modal)); ?>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送終了の韓国ドラマ', 'modal' => $dramas_ended_modal)); ?>
             </div>
         </section>
         <?php // add function 20200317 yanagi ↑↑ ?>
@@ -320,12 +310,17 @@ foreach ($terms as $t) {
                         $i = 0;
                         foreach ($programs_arr[3] as $t) {
                             if ($i > 5) break; // 6件のみ表示
+                            ob_start();
+                            get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                            $dramas_ended_modal .= ob_get_contents();
+                            ob_end_clean();
                             tpl_program_list_item_pre($t);
                             $i++;
                         }
                     }
                     ?>
                 </div>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送終了の韓国ドラマ', 'modal' => $dramas_ended_modal)); ?>
             </div>
         </section>
     <?php endif; ?>
