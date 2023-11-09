@@ -249,7 +249,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                         ?>
                     </ul>
                     <div class="btn_more">
-                        <span>すべて見る</span>
+                        <span>もっと見る</span>
                     </div>
                     <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送終了', 'modal' => $modal)); ?>
                 </div>

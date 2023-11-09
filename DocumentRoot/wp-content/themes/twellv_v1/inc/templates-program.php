@@ -554,7 +554,7 @@ function display_program_voice_by_category_slug($slug)
                     <h2>お客様の声</h2>
                     <div class="btn_more">
                         <a href="<?php echo esc_url(home_url('/faq'))?>">
-                            <span>すべて見る</span>
+                            すべて見る
                         </a>
                     </div>
                 </div>
