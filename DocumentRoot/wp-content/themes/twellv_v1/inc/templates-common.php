@@ -251,3 +251,8 @@ if($_SERVER["HTTP_HOST"]=='www.twellv.co.jp'){
     add_filter( 'acf_the_content', 'replacement_img_url_www' );
     add_filter( 'acf/load_value', 'replacement_img_url_www' );
 }
+// Local environment
+if($_SERVER["HTTP_HOST"]=='localhost' || TWELLV_LOCAL ){
+    add_filter( 'acf_the_content', 'replacement_img_url_www' );
+    add_filter( 'acf/load_value', 'replacement_img_url_www' );
+}
