@@ -52,6 +52,9 @@ function twellv_class($classes)
     if (is_page('search')) {
         $classes[] = 'search';
     }
+    if (is_page('program_schedule')) {
+        $classes[] = 'program_schedule';
+    }
     if (is_page('social')) {
         $classes[] = 'list_account';
     }

@@ -78,7 +78,10 @@ function doubleSlide() {
 add_shortcode( 'test-rakuraku', 'testRaku' );
 function testRaku( ) {
     $url = 'https://rakuraku2.bangumi.org/tablePage';
+    //pc
     $data = 'platform=D&isSamplePage=false&referer=www.twellv.co.jp&channelIndex=1&fromArrow=&getPrevious=&getNext=';
+    // sp
+    // $data = 'platform=M&isSamplePage=false&referer=www.twellv.co.jp&channelIndex=1&fromArrow=&getPrevious=&getNext=&currentDataStartingDate=20231106&currentDataEndingDate=20231112';
 
     $headers = array(
         'authority: rakuraku2.bangumi.org',
