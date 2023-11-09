@@ -28,10 +28,10 @@ function singlePageSidebar( ) {
     return $content;
 }
 add_shortcode( 'single-page-other', 'singlePageOther' );
-function singlePageOther( ) {
+function singlePageOther($args) {
     $content = "";
     ob_start();
-    get_template_part('template-parts/single-pages/other');
+    get_template_part('template-parts/single-pages/other', null, array('type' => $args['type']));
     $content .= ob_get_contents();
     ob_end_clean();
     return $content;

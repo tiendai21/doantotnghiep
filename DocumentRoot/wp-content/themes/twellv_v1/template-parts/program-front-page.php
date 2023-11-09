@@ -1,5 +1,8 @@
 <input class="id_single" type="hidden" value="<?php the_ID() ?>">
 <?php
+/*
+ * Program detail page
+ * */
 $program_term = get_queried_object();
 
 global $bs12_program_top_parts_arr;
