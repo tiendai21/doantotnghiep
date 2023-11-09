@@ -23,7 +23,9 @@ function tpl_program_list_item($t)
 ?>
     <div class="item_slide">
         <a href="<?php echo get_term_link($t); ?>">
-            <?php echo get_program_thumbnail($t, 'item'); ?>
+            <div class="thumb">
+                <?php echo get_program_thumbnail($t, 'item'); ?>
+            </div>
             <div class="content_dramas">
                 <h2><?php echo esc_attr($t->name); ?></h2>
                 <span><?php echo get_field('pg_text', $t); ?></span>

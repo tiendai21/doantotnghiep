@@ -9,7 +9,7 @@
 				<div class="onair-date"><?php echo get_field( 'onairtime'); ?></div>
 				<div class="onair-state">
 					<div class="heading">
-						<h3 class="program-title"><?php the_title(); ?></p>
+						<h3 class="program-title"><?php the_title(); ?></h3>
 					</div>
 					<p class="description"><?php echo get_field( 'overview'); ?></p>
 				</div>

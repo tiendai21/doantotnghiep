@@ -53,12 +53,15 @@ foreach ($terms as $t) {
 <main id="main">
     <ul class="breadcrumb">
         <li>
-            <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+            <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
         </li>
         <li>
-            <a href="#">ドラマ・映画</a>
+            <a href="<?php echo esc_url(home_url('/program/')) ?>">ドラマ・映画</a>
         </li>
-        <li>
+        <li class="util_pc">
+            <span>韓国・韓流ドラマ</span>
+        </li>
+        <li class="util_sp">
             <span>韓国・</span>
         </li>
     </ul>
@@ -167,7 +170,7 @@ foreach ($terms as $t) {
     <section class="section" id="broadcast_schedule">
         <div class="inner">
             <div class="tlt_section">
-                <h2>ドラマ・映画</h2>
+                <h2>放送予定</h2>
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>
@@ -208,7 +211,7 @@ foreach ($terms as $t) {
     </section>
     <!-- /broadcast schedule -->
     <!-- ranking -->
-    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => 'ランキング', 'sns' => false)); ?>
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => '韓国・韓流ドラマランキング', 'sns' => false)); ?>
     <!-- /ranking -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
@@ -338,7 +341,14 @@ foreach ($terms as $t) {
     <?php get_template_part( 'template-parts/home/pr_top' ); ?>
     <!-- /PR -->
     <!-- other -->
-    <?php get_template_part( 'template-parts/home/other_top' ); ?>
+    <section class="section" id="other">
+        <div class="inner">
+            <div class="tlt_section">
+                <h2>人気の番組カテゴリ</h2>
+            </div>
+            <?php get_template_part('template-parts/seo/category_famous_list'); ?>
+        </div>
+    </section>
     <!-- /other -->
 </main>
 

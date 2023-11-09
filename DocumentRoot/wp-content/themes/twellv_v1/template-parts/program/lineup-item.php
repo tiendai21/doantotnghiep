@@ -11,7 +11,7 @@
             </div>
             <figcaption class="text-block">
                 <div class="heading">
-                    <h3 class="program-title"><?php the_title(); ?></p>
+                    <h3 class="program-title"><?php the_title(); ?></h3>
                     <p class="onair-date"><?php echo get_field( 'onairtime'); ?></p>
                 </div>
                 <p class="description">

@@ -30,8 +30,6 @@
             padding: 0;
         }
     }
-
-    #recommend,
     #broadcast_schedule {
         .tlt_section {
             margin: 0 auto 18px;
@@ -73,7 +71,54 @@
             }
         }
     }
+    #recommend {
+        margin-top: 0;
+        .tlt_section {
+            margin: 0 auto 18px;
+            background: transparent;
+            padding-top: 0;
+            padding-bottom: 0;
 
+            @include pc {
+                margin: 0 auto get_pc(18);
+            }
+
+            @include sp {
+                margin: 0 auto get_sp(15);
+            }
+        }
+        .bg_gray {
+            background: unset;
+            padding-bottom: 0;
+            padding-top: 11px;
+            border: 0;
+            margin-bottom: 0;
+            @include pc {
+                padding-top: get_pc(11);
+            }
+            @include sp {
+                padding-top: get_sp(7);
+            }
+            .program_slide {
+                margin-bottom: 45px;
+                @include pc {
+                    margin-bottom: get_pc(45);
+                }
+                @include sp {
+                    margin-bottom: get_sp(18);
+                }
+            }
+        }
+        .list_brand {
+            margin-bottom: 75px;
+            @include pc {
+                margin-bottom: get_pc(75);
+            }
+            @include sp {
+                margin-bottom: get_sp(38);
+            }
+        }
+    }
     /*
     program_air
     */
@@ -163,7 +208,15 @@
                     @include sp {
                         height: get_sp(90);
                     }
-                    
+                    img {
+                        border-radius: 15px 15px 0 0;
+                        @include pc {
+                            border-radius: get_pc(15) get_pc(15) 0 0;
+                        }
+                        @include sp {
+                            border-radius: get_sp(5) get_sp(5) 0 0;
+                        }
+                    }
                 }
 
                 .txt_desp {
@@ -175,6 +228,7 @@
                     }
 
                     @include sp {
+                        height: auto;
                         padding: get_sp(3) get_sp(2.5) get_sp(9);
                     }
 
@@ -184,7 +238,7 @@
                         line-height: 35px;
                         font-weight: bold;
                         letter-spacing: 2.4px;
-
+                        @include txtClamp(1);
                         @include pc {
                             font-size: get_pc(24);
                             line-height: get_pc(35);
@@ -204,7 +258,8 @@
                         line-height: 26px;
                         font-weight: 500;
                         letter-spacing: 1.8px;
-
+                        @include txtClamp(1);
+                        padding: 0;
                         @include pc {
                             font-size: get_pc(18);
                             line-height: get_pc(26);
@@ -213,7 +268,7 @@
 
                         @include sp {
                             font-size: get_sp(10);
-                            line-height: get_sp(26);
+                            line-height: get_sp(15);
                             letter-spacing: get_sp(1);
                         }
                     }
@@ -232,6 +287,24 @@
 
             @include sp {
                 margin-bottom: get_sp(29);
+            }
+        }
+    }
+
+    /*
+        other
+    */
+    #other {
+        .list_other {
+            li {
+                &:nth-last-child(-n + 3) {
+                    margin-bottom: 0;
+                }
+                &:nth-last-child(3) {
+                    @include sp {
+                        margin-bottom: get_sp(7);
+                    }
+                }
             }
         }
     }

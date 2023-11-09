@@ -69,9 +69,9 @@ $args['meta_query'] = [
     endif;
     ?>
     <div class="broadcast_schedule util_pc">
-        <a class="util_pc" href="<?php echo esc_url(home_url('/program_schedule'))?>">放送スケジュール</a>
+        <a href="<?php echo esc_url(home_url('/program_schedule'))?>">放送スケジュール</a>
     </div>
     <div class="broadcast_schedule util_sp">
-        <a class="util_sp" href="<?php echo esc_url(home_url('/program_schedule'))?>">放送ラインアップ</a>
+        <a href="<?php echo esc_url(home_url('/program_schedule'))?>">放送ラインアップ</a>
     </div>
 </div>
