@@ -85,7 +85,7 @@ a {
         border-radius: get_pc(50);
     }
 
-    span, a {
+    span {
         font-size: 22px;
         letter-spacing: 1.1px;
         line-height: 32px;
@@ -504,7 +504,7 @@ a {
             line-height: 31px;
             font-weight: bold;
             letter-spacing: 3.9px;
-
+            text-transform: uppercase;
             @include pc {
                 font-size: get_pc(26);
                 line-height: get_pc(31);

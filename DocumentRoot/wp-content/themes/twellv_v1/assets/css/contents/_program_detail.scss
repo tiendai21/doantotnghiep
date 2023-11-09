@@ -645,6 +645,20 @@
             }
         }
     }
+    #broadcast_schedule {
+        .inner {
+            .tlt_section {
+                h2 {
+                    &:before {
+                        content: none;
+                    }
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
     #video_youtube {
         .inner {
             max-width: 1476px;
