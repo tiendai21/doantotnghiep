@@ -21,13 +21,10 @@ foreach ($terms as $t) {
 <main id="main">
     <ul class="breadcrumb">
         <li>
-            <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+            <a href="<?php echo esc_url(home_url('/'))?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
         </li>
         <li>
-            <a href="#">ドラマ・映画</a>
-        </li>
-        <li>
-            <span>韓国・</span>
+            <span><?php echo esc_attr( $term_list_object_name ); ?></span>
         </li>
     </ul>
     <!-- banner catefory -->
@@ -35,7 +32,7 @@ foreach ($terms as $t) {
         <div class="inner">
             <div class="siler_category_top">
                 <div class="txt_fixed">
-                    <h2>韓国・韓流ドラマ</h2>
+                    <h2><?php echo esc_attr( $term_list_object_name ); ?></h2>
                 </div>
                 <div class="siler_top_content">
                     <?php if (have_rows('listcategory_field_banner_01', 'option')): ?>
