@@ -1,7 +1,5 @@
 .news_detail {
     #main {
-        overflow-x: hidden;
-
         @include sp {
             margin-top: get_sp(100);
         }
@@ -129,15 +127,21 @@
             .thumb {
                 margin: 0 auto 63px;
                 width: 794px;
+                height: 606px;
 
                 @include pc {
                     margin: 0 auto get_pc(63);
                     width: get_pc(794);
+                    height: get_pc(606);
                 }
 
                 @include sp {
                     margin: 0 auto get_sp(17);
                     width: get_sp(393);
+                    height: get_sp(300);
+                }
+                img {
+                    width: 100%;
                 }
             }
             .content {
@@ -285,10 +289,10 @@
             }
             .social {
                 display: flex;
-                margin: 0 auto 104px;
+                margin: 0 auto 66px;
                 max-width: 1348px;
                 @include pc {
-                    margin: 0 auto get_pc(104);
+                    margin: 0 auto get_pc(66);
                     max-width: get_pc(1348);
                 }
 
@@ -299,18 +303,18 @@
                 }
 
                 a {
-                    width: 83px;
-                    height: 83px;
+                    width: 48px;
+                    height: 48px;
                     display: inline-block;
-                    margin-left: 34px;
+                    margin-left: 23px;
                     background-position: center center;
                     background-size: 100% auto;
                     background-repeat: no-repeat;
 
                     @include pc {
-                        width: get_pc(83);
-                        height: get_pc(83);
-                        margin-left: get_pc(34);
+                        width: get_pc(48);
+                        height: get_pc(48);
+                        margin-left: get_pc(23);
                     }
 
                     @include sp {

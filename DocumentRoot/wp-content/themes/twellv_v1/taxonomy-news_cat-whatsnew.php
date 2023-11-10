@@ -75,7 +75,7 @@ $year = get_query_var( 'year');
                     <div class="util_sp">
                         <div class="btn_link">
                             <div class="btn_more">
-                                <a href="<?php echo esc_url(home_url('/news/whatsnew/'))?>"><span>もっと見る</span></a>
+                                <a href="<?php echo esc_url(home_url('/news/whatsnew/'))?>">もっと見る</a>
                             </div>
                         </div>
                     </div>

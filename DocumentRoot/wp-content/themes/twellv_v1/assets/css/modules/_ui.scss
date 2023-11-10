@@ -85,13 +85,25 @@ a {
         border-radius: get_pc(50);
     }
 
+    a {
+        &:hover {
+            opacity: initial;
+        }
+    }
+
+    a {
+        &:hover {
+            opacity: initial;
+        }
+    }
+
     span {
         font-size: 22px;
         letter-spacing: 1.1px;
         line-height: 32px;
         color: #134898;
         display: block;
-        padding: 6px 36px 8px 22px;
+        padding: 6.5px 36px 7.5px 22px;
         font-weight: bold;
         cursor: pointer;
         transition: all ease 0.3s;
@@ -100,7 +112,7 @@ a {
             font-size: get_pc(22);
             letter-spacing: get_pc(1.1);
             line-height: get_pc(32);
-            padding: get_pc(6) get_pc(36) get_pc(8) get_pc(22);
+            padding: get_pc(6.5) get_pc(36) get_pc(7.5) get_pc(22);
         }
 
         @include sp {
@@ -124,7 +136,7 @@ a {
             width: 13px;
             height: 16px;
             position: absolute;
-            top: 50%;
+            top: 51%;
             transform: translateY(-50%);
             right: 18px;
             transition: all ease 0.3s;
@@ -898,7 +910,42 @@ a {
     .program_slide .slick-prev {
         top: 32%;
     }
+}
 
+
+/*
+    recommend
+*/
+#recommend {
+    .bg_gray {
+        margin-bottom: 20px;
+        @include pc {
+            margin-bottom: get_pc(20);
+        }
+        @include sp {
+            padding-top: get_sp(23.86);
+            padding-bottom: get_sp(23.11);
+            margin-bottom: get_sp(27.63);
+            border-bottom: get_sp(2) solid #699bd3;
+        }
+        .program_slide {
+            margin-bottom: 0;
+        }
+    }
+    .tlt_section {
+        width: 100%;
+        margin: 0;
+        padding: 39px 228px 29px 172px;
+        background: #f2f2f2 0% 0% no-repeat padding-box;
+
+        @include pc {
+            padding: get_pc(39) get_pc(228) get_pc(29) get_pc(172);
+        }
+
+        @include sp {
+            padding: get_sp(23) get_sp(7) get_sp(10) get_sp(8);
+        }
+    }
 }
 
 .md_overlay {
@@ -1812,6 +1859,19 @@ a {
 
                 a {
                     display: block;
+                    width: 420px;
+                    height: 105px;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    @include pc {
+                        width: get_pc(420);
+                        height: get_pc(105);
+                        border-radius: get_pc(8);
+                    }
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -1904,11 +1964,11 @@ a {
     display: flex;
     justify-content: center;
     width: 1870px;
-    margin: 0 auto 95px;
+    margin: 0 auto 74px;
 
     @include pc {
         width: get_pc(1870);
-        margin-bottom: get_pc(95);
+        margin-bottom: get_pc(74);
     }
 
     @include sp {
@@ -1973,7 +2033,7 @@ a {
                 width: get_sp(210);
             }
             a {
-                color: #0D4898;
+                color: #000;
             }
 
             h3 {

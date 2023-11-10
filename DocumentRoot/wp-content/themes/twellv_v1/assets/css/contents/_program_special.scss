@@ -836,7 +836,7 @@
        bg_special_wrapper
     */
     .bg_special_wrapper {
-        @include bgsetup("../images/bg_social_media.png", 0 82px, 100% auto, repeat);
+        @include bgsetup("../images/bg_social_media.png", 0 490px, 100% auto, no-repeat);
     }
 
     /*
@@ -1014,6 +1014,12 @@
                             &:first-child {
                                 &::after {
                                     @include bgsetup("../images/logo_insta_spec.png", center center, 100% auto, no-repeat);
+                                    width: 36.13px;
+                                    height: 36.13px;
+                                    @include pc {
+                                        width: get_pc(36.13);
+                                        height: get_pc(36.13);
+                                    }
                                 }
                             }
                         }
@@ -1025,6 +1031,13 @@
                             &:first-child {
                                 &::after {
                                     @include bgsetup("../images/logo_tiktok_spec.png", center center, 100% auto, no-repeat);
+                                    width: 30px;
+                                    height: 30px;
+                                    @include pc {
+                                        width: get_pc(30);
+                                        height: get_pc(30);
+                                    }
+
                                 }
                             }
                         }
@@ -2721,15 +2734,6 @@
                     letter-spacing: get_sp(1.6);
                     line-height: get_sp(25);
                     width: get_sp(363);
-                }
-                &:nth-child(4) {
-                    margin-bottom: 35px;
-                    @include pc {
-                        margin-bottom: get_pc(35);
-                    }
-                    @include sp {
-                        margin-bottom: 0;
-                    }
                 }
                 &:nth-child(5) {
                     border: 0;

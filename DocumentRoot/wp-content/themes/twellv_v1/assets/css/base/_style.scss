@@ -545,9 +545,9 @@
 /*
     recommend
 */
-#recommend {
+.home #recommend {
     .bg_gray {
-        background: #F2F2F2 0% 0% no-repeat padding-box;
+        background: #F2F2F2 0 0 no-repeat padding-box;
         padding-top: 39.15px;
         padding-bottom: 62.65px;
         margin-bottom: 50px;
@@ -569,13 +569,13 @@
         }
     }
     .tlt_section {
-        width: 100%;
-        margin: 0;
-        padding: 39px 228px 29px 172px;
+        width: 1520px;
+        margin: 0 auto 28px;
         background: #f2f2f2 0% 0% no-repeat padding-box;
 
         @include pc {
-            padding: get_pc(39) get_pc(228) get_pc(29) get_pc(172);
+            width: get_pc(1520);
+            margin: 0 auto get_pc(28);
         }
 
         @include sp {
@@ -2122,12 +2122,12 @@
 
                         .txt_desp {
                             text-align: left;
-                            padding: 8px;
+                            padding: 10px 12px;
                             background-color: #e8f3ff;
                             min-height: 116px;
                             @include pc {
                                 min-height: get_pc(116);
-                                padding: get_pc(8);
+                                padding: get_pc(10) get_pc(12);
                             }
 
                             @include sp {
@@ -2141,7 +2141,7 @@
                                 line-height: 25px;
                                 letter-spacing: 1px;
                                 font-weight: bold;
-                                @include txtClamp(1);
+                                @include txtClamp(2);
 
                                 @include pc {
                                     font-size: get_pc(20);

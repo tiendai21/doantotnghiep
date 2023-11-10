@@ -155,8 +155,10 @@
             li {
                 transition: all 0.4s ease;
                 border-bottom: 14px solid #fff;
+                margin-bottom: 4px;
                 @include pc {
                     border-bottom: get_pc(14) solid #fff;
+                    margin-bottom: get_pc(4);
                 }
                 @include sp {
                     border-bottom: get_sp(5) solid #fff;
@@ -280,6 +282,12 @@
                     }
 
                 }
+                p {
+                    padding-right: 20px;
+                    @include pc {
+                        padding-right: get_pc(20);
+                    }
+                }
                 ul {
                     background-color: #FFFFFF;
                     padding: 33px 60px 30px;
@@ -296,6 +304,7 @@
                         padding-bottom: 20px;
                         border-bottom: 1px solid #b4b4b4;
                         margin-bottom: 15px;
+                        display: flex;
             
                         @include pc {
                             padding-bottom: get_pc(20);

@@ -36,6 +36,13 @@
 
 /* Broadcast Ended */
 #broadcast_ended {
+    margin-bottom: 100px;
+    @include pc {
+        margin-bottom: get_pc(100);
+    }
+    @include sp {
+        margin-bottom: get_sp(45);
+    }
     .inner {
         margin: 0 auto;
         max-width: 1520px;
@@ -56,7 +63,7 @@
                 margin-bottom: get_pc(35);
                 font-size: get_pc(30);
                 letter-spacing: get_pc(3);
-                letter-spacing: get_pc(44);
+                line-height: get_pc(44);
             }
             @include sp {
                 margin-bottom: get_sp(16);
@@ -74,7 +81,7 @@
                 margin: 0 auto;
             }
             @include sp {
-                margin: 0 get_sp(20);
+                margin: 0 get_sp(20) get_sp(10);
                 justify-content: space-between;
             }
             li {
@@ -119,27 +126,27 @@
 }
 
 #recommend {
-    margin-top: 102px;
+    margin-top: 56px;
     @include pc {
-        margin-top: get_pc(102);
+        margin-top: get_pc(56);
     }
     @include sp {
         margin-top: 0;
     }
 
     .tlt_section {
-        max-width: 1520px;
-        margin: 0 auto 25px;
         padding: 0;
+        width: 1520px;
+        margin: 0 auto 28px;
         background: transparent;
         @include pc {
-            max-width: get_pc(1520);
-            margin: 0 auto get_pc(25);
+            margin: 0 auto get_pc(28);
+            width: get_pc(1520);
         }
-
         @include sp {
-            margin: 0 auto get_sp(18);
-            padding: 0 get_sp(6.734);
+            width: 100%;
+            padding: 0 get_sp(7) 0 get_sp(8);
+            margin: 0 auto get_sp(13);
         }
     }
 

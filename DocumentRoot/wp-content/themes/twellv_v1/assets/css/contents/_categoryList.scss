@@ -320,9 +320,6 @@
             }
         }
         .tlt_section{
-            @include pc {
-                margin: 0 get_pc(228) get_pc(33) get_pc(172);
-            }
 
             h2{
                 display: flex;
@@ -383,55 +380,36 @@
                 .program_slide {
                     margin: 0;
                     .item_slide{
-                        padding-right: 15px;
-                        margin-right: 0;
-                        @include pc{
-                            padding-right: get_pc(15);
-                        }
-                        @include sp{
-                            padding-right: get_sp(7);
-                        }
                         >a{
-                            display: inline-block;
+                            width: 320px;
+                            border-radius: 15px 15px 0 0;
                             height: auto;
-                            .thumb {
-                                width: 320px;
-                                height: 180px;
-                                margin: 0;
-                                @include pc {
-                                    width: get_pc(320);
-                                    height: get_pc(180);
-                                }
-                                @include sp{
-                                    width: get_sp(160);
-                                    height: get_sp(90);
-                                }
+                            display: inline-block;
+                            overflow: hidden;
+                            @include pc {
+                                width: get_pc(320);
+                                border-radius: get_pc(15) get_pc(15) 0 0;
                             }
-                            img {
-                                border-radius: 15px 15px 0 0;
-                                @include pc {
-                                    border-radius: get_pc(15) get_pc(15) 0 0;
-                                }
-                                @include sp {
-                                    border-radius: get_sp(5) get_sp(5) 0 0;
-                                }
+                            @include sp{
+                                width: get_sp(160);
+                                border-radius: get_sp(8) get_sp(8) 0 0;
                             }
                             .content_dramas{
-                                padding: 11px 10px 20px;
+                                padding: 12px 10px 12px;
                                 text-align: left;
                                 color: #004898;
                                 background: #F2F2F2;
                                 @include pc{
-                                    padding: get_pc(11) get_pc(10) get_pc(20);
+                                    padding: get_pc(12) get_pc(10) get_pc(12);
                                 }
                                 @include sp{
-                                    padding: get_sp(2) get_sp(4) get_sp(7);
+                                    padding: get_sp(5);
                                 }
                                 h2{
                                     font-size: 20px;
                                     letter-spacing: 2px;
                                     line-height: 29px;
-                                    font-weight: bold;
+                                    font-weight: 700;
                                     @include txtClamp(1);
                                     @include pc{
                                         font-size: get_pc(20);
@@ -451,7 +429,6 @@
                                     line-height: 26px;
                                     padding-bottom: 5px;
                                     border-bottom: 2px solid #004898;
-                                    margin-bottom: 5px;
                                     @include txtClamp(1);
                                     @include pc{
                                         margin-bottom: get_pc(5);
@@ -474,16 +451,19 @@
                                     font-size: 16px;
                                     letter-spacing: 1.6px;
                                     line-height: 24px;
+                                    padding-bottom: 5px;
                                     @include txtClamp(1);
                                     @include pc{
                                         font-size: get_pc(16);
                                         letter-spacing: get_pc(1.6);
                                         line-height: get_pc(24);
+                                        padding-bottom: get_pc(5);
                                     }
                                     @include sp{
                                         font-size: get_sp(10);
                                         letter-spacing: get_sp(1);
                                         line-height: get_sp(14);
+                                        padding-bottom: get_sp(2);
                                     }
                                 }
                             }
@@ -609,14 +589,12 @@
             }
         }
         .tlt_section{
-            @include pc {
-                margin: 0 get_pc(228) get_pc(26) get_pc(172);
-            }
             @include sp{
                 margin-bottom: get_sp(22);
             }
             h2{
                 @include sp{
+                    max-width: get_sp(200);
                     font-size: get_sp(18);
                     letter-spacing: get_sp(1.8);
                     line-height: get_sp(26);
@@ -655,9 +633,6 @@
             }
         }
         .tlt_section{
-            @include pc {
-                margin: 0 get_pc(228) get_pc(25) get_pc(172);
-            }
             @include sp{
                 margin-bottom: get_sp(18);
                 h2{
@@ -800,12 +775,16 @@
             }
         }
         .tlt_section{
-            margin-bottom: 50px;
-            @include pc{
-                margin: 0 get_pc(228) get_pc(50) get_pc(172);
+            width: 1520px;
+            margin: 0 auto 50px;
+            @include pc {
+                width: get_pc(1520);
+                margin: 0 auto get_pc(50);
             }
-            @include sp{
-                margin-bottom: get_sp(22);
+            @include sp {
+                width: 100%;
+                padding: 0 get_sp(7) 0 get_sp(8);
+                margin: 0 auto get_sp(13);
             }
             h2{
                 &::before{

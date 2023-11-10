@@ -1,6 +1,7 @@
 <?php /* BS12おすすめ */ ?>
     <!-- BS12おすすめ番組 -->
 <?php
+$hideBrandBanner = $args['hideBrand'];
 $modal = "";
 /**
  * 1.①かつ②の条件の番組をカテゴリ順に表示する。
@@ -61,9 +62,15 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
                 </div>
                 <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'BS12おすすめ番組', 'modal' => $modal)); ?>
             </div>
-            <!--      List brand banners        -->
-            <?php get_template_part('template-parts/home/brand-banner'); ?>
-            <!--      /List brand banners        -->
+            <?php
+            if (!$hideBrandBanner):
+                ?>
+                <!--      List brand banners        -->
+                <?php get_template_part('template-parts/home/brand-banner'); ?>
+                <!--      /List brand banners        -->
+            <?php
+            endif;
+            ?>
         </div>
     </section>
 <?php

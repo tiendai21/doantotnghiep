@@ -71,54 +71,19 @@
             }
         }
     }
+
     #recommend {
-        margin-top: 0;
-        .tlt_section {
-            margin: 0 auto 18px;
-            background: transparent;
-            padding-top: 0;
-            padding-bottom: 0;
-
-            @include pc {
-                margin: 0 auto get_pc(18);
-            }
-
-            @include sp {
-                margin: 0 auto get_sp(15);
-            }
-        }
         .bg_gray {
-            background: unset;
-            padding-bottom: 0;
-            padding-top: 11px;
-            border: 0;
-            margin-bottom: 0;
+            padding-bottom: initial;
+            border-bottom: initial;
+            background-color: initial;
+            margin-bottom: 45px;
             @include pc {
-                padding-top: get_pc(11);
-            }
-            @include sp {
-                padding-top: get_sp(7);
-            }
-            .program_slide {
-                margin-bottom: 45px;
-                @include pc {
-                    margin-bottom: get_pc(45);
-                }
-                @include sp {
-                    margin-bottom: get_sp(18);
-                }
-            }
-        }
-        .list_brand {
-            margin-bottom: 75px;
-            @include pc {
-                margin-bottom: get_pc(75);
-            }
-            @include sp {
-                margin-bottom: get_sp(38);
+                margin-bottom: get_pc(45);
             }
         }
     }
+
     /*
     program_air
     */
