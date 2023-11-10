@@ -303,6 +303,13 @@ foreach ($bangumi_s_data as $key => $d) {
 foreach ($bangumi_e_data as $key => $d) {
     $html .= $d;
 }
+//reverse slide
+foreach (array_reverse($bangumi_e_data) as $key => $d) {
+    $html_r .= $d;
+}
+foreach (array_reverse($bangumi_s_data) as $key => $d) {
+    $html_r .= $d;
+}
 foreach ($modal_s_data as $key => $d) {
     $modal .= $d;
 }
@@ -324,7 +331,7 @@ foreach ($modal_e_data as $key => $d) {
             <?php echo $html?>
         </div>
         <div class="program_slide slide_list">
-            <?php echo $html?>
+            <?php echo $html_r?>
         </div>
         <?php get_template_part('template-parts/home/modal_category', null, array('modal' => $modal)); ?>
     </div>
