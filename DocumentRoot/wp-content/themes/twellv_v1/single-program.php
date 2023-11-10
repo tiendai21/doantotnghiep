@@ -147,7 +147,6 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
             <!--   /archive episode      -->
         <?php endif; ?>
         <!-- cat ranking -->
-
         <?php
         get_template_part('template-parts/ranking/ranking', null, array('cat' => $category_term->slug, 'title' => $category_term->name . 'ランキング', 'sns' => false)); ?>
         <!-- /cat ranking -->

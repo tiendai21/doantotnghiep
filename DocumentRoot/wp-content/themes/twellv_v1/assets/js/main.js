@@ -51,7 +51,7 @@
         voiceList(".voice_list", false, false);
         synopsisList(".synopsis_list", false, false);
         showPopUp();
-
+        toggleReadMore();
         // categorry
         slideProgram(".dramas_top", false, false);
         slideProgram(".dramas_bottom", false, false);
@@ -117,14 +117,30 @@
                 $("#___gcse_0").toggle("slide");
                 $(".header_link ul").addClass("active");
             });
-            $("#___gcse_0").click(function () {
+        }
+    }
+    function clickOutSite() {
+        $(document).click(function (event) {
+            if ($(event.target).closest("#___gcse_0").length === 0) {
                 $(".box_search_sp").removeClass("active");
                 $("#___gcse_0").toggle("slide");
                 $(".header_link ul").removeClass("active");
-            });
-        }
+            }
+        });
     }
-
+    function toggleReadMore() {
+        $(".list_episode ul li:not(:nth-child(-n + 4))").hide();
+        $("#episode .btn_more").click(function () {
+            if (!$(this).hasClass("show_detail")) {
+                $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).show();
+                $(this).addClass('show_detail');
+                $("body").css("overflow", "auto");
+            }else  {
+                $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).hide();
+                $(this).removeClass('show_detail');
+            }
+        });
+    }
     function toggleMenuFooter() {
         if (_width <= _spmode) {
             $(".nav_footer h3").click(function () {
