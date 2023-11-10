@@ -2205,6 +2205,21 @@
                         }
                     }
                 }
+                .modal_ytb {
+                    width: 100%;
+                    height: 80%;
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 15px;
+                        @include pc {
+                            border-radius: get_pc(15);
+                        }
+                        @include sp {
+                            border-radius: get_sp(10);
+                        }
+                    }
+                }
             }
         }
     }

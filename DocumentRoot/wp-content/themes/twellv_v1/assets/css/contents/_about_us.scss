@@ -111,15 +111,11 @@
                         color: #004898;
                         font-weight: bold;
                         padding-bottom: 5px;
-                        margin-bottom: 10px;
-                        border-bottom: 2px solid #004898;
                         @include pc {
                             font-size: get_pc(39);
                             letter-spacing: get_pc(4);
                             line-height: get_pc(51);
                             padding-bottom: get_pc(5);
-                            margin-bottom: get_pc(10);
-                            border-bottom: get_pc(2) solid #004898;
                         }
                         @include sp {
                             font-size: get_sp(16);
@@ -134,6 +130,9 @@
                         font-size: 30px;
                         letter-spacing: 3px;
                         line-height: 35px;
+                        padding-top: 10px;
+                        margin-right: 30px;
+                        border-top: 2px solid #004898;
                         font-weight: bold;
                         display: block;
                         text-align: right;
@@ -141,12 +140,18 @@
                             font-size: get_pc(30);
                             letter-spacing: get_pc(3);
                             line-height: get_pc(35);
+                            padding-top: get_pc(10);
+                            margin-right: get_pc(30);
+                            border-top: get_pc(2) solid #004898;
                         }
                         @include sp {
                             font-size: get_sp(15.5);
                             letter-spacing: get_sp(0.6);
                             line-height: get_sp(24);
+                            padding-top: 0;
+                            margin-right: 0;
                             text-align: left;
+                            border: none;
                         }
                     }
                 }

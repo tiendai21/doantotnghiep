@@ -184,6 +184,7 @@
                 font-size: 40px;
                 line-height: 58px;
                 letter-spacing: 6px;
+                margin-top: -7px;
                 margin-right: 20px;
                 font-weight: 500;
                 @include pc {
@@ -191,12 +192,14 @@
                     line-height: get_pc(58);
                     letter-spacing: get_pc(6);
                     margin-right: get_pc(20);
+                    margin-top: get_pc(-7);
                 }
                 @include sp {
                     font-size: get_sp(17);
                     line-height: get_sp(20);
                     letter-spacing: get_sp(2.55);
                     margin-right: get_sp(7);
+                    margin-top: unset;
                 }
             }
         }
@@ -397,7 +400,7 @@
                 margin-bottom: 20px;
                 font-weight: bold;
                 color: #004898;
-                border-bottom: 2px solid;
+                border-bottom: 1px solid;
                 @include pc {
                     font-size: get_pc(25);
                     line-height: get_pc(26);
