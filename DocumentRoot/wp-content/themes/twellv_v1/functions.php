@@ -91,7 +91,11 @@ function twellv_class($classes)
     if (is_post_type_archive('press')) {
         $classes[] = 'the_press';
     }
-
+    $archive_term = get_queried_object();
+    $archive_bullet_design = get_field('archive_bullet_design', $archive_term);
+    if ($archive_bullet_design) {
+        $classes[] = 'limited_rewards';
+    }
     $classes[] = '';
     return $classes;
 }

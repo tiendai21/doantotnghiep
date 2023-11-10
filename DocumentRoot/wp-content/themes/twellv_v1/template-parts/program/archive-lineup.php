@@ -75,97 +75,61 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
         ?>
 
         <!-- 番組名％％ の放送ラインナップ -->
-        <section class="section-wrap">
-            <div class="program-list-wrap">
                 <?php
                 // ↓↓【ザ・カセットテープ・ミュージック】番組ページ改修 リスト表示デザイン変更処理 add 20200214 yanagi
                 $archive_bullet_design = get_field('archive_bullet_design', $archive_term);
                 if ($archive_bullet_design) {
                     ?>
-                    <div class="program2-list w320 type-B">
-                        <?php
-                        while (have_posts()) {
-                            the_post();
-                            get_template_part('template-parts/program/bullet', 'item');
-                        }
-                        ?>
-                    </div>
+                    <section class="section" id="limited_rewards">
+                        <div class="inner">
+                            <div class="thumb">
+                                <?php
+                                // WYSIWYG
+                                $archive_top_text = get_field( 'archive_top_text', $archive_term );
+                                if ( $archive_top_text ) {
+                                    echo add_tag_custom_class( $archive_top_text );
+                                }
+                                ?>
+                            </div>
+                            <ul>
+                                <?php
+                                while (have_posts()) {
+                                    the_post();
+                                    get_template_part('template-parts/program/bullet', 'item');
+                                }
+                                ?>
+                            </ul>
+                        </div>
+                    </section>
                     <?php
                 } else {
                     // ↑↑【ザ・カセットテープ・ミュージック】番組ページ改修 リスト表示デザイン変更処理 add 20200214 yanagi
                     ?>
-
-                    <div class="program-list w320 type-B">
-
-                    </div>
+                    <section class="section" id="episode">
+                        <div class="inner">
+                            <h2>エピソード</h2>
+                            <div class="list_episode">
+                                <ul>
+                                    <?php
+                                    while (have_posts()) {
+                                        the_post();
+                                        get_template_part('template-parts/program/lineup', 'item');
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                            <div class="btn_all">
+                                <span>エピソードをすべて見る</span>
+                            </div>
+                        </div>
+                    </section>
                     <?php
                 }
                 ?>
-            </div>
 
-        </section>
-        <section class="section" id="episode">
-            <div class="inner">
-                <h2>エピソード</h2>
-                <div class="list_episode">
-                    <ul>
-                        <?php
-                        while (have_posts()) {
-                            the_post();
-                            get_template_part('template-parts/program/lineup', 'item');
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <div class="btn_all">
-                    <span>エピソードをすべて見る</span>
-                </div>
-            </div>
-        </section>
         <!-- /番組名％％ の放送ラインナップ -->
-
-
-        <?php
-        $archive_bottom_text = get_field('archive_bottom_text', $archive_term);
-        if ($archive_bottom_text) {
-            echo '<div class="text-wrap">';
-            echo add_tag_custom_class($archive_bottom_text);
-            echo '</div>';
-        }
+        <?php   get_template_part('template-parts/program/share-buttons', null, ['isSimple' => true]);
         ?>
-        <?php
-        //【施策ID：49-4】ハワイコラム対策：番組紹介コンテンツおよびリンク動線追加 add ishizaki20200420↓
-        $link_programtop_under = get_field('link_programtop_under', $program_term);
-        if ($link_programtop_under) {
-            $img = get_field('list_thumb', $program_term);
-            ?>
-            <div class="program-list-wrap category-top-link">
-                <div class="program-list w320 type-C card">
-                    <article class="item">
-                        <a href="<?php echo get_term_link($program_term); ?>">
-                            <figure>
-                                <div class="img"><img src="<?php echo $img['url'] ?>"
-                                                      alt="<?php echo $program_term->name; ?>"></div>
-                                <figcaption class="text-block">
-                                    <div class="heading">
-                                        <p class="program-title"><?php echo $program_term->name; ?></p>
-                                        <p class="onair-date"><?php echo get_field('onairtime', $program_term); ?></p>
-                                    </div>
-                                    <p class="description"><?php echo get_field('pg_text', $program_term); ?></p>
-                                    <p class="btn"><span><?php echo $program_term->name; ?>TOPへ</span></p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </article>
-                </div>
-            </div>
-            <?php
-        }
-        //add ishizaki20200420↑
-        ?>
-
-        <?php get_template_part('template-parts/program/share', 'buttons'); ?>
-
     </div>
 
 

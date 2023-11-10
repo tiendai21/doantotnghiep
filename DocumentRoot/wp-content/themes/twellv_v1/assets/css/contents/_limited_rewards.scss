@@ -515,4 +515,49 @@
             }
         }
     }
+    .program-contents-wrap {
+        >ul {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-bottom: 82px;
+            @include pc {
+                margin-bottom: get_pc(82);
+            }
+            @include sp {
+                justify-content: space-between;
+                padding: 0 get_sp(56);
+                margin-bottom: get_sp(16);
+            }
+            li {
+                &:not(:last-child) {
+                    margin-right: 61px;
+                    @include pc {
+                        margin-right: get_pc(61);
+                    }
+                    @include sp {
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 83px;
+                    height: 83px;
+                    @include pc {
+                        width: get_pc(83);
+                        height: get_pc(83);
+                    }
+                    @include sp {
+                        width: get_sp(51);
+                        height: get_sp(51);
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
 }

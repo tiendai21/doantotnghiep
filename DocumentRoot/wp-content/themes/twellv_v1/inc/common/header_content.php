@@ -41,8 +41,8 @@
                         </li>
                     </ul>
                 </div>
-                    <script async src="https://cse.google.com/cse.js?cx=a788cdaa4e6e54b84">
-                    </script>
+                <script async src="https://cse.google.com/cse.js?cx=31d50f4b835c54b9f">
+                </script>
                 <div class="gcse-searchbox-only" data-resultsUrl="<?php echo esc_url(home_url('/search'))?>" data-newWindow="true" data-queryParameterName="q">
                 </div>
                 <div class="util_sp">
