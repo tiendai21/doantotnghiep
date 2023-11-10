@@ -25,12 +25,11 @@ if ( $term_obj ) {
 			get_template_part( 'template-parts/program', 'list' );
 		}
     } else {
-        // 番組内アーカイブ・放送スケジュール等
-        get_template_part( 'template-parts/program/archive', 'lineup' );
+        // 番組内アーカイブ・放送スケジュール等 (program-archive)
+        get_template_part( 'template-parts/program/archive-lineup' );
     }
 }
 ?>
-</div><!-- #tpl-contents -->
 <?php get_term_category_link(); ?>
 <?php
 get_footer();

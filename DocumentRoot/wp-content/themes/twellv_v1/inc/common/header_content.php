@@ -101,20 +101,7 @@
         </div>
         <nav class="nav_sp util_sp">
             <div class="inner">
-                <div class="box_search gsc-control-searchbox-only gsc-control-searchbox-only-ja">
-                    <script>
-                        (function() {
-                            var cx = '004796445106652204294:_ts3nnisbki';
-                            var gcse = document.createElement('script');
-                            gcse.type = 'text/javascript';
-                            gcse.async = true;
-                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                            var s = document.getElementsByTagName('script')[0];
-                            s.parentNode.insertBefore(gcse, s);
-                        })();
-                    </script>
-                    <gcse:searchbox-only></gcse:searchbox-only>
-                </div>
+                <div class="gcse-searchbox-only" data-resultsUrl="<?php echo esc_url(home_url('/search'))?>" data-newWindow="true" data-queryParameterName="q">
                 <div class="start_nav">
                     <ul>
                         <li><a href="#">番組表</a></li>

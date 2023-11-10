@@ -70,7 +70,14 @@ function twellv_class($classes)
     if (is_post_type_archive('program')) {
         $classes[] = 'list_program';
     }
+    if (is_singular('program') && get_post_format() === 'chat') {
+        $classes[] = 'correlation_diagrams';
+    }
     if (is_tax('program_cat')) {
+        $slug = get_the_terms(get_the_ID(), 'program_cat')[0]->slug;
+        if (str_contains($slug, 'archive')) {
+            $classes[] = 'program_detail_archive';
+        }
         $classes[] = 'program_detail';
     }
     if (is_post_type_archive('press')) {

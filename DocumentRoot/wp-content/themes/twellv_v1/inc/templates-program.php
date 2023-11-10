@@ -298,21 +298,22 @@ function display_program_navi($term)
     }
     if ($nav_id > 0 &&  have_rows('navs', $nav_id)) {
     ?>
-        <nav class="program-navi">
-            <ul>
-                <?php
-                while (have_rows('navs', $nav_id)) {
-                    the_row();
-                    $ttl = get_sub_field('ttl');
-                    $link = get_sub_field('link');
-                    $target_blank = get_sub_field('target_blank') ? ' target="_blank" ' : '';
-                ?>
-                    <li><a href="<?php echo esc_url($link); ?>" class="" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a></li>
-                <?php
-                }
-                ?>
-            </ul>
-        </nav>
+        <ul class="items_link">
+        <?php
+        while (have_rows('navs', $nav_id)) {
+            the_row();
+            $ttl = get_sub_field('ttl');
+            $link = get_sub_field('link');
+            $target_blank = get_sub_field('target_blank') ? ' target="_blank" ' : '';
+            $isActive = (str_contains($link, get_page_uri())) ? 'class="active"' : null;
+            ?>
+            <li <?php echo $isActive?>>
+                <a href="<?php echo esc_url($link); ?>" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a>
+            </li>
+            <?php
+        }
+        ?>
+        </ul>
     <?php
     }
 }
