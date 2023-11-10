@@ -43,7 +43,7 @@
                 </div>
                     <script async src="https://cse.google.com/cse.js?cx=a788cdaa4e6e54b84">
                     </script>
-                    <div class="gcse-searchbox-only" data-resultsUrl="<?php echo esc_url(home_url('/search'))?>" data-newWindow="true" data-queryParameterName="q">
+                <div class="gcse-searchbox-only" data-resultsUrl="<?php echo esc_url(home_url('/search'))?>" data-newWindow="true" data-queryParameterName="q">
                 </div>
                 <div class="util_sp">
                     <div class="box_search_sp">
@@ -117,11 +117,10 @@
                 </div>
                 <div class="start_nav">
                     <ul>
-                        <li><a href="#">現金化が不安な方へ</a></li>
-                        <li><a href="#">申込手順</a></li>
-                        <li><a href="#">換金率</a></li>
-                        <li><a href="#">お客様の声</a></li>
-                        <li><a href="">よくある質問</a></li>
+                        <li><a href="#">番組表</a></li>
+                        <li><a href="#">番組一覧</a></li>
+                        <li><a href="#">視聴者プレゼント</a></li>
+                        <li><a href="#">無料視聴方法</a></li>
                     </ul>
                 </div>
                 <div class="end_nav">

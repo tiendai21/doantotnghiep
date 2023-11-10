@@ -1,11 +1,12 @@
 .news_detail {
-    #main {
-        @include sp {
-            margin-top: get_sp(100);
-        }
-
+    #main{
+        margin-top: 0;
+        padding-top: 160px;
         @include pc {
-            margin-top: get_pc(160);
+            padding-top: get_pc(160);
+        }
+        @include sp {
+            padding-top: get_sp(100);
         }
     }
 
@@ -26,15 +27,38 @@
 
         li {
             padding: 0;
+            text-align: left;
             @include sp {
                 margin-right: get_sp(18);
             }
             &:nth-last-child(2) {
+                margin-right: 0;
                 &:before {
                     content: none;
                 }
             }
             &:last-child {
+                margin-left: 24px;
+                @include pc {
+                    margin-left: get_pc(24);
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    top: 50%;
+                    left: -18px;
+                    transform: translate(0, -50%) rotate(45deg);
+                    border-top: 1px solid #707070;
+                    border-right: 1px solid #707070;
+                    @include pc {
+                        width: get_pc(7);
+                        height: get_pc(7);
+                        left: get_pc(-18);
+                    }
+                }
                 @include sp {
                     margin-right: 0;
                 }
@@ -137,20 +161,22 @@
 
                 @include sp {
                     margin: 0 auto get_sp(17);
-                    width: get_sp(393);
                     height: get_sp(300);
+                    width: 100%;
                 }
                 img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
             .content {
                 max-width: 1348px;
-                margin: 0 auto 104px;
+                margin: 0 auto 91px;
                 text-align: left;
                 @include pc {
                     max-width: get_pc(1348);
-                    margin: 0 auto get_pc(104);
+                    margin: 0 auto get_pc(91);
                 }
 
                 @include sp {
@@ -208,7 +234,7 @@
                     }
                 }
 
-                p {
+                p,h4 {
                     font-size: 25px;
                     letter-spacing: 2.5px;
                     line-height: 35px;
@@ -236,7 +262,16 @@
                         }
                     }
                 }
-
+                h4 {
+                    margin-bottom: 20px;
+                    font-weight: 500;
+                    @include pc {
+                        margin-bottom: get_pc(20);
+                    }
+                    @include sp {
+                        margin-bottom: get_sp(10);
+                    }
+                }
                 ul {
                     margin-bottom: 62px;
 
@@ -289,67 +324,59 @@
             }
             .social {
                 display: flex;
-                margin: 0 auto 66px;
+                margin: 0 auto 117px;
                 max-width: 1348px;
+                justify-content: flex-end;
                 @include pc {
-                    margin: 0 auto get_pc(66);
+                    margin: 0 auto get_pc(117);
                     max-width: get_pc(1348);
                 }
-
                 @include sp {
                     margin: 0 auto get_sp(51);
                     max-width: 100%;
                     padding: 0 get_sp(49);
+                    justify-content: space-between;
                 }
 
                 a {
-                    width: 48px;
-                    height: 48px;
+                    width: 83px;
+                    height: 83px;
                     display: inline-block;
-                    margin-left: 23px;
-                    background-position: center center;
-                    background-size: 100% auto;
-                    background-repeat: no-repeat;
+                    margin-left: 61px;
 
                     @include pc {
-                        width: get_pc(48);
-                        height: get_pc(48);
-                        margin-left: get_pc(23);
+                        width: get_pc(83);
+                        height: get_pc(83);
+                        margin-left: get_pc(61);
                     }
 
                     @include sp {
                         width: get_sp(61);
                         height: get_sp(59);
-                        margin-left: get_sp(58);
-                    }
-
-                    &:first-child {
-                        margin-left: auto;
-                        background-image: url("../images/logo_x.png");
-                    }
-                    &:nth-child(2) {
-                        background-image: url("../images/logo_fb.png");
-                    }
-                    &:last-child {
-                        background-image: url("../images/logo_line.png");
-                    }
-                    &:hover {
-                        opacity: initial;
-                        &:first-child {
-                            background-image: url("../images/logo_x_hover.png");
-                        }
-                        &:nth-child(2) {
-                            background-image: url("../images/logo_fb_hover.png");
-                        }
-                        &:last-child {
-                            background-image: url("../images/logo_line_hover.png");
-                        }
+                        margin-left: 0;
                     }
                 }
             }
         }
     }
-
+    #recommend {
+        margin-top: 0;
+        .bg_gray {
+            background: unset;
+            padding: 0;
+            border: 0;
+            margin-bottom: 64px;
+            @include pc {
+                margin-bottom: get_pc(64);
+            }
+            @include sp {
+                margin-bottom: get_sp(25);
+            }
+        }
+        .list_brand {
+            display: none;
+        }
+    }
     #history {
         .tlt_section {
             margin-bottom: 39px;

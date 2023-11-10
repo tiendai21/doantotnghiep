@@ -218,14 +218,14 @@ a {
                 height: 100%;
                 object-fit: cover;
                 box-shadow: 0 3px 6px #00000029;
-                border-radius: 5px;
+                border-radius: 5px 5px 0 0;
                 @include pc {
                     box-shadow: 0 get_pc(3) get_pc(6) rgba(0, 0, 0, 0.161);
-                    border-radius: get_pc(5);
+                    border-radius: get_pc(5) get_pc(5) 0 0;
                 }
                 @include sp {
                     box-shadow: 0 get_sp(3) get_sp(6) rgba(0, 0, 0, 0.161);
-                    border-radius: get_sp(3);
+                    border-radius: get_sp(3) get_sp(3) 0 0;
                 }
             }
         }

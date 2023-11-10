@@ -42,7 +42,7 @@ if ($relate_program) {
                             <a href="<?php echo get_term_link($program_parent_term); ?>"><?php echo $program_parent_term->name; ?></a>
                         </li>
                     <?php } ?>
-                    <li><a href="<?php echo get_term_link($relate_term); ?>"><?php echo $relate_term->name; ?></a></li>
+                    <li class="util_pc"><a href="<?php echo get_term_link( $relate_term ); ?>"><?php echo $relate_term->name; ?></a></li>
                     <?php
                 } else {
                     ?>
@@ -53,7 +53,7 @@ if ($relate_program) {
                 <li><a href="<?php echo get_term_link($t); ?>"><?php echo $t->name; ?>一覧</a></li>
                 <li><a href="/news/<?php echo $t->slug; ?>/#<?php echo $year; ?>"><?php echo $year; ?>年</a></li>
             <?php } ?>
-            <li><span><?php the_title(); ?></span></li>
+            <li class="util_pc"><span><?php the_title(); ?></span></li>
         </ul>
 
         <section class="section" id="news_detail">

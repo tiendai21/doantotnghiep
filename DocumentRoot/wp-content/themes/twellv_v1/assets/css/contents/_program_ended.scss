@@ -44,11 +44,11 @@
         margin-bottom: get_sp(45);
     }
     .inner {
-        margin: 0 auto;
+        margin: 0 auto 103px;
         max-width: 1520px;
         @include pc{
             max-width: get_pc(1520);
-            margin: 0 auto;
+            margin: 0 auto get_pc(103);
         }
         @include sp {
             width: 100%;
