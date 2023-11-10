@@ -566,12 +566,12 @@ function display_program_voice_by_category_slug($slug)
                         <?php while (have_rows('customer_voice')) :
                             the_row(); ?>
                             <div class="item_slide">
-                                <a href="#">
+                                <div class="content_slide">
                                     <span class="date"><?php the_sub_field('updateday'); ?></span>
                                     <h4><?php the_sub_field('program_name'); ?></h4>
                                     <p><?php the_sub_field('voice'); ?></p>
                                     <span class="note"><?php the_sub_field('age'); ?></span>
-                                </a>
+                                </div>
                             </div>
                         <?php endwhile;
                     }

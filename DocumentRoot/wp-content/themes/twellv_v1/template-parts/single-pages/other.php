@@ -10,64 +10,64 @@ if ($type === 'famous') :
             <div class="list_other">
                 <ul>
                     <li>
-                        <a href="#">ドラマ・映画</a>
+                        <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">スポーツ</a>
+                        <a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">韓国・韓流ドラマ</a>
+                        <a href="<?php echo esc_url(home_url('/program/korea/'))?>">韓国・韓流ドラマ</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">バラエティ</a>
+                        <a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">中国・アジアドラマ</a>
+                        <a href="<?php echo esc_url(home_url('/program/china/'))?>">中国・アジアドラマ</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">韓国・韓流ドラマ</a>
+                        <a href="<?php echo esc_url(home_url('/program/korea/'))?>">韓国・韓流ドラマ</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">スポーツ</a>
+                        <a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a>
                     </li>
                     <li>
-                        <a href="#">プロ野球中継</a>
+                        <a href="<?php echo esc_url(home_url('/sports/baseball/'))?>">プロ野球中継</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">情報・ドキュメンタリー</a>
+                        <a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ドキュメンタリー</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">旅・グルメ</a>
+                        <a href="<?php echo esc_url(home_url('/program/tabi/'))?>">旅・グルメ</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">中国・アジアドラマ</a>
+                        <a href="<?php echo esc_url(home_url('/program/china/'))?>">中国・アジアドラマ</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">バラエティ</a>
+                        <a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">旅・グルメ</a>
+                        <a href="<?php echo esc_url(home_url('/program/drama/'))?>">旅・グルメ</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">情報・ <br>ドキュメンタリー</a>
+                        <a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ <br>ドキュメンタリー</a>
                     </li>
                     <li>
-                        <a href="#">音楽番組(演歌・歌謡)</a>
+                        <a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組(演歌・歌謡)</a>
                     </li>
                     <li>
-                        <a href="#">アニメ</a>
+                        <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">通販</a>
+                        <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">生活向上 <br>エンタテインメント</a>
+                        <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活向上 <br>エンタテインメント</a>
                     </li>
                     <li class="util_pc">
-                        <a href="#">生活向上 <br>エンタテインメント</a>
+                        <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活向上 <br>エンタテインメント</a>
                     </li>
                     <li class="util_sp">
-                        <a href="#">通販</a>
+                        <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
                     </li>
                 </ul>
             </div>
@@ -86,7 +86,7 @@ if ($type === 'all') :
             <div class="list_other">
                 <ul>
                     <li>
-                        <a href="<?php echo esc_url(home_url('/program/drama/')) ?>">ドラマ・映画</a>
+                        <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
                     </li>
                     <li>
                         <a href="<?php echo esc_url(home_url('/program/sports/')) ?>">スポーツ</a>
@@ -101,7 +101,7 @@ if ($type === 'all') :
                         <a href="<?php echo esc_url(home_url('/program/tabi/')) ?>">旅・グルメ</a>
                     </li>
                     <li>
-                        <a href="#">ライフスタイル</a>
+                        <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ライフスタイル</a>
                     </li>
                     <li>
                         <a href="<?php echo esc_url(home_url('/program/documentary/')) ?>">情報・ドキュメンタリー</a>
