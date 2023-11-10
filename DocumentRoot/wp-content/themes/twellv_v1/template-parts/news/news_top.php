@@ -3,9 +3,7 @@
         <div class="tlt_section">
             <h2>新着情報</h2>
             <div class="btn_more">
-                <a href="<?php echo esc_url(home_url('/news/whatsnew'))?>">
-                    <span>すべて見る</span>
-                </a>
+                <a href="<?php echo esc_url(home_url('/news/whatsnew'))?>">すべて見る</a>
             </div>
         </div>
         <?php

@@ -324,11 +324,11 @@
             }
             .social {
                 display: flex;
-                margin: 0 auto 117px;
+                margin: 0 auto 66px;
                 max-width: 1348px;
                 justify-content: flex-end;
                 @include pc {
-                    margin: 0 auto get_pc(117);
+                    margin: 0 auto get_pc(66);
                     max-width: get_pc(1348);
                 }
                 @include sp {
@@ -339,21 +339,44 @@
                 }
 
                 a {
-                    width: 83px;
-                    height: 83px;
+                    width: 48px;
+                    height: 48px;
                     display: inline-block;
-                    margin-left: 61px;
+                    margin-left: 23px;
 
                     @include pc {
-                        width: get_pc(83);
-                        height: get_pc(83);
-                        margin-left: get_pc(61);
+                        width: get_pc(48);
+                        height: get_pc(48);
+                        margin-left: get_pc(23);
                     }
 
                     @include sp {
                         width: get_sp(61);
                         height: get_sp(59);
                         margin-left: 0;
+                    }
+
+                    &:first-child {
+                        @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
+                    }
+                    &:nth-child(2) {
+                        @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
+                    }
+                    &:last-child {
+                        @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
+                    }
+
+                    &:hover {
+                        opacity: initial;
+                        &:first-child {
+                            background-image: url("../images/logo_x_hover.png");
+                        }
+                        &:nth-child(2) {
+                            background-image: url("../images/logo_fb_hover.png");
+                        }
+                        &:last-child {
+                            background-image: url("../images/logo_line_hover.png");
+                        }
                     }
                 }
             }

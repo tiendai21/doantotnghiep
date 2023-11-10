@@ -245,9 +245,19 @@
         $(".slick-next").click(function () {
             $(this).siblings(".slick-prev").addClass("active");
         });
-        if ($(_sliderElm).find(".item_slide").length < 7) {
-            $(_sliderElm).addClass('no-slide');
-        }
+
+        $(_sliderElm).each(function () {
+            if($(this).attr('class').includes('slide_ranking')) {
+                if ($(this).find(".item_slide").length < 5) {
+                    $(this).addClass('no-slide');
+                }
+            }
+            else {
+                if ($(this).find(".item_slide").length < 7) {
+                    $(this).addClass('no-slide');
+                }
+            }
+        });
     }
 
     function slideList(_sliderElm, _fade, _centerMode) {

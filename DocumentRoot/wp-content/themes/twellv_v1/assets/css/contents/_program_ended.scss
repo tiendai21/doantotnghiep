@@ -135,13 +135,12 @@
     }
 
     .tlt_section {
-        padding: 0;
-        width: 1520px;
+        padding: 0 228px 0 172px;
         margin: 0 auto 28px;
         background: transparent;
         @include pc {
             margin: 0 auto get_pc(28);
-            width: get_pc(1520);
+            padding: 0 get_pc(228) 0 get_pc(172);
         }
         @include sp {
             width: 100%;
