@@ -24,12 +24,13 @@ if (have_rows('page_flex_content', $top->ID)) {
 //             var_dump( $layout );
                 get_template_part('template-parts/program/layouts/' . $layout);
             }
-
+            get_template_part('template-parts/program/archive-episode-list');
             ?>
         </div>
 
     </div>
-    <?php get_template_part('template-parts/ad/ad-news', 'ad-news'); ?>
+    <?php
+    get_template_part('template-parts/ad/ad-news', 'ad-news'); ?>
 
     <?php
 } // if( have_rows ...

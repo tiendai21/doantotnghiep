@@ -13,11 +13,13 @@ if (have_rows('navs', $nav->ID)) {
             $ttl = get_sub_field('ttl');
             $link = get_sub_field('link');
             $target_blank = get_sub_field('target_blank') ? ' target="_blank" ' : '';
-            ?>
-            <li>
-                <a href="<?php echo esc_url($link); ?>" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a>
-            </li>
-        <?php
+            if ($ttl !== "放送ラインアップ") :
+                ?>
+                <li>
+                    <a href="<?php echo esc_url($link); ?>" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a>
+                </li>
+            <?php
+            endif;
         endwhile;
         reset_rows();
         ?>
