@@ -476,10 +476,6 @@
         }
         .btn_watch {
             a {
-                margin: 0 204px 60px auto;
-                @include pc {
-                    margin: 0 get_pc(204) get_pc(60) auto;
-                }
                 @include sp {
                     margin: 0 auto;
                 }

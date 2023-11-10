@@ -837,6 +837,9 @@
     */
     .bg_special_wrapper {
         @include bgsetup("../images/bg_social_media.png", 0 490px, 100% auto, no-repeat);
+        @include pc {
+            background-position: get_pc(490);
+        }
     }
 
     /*
@@ -2643,6 +2646,7 @@
                             font-size: get_sp(21);
                             letter-spacing: get_sp(2.1);
                             line-height: get_sp(30);
+                            transform: translateY(get_sp(8));
                         }
                     }
                     span {
