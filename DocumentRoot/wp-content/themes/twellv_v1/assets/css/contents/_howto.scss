@@ -18,7 +18,11 @@
             padding: 0;
         }
     }
-
+    h2 {
+        &:after {
+            content: none;
+        }
+    }
     #how_to {
         >.inner {
 

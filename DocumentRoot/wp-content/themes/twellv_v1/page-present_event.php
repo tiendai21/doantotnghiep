@@ -104,7 +104,7 @@ get_header();
                             </div>
                             <div class="txt_desp">
                                 <h2><?php echo $item['title']; ?></h2>
-                                <span <?php echo $item['text'] ?></span>
+                                <span> <?php echo $item['text'] ?></span>
                                 <div class="btn_bottom">
                                     <a href="<?php echo $item['url']; ?>" <?php echo $item['target_blank']; ?>>詳細はこちら</a>
                                 </div>

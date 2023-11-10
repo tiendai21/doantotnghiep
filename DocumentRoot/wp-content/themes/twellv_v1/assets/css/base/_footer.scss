@@ -308,6 +308,14 @@ footer {
                             width: get_pc(290);
                             margin: 0 get_pc(22);
                         }
+                        &:last-child {
+                            a {
+                                opacity: 1;
+                            }
+                        }
+                        a {
+                            opacity: 0.9;
+                        }
                     }
                 }
             }

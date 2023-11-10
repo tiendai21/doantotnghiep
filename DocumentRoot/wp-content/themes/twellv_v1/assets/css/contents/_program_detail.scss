@@ -359,13 +359,8 @@
                 background-color: #C2D9F4;
                 display: flex;
                 align-items: center;
-                margin-bottom: 48px;
-                @include pc {
-                    margin-bottom: get_pc(48);
-                }
                 @include sp {
                     display: block;
-                    margin-bottom: 0;
                     padding-bottom: get_sp(2);
                 }
                 p {
@@ -563,6 +558,13 @@
                 }
             }
             .broadcast_schedule {
+                padding-top: 48px;
+                @include pc {
+                    padding-top: get_pc(48);
+                }
+                @include sp {
+                    padding-top: 0;
+                }
                 a {
                     font-size: 24px;
                     line-height: 35px;
