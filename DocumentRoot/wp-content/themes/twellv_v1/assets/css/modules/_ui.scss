@@ -1115,6 +1115,9 @@ a {
     @include pc {
         margin-bottom: get_pc(30);
     }
+    @include sp {
+        margin-bottom: get_sp(13);
+    }
     a {
         display: flex;
         align-items: center;
