@@ -333,6 +333,6 @@ foreach ($modal_e_data as $key => $d) {
                       fill="#c5dbf4"/>
             </clipPath>
         </svg>
-        <?php get_template_part('template-parts/home/modal_category', null, array('modal' => $modal)); ?>
+        <?php get_template_part('template-parts/home/modal_category', null, array('modal' => $modal, 'title' => '放送中の番組')); ?>
     </div>
 </section>

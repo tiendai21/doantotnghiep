@@ -1088,6 +1088,10 @@
             padding: 0;
         }
 
+        .tlt_section {
+            padding: 0;
+        }
+
         .list_faq {
             border-radius: 39px;
             background-color: #ffffff;
@@ -1294,6 +1298,7 @@
 
         .tlt_section {
             padding: 0;
+            padding: 0;
             h2 {
                 &:before {
                     content: "";
@@ -1496,6 +1501,7 @@
 
         .tlt_section {
             width: 100%;
+            padding: 0;
             padding: 0;
 
             h2 {
@@ -1955,6 +1961,7 @@
             }
 
             .btn_watch {
+                margin-bottom: 0;
                 a {
                     transform: translateX(-85px);
                     @include pc {
@@ -2028,13 +2035,15 @@
                 flex-wrap: wrap;
                 overscroll-behavior-y: none;
                 max-height: 800px;
+                max-height: 800px;
 
                 @include pc {
+                    max-height: get_pc(800);
                     max-height: get_pc(800);
                 }
 
                 @include sp {
-                    max-height: initial;
+                    padding-bottom: get_sp(60);
                 }
 
                 &::-webkit-scrollbar-thumb {
@@ -2097,6 +2106,7 @@
 
                     @include sp {
                         width: 47%;
+                        height: get_sp(160);
                         margin-bottom: get_sp(15);
                         margin-right: get_sp(8);
                         border-radius: get_sp(5) get_sp(5) 0 0;
