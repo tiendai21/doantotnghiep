@@ -1,5 +1,5 @@
 <?php /* -*- coding: utf-8; mode: web; -*- */
-
+$page_format = get_post_format();
 /*
  * トップとナビゲーションを表示しようとした場合、番組トップへリダイレクト
  */
@@ -87,33 +87,67 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
         endif;
         ?>
         <!--/banner-->
-        <!--correlation diagrams-->
-        <section class="section" id="correlation_diagrams">
-            <div class="inner">
-                <?php if ($html_area) {
-                    echo $html_area;
-                } else {
+        <?php if ($page_format === 'chat'): ?>
+            <!--correlation diagrams-->
+            <section class="section" id="correlation_diagrams">
+                <div class="inner">
+                    <?php if ($html_area) {
+                        echo $html_area;
+                    } else {
 
-                    while (have_posts()) {
-                        the_post();
-                        ?>
-                        <span class="onair-date"><?php echo get_field('onairtime'); ?></span>
-                        <h2><?php the_title(); ?></h2>
-                        <?php
-                        if (have_rows('page_flex_content', get_the_ID())) {
-                            while (have_rows('page_flex_content', get_the_ID())) {
-                                the_row();
-                                $layout = get_row_layout();
-                                get_template_part('template-parts/program/layouts/' . $layout);
+                        while (have_posts()) {
+                            the_post();
+                            ?>
+                            <span class="onair-date"><?php echo get_field('onairtime'); ?></span>
+                            <h2><?php the_title(); ?></h2>
+                            <?php
+                            if (have_rows('page_flex_content', get_the_ID())) {
+                                while (have_rows('page_flex_content', get_the_ID())) {
+                                    the_row();
+                                    $layout = get_row_layout();
+                                    get_template_part('template-parts/program/layouts/' . $layout);
+                                }
                             }
                         }
                     }
-                }
-                get_template_part('template-parts/program/share-buttons', null, ['isSimple' => true]);
-                ?>
-            </div>
-        </section>
+                    get_template_part('template-parts/program/share-buttons', null, ['isSimple' => true]);
+                    ?>
+                </div>
+            </section>
+            <!-- cat ranking -->
+        <?php endif; ?>
+        <?php if ($page_format === 'gallery'): ?>
+            <!--   archive episode      -->
+            <!--correlation diagrams-->
+            <section class="section" id="archive_episode">
+                <div class="inner">
+                    <?php if ($html_area) {
+                        echo $html_area;
+                    } else {
+
+                        while (have_posts()) {
+                            the_post();
+                            ?>
+                            <span class="onair-date"><?php echo get_field('onairtime'); ?></span>
+                            <h2><?php the_title(); ?></h2>
+                            <?php
+                            if (have_rows('page_flex_content', get_the_ID())) {
+                                while (have_rows('page_flex_content', get_the_ID())) {
+                                    the_row();
+                                    $layout = get_row_layout();
+                                    get_template_part('template-parts/program/layouts/' . $layout);
+                                }
+                            }
+                        }
+                    }
+                    get_template_part('template-parts/program/share-buttons', null, ['isSimple' => true]);
+                    ?>
+                </div>
+            </section>
+            <!--   /archive episode      -->
+        <?php endif; ?>
         <!-- cat ranking -->
+
         <?php
         get_template_part('template-parts/ranking/ranking', null, array('cat' => $category_term->slug, 'title' => $category_term->name . 'ランキング', 'sns' => false)); ?>
         <!-- /cat ranking -->

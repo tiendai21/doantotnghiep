@@ -93,27 +93,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <?php get_template_part('template-parts/add/add_news'); ?>
         <?php get_template_part('template-parts/add/add_news_single'); ?>
         <!-- Broadcast schedule -->
-        <section class="section" id="broadcast_schedule">
-            <div class="inner">
-                <div class="tlt_section">
-                    <h2>放送予定</h2>
-                    <div class="btn_more">
-                        <span>すべて見る</span>
-                    </div>
-                </div>
-                <div class="program_slide brand_schedule">
-                    <div class="item_slide">
-                        <a href="#">
-                            <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                        </a>
-                    </div>
-                </div>
-                <!--      List brand banners        -->
-                <?php get_template_part('template-parts/home/brand-banner'); ?>
-                <!--      /List brand banners        -->
-            </div>
-
-        </section>
+        <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true)); ?>
         <!-- /Broadcast schedule -->
 
         <!-- ranking -->

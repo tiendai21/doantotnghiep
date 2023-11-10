@@ -76,6 +76,9 @@ function twellv_class($classes)
     if (is_singular('program') && get_post_format() === 'chat') {
         $classes[] = 'correlation_diagrams';
     }
+    if (is_singular('program') && get_post_format() === 'gallery') {
+        $classes[] = 'archive_episode';
+    }
     if (is_tax('program_cat')) {
         $slug = get_the_terms(get_the_ID(), 'program_cat')[0]->slug;
         if (str_contains($slug, 'archive')) {

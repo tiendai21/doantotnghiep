@@ -175,50 +175,9 @@ foreach ($terms as $t) {
     </section>
 
     <!-- /Korean dramas on air -->
-    <!-- broadcast schedule -->
-    <section class="section" id="broadcast_schedule">
-        <div class="inner">
-            <div class="tlt_section">
-                <h2>放送予定</h2>
-                <div class="btn_more">
-                    <span>すべて見る</span>
-                </div>
-            </div>
-            <div class="program_slide side_brand">
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                    </a>
-                </div>
-                <div class="item_slide">
-                    <a href="#">
-                        <img src="https://dummyimage.com/320x180/000000/fff" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /broadcast schedule -->
+    <!-- Broadcast schedule -->
+    <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true)); ?>
+    <!-- /Broadcast schedule -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => '韓国・韓流ドラマランキング', 'sns' => false)); ?>
     <!-- /ranking -->
