@@ -8,7 +8,7 @@
                         <li><a href="<?php echo esc_url(home_url('/'))?>">BS12チャンネルトップ</a></li>
                         <li><a href="<?php echo esc_url(home_url('/howtowatch/'))?>">視聴方法</a></li>
                         <li><a href="<?php echo esc_url(home_url('/kokoroni-bibibi/'))?>">ココロにビビビ！BS12 トゥエルビ</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/corporate/faq/'))?>">よくあるご質問</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/corporate/faq'))?>">よくあるご質問</a></li>
                         <li><a href="https://req.qubo.jp/twellv/form/inquiry" target="_blank">ご意見・ご感想</a></li>
                         <li><a href="<?php echo esc_url(home_url('/client/'))?>">広告出稿について</a></li>
                     </ul>
@@ -118,8 +118,7 @@
                         <li><a href="<?php echo esc_url(home_url('/program_schedule'))?>">番組表</a></li>
                         <li><a href="<?php echo esc_url(home_url('/news/whatsnew'))?>">新着情報一覧</a></li>
                         <li><a href="<?php echo esc_url(home_url('/present_event/'))?>">プレゼント・イベント情報一覧</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/social/'))?>">Twitter・Facebook</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/list_account'))?>">アカウント一覧</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/social/'))?>">Twitter・Facebook<br>アカウント一覧</a></li>
                     </ul>
                 </div>
                 <div class="nav_footer util_sp">
@@ -211,22 +210,22 @@
                     <h3>ワールド・ハイビジョン・チャンネルについて</h3>
                     <div class="nav_list nav_list_last">
                         <ul>
-                            <li><a href="<?php echo esc_url(home_url('/about_us'))?>">企業情報</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/business_philosophy'))?>">経営理念</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/broadcast_council'))?>">BS12 トゥエルビ放送番組審議会</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/broadcast_edit_standard'))?>">放送番組の編集基準</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/broadcast_standard'))?>">BS12 トゥエルビ放送番組の種別基準</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/recruit_info'))?>">採用情報</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/program_youth'))?>">青少年に見てもらいたい番組</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/news_release'))?>">ニュースリリース</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/privacy_policy'))?>">プライバシーポリシー</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate'))?>">企業情報</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/mvv'))?>">経営理念</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/program_council'))?>">BS12 トゥエルビ放送番組審議会</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/program_standard2'))?>">放送番組の編集基準</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/program_announce'))?>">BS12 トゥエルビ放送番組の種別基準</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/%e6%8e%a1%e7%94%a8%e6%83%85%e5%a0%b1/'))?>">採用情報</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/youth'))?>">青少年に見てもらいたい番組</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/news/release'))?>">ニュースリリース</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/privacy_policy/'))?>">プライバシーポリシー</a></li>
                         </ul>
                         <ul>
-                            <li><a href="<?php echo esc_url(home_url('/policy_website'))?>">サイトポリシー</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/infomation_security_policy'))?>">情報セキュリティ方針</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/cable_stations'))?>">ケーブル局の皆さま</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/handle_info'))?>">生活向上エンタテインメントにおける個人情報の取り扱いについて</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/'))?>">原宿 STREET GAMERS｜プロeスポーツチーム</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/site_policy'))?>">サイトポリシー</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/security'))?>">情報セキュリティ方針</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/info'))?>">ケーブル局の皆さま</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/advertisement'))?>">生活向上エンタテインメントにおける個人情報の取り扱いについて</a></li>
+                            <li><a href="https://harajuku-sg.com/" target="_blank">原宿 STREET GAMERS｜プロeスポーツチーム</a></li>
                             <li>
                                 <a href="https://korea.kaigai-drama-board.com/" target="_blank">K-board | 韓流ドラマのニュースやおすすめ情報を毎日お届け</a>
                                 <ul>
@@ -236,7 +235,7 @@
                         </ul>
                         <ul>
                             <li><a href="<?php echo esc_url(home_url('/site_map'))?>">サイトマップ</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/the_press'))?>">プレス</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/press'))?>">プレス</a></li>
                         </ul>
                     </div>
                 </div>

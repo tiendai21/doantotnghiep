@@ -1,3 +1,6 @@
+<?php
+$hideSocial = $args['social'];
+?>
 <section class="section" id="other">
     <div class="inner">
         <div class="tlt_section">
@@ -35,7 +38,7 @@
             </ul>
         </div>
         <!--   Social banners     -->
-        <?php if (have_rows('home_social_banners', 'option')): ?>
+        <?php if (have_rows('home_social_banners', 'option') && !$hideSocial): ?>
             <div class="list_social util_pc">
                 <ul>
                     <?php while (have_rows('home_social_banners', 'option')) :

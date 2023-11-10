@@ -6,6 +6,7 @@
         overflow-x: hidden;
         margin-top: 0;
         padding-top: 160px;
+        background-color: #fff;
         @include pc {
             padding-top: get_pc(160);
         }
@@ -92,7 +93,6 @@
         .content {
             width: 1247px;
             text-align: left;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
             @include pc {
                 width: get_pc(1247);
             }

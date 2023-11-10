@@ -70,7 +70,7 @@ foreach ($terms as $t) {
         <div class="inner">
             <div class="siler_category_top">
                 <div class="txt_fixed">
-                    <h2>韓国・韓流ドラマ</h2>
+                    <h2><?php echo esc_attr($term_list_object_name); ?></h2>
                 </div>
                 <div class="siler_top_content">
                     <?php if (have_rows('listcategory_field_banner_01', 'option')): ?>
@@ -156,7 +156,7 @@ foreach ($terms as $t) {
                     </div>
                 </div>
             </div>
-            <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'test', 'modal' => $dramas_on_air_modal)); ?>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => $term_list_object_name, 'modal' => $dramas_on_air_modal)); ?>
             <div class="btn_watch">
                 <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">無料で見られる！BS12の視聴方法
                     <span></span>
@@ -221,10 +221,6 @@ foreach ($terms as $t) {
     <!-- /Recommended movies -->
     <!-- look at the program -->
     <?php
-    /**
-     * add 20200305 yanagi ↓
-     * BS12_RENEWAL-209 【施策ID：41-1】スポーツ一覧ページ > 配下動画の表示
-     */
     if (have_rows('movie_area', $term_list_object)) : ?>
         <section class="section" id="look_program">
             <div class="inner">
@@ -235,14 +231,26 @@ foreach ($terms as $t) {
                     </div>
                 </div>
                 <div class="program_content">
-                    <?php while (have_rows('movie_area', $term_list_object)) : the_row(); ?>
-                        <?php the_sub_field('movie_tag', $term_list_object); ?>
+                    <?php
+                    $index_movie = 0;
+                    while (have_rows('movie_area', $term_list_object)) : the_row();?>
+                        <?php
+                        if($index_movie < 2){
+                            the_sub_field('movie_tag', $term_list_object);
+                        }
+                        ob_start();
+                        get_template_part('template-parts/home/modal_category_item', null, array('movie' =>  get_sub_field('movie_tag', $term_list_object)));
+                        $scheduled_modal .= ob_get_contents();
+                        ob_end_clean();
+                        $index_movie++;
+                        ?>
                     <?php endwhile; ?>
                 </div>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
+
             </div>
         </section>
     <?php endif;
-    // add 20200305 yanagi ↑
     ?>
     <!-- /look at the program -->
     <!-- Korean dramas scheduled to air -->

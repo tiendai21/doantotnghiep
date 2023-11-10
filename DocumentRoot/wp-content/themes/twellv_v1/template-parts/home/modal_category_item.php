@@ -2,6 +2,7 @@
 $post = $args['post'];
 $term = $args['term'];
 $history = $args['history'];
+$movie = $args['movie'];
 if ($history) {
     $url = $history['url'];
     $title = $history['title'];
@@ -16,15 +17,22 @@ if ($history) {
     $desc = get_field('pg_text', $term);
 }
 ?>
-<li>
-    <a href="<?php echo $url?>">
-        <div class="thumb">
-            <?php echo $img; ?>
-        </div>
-        <div class="txt_desp">
-            <h4><?php echo $title?></h4>
-            <p><?php echo $desc?></p>
-            <span><?php echo $date?>放送</span>
-        </div>
-    </a>
-</li>
+<?php
+if (!$movie) : ?>
+    <li>
+        <a href="<?php echo $url ?>">
+            <div class="thumb">
+                <?php echo $img; ?>
+            </div>
+            <div class="txt_desp">
+                <h4><?php echo $title ?></h4>
+                <p><?php echo $desc ?></p>
+                <span><?php echo $date ?>放送</span>
+            </div>
+        </a>
+    </li>
+<?php else: ?>
+    <li class="modal_ytb">
+        <?php echo $movie; ?>
+    </li>
+<?php endif; ?>

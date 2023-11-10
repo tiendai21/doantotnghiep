@@ -128,7 +128,7 @@ get_header();
         <?php get_template_part('template-parts/home/pr_top'); ?>
         <!-- /pr -->
         <!-- other -->
-        <?php get_template_part('template-parts/home/other_top'); ?>
+        <?php get_template_part('template-parts/home/other_top', null, array('hideSocial' => false)); ?>
         <!-- /other -->
     </main>
     <!--/main-->
