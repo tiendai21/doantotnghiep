@@ -923,7 +923,7 @@
             &:after {
                 content: none;
             }
-            a {
+            .content_slide {
                 width: 533px;
                 @include pc {
                     width: get_pc(533);

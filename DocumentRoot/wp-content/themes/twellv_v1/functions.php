@@ -18,6 +18,8 @@ function theme_enqueue_styles()
     wp_enqueue_style('wp_style', get_stylesheet_uri());
     wp_enqueue_style('main-styles', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $css_unti_cache);
 
+    wp_enqueue_style('main-styles_2', get_stylesheet_directory_uri() . '/assets/css/style_old.css', array(), $css_unti_cache);
+
     wp_enqueue_style('slick-theme-styles', get_stylesheet_directory_uri() . '/assets/libs/css/slick-theme.css', array(), $css_unti_cache);
 
     wp_enqueue_style('slick-styles', get_stylesheet_directory_uri() . '/assets/libs/css/slick.css', array(), $css_unti_cache);

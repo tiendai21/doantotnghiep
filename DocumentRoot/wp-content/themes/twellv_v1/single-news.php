@@ -111,14 +111,7 @@ if ($relate_program) {
         <!-- /pr -->
 
         <!-- other -->
-        <section class="section" id="other">
-            <div class="inner">
-                <div class="tlt_section">
-                    <h2>人気の番組カテゴリ</h2>
-                </div>
-                <?php get_template_part('template-parts/news/single_whatsnew_other_list'); ?>
-            </div>
-        </section>
+        <?php get_template_part('template-parts/news/single_whatsnew_other_list'); ?>
         <!-- /other -->
     </main>
     <!-- /main -->

@@ -33,16 +33,23 @@ if ($the_query->have_posts()) : ?>
                 $target_blank = get_field('target_blank') ? ' target="_blank" ' : '';
                 ?>
                 <li>
-                    <a <?php
-                    if ($link_url) {
-                        echo 'href="' . $link_url . '" class="pdf"';
-                    } else {
-                        echo 'href="' . get_the_permalink() . '"';
-                    }
-                    ?>>
-                        <span><?php echo str_replace('/', '.', get_field('display_date')); ?></span>
-                        <p><?php echo sprintf('%s', $title); ?></p>
-                    </a>
+                    <?php if ($link_url !== null) : ?>
+                        <a <?php
+                        if ($link_url) {
+                            echo 'href="' . $link_url . '" class="pdf"';
+                        } else {
+                            echo 'href="' . get_the_permalink() . '"';
+                        }
+                        ?>>
+                            <span><?php echo str_replace('/', '.', get_field('display_date')); ?></span>
+                            <p><?php echo sprintf('%s', $title); ?></p>
+                        </a>
+                    <?php else : ?>
+                        <div class="none_link">
+                            <span><?php echo str_replace('/', '.', get_field('display_date')); ?></span>
+                            <p><?php echo sprintf('%s', $title); ?></p>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php
             endwhile;

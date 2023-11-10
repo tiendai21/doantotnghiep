@@ -1401,7 +1401,7 @@
                         margin-bottom: get_sp(9);
                     }
 
-                    a {
+                    .none_link, a {
                         display: flex;
                         align-items: center;
                         font-weight: 500;
@@ -1622,7 +1622,7 @@
                     margin-bottom: get_sp(9);
                 }
 
-                a {
+                .none_link, a {
                     display: flex;
                     align-items: center;
                     font-weight: 500;

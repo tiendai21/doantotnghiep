@@ -34,22 +34,29 @@ if ( $the_query->have_posts() ) : ?>
 
                 ?>
                 <li>
+                    <?php if ($link_url !== null) : ?>
                     <a <?php
-                    if ($link_url) {
+                    if ($pdf_url) {
                         echo 'href="' . $link_url . '" class="pdf"';
                     } else {
-                        echo 'href="' . get_the_permalink() . '"';
+                        echo 'href="' . $link_url . '"';
                     }
                     ?>>
                         <span><?php echo str_replace( '/', '.', get_field( 'display_date' ) ); ?></span>
                         <p><?php echo sprintf( '%s', $title ); ?></p>
                     </a>
+                <?php else : ?>
+                    <div class="none_link">
+                        <span><?php echo str_replace( '/', '.', get_field( 'display_date' ) ); ?></span>
+                        <p><?php echo sprintf( '%s', $title ); ?></p>
+                    </div>
+                <?php endif; ?>
                 </li>
-                <?php
+            <?php
             endwhile;
             wp_reset_postdata();
             ?>
         </ul>
     </div>
-    <?php
+<?php
 endif;
