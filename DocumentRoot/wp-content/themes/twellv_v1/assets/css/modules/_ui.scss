@@ -1432,26 +1432,30 @@ a {
         width: 355px;
         background: #335683;
         transition: all .3s;
+        margin: 0 6px;
+
         @include pc {
             padding: get_pc(19);
             width: get_pc(355);
+            margin: 0 get_pc(6);
         }
         @include sp {
             padding: get_sp(10);
             width: get_sp(192);
-        }
-        &:nth-child(2) {
-            margin: 0 6px;
-            @include pc {
-                margin: 0 get_pc(6);
-            }
-            @include sp {
-                margin: 0 0 get_sp(5);
-            }
+            margin: 0 0 get_sp(5);
         }
         &:first-child {
             @include sp {
                 margin: 0 get_sp(5) get_sp(5) 0;
+            }
+        }
+        &:nth-child(-n +4){
+            margin-bottom: 10px;
+            @include pc {
+                margin-bottom: get_pc(10);
+            }
+            @include sp {
+                margin-bottom: get_sp(10);
             }
         }
         a {
