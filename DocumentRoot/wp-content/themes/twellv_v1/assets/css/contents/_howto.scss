@@ -419,7 +419,6 @@
                 }
 
                 .inner {
-                    max-width: 1082px;
                     height: 579px;
                     margin: 0 auto;
                     background-color: #E8F3FF;
@@ -430,7 +429,6 @@
                     padding: 71px 46px 149px;
 
                     @include pc {
-                        max-width: get_pc(1082);
                         height: get_pc(579);
                         border-radius: get_pc(52);
                         bottom: get_pc(16);
