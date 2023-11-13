@@ -17,7 +17,7 @@ function theme_enqueue_styles()
     $the_theme = wp_get_theme();
     wp_enqueue_style('wp_style', get_stylesheet_uri());
     wp_enqueue_style('main-styles', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $css_unti_cache);
-    if (is_page_template()) {
+    if (is_page_template() || is_tax('program_cat')) {
         wp_enqueue_style('main-styles_2', get_stylesheet_directory_uri() . '/assets/css/style_old.css', array(), $css_unti_cache);
     }
 
