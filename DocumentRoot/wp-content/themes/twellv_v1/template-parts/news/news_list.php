@@ -36,7 +36,7 @@ if ( $the_query->have_posts() ) : ?>
                 <li>
                     <?php if ($link_url !== null) : ?>
                     <a <?php
-                    if ($pdf_url) {
+                    if ($pdf_url || str_contains($link_url, '.pdf')) {
                         echo 'href="' . $link_url . '" class="pdf"';
                     } else {
                         echo 'href="' . $link_url . '"';
