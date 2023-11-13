@@ -2,7 +2,8 @@
 /*
  * Enable shortcode integrated for textarea field. If you wna to remove this func, change the field type to wysiwyg
  * */
-function text_area_shortcode($value, $post_id, $field) {
+function text_area_shortcode($value, $post_id, $field)
+{
     if (is_admin()) {
         // don't do this in the admin
         // could have unintended side effects
@@ -18,8 +19,9 @@ add_filter('acf/load_value/type=textarea', 'text_area_shortcode', 10, 3);
 /*
  *  Shortcode
  * */
-add_shortcode( 'single-page-sidebar', 'singlePageSidebar' );
-function singlePageSidebar( ) {
+add_shortcode('single-page-sidebar', 'singlePageSidebar');
+function singlePageSidebar()
+{
     $content = "";
     ob_start();
     get_template_part('template-parts/single-pages/sidebar');
@@ -27,8 +29,9 @@ function singlePageSidebar( ) {
     ob_end_clean();
     return $content;
 }
-add_shortcode( 'single-page-other', 'singlePageOther' );
-function singlePageOther($args) {
+add_shortcode('single-page-other', 'singlePageOther');
+function singlePageOther($args)
+{
     $content = "";
     ob_start();
     get_template_part('template-parts/single-pages/other', null, array('type' => $args['type']));
@@ -36,8 +39,9 @@ function singlePageOther($args) {
     ob_end_clean();
     return $content;
 }
-add_shortcode( 'single-page-PR', 'singlePagePR' );
-function singlePagePR( ) {
+add_shortcode('single-page-PR', 'singlePagePR');
+function singlePagePR()
+{
     $content = "";
     ob_start();
     get_template_part('template-parts/home/pr_top');
@@ -45,8 +49,9 @@ function singlePagePR( ) {
     ob_end_clean();
     return $content;
 }
-add_shortcode( 'single-ranking', 'singleRanking' );
-function singleRanking($args) {
+add_shortcode('single-ranking', 'singleRanking');
+function singleRanking($args)
+{
     $content = "";
     ob_start();
     get_template_part('template-parts/ranking/ranking', null, array('cat' => $args['cat'], 'title' => $args['title'], 'sns' => false));
@@ -54,8 +59,9 @@ function singleRanking($args) {
     ob_end_clean();
     return $content;
 }
-add_shortcode( 'announce-list', 'announceList' );
-function announceList() {
+add_shortcode('announce-list', 'announceList');
+function announceList()
+{
     $content = "";
     ob_start();
     get_template_part('template-parts/oshirase-announce-list');
@@ -63,8 +69,9 @@ function announceList() {
     ob_end_clean();
     return $content;
 }
-add_shortcode( 'single-banner-double-slide', 'doubleSlide' );
-function doubleSlide() {
+add_shortcode('single-banner-double-slide', 'doubleSlide');
+function doubleSlide()
+{
     $content = "";
     ob_start();
     get_template_part('template-parts/banner-double-slide');
@@ -75,8 +82,9 @@ function doubleSlide() {
 /**
  *   Test program schedule table
  **/
-add_shortcode( 'test-rakuraku', 'testRaku' );
-function testRaku( ) {
+add_shortcode('test-rakuraku', 'testRaku');
+function testRaku()
+{
     $url = 'https://rakuraku2.bangumi.org/tablePage';
     //pc
     $data = 'platform=D&isSamplePage=false&referer=www.twellv.co.jp&channelIndex=1&fromArrow=&getPrevious=&getNext=';

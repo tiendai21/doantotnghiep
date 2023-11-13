@@ -207,7 +207,6 @@
 
             &::before {
                 content: "";
-                transform: rotate(-90deg);
                 background-image: url(../images/arrow_slide_l.svg);
                 background-position: center;
                 background-size: contain;
@@ -217,7 +216,6 @@
                 left: 180px;
                 top: 50%;
                 transform: translateY(-40%) rotate(-90deg);
-                background-size: contain;
                 background-repeat: no-repeat;
 
                 @include pc {
@@ -348,6 +346,9 @@
                 text-align: center;
             }
             a {
+            }
+
+            a {
                 background-image: url(../images/arrow_thin_r.png);
             }
         }
@@ -357,18 +358,15 @@
             background-color: #e8f3ff;
             height: auto !important;
             padding: 0 64px;
-            border: 1px solid #92bceb;
             position: relative;
 
             @include pc {
                 padding: 0 get_pc(64);
-                border: get_pc(1) solid #92bceb;
             }
 
             @include sp {
                 display: none;
                 padding: 0 get_sp(64);
-                border: get_sp(1) solid #92bceb;
             }
 
             &::before {
@@ -510,6 +508,7 @@
                 height: 100%;
                 width: 64px;
                 border: 1px solid #92bceb;
+                box-sizing: border-box;
 
                 @include pc {
                     border: get_pc(1) solid #92bceb;
@@ -531,8 +530,8 @@
                     border: 1px solid #92bceb;
                     .time,
                     .categoryt {
-                        font-size: 17px;
-                        line-height: 20px;
+                        font-size: 20px;
+                        line-height: 25px;
                         color: #004898;
                         font-family: $base-font-family;
                         font-weight: bold;
@@ -541,12 +540,12 @@
                         display: inline-block;
                         height: auto;
                         width: auto;
-                        padding: 4px 0;
+                        padding: 16px 0 8px 0;
 
                         @include pc {
-                            font-size: get_pc(17);
-                            line-height: get_pc(20);
-                            padding: get_pc(4) 0;
+                            font-size: get_pc(20);
+                            line-height: get_pc(25);
+                            padding: get_pc(16) 0 get_pc(8) 0;
                         }
 
                         @include sp {
@@ -558,8 +557,6 @@
 
                     .title {
                         display: block;
-                        font-size: 17px;
-                        line-height: 21px;
                         text-align: left;
                         font-weight: bold;
                         font-family: $base-font-family;
@@ -567,13 +564,17 @@
                         margin: 0 !important;
                         height: auto;
                         padding-top: 0;
-                        padding-bottom: 6px;
+                        font-size: 19px;
+                        line-height: 29px;
+                        letter-spacing: -0.5px;
+                        padding-bottom: 18px;
                         @include txtClamp(3);
 
                         @include pc {
-                            font-size: get_pc(17);
-                            line-height: get_pc(21);
-                            padding-bottom: get_pc(6);
+                            font-size: get_pc(19);
+                            line-height: get_pc(29);
+                            letter-spacing: get_pc(-0.5);
+                            padding-bottom: get_pc(18);
                         }
 
                         @include sp {
@@ -584,22 +585,23 @@
                     }
 
                     .dt {
-                        font-size: 15px;
-                        line-height: 21px;
-                        letter-spacing: 0.8px;
                         color: #000;
                         font-family: $base-font-family;
                         text-align: left;
                         margin: 0 !important;
                         height: auto;
                         padding-top: 0;
-                        padding-bottom: 6px;
+                        font-size: 15px;
+                        line-height: 25px;
+                        letter-spacing: 0.8px;
+                        padding-bottom: 8px;
+                        @include txtClamp(5);
 
                         @include pc {
                             font-size: get_pc(15);
-                            line-height: get_pc(21);
+                            line-height: get_pc(25);
                             letter-spacing: get_pc(0.8);
-                            padding-bottom: get_pc(6);
+                            padding-bottom: get_pc(8);
                         }
 
                         @include sp {
@@ -637,521 +639,123 @@
             }
         }
     }
+
+    #pr {
+        .tlt_section {
+            background-color: unset;
+            h2 {
+                color: #004898;
+            }
+        }
+    }
+
+    #other {
+        .tlt_section {
+            background-color: unset;
+        }
+    }
+
+    .item_brand {
+        display: flex;
+        margin: 28px auto 100px;
+        justify-content: center;
+
+        @include pc {
+            margin: get_pc(28) auto get_pc(100);
+        }
+
+        @include sp {
+            margin: 0 0 get_sp(30);
+        }
+
+        .thumb {
+            width: 522px;
+            height: 216px;
+
+            @include pc {
+                width: get_pc(522);
+                height: get_pc(216);
+            }
+
+            @include sp {
+                width: get_sp(185);
+                height: get_sp(90);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .txt_desp {
+            background-color: #f2f2f2;
+            border-radius: 0 32px 32px 0;
+            padding: 50px 45px 30px 25px;
+            text-align: left;
+            color: #000000;
+            width: 1050px;
+            height: 216px;
+
+            @include pc {
+                border-radius: 0 get_pc(32) get_pc(32) 0;
+                padding: get_pc(50) get_pc(45) get_pc(30) get_pc(45);
+                width: get_pc(1050);
+                height: get_pc(216);
+            }
+
+            @include sp {
+                border-radius: 0;
+                padding: get_sp(11) get_sp(13) get_sp(11) get_sp(12);
+                width: get_sp(210);
+                height: get_sp(90);
+            }
+
+            h3 {
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 36px;
+                font-weight: bold;
+                margin-bottom: 14px;
+                @include txtClamp(1);
+
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(36);
+                    margin-bottom: get_pc(14);
+                }
+
+                @include sp {
+                    font-size: get_sp(16);
+                    line-height: get_sp(24);
+                    letter-spacing: get_sp(1);
+                    margin-bottom: get_sp(4);
+                }
+            }
+
+            p {
+                font-size: 20px;
+                letter-spacing: 2px;
+                line-height: 29px;
+                width: 944px;
+                font-weight: 600;
+
+                @include pc {
+                    font-size: get_pc(20);
+                    letter-spacing: get_pc(2);
+                    line-height: get_pc(29);
+                    width: get_pc(944);
+                }
+
+                @include sp {
+                    font-size: get_sp(14);
+                    line-height: get_sp(20);
+                    letter-spacing: get_sp(1.4);
+                    width: get_sp(185);
+                }
+            }
+        }
+    }
 }
-
-// #schedule {
-//     width: 100%;
-//     margin-top: 240px;
-
-//     @include pc {
-//         margin-top: get_pc(240);
-//     }
-
-//     @include sp {
-//         margin-top: 0;
-//     }
-
-// .header_section {
-//     position: fixed;
-//     left: 0;
-//     width: 100%;
-//     top: 160px;
-//     z-index: 999;
-
-//     @include pc {
-//         top: get_pc(160);
-//     }
-
-//     @include sp {
-//         top: get_sp(99);
-//         position: unset;
-//     }
-// }
-
-// .choose_date {
-//     padding: 0 24px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-//     height: 80px;
-//     background-color: #0D326E;
-//     @include pc {
-//         padding: 0 get_pc(24);
-//         height: get_pc(80);
-//     }
-//     @include sp {
-//         padding: 0 get_sp(15);
-//         height: get_sp(40);
-//     }
-//     .prev_btn {
-//         @include bgsetup("../images/arrow_thin_l.png", center center, 100% auto, no-repeat);
-//         width: 13px;
-//         height: 27px;
-//         transition: all ease 0.3s;
-//         @include pc {
-//             width: get_pc(13);
-//             height: get_pc(27);
-//         }
-//         @include sp {
-//             width: get_sp(17);
-//             height: get_sp(17);
-//         }
-//         &:hover {
-//             opacity: 0.7;
-//         }
-//     }
-//     p {
-//         color: #fff;
-//         font-size: 25px;
-//         letter-spacing: 1.25px;
-//         line-height: 36px;
-//         display: flex;
-//         @include pc {
-//             font-size: get_pc(25);
-//             letter-spacing: get_pc(1.25);
-//             line-height: get_pc(36);
-//         }
-//         @include sp {
-//             font-size: get_sp(16);
-//             letter-spacing: get_sp(1.6);
-//             line-height: get_sp(24);
-//         }
-//         span {
-//             display: block;
-//             background-color: #0B326E;
-//             font-size: 25px;
-//             letter-spacing: 2.5px;
-//             line-height: 36px;
-//             color: #fff;
-//             margin-left: 35px;
-//             position: relative;
-//             padding-right: 10px;
-
-//             @include pc {
-//                 font-size: get_pc(25);
-//                 letter-spacing: get_pc(2.5);
-//                 line-height: get_pc(36);
-//                 margin-left: get_pc(35);
-//                 padding-right: get_pc(10);
-//             }
-
-//             @include sp {
-//                 border-radius: get_sp(16);
-//                 font-size: get_sp(16);
-//                 letter-spacing: get_sp(1.6);
-//                 line-height: get_sp(24);
-//                 margin-left: get_sp(20);
-//             }
-
-//             &::after {
-//                 content: "";
-//                 @include bgsetup("../images/arrow_slide_l.svg", center center, 100% auto, no-repeat);
-//                 width: 18px;
-//                 height: 18px;
-//                 position: absolute;
-//                 right: -16px;
-//                 top: 8px;
-//                 transform: rotate(-90deg);
-
-//                 @include pc {
-//                     width: get_pc(18);
-//                     height: get_pc(18);
-//                     right: get_pc(-16);
-//                     top: get_pc(8);
-//                 }
-
-//                 @include sp {
-//                     width: get_sp(10);
-//                     height: get_sp(10);
-//                     right: get_sp(-5);
-//                     top: get_sp(4);
-//                 }
-//             }
-//         }
-//     }
-
-//     .next_btn {
-//         @include bgsetup("../images/arrow_thin_r.png", center center, 100% auto, no-repeat);
-//         width: 13px;
-//         height: 27px;
-//         transition: all ease 0.3s;
-//         @include pc {
-//             width: get_pc(13);
-//             height: get_pc(27);
-//         }
-//         @include sp {
-//              width: get_sp(17);
-//              height: get_sp(17);
-//         }
-//         &:hover {
-//             opacity: 0.7;
-//         }
-//     }
-// }
-
-// .list_date {
-//     display: flex;
-//     width: 100%;
-//     box-shadow: 0 3px 6px #00000029;
-//     background-color: #E8F3FF;
-
-//     @include sp {
-//         display: none;
-//     }
-
-//     i {
-//         color: #fff;
-//         font-size: 60px;
-//         line-height: 80px;
-//         width: 64px;
-//         height: 80px;
-//         border: 1px solid #92bceb;
-
-//         @include pc {
-//             width: get_pc(64);
-//             height: get_pc(80);
-//             font-size: get_pc(60);
-//             line-height: get_pc(80);
-//             border: get_pc(1) solid #92bceb;
-//         }
-
-//         @include sp {
-//             width: get_sp(42);
-//             height: get_sp(50);
-//             font-size: get_sp(30);
-//             line-height: get_sp(50);
-//         }
-//     }
-
-//     .inner {
-//         width: 100%;
-//         display: flex;
-
-//         h3 {
-//             height: 80px;
-//             width: 14.3%;
-//             font-size: 25px;
-//             letter-spacing: 2.5px;
-//             line-height: 80px;
-//             color: #000;
-//             border: 1px solid #92bceb;
-
-//             @include pc {
-//                 height: get_pc(80);
-//                 font-size: get_pc(25);
-//                 letter-spacing: get_pc(2.5);
-//                 line-height: get_pc(80);
-//             }
-
-//             @include sp {
-//                 width: 100%;
-//                 height: get_sp(50);
-//                 font-size: get_sp(18);
-//                 letter-spacing: get_sp(1.8);
-//                 line-height: get_sp(50);
-//             }
-//         }
-//     }
-// }
-
-// .content_section {
-//     display: flex;
-//     width: 100%;
-
-//     span {
-//         display: block;
-//         font-size: 18px;
-//         line-height: 25px;
-//         letter-spacing: 0.9px;
-//         color: #004898;
-//         font-family: "Noto Sans CJK JP";
-//         font-weight: bold;
-//         width: 64px;
-//         background-color: #fff;
-//         border: 1px solid #92bceb;
-//         padding-top: 16px;
-
-//         @include pc {
-//             font-size: get_pc(18);
-//             line-height: get_pc(25);
-//             letter-spacing: get_pc(0.9);
-//             width: get_pc(64);
-//             padding-top: get_pc(16);
-//         }
-//         @include sp {
-//             font-size: get_sp(20);
-//             line-height: get_sp(29);
-//             letter-spacing: get_sp(2);
-//             width: get_sp(32);
-//             padding-top: get_sp(10);
-//         }
-//     }
-
-//     .list_content {
-//         width: 100%;
-//         display: flex;
-
-//         .item_content {
-//             border: 1px solid #92bceb;
-//             width: 14.3%;
-
-//             @include sp {
-//                 width: 100%;
-//                 padding: get_sp(31) get_sp(26);
-//             }
-//             @include sp {
-//                 padding: get_sp(10) get_sp(15) get_sp(15) get_sp(8);
-//             }
-
-//             h3 {
-//                 font-size: 20px;
-//                 line-height: 25px;
-//                 color: #004898;
-//                 font-family: "Noto Sans CJK JP";
-//                 font-weight: bold;
-//                 text-align: left;
-//                 padding: 16px 20px 8px 20px;
-
-//                 @include pc {
-//                     font-size: get_pc(20);
-//                     line-height: get_pc(25);
-//                     padding: get_pc(16) get_pc(20) get_pc(8) get_pc(20);
-//                 }
-
-//                 @include sp {
-//                     font-size: get_sp(20);
-//                     line-height: get_sp(29);
-//                     letter-spacing: get_sp(2);
-//                     padding: 0 0 get_sp(8);
-
-//                 }
-//             }
-
-//             .tlt_content {
-//                 font-size: 19px;
-//                 line-height: 29px;
-//                 text-align: left;
-//                 font-weight: bold;
-//                 letter-spacing: -0.5px;
-//                 padding: 0 20px 18px;
-//                 transition: all ease 0.3s;
-
-//                 @include pc {
-//                     font-size: get_pc(19);
-//                     line-height: get_pc(29);
-//                     padding: 0 get_pc(20) get_pc(18);
-//                     letter-spacing: get_pc(-0.5);
-//                 }
-
-//                 @include sp {
-//                     font-size: get_sp(19);
-//                     line-height: get_sp(29);
-//                     padding: 0 0 get_sp(8);
-//                     letter-spacing: get_sp(-0.5);
-//                 }
-//             }
-
-//             .desp_content {
-//                 font-size: 15px;
-//                 line-height: 25px;
-//                 letter-spacing: 0.8px;
-//                 color: #000;
-//                 text-align: left;
-//                 padding: 0 20px 8px;
-//                 transition: all ease 0.3s;
-
-//                 @include pc {
-//                     font-size: get_pc(15);
-//                     line-height: get_pc(25);
-//                     padding: 0 get_pc(20) get_pc(8);
-//                     letter-spacing: get_pc(0.8);
-//                 }
-
-//                 @include sp {
-//                     font-size: get_sp(15);
-//                     line-height: get_sp(25);
-//                     padding: 0 0 get_sp(21);
-//                     letter-spacing: get_sp(0.8);
-//                 }
-//             }
-
-//             .thumb {
-//                 transition: all ease 0.3s;
-//                 img {
-//                     width: 220px;
-//                     height: 175px;
-//                     object-fit: cover;
-//                     padding-bottom: 18px;
-
-//                     @include pc {
-//                         width: get_pc(220);
-//                         height: get_pc(175);
-//                         padding-bottom: get_pc(18);
-//                     }
-
-//                     @include sp {
-//                         width: get_sp(340);
-//                         height: get_sp(200);
-//                         padding-bottom: 0;
-//                     }
-//                 }
-//             }
-//             &:hover {
-//                 .tlt_content {
-//                     color: #004898;
-//                 }
-//                 .desp_content {
-//                     color: #004898;
-//                 }
-//                 .thumb {
-//                     opacity: 0.7;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .content_section_2 {
-//     background-color: #E8F3FF;
-
-//     span {
-//         background-color: #E8F3FF;
-//     }
-// }
-
-// .btn_watch {
-//     text-align: center;
-
-//     a {
-//         @include bgsetup("../images/btn_watch.svg", center center, 100% auto, no-repeat);
-//         width: 554px;
-//         margin: 0 auto 29px;
-//         height: 86px;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         padding-left: 65px;
-//         color: #000000;
-//         font-size: 25px;
-//         letter-spacing: 1.25px;
-//         line-height: 36px;
-//         font-weight: bold;
-
-//         @include sp {
-//             width: get_sp(370);
-//             padding: 0 get_sp(8);
-//             margin: get_sp(10) auto get_sp(14);
-//             height: get_sp(56);
-//             padding-left: get_sp(69);
-//             font-size: get_sp(17);
-//             letter-spacing: get_sp(1.7);
-//             line-height: get_sp(25);
-//         }
-//     }
-// }
-
-// .item_brand {
-//     display: flex;
-//     margin: 28px auto 100px;
-//     justify-content: center;
-
-//     @include pc {
-//         margin: get_pc(28) auto get_pc(100);
-//     }
-
-//     @include sp {
-//         margin: 0 0 get_sp(30);
-//     }
-
-//     .thumb {
-//         width: 522px;
-//         height: 216px;
-
-//         @include pc {
-//             width: get_pc(522);
-//             height: get_pc(216);
-//         }
-
-//         @include sp {
-//             width: get_sp(185);
-//             height: get_sp(90);
-//         }
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//         }
-//     }
-
-//     .txt_desp {
-//         background-color: #F2F2F2;
-//         border-radius: 0 32px 32px 0;
-//         padding: 50px 45px 30px 25px;
-//         text-align: left;
-//         color: #000000;
-//         width: 1050px;
-//         height: 216px;
-
-//         @include pc {
-//             border-radius: 0 get_pc(32) get_pc(32) 0;
-//             padding: get_pc(50) get_pc(45) get_pc(30) get_pc(45);
-//             width: get_pc(1050);
-//             height: get_pc(216);
-//         }
-
-//         @include sp {
-//             border-radius: 0;
-//             padding: get_sp(11) get_sp(13) get_sp(11) get_sp(12);
-//             width: get_sp(210);
-//             height: get_sp(90);
-//         }
-
-//         h3 {
-//             font-size: 25px;
-//             letter-spacing: 2.5px;
-//             line-height: 36px;
-//             font-weight: bold;
-//             margin-bottom: 14px;
-//             @include txtClamp(1);
-
-//             @include pc {
-//                 font-size: get_pc(25);
-//                 letter-spacing: get_pc(2.5);
-//                 line-height: get_pc(36);
-//                 margin-bottom: get_pc(14);
-//             }
-
-//             @include sp {
-//                 font-size: get_sp(16);
-//                 line-height: get_sp(24);
-//                 letter-spacing: get_sp(1);
-//                 margin-bottom: get_sp(4);
-//             }
-//         }
-
-//         p {
-//             font-size: 20px;
-//             letter-spacing: 2px;
-//             line-height: 29px;
-//             width: 944px;
-//             font-weight: 600;
-
-//             @include pc {
-//                 font-size: get_pc(20);
-//                 letter-spacing: get_pc(2);
-//                 line-height: get_pc(29);
-//                 width: get_pc(944);
-//             }
-
-//             @include sp {
-//                 font-size: get_sp(14);
-//                 line-height: get_sp(20);
-//                 letter-spacing: get_sp(1.4);
-//                 width: get_sp(185);
-//             }
-//         }
-//     }
-// }
-// }

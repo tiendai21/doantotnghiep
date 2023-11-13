@@ -990,7 +990,8 @@ program-list
 	/* flex */
 	display: flex;
 	flex-direction: row;
-	width: 1000px;
+	/* width: 1000px; */
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	padding-bottom: 3px;
@@ -1041,13 +1042,11 @@ program-list
 .program-list .item a .img{
 	position: relative;
 	width: 100%;
-	padding: 56.25% 0 0 0;
+	padding: 0;
 }
 
 .program-list .item a .img img{
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: relative;
 	width: 100%;
 }
 
@@ -1124,7 +1123,8 @@ program-list
 }
 
 .program-list.w320 .item{
-	width: 320px;
+	/* width: 320px; */
+	width: 31.8%;
 }
 
 @media screen and (max-width: 750px){
