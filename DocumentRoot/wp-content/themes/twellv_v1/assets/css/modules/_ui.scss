@@ -415,6 +415,7 @@ a {
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
+    padding-top: 10px;
     transition: all .3s;
     &:hover {
         transform: translate(0, -10px);
@@ -441,6 +442,7 @@ a {
         }
     }
     @include pc {
+        padding-top: get_pc(10);
         right: get_pc(32);
         bottom: get_pc(29);
         width: get_pc(120);
@@ -454,7 +456,8 @@ a {
         width: get_sp(73);
         height: get_sp(73);
         border: get_sp(2) solid #134898;
-        padding-bottom: get_sp(10);
+        padding-bottom: get_sp(7);
+        padding-top: 0;
     }
 
     a {
@@ -464,15 +467,19 @@ a {
             height: 3px;
             background-color: #004898;
             display: inline-block;
-
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             @include pc {
+                top: get_pc(20);
                 width: get_pc(59);
                 height: get_pc(3);
             }
 
             @include sp {
                 position: relative;
-                top: get_sp(1);
+                top: get_sp(-2);
                 width: get_sp(36);
                 height: get_sp(2);
             }
@@ -484,20 +491,20 @@ a {
             transform: rotate(-90deg);
             margin: 0 auto;
             position: relative;
-            top: 6px;
+            top: 3px;
             justify-content: center;
             display: flex;
 
             @include pc {
                 width: get_pc(19);
                 height: get_pc(22);
-                top: get_pc(6);
+                top: get_pc(3);
             }
 
             @include sp {
                 width: get_sp(11);
                 height: get_sp(13);
-                top: get_sp(2);
+                top: get_sp(-2);
             }
 
             img {
@@ -511,17 +518,17 @@ a {
             font-size: 26px;
             line-height: 31px;
             font-weight: bold;
-            letter-spacing: 3.9px;
+            letter-spacing: 2.6px;
             text-transform: uppercase;
             @include pc {
                 font-size: get_pc(26);
                 line-height: get_pc(31);
-                letter-spacing: get_pc(3.9);
+                letter-spacing: get_pc(2.6);
             }
 
             @include sp {
                 font-size: get_sp(15);
-                line-height: get_sp(18);
+                line-height: get_sp(14);
                 letter-spacing: get_sp(2.25);
             }
 
@@ -529,14 +536,14 @@ a {
                 display: block;
                 color: #004898;
                 font-size: 17px;
-                line-height: 26px;
+                line-height: 25px;
                 letter-spacing: 2.55px;
                 font-weight: bold;
 
                 @include pc {
                     font-size: get_pc(17);
                     letter-spacing: get_pc(2.55);
-                    line-height: get_pc(26);
+                    line-height: get_pc(25);
                 }
 
                 @include sp {
@@ -764,6 +771,7 @@ a {
                     }
 
                     @include sp {
+                        @include txtClamp(9);
                         font-size: get_sp(16);
                         line-height: get_sp(24);
                         letter-spacing: get_sp(1.6);
@@ -1778,7 +1786,17 @@ a {
                     padding: 0;
                     margin-bottom: get_sp(7);
                 }
-
+                &:nth-last-child(2) {
+                    a {
+                        line-height: 25px;
+                        @include pc {
+                            line-height: get_pc(25);
+                        }
+                        @include sp {
+                            line-height: get_sp(15);
+                        }
+                    }
+                }
                 a {
                     display: flex;
                     justify-content: space-between;
