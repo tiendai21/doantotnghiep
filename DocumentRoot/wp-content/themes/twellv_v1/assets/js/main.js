@@ -8,10 +8,6 @@
         _speed = 1000;
 
     if (_width <= _spmode) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 28d9c49 (update feedback top 13/11)
     }
     scrollInAnime(window, ".anime", "animated");
     scrollInAnime(window, ".anime2", "animated");
@@ -462,7 +458,7 @@
     //resize after
     window.onresize = function () {
         _width = $(window).width();
-        if (_width <= 960) {
+        if (_width <= _spmode) {
             slideNavList(".side_header", false, false);
         }
     };

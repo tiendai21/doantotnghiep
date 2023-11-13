@@ -554,7 +554,7 @@
             .content_3 {
                 max-width: 1082px;
                 height: 579px;
-                margin: 0 auto 89px;
+                margin: 0 auto;
                 background-color: #F2DB28;
                 border-radius: 52px;
 
@@ -562,14 +562,13 @@
                     max-width: get_pc(1082);
                     height: get_pc(579);
                     border-radius: get_pc(52);
-                    margin: 0 auto get_pc(89);
                 }
 
                 @include sp {
                     max-width: 100%;
                     height: get_sp(511);
                     border-radius: get_sp(52);
-                    margin: 0 auto get_sp(52);
+                    margin: 0 auto get_sp(45);
                 }
 
                 .inner {
@@ -677,7 +676,7 @@
                             border: 1px solid #004898;
                             border-radius: 21px;
                             margin: 0 24px;
-
+                            background-color: #FFFFFF;
                             @include pc {
                                 font-size: get_pc(34);
                                 letter-spacing: get_pc(3.4);
@@ -760,7 +759,7 @@
                 line-height: 74px;
                 letter-spacing: 7.65px;
                 font-weight: bold;
-                padding: 269px 0 75px;
+                padding: 220px 0 75px;
                 margin-bottom: 73px;
                 color: #FFFFFF;
 
@@ -769,7 +768,7 @@
                     font-size: get_pc(51);
                     line-height: get_pc(74);
                     letter-spacing: get_pc(7.65);
-                    padding: get_pc(269) 0 get_pc(75);
+                    padding: get_pc(220) 0 get_pc(75);
                     margin-bottom: get_pc(73);
                 }
 
