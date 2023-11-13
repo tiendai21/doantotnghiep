@@ -771,10 +771,8 @@
             }
         }
         .tlt_section{
-            width: 1520px;
             margin: 0 auto 50px;
             @include pc {
-                width: get_pc(1520);
                 margin: 0 auto get_pc(50);
             }
             @include sp {

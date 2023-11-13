@@ -919,7 +919,6 @@ a {
             margin-bottom: get_pc(20);
         }
         @include sp {
-            padding-top: get_sp(23.86);
             padding-bottom: get_sp(23.11);
             margin-bottom: get_sp(27.63);
             border-bottom: get_sp(2) solid #699bd3;
@@ -1706,6 +1705,7 @@ a {
     .tlt_section {
         justify-content: center;
         margin-bottom: 52px;
+        padding: 0;
 
         @include pc {
             margin-bottom: get_pc(52);

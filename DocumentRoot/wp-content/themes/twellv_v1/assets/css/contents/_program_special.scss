@@ -838,7 +838,7 @@
     .bg_special_wrapper {
         @include bgsetup("../images/bg_social_media.png", 0 490px, 100% auto, no-repeat);
         @include pc {
-            background-position: get_pc(490);
+            background-position: 0 get_pc(490);
         }
     }
 
