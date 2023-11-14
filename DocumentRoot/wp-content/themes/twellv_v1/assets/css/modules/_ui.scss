@@ -91,8 +91,6 @@ a {
         }
     }
 
-
-
     span, a {
         font-size: 22px;
         letter-spacing: 1.1px;
@@ -916,7 +914,6 @@ a {
     }
 }
 
-
 /*
     recommend
 */
@@ -1456,7 +1453,7 @@ a {
                 margin: 0 get_sp(5) get_sp(5) 0;
             }
         }
-        &:nth-child(-n +4){
+        &:nth-child(-n +4) {
             margin-bottom: 10px;
             @include pc {
                 margin-bottom: get_pc(10);
@@ -1918,6 +1915,10 @@ a {
         }
     }
 
+    .tlt_section {
+        padding: 0;
+    }
+
     .list_pr {
         display: flex;
         justify-content: center;
@@ -2105,10 +2106,15 @@ a {
 /*
     recommend movie section
 */
-#recommended_movies {
+.recommended_movies, #recommended_movies {
     .tlt_section {
         @include sp {
             margin-bottom: get_sp(20);
+        }
+        h2 {
+            @include sp {
+                max-width: get_sp(150);
+            }
         }
     }
     .program_slide {
@@ -2121,13 +2127,14 @@ a {
         }
     }
 }
+
 //a.pdf
 a {
     &.pdf {
         align-items: center;
         &:after {
             content: '';
-            @include bgsetup("../images/icon_pdf.svg",center center,100% auto, no-repeat);
+            @include bgsetup("../images/icon_pdf.svg", center center, 100% auto, no-repeat);
             display: block;
             width: 52px;
             height: 28px;
@@ -2141,6 +2148,74 @@ a {
                 width: get_sp(43);
                 height: get_sp(23);
                 margin-left: get_sp(5);
+            }
+        }
+    }
+}
+
+.program-contents-wrap, #archive_episode {
+    .social_link {
+        li {
+            border-radius: 50%;
+            a {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 83px;
+                    height: 83px;
+                    transition: all ease 0.3s;
+                    @include pc {
+                        width: get_pc(83);
+                        height: get_pc(83);
+                    }
+                    @include sp {
+                        width: get_sp(50);
+                        height: get_sp(50);
+                    }
+                }
+            }
+        }
+        li:first-child {
+            a {
+                &::before {
+                    @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
+                }
+            }
+        }
+        li:nth-child(2) {
+            a {
+                &::before {
+                    @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
+                }
+            }
+        }
+        li:last-child {
+            a {
+                &:last-child {
+                    &::before {
+                        @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
+                    }
+                }
+            }
+        }
+        li:hover {
+            a {
+                opacity: initial;
+            }
+            &:first-child {
+                a::before {
+                    @include bgsetup("../images/logo_x_hover.png", center center, 100% auto, no-repeat);
+                }
+            }
+            &:nth-child(2) {
+                a::before {
+                    @include bgsetup("../images/logo_fb_hover.png", center center, 100% auto, no-repeat);
+                }
+            }
+            &:last-child {
+                a::before {
+                    @include bgsetup("../images/logo_line_hover.png", center center, 100% auto, no-repeat);
+                }
             }
         }
     }
