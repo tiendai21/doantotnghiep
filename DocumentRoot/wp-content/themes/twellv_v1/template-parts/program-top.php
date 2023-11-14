@@ -55,7 +55,21 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
                         <h2><?php echo $term->name; ?></h2>
                         <div class="date">
                             <h4><?php echo get_field('onairtime', $term); ?></h4>
-                            <p class="util_pc"><?php echo get_field('pg_text', $term); ?></p>
+                            <?php
+                            function modifyText($inputText) {
+                                $startPos = strpos($inputText, "出演：");
+                                $endPos = strpos($inputText, "ジャンル", $startPos);
+
+                                if ($startPos !== false && $endPos !== false) {
+                                    $textToModify = substr($inputText, $startPos + strlen("出演："), $endPos - $startPos - strlen("出演："));
+                                    $textToModify_str = str_replace('<br />', '', $textToModify);
+                                    $modifiedText = '<a target="_blank" href="https://www.google.com/search?q=' . $textToModify_str . '">' . $textToModify . '</a>';
+                                    return substr_replace($inputText, $modifiedText, $startPos + strlen("出演："), $endPos - $startPos - strlen("出演："));
+                                } else {
+                                    return "Text not found between '出演：' and 'ジャンル'.";
+                                }
+                            }?>
+                            <p class="util_pc"><?php echo modifyText(get_field('pg_text', $term)); ?></p>
                         </div>
                         <?php get_template_part('template-parts/program/share', 'buttons'); ?>
                     </div>

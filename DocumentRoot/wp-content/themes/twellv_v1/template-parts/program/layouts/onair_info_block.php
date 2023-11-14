@@ -66,7 +66,7 @@ HTML;
                 $onair_week = "(" . $week[date("w", strtotime($v["s"]))] . ")";
                 $onair_startdate = date("H:i", strtotime($v["s"]));
                 $onair_enddate = date("H:i", strtotime($v["e"]));
-                $image = 'https:' . $v['pictures'][0]['url'];
+                $image = $v['pictures'][0]['url'] ? 'https:' . $v['pictures'][0]['url'] : get_stylesheet_directory_uri() . '/assets/images/bs12_noimg.jpeg';
                 $url = $v['rurls'][1]['url'];
                 $tmp_data .= <<< HTML
 <li>

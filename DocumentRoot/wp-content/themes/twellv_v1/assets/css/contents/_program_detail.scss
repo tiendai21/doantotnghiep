@@ -171,6 +171,12 @@
                             letter-spacing: get_sp(1.6);
                             margin-bottom: get_sp(20);
                         }
+                        a {
+                            color: white;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
                     .list {
                         &:nth-last-child(2) {

@@ -24,7 +24,7 @@ $hideSocial = $args['social'];
                     <a href="<?php echo esc_url(home_url('/program/tabi/')) ?>">旅・グルメ</a>
                 </li>
                 <li>
-                    <a href="#">ライフスタイル</a>
+                    <a href="<?php echo esc_url(home_url('/program/entertainment/')) ?>">ライフスタイル</a>
                 </li>
                 <li>
                     <a href="<?php echo esc_url(home_url('/program/documentary/')) ?>">情報・ドキュメンタリー</a>
