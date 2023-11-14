@@ -31,24 +31,15 @@ if (!$isSimple) :
         </ul>
     </div>
 <?php else: ?>
-    <ul>
+    <ul class="social_link">
         <li>
-            <a href="https://twitter.com/share?url=<?php echo $url; ?>" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_fb_a.svg' ?>" width="83"
-                     height="83" alt="image social">
-            </a>
+            <a href="https://twitter.com/share?url=<?php echo $url; ?>" target="_blank"></a>
         </li>
         <li>
-            <a href="https://www.facebook.com/share.php?u=<?php echo $url; ?>" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_fb_a.svg' ?>" width="83"
-                     height="83" alt="image social">
-            </a>
+            <a href="https://www.facebook.com/share.php?u=<?php echo $url; ?>" target="_blank"></a>
         </li>
         <li>
-            <a href="http://line.me/R/msg/text/?<?php echo $url; ?>" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_line.svg' ?>" width="83"
-                     height="83" alt="image social">
-            </a>
+            <a href="http://line.me/R/msg/text/?<?php echo $url; ?>" target="_blank"></a>
         </li>
     </ul>
 <?php endif; ?>

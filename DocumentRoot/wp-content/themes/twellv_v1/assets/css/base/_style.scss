@@ -2225,6 +2225,7 @@
                 .modal_ytb {
                     width: 100%;
                     height: 831px;
+                    background: #fff;
                     @include pc {
                         height: get_pc(831);
                     }

@@ -181,6 +181,9 @@
             @include pc {
                 padding: 0 get_pc(247) 0 get_pc(140);
             }
+            @include sp {
+                padding: 0 get_sp(7) 0 get_sp(8);
+            }
         }
     }
 }
