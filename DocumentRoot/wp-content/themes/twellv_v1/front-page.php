@@ -122,11 +122,6 @@ get_header();
                 <div class="section_news">
                     <div class="tlt_section">
                         <h2>お知らせ</h2>
-                        <div class="btn_more">
-                            <a href="<?php echo esc_url(home_url('/news/announce')) ?>">
-                                すべて見る
-                            </a>
-                        </div>
                     </div>
                     <?php get_template_part('template-parts/news/news_list'); ?>
                 </div>

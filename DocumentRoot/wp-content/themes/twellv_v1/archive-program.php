@@ -93,7 +93,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <?php get_template_part('template-parts/add/add_news'); ?>
         <?php get_template_part('template-parts/add/add_news_single'); ?>
         <!-- Broadcast schedule -->
-        <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true)); ?>
+        <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => false)); ?>
         <!-- /Broadcast schedule -->
 
         <!-- ranking -->

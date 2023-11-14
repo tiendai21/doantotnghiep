@@ -2178,6 +2178,7 @@ a {
         li:first-child {
             a {
                 &::before {
+                    content: "";
                     @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
                 }
             }
@@ -2185,6 +2186,7 @@ a {
         li:nth-child(2) {
             a {
                 &::before {
+                    content: "";
                     @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
                 }
             }
@@ -2193,6 +2195,7 @@ a {
             a {
                 &:last-child {
                     &::before {
+                        content: "";
                         @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
                     }
                 }

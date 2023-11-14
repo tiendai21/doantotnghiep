@@ -112,21 +112,20 @@
         if ($(window).width() < 900) {
             $(".box_search_sp").click(function () {
                 $(this).addClass("active");
-                // $(".box_search").slideToggle("active");
                 $("#___gcse_0").toggle("slide");
                 $(".header_link ul").addClass("active");
             });
+            $(document).click(function (event) {
+                if ($(event.target).closest("#___gcse_0").length === 0 && $("#___gcse_0 input").val() !== "") {
+                    $(".box_search_sp").removeClass("active");
+                    $("#___gcse_0").toggle("slide");
+                    $(".header_link ul").removeClass("active");
+                    $("#___gcse_0 input").val("");
+                }
+            });
         }
     }
-    function clickOutSite() {
-        $(document).click(function (event) {
-            if ($(event.target).closest("#___gcse_0").length === 0) {
-                $(".box_search_sp").removeClass("active");
-                $("#___gcse_0").toggle("slide");
-                $(".header_link ul").removeClass("active");
-            }
-        });
-    }
+
     function toggleReadMore() {
         $(".list_episode ul li:not(:nth-child(-n + 4))").hide();
         $("#episode .btn_more").click(function () {

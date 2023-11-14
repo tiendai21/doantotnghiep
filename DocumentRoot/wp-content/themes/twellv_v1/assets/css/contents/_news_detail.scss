@@ -369,13 +369,13 @@
                     &:hover {
                         opacity: initial;
                         &:first-child {
-                            background-image: url("../images/logo_x_hover.png");
+                            @include bgsetup("../images/logo_x_hover.png",center center,100% auto,no-repeat);
                         }
                         &:nth-child(2) {
-                            background-image: url("../images/logo_fb_hover.png");
+                            @include bgsetup("../images/logo_fb_hover.png",center center,100% auto,no-repeat);
                         }
                         &:last-child {
-                            background-image: url("../images/logo_line_hover.png");
+                            @include bgsetup("../images/logo_line_hover.png",center center,100% auto,no-repeat);
                         }
                     }
                 }

@@ -98,14 +98,6 @@ if ($relate_program) {
             </div>
         </section>
 
-        <!-- recommend -->
-        <?php get_template_part('template-parts/home/recommend_top', null, array('hideBrand' => true)); ?>
-        <!-- /recommend -->
-
-        <!-- news -->
-        <?php get_template_part('template-parts/news/news_top'); ?>
-        <!-- /news -->
-
         <!-- pr -->
         <?php get_template_part('template-parts/home/pr_top'); ?>
         <!-- /pr -->
