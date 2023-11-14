@@ -385,6 +385,7 @@
                 top: 0;
                 border-left: 1px solid #92bceb;
                 border-right: 1px solid #92bceb;
+                box-sizing: border-box;
 
                 @include pc {
                     border-left: get_pc(1) solid #92bceb;
