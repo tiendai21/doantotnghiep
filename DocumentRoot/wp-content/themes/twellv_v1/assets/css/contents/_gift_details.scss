@@ -907,10 +907,23 @@
             @include sp {
                 padding: 0 get_sp(12);
             }
-            .list_news_release {
+            .news {
+                background-color: #ffffff;
+                border-radius: 39px;
+                padding: 33px 29px 23px 69px;
+                height: 362px;
+                overflow-y: hidden;
+
+                @include pc {
+                    border-radius: get_pc(39);
+                    padding: get_pc(33) get_pc(29) get_pc(23) get_pc(69);
+                    height: get_pc(362);
+                }
+
                 @include sp {
-                    padding: get_sp(16.64) get_sp(7.89) get_sp(14.51) get_sp(12.5);
-                    margin: 0 get_sp(2) 0 get_sp(5);
+                    border-radius: get_sp(13);
+                    padding: get_sp(17) get_sp(13);
+                    height: auto;
                 }
             }
             ul {
