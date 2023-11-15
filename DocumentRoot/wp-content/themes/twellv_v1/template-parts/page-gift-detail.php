@@ -149,15 +149,12 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
     <!-- section infomation -->
     <section class="section" id="section_infomation">
         <div class="inner">
-            <div class="tlt_section">
-                <h2>お知らせ</h2>
-                <div class="btn_more">
-                    <a href="<?php echo esc_url(home_url('/news/announce')) ?>">
-                        <span>すべて見る</span>
-                    </a>
+            <div class="news_release">
+                <div class="tlt_section">
+                    <h2>お知らせ</h2>
                 </div>
+                <?php get_template_part('template-parts/news/news_list'); ?>
             </div>
-            <?php get_template_part('template-parts/news/news_list'); ?>
         </div>
     </section>
     <!-- /section infomation -->
