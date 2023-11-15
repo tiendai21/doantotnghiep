@@ -904,6 +904,7 @@
         .news_release {
             padding-bottom: 0;
             margin-bottom: 0;
+            border-bottom: initial;
             @include sp {
                 padding: 0 get_sp(12);
             }

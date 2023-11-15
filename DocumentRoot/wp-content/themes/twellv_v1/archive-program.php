@@ -2,7 +2,7 @@
 get_header();
 // echo '番組一覧ページ';
 
-$base_terms_order = ['drama', 'korea', 'china', 'sports', 'tabi', 'variety', 'documentary',
+$base_terms_order = ['china', 'korea', 'drama', 'sports', 'tabi', 'variety', 'documentary',
     'music', 'anime', 'entertainment', 'qvc'];
 
 // 番組カテゴリーを取得
@@ -130,7 +130,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <?php get_template_part('template-parts/home/modal_category', null, array('title' => $base_t->name , 'modal' => $archive_modal)); ?>
+                        <?php get_template_part('template-parts/home/modal_category', null, array('title' => $base_t->name, 'modal' => $archive_modal)); ?>
                     </div>
                 </section>
                 <?php
