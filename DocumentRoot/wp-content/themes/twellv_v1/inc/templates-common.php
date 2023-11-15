@@ -121,7 +121,10 @@ function change_posts_per_page($query) {
             $query->set('orderby',array('post_date'=>'DESC','ID'=>'DESC'));
             $query->set('order','DESC');
         }
-
+        $isBullet = get_field( 'archive_bullet_design',  $query->term );
+        if ($isBullet) {
+            $query->set( 'posts_per_page', '10' );
+        }
     }
 }
 add_action('pre_get_posts','change_posts_per_page');

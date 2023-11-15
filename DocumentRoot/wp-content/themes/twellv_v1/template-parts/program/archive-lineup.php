@@ -82,15 +82,6 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                     ?>
                     <section class="section" id="limited_rewards">
                         <div class="inner">
-                            <div class="thumb">
-                                <?php
-                                // WYSIWYG
-                                $archive_top_text = get_field( 'archive_top_text', $archive_term );
-                                if ( $archive_top_text ) {
-                                    echo add_tag_custom_class( $archive_top_text );
-                                }
-                                ?>
-                            </div>
                             <ul>
                                 <?php
                                 while (have_posts()) {
@@ -99,6 +90,15 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                                 }
                                 ?>
                             </ul>
+
+                            <!--       Paging             -->
+                            <?php
+                            $total_pages = $the_query->max_num_pages;
+                            if (function_exists('custom_pagination')) :
+                                custom_pagination($total_pages, 1, $paged);
+                            endif;
+                            ?>
+                            <!--       /Paging             -->
                         </div>
                     </section>
                     <?php
@@ -107,6 +107,7 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                     ?>
                     <section class="section" id="episode">
                         <div class="inner">
+                            <h2>エピソード</h2>
                             <div class="list_episode">
                                 <ul>
                                     <?php

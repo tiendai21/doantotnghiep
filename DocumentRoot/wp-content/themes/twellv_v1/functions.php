@@ -131,3 +131,68 @@ if (function_exists('acf_add_options_page')) {
         'redirect' => false
     ));
 }
+
+add_filter( 'pre_get_posts', 'custom_posts_per_page' );
+
+function custom_pagination($numpages = '', $pagerange = '', $paged = '', $pageName = '')
+{
+    if (empty($pagerange)) {
+        $pagerange = 1;
+    }
+    global $paged;
+
+    if (empty($paged)) {
+        $paged = 1;
+    }
+    if ($numpages == '') {
+        global $wp_query;
+        $numpages = $wp_query->max_num_pages;
+        if (!$numpages) {
+            $numpages = 1;
+        }
+    }
+    $url_params_regex = '/\?.*?$/';
+    $big = 999999999;
+    preg_match($url_params_regex, get_pagenum_link(), $url_params);
+    $base = str_replace($big, '%#%', esc_url(get_pagenum_link($big)));
+    $format = 'page/%#%';
+    $pagination_args = array(
+        //        'base'            => get_pagenum_link(1) . '%_%',
+        //        'format'          => 'page/%#%',
+        'base' => $base,
+        'format' => $format,
+        'total' => $numpages,
+        'current' => $paged,
+        'show_all' => false,
+        'end_size' => 2,
+        'mid_size' => 2,
+        'prev_next' => true,
+        'prev_text' => __('前へ'),
+        'next_text' => __('次へ'),
+        'type' => 'array',
+        'add_args' => true,
+        'add_fragment' => ''
+    );
+    $paginate_links = paginate_links($pagination_args);
+    if ($paginate_links) {
+        echo "<div id='pagination'>
+        <ul>
+        ";
+        foreach ($paginate_links as $paginate_item) {
+            if (str_contains($paginate_item, '')) {
+                // continue;
+            }
+            if (str_contains($paginate_item, '')) {
+                // continue;
+            }
+            echo
+                '<li>'.
+                $paginate_item.
+                '</li>';
+        }
+        echo "</ul></div>";
+
+    }
+    wp_reset_postdata();
+
+}
