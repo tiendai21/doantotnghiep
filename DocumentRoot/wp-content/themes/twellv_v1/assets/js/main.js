@@ -51,6 +51,8 @@
         synopsisList(".synopsis_list", false, false);
         showPopUp();
         toggleReadMore();
+        //pagination limited rewards
+        limitRewardsPaging();
         // categorry
         slideProgram(".dramas_top", false, false);
         slideProgram(".dramas_bottom", false, false);
@@ -452,6 +454,27 @@
                 },
             ]
         });
+    }
+
+    function limitRewardsPaging() {
+        $("body").on("click", "#pagination ul li a", function(e){
+            e.preventDefault();
+            const url = $(this).attr('href');
+            $.ajax({
+                type: "GET",
+                url: url,
+                success: function (res) {
+                    $("#limited_rewards").replaceWith($(res).find("#limited_rewards"));
+                    $("html, body").animate(
+                        { scrollTop: $("#limited_rewards").offset().top - 200 },
+                        2000
+                    );
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        })
     }
 
     //resize after

@@ -34,12 +34,6 @@
     */
     #banner {
         .inner {
-            max-width: 1920px;
-            margin: 0 auto 24.87px;
-            @include pc {
-                max-width: get_pc(1920);
-                margin: 0 auto get_pc(24.87);
-            }
             @include sp {
                 width: 100%;
                 margin-bottom: get_sp(22);
@@ -49,7 +43,7 @@
             width: 100%;
             height: 163px;
             @include pc {
-                height: 163px;
+                height: get_pc(163);
             }
             @include sp {
                 height: get_sp(115);
@@ -137,7 +131,7 @@
                 object-fit: cover;
             }
         }
-        ul {
+        .inner > ul {
             @include sp {
                 padding: 0 get_sp(13);
             }
@@ -194,6 +188,7 @@
                 }
             }
             h2 {
+                text-align: left;
                 font-size: 30px;
                 letter-spacing: 3px;
                 line-height: 44px;
@@ -259,7 +254,7 @@
                 }
             }
         }
-        .pagination {
+        #pagination {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -269,6 +264,9 @@
             }
             @include sp {
                 margin-bottom: get_sp(45);
+            }
+            ul {
+                display: flex;
             }
             li {
                 margin-bottom: 0;
@@ -284,51 +282,6 @@
                    a {
                        color: #0A5AB2;
                    }
-                }
-                &:nth-last-child(2) {
-                    padding-bottom: 0;
-                    margin-left: 0;
-                }
-                &:last-child {
-                    margin-left: 19px;
-                    margin-bottom: 0;
-                    @include pc {
-                        margin-left: get_pc(19);
-                    }
-                    @include sp {
-                        margin-left: get_sp(19);
-                    }
-                    a {
-                        color: #0A5AB2;
-                        font-size: 25px;
-                        letter-spacing: 2.5px;
-                        @include pc {
-                            font-size: get_pc(25);
-                            letter-spacing: get_pc(2.5);
-                        }
-                        @include sp {
-                            font-size: get_sp(16);
-                            letter-spacing: get_sp(1.6);
-                        }
-                    }
-                    &:after {
-                        content: "";
-                        @include bgsetup("../images/btn_arrow_right.svg",center center,100% auto,no-repeat);
-                        display: inline-block;
-                        width: 20px;
-                        height: 23px;
-                        margin-left: 7px;
-                        @include pc {
-                            width: get_pc(20);
-                            height: get_pc(23);
-                            margin-left: get_pc(7);
-                        }
-                        @include sp {
-                            width: get_sp(12);
-                            height: get_sp(13);
-                            margin-left: get_sp(2);
-                        }
-                    }
                 }
                 a,span {
                     color: #B4B4B4;
@@ -346,6 +299,84 @@
                         font-size: get_sp(20);
                         letter-spacing: get_sp(2);
                         line-height: get_sp(50);
+                    }
+                }
+                .current {
+                    color: #0A5AB2;
+                    font-weight: 700;
+                }
+                .dots {
+                    transform: translateY(6px);
+                    display: inline-block;
+                    @include pc {
+                        transform: translateY(get_pc(6));
+                    }
+                    @include sp {
+                        transform: translateY(get_sp(6));
+                    }
+                }
+
+                &:last-child, &:first-child {
+                    .next, .prev {
+                        color: #0A5AB2;
+                        font-size: 25px;
+                        letter-spacing: 2.5px;
+                        transform: translateY(-3px);
+                        display: inline-block;
+                        @include pc {
+                            font-size: get_pc(25);
+                            letter-spacing: get_pc(2.5);
+                            transform: translateY(get_pc(-3));
+                        }
+                        @include sp {
+                            font-size: get_sp(16);
+                            letter-spacing: get_sp(1.6);
+                            transform: initial;
+                        }
+                    }
+                    .next {
+                        &:after {
+                            content: "";
+                            @include bgsetup("../images/btn_arrow_right.svg",center center,100% auto,no-repeat);
+                            display: inline-block;
+                            width: 20px;
+                            height: 23px;
+                            margin-left: 7px;
+                            transform: translateY(2px);
+                            @include pc {
+                                width: get_pc(20);
+                                height: get_pc(23);
+                                margin-left: get_pc(7);
+                                transform: translateY(get_pc(2));
+                            }
+                            @include sp {
+                                width: get_sp(12);
+                                height: get_sp(13);
+                                margin-left: get_sp(2);
+                            }
+                        }
+                    }
+                    .prev {
+                        &:before {
+                            content: "";
+                            @include bgsetup("../images/btn_arrow_right.svg",center center,100% auto,no-repeat);
+                            display: inline-block;
+                            width: 20px;
+                            height: 23px;
+                            margin-right: 8px;
+                            transform: translateY(3px) rotate(180deg);
+                            @include pc {
+                                width: get_pc(20);
+                                height: get_pc(23);
+                                margin-right: get_pc(8);
+                                transform: translateY(get_pc(3)) rotate(180deg);
+                            }
+                            @include sp {
+                                width: get_sp(12);
+                                height: get_sp(13);
+                                margin-right: get_sp(2);
+                            }
+                        }
                     }
                 }
             }
