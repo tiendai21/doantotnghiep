@@ -455,7 +455,7 @@ foreach ($terms as $t) {
     <section class="section" id="recommended_movies">
         <div class="inner">
             <div class="tlt_section">
-                <h2>おすすめ韓国・韓流ドラマ</h2>
+                <h2>おすすめ韓流ドラマ</h2>
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>
@@ -610,9 +610,6 @@ foreach ($terms as $t) {
         <div class="inner">
             <div class="tlt_section">
                 <h2>お客様の声</h2>
-                <div class="btn_more">
-                    <span>すべて見る</span>
-                </div>
             </div>
             <div class="program_slide voice_list">
                 <div class="item_slide">

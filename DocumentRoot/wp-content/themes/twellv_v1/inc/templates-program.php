@@ -240,7 +240,7 @@ function display_program_recommend_by_category_slug($slug)
         <section class="recommended_movies">
             <div class="inner">
                 <div class="tlt_section">
-                    <h2>おすすめ韓国・<?php echo $category_term->name; ?></h2>
+                    <h2>おすすめ<?php echo $category_term->name; ?></h2>
                     <div class="btn_more">
                         <span>すべて見る</span>
                     </div>
@@ -553,11 +553,6 @@ function display_program_voice_by_category_slug($slug)
             <div class="inner">
                 <div class="tlt_section">
                     <h2>お客様の声</h2>
-                    <div class="btn_more">
-                        <a href="<?php echo esc_url(home_url('/faq'))?>">
-                            すべて見る
-                        </a>
-                    </div>
                 </div>
                 <div class="program_slide voice_list">
                     <?php
