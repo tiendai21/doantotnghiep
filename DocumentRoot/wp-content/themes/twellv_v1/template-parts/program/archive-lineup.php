@@ -118,7 +118,7 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                                 </ul>
                             </div>
                             <div class="btn_all">
-                                <span>もっと見る</span>
+                                <span>エピソードすべてを見る</span>
                             </div>
                         </div>
                     </section>

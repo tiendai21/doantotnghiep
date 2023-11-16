@@ -143,6 +143,19 @@
                     }
                 }
             }
+            &:hover {
+                span {
+                    &:after {
+                        transform: translateY(-8px) rotate(0);
+                        @include pc {
+                            transform: translateY(get_pc(-8)) rotate(0);
+                        }
+                        @include sp {
+                            transform: translateY(get_sp(-8)) rotate(0);
+                        }
+                    }
+                }
+            }
         }
     }
     
