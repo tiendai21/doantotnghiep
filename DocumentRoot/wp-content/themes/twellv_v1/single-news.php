@@ -57,7 +57,6 @@ if ($relate_program) {
     </ul>
 
     <section class="section" id="news_detail">
-        <?php echo "Xin chao" ?>
         <div class="inner">
             <div class="tlt">
                 <span><?php echo get_field('display_date'); ?></span>
