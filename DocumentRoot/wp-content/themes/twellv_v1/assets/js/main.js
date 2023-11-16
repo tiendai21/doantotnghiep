@@ -23,6 +23,7 @@
         scrollAnimation(".faq .tab_content_faq a", 100);
         scrollAnimation(".broadcast_schedule a", 100);
         scrollAnimation(".list_year ul li a", 167);
+        scrollAnimation(".list_brand a", 100);
         handleSlide(".slide_top", false, false, true, true);
         slideBrand(".slide_brand ul", false);
         slideProgram(".slide_air", false, false);
