@@ -40,12 +40,12 @@
         slideProgram(".brand_china", false, false);
         slideProgram(".brand_sports", false, false);
         slideProgram(".brand_tabi", false, false);
-        slideProgram(".brand_variety",false, false);
-        slideProgram(".brand_documentary",false, false);
+        slideProgram(".brand_variety", false, false);
+        slideProgram(".brand_documentary", false, false);
         slideProgram(".brand_music", false, false);
-        slideProgram(".brand_anime",false,false);
-        slideProgram(".brand_entertainment",false,false);
-        slideProgram(".brand_qvc",false,false);
+        slideProgram(".brand_anime", false, false);
+        slideProgram(".brand_entertainment", false, false);
+        slideProgram(".brand_qvc", false, false);
         slideNavList(".side_header", false, false);
         slideList(".slide_list", false, false);
         voiceList(".voice_list", false, false);
@@ -61,8 +61,8 @@
         slideProgram(".ranking_slide", false, false);
         slideBanner(".slide_top_odd", "15%");
         slideBanner(".slide_top_even", "45%");
-        slideScheduled(".slide_scheduled_top","15%","15%",true);
-        slideScheduled(".slide_scheduled_bottom","70%","15%",false);
+        slideScheduled(".slide_scheduled_top", "15%", "15%", true);
+        slideScheduled(".slide_scheduled_bottom", "70%", "15%", false);
         sliderVideo(".slider_main", ".slider_video");
         $(".slide_next_time").slick();
         let itemFaq = $(".item_faq h3");
@@ -138,7 +138,7 @@
                 $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).show();
                 $(this).addClass('show_detail');
                 $("body").css("overflow", "auto");
-            }else  {
+            } else {
                 $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).hide();
                 $(this).removeClass('show_detail');
             }
@@ -158,13 +158,15 @@
     function scrollAnimation(selector, offsetTop) {
         $(selector).click(function (e) {
             const targetPage = $(this).attr("href");
-            if (targetPage.includes("#")) {
-                e.preventDefault();
-                const currentPage = $(targetPage);
-                $("html, body").animate(
-                    { scrollTop: currentPage.offset().top - offsetTop },
-                    1000
-                );
+            const currentPage = $(targetPage);
+            if (currentPage) {
+                if (targetPage.includes("#")) {
+                    e.preventDefault();
+                    $("html, body").animate(
+                        { scrollTop: currentPage.offset().top - offsetTop },
+                        1000
+                    );
+                }
             }
         });
     }
@@ -235,7 +237,7 @@
             });
         }
     }
-    function slideScheduled(_sliderElm,_paddingPC,_paddingSP,_rtl) {
+    function slideScheduled(_sliderElm, _paddingPC, _paddingSP, _rtl) {
         $(_sliderElm).slick({
             centerMode: true,
             centerPadding: _paddingPC,
@@ -296,7 +298,7 @@
         });
 
         $(_sliderElm).each(function () {
-            if($(this).attr('class').includes('slide_ranking')) {
+            if ($(this).attr('class').includes('slide_ranking')) {
                 if ($(this).find(".item_slide").length < 5) {
                     $(this).addClass('no-slide');
                 }
@@ -490,7 +492,7 @@
     }
 
     function limitRewardsPaging() {
-        $("body").on("click", "#pagination ul li a", function(e){
+        $("body").on("click", "#pagination ul li a", function (e) {
             e.preventDefault();
             const url = $(this).attr('href');
             $.ajax({
