@@ -73,6 +73,7 @@
                 font-size: get_sp(18);
                 line-height: get_sp(45);
                 letter-spacing: get_sp(0.9);
+                margin-left: get_sp(19);
             }
         }
         .list_broadcast {
@@ -114,6 +115,10 @@
                         width: get_pc(352);
                         height: get_pc(198);
                     }
+                    @include sp {
+                        width: get_sp(160);
+                        height: get_sp(90);
+                    }
                 }
                 img {
                     border-radius: 5px;
@@ -123,11 +128,20 @@
         }
         .btn_more {
             float: right;
-            @include pc {
-            }
             @include sp {
                 margin-right: get_sp(6.734);
                 margin-bottom: get_sp(29);
+            }
+            span {
+                &:after {
+                    transform: translateY(-8px) rotate(90deg);
+                    @include pc {
+                        transform: translateY(get_pc(-8)) rotate(90deg);
+                    }
+                    @include sp {
+                        transform: translateY(get_sp(-8)) rotate(90deg);
+                    }
+                }
             }
         }
     }
