@@ -107,7 +107,6 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                     ?>
                     <section class="section" id="episode">
                         <div class="inner">
-                            <h2>エピソード</h2>
                             <div class="list_episode">
                                 <ul>
                                     <?php

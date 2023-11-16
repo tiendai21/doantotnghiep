@@ -258,6 +258,7 @@
                     align-items: center;
                     padding-left: 20px;
                     color: #000000;
+                    @include txtClamp(1);
                     @include pc {
                         font-size: get_pc(20);
                         letter-spacing: get_pc(2);
@@ -279,15 +280,17 @@
                         border-top: 3px solid #004898;
                         border-right: 3px solid #004898;
                         position: absolute;
-                        left: 0;
+                        left: 3px;
                         top: 50%;
                         @include pc {
+                            left: get_pc(3);
                             width: get_pc(12);
                             height: get_pc(12);
                             border-top: get_pc(3) solid #004898;
                             border-right: get_pc(3) solid #004898;
                         }
                         @include sp {
+                            left: get_sp(2);
                             width: get_sp(8);
                             height: get_sp(8);
                             border-top: get_sp(2) solid #004898;
@@ -617,23 +620,18 @@
                     justify-content: center;
                 }
                 .item {
-                    min-width: 247px;
-                    height: 100%;
-                    padding: 20px;
+                    padding: 20px 45px 20px 20px;
                     border: 3px solid #004898;
                     border-radius: 5px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    position: relative;
                     @include pc {
-                        min-width: get_pc(247);
-                        padding: get_pc(20);
+                        padding: get_pc(20) get_pc(45) get_pc(20) get_pc(20);
                         border: get_pc(3) solid #004898;
                         border-radius: get_pc(5);
                     }
                     @include sp {
-                        min-width: 100%;
-                        padding: get_sp(14) 0 get_sp(15);
+                        width: 100%;
+                        padding: get_sp(14) get_sp(15) get_sp(15);
                         border: 1px solid #004898;
                         border-radius: get_sp(5);
                         display: flex;
@@ -642,10 +640,8 @@
                         margin-bottom: get_sp(12);
                     }
                     &:last-child {
-                        width: 381px;
                         margin-left: 15px;
                         @include pc {
-                            width: get_pc(381);
                             margin-left: get_pc(15);
                         }
                         @include sp {
@@ -662,6 +658,7 @@
                         color: #004898;
                         display: flex;
                         align-items: center;
+                        @include txtClamp(1);
                         @include pc {
                             font-size: get_pc(20);
                             letter-spacing: get_pc(2);
@@ -671,23 +668,27 @@
                             font-size: get_sp(16);
                             letter-spacing: get_sp(1.6);
                             line-height: get_sp(24);
+                            width: get_sp(194);
                         }
                         &:after {
                             content: "";
                             @include bgsetup("../images/btn_arrow_right.svg", center center, 100% auto, no-repeat);
                             width: 15px;
                             height: 18px;
-                            margin-left: 10px;
                             display: block;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 20px;
                             @include pc {
                                 width: get_pc(15);
                                 height: get_pc(18);
-                                margin-left: get_pc(10);
+                                right: get_pc(20);
                             }
                             @include sp {
                                 width: get_sp(9.61);
                                 height: get_sp(11.17);
-                                margin-left: get_sp(6.83);
+                                right: get_sp(67);
                             }
                         }
                     }

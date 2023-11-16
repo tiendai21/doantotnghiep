@@ -22,6 +22,7 @@
         scrollAnimation("#program ul li a", 100);
         scrollAnimation(".faq .tab_content_faq a", 100);
         scrollAnimation(".broadcast_schedule a", 100);
+        scrollAnimation(".list_brand ul li a", 167);
         scrollAnimation(".list_year ul li a", 167);
         scrollAnimation(".list_brand a", 100);
         handleSlide(".slide_top", false, false, true, true);
@@ -61,8 +62,8 @@
         slideProgram(".ranking_slide", false, false);
         slideBanner(".slide_top_odd", "15%");
         slideBanner(".slide_top_even", "45%");
-        slideScheduled(".slide_scheduled_top", "15%", "15%", true);
-        slideScheduled(".slide_scheduled_bottom", "70%", "15%", false);
+        slideScheduled(".slide_scheduled_top","15%","15%",true);
+        slideScheduled(".slide_scheduled_bottom","45%","15%",false);
         sliderVideo(".slider_main", ".slider_video");
         $(".slide_next_time").slick();
         let itemFaq = $(".item_faq h3");
@@ -133,12 +134,12 @@
 
     function toggleReadMore() {
         $(".list_episode ul li:not(:nth-child(-n + 4))").hide();
-        $("#episode .btn_more").click(function () {
+        $("#episode .btn_all").click(function () {
             if (!$(this).hasClass("show_detail")) {
                 $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).show();
                 $(this).addClass('show_detail');
                 $("body").css("overflow", "auto");
-            } else {
+            }else {
                 $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).hide();
                 $(this).removeClass('show_detail');
             }
