@@ -70,9 +70,3 @@ if (get_sub_field('display_switch')) :
     <?php endwhile;
 endif;
 ?>
-<div class="broadcast_schedule util_pc">
-    <a href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送スケジュール</a>
-</div>
-<div class="broadcast_schedule util_sp">
-    <a href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送ラインアップ</a>
-</div>

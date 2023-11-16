@@ -1190,7 +1190,7 @@
                     }
 
                     li {
-                        display: flex;
+                        display: none;
                         padding: 0 152px 0 74px;
                         margin-bottom: 113px;
 
@@ -1249,6 +1249,10 @@
                             text-align: left;
                             flex: 1;
                             position: relative;
+                            width: 692px;
+                            @include pc {
+                                width: get_pc(692);
+                            }
 
                             h4 {
                                 font-size: 30px;
@@ -1388,6 +1392,10 @@
                             }
                         }
                     }
+
+                    .active {
+                        display: flex;
+                    }
                 }
             }
 
@@ -1430,15 +1438,18 @@
                         height: 19px;
                         display: inline-block;
                         transform: rotate(90deg);
+                        margin-left: 8px;
 
                         @include pc {
                             width: get_pc(16);
                             height: get_pc(19);
+                            margin-left: get_pc(8);
                         }
 
                         @include sp {
                             width: get_sp(10);
                             height: get_sp(12);
+                            margin-left: get_sp(8);
                         }
                     }
                 }

@@ -18,6 +18,7 @@
         toggleSearch();
         openIntro();
         faq();
+        seeMoreBtnHover();
         scrollAnimation("#header #nav_list a", 100);
         scrollAnimation("#program ul li a", 100);
         scrollAnimation(".faq .tab_content_faq a", 100);
@@ -133,16 +134,22 @@
     }
 
     function toggleReadMore() {
-        $(".list_episode ul li:not(:nth-child(-n + 4))").hide();
+        $(".list_episode ul li:nth-child(-n + 5)").addClass('active');
         $("#episode .btn_all").click(function () {
-            if (!$(this).hasClass("show_detail")) {
-                $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).show();
-                $(this).addClass('show_detail');
-                $("body").css("overflow", "auto");
-            }else {
-                $(this).siblings(".list_episode").find("ul li:not(:nth-child(-n + 4))").fadeIn(1000).hide();
-                $(this).removeClass('show_detail');
+            const liElement = $(".list_episode ul li");
+
+            var count = 0;
+            liElement.each(function () {
+                if(!$(this).hasClass("active") && count < 5) {
+                    $(this).stop().fadeIn(1000).addClass("active");
+                    count++;
+                }
+            })
+            const liElementActive = $(".list_episode ul .active");
+            if (liElement.length === liElementActive.length) {
+                $(this).fadeIn(1000).hide();
             }
+
         });
     }
     function toggleMenuFooter() {
@@ -510,6 +517,15 @@
                     console.log(err);
                 }
             });
+        })
+    }
+
+    function seeMoreBtnHover() {
+        $("#broadcast_ended .btn_more").on("mouseover", function () {
+            $(this).find("span").text("すべて見る");
+        })
+        $("#broadcast_ended .btn_more").on("mouseleave", function () {
+            $(this).find("span").text("もっと見る");
         })
     }
 
