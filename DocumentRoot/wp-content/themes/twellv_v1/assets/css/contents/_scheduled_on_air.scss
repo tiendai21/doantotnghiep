@@ -95,6 +95,9 @@
                     @include pc {
                         width: get_pc(400);
                     }
+                    @include sp {
+                        width: 100%;
+                    }
                 }
             }
             .slide_top_content{
@@ -110,6 +113,11 @@
                     flex-direction: column;
                     width: 100%;
                     height: auto;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
                 .slick-vertical .slick-slide{
                     padding: 7.5px;
@@ -130,6 +138,11 @@
                         padding-left: 0 !important;
                         @include sp {
                             padding: 0 get_sp(10);
+                        }
+                        .thumb {
+                            @include sp {
+                                height: get_sp(147.93);
+                            }
                         }
                     }
                 }

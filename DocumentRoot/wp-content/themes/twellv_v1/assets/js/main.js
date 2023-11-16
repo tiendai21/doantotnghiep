@@ -60,6 +60,8 @@
         slideProgram(".ranking_slide", false, false);
         slideBanner(".slide_top_odd", "15%");
         slideBanner(".slide_top_even", "45%");
+        slideScheduled(".slide_scheduled_top","15%","15%",true);
+        slideScheduled(".slide_scheduled_bottom","70%","15%",false);
         sliderVideo(".slider_main", ".slider_video");
         $(".slide_next_time").slick();
         let itemFaq = $(".item_faq h3");
@@ -231,6 +233,36 @@
                 ],
             });
         }
+    }
+    function slideScheduled(_sliderElm,_paddingPC,_paddingSP,_rtl) {
+        $(_sliderElm).slick({
+            centerMode: true,
+            centerPadding: _paddingPC,
+            infinite: true,
+            vertical: true,
+            verticalSwiping: true,
+            autoplay: true,
+            autoplaySpeed: 0,
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 7000,
+            cssEase: "linear",
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 960,
+                    settings: {
+                        vertical: false,
+                        verticalSwiping: false,
+                        centerPadding: _paddingSP,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        rtl: _rtl,
+                    },
+                },
+            ],
+        })
     }
 
     /*
