@@ -3,11 +3,11 @@
         overflow-x: hidden;
 
         @include sp {
-            margin-top: get_sp(100);
+            padding-top: get_sp(100);
         }
 
         @include pc {
-            margin-top: get_pc(160);
+            padding-top: get_pc(160);
         }
     }
 
@@ -1149,7 +1149,6 @@
             }
 
             h2 {
-                display: none;
                 font-size: 30px;
                 line-height: 44px;
                 letter-spacing: 3px;
@@ -1396,6 +1395,7 @@
                 display: flex;
                 justify-content: center;
                 span {
+                    cursor: pointer;
                     font-size: 22px;
                     line-height: 32px;
                     letter-spacing: 1.1px;
@@ -1555,12 +1555,14 @@
             padding-bottom: 34px;
             margin-bottom: 63px;
             max-width: unset;
+            border-bottom: 2px solid #004898;
             @include pc {
                 font-size: get_pc(30);
                 line-height: get_pc(44);
                 letter-spacing: get_pc(1.5);
                 padding-bottom: get_pc(34);
                 margin-bottom: get_pc(63);
+                border-bottom: get_pc(2) solid #004898;
             }
 
             @include sp {
@@ -1569,6 +1571,10 @@
                 letter-spacing: get_sp(0.8);
                 padding-bottom: get_sp(11.79);
                 margin-bottom: get_sp(22);
+                border-bottom: get_sp(2) solid #004898;
+            }
+            &:before {
+                content: none;
             }
         }
         .text-wrap {
