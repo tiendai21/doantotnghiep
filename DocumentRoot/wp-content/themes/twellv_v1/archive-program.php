@@ -145,7 +145,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <!-- /news -->
 
         <!-- recommend -->
-        <?php get_template_part('template-parts/home/recommend_top'); ?>
+        <?php get_template_part('template-parts/home/recommend_top', null, array('hideBrand' => false)); ?>
         <!-- /recommend -->
 
         <!-- pr -->
@@ -236,7 +236,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
             </section>
             <!-- Broadcast Ended-->
             <!-- recommend -->
-            <?php get_template_part('template-parts/home/recommend_top'); ?>
+            <?php get_template_part('template-parts/home/recommend_top', null, array('hideBrand' => true)); ?>
             <!-- /recommend -->
 
             <!-- pr -->
