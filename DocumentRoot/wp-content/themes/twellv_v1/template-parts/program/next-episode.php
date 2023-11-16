@@ -5,6 +5,10 @@
 /* 記事情報を1件表示（次回予告など） */
 if (get_field('display_next_program', get_the_ID())) :
 $program_term_id = get_the_terms(get_the_ID(), 'program_cat')[0]->term_id;
+
+$parent_term_id = wp_get_term_taxonomy_parent_id($program_term_id, 'program_cat');
+$hasLivePreview = get_field('has_special_live_preview', get_term($parent_term_id));
+
 $args['post_type'] = 'program';
 $args['posts_per_page'] = 1;
 $args['orderby'] = array('post_date' => 'DESC', 'ID' => 'DESC');
@@ -30,7 +34,7 @@ $args['meta_query'] = [
         $the_query->the_post();
         $movietag = get_field('next_program_movietag');
         ?>
-        <div class="next-ep">
+        <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null?>">
             <div class="brand_left">
                 <?php
                 if ($movietag) {
@@ -57,21 +61,24 @@ $args['meta_query'] = [
                 </div>
             </div>
             <p class="util_sp"><?php echo get_field('overview'); ?></p>
-            <div class="brand_right">
-                <a href="<?php the_permalink() ?>">
+            <?php
+            if ($hasLivePreview) : ?>
+                <div class="brand_right">
+                    <a href="<?php the_permalink() ?>">
                    <span>
                         <h4>放送直前SP見逃し配信中！</h4>
                    </span>
-                </a>
-            </div>
+                    </a>
+                </div>
+            <?php endif; ?>
         </div>
     <?php endwhile;
     endif;
     ?>
     <div class="broadcast_schedule util_pc">
-        <a href="<?php echo esc_url(home_url('/program_schedule'))?>">放送スケジュール</a>
+        <a href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送スケジュール</a>
     </div>
     <div class="broadcast_schedule util_sp">
-        <a href="<?php echo esc_url(home_url('/program_schedule'))?>">放送ラインアップ</a>
+        <a href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送ラインアップ</a>
     </div>
 </div>

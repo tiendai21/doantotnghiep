@@ -3,6 +3,8 @@
 if (get_sub_field('display_switch')) :
     $program_term_id = get_sub_field('target_program');
 
+    $parent_term_id = wp_get_term_taxonomy_parent_id($program_term_id, 'program_cat');
+    $hasLivePreview = get_field('has_special_live_preview', get_term($parent_term_id));
     $args['post_type'] = 'program';
     $args['posts_per_page'] = 1;
     $args['orderby'] = array('post_date' => 'DESC', 'ID' => 'DESC');
@@ -27,7 +29,7 @@ if (get_sub_field('display_switch')) :
         $the_query->the_post();
         $movietag = get_field('next_program_movietag');
         ?>
-        <div class="one_program_block next-ep">
+        <div class="one_program_block next-ep <?= $hasLivePreview ? 'live_preview' : null?>">
             <div class="brand_left">
                 <?php
                 if ($movietag) {
@@ -54,6 +56,8 @@ if (get_sub_field('display_switch')) :
                 </div>
             </div>
             <p class="util_sp"><?php echo get_field('overview'); ?></p>
+            <?php
+            if ($hasLivePreview) : ?>
             <div class="brand_right">
                 <a href="<?php the_permalink() ?>">
                    <span>
@@ -61,6 +65,7 @@ if (get_sub_field('display_switch')) :
                    </span>
                 </a>
             </div>
+            <?php endif;?>
         </div>
     <?php endwhile;
 endif;
