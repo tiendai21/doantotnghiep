@@ -47,7 +47,6 @@ foreach ($terms as $t) {
         }
     }
 }
-// var_dump( $programs_arr );
 
 ?>
 <main id="main">
@@ -73,36 +72,44 @@ foreach ($terms as $t) {
                     <h2><?php echo esc_attr($term_list_object_name); ?></h2>
                 </div>
                 <div class="siler_top_content">
-                    <?php if (have_rows('listcategory_field_banner_01', 'option')): ?>
-                        <div class="slide_top_odd">
-                            <?php while (have_rows('listcategory_field_banner_01', 'option')): the_row();
-                                $image = get_sub_field('listcategory_image');
-                                $urlItem = get_sub_field('listcategory_url');
-                                ?>
-                                <a href="<?php echo $urlItem; ?>">
-                                    <div class="thumb">
-                                        <img src="<?php echo $image; ?>" width="448px" height="252px"
-                                             alt="thumb slide top 01">
-                                    </div>
-                                </a>
-                            <?php endwhile; ?>
-                        </div>
+                    <?php
+                    if ($programs_arr[3]): ?>
+                    <div class="slide_top_odd">
+                        <?php
+                        $i = 0;
+                        foreach ($programs_arr[3] as $item):
+                            if(++$i > 5) break;
+                        $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
+                        $urlItem = get_term_link($item);
+                        ?>
+                        <a href="<?php echo $urlItem; ?>">
+                            <div class="thumb">
+                                <?php echo $image; ?>
+                            </div>
+                        </a>
+                        <?php endforeach; ?>
+                    </div>
                     <?php endif; ?>
-                    <?php if (have_rows('listcategory_field_banner_02', 'option')): ?>
+                    <?php
+
+                    if ($programs_arr[3]): ?>
                         <div class="slide_top_even">
-                            <?php while (have_rows('listcategory_field_banner_02', 'option')): the_row();
-                                $image = get_sub_field('listcategory_image');
-                                $urlItem = get_sub_field('listcategory_url');
+                            <?php
+                            $i = 0;
+                            foreach (array_reverse($programs_arr[3]) as $item):
+                                if(++$i > 4) break;
+                                $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
+                                $urlItem = get_term_link($item);
                                 ?>
                                 <a href="<?php echo $urlItem; ?>">
                                     <div class="thumb">
-                                        <img src="<?php echo $image; ?>" width="448px" height="252px"
-                                             alt="thumb slide top 02">
+                                        <?php echo $image; ?>
                                     </div>
                                 </a>
-                            <?php endwhile; ?>
+                            <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
+
                 </div>
             </div>
             <!-- brand -->
@@ -163,7 +170,8 @@ foreach ($terms as $t) {
                     <span>無料で見られる！BS12の視聴方法</span>
                 </a>
             </div>
-            <svg style="position: absolute; opacity: 0; width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg" width="494"
+            <svg style="position: absolute; opacity: 0; width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg"
+                 width="494"
                  height="86" viewBox="40 0 494 86">
                 <clipPath id="myClip" clipPathUnits="objectBoundingBox">
                     <path id="Subtraction_12" data-name="Subtraction 12"
@@ -201,13 +209,13 @@ foreach ($terms as $t) {
                 <div class="program_content">
                     <?php
                     $index_movie = 0;
-                    while (have_rows('movie_area', $term_list_object)) : the_row();?>
+                    while (have_rows('movie_area', $term_list_object)) : the_row(); ?>
                         <?php
-                        if($index_movie < 2){
+                        if ($index_movie < 2) {
                             the_sub_field('movie_tag', $term_list_object);
                         }
                         ob_start();
-                        get_template_part('template-parts/home/modal_category_item', null, array('movie' =>  get_sub_field('movie_tag', $term_list_object)));
+                        get_template_part('template-parts/home/modal_category_item', null, array('movie' => get_sub_field('movie_tag', $term_list_object)));
                         $scheduled_modal .= ob_get_contents();
                         ob_end_clean();
                         $index_movie++;
@@ -310,11 +318,11 @@ foreach ($terms as $t) {
     <!-- /customer voice -->
     <!-- recommended_program -->
     <!-- recommend -->
-    <?php get_template_part( 'template-parts/home/recommend_top' ); ?>
+    <?php get_template_part('template-parts/home/recommend_top'); ?>
     <!-- /recommend -->
     <!-- /recommended_program -->
     <!-- PR -->
-    <?php get_template_part( 'template-parts/home/pr_top' ); ?>
+    <?php get_template_part('template-parts/home/pr_top'); ?>
     <!-- /PR -->
     <!-- other -->
     <section class="section" id="other">
