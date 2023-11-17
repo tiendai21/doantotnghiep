@@ -150,25 +150,7 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
         <!--      List brand banners        -->
         <?php get_template_part('template-parts/home/brand-banner'); ?>
         <!--      /List brand banners        -->
-        <!--   Social banners     -->
-        <?php if (have_rows('home_social_banners', 'option') && !$hideSocial): ?>
-            <div class="list_social util_pc">
-                <ul>
-                    <?php while (have_rows('home_social_banners', 'option')) :
-                        the_row();
-                        $social_banner_img = get_sub_field('social_banner_image');
-                        $social_banner_url = get_sub_field('social_banner_url');
-                        ?>
-                        <li>
-                            <a href="<?php echo $social_banner_url?>">
-                                <img src="<?php echo $social_banner_img ?>" width="420" height="105" alt="social_banner_img">
-                            </a>
-                        </li>
-                    <?php endwhile; ?>
-                </ul>
-            </div>
-        <?php endif; ?>
-        <!--   /Social banner     -->
+        <!-- Google ads here-->
         <!-- cat ranking -->
         <?php
         get_template_part('template-parts/ranking/ranking', null, array('cat' => $category_term->slug, 'title' => $category_term->name . 'ランキング', 'sns' => false)); ?>
