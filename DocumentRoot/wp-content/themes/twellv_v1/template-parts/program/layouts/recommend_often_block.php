@@ -53,7 +53,7 @@ if ( get_sub_field( 'recommend_often_watch' ) ) {
                                     <figcaption class="text-block">
                                         <div class="heading">
                                             <p class="category"><?php echo get_term($term->parent, 'program_cat')->name; ?></p>
-                                            <h3 class="program-title"><?php echo $term->name; ?></p>
+                                            <h3 class="program-title"><?php echo $term->name; ?></h3>
                                                 <p class="onair-date"><?php echo get_field('airtime', $term); ?></p>
                                         </div>
                                         <p class="description"><?php echo get_field('pg_text', $term); ?></p>

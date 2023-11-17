@@ -749,7 +749,7 @@
                 position: absolute;
                 left: -45px;
                 top: 25px;
-                letter-spacing: 17.9px;
+                letter-spacing: normal;
                 color: #ffffff;
                 text-shadow: 0 3px 10px #0000004a;
                 font-size: 179px;
@@ -762,7 +762,6 @@
                 @include pc {
                     left: get_pc(-45);
                     top: get_pc(25);
-                    letter-spacing: get_pc(17.9);
                     font-size: get_pc(179);
                     line-height: get_pc(260);
                 }
@@ -770,7 +769,6 @@
                 @include sp {
                     left: get_sp(-2);
                     top: get_sp(20);
-                    letter-spacing: get_sp(6.5);
                     font-size: get_sp(65);
                     line-height: get_sp(94);
                 }

@@ -179,19 +179,12 @@ function display_program_recommend_by_category_slug($slug)
         'taxonomy' => 'program_cat',
         // 'hide_empty' => false,
         'parent' => $category_term->term_id,
-        'meta_query' => [
-            'relation' => 'AND',
-            [
-                'key' => 'onair',
-                'value' => [1, 2], // 放送予定か放送中
-                'compare' => 'IN'
-            ],
+        'meta_query' =>
             [
                 'key' => 'recommend_cat', // おすすめカテゴリ
                 'value' => true,
                 'compare' => '='
-            ],
-        ]
+            ]
     ];
 
     $term_query = new WP_Term_Query($args);

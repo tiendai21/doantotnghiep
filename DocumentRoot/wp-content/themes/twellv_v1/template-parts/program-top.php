@@ -50,7 +50,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         ?>
         <section class="section" id="banner">
             <div class="inner">
-                <div class="banner">
+                <div class="banner" style="background-color: <?php echo get_field('bg_color', $term) ? get_field('bg_color', $term) : '#630307'?> ">
                     <div class="txt_desp">
                         <h2><?php echo $term->name; ?></h2>
                         <div class="date">
