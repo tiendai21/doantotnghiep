@@ -1,5 +1,5 @@
 	<!-- 野球：対戦カード -->
-	<div class="competition-baseball">
+	<div class="competition-basketball">
 		<div class="data_title_b">
 			<dl class="data_card">
 				<dt></dt>
