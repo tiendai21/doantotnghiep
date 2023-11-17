@@ -1918,64 +1918,61 @@ a {
     .tlt_section {
         padding: 0;
     }
-
-    .list_pr {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0 -40px;
-
-        @include pc {
-            margin: 0 get_pc(-40);
+    .__uz__credit {
+        display: none;
+    }
+    .__uz__widget {
+        max-width: unset;
+        .__uz__article-content {
+            display: none;
         }
-
-        @include sp {
-            margin: 0;
-            justify-content: space-between;
-        }
-
-        .item_pr {
-            padding: 0 40px;
-            width: 25%;
-            margin-bottom: 54px;
-
+        .__uz__articles-area {
+            justify-content: center;
+            margin: 0 -40px;
+            width: unset;
             @include pc {
-                padding: 0 get_pc(40);
-                margin-bottom: get_pc(54);
+                margin: 0 get_pc(-40);
             }
-
             @include sp {
-                width: 33.33%;
-                padding: 0;
-                margin-bottom: get_sp(8);
+                margin: 0;
+                justify-content: space-between;
             }
-
-            &:nth-last-child(-n + 4) {
-                margin-bottom: 0;
+            .__uz__article {
+                width: 25%;
+                padding: 0 40px;
+                margin-bottom: 54px;
+                flex-basis: unset;
+                @include pc {
+                    padding: 0 get_pc(40);
+                    margin-bottom: get_pc(54);
+                }
+                @include sp {
+                    width: 33.33%;
+                    padding: 0;
+                    margin-bottom: get_sp(8);
+                }
+                &:not(:nth-child(-n + 4)) {
+                    margin-top: 0;
+                }
+                &:nth-last-child(-n + 4) {
+                    margin-bottom: 0;
+                }
             }
-
             a {
-                display: block;
-
-                .thumb {
-                    width: 320px;
-                    height: 180px;
-
-                    @include pc {
-                        width: get_pc(320);
-                        height: get_pc(180);
-                    }
-
-                    @include sp {
-                        width: get_sp(128);
-                        height: get_sp(72);
-                    }
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
+                width: 320px;
+                height: 180px;
+                @include pc {
+                    width: get_pc(320);
+                    height: get_pc(180);
+                }
+                @include sp {
+                    width: get_sp(128);
+                    height: get_sp(72);
+                }
+                .__uz__article-img {
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0;
                 }
             }
         }
