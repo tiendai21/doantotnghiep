@@ -115,12 +115,15 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <!-- こちらもおすすめ -->
         <?php display_program_recommend_often_watch_by_category_slug($term);
         ?>
-        <!-- ranking -->
-        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
-        <!-- /ranking -->
+        <!-- brand -->
+        <?php get_template_part('template-parts/home/brand-banner'); ?>
+        <!-- /brand -->
         <!-- cat ranking -->
         <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $parent_term->slug, 'title' => $parent_term->name . 'ランキング', 'sns' => false)); ?>
         <!-- /cat ranking -->
+        <!-- ranking -->
+        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
+        <!-- /ranking -->
         <!-- BS12おすすめ番組 -->
         <?php get_template_part('template-parts/top', 'recommend-you-programs'); ?>
         <!-- /BS12おすすめ番組 -->

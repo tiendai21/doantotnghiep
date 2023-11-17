@@ -91,6 +91,8 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         }
     }
     ?>
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'sports', 'title' => 'スポーツ番組ランキング', 'sns' => false)); ?>
+    <!-- /cat ranking -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
     <!-- /ranking -->

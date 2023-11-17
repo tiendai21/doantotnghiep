@@ -21,9 +21,9 @@ $page_uri = get_page_uri();
             <a href="<?php echo esc_url(home_url('/corporate/program_council'))?>">BS12 トゥエルビ放送番組審議会</a>
         </th>
     </tr>
-    <tr <?php echo ($page_uri === 'program_standard2') ? 'class="active"' : null;?>>
+    <tr <?php echo ($page_uri === 'corporate/program_standard2') ? 'class="active"' : null;?>>
         <th>
-            <a href="<?php echo esc_url(home_url('/program_standard2'))?>">放送番組の編集基準</a>
+            <a href="<?php echo esc_url(home_url('corporate/program_standard2'))?>">放送番組の編集基準</a>
         </th>
     </tr>
     <tr <?php echo ($page_uri === 'corporate/program_announce') ? 'class="active"' : null;?>>
