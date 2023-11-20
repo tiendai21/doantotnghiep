@@ -131,3 +131,16 @@
 html > body.search .gsc-inline-block.gsc-inline-block.gsc-inline-block {
   display: inline-grid;
 }
+
+html > body.search {
+  #main {
+    display: flex;
+    justify-content: center;
+    .white-base-wrap {
+      width: 1400px;
+      @include pc {
+        width: get_pc(1400);
+      }
+    }
+  }
+}
