@@ -34,7 +34,7 @@ $args['meta_query'] = [
         $the_query->the_post();
         $movietag = get_field('next_program_movietag');
         ?>
-        <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null?>">
+        <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null ?>">
             <div class="brand_left">
                 <?php
                 if ($movietag) {
@@ -75,10 +75,28 @@ $args['meta_query'] = [
     <?php endwhile;
     endif;
     ?>
-    <div class="broadcast_schedule util_pc">
-        <a href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送スケジュール</a>
-    </div>
-    <div class="broadcast_schedule util_sp">
-        <a href="<?php echo esc_url(home_url('/program_schedule')) ?>">放送ラインアップ</a>
-    </div>
+    <?php
+    $archive_term = get_queried_object();
+    $args = array(
+        'post_type' => 'program',
+        'post_status' => 'publish',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'program_cat',
+                'field' => 'id',
+                'terms' => get_term_children($archive_term->term_id, 'program_cat')[0],
+            ),
+        ),
+    );
+    $the_query = new WP_Query($args);
+
+    if ($the_query->have_posts()) : ?>
+
+        <div class="broadcast_schedule util_pc">
+            <a href="#episode">放送ラインアップ</a>
+        </div>
+        <div class="broadcast_schedule util_sp">
+            <a href="#episode">放送ラインアップ</a>
+        </div>
+    <?php endif; ?>
 </div>
