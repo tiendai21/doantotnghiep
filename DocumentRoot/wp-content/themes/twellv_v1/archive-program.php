@@ -108,7 +108,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                 <section class="section slide_program_wrapper" id="<?php echo $base_t->slug; ?>">
                     <div class="inner">
                         <div class="tlt_section">
-                            <h2><?php echo $base_t->name; ?></h2>
+                            <h2>ドラマ・映画</h2>
                             <div class="btn_more">
                                 <span>すべて見る</span>
                             </div>
