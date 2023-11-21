@@ -529,6 +529,26 @@
         @include sp {
             margin-bottom: get_sp(14);
         }
+        &::before {
+            content: "";
+            opacity: 0.75;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 141px;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(91deg, #000, rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0) 100%);
+            @include pc {
+                width: get_pc(141);
+            }
+            @include sp {
+                width: get_sp(31);
+            }
+        }
+        .slick-prev.slick-arrow {
+            display: block !important;
+        }
     }
 }
 

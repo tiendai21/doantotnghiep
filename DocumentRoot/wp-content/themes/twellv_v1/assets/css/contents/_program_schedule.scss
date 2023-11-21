@@ -643,7 +643,16 @@
 
     #pr {
         .tlt_section {
-            background-color: unset;
+            background-color: initial;
+            justify-content: initial;
+            height: initial;
+            margin-bottom: 28px;
+            @include pc {
+                margin-bottom: get_pc(28);
+            }
+            @include sp {
+                margin-bottom: get_sp(13);
+            }
             h2 {
                 color: #004898;
             }
@@ -660,6 +669,7 @@
         display: flex;
         margin: 28px auto 100px;
         justify-content: center;
+        transition: all ease 0.3s;
 
         @include pc {
             margin: get_pc(28) auto get_pc(100);
@@ -667,6 +677,10 @@
 
         @include sp {
             margin: 0 0 get_sp(30);
+        }
+
+        &:hover {
+            opacity: 0.7;
         }
 
         .thumb {
