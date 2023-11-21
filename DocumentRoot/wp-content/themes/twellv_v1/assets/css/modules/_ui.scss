@@ -812,6 +812,7 @@ a {
             transition: all .3s;
             &:hover {
                 background: #6A6A6A;
+                opacity: 0.4;
             }
         }
         .slick-prev {
