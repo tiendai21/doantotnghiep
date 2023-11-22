@@ -1,8 +1,3 @@
-<style>
-    .ad_wrapper {
-        display: none !important;
-    }
-</style>
 <section class="ad ad-news">
 	<?php if ( !wp_is_mobile() ) : ?>
         <!-- BS12_news_pc_1 -->

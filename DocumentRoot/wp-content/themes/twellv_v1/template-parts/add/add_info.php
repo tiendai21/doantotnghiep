@@ -1,9 +1,4 @@
 <section class="ad ad-info">
-    <style>
-        .ad_wrapper {
-            display: none;
-        }
-    </style>
 	<?php if (wp_is_mobile()) : ?>
         <!-- BS12_notice_sp_1 -->
         <div class="ad_wrapper ad_single">

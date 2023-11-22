@@ -39,6 +39,10 @@ get_header();
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => true)); ?>
     <!-- /ranking -->
 
+    <!-- Ad news -->
+    <?php get_template_part('template-parts/add/add_news'); ?>
+    <!-- /Ad news -->
+
     <!-- pr -->
     <?php get_template_part('template-parts/home/pr_top'); ?>
     <!-- /pr -->
@@ -137,6 +141,11 @@ get_header();
                 </div>
                 <?php get_template_part('template-parts/news/news_release'); ?>
             </div>
+
+            <!-- Ad info -->
+            <?php get_template_part('template-parts/add/add_info'); ?>
+            <!-- /Ad info -->
+
             <div class="txt_notice">
                 <p>「BS12トゥエルビ」とはワールド・ハイビジョン・チャンネル株式会社が運営するテレビ局で、24時間全国無料のBSデジタル放送局です。
                     ドラマ、スポーツ、アニメ、ドキュメンタリー、音楽、ショッピングなど上質なエンターテインメント番組を総合編成でお送りしています。</p>
@@ -144,7 +153,7 @@ get_header();
         </div>
     </section>
     <!-- /section infomation -->
-    <?php get_template_part('template-parts/add/add_info'); ?>
+
     <?php if (function_exists('the_views')) {
         the_views();
     } ?>

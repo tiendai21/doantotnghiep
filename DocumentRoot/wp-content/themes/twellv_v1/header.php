@@ -53,6 +53,7 @@
     <?php if(get_field('page_ad')): the_field('page_ad'); endif; ?>
     <?php get_template_part( 'inc/common/head_gtm' ); ?>
     <?php bs12_noindex(); ?>
+    <?php get_template_part('header-ads.php') ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>
