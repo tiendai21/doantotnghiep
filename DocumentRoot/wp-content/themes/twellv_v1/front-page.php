@@ -40,7 +40,7 @@ get_header();
     <!-- /ranking -->
 
     <!-- Ad news -->
-    <?php get_template_part('template-parts/add/add_news'); ?>
+<!--    --><?php //get_template_part('template-parts/add/add_news'); ?>
     <!-- /Ad news -->
 
     <!-- pr -->
@@ -143,7 +143,7 @@ get_header();
             </div>
 
             <!-- Ad info -->
-            <?php get_template_part('template-parts/add/add_info'); ?>
+<!--            --><?php //get_template_part('template-parts/add/add_info'); ?>
             <!-- /Ad info -->
 
             <div class="txt_notice">
