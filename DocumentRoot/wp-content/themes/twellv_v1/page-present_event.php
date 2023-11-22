@@ -116,7 +116,7 @@ get_header();
         </section>
         <!--/list topic-->
         <!-- program air -->
-        <?php get_template_part('template-parts/home/program_air_top'); ?>
+        <?php get_template_part('template-parts/home/program_air_top', null, array('hideBtnWatch' => true)); ?>
         <!-- /program air -->
         <!-- ranking -->
         <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
@@ -124,9 +124,6 @@ get_header();
         <!-- news -->
         <?php get_template_part('template-parts/news/news_top'); ?>
         <!-- /news -->
-        <!-- pr -->
-        <?php get_template_part('template-parts/home/pr_top'); ?>
-        <!-- /pr -->
         <!-- other -->
         <?php get_template_part('template-parts/home/other_top', null, array('hideSocial' => false)); ?>
         <!-- /other -->

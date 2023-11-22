@@ -428,14 +428,6 @@
 
                     .txt_desp {
                         text-align: left;
-                        width: 561px;
-                        @include pc {
-                            width: get_pc(561);
-                        }
-                        @include sp {
-                            width: 100%;
-                            flex: 1;
-                        }
 
                         h2 {
                             font-size: 30px;
@@ -559,6 +551,18 @@
                                 top: get_sp(10);
                             }
                         }
+                    }
+                }
+            }
+            .next-ep.live_preview {
+                .txt_desp {
+                    width: 561px;
+                    @include pc {
+                        width: get_pc(561);
+                    }
+                    @include sp {
+                        width: 100%;
+                        flex: 1;
                     }
                 }
             }

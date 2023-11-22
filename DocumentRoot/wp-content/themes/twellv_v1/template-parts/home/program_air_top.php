@@ -1,6 +1,7 @@
 <?php /* Nowonair表示処理 */ ?>
 
 <?php
+$hideBtnWatch = $args['hideBtnWatch'];
 // エラーを出力する
 //ini_set("display_errors", 1);
 //error_reporting(E_ALL);
@@ -318,12 +319,18 @@ foreach ($modal_e_data as $key => $d) {
         <div class="program_slide slide_air">
             <?php echo $html; ?>
         </div>
-        <div class="btn_watch">
-            <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
-                <span></span>
-                <span>無料で見られる！BS12の視聴方法</span>
-            </a>
-        </div>
+        <?php
+        if(!$hideBtnWatch) :
+            ?>
+            <div class="btn_watch">
+                <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
+                    <span></span>
+                    <span>無料で見られる！BS12の視聴方法</span>
+                </a>
+            </div>
+        <?php
+        endif;
+        ?>
 
         <svg style="position: absolute; opacity: 0; width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg" width="494"
              height="86" viewBox="40 0 494 86">

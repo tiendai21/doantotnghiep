@@ -278,12 +278,12 @@
         }
         .tlt_section {
             width: 100%;
-            padding-bottom: 20px;
+            padding: 0 0 20px;
             margin: 0 auto 34px;
             border-bottom: 2px solid #fff;
             @include pc {
                 margin-bottom: get_pc(34);
-                padding-bottom: get_pc(20);
+                padding: 0 0 get_pc(20);
                 border-bottom: get_pc(2) solid #fff;
             }
             @include sp {

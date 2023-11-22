@@ -154,9 +154,10 @@
         }
         .tlt_section {
             width: 100%;
-            margin-bottom: 12px;
+            margin-bottom: 23px;
+            padding: 0;
             @include pc {
-                margin-bottom: get_pc(12);
+                margin-bottom: get_pc(23);
             }
             @include sp {
                 margin-bottom: get_sp(14);
@@ -271,6 +272,15 @@
                             line-height: get_sp(25);
                         }
                     }
+                }
+            }
+        }
+    }
+    #section_infomation {
+        .tlt_section {
+            h2 {
+                &::before {
+                    background-image: url("../images/icon_news.svg");
                 }
             }
         }

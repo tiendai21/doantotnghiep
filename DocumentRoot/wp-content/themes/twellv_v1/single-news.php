@@ -62,6 +62,24 @@ if ($relate_program) {
                 <span><?php echo get_field('display_date'); ?></span>
                 <p><?php the_title(); ?></p>
             </div>
+
+            <div class="social">
+                <a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank">
+                    <!--                        <img src="-->
+                    <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_tw_a.svg'
+                    ?><!--" width="" height="" alt="">-->
+                </a>
+                <a href="https://www.facebook.com/share.php?u=<?php the_permalink(); ?>" target="_blank">
+                    <!--                        <img src="-->
+                    <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_fb_a.svg'
+                    ?><!--" width="" height="" alt="">-->
+                </a>
+                <a href="http://line.me/R/msg/text/?<?php the_title(); ?>%0D%0A<?php the_permalink(); ?>" target="_blank">
+                    <!--                        <img src="-->
+                    <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_line.svg'
+                    ?><!--" width="" height="" alt="">-->
+                </a>
+            </div>
             <?php $thumb = get_field("thumbnail");
             if ($thumb) :
             ?>
@@ -79,23 +97,6 @@ if ($relate_program) {
                 $content = preg_replace('/<table ("[^"]*"|\'[^\']*\'|[^\'">])*>/', '<table>', $content);
                 echo add_tag_custom_class($content);
                 ?>
-            </div>
-            <div class="social">
-                <a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank">
-                    <!--                        <img src="-->
-                    <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_tw_a.svg' 
-                    ?><!--" width="" height="" alt="">-->
-                </a>
-                <a href="https://www.facebook.com/share.php?u=<?php the_permalink(); ?>" target="_blank">
-                    <!--                        <img src="-->
-                    <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_fb_a.svg' 
-                    ?><!--" width="" height="" alt="">-->
-                </a>
-                <a href="http://line.me/R/msg/text/?<?php the_title(); ?>%0D%0A<?php the_permalink(); ?>" target="_blank">
-                    <!--                        <img src="-->
-                    <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_line.svg' 
-                    ?><!--" width="" height="" alt="">-->
-                </a>
             </div>
         </div>
     </section>

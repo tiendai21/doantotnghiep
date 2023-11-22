@@ -61,6 +61,8 @@
             background-color: #000000;
             padding: 100px 0 0;
             margin: 0 auto 59px;
+            display: flex;
+            justify-content: center;
             @include pc {
                 padding: get_pc(100) 0 0;
                 margin: 0 auto get_pc(59);
@@ -92,6 +94,7 @@
             margin-bottom: 32px;
             font-weight: bold;
             color: #004898;
+            text-align: center;
             @include pc {
                 font-size: get_pc(37);
                 line-height: get_pc(54);
@@ -154,6 +157,7 @@
             margin-bottom: 53px;
             font-weight: bold;
             color: #000;
+            text-align: center;
             @include pc {
                 padding: get_pc(21) 0;
                 font-size: get_pc(30);
@@ -514,6 +518,7 @@
             margin-bottom: 44px;
             font-weight: bold;
             color: #004898;
+            text-align: center;
             @include pc {
                 font-size: get_pc(37);
                 line-height: get_pc(54);
@@ -541,10 +546,12 @@
                 padding-right: 25px;
                 font-weight: bold;
                 position: relative;
+                font-size: 25px;
 
                 @include pc {
                     padding-bottom: get_pc(2);
                     padding-right: get_pc(25);
+                    font-size: get_pc(25);
                 }
                 @include sp {
                     padding-bottom: get_sp(2);
@@ -555,13 +562,13 @@
                     content: "";
                     position: absolute;
                     right: 0;
-                    bottom: 8px;
+                    bottom: 11px;
                     border-left: solid 18px #004898;
                     border-bottom: solid 9px transparent;
                     border-top: solid 9px transparent;
 
                     @include pc {
-                        bottom: get_pc(8);
+                        bottom: get_pc(11);
                         border-left: solid get_pc(18) #004898;
                         border-bottom: solid get_pc(9) transparent;
                         border-top: solid get_pc(9) transparent;

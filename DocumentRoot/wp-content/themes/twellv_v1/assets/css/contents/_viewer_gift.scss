@@ -380,18 +380,6 @@
                     }
                 }
             }
-
-            .btn_link {
-                position: absolute;
-                right: 163px;
-                @include pc {
-                    right: get_pc(163);
-                }
-                @include sp {
-                    right: 50%;
-                    transform: translateX(50%);
-                }
-            }
         }
     }
 

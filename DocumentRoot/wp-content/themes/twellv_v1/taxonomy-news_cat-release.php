@@ -81,9 +81,6 @@ if ( $the_query->have_posts() ) {
             </div>
         </section>
         <!--/content-->
-        <!-- pr -->
-        <?php get_template_part( 'template-parts/home/pr_top' ); ?>
-        <!-- /pr -->
 
         <!-- other -->
         <section class="section" id="other">
