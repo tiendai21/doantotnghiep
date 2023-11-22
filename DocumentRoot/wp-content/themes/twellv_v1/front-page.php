@@ -8,7 +8,7 @@ get_header();
     <!-- /banner -->
 
     <!-- program air -->
-    <?php get_template_part('template-parts/home/program_air_top'); ?>
+    <?php get_template_part('template-parts/home/program_air_top', null, array('hideBtnWatch' => false)); ?>
     <!-- /program air -->
 
     <!-- brand -->

@@ -16,9 +16,9 @@
     .breadcrumb {
         max-width: 1576px;
         margin: 0 auto 8px;
-        padding-top: 7px;
+        padding-top: 140px;
         @include pc {
-            padding-top: get_pc(7);
+            padding-top: get_pc(140);
             max-width: get_pc(1576);
             margin: 0 auto get_pc(8);
         }
@@ -975,6 +975,7 @@
                 color: #9468F7;
                 line-height: 75px;
                 font-weight: bold;
+                text-align: center;
                 @include pc {
                     font-size: get_pc(52);
                     letter-spacing: get_pc(5.2);
@@ -2086,6 +2087,7 @@
         }
         .tlt_performer {
             margin-bottom: 39px;
+            text-align: center;
             @include pc {
                 margin-bottom: get_pc(39);
             }
@@ -2379,6 +2381,7 @@
 
     .tlt_performer {
         margin-bottom: 127px;
+        text-align: center;
         @include pc {
             margin-bottom: get_pc(127);
         }

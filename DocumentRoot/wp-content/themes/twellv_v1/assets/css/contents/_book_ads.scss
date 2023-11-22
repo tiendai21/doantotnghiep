@@ -104,6 +104,7 @@
             max-width: 1280px;
             width: 100%;
             margin: 0 auto 122px;
+            text-align: center;
             @include pc {
                 max-width: get_pc(1280);
                 margin: 0 auto get_pc(122);
@@ -203,6 +204,7 @@
                 padding-bottom: 26px;
                 margin-bottom: 71px;
                 border-bottom: 3px solid #004898;
+                text-align: center;
                 @include pc {
                     font-size: get_pc(30);
                     letter-spacing: get_pc(3);
