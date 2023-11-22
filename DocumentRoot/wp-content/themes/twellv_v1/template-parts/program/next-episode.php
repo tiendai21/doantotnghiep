@@ -3,11 +3,14 @@
  * There is a same block in one_program_block.php for block selecting inside admin cms. This template part was made for static next episode rendered under banner in new design.
  * */
 /* 記事情報を1件表示（次回予告など） */
-if (get_field('display_next_program', get_the_ID())) :
-$program_term_id = get_the_terms(get_the_ID(), 'program_cat')[0]->term_id;
-
+$program_term = get_the_terms(get_the_ID(), 'program_cat')[0];
+$program_term_id = $program_term->term_id;
 $parent_term_id = wp_get_term_taxonomy_parent_id($program_term_id, 'program_cat');
-$hasLivePreview = get_field('has_special_live_preview', get_term($parent_term_id));
+$parent_term_object = get_term($parent_term_id);
+
+$previewURL = get_field('preview_button_url', $parent_term_object);
+$hasLivePreview = get_field('show_preview_button', $parent_term_object);
+$previewBanner = get_field('preview_banner', $parent_term_object);
 
 $args['post_type'] = 'program';
 $args['posts_per_page'] = 1;
@@ -16,7 +19,7 @@ $args['tax_query'] = [
     [
         'taxonomy' => 'program_cat',
         'field' => 'term_id',
-        'terms' => $program_term_id
+        'terms' => $program_term->term_id,
     ]
 ];
 $args['meta_query'] = [
@@ -44,8 +47,8 @@ $args['meta_query'] = [
                     ?>
                     <a href="<?php the_permalink() ?>">
                         <div class="thumb">
-                            <img class="util_pc" src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>">
-                            <img class="util_sp" src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>">
+                            <img class="util_pc" src="<?php echo $previewBanner ? $previewBanner : $img['url']; ?>" alt="<?php the_title(); ?>">
+                            <img class="util_sp" src="<?php echo $previewBanner ? $previewBanner : $img['url']; ?>" alt="<?php the_title(); ?>">
                         </div>
                     </a>
                 <?php } ?>
@@ -64,7 +67,7 @@ $args['meta_query'] = [
             <?php
             if ($hasLivePreview) : ?>
                 <div class="brand_right">
-                    <a href="<?php the_permalink() ?>">
+                    <a href="<?php echo ($previewURL) ? $previewURL : get_the_permalink() ?>">
                    <span>
                         <h4>放送直前SP見逃し配信中！</h4>
                    </span>
@@ -73,7 +76,6 @@ $args['meta_query'] = [
             <?php endif; ?>
         </div>
     <?php endwhile;
-    endif;
     ?>
     <?php
     $archive_term = get_queried_object();

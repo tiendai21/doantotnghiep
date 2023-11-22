@@ -70,7 +70,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
                             if ($genre_str) {
                                 $genre_arr = explode('、', $genre_str);
                                 foreach ($genre_arr as $index => $genre) {
-                                    $genre_arr[$index] = "<a target='_blank' href='https://www.google.com/search?q={$genre}'>" . $genre . "</a>";
+                                    $genre_arr[$index] = "<a target='_blank' href=" . esc_url(home_url('/')) . "search/?q={$genre}'>" . $genre . "</a>";
                                 }
                                 $mod_txt = str_replace('ジャンル：' . $genre_str, 'ジャンル：' . implode('、', $genre_arr), $mod_txt);
                             }
@@ -80,7 +80,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
                             if ($actor_str) {
                                 $actor_arr = explode('、', $actor_str);
                                 foreach ($actor_arr as $index => $actor) {
-                                    $actor_arr[$index] = "<a target='_blank' href='https://www.google.com/search?q={$actor}'>" . $actor . "</a>";
+                                    $actor_arr[$index] = "<a target='_blank' href=" . esc_url(home_url('/')) . "search/?q={$actor}'>" . $actor . "</a>";
                                 }
                                 $mod_txt = str_replace('出演：' . $actor_str, '出演：' . implode('、', $actor_arr), $mod_txt);
                             }

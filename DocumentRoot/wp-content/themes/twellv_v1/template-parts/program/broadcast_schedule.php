@@ -2,7 +2,9 @@
     <!-- BS12おすすめ番組 -->
 <?php
 $hideBrandBanner = $args['hideBrand'];
+$term = $args['term'];
 $modal = "";
+$program_cat_base_items = get_program_cat_base_items();
 /**
  * 1.①かつ②の条件の番組をカテゴリ順に表示する。
  *  ① I-9.BS12おすすめ番組に表示する項目にチェックが付いている。
@@ -17,8 +19,11 @@ $args = [
             'key' => 'onair',
             'value' => [1, 2], //「放送予定」、または、「放送中」
             'compare' => 'IN'
-        ]]
+        ]],
 ];
+if ($term) {
+    $args['parent'] = $program_cat_base_items[$term->slug]; // 中国ドラマのterm_id
+}
 
 $term_query = new WP_Term_Query($args);
 if (!empty($term_query) && !is_wp_error($term_query)) :
@@ -33,7 +38,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
         <div class="inner">
             <div class="bg_gray">
                 <div class="tlt_section">
-                    <h2>放送予定</h2>
+                    <h2>放送予定<?php echo $term ? "の" . $term->name : null ?></h2>
                     <div class="btn_more">
                         <span>すべて見る</span>
                     </div>

@@ -184,7 +184,7 @@ foreach ($terms as $t) {
 
     <!-- /Korean dramas on air -->
     <!-- Broadcast schedule -->
-    <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true)); ?>
+    <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true, 'term' => $term_list_object)); ?>
     <!-- /Broadcast schedule -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => '韓国・韓流ドラマランキング', 'sns' => false)); ?>
