@@ -16,6 +16,7 @@
         toggleMenuSp();
         toggleMenuFooter();
         toggleSearch();
+        toggleShowAll();
         openIntro();
         faq();
         seeMoreBtnHover();
@@ -103,7 +104,7 @@
     *   Handle HomePage modal
     * */
     function showPopUp() {
-        $(".btn_more").click(function () {
+        $(".btn_more:not(.btn_tgl)").click(function () {
             if (!$(this).find('a').attr("href")) {
                 $(this).parents("section").find(".inner .wrapper_modal").toggleClass("active");
                 $("body").css("overflow", "hidden");
@@ -144,13 +145,25 @@
                     $(this).stop().fadeIn(1000).addClass("active");
                     count++;
                 }
-            })
+            });
             const liElementActive = $(".list_episode ul .active");
             if (liElement.length === liElementActive.length) {
                 $(this).fadeIn(1000).hide();
             }
 
         });
+    }
+    function toggleShowAll() {
+        $("#banner_section .list_brand .btn_tgl").click(function () {
+            const liElement = $(this).siblings('ul').children().slice(3);
+            liElement.each(function () {
+                if(!$(this).hasClass("active")) {
+                    $(this).stop().fadeIn(1000).addClass("active");
+                } else {
+                    $(this).stop().fadeOut(1000).removeClass("active");
+                }
+            });
+        })
     }
     function toggleMenuFooter() {
         if (_width <= _spmode) {

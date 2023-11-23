@@ -182,10 +182,10 @@
                 text-align: left;
                 width: 705px;
                 position: relative;
-                padding-bottom: 93px;
+                padding-bottom: 80px;
                 @include pc {
                     width: get_pc(705);
-                    padding-bottom: get_pc(93);
+                    padding-bottom: get_pc(80);
                 }
                 &:first-child {
                     @include sp {
@@ -206,6 +206,16 @@
                     h3 {
                         @include sp {
                             margin-bottom: get_sp(23.5);
+                        }
+                    }
+                }
+                .btn_more {
+                    position: absolute;
+                    right: 0;
+                    span {
+                        &::after {
+                            top: 50%;
+                            transform: translateY(-50%) rotate(90deg);
                         }
                     }
                 }
@@ -230,6 +240,7 @@
                 }
             }
             li {
+                display: none;
                 padding-bottom: 10px;
                 border-bottom: 2px solid #004898;
                 margin-bottom: 14px;
@@ -298,6 +309,9 @@
                         }
                     }
                 }
+            }
+            li.active {
+                display: block;
             }
             .btn_bottom {
                 position: absolute;

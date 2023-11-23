@@ -35,7 +35,7 @@ if ( get_sub_field( 'display_switch' ) ) {
                             <div class="img"><img src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>のサムネイル"></div>
                             <figcaption class="text-block">
                                 <div class="heading">
-                                    <h3 class="program-title"><?php the_title(); ?></p>
+                                    <h3 class="program-title"><?php the_title(); ?></h3>
                                     <p class="onair-date"><?php echo get_field( 'onairtime' ); ?></p>
                                 </div>
                                 <p class="description"><?php echo get_field( 'overview' ); ?></p>

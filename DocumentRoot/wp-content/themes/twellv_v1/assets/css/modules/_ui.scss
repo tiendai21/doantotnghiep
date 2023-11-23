@@ -901,7 +901,7 @@ a {
 }
 
 .slick-prev.slick-arrow {
-    display: none !important;
+    display: none;
 
     &.active {
         display: block !important;
@@ -1454,13 +1454,18 @@ a {
                 margin: 0 get_sp(5) get_sp(5) 0;
             }
         }
+        &:nth-child(odd) {
+            @include sp {
+                margin: 0 get_sp(5) get_sp(5) 0;
+            }
+        }
         &:nth-child(-n +4) {
             margin-bottom: 10px;
             @include pc {
                 margin-bottom: get_pc(10);
             }
             @include sp {
-                margin-bottom: get_sp(10);
+                margin-bottom: get_sp(5);
             }
         }
         a {
@@ -2130,24 +2135,6 @@ a {
 a {
     &.pdf {
         align-items: center;
-        &:after {
-            content: '';
-            @include bgsetup("../images/icon_pdf.svg", center center, 100% auto, no-repeat);
-            display: block;
-            width: 52px;
-            height: 28px;
-            margin-left: 20px;
-            @include pc {
-                width: get_pc(52);
-                height: get_pc(28);
-                margin-left: get_pc(20);
-            }
-            @include sp {
-                width: get_sp(43);
-                height: get_sp(23);
-                margin-left: get_sp(5);
-            }
-        }
     }
 }
 

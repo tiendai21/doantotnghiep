@@ -125,11 +125,9 @@
         }
         .thumb {
             width: 1247px;
-            height: 675px;
             margin: 0 auto 50px;
             @include pc {
                 width: get_pc(1247);
-                height: 675px;
                 margin: 0 auto get_pc(50);
             }
             @include sp {
