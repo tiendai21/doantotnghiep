@@ -1,6 +1,5 @@
 <?php
 /* 記事情報を1件表示（次回予告など） */
-var_dump(get_the_ID());
 if (get_sub_field('display_switch')) :
     $program_term_id = get_sub_field('target_program');
 
