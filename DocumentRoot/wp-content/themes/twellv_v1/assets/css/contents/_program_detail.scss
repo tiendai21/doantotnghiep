@@ -1152,7 +1152,6 @@
             @include sp {
                 max-width: 100%;
                 margin: 0 auto get_sp(22);
-                padding: 0 get_sp(16);
             }
 
             h2 {
@@ -1207,7 +1206,6 @@
                         }
 
                         @include sp {
-                            display: block;
                             padding: 0;
                             margin-bottom: get_sp(22);
                         }
@@ -1402,6 +1400,7 @@
 
                     .active {
                         display: flex;
+                        flex-direction: column;
                     }
                 }
             }
@@ -1573,6 +1572,7 @@
             padding-bottom: 34px;
             margin-bottom: 63px;
             max-width: unset;
+            width: initial;
             border-bottom: 2px solid #004898;
             @include pc {
                 font-size: get_pc(30);
