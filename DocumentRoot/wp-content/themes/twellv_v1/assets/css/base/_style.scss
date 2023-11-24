@@ -138,7 +138,7 @@
     }
 
     .slide_top {
-        background-color: #16345a;
+        background-color: #061d3c;
         margin-bottom: 16px;
 
         @include pc {
@@ -625,7 +625,7 @@
 
     .content_ranking {
         width: 1847px;
-        margin: 0 auto;
+        margin: 0 auto 31px;
         border-radius: 67px;
         background-color: #f2f2f2;
         padding: 20px 0 0 0;
@@ -634,12 +634,14 @@
         @include pc {
             width: get_pc(1847);
             border-radius: get_pc(67);
+            margin: 0 auto get_pc(31);
             padding: get_pc(20) 0 0 0;
         }
 
         @include sp {
             width: 100%;
             border-radius: get_sp(33);
+            margin: 0 auto get_sp(15);
             padding: get_sp(8) 0 0;
         }
 
@@ -678,16 +680,7 @@
         }
 
         .program_slide {
-            margin-bottom: 31px;
             overflow: hidden;
-
-            @include pc {
-                margin-bottom: get_pc(31);
-            }
-
-            @include sp {
-                margin-bottom: get_sp(15);
-            }
             &:after {
                 height: 180px;
                 @include pc {
