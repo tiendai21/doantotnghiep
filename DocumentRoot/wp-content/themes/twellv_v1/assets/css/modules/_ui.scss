@@ -164,6 +164,23 @@ a {
     @include sp {
         margin-bottom: get_sp(26);
     }
+    &:before {
+        content: '';
+        opacity: 0.75;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 141px;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(91deg, #000, rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0) 100%);
+        @include pc {
+            width: get_pc(141);
+        }
+        @include sp {
+            width: get_sp(31);
+        }
+    }
     &:after {
         content: '';
         opacity: 0.75;
@@ -181,6 +198,9 @@ a {
         }
     }
     &.no-slide {
+        &:before {
+            display: none;
+        }
         &:after {
             display: none;
         }
@@ -369,7 +389,7 @@ a {
         }
 
         &:before {
-            content: " ";
+            content: "";
             @include bgsetup("../images/arrow_slide_r.svg", center center, 100% auto, no-repeat);
             width: 19px;
             height: 40px;
@@ -670,7 +690,7 @@ a {
 
         .program_slide {
             margin-bottom: 0;
-            &:after {
+            &:before, &:after {
                 content: none;
             }
         }
@@ -1524,6 +1544,7 @@ a {
         background-color: #f2f2f2;
         padding: 20px 0 0 0;
         position: relative;
+        overflow: hidden;
 
         @include pc {
             width: get_pc(1847);
@@ -1572,31 +1593,26 @@ a {
         }
 
         .program_slide {
-            margin-bottom: 31px;
+            margin-bottom: 0;
             overflow: hidden;
 
-            @include pc {
-                margin-bottom: get_pc(31);
+            &:before {
+                content: initial;
             }
 
-            @include sp {
-                margin-bottom: get_sp(15);
-            }
             &:after {
-                height: 180px;
-                @include pc {
-                    height: get_pc(180);
-                }
-                @include sp {
-                    height: get_sp(90);
-                }
+                 height: 180px;
+                 @include pc {
+                     height: get_pc(180);
+                 }
+                 @include sp {
+                     height: get_sp(90);
+                 }
             }
+
             .slick-prev {
-                @include sp {
-                    width: get_sp(8);
-                    height: get_sp(17);
-                    left: get_sp(3);
-                    top: 32%;
+                &:before {
+                    content: initial;
                 }
             }
 
@@ -1613,6 +1629,12 @@ a {
         .slick-list {
             @include sp {
                 transform: translateX(get_sp(-1));
+            }
+        }
+
+        .slick-track {
+            @include sp {
+                height: initial;
             }
         }
 

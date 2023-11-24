@@ -69,7 +69,7 @@ foreach ($terms as $t) {
         <div class="inner">
             <div class="siler_category_top">
                 <div class="txt_fixed">
-                    <h2><?php echo esc_attr($term_list_object_name); ?></h2>
+                    <h2><?php echo esc_attr($term_list_object_name);?></h2>
                 </div>
                 <div class="siler_top_content">
                     <?php
@@ -125,7 +125,7 @@ foreach ($terms as $t) {
     <section class="section" id="dramas_on_air">
         <div class="inner">
             <div class="tlt_section">
-                <h2><?php echo esc_attr($term_list_object_name); ?></h2>
+                <h2><?php echo $term_list_object->slug === 'korea' ? '放送中の韓国・韓流ドラマ' : esc_attr($term_list_object_name);?></h2>
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>
@@ -187,7 +187,7 @@ foreach ($terms as $t) {
     <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true, 'term' => $term_list_object)); ?>
     <!-- /Broadcast schedule -->
     <!-- ranking -->
-    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => '韓国・韓流ドラマランキング', 'sns' => false)); ?>
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => $term_list_object->name . 'ランキング', 'sns' => false));?>
     <!-- /ranking -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>

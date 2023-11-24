@@ -1,5 +1,4 @@
 <?php // echo '各番組トップ';
-
 $term = get_queried_object();
 
 $parent_term = get_term_by('id', $term->parent, 'program_cat');
