@@ -264,11 +264,11 @@ a {
             }
 
             .txt_desp {
-                padding: 14px 20px 0 12px;
+                padding: 14px 20px 7px 12px;
                 background-color: #f2f2f2;
 
                 @include pc {
-                    padding: get_pc(14) get_pc(20) 0 get_pc(12);
+                    padding: get_pc(14) get_pc(20) get_pc(7) get_pc(12);
                 }
 
                 @include sp {
@@ -303,13 +303,13 @@ a {
                     letter-spacing: 2px;
                     color: #000000;
                     @include txtClamp(3);
-                    padding-bottom: 15px;
+                    padding-bottom: 6px;
 
                     @include pc {
                         font-size: get_pc(20);
                         line-height: get_pc(29);
                         letter-spacing: get_pc(2);
-                        padding-bottom: get_pc(15);
+                        padding-bottom: get_pc(6);
                     }
 
                     @include sp {
@@ -1486,7 +1486,7 @@ a {
                 margin-bottom: get_pc(10);
             }
             @include sp {
-                margin-bottom: get_sp(5);
+                margin-bottom: get_sp(6);
             }
         }
         a {

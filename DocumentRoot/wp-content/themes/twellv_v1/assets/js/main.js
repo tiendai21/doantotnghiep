@@ -155,6 +155,12 @@
     }
     function toggleShowAll() {
         $("#banner_section .list_brand .btn_tgl").click(function () {
+            $(this).find("span").toggleClass("active");
+            if($(this).find("span").text() === "すべて見る") {
+                $(this).find("span").text("閉じる");
+            } else {
+                $(this).find("span").text("すべて見る");
+            }
             const liElement = $(this).siblings('ul').children().slice(3);
             liElement.each(function () {
                 if(!$(this).hasClass("active")) {

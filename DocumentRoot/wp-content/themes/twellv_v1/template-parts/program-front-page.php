@@ -21,7 +21,8 @@ if (have_rows('page_flex_content', $top->ID)) {
             while (have_rows('page_flex_content', $top->ID)) {
                 the_row();
                 $layout = get_row_layout();
-//             var_dump( $layout );
+//                var_dump($layout);
+//                var_dump($top->ID);
                 get_template_part('template-parts/program/layouts/' . $layout);
             }
             get_template_part('template-parts/program/archive-episode-list');
