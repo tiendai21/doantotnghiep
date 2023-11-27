@@ -52,7 +52,7 @@ if (get_sub_field('display_switch')) :
                         <?php if (get_field('rebroadcast')) : ?>
                             <span class="reair">再</span>
                         <?php endif; ?></p>
-                    <p><?php echo get_field('overview'); ?></p>
+                    <p class="util_pc"><?php echo get_field('overview'); ?></p>
                 </div>
             </div>
             <p class="util_sp"><?php echo get_field('overview'); ?></p>

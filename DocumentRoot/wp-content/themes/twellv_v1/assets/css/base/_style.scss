@@ -138,14 +138,14 @@
     }
 
     .slide_top {
-        background-color: #061d3c;
         margin-bottom: 16px;
-
+        background: #16345A;
         @include pc {
             margin-bottom: get_pc(16);
         }
 
         @include sp {
+            background-color: #061d3c;
             margin-bottom: get_sp(5);
         }
         &:before {
@@ -2253,6 +2253,16 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.home {
+    .program_slide {
+        .slick-track {
+            @include sp {
+                height: get_sp(90);
             }
         }
     }

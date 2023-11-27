@@ -216,6 +216,12 @@
                         &::after {
                             top: 50%;
                             transform: translateY(-50%) rotate(90deg);
+                            transition: all ease 0.3s;
+                        }
+                    }
+                    .active {
+                        &::after {
+                            transform: translateY(-50%) rotate(-90deg);
                         }
                     }
                 }
@@ -252,12 +258,7 @@
                 @include sp {
                     padding-bottom: get_sp(7.5);
                     border-bottom: 1px solid #004898;
-                    margin-bottom: 0;
-                }
-                &:not(:last-child) {
-                    @include sp {
-                        margin-bottom: get_sp(9.78);
-                    }
+                    margin-bottom: get_sp(9.78);
                 }
                 a {
                     position: relative;
