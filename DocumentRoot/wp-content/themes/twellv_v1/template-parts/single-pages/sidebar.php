@@ -28,7 +28,7 @@ $page_uri = get_page_uri();
     </tr>
     <tr <?php echo ($page_uri === 'corporate/program_announce') ? 'class="active"' : null;?>>
         <th>
-            <a href="<?php echo esc_url(home_url('/corporate/program_announce'))?>">BS12 トゥエルビ放送番組の種別基準</a>
+            <a href="<?php echo esc_url(home_url('/corporate/program_standard'))?>">BS12 トゥエルビ放送番組の種別基準</a>
         </th>
     </tr>
     <tr <?php echo ($page_uri === 'corporate/%e6%8e%a1%e7%94%a8%e6%83%85%e5%a0%b1') ? 'class="active"' : null;?>>

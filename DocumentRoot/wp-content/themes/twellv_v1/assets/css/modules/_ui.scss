@@ -1798,7 +1798,7 @@ a {
                     padding: 0;
                     margin-bottom: get_sp(7);
                 }
-                &:nth-last-child(2) {
+                &:nth-last-child(2), &:nth-child(14), &:nth-child(17) {
                     a {
                         line-height: 25px;
                         @include pc {

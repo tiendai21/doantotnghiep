@@ -4,7 +4,11 @@ if (get_sub_field('display_switch')) :
     $program_term_id = get_sub_field('target_program');
 
     $parent_term_id = wp_get_term_taxonomy_parent_id($program_term_id, 'program_cat');
-    $hasLivePreview = get_field('has_special_live_preview', get_term($parent_term_id));
+
+    $previewURL = get_field('preview_button_url', get_term($parent_term_id));
+    $hasLivePreview = get_field('show_preview_button', get_term($parent_term_id));
+    $previewBanner = get_field('preview_banner', get_term($parent_term_id));
+
     $args['post_type'] = 'program';
     $args['posts_per_page'] = 1;
     $args['orderby'] = array('post_date' => 'DESC', 'ID' => 'DESC');
@@ -39,8 +43,8 @@ if (get_sub_field('display_switch')) :
                     ?>
                     <a href="<?php the_permalink() ?>">
                         <div class="thumb">
-                            <img class="util_pc" src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>">
-                            <img class="util_sp" src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>">
+                            <img class="util_pc" src="<?php echo $previewBanner ? $previewBanner : $img['url']; ?>" alt="<?php the_title(); ?>">
+                            <img class="util_sp" src="<?php echo $previewBanner ? $previewBanner : $img['url']; ?>" alt="<?php the_title(); ?>">
                         </div>
                     </a>
                 <?php } ?>
@@ -59,7 +63,7 @@ if (get_sub_field('display_switch')) :
             <?php
             if ($hasLivePreview) : ?>
             <div class="brand_right">
-                <a href="<?php the_permalink() ?>">
+                <a href="<?php echo ($previewURL) ? $previewURL : get_the_permalink() ?>">
                    <span>
                         <h4>放送直前SP見逃し配信中！</h4>
                    </span>

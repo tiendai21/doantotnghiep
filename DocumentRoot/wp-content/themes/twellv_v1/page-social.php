@@ -95,6 +95,9 @@ get_header();
             </div>
         </section>
         <!--/content-->
+<!--        --><?php
+//        echo do_shortcode('[single-page-other type="famous"]');
+//        ?>
     </main>
     <!-- /main -->
 
