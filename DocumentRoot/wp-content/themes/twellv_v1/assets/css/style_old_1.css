@@ -2210,26 +2210,6 @@
 	width: 100%;
 }
 
-.competition-basketball .data_title_b dl dd{
-	border-bottom: 1px solid #dddddd;
-	background: #f2f2f2;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 26px;
-}
-
-@media only screen and (min-width: 751px){
-	.competition-basketball .data_title_b dl dd{
-		padding: 15px 170px;
-	}
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball .data_title_b dl dd{
-		padding: 2.66667vw;
-	}
-}
-
 .competition-basketball .data_title_b dl dd.clearfix:before,
 .competition-basketball .data_title_b dl dd.clearfix:after{
 	display: none;
@@ -2239,71 +2219,8 @@
 	border-bottom-width: 0;
 }
 
-.competition-basketball .data_title_b dl dd >.date{
-	font-weight: bold;
-	line-height: 20px;
-}
-
-@media only screen and (min-width: 751px){
-	.competition-basketball .data_title_b dl dd >.date{
-		margin: 0 0 15px 0;
-	}
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball .data_title_b dl dd >.date{
-		margin: 0 0 1.6vw 0;
-		font-size: 4vw;
-		line-height: 6.66667vw;
-	}
-}
-
-.competition-basketball .data_title_b dl dd >.date .live{
-	display: inline-block;
-	width: 50px;
-	height: 20px;
-	margin: 0 0 0 0.5em;
-	border-radius: 5px;
-	background: #5a97da;
-	color: #ffffff;
-	font-size: 12px;
-	font-weight: bold;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 20px;
-}
-
-.competition-basketball .data_title_b dl dd >.date .live:before{
-	display: block;
-	width: 100%;
-	text-align: center;
-	content: 'LIVE';
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball .data_title_b dl dd >.date .live{
-		width: 9.86667vw;
-		height: 5.06667vw;
-		font-size: 2.4vw;
-		line-height: 5.06667vw;
-	}
-}
-
 .competition-basketball .data_title_b dl dd >.date .live img{
 	display: none;
-}
-
-@media only screen and (min-width: 751px){
-	.competition-basketball .data_title_b dl dd >.date .place{
-		margin: 0 0 0 20px;
-	}
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball .data_title_b dl dd >.date .place{
-		display: block;
-		margin: 0;
-	}
 }
 
 .competition-basketball .data_title_b dl dd >.team{
@@ -2318,25 +2235,8 @@
 	text-align: center;
 }
 
-@media only screen and (min-width: 751px){
-	.competition-basketball .data_title_b dl dd >.team .team_inr{
-		width: 300px;
-		height: 180px;
-		padding: 20px 0 0 0;
-	}
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball .data_title_b dl dd >.team .team_inr{
-		width: 38.66667vw;
-		height: auto;
-		padding: 2.66667vw;
-	}
-}
-
 .competition-basketball .data_title_b dl dd >.team .team_inr img{
 	max-width: 100%;
-	margin: 0 0 15px 0;
 }
 
 .competition-basketball .data_title_b dl dd >.team .team_inr center{
@@ -2345,27 +2245,6 @@
 
 .competition-basketball .data_title_b dl dd >.team .team_inr center strong{
 	color: #014292;
-}
-
-.competition-basketball .data_title_b dl dd >.team .vs{
-	float: left;
-	text-align: center;
-}
-
-@media only screen and (min-width: 751px){
-	.competition-basketball .data_title_b dl dd >.team .vs{
-		width: 60px;
-		height: 180px;
-		line-height: 180px;
-	}
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball .data_title_b dl dd >.team .vs{
-		width: 8vw;
-		height: 13.33333vw;
-		line-height: 13.33333vw;
-	}
 }
 
 .competition-basketball .data_title_b dl dd >.team .place{

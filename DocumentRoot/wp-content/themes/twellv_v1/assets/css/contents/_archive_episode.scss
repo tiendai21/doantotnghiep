@@ -151,7 +151,7 @@
       @include sp {
         margin-bottom: get_sp(37);
       }
-      &:after {
+      &:before, &:after {
         content: initial;
       }
       .slick-list {

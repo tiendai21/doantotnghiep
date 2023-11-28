@@ -1470,23 +1470,9 @@ a {
             width: get_sp(192);
             margin: 0 0 get_sp(5);
         }
-        &:first-child {
-            @include sp {
-                margin: 0 get_sp(5) get_sp(5) 0;
-            }
-        }
         &:nth-child(odd) {
             @include sp {
                 margin: 0 get_sp(5) get_sp(5) 0;
-            }
-        }
-        &:nth-child(-n +4) {
-            margin-bottom: 10px;
-            @include pc {
-                margin-bottom: get_pc(10);
-            }
-            @include sp {
-                margin-bottom: get_sp(6);
             }
         }
         a {
