@@ -1561,6 +1561,9 @@
             max-width: 100%;
             padding: 0 get_sp(14);
         }
+        .text-wrap {
+            width: initial;
+        }
         h2 {
             text-align: center;
             font-size: 30px;
@@ -1820,7 +1823,7 @@
             @include sp {
                 display: block;
                 margin-bottom: 0;
-                padding-bottom: get_sp(2);
+                padding: 0;
             }
             p {
 
@@ -1841,17 +1844,18 @@
                 }
             }
             .brand_left {
-                width: 1288px;
-                padding: 25px;
+                width: 956px;
+                padding: 25px 25px 25px 0;
                 display: flex;
                 align-items: center;
                 transition: all .3s;
                 @include pc {
-                    width: get_pc(1288);
+                    width: get_pc(956);
+                    padding: get_pc(25) get_pc(25) get_pc(25) 0;
                 }
-
                 @include sp {
                     width: 100%;
+                    padding: get_sp(10);
                 }
                 &:hover {
                     opacity: 0.7;
@@ -1859,12 +1863,12 @@
                 .thumb {
                     width: 332px;
                     height: 207px;
-                    margin-right: 41px;
+                    margin-right: 22px;
 
                     @include pc {
                         width: get_pc(332);
                         height: get_pc(207);
-                        margin-right: get_pc(41);
+                        margin-right: get_pc(22);
                     }
 
                     @include sp {
@@ -1898,6 +1902,7 @@
                         padding-bottom: 11.5px;
                         margin-bottom: 9.5px;
                         border-bottom: 2px solid #16345A;
+                        text-align: left;
                         @include pc {
                             font-size: get_pc(30);
                             line-height: get_pc(44);
@@ -1950,8 +1955,9 @@
                     background-color: #0A5AB2;
                 }
                 span {
-                    display: inline-block;
                     border-radius: 6px;
+                    display: flex;
+                    justify-content: center;
                     @include pc {
                         border-radius: get_pc(6);
                     }
