@@ -125,7 +125,17 @@ foreach ($terms as $t) {
     <section class="section" id="dramas_on_air">
         <div class="inner">
             <div class="tlt_section">
-                <h2><?php echo $term_list_object->slug === 'korea' ? '放送中の韓国・韓流ドラマ' : esc_attr($term_list_object_name);?></h2>
+                <h2>
+                    <?php
+                        if ($term_list_object->slug === 'korea') {
+                            echo '放送中の韓国・韓流ドラマ';
+                        } elseif ($term_list_object->slug === 'china') {
+                            echo '放送中の中国・アジアドラマ';
+                        } else {
+                            echo esc_attr($term_list_object_name);
+                        }
+                    ?>
+                </h2>
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>

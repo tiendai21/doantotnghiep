@@ -16,14 +16,15 @@
     .breadcrumb {
         max-width: 1576px;
         margin: 0 auto 8px;
-        padding-top: 140px;
+        padding-top: 167px;
         @include pc {
-            padding-top: get_pc(140);
+            padding-top: get_pc(167);
             max-width: get_pc(1576);
             margin: 0 auto get_pc(8);
         }
         @include sp {
-            padding: get_sp(60) 0 get_sp(8) get_sp(11);
+            padding: get_sp(106) 0 get_sp(8) get_sp(11);
+            max-width: initial;
             margin: 0;
         }
         li {
