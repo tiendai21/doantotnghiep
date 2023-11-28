@@ -21,11 +21,11 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                     ),
                 );
                 $the_query = new WP_Query($args);
-
+                $array_rev = array_reverse($the_query->posts);
+                $the_query->posts = $array_rev;
                 if ($the_query->have_posts()) {
                     while ($the_query->have_posts()) {
                         $the_query->the_post();
-                        the_post();
                         get_template_part('template-parts/program/lineup', 'item');
                     }
                 }
