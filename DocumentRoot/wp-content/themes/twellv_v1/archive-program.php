@@ -83,7 +83,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                 <a href="<?php echo esc_url(home_url('/')) ?>"><?php bs12_pankuzu_text_top(); ?></a>
             </li>
             <li>
-                <span><?php echo $pre_title; ?>放送中の番組</span>
+                <span><?php echo $pre_title; ?>番組一覧</span>
             </li>
         </ul>
 
@@ -108,7 +108,10 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                 <section class="section slide_program_wrapper" id="<?php echo $base_t->slug; ?>">
                     <div class="inner">
                         <div class="tlt_section">
-                            <h2><?php echo $base_t->name; ?></h2>
+                            <h2><?php
+                                echo str_replace('無料', '', $base_t->name);
+                                ?>
+                            </h2>
                             <div class="btn_more">
                                 <span>すべて見る</span>
                             </div>

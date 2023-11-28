@@ -150,7 +150,6 @@
             if (liElement.length === liElementActive.length) {
                 $(this).fadeIn(1000).hide();
             }
-
         });
     }
     function toggleShowAll() {
