@@ -17,9 +17,6 @@
                             <a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a>
                         </li>
                         <li>
-                            <a href="#">ジャンル</a>
-                        </li>
-                        <li>
                             <a href="<?php echo esc_url(home_url('/present_event/'))?>">視聴者プレゼント</a>
                         </li>
                         <li>

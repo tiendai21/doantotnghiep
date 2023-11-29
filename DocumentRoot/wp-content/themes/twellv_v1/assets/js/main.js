@@ -165,7 +165,7 @@
                 if(!$(this).hasClass("active")) {
                     $(this).stop().fadeIn(1000).addClass("active");
                 } else {
-                    $(this).stop().fadeOut(1000).removeClass("active");
+                    $(this).stop().fadeOut(300).removeClass("active");
                 }
             });
         })

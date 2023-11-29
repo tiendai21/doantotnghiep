@@ -547,15 +547,19 @@
                 font-weight: bold;
                 position: relative;
                 font-size: 25px;
+                letter-spacing: 2.5px;
 
                 @include pc {
                     padding-bottom: get_pc(2);
                     padding-right: get_pc(25);
                     font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
                 }
                 @include sp {
                     padding-bottom: get_sp(2);
                     padding-right: get_sp(20);
+                    font-size: get_sp(16);
+                    letter-spacing: get_pc(1.6);
                 }
 
                 &::after {
@@ -647,6 +651,7 @@
                         @include sp {
                             padding-left: get_sp(5);
                             font-size: get_sp(13.5);
+                            letter-spacing: get_sp(-1);
                         }
                     }
                 }
