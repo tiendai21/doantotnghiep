@@ -99,6 +99,7 @@
                 padding-top: get_pc(24);
             }
             @include sp {
+                width: 100%;
                 padding-top: 0;
                 margin-bottom: get_sp(57);
             }
