@@ -430,6 +430,7 @@
             variableWidth: true,
             slidesToShow: 5,
             infinite: false,
+
             responsive: [
                 {
                     breakpoint: 960,
