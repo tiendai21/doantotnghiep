@@ -20,7 +20,7 @@ foreach ($terms as $t) {
 }
 
 $terms = array_merge($target_terms, $other_terms);
-
+//var_dump(get_field('bg_color', $term_list_object));
 $top_view = null;
 $programs_arr = [];
 foreach ($terms as $t) {

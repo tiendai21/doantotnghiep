@@ -1718,7 +1718,9 @@
                             background: #004898;
                             padding: 27px 0 34px;
                             height: 90px;
-                            display: block;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             @include pc {
                                 height: get_pc(90);
                                 padding: get_pc(27) 0 get_pc(34);
