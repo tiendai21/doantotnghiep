@@ -12,14 +12,14 @@
     }
 
     .breadcrumb {
-        margin: 7px auto 45px 170px;
+        margin-bottom: 45px;
 
         @include pc {
-            margin: get_pc(7) auto get_pc(45) get_pc(170);
+            margin-bottom: get_pc(45);
         }
 
         @include sp {
-            margin: get_sp(8) auto get_sp(14) get_sp(11);
+            margin-bottom: initial;
         }
 
         span {

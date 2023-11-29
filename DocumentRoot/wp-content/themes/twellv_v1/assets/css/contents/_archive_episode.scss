@@ -18,7 +18,7 @@
     }
 
     @include sp {
-      margin: get_sp(8) auto get_sp(8) get_sp(11);
+      margin: initial;
     }
     li {
       &:last-child {

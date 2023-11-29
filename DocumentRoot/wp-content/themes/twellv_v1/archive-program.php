@@ -78,14 +78,16 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
 <?php if (get_query_var('onair_status') !== 'finished') : ?>
     <!-- main -->
     <main id="main">
-        <ul class="breadcrumb">
-            <li>
-                <a href="<?php echo esc_url(home_url('/')) ?>"><?php bs12_pankuzu_text_top(); ?></a>
-            </li>
-            <li>
-                <span><?php echo $pre_title; ?>番組一覧</span>
-            </li>
-        </ul>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="<?php echo esc_url(home_url('/')) ?>"><?php bs12_pankuzu_text_top(); ?></a>
+                </li>
+                <li>
+                    <span><?php echo $pre_title; ?>番組一覧</span>
+                </li>
+            </ul>
+        </div>
 
         <!-- program air -->
         <?php get_template_part('template-parts/program/program-airing'); ?>
@@ -179,14 +181,16 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
     <main id="main">
         <div class="inner">
             <!-- Breadcrum List -->
-            <ul class="breadcrumb">
-                <li>
-                    <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-                </li>
-                <li>
-                    <span>放送終了</span>
-                </li>
-            </ul>
+            <div class="breadcrumb">
+                <ul>
+                    <li>
+                        <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                    </li>
+                    <li>
+                        <span>放送終了</span>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Breadcrum List -->
 

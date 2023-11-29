@@ -575,81 +575,97 @@ a {
 }
 
 .breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 1520px;
-    margin: 0 auto 45px;
-
+    overflow-x: scroll;
+    margin: 7px auto 20px;
     @include pc {
-        max-width: get_pc(1520);
-        margin: 0 auto get_pc(45);
+        margin: get_pc(7) auto get_pc(20) get_pc(170);
     }
-
     @include sp {
-        max-width: 100%;
-        margin: 0 auto get_sp(12);
+        padding: get_sp(8) get_sp(8) get_sp(12);
     }
-
-    li {
-        position: relative;
-        margin-right: 24px;
-        font-size: 18px;
-        line-height: 26px;
-        letter-spacing: 0.9px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1576px;
+        margin: 0 auto;
+        padding: 7px 0 20px;
 
         @include pc {
-            margin-right: get_pc(24);
-            font-size: get_pc(18);
-            line-height: get_pc(26);
-            letter-spacing: get_pc(0.9);
+            max-width: get_pc(1576);
+            padding: get_pc(7) 0 get_pc(20);
         }
 
         @include sp {
-            margin-right: get_sp(13);
-            font-size: get_sp(12);
-            line-height: get_sp(17);
-            letter-spacing: get_sp(0.6);
-            padding: 0 0 0 get_sp(11);
+            max-width: initial;
+            width: max-content;
+            padding: 0;
+            margin: 0;
         }
 
-        a,
-        span {
-            color: #6a6a6a;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 7px;
-            height: 7px;
-            top: 50%;
-            right: -12px;
-            transform: translate(0, -50%) rotate(45deg);
-            border-top: 1px solid #707070;
-            border-right: 1px solid #707070;
+        li {
+            position: relative;
+            margin-right: 24px;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.9px;
 
             @include pc {
-                width: get_pc(7);
-                height: get_pc(7);
-                right: get_pc(-12);
-                border-top: get_pc(1) solid #707070;
-                border-right: get_pc(1) solid #707070;
+                margin-right: get_pc(24);
+                font-size: get_pc(18);
+                line-height: get_pc(26);
+                letter-spacing: get_pc(0.9);
             }
 
             @include sp {
-                width: get_sp(5);
-                height: get_sp(5);
-                right: get_sp(-8);
-                border-top: get_sp(1) solid #707070;
-                border-right: get_sp(1) solid #707070;
+                margin-right: get_sp(13);
+                font-size: get_sp(12);
+                line-height: get_sp(17);
+                letter-spacing: get_sp(0.6);
+                padding: 0 0 0 get_sp(2);
             }
-        }
 
-        &:last-child {
+            a,
+            span {
+                color: #6a6a6a;
+            }
+
             &::before {
-                content: unset;
+                content: "";
+                position: absolute;
+                display: block;
+                width: 7px;
+                height: 7px;
+                top: 50%;
+                right: -12px;
+                transform: translate(0, -50%) rotate(45deg);
+                border-top: 1px solid #707070;
+                border-right: 1px solid #707070;
+
+                @include pc {
+                    width: get_pc(7);
+                    height: get_pc(7);
+                    right: get_pc(-12);
+                    border-top: get_pc(1) solid #707070;
+                    border-right: get_pc(1) solid #707070;
+                }
+
+                @include sp {
+                    width: get_sp(5);
+                    height: get_sp(5);
+                    right: get_sp(-8);
+                    border-top: get_sp(1) solid #707070;
+                    border-right: get_sp(1) solid #707070;
+                }
+            }
+
+            &:last-child {
+                &::before {
+                    content: unset;
+                }
             }
         }
     }
@@ -988,14 +1004,15 @@ a {
 }
 
 #main {
-    margin-top: 167px;
+    margin-top: 160px;
 
     @include pc {
-        margin-top: get_pc(167);
+        margin-top: get_pc(160);
     }
 
     @include sp {
-        margin-top: get_sp(106);
+        margin-top: get_sp(100);
+        overflow: hidden;
     }
 
     &.active {

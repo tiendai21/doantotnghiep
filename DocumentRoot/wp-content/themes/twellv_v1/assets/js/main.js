@@ -13,6 +13,10 @@
     scrollInAnime(window, ".anime2", "animated");
     // loading after
     window.onload = function () {
+        _width = $(window).width();
+        if (_width <= _spmode) {
+            slideNavList(".side_header", false, false);
+        }
         toggleMenuSp();
         toggleMenuFooter();
         toggleSearch();
@@ -49,7 +53,7 @@
         slideProgram(".brand_anime", false, false);
         slideProgram(".brand_entertainment", false, false);
         slideProgram(".brand_qvc", false, false);
-        slideNavList(".side_header", false, false);
+        // slideNavList(".side_header", false, false);
         slideList(".slide_list", false, false);
         voiceList(".voice_list", false, false);
         synopsisList(".synopsis_list", false, false);
@@ -242,7 +246,7 @@
                 focusOnSelect: true,
                 speed: 500,
                 centerMode: _mode,
-                centerPadding: "10%",
+                centerPadding: "14%",
                 touchMove: false,
                 autoplay: _autoplay,
                 arrows: _arrow,
@@ -547,13 +551,6 @@
         })
     }
 
-    //resize after
-    window.onresize = function () {
-        _width = $(window).width();
-        if (_width <= _spmode) {
-            slideNavList(".side_header", false, false);
-        }
-    };
     window.onscroll = function () {
     };
 

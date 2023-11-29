@@ -7,20 +7,22 @@ $year = get_query_var( 'year');
 ?>
     <!-- main -->
     <main id="main">
-        <ul class="breadcrumb">
-            <li>
-                <a href="<?php echo esc_url(home_url('/'))?>"><?php  bs12_pankuzu_text_top(); ?></a>
-            </li>
-            <li class="util_pc">
-                <span>新着情報、プレスリリース</span>
-            </li>
-            <li class="util_sp">
-                <span>新着情報、プレスリ</span>
-            </li>
-            <?php if ( $year ) : ?>
-                <li><?php echo $year; ?>年</li>
-            <?php endif; ?>
-        </ul>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="<?php echo esc_url(home_url('/'))?>"><?php  bs12_pankuzu_text_top(); ?></a>
+                </li>
+                <li class="util_pc">
+                    <span>新着情報、プレスリリース</span>
+                </li>
+                <li class="util_sp">
+                    <span>新着情報、プレスリ</span>
+                </li>
+                <?php if ( $year ) : ?>
+                    <li><?php echo $year; ?>年</li>
+                <?php endif; ?>
+            </ul>
+        </div>
         <section class="section" id="list_new">
             <div class="inner">
                 <h1>新着情報 | プレスリリース</h1>

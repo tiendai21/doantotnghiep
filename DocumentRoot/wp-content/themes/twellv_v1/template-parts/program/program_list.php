@@ -52,17 +52,19 @@ foreach ($terms as $t) {
 ?>
 <!-- main -->
 <main id="main">
-    <ul class="breadcrumb">
-        <li>
-            <a href="/"><?php bs12_pankuzu_text_top(); ?></a>
-        </li>
-        <?php if (preg_match('/(korea|china)/', $term_list_object->slug)) : ?>
-            <li><a href="/program/drama/">ドラマ・映画</a></li>
-        <?php endif; ?>
-        <li>
-            <span><?php echo esc_attr($term_list_object_name); ?></span>
-        </li>
-    </ul>
+    <div class="breadcrumb">
+        <ul>
+            <li>
+                <a href="/"><?php bs12_pankuzu_text_top(); ?></a>
+            </li>
+            <?php if (preg_match('/(korea|china)/', $term_list_object->slug)) : ?>
+                <li><a href="/program/drama/">ドラマ・映画</a></li>
+            <?php endif; ?>
+            <li>
+                <span><?php echo esc_attr($term_list_object_name); ?></span>
+            </li>
+        </ul>
+    </div>
     <!-- banner catefory -->
     <section class="section" id="banner_category">
         <div class="inner">

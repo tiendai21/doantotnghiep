@@ -34,14 +34,16 @@ if ( $the_query->have_posts() ) {
 ?>
     <!-- main -->
     <main id="main">
-        <ul class="breadcrumb">
-            <li>
-                <a href="<?php echo esc_url(home_url('/'))?>"><?php  bs12_pankuzu_text_top(); ?></a>
-            </li>
-            <li>
-                <span>ニュースリリース</span>
-            </li>
-        </ul>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="<?php echo esc_url(home_url('/'))?>"><?php  bs12_pankuzu_text_top(); ?></a>
+                </li>
+                <li>
+                    <span>ニュースリリース</span>
+                </li>
+            </ul>
+        </div>
         <!--content-->
         <section class="section" id="content_news_release">
             <div class="inner">

@@ -50,20 +50,22 @@ foreach ($terms as $t) {
 
 ?>
 <main id="main">
-    <ul class="breadcrumb">
-        <li>
-            <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-        </li>
-        <li>
-            <a href="<?php echo esc_url(home_url('/program/')) ?>">ドラマ・映画</a>
-        </li>
-        <li class="util_pc">
-            <span>韓国・韓流ドラマ</span>
-        </li>
-        <li class="util_sp">
-            <span>韓国・</span>
-        </li>
-    </ul>
+    <div class="breadcrumb">
+        <ul>
+            <li>
+                <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+            </li>
+            <li>
+                <a href="<?php echo esc_url(home_url('/program/')) ?>">ドラマ・映画</a>
+            </li>
+            <li class="util_pc">
+                <span>韓国・韓流ドラマ</span>
+            </li>
+            <li class="util_sp">
+                <span>韓国・</span>
+            </li>
+        </ul>
+    </div>
     <!-- banner catefory -->
     <section class="section" id="banner_category">
         <div class="inner">

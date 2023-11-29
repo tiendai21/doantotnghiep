@@ -4,17 +4,16 @@ get_header();
 ?>
     <!--main-->
     <main id="main">
-        <ul class="breadcrumb">
-            <li>
-                <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-            </li>
-            <li class="util_pc">
-                <span>プレゼント・イベント情報一覧</span>
-            </li>
-            <li class="util_sp">
-                <span>プレゼント・イベント</span>
-            </li>
-        </ul>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                </li>
+                <li>
+                    <span>プレゼント・イベント情報一覧</span>
+                </li>
+            </ul>
+        </div>
         <?php
         $present_event_list = [];
 

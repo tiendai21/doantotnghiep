@@ -4,17 +4,19 @@ get_header();
 
     <!-- main -->
     <main id="main">
-        <ul class="breadcrumb">
-            <li>
-                <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-            </li>
-            <li class="util_pc">
-                <span>Twitter・Facebook・Instagramアカウント一覧</span>
-            </li>
-            <li class="util_sp">
-                <span>Twitter・Facebook</span>
-            </li>
-        </ul>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                </li>
+                <li class="util_pc">
+                    <span>Twitter・Facebook・Instagramアカウント一覧</span>
+                </li>
+                <li class="util_sp">
+                    <span>Twitter・Facebook</span>
+                </li>
+            </ul>
+        </div>
         <!--content-->
         <section class="section" id="list_account_content">
             <div class="inner">

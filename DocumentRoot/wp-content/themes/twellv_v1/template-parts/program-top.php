@@ -5,23 +5,22 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
 ?>
 <!-- main -->
 <main id="main">
-    <ul class="breadcrumb">
-        <li>
-            <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-        </li>
-        <li>
-            <a href="#">ドラマ・映画</a>
-        </li>
-        <li class="util_pc">
-            <a href="#">韓国・韓流ドラマ</a>
-        </li>
-        <li class="util_pc">
-            <span>悪の花</span>
-        </li>
-        <li class="util_sp">
-            <a href="#">韓国</a>
-        </li>
-    </ul>
+    <div class="breadcrumb">
+        <ul>
+            <li>
+                <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+            </li>
+            <li>
+                <a href="#">ドラマ・映画</a>
+            </li>
+            <li>
+                <a href="#">韓国・韓流ドラマ</a>
+            </li>
+            <li>
+                <span>悪の花</span>
+            </li>
+        </ul>
+    </div>
 
     <?php $bg_style = get_program_bg_style($term);
     global $bs12_program_top_parts_arr;

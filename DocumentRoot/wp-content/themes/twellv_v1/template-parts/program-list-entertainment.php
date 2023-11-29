@@ -19,14 +19,16 @@ foreach ($terms as $t) {
 // var_dump( $programs_arr );
 ?>
 <main id="main">
-    <ul class="breadcrumb">
-        <li>
-            <a href="<?php echo esc_url(home_url('/'))?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-        </li>
-        <li>
-            <span><?php echo esc_attr( $term_list_object_name ); ?></span>
-        </li>
-    </ul>
+    <div class="breadcrumb">
+        <ul>
+            <li>
+                <a href="<?php echo esc_url(home_url('/'))?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+            </li>
+            <li>
+                <span><?php echo esc_attr( $term_list_object_name ); ?></span>
+            </li>
+        </ul>
+    </div>
     <!-- banner catefory -->
     <section class="section" id="banner_category">
         <div class="inner">

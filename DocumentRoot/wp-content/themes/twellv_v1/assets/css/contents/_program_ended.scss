@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 /* Breadcrumb */
-.breadcrumb {
+.program_ended .breadcrumb {
     margin: 7px auto 28px 170px;
     @include pc {
         margin: get_pc(7) auto get_pc(28) get_pc(170);

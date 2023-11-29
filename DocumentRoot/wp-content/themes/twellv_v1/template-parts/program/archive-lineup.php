@@ -5,26 +5,25 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
 ?>
 <!-- main -->
 <main id="main">
-    <ul class="breadcrumb">
-        <li>
-            <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-        </li>
-        <li>
-            <a href="#">ドラマ・映画</a>
-        </li>
-        <li class="util_pc">
-            <a href="#">韓国・韓流ドラマ</a>
-        </li>
-        <li class="util_pc">
-            <a href="#">悪の花</a>
-        </li>
-        <li class="util_pc">
-            <span>相関図</span>
-        </li>
-        <li class="util_sp">
-            <a href="#">韓国</a>
-        </li>
-    </ul>
+    <div class="breadcrumb">
+        <ul>
+            <li>
+                <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+            </li>
+            <li>
+                <a href="#">ドラマ・映画</a>
+            </li>
+            <li>
+                <a href="#">韓国・韓流ドラマ</a>
+            </li>
+            <li>
+                <a href="#">悪の花</a>
+            </li>
+            <li>
+                <span>相関図</span>
+            </li>
+        </ul>
+    </div>
     <!--banner-->
     <?php $bg_style = get_program_bg_style($program_term); ?>
     <?php

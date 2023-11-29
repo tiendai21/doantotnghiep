@@ -63,7 +63,7 @@
         @include sp {
             @include bgsetup("../images/bg_notice_sp.png", center center, 100% 100%, no-repeat);
             height: get_sp(50);
-            margin-top: get_sp(100);
+            margin-top: 0;
         }
         &.active {
             @include sp {
@@ -184,12 +184,17 @@
             }
         }
         .item_slide {
+            margin-right: 9px;
+            @include pc {
+                margin-right: get_pc(9);
+            }
             a {
                 display: inline-block;
+                width: 100%;
             }
 
             .thumb {
-                width: 750px;
+                width: 100%;
                 height: 573px;
                 overflow: hidden;
                 @include pc {

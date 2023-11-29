@@ -4,14 +4,16 @@ get_header();
     <!--main-->
     <main id="main">
         <!--breadcumb-->
-        <ul class="breadcrumb">
-            <li>
-                <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
-            </li>
-            <li>
-                <span>プレス情報</span>
-            </li>
-        </ul>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                </li>
+                <li>
+                    <span>プレス情報</span>
+                </li>
+            </ul>
+        </div>
         <!--/breadcumb-->
         <!--content the press-->
         <?php
@@ -82,7 +84,7 @@ get_header();
                         <div class="txt_desp">
                             <span>※1 都合により放送日時や内容が変更になる場合がございます。最新の編成表をご確認ください。</span>
                             <span>※2 各番組の画像が必要な場合は下記までご連絡ください。</span>
-                            <span>BS12 トゥエルビ広報　電話：03-6451-1234　FAX：03-6451-1212　e-mail：<a href="koho@whvc.jp">koho@whvc.jp</a></span>
+                            <span>BS12 トゥエルビ広報　電話：03-6451-1234　FAX：03-6451-1212　e-mail：<a href="mailto:koho@whvc.jp">koho@whvc.jp</a></span>
                             <span>※3 上記より画像ダウンロードができない場合は<a href="">こちら</a>よりお試しください。</span>
                         </div>
                     </div>

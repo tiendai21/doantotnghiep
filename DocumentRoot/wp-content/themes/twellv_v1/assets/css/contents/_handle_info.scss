@@ -1,11 +1,6 @@
 .handle_info {
     .breadcrumb {
         li {
-            &:nth-last-child(2) {
-                &:before {
-                    content: none;
-                }
-            }
             &:last-child {
                 @include sp {
                     margin-right: 0;
