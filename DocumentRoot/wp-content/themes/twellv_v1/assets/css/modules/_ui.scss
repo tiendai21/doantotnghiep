@@ -581,6 +581,7 @@ a {
         margin: get_pc(7) auto get_pc(20) get_pc(170);
     }
     @include sp {
+        margin: initial;
         padding: get_sp(8) get_sp(8) get_sp(12);
     }
     &::-webkit-scrollbar {

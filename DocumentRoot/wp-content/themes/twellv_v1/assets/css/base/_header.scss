@@ -430,6 +430,9 @@
             height: get_sp(15);
             left: get_sp(7);
         }
+        &::before {
+            content: initial;
+        }
     }
 
     .slick-next {
