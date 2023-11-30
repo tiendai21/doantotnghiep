@@ -1,40 +1,6 @@
 .tax-program_cat{
     #main {
         overflow-x: hidden;
-        margin-top: 0;
-        //padding-top: 160px;
-        //@include pc {
-        //    padding-top: get_pc(160);
-        //}
-        @include sp {
-            padding-top: get_sp(100);
-        }
-    }
-    .breadcrumb {
-        max-width: 1576px;
-        margin: 0 auto 12px;
-        padding-top: 7px;
-        @include pc {
-            padding-top: get_pc(7);
-            max-width: get_pc(1576);
-            margin: 0 auto get_pc(12);
-        }
-        @include sp {
-            padding: get_sp(8) 0 get_sp(8) get_sp(11);
-            margin: 0;
-        }
-        li {
-            &:not(:last-child) {
-                @include sp {
-                    margin-right: get_sp(18);
-                }
-            }
-            &:last-child {
-                @include sp {
-                    margin: 0;
-                }
-            }
-        }
     }
 
     /*

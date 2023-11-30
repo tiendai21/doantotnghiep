@@ -1,18 +1,4 @@
 .info_detail {
-    .breadcrumb {
-        li {
-            &:nth-child(2) {
-                &:before {
-                    content: none;
-                }
-            }
-            &:last-child {
-                @include sp {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
     #banner_info {
         .tlt {
             padding: 25px 172px;

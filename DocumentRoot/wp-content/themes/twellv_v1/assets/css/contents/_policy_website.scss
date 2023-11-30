@@ -14,32 +14,6 @@
             padding-top: get_sp(100);
         }
     }
-    .breadcrumb {
-        max-width: 1576px;
-        margin: 0 auto 20px;
-        padding-top: 7px;
-        @include pc {
-            padding-top: get_pc(7);
-            max-width: get_pc(1576);
-            margin: 0 auto get_pc(20);
-        }
-        @include sp {
-            padding: get_sp(8) 0 get_sp(8) get_sp(11);
-            margin: 0;
-        }
-        li {
-            &:nth-last-child(2) {
-                &:before {
-                    content: none;
-                }
-            }
-            &:last-child {
-                @include sp {
-                    margin: 0;
-                }
-            }
-        }
-    }
 
     /*
         policy_website

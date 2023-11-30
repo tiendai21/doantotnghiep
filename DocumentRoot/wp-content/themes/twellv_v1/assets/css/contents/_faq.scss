@@ -5,27 +5,6 @@
             text-align: center;
         }
     }
-    .breadcrumb {
-        margin-bottom: 20px;
-        @include pc {
-            margin-bottom: get_pc(20);
-        }
-        @include sp {
-            margin-bottom: get_sp(8);
-        }
-        li {
-            &:nth-last-child(2) {
-                &:before {
-                    content: none;
-                }
-            }
-            &:last-child {
-                @include sp {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
     .inner {
         text-align: right;
         max-width: 1576px;

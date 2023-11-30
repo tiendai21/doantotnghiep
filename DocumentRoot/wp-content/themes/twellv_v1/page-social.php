@@ -9,11 +9,8 @@ get_header();
                 <li>
                     <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
                 </li>
-                <li class="util_pc">
+                <li>
                     <span>Twitter・Facebook・Instagramアカウント一覧</span>
-                </li>
-                <li class="util_sp">
-                    <span>Twitter・Facebook</span>
                 </li>
             </ul>
         </div>

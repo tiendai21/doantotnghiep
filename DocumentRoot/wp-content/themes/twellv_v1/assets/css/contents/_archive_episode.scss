@@ -10,29 +10,6 @@
       margin-top: get_pc(160);
     }
   }
-  .breadcrumb {
-    margin: 7px auto 20px;
-
-    @include pc {
-      margin: get_pc(7) auto get_pc(20) get_pc(170);
-    }
-
-    @include sp {
-      margin: initial;
-    }
-    li {
-      &:last-child {
-        @include sp {
-          margin-right: 0;
-        }
-      }
-      &:nth-last-child(2) {
-        &:before {
-          content: none;
-        }
-      }
-    }
-  }
 
   /*
       banner

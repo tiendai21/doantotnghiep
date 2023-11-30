@@ -14,25 +14,6 @@
         }
     }
 
-    .breadcrumb {
-        margin: 0 auto 20px;
-        max-width: 1576px;
-        padding-top: 7px;
-        @include pc {
-            margin: 0 auto get_pc(20);
-            max-width: get_pc(1576);
-            padding-top: get_pc(7);
-        }
-        @include sp {
-            flex-wrap: nowrap;
-            margin: 0;
-            padding: get_sp(8) 0 get_sp(8) get_sp(11);
-            li {
-                flex-shrink: 0;
-            }
-        }
-    }
-
     .tlt_head {
         margin-bottom: 0;
     }

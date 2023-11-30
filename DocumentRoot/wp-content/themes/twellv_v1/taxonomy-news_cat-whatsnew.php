@@ -12,11 +12,8 @@ $year = get_query_var( 'year');
                 <li>
                     <a href="<?php echo esc_url(home_url('/'))?>"><?php  bs12_pankuzu_text_top(); ?></a>
                 </li>
-                <li class="util_pc">
+                <li>
                     <span>新着情報、プレスリリース</span>
-                </li>
-                <li class="util_sp">
-                    <span>新着情報、プレスリ</span>
                 </li>
                 <?php if ( $year ) : ?>
                     <li><?php echo $year; ?>年</li>
