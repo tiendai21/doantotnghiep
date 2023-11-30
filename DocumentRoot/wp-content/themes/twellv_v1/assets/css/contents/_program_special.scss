@@ -60,6 +60,7 @@
     #program {
         padding-top: 41px;
         transform: scaleY(1.015);
+        overflow: hidden;
         @include bgsetup("../images/bg_special_program.png", center center, 100% 100%, no-repeat);
         padding-bottom: 112px;
         @include pc {
@@ -828,6 +829,7 @@
         opacity: 1;
         position: relative;
         top: -1px;
+        overflow: hidden;
         @include pc {
             top: get_pc(-1);
         }

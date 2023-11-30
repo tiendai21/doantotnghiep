@@ -185,6 +185,12 @@
             }
         }
 
+        .main_body {
+            @include sp {
+                padding-bottom: get_sp(13);
+            }
+        }
+
         .conf_area {
             display: flex;
             justify-content: space-between;
@@ -641,27 +647,15 @@
         }
     }
 
-    #pr {
-        .tlt_section {
-            background-color: initial;
-            justify-content: initial;
-            height: initial;
-            margin-bottom: 28px;
-            @include pc {
-                margin-bottom: get_pc(28);
-            }
-            @include sp {
-                margin-bottom: get_sp(13);
-            }
-            h2 {
-                color: #004898;
-            }
-        }
-    }
-
     #other {
         .tlt_section {
             background-color: unset;
+        }
+    }
+
+    .btn_watch {
+        a {
+            width: 100%;
         }
     }
 
@@ -769,6 +763,7 @@
                     line-height: get_sp(20);
                     letter-spacing: get_sp(1.4);
                     width: get_sp(185);
+                    @include txtClamp(2);
                 }
             }
         }

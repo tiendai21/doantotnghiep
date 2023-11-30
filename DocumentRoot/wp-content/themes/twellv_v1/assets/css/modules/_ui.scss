@@ -1756,6 +1756,7 @@ a {
             letter-spacing: 3px;
             line-height: 44px;
             color: #004898;
+            font-weight: bold;
             @include pc {
                 font-size: get_pc(30);
                 letter-spacing: get_pc(3);
@@ -2141,7 +2142,7 @@ a {
         }
         h2 {
             @include sp {
-                max-width: get_sp(150);
+                max-width: get_sp(200);
             }
         }
     }
