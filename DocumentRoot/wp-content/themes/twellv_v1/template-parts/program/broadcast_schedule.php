@@ -38,7 +38,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
         <div class="inner">
             <div class="bg_gray">
                 <div class="tlt_section">
-                    <h2>放送予定<?php echo $term ? "の" . $term->name : null ?></h2>
+                    <h2>放送予定</h2>
                     <div class="btn_more">
                         <span>すべて見る</span>
                     </div>

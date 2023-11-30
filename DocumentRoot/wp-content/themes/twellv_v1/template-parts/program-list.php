@@ -246,7 +246,7 @@ foreach ($terms as $t) {
     <section class="section" id="dramas_scheduled">
         <div class="inner">
             <div class="tlt_section">
-                <h2><?php echo esc_attr($term_list_object_name); ?></h2>
+                <h2>放送予定の<?php echo esc_attr($term_list_object_name); ?></h2>
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>

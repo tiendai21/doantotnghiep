@@ -128,6 +128,14 @@
                         padding-right: 0 !important;
                         display: inline-block;
                     }
+                  // Reverse slide vertical direction
+                  &.slick-slider {
+                    transform: rotate(180deg);
+                  }
+
+                  .slick-slide {
+                    transform: rotate(-180deg);
+                  }
                 }
             }
         }
