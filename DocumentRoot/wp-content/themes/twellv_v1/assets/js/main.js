@@ -246,7 +246,7 @@
                 focusOnSelect: true,
                 speed: 500,
                 centerMode: _mode,
-                centerPadding: "14%",
+                centerPadding: "10.5%",
                 touchMove: false,
                 autoplay: _autoplay,
                 arrows: _arrow,

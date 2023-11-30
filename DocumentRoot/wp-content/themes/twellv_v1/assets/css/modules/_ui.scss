@@ -576,9 +576,9 @@ a {
 
 .breadcrumb {
     overflow-x: scroll;
-    margin: 7px auto 20px;
+    margin: 7px 20px 45px 170px;
     @include pc {
-        margin: get_pc(7) auto get_pc(20) get_pc(170);
+        margin: get_pc(7) get_pc(20) get_pc(45) get_pc(170);
     }
     @include sp {
         margin: initial;
@@ -592,7 +592,6 @@ a {
         flex-wrap: wrap;
         align-items: center;
         max-width: 1576px;
-        margin: 0 auto;
         padding: 7px 0 20px;
 
         @include pc {
@@ -604,7 +603,6 @@ a {
             max-width: initial;
             width: max-content;
             padding: 0;
-            margin: 0;
         }
 
         li {
