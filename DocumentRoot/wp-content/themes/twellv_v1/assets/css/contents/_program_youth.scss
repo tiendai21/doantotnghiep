@@ -14,20 +14,6 @@
         }
     }
 
-    .breadcrumb {
-        margin-bottom: 20px;
-        @include pc {
-            margin-bottom: get_pc(20);
-        }
-        @include sp {
-            margin-bottom: get_sp(8);
-            flex-wrap: nowrap;
-            li {
-                flex-shrink: 0;
-            }
-        }
-    }
-
     .tab_content {
         margin: 0;
     }

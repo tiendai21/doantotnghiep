@@ -9,31 +9,6 @@
         @include sp {
             margin-top: get_sp(106);
         }
-
-        .breadcrumb {
-            margin: 7px auto 35px 172px;
-
-            @include pc {
-                margin: get_pc(7) auto get_pc(35) get_pc(172);
-            }
-
-            @include sp {
-                margin: get_sp(7) get_sp(11) get_sp(13);
-            }
-            li {
-                &:nth-child(2) {
-                    &:before {
-                        content: none;
-                    }
-
-                }
-                &:last-child {
-                    @include sp {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
     }
 
     #list_new {

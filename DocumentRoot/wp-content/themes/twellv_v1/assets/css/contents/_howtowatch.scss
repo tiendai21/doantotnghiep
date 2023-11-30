@@ -1,16 +1,4 @@
 .howtowatch {
-    .breadcrumb {
-        margin-bottom: 20px;
-        @include pc {
-            margin-bottom: get_pc(20);
-        }
-        @include sp {
-            margin-bottom: get_sp(8);
-        }
-        span {
-            letter-spacing: 0;
-        }
-    }
     #banner_howtowatch {
         margin-bottom: 32px;
         @include pc {

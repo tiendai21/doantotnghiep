@@ -1,13 +1,4 @@
 .news_release {
-    .breadcrumb {
-        margin-bottom: 20px;
-        @include pc {
-            margin-bottom: get_pc(20);
-        }
-        @include sp {
-            margin-bottom: get_sp(8);
-        }
-    }
     #content_news_release {
         .inner {
             background: #F2F2F2;

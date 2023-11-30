@@ -1,22 +1,4 @@
 .handle_info {
-    .breadcrumb {
-        margin: 0 auto;
-        width: 1576px;
-        @include pc {
-            width: get_pc(1576);
-        }
-        @include sp {
-            margin: initial;
-            width: initial;
-        }
-        li {
-            &:last-child {
-                @include sp {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
     .tlt_head {
         @include sp {
             margin-bottom: get_sp(19.5);

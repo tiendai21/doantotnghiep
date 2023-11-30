@@ -576,14 +576,6 @@ a {
 
 .breadcrumb {
     overflow-x: scroll;
-    margin: 7px 20px 45px 170px;
-    @include pc {
-        margin: get_pc(7) get_pc(20) get_pc(45) get_pc(170);
-    }
-    @include sp {
-        margin: initial;
-        padding: get_sp(8) get_sp(8) get_sp(12);
-    }
     &::-webkit-scrollbar {
         display: none;
     }
@@ -591,18 +583,16 @@ a {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        max-width: 1576px;
-        padding: 7px 0 20px;
+        padding: 7px 0 20px 170px;
 
         @include pc {
-            max-width: get_pc(1576);
-            padding: get_pc(7) 0 get_pc(20);
+            padding: get_pc(7) 0 get_pc(20) get_pc(170);
         }
 
         @include sp {
-            max-width: initial;
             width: max-content;
             padding: 0;
+            margin: get_sp(15) get_sp(12);
         }
 
         li {

@@ -58,11 +58,8 @@ foreach ($terms as $t) {
             <li>
                 <a href="<?php echo esc_url(home_url('/program/')) ?>">ドラマ・映画</a>
             </li>
-            <li class="util_pc">
+            <li>
                 <span>韓国・韓流ドラマ</span>
-            </li>
-            <li class="util_sp">
-                <span>韓国・</span>
             </li>
         </ul>
     </div>
