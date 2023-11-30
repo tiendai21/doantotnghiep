@@ -67,9 +67,10 @@ foreach ($terms as $t) {
         </ul>
     </div>
     <!-- banner catefory -->
+    <?php $cat_bg_color = get_field('category_banner_color', $term_list_object);?>
     <section class="section" id="banner_category">
         <div class="inner">
-            <div class="siler_category_top">
+            <div class="siler_category_top" <?php echo $cat_bg_color ? "style='background:{$cat_bg_color}'" : null?>>
                 <div class="txt_fixed">
                     <h2><?php echo esc_attr($term_list_object_name);?></h2>
                 </div>
