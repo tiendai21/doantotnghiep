@@ -42,6 +42,19 @@
     }
 
     /*
+        program_air
+     */
+    #program_air {
+        .program_slide {
+            .slick-track {
+                @include sp {
+                    height: get_sp(90);
+                }
+            }
+        }
+    }
+
+    /*
         list_topic
     */
     #list_topic {
@@ -398,6 +411,9 @@
                 @include pc {
                     margin-bottom: get_pc(25);
                 }
+                @include sp {
+                    margin-bottom: get_sp(15);
+                }
             }
             .program_slide {
                 @include sp {
@@ -410,7 +426,7 @@
                     a {
                         p {
                             @include sp {
-                                padding-bottom: get_sp(3);
+                                padding-bottom: initial;
                             }
                         }
                     }

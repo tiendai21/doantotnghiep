@@ -34,7 +34,7 @@ function singlePageOther($args)
 {
     $content = "";
     ob_start();
-    get_template_part('template-parts/single-pages/other', null, array('type' => $args['type']));
+    get_template_part('template-parts/home/other_top', null, array('type' => $args['type'], 'hideSocial' => $args['social']));
     $content .= ob_get_contents();
     ob_end_clean();
     return $content;

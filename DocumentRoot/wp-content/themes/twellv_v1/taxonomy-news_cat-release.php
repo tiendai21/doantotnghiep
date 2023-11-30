@@ -85,14 +85,7 @@ if ( $the_query->have_posts() ) {
         <!--/content-->
 
         <!-- other -->
-        <section class="section" id="other">
-            <div class="inner">
-                <div class="tlt_section">
-                    <h2>その他　一覧</h2>
-                </div>
-                <?php get_template_part( 'template-parts/seo/release_famous_list' ); ?>
-            </div>
-        </section>
+        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'all')); ?>
         <!-- /other -->
     </main>
     <!-- /main -->
