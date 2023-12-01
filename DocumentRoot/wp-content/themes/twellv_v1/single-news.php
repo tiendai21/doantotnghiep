@@ -43,8 +43,8 @@ if ($relate_program) {
                                 <a href="<?php echo get_term_link($program_parent_term); ?>"><?php echo $program_parent_term->name; ?></a>
                             </li>
                         <?php } ?>
-                        <li class="util_pc"><a
-                                    href="<?php echo get_term_link($relate_term); ?>"><?php echo $relate_term->name; ?></a>
+                        <li>
+                            <a href="<?php echo get_term_link($relate_term); ?>"><?php echo $relate_term->name; ?></a>
                         </li>
                         <?php
                     } else {
@@ -57,7 +57,7 @@ if ($relate_program) {
                     <li><a href="<?php echo get_term_link($t); ?>"><?php echo $t->name; ?>一覧</a></li>
                     <li><a href="/news/<?php echo $t->slug; ?>/#<?php echo $year; ?>"><?php echo $year; ?>年</a></li>
                 <?php } ?>
-                <li class="util_pc"><span><?php the_title(); ?></span></li>
+                <li><span><?php the_title(); ?></span></li>
             </ul>
         </div>
 
@@ -66,24 +66,6 @@ if ($relate_program) {
                 <div class="tlt">
                     <span><?php echo get_field('display_date'); ?></span>
                     <p><?php the_title(); ?></p>
-                </div>
-                <?php $thumb = get_field("thumbnail");
-                if ($thumb) :
-                    ?>
-                    <div class="thumb">
-                        <img src="<?php echo $thumb["url"] ?>" alt="<?php echo $thumb["title"] ?>">
-                    </div>
-                <?php endif; ?>
-                <div class="content">
-                    <?php
-                    $content = get_field('content_text');
-                    if ($t->slug === 'whatsnew') {
-                        $content = str_replace('BS12トゥエルビ', '<a href="/">BS12トゥエルビ</a>', $content);
-                        $content = str_replace('BS12 トゥエルビ', '<a href="/">BS12 トゥエルビ</a>', $content);
-                    }
-                    $content = preg_replace('/<table ("[^"]*"|\'[^\']*\'|[^\'">])*>/', '<table>', $content);
-                    echo add_tag_custom_class($content);
-                    ?>
                 </div>
                 <div class="social">
                     <a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank">
@@ -102,6 +84,24 @@ if ($relate_program) {
                         <?php //echo get_stylesheet_directory_uri() . '/assets/images/icon_line.svg'
                         ?><!--" width="" height="" alt="">-->
                     </a>
+                </div>
+                <?php $thumb = get_field("thumbnail");
+                if ($thumb) :
+                    ?>
+                    <div class="thumb">
+                        <img src="<?php echo $thumb["url"] ?>" alt="<?php echo $thumb["title"] ?>">
+                    </div>
+                <?php endif; ?>
+                <div class="content">
+                    <?php
+                    $content = get_field('content_text');
+                    if ($t->slug === 'whatsnew') {
+                        $content = str_replace('BS12トゥエルビ', '<a href="/">BS12トゥエルビ</a>', $content);
+                        $content = str_replace('BS12 トゥエルビ', '<a href="/">BS12 トゥエルビ</a>', $content);
+                    }
+                    $content = preg_replace('/<table ("[^"]*"|\'[^\']*\'|[^\'">])*>/', '<table>', $content);
+                    echo add_tag_custom_class($content);
+                    ?>
                 </div>
             </div>
         </section>

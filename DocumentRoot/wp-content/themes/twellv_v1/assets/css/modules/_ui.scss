@@ -584,13 +584,13 @@ a {
         flex-wrap: wrap;
         align-items: center;
         padding: 7px 0 20px 170px;
+        width: max-content;
 
         @include pc {
             padding: get_pc(7) 0 get_pc(20) get_pc(170);
         }
 
         @include sp {
-            width: max-content;
             padding: 0;
             margin: get_sp(15) get_sp(12);
         }
@@ -2145,6 +2145,11 @@ a {
         }
         @include sp {
             margin-bottom: get_sp(24);
+        }
+        .slick-track {
+            @include sp {
+                height: get_sp(90);
+            }
         }
     }
 }
