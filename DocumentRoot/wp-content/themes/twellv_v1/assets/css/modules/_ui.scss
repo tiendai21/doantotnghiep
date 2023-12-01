@@ -925,11 +925,13 @@ a {
     }
 }
 
-.slick-prev.slick-arrow {
-    display: none;
+.slick-slider:not(.side_header) {
+    .slick-prev.slick-arrow {
+        display: none;
 
-    &.active {
-        display: block !important;
+        &.active {
+            display: block !important;
+        }
     }
 }
 

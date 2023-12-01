@@ -294,6 +294,19 @@
 
         .nav_list {
             position: relative;
+            &::before {
+                @include sp {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: get_sp(31);
+                    height: get_sp(50);
+                    background: linear-gradient(89deg, rgba(41, 41, 41, 0.54) 0%, rgba(84, 84, 84, 0.00) 100%);
+                    opacity: 1;
+                    transition: opacity ease 0.3s;
+                }
+            }
             &::after {
                 @include sp {
                     content: "";
@@ -303,9 +316,26 @@
                     width: get_sp(31);
                     height: get_sp(50);
                     background: linear-gradient(271deg, rgba(41, 41, 41, 0.54) 0%, rgba(84, 84, 84, 0.00) 100%);
+                    opacity: 1;
+                    transition: opacity ease 0.3s;
                 }
             }
-
+            &.edge_left {
+                &::before {
+                    opacity: 0;
+                }
+                .slick-prev {
+                    display: none !important;
+                }
+            }
+            &.edge_right {
+                &::after {
+                    opacity: 0;
+                }
+                .slick-next {
+                    display: none !important;
+                }
+            }
             ul {
                 display: flex;
                 justify-content: center;
@@ -430,8 +460,25 @@
             height: get_sp(15);
             left: get_sp(7);
         }
-        &::before {
-            content: initial;
+
+        &:before {
+            content: " ";
+            @include bgsetup("../images/arrow_slide_l.svg", center center, 100% auto, no-repeat);
+            width: 19px;
+            height: 40px;
+            display: inline-block;
+            opacity: 1;
+            font-size: 0;
+
+            @include pc {
+                width: get_pc(19);
+                height: get_pc(40);
+            }
+
+            @include sp {
+                width: get_sp(7);
+                height: get_sp(15);
+            }
         }
     }
 

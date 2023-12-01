@@ -445,6 +445,19 @@
                 },
             ],
         });
+        $(_sliderElm).on('afterChange', function(event, slick, currentSlide){
+            console.log(currentSlide);
+            if (currentSlide === 0 ) {
+                $(this).parent().addClass("edge_left");
+            }else {
+                $(this).parent().removeClass("edge_left");
+            }
+            if (currentSlide === 6 ) {
+                $(this).parent().addClass("edge_right");
+            } else {
+                $(this).parent().removeClass("edge_right");
+            }
+        });
     }
 
     /*

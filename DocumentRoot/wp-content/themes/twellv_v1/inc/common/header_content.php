@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="end_header section-hidden">
-            <nav class="slick-disabled nav_list">
+            <nav class="slick-disabled nav_list edge_left">
                 <ul class="side_header">
                     <li>
                         <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
