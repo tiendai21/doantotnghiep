@@ -103,7 +103,8 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
     <section class="section" id="dramas_ended">
         <div class="inner">
             <div class="tlt_section">
-                <h2>放送終了の<?php echo esc_attr($term_list_object_name); ?></h2>
+                <h2>BS12のおすすめ番組</h2>
+<!--                <h2>放送終了の--><?php //echo esc_attr($term_list_object_name); ?><!--</h2>-->
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>
@@ -160,10 +161,6 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         </div>
     </section>
     <!-- /section infomation -->
-    <!-- pr -->
-    <?php get_template_part('template-parts/home/pr_top'); ?>
-    <!-- /pr -->
-
     <!-- other -->
     <?php echo do_shortcode( '[single-page-other type="famous"]' ); ?>
     <!-- /other -->

@@ -26,7 +26,7 @@ $page_uri = get_page_uri();
             <a href="<?php echo esc_url(home_url('corporate/program_standard2'))?>">放送番組の編集基準</a>
         </th>
     </tr>
-    <tr <?php echo ($page_uri === 'corporate/program_announce') ? 'class="active"' : null;?>>
+    <tr <?php echo ($page_uri === 'corporate/program_standard') ? 'class="active"' : null;?>>
         <th>
             <a href="<?php echo esc_url(home_url('/corporate/program_standard'))?>">BS12 トゥエルビ放送番組の種別基準</a>
         </th>

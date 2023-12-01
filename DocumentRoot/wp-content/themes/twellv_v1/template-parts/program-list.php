@@ -331,9 +331,6 @@ foreach ($terms as $t) {
     <?php get_template_part('template-parts/home/recommend_top'); ?>
     <!-- /recommend -->
     <!-- /recommended_program -->
-    <!-- PR -->
-    <?php get_template_part('template-parts/home/pr_top'); ?>
-    <!-- /PR -->
     <!-- other -->
     <section class="section" id="other">
         <div class="inner">

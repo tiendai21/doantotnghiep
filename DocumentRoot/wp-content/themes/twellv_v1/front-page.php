@@ -43,10 +43,6 @@ get_header();
 <!--    --><?php //get_template_part('template-parts/add/add_news'); ?>
     <!-- /Ad news -->
 
-    <!-- pr -->
-    <?php get_template_part('template-parts/home/pr_top'); ?>
-    <!-- /pr -->
-
     <!-- other -->
     <?php get_template_part('template-parts/home/other_top'); ?>
     <!-- /other -->

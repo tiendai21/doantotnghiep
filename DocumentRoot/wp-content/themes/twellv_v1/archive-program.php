@@ -152,11 +152,6 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <!-- recommend -->
         <?php get_template_part('template-parts/home/recommend_top', null, array('hideBrand' => false)); ?>
         <!-- /recommend -->
-
-        <!-- pr -->
-        <?php get_template_part('template-parts/home/pr_top'); ?>
-        <!-- /pr -->
-
         <!-- other -->
         <section class="section" id="other">
             <div class="inner">
@@ -245,10 +240,6 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
             <!-- recommend -->
             <?php get_template_part('template-parts/home/recommend_top', null, array('hideBrand' => true)); ?>
             <!-- /recommend -->
-
-            <!-- pr -->
-            <?php get_template_part('template-parts/home/pr_top'); ?>
-            <!-- /pr -->
             <!-- other -->
             <section class="section" id="other">
                 <div class="inner">

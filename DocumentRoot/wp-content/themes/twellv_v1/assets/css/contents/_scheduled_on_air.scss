@@ -750,7 +750,7 @@
             }
             @include sp {
                 width: 100%;
-                padding: get_sp(32.44) get_sp(13) get_sp(63.68);
+                padding: get_sp(32.44) get_sp(13) 0;
             }
         }
         h2 {
@@ -829,6 +829,18 @@
                         }
                         @include sp {
                             margin-bottom: get_sp(21.56);
+                        }
+                    }
+                    .list_btn {
+                        @include sp {
+                            margin-bottom: get_sp(59);
+                        }
+                        .item:first-child {
+                            a {
+                                @include sp {
+                                    letter-spacing: get_sp(-1);
+                                }
+                            }
                         }
                     }
                 }

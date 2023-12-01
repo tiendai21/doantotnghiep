@@ -82,10 +82,6 @@ $year = get_query_var( 'year');
             </div>
         </section>
 
-        <!-- pr -->
-        <?php get_template_part( 'template-parts/home/pr_top' ); ?>
-        <!-- /pr -->
-
         <!-- other -->
         <section class="section" id="other">
             <div class="inner">
