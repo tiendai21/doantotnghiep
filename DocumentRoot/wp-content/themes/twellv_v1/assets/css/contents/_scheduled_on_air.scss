@@ -133,6 +133,20 @@
                             padding: 0 get_sp(10);
                         }
                     }
+                    // Reverse slide vertical direction
+                    &.slick-slider {
+                        transform: rotate(180deg);
+                        @include sp {
+                            transform: none;
+                        }
+                    }
+
+                    .slick-slide {
+                        transform: rotate(-180deg);
+                        @include sp {
+                            transform: none;
+                        }
+                    }
                 }
             }
         }
