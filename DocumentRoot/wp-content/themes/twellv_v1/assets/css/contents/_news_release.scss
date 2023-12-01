@@ -14,7 +14,6 @@
             }
         }
         .tlt_section {
-            padding: initial;
             h2 {
                 &:before {
                     content: "";
@@ -56,16 +55,17 @@
     .tlt_section {
         max-width: 1576px;
         width: 100%;
-        padding-bottom: 20px;
+        padding: 0 0 20px;
         margin: 0 auto 34px;
+        border-bottom: 3px solid white;
         @include pc {
             max-width: get_pc(1576);
-            margin-bottom: get_pc(34);
-            padding-bottom: get_pc(20);
+            margin: 0 auto get_pc(34);
+            padding: 0 0 get_pc(20);
         }
         @include sp {
-            margin-bottom: get_sp(14);
-            padding-bottom: get_sp(9);
+            margin: 0 auto get_sp(14);
+            padding: 0 0 get_sp(9);
         }
         
         h2 {

@@ -94,9 +94,17 @@ get_header();
             </div>
         </section>
         <!--/content-->
-<!--        --><?php
-//        echo do_shortcode('[single-page-other type="famous"]');
-//        ?>
+        <!-- program air -->
+        <?php get_template_part('template-parts/home/program_air_top', null, array('hideBtnWatch' => false)); ?>
+        <!-- /program air -->
+
+        <!-- news -->
+        <?php get_template_part('template-parts/news/news_top'); ?>
+        <!-- /news -->
+
+        <!-- ranking -->
+        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
+        <!-- /ranking -->
     </main>
     <!-- /main -->
 

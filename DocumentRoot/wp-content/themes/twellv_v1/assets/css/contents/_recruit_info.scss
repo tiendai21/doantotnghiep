@@ -66,6 +66,7 @@
             margin-bottom: 48px;
             color: #000000;
             font-family: 'Shippori Mincho', serif;
+            text-align: center;
             @include pc {
                 font-size: get_pc(70);
                 line-height: get_pc(70);

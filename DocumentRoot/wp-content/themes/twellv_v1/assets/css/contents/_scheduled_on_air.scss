@@ -657,7 +657,10 @@
                             font-size: get_sp(16);
                             letter-spacing: get_sp(1.6);
                             line-height: get_sp(24);
-                            width: get_sp(194);
+                            width: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
                         }
                         &:after {
                             content: "";
@@ -677,7 +680,11 @@
                             @include sp {
                                 width: get_sp(9.61);
                                 height: get_sp(11.17);
-                                right: get_sp(67);
+                                position: relative;
+                                top: 0;
+                                right: 0;
+                                transform: none;
+                                margin-left: get_sp(5);
                             }
                         }
                     }
