@@ -1,15 +1,5 @@
 .how_to {
     .breadcrumb {
-        margin: 167px auto 7px 170px;
-
-        @include pc {
-            margin: get_pc(167) auto get_pc(7) get_pc(170);
-        }
-
-        @include sp {
-            margin: get_sp(106) auto get_sp(8) get_sp(11);
-        }
-
         span {
             color: #6A6A6A;
         }
@@ -107,6 +97,7 @@
                 margin-bottom: 36px;
                 font-weight: bold;
                 color: #004898;
+                text-align: center;
 
                 @include pc {
                     margin-top: get_pc(-111);
