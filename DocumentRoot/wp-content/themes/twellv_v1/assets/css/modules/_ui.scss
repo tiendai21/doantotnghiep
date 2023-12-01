@@ -151,6 +151,30 @@ a {
 }
 
 /*
+    news slide sp
+ */
+
+#news {
+    .slide_news {
+        .slick-track {
+            @include sp {
+                height: get_sp(172);
+            }
+        }
+    }
+}
+
+#dramas_ended {
+    .program_slide {
+        .slick-track {
+            @include sp {
+                height: get_sp(90);
+            }
+        }
+    }
+}
+
+/*
     Program SLide
 */
 

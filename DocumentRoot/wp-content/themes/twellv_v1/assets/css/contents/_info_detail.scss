@@ -263,6 +263,9 @@
         }
     }
     #section_infomation {
+        @include sp {
+            margin-bottom: get_sp(40);
+        }
         .tlt_section {
             h2 {
                 &::before {
