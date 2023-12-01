@@ -16,24 +16,6 @@
         }
     }
 
-    .breadcrumb {
-        margin: 7px auto 20px 170px;
-
-        @include pc {
-            margin: get_pc(7) auto get_pc(28) get_pc(170);
-        }
-
-        @include sp {
-            margin: get_sp(7) auto get_sp(8) get_sp(11);
-            flex-wrap: nowrap;
-            overflow-x: auto;
-
-            li {
-                flex-shrink: 0;
-            }
-        }
-    }
-
     .tlt_head {
         padding: 39px 0 31px;
         margin-bottom: 0;

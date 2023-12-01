@@ -1,146 +1,150 @@
 .search {
-  .breadcrumb {
-    margin: 7px auto 20px 170px;
-    @include pc {
-      margin: get_pc(7) auto get_pc(20) get_pc(170);
-    }
-    @include sp {
-      margin: get_sp(8) auto get_sp(8) get_sp(11);
-    }
-
-    span {
-      color: #6A6A6A;
-    }
-
-    li {
-      padding: 0;
-    }
-  }
-
-  #search {
-    .inner {
-      padding: 0 279px 70px 279px;
-      text-align: left;
-      @include pc {
-        padding: 0 get_pc(279) get_pc(70) get_pc(279);
-      }
-      @include sp {
-        padding: 0;
-      }
-
-      .thumb {
-        width: 1417px;
+    .breadcrumb {
+        margin: 7px auto 20px 170px;
         @include pc {
-          width: get_pc(1417);
+            margin: get_pc(7) auto get_pc(20) get_pc(170);
         }
         @include sp {
-          width: 100%;
+            margin: get_sp(8) auto get_sp(8) get_sp(11);
         }
-      }
+
+        span {
+            color: #6A6A6A;
+        }
+
+        li {
+            padding: 0;
+        }
     }
 
+    #search {
+        .inner {
+            padding: 0 279px 70px 279px;
+            text-align: left;
+            @include pc {
+                padding: 0 get_pc(279) get_pc(70) get_pc(279);
+            }
+            @include sp {
+                padding: 0;
+            }
 
-  }
+            .thumb {
+                width: 1417px;
+                @include pc {
+                    width: get_pc(1417);
+                }
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
 
-  .btn_link {
-    display: flex;
-
-    @include sp {
-      margin-right: get_sp(7);
     }
 
-    .btn_more {
-      border: 1px solid #004898;
-      border-radius: 50px;
-      margin-left: auto;
-
-      @include pc {
-        border: get_pc(1) solid #004898;
-        border-radius: get_pc(50);
-      }
-
-      @include sp {
-        border: get_sp(1) solid #004898;
-        border-radius: get_sp(50);
-      }
-
-      &:hover {
-        background-color: #004898;
-      }
-
-      span {
-        font-size: 22px;
-        letter-spacing: 1.1px;
-        line-height: 32px;
-        color: #134898;
-        padding: 8px 19px 9px 31px;
-        font-weight: bold;
-        cursor: pointer;
+    .btn_link {
         display: flex;
-        align-items: center;
-
-        @include pc {
-          font-size: get_pc(22);
-          letter-spacing: get_pc(1.1);
-          line-height: get_pc(32);
-          padding: get_pc(8) get_pc(19) get_pc(9) get_pc(31);
-        }
 
         @include sp {
-          font-size: get_sp(14);
-          letter-spacing: get_sp(0.7);
-          line-height: get_sp(20);
-          padding: get_sp(5) get_sp(9) get_sp(6) get_sp(9);
+            margin-right: get_sp(7);
         }
 
-        &:hover {
-          color: #FFFFFF;
+        .btn_more {
+            border: 1px solid #004898;
+            border-radius: 50px;
+            margin-left: auto;
 
-          &:after {
-            @include bgsetup("../images/btn_arrow_right_l.svg", center center, 100% auto, no-repeat);
-          }
+            @include pc {
+                border: get_pc(1) solid #004898;
+                border-radius: get_pc(50);
+            }
+
+            @include sp {
+                border: get_sp(1) solid #004898;
+                border-radius: get_sp(50);
+            }
+
+            &:hover {
+                background-color: #004898;
+            }
+
+            span {
+                font-size: 22px;
+                letter-spacing: 1.1px;
+                line-height: 32px;
+                color: #134898;
+                padding: 8px 19px 9px 31px;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+
+                @include pc {
+                    font-size: get_pc(22);
+                    letter-spacing: get_pc(1.1);
+                    line-height: get_pc(32);
+                    padding: get_pc(8) get_pc(19) get_pc(9) get_pc(31);
+                }
+
+                @include sp {
+                    font-size: get_sp(14);
+                    letter-spacing: get_sp(0.7);
+                    line-height: get_sp(20);
+                    padding: get_sp(5) get_sp(9) get_sp(6) get_sp(9);
+                }
+
+                &:hover {
+                    color: #FFFFFF;
+
+                    &:after {
+                        @include bgsetup("../images/btn_arrow_right_l.svg", center center, 100% auto, no-repeat);
+                    }
+                }
+
+                &:after {
+                    content: " ";
+                    @include bgsetup("../images/btn_arrow_right.svg", center center, 100% auto, no-repeat);
+                    width: 19px;
+                    height: 19px;
+                    display: inline-block;
+                    margin-left: 5px;
+                    position: unset;
+                    transform: rotate(90deg);
+
+                    @include pc {
+                        width: get_pc(19);
+                        height: get_pc(19);
+                        margin-left: get_pc(5);
+                    }
+
+                    @include sp {
+                        width: get_sp(12);
+                        height: get_sp(12);
+                        margin-left: get_sp(4);
+                    }
+                }
+            }
         }
-
-        &:after {
-          content: " ";
-          @include bgsetup("../images/btn_arrow_right.svg", center center, 100% auto, no-repeat);
-          width: 19px;
-          height: 19px;
-          display: inline-block;
-          margin-left: 5px;
-          position: unset;
-          transform: rotate(90deg);
-
-          @include pc {
-            width: get_pc(19);
-            height: get_pc(19);
-            margin-left: get_pc(5);
-          }
-
-          @include sp {
-            width: get_sp(12);
-            height: get_sp(12);
-            margin-left: get_sp(4);
-          }
-        }
-      }
     }
-  }
 }
 
 html > body.search .gsc-inline-block.gsc-inline-block.gsc-inline-block {
-  display: inline-grid;
+    display: inline-grid;
 }
 
 html > body.search {
-  #main {
-    display: flex;
-    justify-content: center;
-    .white-base-wrap {
-      width: 1400px;
-      @include pc {
-        width: get_pc(1400);
-      }
+    #main {
+        display: flex;
+        justify-content: center;
+        .white-base-wrap {
+            width: 1400px;
+            @include pc {
+                width: get_pc(1400);
+            }
+        }
+        #other {
+            .list_other {
+                width: initial;
+            }
+        }
     }
-  }
 }
