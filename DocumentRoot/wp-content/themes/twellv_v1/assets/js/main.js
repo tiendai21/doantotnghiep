@@ -13,10 +13,7 @@
     scrollInAnime(window, ".anime2", "animated");
     // loading after
     window.onload = function () {
-        _width = $(window).width();
-        if (_width <= _spmode) {
-            slideNavList(".side_header", false, false);
-        }
+
         toggleMenuSp();
         toggleMenuFooter();
         toggleSearch();
@@ -53,7 +50,7 @@
         slideProgram(".brand_anime", false, false);
         slideProgram(".brand_entertainment", false, false);
         slideProgram(".brand_qvc", false, false);
-        // slideNavList(".side_header", false, false);
+        slideNavList(".side_header", false, false);
         slideList(".slide_list", false, false);
         voiceList(".voice_list", false, false);
         synopsisList(".synopsis_list", false, false);
@@ -68,8 +65,8 @@
         slideProgram(".ranking_slide", false, false);
         slideBanner(".slide_top_odd", "15%");
         slideBanner(".slide_top_even", "45%");
-        slideScheduled(".slide_scheduled_top","15%","15%",true);
-        slideScheduled(".slide_scheduled_bottom","45%","15%",false);
+        slideScheduled(".slide_scheduled_top", "15%", "15%", true);
+        slideScheduled(".slide_scheduled_bottom", "45%", "15%", false);
         sliderVideo(".slider_main", ".slider_video");
         $(".slide_next_time").slick();
         let itemFaq = $(".item_faq h3");
@@ -145,7 +142,7 @@
 
             var count = 0;
             liElement.each(function () {
-                if(!$(this).hasClass("active") && count < 5) {
+                if (!$(this).hasClass("active") && count < 5) {
                     $(this).stop().fadeIn(1000).addClass("active");
                     count++;
                 }
@@ -156,17 +153,18 @@
             }
         });
     }
+
     function toggleShowAll() {
         $("#banner_section .list_brand .btn_tgl").click(function () {
             $(this).find("span").toggleClass("active");
-            if($(this).find("span").text() === "すべて見る") {
+            if ($(this).find("span").text() === "すべて見る") {
                 $(this).find("span").text("閉じる");
             } else {
                 $(this).find("span").text("すべて見る");
             }
             const liElement = $(this).siblings('ul').children().slice(3);
             liElement.each(function () {
-                if(!$(this).hasClass("active")) {
+                if (!$(this).hasClass("active")) {
                     $(this).stop().fadeIn(1000).addClass("active");
                 } else {
                     $(this).stop().fadeOut(300).removeClass("active");
@@ -174,6 +172,7 @@
             });
         })
     }
+
     function toggleMenuFooter() {
         if (_width <= _spmode) {
             $(".nav_footer h3").click(function () {
@@ -193,7 +192,7 @@
                 if (targetPage.includes("#")) {
                     e.preventDefault();
                     $("html, body").animate(
-                        { scrollTop: currentPage.offset().top - offsetTop },
+                        {scrollTop: currentPage.offset().top - offsetTop},
                         1000
                     );
                 }
@@ -230,7 +229,7 @@
                         }
                     });
                 },
-                { passive: true }
+                {passive: true}
             );
         }
     }
@@ -267,6 +266,7 @@
             });
         }
     }
+
     function slideScheduled(_sliderElm, _paddingPC, _paddingSP, _rtl) {
         $(_sliderElm).slick({
             centerMode: true,
@@ -445,14 +445,14 @@
                 },
             ],
         });
-        $(_sliderElm).on('afterChange', function(event, slick, currentSlide){
+        $(_sliderElm).on('afterChange', function (event, slick, currentSlide) {
             console.log(currentSlide);
-            if (currentSlide === 0 ) {
+            if (currentSlide === 0) {
                 $(this).parent().addClass("edge_left");
-            }else {
+            } else {
                 $(this).parent().removeClass("edge_left");
             }
-            if (currentSlide === 6 ) {
+            if (currentSlide === 6) {
                 $(this).parent().addClass("edge_right");
             } else {
                 $(this).parent().removeClass("edge_right");
@@ -545,7 +545,7 @@
                 success: function (res) {
                     $("#limited_rewards").replaceWith($(res).find("#limited_rewards"));
                     $("html, body").animate(
-                        { scrollTop: $("#limited_rewards").offset().top - 200 },
+                        {scrollTop: $("#limited_rewards").offset().top - 200},
                         2000
                     );
                 },
@@ -564,6 +564,15 @@
             $(this).find("span").text("もっと見る");
         })
     }
+
+    //resize after
+    window.onresize = function () {
+        _width = $(window).width();
+        if (_width <= _spmode) {
+            slideNavList(".side_header", false, false);
+        }
+    };
+
 
     window.onscroll = function () {
     };

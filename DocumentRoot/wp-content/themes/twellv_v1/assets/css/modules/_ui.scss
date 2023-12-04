@@ -2259,3 +2259,220 @@ a {
         border: 1px solid royalblue;
     }
 }
+
+// base ball
+.competition-basketball {
+    width: initial;
+    background: #f2f2f2;
+    padding: 60px;
+    @include pc {
+        padding: get_pc(60);
+    }
+    @include sp {
+        width: 100%;
+        padding: initial;
+    }
+    .clearfix {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px solid #fff;
+        padding-top: 30px;
+        @include pc {
+            padding-top: get_pc(30);
+        }
+        @include sp {
+            padding: get_sp(25) get_sp(8);
+        }
+        .date {
+            margin-bottom: 30px;
+            @include pc {
+                margin-bottom: get_pc(30);
+            }
+            @include sp {
+                margin-bottom: get_sp(11);
+            }
+            p {
+                span {
+                    font-weight: 700;
+                    font-size: 25px;
+                    letter-spacing: 3.75px;
+                    line-height: 30px;
+                    position: relative;
+                    @include pc {
+                        font-size: get_pc(25);
+                        letter-spacing: get_pc(3.75);
+                        line-height: get_pc(30);
+                    }
+                    @include sp {
+                        font-size: get_sp(16);
+                        letter-spacing: get_sp(1.6);
+                        line-height: get_sp(25);
+                    }
+                }
+                .date_time {
+                    margin-right: 5px;
+                    @include pc {
+                        margin-right: get_pc(5);
+                    }
+                }
+                .live {
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        background-image: url("../images/icon_live.png");
+                        background-position: center center;
+                        background-size: 100% auto;
+                        background-repeat: no-repeat;
+                        width: 95px;
+                        height: 36px;
+                        position: absolute;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        top: 50%;
+                        left: 0;
+                        @include pc {
+                            width: get_pc(95);
+                            height: get_pc(36);
+                        }
+                        @include sp {
+                            width: get_sp(50);
+                            height: get_sp(19);
+                            top: get_sp(38);
+                            right: get_sp(311);
+                            left: initial;
+                        }
+                    }
+                }
+                .place {
+                    margin-left: 82px;
+                    @include pc {
+                        margin-left: get_pc(82);
+                    }
+                    @include sp {
+                        margin-left: get_sp(58);
+                    }
+                }
+            }
+        }
+        .com {
+            strong {
+                font-size: 25px;
+                font-weight: 500;
+                letter-spacing: 3.75px;
+                line-height: 35px;
+                position: relative;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(3.75);
+                    line-height: get_pc(35);
+                }
+                @include sp {
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(25);
+                }
+            }
+            div:last-child {
+                margin-bottom: 53px;
+                @include pc {
+                    margin-bottom: get_pc(53);
+                }
+                @include sp {
+                    margin-bottom: get_sp(20);
+                }
+            }
+        }
+        .team {
+            align-self: center;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            @include pc {
+                margin-bottom: get_pc(60);
+            }
+            @include sp {
+                margin-bottom: get_sp(25);
+            }
+            .team_inr {
+                width: 384px;
+                height: 325px;
+                overflow: hidden;
+                @include pc {
+                    width: get_pc(384);
+                    height: get_pc(325);
+                }
+                @include sp {
+                    width: get_sp(147);
+                    height: get_sp(157);
+                }
+                img {
+                    width: 175px;
+                    height: 145px;
+                    margin: 52px auto 38px;
+                    @include pc {
+                        width: get_pc(175);
+                        height: get_pc(145);
+                        margin: get_pc(52) auto get_pc(38);
+                    }
+                    @include sp {
+                        width: get_sp(78);
+                        height: get_sp(65);
+                        margin: get_sp(24) auto get_sp(16);
+                    }
+                }
+                center {
+                    background: #004898;
+                    padding: 27px 0 34px;
+                    height: 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include pc {
+                        height: get_pc(90);
+                        padding: get_pc(27) 0 get_pc(34);
+                    }
+                    @include sp {
+                        height: initial;
+                        padding: get_sp(9) get_sp(18);
+                    }
+                    strong {
+                        color: #fff;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        @include pc {
+                            font-size: get_pc(20);
+                            letter-spacing: get_pc(2);
+                        }
+                        @include sp {
+                            font-size: get_sp(14);
+                            letter-spacing: get_sp(1.4);
+                            line-height: get_sp(15);
+                        }
+                    }
+                }
+            }
+            .vs {
+                display: block;
+                font-size: 83px;
+                letter-spacing: 2.9px;
+                line-height: 97px;
+                color: #004898;
+                border-bottom: 0;
+                font-weight: bold;
+                font-style: italic;
+                margin: 0 100px;
+                @include pc {
+                    font-size: get_pc(83);
+                    letter-spacing: get_pc(2.9);
+                    line-height: get_pc(97);
+                    margin: 0 get_pc(100);
+                }
+                @include sp {
+                    font-size: get_sp(20);
+                    letter-spacing: get_sp(2);
+                    margin: 0 get_sp(10);
+                }
+            }
+        }
+    }
+}
