@@ -119,6 +119,7 @@
 
             .list_content {
                 @include sp {
+                    text-align: center;
                     padding: 0 get_sp(18) 0 get_sp(22);
                 }
             }
@@ -753,6 +754,7 @@
                 padding: 220px 0 75px;
                 margin-bottom: 73px;
                 color: #FFFFFF;
+                text-align: center;
 
                 @include pc {
                     @include bgsetup("../images/bg_bottom_howto_pc.png", center center, 100% auto, no-repeat);

@@ -66,7 +66,7 @@
                     border-radius: 0 0 get_pc(32) get_pc(32);
                 }
                 @include sp {
-                    width: auto;
+                    width: 100%;
                     margin: 0 get_sp(5) get_sp(40);
                     border-radius: 0 0 get_sp(32) get_sp(32);
                 }

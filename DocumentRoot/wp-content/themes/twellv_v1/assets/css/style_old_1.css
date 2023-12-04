@@ -1898,21 +1898,6 @@
 	padding-left: 6.9em;
 }
 
-/**
- * å¯¾æˆ¦ã‚«ãƒ¼ãƒ‰ï¼šé‡Žçƒ
- */
-.competition-baseball{
-	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-@media only screen and (max-width: 750px){
-	.competition-baseball{
-		width: 92%;
-	}
-}
-
 .competition-baseball .data_title_b{
 	width: 100%;
 }
@@ -2191,21 +2176,6 @@
 	content: 'å‰¯éŸ³å£°';
 }
 
-/**
- * å¯¾æˆ¦ã‚«ãƒ¼ãƒ‰ï¼šãƒã‚¹ã‚±
- */
-.competition-basketball{
-	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-@media only screen and (max-width: 750px){
-	.competition-basketball{
-		width: 92%;
-	}
-}
-
 .competition-basketball .data_title_b{
 	width: 100%;
 }
@@ -2237,14 +2207,6 @@
 
 .competition-basketball .data_title_b dl dd >.team .team_inr img{
 	max-width: 100%;
-}
-
-.competition-basketball .data_title_b dl dd >.team .team_inr center{
-	display: block;
-}
-
-.competition-basketball .data_title_b dl dd >.team .team_inr center strong{
-	color: #014292;
 }
 
 .competition-basketball .data_title_b dl dd >.team .place{
