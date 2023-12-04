@@ -135,7 +135,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <?php get_template_part('template-parts/home/modal_category', null, array('title' => $base_t->name, 'modal' => $archive_modal)); ?>
+                        <?php get_template_part('template-parts/home/modal_category', null, array('title' => str_replace('無料', '', $base_t->name), 'modal' => $archive_modal)); ?>
                     </div>
                 </section>
                 <?php
