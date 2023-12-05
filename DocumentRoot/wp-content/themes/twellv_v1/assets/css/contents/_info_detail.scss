@@ -290,6 +290,15 @@
         }
     }
     #other {
+        .inner {
+            padding-top: 74px;
+            @include pc {
+                padding-top: get_pc(74);
+            }
+            @include sp {
+                padding-top: initial;
+            }
+        }
         .list_other {
             ul {
                 li {
