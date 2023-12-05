@@ -1027,10 +1027,10 @@
 #section_infomation {
     .inner {
         background-color: #f2f2f2;
-        padding: 84px 0 0 0;
+        padding: 84px 0 74px;
 
         @include pc {
-            padding: get_pc(84) 0 0 0;
+            padding: get_pc(84) 0 get_pc(74);
         }
 
         @include sp {
@@ -1495,13 +1495,13 @@
 
     .news_release {
         width: 1576px;
-        margin: 0 auto 30px;
+        margin: 0 auto;
         padding-bottom: 53px;
         border-bottom: 2px solid #ffffff;
 
         @include pc {
             width: get_pc(1576);
-            margin-bottom: get_pc(30);
+
             padding-bottom: get_pc(53);
         }
 
