@@ -100,25 +100,25 @@
                 <div class="gcse-searchbox-only" data-resultsUrl="<?php echo esc_url(home_url('/search'))?>" data-newWindow="true" data-queryParameterName="q"></div>
                 <div class="start_nav">
                     <ul>
-                        <li><a href="#">番組表</a></li>
-                        <li><a href="#">番組一覧</a></li>
-                        <li><a href="#">視聴者プレゼント</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program_schedule/'))?>">番組表</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/present_event/'))?>">視聴者プレゼント</a></li>
                         <li><a href="#">無料視聴方法</a></li>
                     </ul>
                 </div>
                 <div class="end_nav">
                     <ul>
-                        <li><a href="#">ドラマ・映画</a></li>
-                        <li><a href="#">中国・アジアドラマ</a></li>
-                        <li><a href="#">韓国・韓流ドラマ</a></li>
-                        <li><a href="#">スポーツ</a></li>
-                        <li><a href="">旅・グルメ</a></li>
-                        <li><a href="">バラエティ</a></li>
-                        <li><a href="">情報・ドキュメンタリー </a></li>
-                        <li><a href="">音楽番組(演歌・歌謡)</a></li>
-                        <li><a href="">アニメ</a></li>
-                        <li><a href="">生活エンタ・BS12 知っ得</a></li>
-                        <li><a href="">通販</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/china/'))?>">中国・アジアドラマ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/korea/'))?>">韓国・韓流ドラマ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/tabi/'))?>">旅・グルメ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ドキュメンタリー </a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組(演歌・歌謡)</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・BS12 知っ得</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a></li>
                     </ul>
                 </div>
             </div>

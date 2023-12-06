@@ -428,14 +428,14 @@
             fade: _fade,
             touchMove: false,
             variableWidth: true,
-            slidesToShow: 5,
+            slidesToShow: 3,
             infinite: false,
 
             responsive: [
                 {
                     breakpoint: 960,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 3,
                         slidesToScroll: 1
                     },
                 },
@@ -446,13 +446,12 @@
             ],
         });
         $(_sliderElm).on('afterChange', function (event, slick, currentSlide) {
-            console.log(currentSlide);
             if (currentSlide === 0) {
                 $(this).parent().addClass("edge_left");
             } else {
                 $(this).parent().removeClass("edge_left");
             }
-            if (currentSlide === 6) {
+            if (currentSlide === 8) {
                 $(this).parent().addClass("edge_right");
             } else {
                 $(this).parent().removeClass("edge_right");
