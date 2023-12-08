@@ -59,7 +59,7 @@ foreach ($terms as $t) {
                 <a href="<?php echo esc_url(home_url('/program/')) ?>">ドラマ・映画</a>
             </li>
             <li>
-                <span>韓国・韓流ドラマ</span>
+                <span><?php echo $term_list_object->name ?></span>
             </li>
         </ul>
     </div>

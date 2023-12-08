@@ -19,6 +19,7 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                             'terms' => get_term_children($archive_term->term_id, 'program_cat')[0],
                         ),
                     ),
+                    'posts_per_page' => -1
                 );
                 $the_query = new WP_Query($args);
                 $array_rev = array_reverse($the_query->posts);
