@@ -64,31 +64,31 @@ foreach ($terms as $t) {
         </ul>
     </div>
     <!-- banner catefory -->
-    <?php $cat_bg_color = get_field('category_banner_color', $term_list_object);?>
+    <?php $cat_bg_color = get_field('category_banner_color', $term_list_object); ?>
     <section class="section" id="banner_category">
         <div class="inner">
-            <div class="siler_category_top" <?php echo $cat_bg_color ? "style='background:{$cat_bg_color}'" : null?>>
+            <div class="siler_category_top" <?php echo $cat_bg_color ? "style='background:{$cat_bg_color}'" : null ?>>
                 <div class="txt_fixed">
-                    <h2><?php echo esc_attr($term_list_object_name);?></h2>
+                    <h2><?php echo esc_attr($term_list_object_name); ?></h2>
                 </div>
                 <div class="siler_top_content">
                     <?php
                     if ($programs_arr[3]): ?>
-                    <div class="slide_top_odd">
-                        <?php
-                        $i = 0;
-                        foreach ($programs_arr[3] as $item):
-                            if(++$i > 5) break;
-                        $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
-                        $urlItem = get_term_link($item);
-                        ?>
-                        <a href="<?php echo $urlItem; ?>">
-                            <div class="thumb">
-                                <?php echo $image; ?>
-                            </div>
-                        </a>
-                        <?php endforeach; ?>
-                    </div>
+                        <div class="slide_top_odd">
+                            <?php
+                            $i = 0;
+                            foreach ($programs_arr[3] as $item):
+                                if (++$i > 5) break;
+                                $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
+                                $urlItem = get_term_link($item);
+                                ?>
+                                <a href="<?php echo $urlItem; ?>">
+                                    <div class="thumb">
+                                        <?php echo $image; ?>
+                                    </div>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
                     <?php endif; ?>
                     <?php
 
@@ -97,7 +97,7 @@ foreach ($terms as $t) {
                             <?php
                             $i = 0;
                             foreach (array_reverse($programs_arr[3]) as $item):
-                                if(++$i > 4) break;
+                                if (++$i > 4) break;
                                 $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
                                 $urlItem = get_term_link($item);
                                 ?>
@@ -127,13 +127,13 @@ foreach ($terms as $t) {
             <div class="tlt_section">
                 <h2>
                     <?php
-                        if ($term_list_object->slug === 'korea') {
-                            echo '放送中の韓国・韓流ドラマ';
-                        } elseif ($term_list_object->slug === 'china') {
-                            echo '放送中の中国・アジアドラマ';
-                        } else {
-                            echo esc_attr($term_list_object_name);
-                        }
+                    if ($term_list_object->slug === 'korea') {
+                        echo '放送中の韓国・韓流ドラマ';
+                    } elseif ($term_list_object->slug === 'china') {
+                        echo '放送中の中国・アジアドラマ';
+                    } else {
+                        echo esc_attr($term_list_object_name);
+                    }
                     ?>
                 </h2>
                 <div class="btn_more">
@@ -197,7 +197,7 @@ foreach ($terms as $t) {
     <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => true, 'term' => $term_list_object)); ?>
     <!-- /Broadcast schedule -->
     <!-- ranking -->
-    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => $term_list_object->name . 'ランキング', 'sns' => false));?>
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => $term_list_object->name . 'ランキング', 'sns' => false)); ?>
     <!-- /ranking -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
@@ -240,6 +240,8 @@ foreach ($terms as $t) {
     ?>
     <!-- /look at the program -->
     <!-- Korean dramas scheduled to air -->
+    <?php
+    if (!empty($programs_arr[1])) : ?>
     <section class="section" id="dramas_scheduled">
         <div class="inner">
             <div class="tlt_section">
@@ -250,20 +252,20 @@ foreach ($terms as $t) {
             </div>
             <div class="program_slide side_brand">
                 <?php
-                if (!empty($programs_arr[1])) {
-                    foreach ($programs_arr[1] as $t) {
-                        ob_start();
-                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
-                        $scheduled_modal .= ob_get_contents();
-                        ob_end_clean();
-                        tpl_program_list_item_pre($t);
-                    }
-                }
-                ?>
+                foreach ($programs_arr[1] as $t) {
+                    ob_start();
+                    get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                    $scheduled_modal .= ob_get_contents();
+                    ob_end_clean();
+                    tpl_program_list_item_pre($t);
+                }?>
             </div>
             <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
         </div>
     </section>
+    <?php
+    endif;
+    ?>
     <!-- /Korean dramas scheduled to air -->
     <!-- The Korean drama has ended its broadcast -->
     <?php if (preg_match('/korea/', $term_list_object->slug)) : ?>
