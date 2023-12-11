@@ -102,6 +102,7 @@
             padding-bottom: 26px;
             border-bottom: 3px solid #004898;
             margin-bottom: 50px;
+            text-align: center;
             @include pc {
                 font-size: get_pc(30);
                 letter-spacing: get_pc(3);

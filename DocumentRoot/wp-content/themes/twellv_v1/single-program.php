@@ -1,5 +1,6 @@
 <?php /* -*- coding: utf-8; mode: web; -*- */
 $page_format = get_post_format();
+//var_dump($page_format);
 /*
  * トップとナビゲーションを表示しようとした場合、番組トップへリダイレクト
  */
@@ -42,13 +43,10 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                     <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
                 </li>
                 <li>
-                    <a href="#">ドラマ・映画</a>
-                </li>
-                <li>
                     <a href="#">韓国・韓流ドラマ</a>
                 </li>
                 <li>
-                    <a href="#"><?php echo substr($term->name, 18, -3) ?></a>
+                    <a href="#"><?php echo $program_term ->name ?></a>
                 </li>
                 <li>
                     <span>相関図</span>

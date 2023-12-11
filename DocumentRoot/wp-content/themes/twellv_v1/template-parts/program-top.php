@@ -1,6 +1,7 @@
 <?php // echo '各番組トップ';
 $term = get_queried_object();
 $parent_term = get_term_by('id', $term->parent, 'program_cat');
+//var_dump($term);
 ?>
 <!-- main -->
 <main id="main">
@@ -10,13 +11,10 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
                 <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
             </li>
             <li>
-                <a href="#">ドラマ・映画</a>
-            </li>
-            <li>
                 <a href="#">韓国・韓流ドラマ</a>
             </li>
             <li>
-                <span><?php echo substr($term->name, 18, -3) ?></span>
+                <span><?php echo $term->name ?></span>
             </li>
         </ul>
     </div>
