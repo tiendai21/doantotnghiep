@@ -136,10 +136,12 @@
     }
 
     function toggleReadMore() {
+        const liElement = $(".list_episode ul li");
+        if(liElement.length < 6) {
+            $("#episode .btn_all").hide();
+        }
         $(".list_episode ul li:nth-child(-n + 5)").addClass('active');
         $("#episode .btn_all").click(function () {
-            const liElement = $(".list_episode ul li");
-
             var count = 0;
             liElement.each(function () {
                 if (!$(this).hasClass("active") && count < 5) {
