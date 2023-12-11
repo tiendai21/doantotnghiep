@@ -1495,13 +1495,13 @@
 
     .news_release {
         width: 1576px;
-        margin: 0 auto;
+        margin: 0 auto 30px;
         padding-bottom: 53px;
         border-bottom: 2px solid #ffffff;
 
         @include pc {
             width: get_pc(1576);
-
+            margin: 0 auto get_pc(30);
             padding-bottom: get_pc(53);
         }
 

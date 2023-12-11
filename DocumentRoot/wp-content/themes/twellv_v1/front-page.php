@@ -44,7 +44,7 @@ get_header();
     <!-- /Ad news -->
 
     <!-- other -->
-    <?php get_template_part('template-parts/home/other_top'); ?>
+    <?php get_template_part('template-parts/home/other_top', null, array('type' => 'famous')); ?>
     <!-- /other -->
 
     <!-- section infomation -->
