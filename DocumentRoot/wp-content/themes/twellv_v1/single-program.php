@@ -48,7 +48,7 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                     <a href="#">韓国・韓流ドラマ</a>
                 </li>
                 <li>
-                    <a href="#">悪の花</a>
+                    <a href="#"><?php echo substr($term->name, 18, -3) ?></a>
                 </li>
                 <li>
                     <span>相関図</span>
