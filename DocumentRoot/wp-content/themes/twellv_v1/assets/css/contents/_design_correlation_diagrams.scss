@@ -85,6 +85,7 @@
         }
         .text-wrap {
             margin-bottom: 50px;
+            width: initial;
             @include pc {
                 margin-bottom: get_pc(50);
             }

@@ -1,6 +1,5 @@
 <?php // echo '各番組トップ';
 $term = get_queried_object();
-
 $parent_term = get_term_by('id', $term->parent, 'program_cat');
 ?>
 <!-- main -->
@@ -17,7 +16,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
                 <a href="#">韓国・韓流ドラマ</a>
             </li>
             <li>
-                <span>悪の花</span>
+                <span><?php echo substr($term->name, 18, -3) ?></span>
             </li>
         </ul>
     </div>

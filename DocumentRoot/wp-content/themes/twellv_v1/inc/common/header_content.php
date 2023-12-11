@@ -20,7 +20,7 @@
                             <a href="<?php echo esc_url(home_url('/present_event/'))?>">視聴者プレゼント</a>
                         </li>
                         <li>
-                            <a href="#">無料視聴方法</a>
+                            <a href="<?php echo esc_url(home_url('/howtowatch/'))?>">無料視聴方法</a>
                         </li>
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
                             <a href="#">生活エンタ＆<span>知っトク</span></a>
                         </li>
                         <li>
-                            <a href="#">無料視聴 <span>方法</span></a>
+                            <a href="<?php echo esc_url(home_url('/howtowatch/'))?>">無料視聴 <span>方法</span></a>
                         </li>
                     </ul>
                 </div>
