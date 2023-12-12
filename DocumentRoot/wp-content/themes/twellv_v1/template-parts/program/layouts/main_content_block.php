@@ -1,4 +1,4 @@
-<div class="main-content-block text-wrap">
+<div class="main-content-block text-wrap css-old">
 <?php
 $content = get_sub_field( 'main_content_text' );
 
