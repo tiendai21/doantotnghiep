@@ -1,7 +1,6 @@
 <?php // echo '各番組トップ';
 $term = get_queried_object();
 $parent_term = get_term_by('id', $term->parent, 'program_cat');
-//var_dump($term);
 ?>
 <!-- main -->
 <main id="main">
@@ -40,6 +39,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
     }
     wp_reset_postdata();
     $html_area = get_field('html_area', $bs12_program_top_parts_arr['top']->ID);
+//    var_dump($bs12_program_top_parts_arr['top']->ID);
     if (trim($html_area) == '') :
         // htmlがない場合は表示
         ?>
@@ -123,7 +123,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <?php get_template_part('template-parts/top', 'recommend-you-programs'); ?>
         <!-- /BS12おすすめ番組 -->
         <!-- other -->
-        <?php get_template_part('template-parts/home/other_top'); ?>
+        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'famous')); ?>
         <!-- /other -->
     <?php endif; ?>
 </main>

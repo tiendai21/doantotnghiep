@@ -162,7 +162,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
     </section>
     <!-- /section infomation -->
     <!-- other -->
-    <?php echo do_shortcode( '[single-page-other type="famous"]' ); ?>
+    <?php echo do_shortcode( '[single-page-other type="all"]' ); ?>
     <!-- /other -->
 </main>
 <!-- /main  -->
