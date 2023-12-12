@@ -118,7 +118,7 @@ HTML;
             </ul>
         </div>
         <?php if ($hasEpisode): ?>
-            <div class="btn_more">
+            <div class="btn_all">
                 <span>エピソードをすべて見る</span>
             </div>
         <?php endif; ?>

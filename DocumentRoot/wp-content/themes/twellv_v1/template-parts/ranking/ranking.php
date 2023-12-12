@@ -2,6 +2,14 @@
 $slug = $args['cat'];
 $title = $args['title'];
 $hasSns = $args['sns'];
+
+// Query for visibility condition
+$the_query = new WP_Query([
+    'post_type' => 'ranking',
+    'meta_key' => 'display_category',
+    'meta_value' => $slug
+]);
+if ($the_query->post):
 ?>
 <section class="section" id="ranking">
     <div class="inner">
@@ -27,3 +35,4 @@ $hasSns = $args['sns'];
         <?php endif; ?>
     </div>
 </section>
+<?php endif; ?>
