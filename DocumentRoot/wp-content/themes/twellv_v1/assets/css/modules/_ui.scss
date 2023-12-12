@@ -2490,3 +2490,115 @@ a {
         }
     }
 }
+
+.carousel_images_block {
+    margin-bottom: 100px;
+    @include pc {
+        margin-bottom: get_pc(100);
+    }
+    .program_slide {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 85px;
+        position: relative;
+        @include pc {
+            margin-bottom: get_pc(85);
+        }
+        @include sp {
+            margin-bottom: get_sp(37);
+        }
+        &:before, &:after {
+            content: initial;
+        }
+        .slick-list {
+            width: 1144px;
+            @include pc {
+                width: get_pc(1144);
+            }
+            @include sp {
+                width: get_sp(336);
+            }
+        }
+        .slick-prev.slick-arrow {
+            display: inline-block;
+        }
+        .slick-prev {
+            left: 100px;
+            @include pc {
+                left: get_pc(100);
+            }
+            @include sp {
+                left: get_sp(-10);
+            }
+            &::before {
+                background-image: url("../images/arrow_slide_r_b.png");
+                transform: rotate(180deg);
+                @include sp {
+                    width: get_sp(12);
+                    height: get_sp(25);
+                }
+            }
+        }
+        .slick-next {
+            right: 100px;
+            @include pc {
+                right: get_pc(100);
+            }
+            @include sp {
+                right: get_sp(-6);
+            }
+            &::before {
+                background-image: url("../images/arrow_slide_r_b.png");
+                @include sp {
+                    width: get_sp(12);
+                    height: get_sp(25);
+                }
+            }
+        }
+        .slick-dots {
+            justify-content: center;
+            position: absolute;
+            top: 105%;
+            li {
+                background: #EDEDED;
+                margin-right: 19px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                @include pc {
+                    margin-right: get_pc(19);
+                    width: get_pc(18);
+                    height: get_pc(18);
+                }
+                @include sp {
+                    margin-right: get_sp(12);
+                    width: get_sp(11);
+                    height: get_sp(11);
+                }
+            }
+            .slick-active {
+                background: #134898;
+            }
+        }
+        .item_slide {
+            .thumb {
+                width: 1144px;
+                height: 733px;
+                @include pc {
+                    width: get_pc(1144);
+                    height: get_pc(733);
+                }
+                @include sp {
+                    width: get_sp(336);
+                    height: get_sp(222);
+                    margin-bottom: get_sp(16);
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

@@ -1542,14 +1542,14 @@
             margin-bottom: 63px;
             max-width: unset;
             width: initial;
-            border-bottom: 2px solid #004898;
+            border-bottom: 3px solid #004898;
             @include pc {
                 font-size: get_pc(30);
                 line-height: get_pc(44);
                 letter-spacing: get_pc(1.5);
                 padding-bottom: get_pc(34);
                 margin-bottom: get_pc(63);
-                border-bottom: get_pc(2) solid #004898;
+                border-bottom: get_pc(3) solid #004898;
             }
 
             @include sp {
@@ -1632,12 +1632,33 @@
         }
         .css-old {
             p {
-                font-size: 16px;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                color: #000;
                 @include pc {
-                    font-size: get_pc(16);
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
                 }
                 @include sp {
-                    font-size: get_sp(13);
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(1.6);
+                }
+                span {
+                    color: #699BD3 !important;
+                    font-size: 35px !important;
+                    letter-spacing: 2px;
+                    line-height: 65px;
+                    font-weight: 700;
+                    @include pc {
+                        font-size: get_pc(35) !important;
+                        letter-spacing: get_pc(3.5);
+                        line-height: get_pc(65);
+                    }
+                    @include sp {
+                        font-size: get_sp(20) !important;
+                        letter-spacing: get_sp(2);
+                        line-height: get_sp(35);
+                    }
                 }
             }
         }

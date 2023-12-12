@@ -159,10 +159,6 @@ foreach ($terms as $t) {
                         if (!empty($programs_arr[2])) {
                             $programs_arr_reverse = array_reverse($programs_arr[2]);
                             foreach ($programs_arr_reverse as $t) {
-                                ob_start();
-                                get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
-                                $dramas_on_air_modal .= ob_get_contents();
-                                ob_end_clean();
                                 tpl_program_list_item($t);
                             }
                         }
