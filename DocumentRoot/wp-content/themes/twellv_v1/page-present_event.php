@@ -124,7 +124,7 @@ get_header();
         <?php get_template_part('template-parts/news/news_top'); ?>
         <!-- /news -->
         <!-- other -->
-        <?php get_template_part('template-parts/home/other_top', null, array('hideSocial' => false)); ?>
+        <?php get_template_part('template-parts/home/other_top', null, array('social' => true, 'type' => 'all')); ?>
         <!-- /other -->
     </main>
     <!--/main-->
