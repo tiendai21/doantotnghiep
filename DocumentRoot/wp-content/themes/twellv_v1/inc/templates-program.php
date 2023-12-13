@@ -298,7 +298,7 @@ function display_program_navi($term)
             $ttl = get_sub_field('ttl');
             $link = get_sub_field('link');
             $target_blank = get_sub_field('target_blank') ? ' target="_blank" ' : '';
-            $isActive = (str_contains($link, get_page_uri())) ? 'class="active"' : null;
+            $isActive = (str_replace('/twellv-wp/DocumentRoot', '', $_SERVER['REQUEST_URI'] ) === $link) ? 'class="active"' : null;
             ?>
             <li <?php echo $isActive?>>
                 <a href="<?php echo esc_url($link); ?>" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a>
