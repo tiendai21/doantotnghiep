@@ -30,7 +30,7 @@ if ($relate_program) {
     <main id="main">
         <div class="breadcrumb">
             <ul>
-                <li><a href="/"><?php bs12_pankuzu_text_top() ?></a></li>
+                <li><a href="<?php echo esc_url(home_url('/')) ?>"><?php bs12_pankuzu_text_top() ?></a></li>
                 <?php if ($t->slug === 'whatsnew') { ?>
                     <?php
                     if ((int)$relate_term_code > 0) {

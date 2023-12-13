@@ -179,7 +179,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
             <div class="breadcrumb">
                 <ul>
                     <li>
-                        <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                        <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
                     </li>
                     <li>
                         <span>放送終了</span>

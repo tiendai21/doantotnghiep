@@ -55,7 +55,7 @@ foreach ($terms as $t) {
     <div class="breadcrumb">
         <ul>
             <li>
-                <a href="/"><?php bs12_pankuzu_text_top(); ?></a>
+                <a href="<?php echo esc_url(home_url('/')) ?>"><?php bs12_pankuzu_text_top(); ?></a>
             </li>
             <?php if (preg_match('/(korea|china)/', $term_list_object->slug)) : ?>
                 <li><a href="/program/drama/">ドラマ・映画</a></li>

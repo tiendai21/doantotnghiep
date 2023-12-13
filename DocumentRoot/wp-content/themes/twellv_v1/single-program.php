@@ -31,25 +31,31 @@ if ($program_term === null) {
         $program_term = $parent_term;
     }
 }
-// var_dump( $program_term );
 // 番組カテゴリ
 $category_term = get_term_by('id', $program_term->parent, 'program_cat');
+
+//var_dump( $page_format );
 ?>
     <!-- main -->
     <main id="main">
         <div class="breadcrumb">
             <ul>
                 <li>
-                    <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                    <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
                 </li>
                 <li>
-                    <a href="#">韓国・韓流ドラマ</a>
+                    <a href="<?php echo esc_url(home_url('/program/'.$category_term->slug)) ?>"><?php echo $category_term ->name ?></a>
                 </li>
                 <li>
-                    <a href="#"><?php echo $program_term ->name ?></a>
+                    <a href="<?php echo esc_url(home_url('/program/'.$category_term->slug.'/'.$program_term ->slug)) ?>"><?php echo $program_term ->name ?></a>
                 </li>
+                <?php if ($page_format === 'gallery'): ?>
+                    <li>
+                        <a href="<?php echo esc_url(home_url('/program/'.$category_term->slug.'/'.$program_term ->slug.'/archive-'.$program_term ->slug)) ?>">放送ラインアップ</a>
+                    </li>
+                <?php endif; ?>
                 <li>
-                    <span>相関図</span>
+                    <span><?php the_title(); ?></span>
                 </li>
             </ul>
         </div>

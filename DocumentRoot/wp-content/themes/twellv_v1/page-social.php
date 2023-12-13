@@ -7,7 +7,7 @@ get_header();
         <div class="breadcrumb">
             <ul>
                 <li>
-                    <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                    <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
                 </li>
                 <li>
                     <span>Twitter・Facebook・Instagramアカウント一覧</span>
