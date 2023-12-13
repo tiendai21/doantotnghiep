@@ -640,7 +640,7 @@ function display_program_recommend_often_watch_by_category_slug($t)
                 $term_arr[] = $t;
             }
     ?>
-            <section class="section-wrap">
+            <section class="section-wrap also-recommend">
                 <div class="program-list-wrap">
                     <h2 class="section-ttl">こちらもおすすめ</h2>
                     <div class="program-list w320 type-A slider">

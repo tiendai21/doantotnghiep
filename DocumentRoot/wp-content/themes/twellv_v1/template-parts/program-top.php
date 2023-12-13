@@ -7,10 +7,10 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
     <div class="breadcrumb">
         <ul>
             <li>
-                <a href="#">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
             </li>
             <li>
-                <a href="#">韓国・韓流ドラマ</a>
+                <a href="<?php echo esc_url(home_url('/program/'. $parent_term->slug)) ?>"><?php echo $parent_term->name ?></a>
             </li>
             <li>
                 <span><?php echo $term->name ?></span>

@@ -1568,6 +1568,16 @@
             width: initial;
         }
 
+        .program-list, .sns-timeline {
+            margin-bottom: 63px;
+            @include pc {
+                margin-bottom: get_pc(63);
+            }
+            @include sp {
+                margin-bottom: get_sp(22);
+            }
+        }
+
         .text-wrap {
             &:not(.css-old) {
                 p {
@@ -1986,6 +1996,52 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .also-recommend {
+        max-width: 1476px;
+        margin: 0 auto;
+
+        @include pc {
+            max-width: get_pc(1476);
+        }
+
+        @include sp {
+            max-width: 100%;
+            padding: 0 get_sp(14);
+        }
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #004898;
+            font-weight: bold;
+            line-height: 44px;
+            letter-spacing: 1.5px;
+            padding-bottom: 34px;
+            margin-bottom: 63px;
+            max-width: unset;
+            width: initial;
+            border-bottom: 3px solid #004898;
+            @include pc {
+                font-size: get_pc(30);
+                line-height: get_pc(44);
+                letter-spacing: get_pc(1.5);
+                padding-bottom: get_pc(34);
+                margin-bottom: get_pc(63);
+                border-bottom: get_pc(3) solid #004898;
+            }
+
+            @include sp {
+                font-size: get_sp(16);
+                line-height: get_sp(24);
+                letter-spacing: get_sp(0.8);
+                padding-bottom: get_sp(11.79);
+                margin-bottom: get_sp(22);
+                border-bottom: get_sp(2) solid #004898;
+            }
+            &:before {
+                content: none;
             }
         }
     }
