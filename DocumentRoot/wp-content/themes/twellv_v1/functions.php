@@ -17,7 +17,7 @@ function theme_enqueue_styles()
     $the_theme = wp_get_theme();
     wp_enqueue_style('wp_style', get_stylesheet_uri());
     wp_enqueue_style('main-styles', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $css_unti_cache);
-    if (is_page() || is_tax('program_cat') || is_singular('program') ) {
+    if (is_page() || is_tax('program_cat') || is_singular('program')) {
         wp_enqueue_style('old-styles_1', get_stylesheet_directory_uri() . '/assets/css/style_old_1.css', array(), $css_unti_cache);
         wp_enqueue_style('old-styles_2', get_stylesheet_directory_uri() . '/assets/css/style_old_2.css', array(), $css_unti_cache);
     }
@@ -133,7 +133,7 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-add_filter( 'pre_get_posts', 'custom_posts_per_page' );
+add_filter('pre_get_posts', 'custom_posts_per_page');
 
 function custom_pagination($numpages = '', $pagerange = '', $paged = '', $pageName = '')
 {
@@ -187,8 +187,8 @@ function custom_pagination($numpages = '', $pagerange = '', $paged = '', $pageNa
                 // continue;
             }
             echo
-                '<li>'.
-                $paginate_item.
+                '<li>' .
+                $paginate_item .
                 '</li>';
         }
         echo "</ul></div>";
@@ -197,3 +197,37 @@ function custom_pagination($numpages = '', $pagerange = '', $paged = '', $pageNa
     wp_reset_postdata();
 
 }
+// For movie archive page
+function stringToTimeStamp($string, $format)
+{
+    $string = preg_replace('/[^0-9年月日]/u', '', $string); // Remove non-numeric and non-date characters
+    $date = DateTime::createFromFormat('Y年n月j日', $string);
+    if ($date !== false) {
+        $timestamp = $date->format($format); // Get the Unix timestamp
+        return $timestamp;
+    } else {
+        return null;
+    }
+}
+// Only for program archive page
+function custom_modify_archive_posts($posts, $query)
+{
+    if (is_archive() && $query->is_main_query() && is_tax('program_cat') && str_contains($query->query['term'], 'archive')) {
+        // Modify the $posts array as needed
+        foreach ($posts as $i => $post) {
+            $dateStr = get_field('onairtime', $post->ID);
+            $dateStamp = stringToTimeStamp($dateStr, 'U');
+            $episode = preg_replace('/[^0-9]/', '', $post->post_title); // Remove non-numeric characters
+            $posts[$i]->onairTime = $dateStamp;
+            $posts[$i]->episode = $episode;
+        }
+        usort($posts, function ($a, $b) {
+            if ($a->onairTime == $b->onairTime) {
+                return $a->episode > $b->episode; // Sort by another key when dates are equal
+            }
+            return $a->onairTime > $b->onairTime;
+        });
+    }
+    return $posts;
+}
+add_filter('the_posts', 'custom_modify_archive_posts', 10, 2);
