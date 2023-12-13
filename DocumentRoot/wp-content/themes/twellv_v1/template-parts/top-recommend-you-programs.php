@@ -55,7 +55,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                     </div>
                 <?php endforeach; ?>
             </div>
-            <?php get_template_part('template-parts/home/modal_category', null, array('modal' => $modal)); ?>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'BS12おすすめ番組', 'modal' => $modal)); ?>
         </div>
     </section>
     <!-- /Recommended movies -->

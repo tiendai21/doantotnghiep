@@ -1,6 +1,7 @@
 <?php
 $modal_item = $args['modal'];
 $modal_title = $args['title'];
+//var_dump($modal_title);
 ?>
 <div class="wrapper_modal">
     <div class="inner">

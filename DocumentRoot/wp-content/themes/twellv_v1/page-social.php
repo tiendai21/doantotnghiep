@@ -95,7 +95,7 @@ get_header();
         </section>
         <!--/content-->
         <!-- program air -->
-        <?php get_template_part('template-parts/home/program_air_top', null, array('hideBtnWatch' => false)); ?>
+        <?php get_template_part('template-parts/home/program_air_top', null, array('hideBtnWatch' => true)); ?>
         <!-- /program air -->
 
         <!-- news -->

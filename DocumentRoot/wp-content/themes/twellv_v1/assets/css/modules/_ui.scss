@@ -1488,20 +1488,14 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 19px;
-        width: 355px;
         background: #335683;
         transition: all .3s;
         margin: 0 6px;
 
         @include pc {
-            padding: get_pc(19);
-            width: get_pc(355);
             margin: 0 get_pc(6);
         }
         @include sp {
-            padding: get_sp(10);
-            width: get_sp(192);
             margin: 0 0 get_sp(5);
         }
         &:nth-child(odd) {
@@ -1527,16 +1521,23 @@ a {
             font-size: 24px;
             letter-spacing: 2.4px;
             line-height: 35px;
+            padding: 19px;
             color: #FFFFFF;
+            width: 355px;
+            text-align: center;
             @include pc {
                 font-size: get_pc(24);
                 letter-spacing: get_pc(2.4);
                 line-height: get_pc(35);
+                padding: get_pc(19);
+                width: get_pc(355);
             }
             @include sp {
                 font-size: get_sp(15);
                 letter-spacing: 0;
                 line-height: get_sp(21);
+                padding: get_sp(10);
+                width: get_sp(192);
             }
         }
         &:hover {
