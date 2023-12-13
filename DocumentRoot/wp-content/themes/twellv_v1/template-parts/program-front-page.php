@@ -23,7 +23,7 @@ if (have_rows('page_flex_content', $top->ID)) {
                 $layout = get_row_layout();
 //                var_dump($layout);        // component name
 //                var_dump($top->ID);       // post that contain components
-//                get_template_part('template-parts/program/layouts/' . $layout);
+                get_template_part('template-parts/program/layouts/' . $layout);
             }
             get_template_part('template-parts/program/archive-episode-list');
             ?>
