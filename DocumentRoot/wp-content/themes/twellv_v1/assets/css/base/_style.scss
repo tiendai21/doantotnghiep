@@ -275,6 +275,7 @@
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 24px;
+                    @include txtClamp(1);
 
                     @include pc {
                         letter-spacing: get_pc(1.6);
