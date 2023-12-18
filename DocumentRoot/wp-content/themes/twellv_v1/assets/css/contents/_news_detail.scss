@@ -322,27 +322,28 @@
                     max-width: get_pc(1348);
                 }
                 @include sp {
-                    margin: get_sp(10) get_sp(11) get_sp(23) get_sp(0);
+                    justify-content: space-between;
                     max-width: 100%;
-                    padding: 0;
+                    padding: 0 get_sp(72);
+                    margin: 0 0 get_sp(49);
                 }
 
                 a {
-                    width: 48px;
-                    height: 48px;
+                    width: 83px;
+                    height: 83px;
                     display: inline-block;
-                    margin-left: 23px;
+                    margin-left: 61px;
 
                     @include pc {
-                        width: get_pc(48);
-                        height: get_pc(48);
-                        margin-left: get_pc(23);
+                        width: get_pc(83);
+                        height: get_pc(83);
+                        margin-left: get_pc(61);
                     }
 
                     @include sp {
-                        width: get_sp(30);
-                        height: get_sp(30);
-                        margin-left: get_sp(13);
+                        width: get_sp(50);
+                        height: get_sp(50);
+                        margin-left: initial;
                     }
 
                     &:first-child {

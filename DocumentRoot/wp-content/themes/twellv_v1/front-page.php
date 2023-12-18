@@ -24,7 +24,7 @@ get_header();
     <!-- /news -->
 
     <!-- recommend -->
-    <?php get_template_part('template-parts/home/recommend_top'); ?>
+    <?php get_template_part('template-parts/home/recommend_top', null, array('hideBrand' => false)); ?>
     <!-- /recommend -->
 
     <!-- category drama chinese -->

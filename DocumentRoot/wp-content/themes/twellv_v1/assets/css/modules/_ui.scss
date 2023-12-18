@@ -1636,13 +1636,13 @@ a {
             }
 
             &:after {
-                 height: 180px;
-                 @include pc {
-                     height: get_pc(180);
-                 }
-                 @include sp {
-                     height: get_sp(90);
-                 }
+                height: 180px;
+                @include pc {
+                    height: get_pc(180);
+                }
+                @include sp {
+                    height: get_sp(90);
+                }
             }
 
             .slick-prev {
@@ -1848,7 +1848,7 @@ a {
                     padding: 0;
                     margin-bottom: get_sp(7);
                 }
-                &:nth-last-child(2), &:nth-child(14), &:nth-child(17) {
+                &:nth-last-child(2), &:nth-child(14), &:nth-child(17), &:nth-child(8) {
                     a {
                         line-height: 25px;
                         @include pc {
@@ -1927,7 +1927,6 @@ a {
         @include pc {
             margin-bottom: get_pc(16);
         }
-
         ul {
             display: flex;
             justify-content: center;
@@ -2197,75 +2196,75 @@ a {
     }
 }
 
-
 .social_link {
-        li {
-            border-radius: 50%;
-            a {
-                &::before {
-                    content: '';
-                    display: inline-block;
-                    width: 83px;
-                    height: 83px;
-                    transition: all ease 0.3s;
-                    @include pc {
-                        width: get_pc(83);
-                        height: get_pc(83);
-                    }
-                    @include sp {
-                        width: get_sp(50);
-                        height: get_sp(50);
-                    }
+    li {
+        border-radius: 50%;
+        a {
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 83px;
+                height: 83px;
+                transition: all ease 0.3s;
+                @include pc {
+                    width: get_pc(83);
+                    height: get_pc(83);
                 }
-            }
-        }
-        li:first-child {
-            a {
-                &::before {
-                    content: "";
-                    @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
-                }
-            }
-        }
-        li:nth-child(2) {
-            a {
-                &::before {
-                    content: "";
-                    @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
-                }
-            }
-        }
-        li:last-child {
-            a {
-                &:last-child {
-                    &::before {
-                        content: "";
-                        @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
-                    }
-                }
-            }
-        }
-        li:hover {
-            a {
-                opacity: initial;
-            }
-            &:first-child {
-                a::before {
-                    @include bgsetup("../images/logo_x_hover.png", center center, 100% auto, no-repeat);
-                }
-            }
-            &:nth-child(2) {
-                a::before {
-                    @include bgsetup("../images/logo_fb_hover.png", center center, 100% auto, no-repeat);
-                }
-            }
-            &:last-child {
-                a::before {
-                    @include bgsetup("../images/logo_line_hover.png", center center, 100% auto, no-repeat);
+                @include sp {
+                    width: get_sp(50);
+                    height: get_sp(50);
                 }
             }
         }
     }
+    li:first-child {
+        a {
+            &::before {
+                content: "";
+                @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
+            }
+        }
+    }
+    li:nth-child(2) {
+        a {
+            &::before {
+                content: "";
+                @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
+            }
+        }
+    }
+    li:last-child {
+        a {
+            &:last-child {
+                &::before {
+                    content: "";
+                    @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
+                }
+            }
+        }
+    }
+    li:hover {
+        a {
+            opacity: initial;
+        }
+        &:first-child {
+            a::before {
+                @include bgsetup("../images/logo_x_hover.png", center center, 100% auto, no-repeat);
+            }
+        }
+        &:nth-child(2) {
+            a::before {
+                @include bgsetup("../images/logo_fb_hover.png", center center, 100% auto, no-repeat);
+            }
+        }
+        &:last-child {
+            a::before {
+                @include bgsetup("../images/logo_line_hover.png", center center, 100% auto, no-repeat);
+            }
+        }
+    }
+}
+
 /*
         AsS
 */
