@@ -43,6 +43,12 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                 <li>
                     <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
                 </li>
+                <?php
+                if ($category_term->slug === 'korea' || $category_term->slug === 'china' || $term_list_object->slug === 'drama'): ?>
+                    <li>
+                        <a href="<?php echo esc_url(home_url('/program/drama')) ?>">ドラマ・映画</a>
+                    </li>
+                <?php endif; ?>
                 <li>
                     <a href="<?php echo esc_url(home_url('/program/'.$category_term->slug)) ?>"><?php echo $category_term ->name ?></a>
                 </li>

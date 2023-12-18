@@ -250,6 +250,7 @@
                             border: 1px solid #004898;
                             border-radius: 21px;
                             margin: 0 24px;
+                            line-height: 49px;
                             background-color: #FFFFFF;
 
                             @include pc {
@@ -259,15 +260,17 @@
                                 border: get_pc(1) solid #004898;
                                 border-radius: get_pc(21);
                                 margin: 0 get_pc(24);
+                                line-height: get_pc(49);
                             }
 
                             @include sp {
                                 font-size: get_sp(18);
                                 letter-spacing: get_sp(1.8);
-                                padding: get_sp(11) get_sp(10);
+                                padding: get_sp(4) get_sp(9) get_sp(10);
                                 border: get_sp(1) solid #004898;
                                 border-radius: get_sp(21);
                                 margin-right: get_sp(6);
+                                line-height: get_sp(26);
                             }
                         }
                     }
@@ -302,7 +305,10 @@
 
                         h4 {
                             @include sp {
-                                padding: get_sp(11) get_sp(28);
+                                font-size: get_sp(20);
+                                letter-spacing: get_sp(2);
+                                line-height: get_sp(29);
+                                padding: get_sp(6) get_sp(26);
                                 margin-right: get_sp(11);
                             }
                         }
@@ -679,9 +685,10 @@
                             }
 
                             @include sp {
-                                font-size: get_sp(18);
-                                letter-spacing: get_sp(1.8);
-                                padding: get_sp(11) 0;
+                                font-size: get_sp(20);
+                                letter-spacing: get_sp(2);
+                                padding: get_sp(5) 0 get_sp(7);
+                                line-height: get_sp(29);
                                 border: get_sp(1) solid #004898;
                                 border-radius: get_sp(21);
                                 margin: 0 auto get_sp(14);

@@ -1,6 +1,7 @@
 <?php /* -*- coding: utf-8 -*- */
 // echo '番組リスト';
 $term_list_object = get_queried_object();
+//var_dump($term_list_object);
 $term_list_object_name = $term_list_object->name;
 
 $terms = get_terms('program_cat');
@@ -55,6 +56,12 @@ foreach ($terms as $t) {
             <li>
                 <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
             </li>
+            <?php
+            if ($term_list_object->slug === 'korea' || $term_list_object->slug === 'china' || $term_list_object->slug === 'drama'): ?>
+                <li>
+                    <a href="<?php echo esc_url(home_url('/program/drama')) ?>">ドラマ・映画</a>
+                </li>
+            <?php endif; ?>
             <li>
                 <span><?php echo $term_list_object->name ?></span>
             </li>
@@ -235,27 +242,27 @@ foreach ($terms as $t) {
     <!-- Korean dramas scheduled to air -->
     <?php
     if (!empty($programs_arr[1])) : ?>
-    <section class="section" id="dramas_scheduled">
-        <div class="inner">
-            <div class="tlt_section">
-                <h2>放送予定の<?php echo esc_attr($term_list_object_name); ?></h2>
-                <div class="btn_more">
-                    <span>すべて見る</span>
+        <section class="section" id="dramas_scheduled">
+            <div class="inner">
+                <div class="tlt_section">
+                    <h2>放送予定の<?php echo esc_attr($term_list_object_name); ?></h2>
+                    <div class="btn_more">
+                        <span>すべて見る</span>
+                    </div>
                 </div>
+                <div class="program_slide side_brand">
+                    <?php
+                    foreach ($programs_arr[1] as $t) {
+                        ob_start();
+                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                        $scheduled_modal .= ob_get_contents();
+                        ob_end_clean();
+                        tpl_program_list_item_pre($t);
+                    } ?>
+                </div>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
             </div>
-            <div class="program_slide side_brand">
-                <?php
-                foreach ($programs_arr[1] as $t) {
-                    ob_start();
-                    get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
-                    $scheduled_modal .= ob_get_contents();
-                    ob_end_clean();
-                    tpl_program_list_item_pre($t);
-                }?>
-            </div>
-            <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
-        </div>
-    </section>
+        </section>
     <?php
     endif;
     ?>
