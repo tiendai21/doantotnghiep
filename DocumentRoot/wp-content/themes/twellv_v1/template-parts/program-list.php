@@ -260,7 +260,7 @@ foreach ($terms as $t) {
                         tpl_program_list_item_pre($t);
                     } ?>
                 </div>
-                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の'. esc_attr($term_list_object_name), 'modal' => $scheduled_modal)); ?>
             </div>
         </section>
     <?php
