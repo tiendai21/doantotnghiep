@@ -105,14 +105,8 @@ if ($relate_program) {
                 </div>
             </div>
         </section>
-        <!--recommend-->
-        <?php get_template_part('template-parts/top', 'recommend-you-programs'); ?>
-        <!--/recommend-->
-        <!-- news -->
-        <?php get_template_part('template-parts/news/news_top'); ?>
-        <!-- /news -->
         <!-- other -->
-        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'famous')); ?>
+        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'all', 'social' => true)); ?>
         <!-- /other -->
     </main>
     <!-- /main -->
