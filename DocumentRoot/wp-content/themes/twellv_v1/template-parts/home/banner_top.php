@@ -4,7 +4,7 @@ if( get_field( 'main_visual_list' ) ) : ?>
 <section class="section section-hidden" id="banner">
     <div class="inner">
         <div class="notice_top">
-            <span>無料で見られる！BS12の視聴方法</span>
+            <a href="https://www.twellv.co.jp/howtowatch/?utm_source=bs12&utm_medium=organic&utm_campaign=bs12_top"><span>無料で見られる！BS12の視聴方法</span></a>
         </div>
         <div class="slide_top">
             <?php

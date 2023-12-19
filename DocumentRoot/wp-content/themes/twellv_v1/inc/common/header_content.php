@@ -103,7 +103,7 @@
                         <li><a href="<?php echo esc_url(home_url('/program_schedule/'))?>">番組表</a></li>
                         <li><a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a></li>
                         <li><a href="<?php echo esc_url(home_url('/present_event/'))?>">視聴者プレゼント</a></li>
-                        <li><a href="#">無料視聴方法</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/howtowatch/'))?>">無料視聴方法</a></li>
                     </ul>
                 </div>
                 <div class="end_nav">
