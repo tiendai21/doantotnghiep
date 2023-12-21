@@ -239,10 +239,11 @@ function display_program_recommend_by_category_slug($slug)
                     </div>
                 </div>
                 <div class="program_slide side_brand">
-                    <?php foreach ($term_arr as $term) {
-                        $archive_modal = "";
+                    <?php
+                    $archive_modal = "";
+                    foreach ($term_arr as $term) {
                         ob_start();
-                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $term));
                         $archive_modal .= ob_get_contents();
                         ob_end_clean();
                         ?>
