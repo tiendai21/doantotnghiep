@@ -25,7 +25,9 @@ if (have_rows('page_flex_content', $top->ID)) {
 //                var_dump($top->ID);       // post that contain components
                 get_template_part('template-parts/program/layouts/' . $layout);
             }
-            get_template_part('template-parts/program/archive-episode-list');
+            if(!get_field('hide_broadcast_lineup', $program_term)){
+                get_template_part('template-parts/program/archive-episode-list');
+            }
             ?>
         </div>
 

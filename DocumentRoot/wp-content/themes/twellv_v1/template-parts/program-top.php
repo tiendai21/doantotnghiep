@@ -106,11 +106,9 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
     endif;
     ?>
 
-
     <!-- Below content-->
     <?php if ($parent_term->slug !== 'entertainment') :
         ?>
-
         <?php //BS12_RENEWAL-269 【タスク】レイアウト変更ならびにWP機能追加 edit 20201012 yanagi
         ?>
         <!-- こちらもおすすめ -->
