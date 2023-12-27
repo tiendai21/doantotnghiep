@@ -6,9 +6,8 @@ if (get_sub_field('horizontal_image_block_layout')) :
         $image = get_sub_field('image');
         $item['image'] = $image;
         $item['paragraph'] = get_sub_field('paragraph');
-        $item['image_alt'] = get_sub_field('image_alt');
-        $item['image_description'] = get_sub_field('image_description');
-        $layout = get_sub_field('layout');
+        $item['image_caption'] = get_sub_field('image_caption');
+        $layout = get_sub_field('direction');
         $images_list[] = $item;
     endwhile;
     ?>
@@ -18,9 +17,9 @@ if (get_sub_field('horizontal_image_block_layout')) :
         <?php endif; ?>
         <div class="content">
             <div class="thumb">
-                <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['alt_text']; ?>">
+                <img src="<?php echo $item['image']; ?>" alt="悪の花">
             </div>
-            <p class="txt"><?php echo $item['image_description'] ?></p>
+            <p class="txt"><?php echo $item['image_caption'] ?></p>
         </div>
         <?php if ($layout == "ltr"): ?>
             <p><?php echo $item['paragraph'] ?></p>
