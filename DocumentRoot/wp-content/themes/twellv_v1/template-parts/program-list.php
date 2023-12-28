@@ -77,11 +77,11 @@ foreach ($terms as $t) {
                 </div>
                 <div class="siler_top_content">
                     <?php
-                    if ($programs_arr[3]): ?>
+                    if ($programs_arr[2]): ?>
                         <div class="slide_top_odd">
                             <?php
                             $i = 0;
-                            foreach ($programs_arr[3] as $item):
+                            foreach ($programs_arr[2] as $item):
                                 if (++$i > 5) break;
                                 $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
                                 $urlItem = get_term_link($item);
@@ -96,11 +96,11 @@ foreach ($terms as $t) {
                     <?php endif; ?>
                     <?php
 
-                    if ($programs_arr[3]): ?>
+                    if ($programs_arr[2]): ?>
                         <div class="slide_top_even">
                             <?php
                             $i = 0;
-                            foreach (array_reverse($programs_arr[3]) as $item):
+                            foreach (array_reverse($programs_arr[2]) as $item):
                                 if (++$i > 4) break;
                                 $image = get_acf_img_tag('list_thumb', $item, $item->name . 'のサムネイル');
                                 $urlItem = get_term_link($item);
@@ -148,8 +148,11 @@ foreach ($terms as $t) {
                 <div class="dramas_slide_top">
                     <div class="program_slide dramas_top">
                         <?php
-                        if (!empty($programs_arr[2])) {
-                            foreach ($programs_arr[2] as $t) {
+                        $timed_arr = $programs_arr[2];
+                        // Sort the array using usort and the custom comparison function
+//                        usort($timed_arr, 'compareDaysOfWeek');
+                        if (!empty($timed_arr)) {
+                            foreach ($timed_arr as $t) {
                                 ob_start();
                                 get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
                                 $dramas_on_air_modal .= ob_get_contents();
@@ -164,8 +167,11 @@ foreach ($terms as $t) {
                     <div class="program_slide dramas_bottom">
                         <?php
                         if (!empty($programs_arr[2])) {
-                            $programs_arr_reverse = array_reverse($programs_arr[2]);
-                            foreach ($programs_arr_reverse as $t) {
+                            $mod_arr = $programs_arr[2];
+                            usort($mod_arr, function($a, $b) {
+                                return strcmp($a->name, $b->name);
+                            });
+                            foreach ($mod_arr as $t) {
                                 tpl_program_list_item($t);
                             }
                         }
