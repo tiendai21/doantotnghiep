@@ -148,11 +148,12 @@ foreach ($terms as $t) {
                 <div class="dramas_slide_top">
                     <div class="program_slide dramas_top">
                         <?php
-                        $timed_arr = $programs_arr[2];
-                        // Sort the array using usort and the custom comparison function
-//                        usort($timed_arr, 'compareDaysOfWeek');
-                        if (!empty($timed_arr)) {
-                            foreach ($timed_arr as $t) {
+                        $az_arr = $programs_arr[2];
+                        usort($az_arr, function($a, $b) {
+                            return strcmp($b->name, $a->name);
+                        });
+                        if (!empty($az_arr)) {
+                            foreach ($az_arr as $t) {
                                 ob_start();
                                 get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
                                 $dramas_on_air_modal .= ob_get_contents();
@@ -167,11 +168,11 @@ foreach ($terms as $t) {
                     <div class="program_slide dramas_bottom">
                         <?php
                         if (!empty($programs_arr[2])) {
-                            $mod_arr = $programs_arr[2];
-                            usort($mod_arr, function($a, $b) {
+                            $za_arr = $programs_arr[2];
+                            usort($za_arr, function($a, $b) {
                                 return strcmp($a->name, $b->name);
                             });
-                            foreach ($mod_arr as $t) {
+                            foreach ($za_arr as $t) {
                                 tpl_program_list_item($t);
                             }
                         }

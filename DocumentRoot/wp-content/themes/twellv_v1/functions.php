@@ -231,32 +231,4 @@ function custom_modify_archive_posts($posts, $query)
     return $posts;
 }
 add_filter('the_posts', 'custom_modify_archive_posts', 10, 2);
-// Define a function to extract the day of the week from the string
-function extractDayOfWeek($str) {
-    // Regular expression to match Japanese days of the week
-    $pattern = '/(日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日)/u';
 
-    // Match the pattern in the string
-    preg_match($pattern, $str, $matches);
-
-    // Return the matched day of the week
-    return $matches[0];
-}
-
-// Define a function to compare the Japanese days of the week in the strings
-function compareDaysOfWeek($a, $b) {
-    $daysOfWeekOrder = [
-        '日曜日' => 0, // Sunday
-        '月曜日' => 1, // Monday
-        '火曜日' => 2, // Tuesday
-        '水曜日' => 3, // Wednesday
-        '木曜日' => 4, // Thursday
-        '金曜日' => 5, // Friday
-        '土曜日' => 6, // Saturday
-    ];
-
-    $dayA = extractDayOfWeek(get_field('onairtime', $a));
-    $dayB = extractDayOfWeek(get_field('onairtime', $b));
-
-    return ($daysOfWeekOrder[$dayA] <=> $daysOfWeekOrder[$dayB]);
-}
