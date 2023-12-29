@@ -442,7 +442,7 @@
                     },
                 },
                 {
-                    breakpoint: 1921,
+                    breakpoint: 9999,
                     settings: "unslick",
                 },
             ],

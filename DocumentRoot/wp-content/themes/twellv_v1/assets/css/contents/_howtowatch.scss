@@ -165,14 +165,13 @@
                 content: "";
                 position: absolute;
                 right: 0;
-                bottom: -49px;
+                bottom: 0;
                 border-bottom: solid 25px #699BD3;
                 border-right: solid 27px #699BD3;
                 border-left: solid 27px transparent;
                 border-top: solid 25px transparent;
 
                 @include pc {
-                    bottom: get_pc(-49);
                     border-bottom: solid get_pc(25) #699BD3;
                     border-right: solid get_pc(27) #699BD3;
                     border-left: solid get_pc(27) transparent;
@@ -191,14 +190,13 @@
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: 32px;
+                top: 0;
                 border-top: solid 25px #699BD3;
                 border-left: solid 27px #699BD3;
                 border-right: solid 27px transparent;
                 border-bottom: solid 25px transparent;
 
                 @include pc {
-                    bottom: get_pc(32);
                     border-top: solid get_pc(25) #699BD3;
                     border-left: solid get_pc(27) #699BD3;
                     border-right: solid get_pc(27) transparent;

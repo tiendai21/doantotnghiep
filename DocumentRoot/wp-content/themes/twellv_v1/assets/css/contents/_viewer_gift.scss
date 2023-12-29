@@ -374,11 +374,7 @@
     */
     #news {
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
             .tlt_section {
                 margin-bottom: 25px;
                 @include pc {
@@ -403,6 +399,9 @@
                             }
                         }
                     }
+                }
+                &:before, .slick-prev:before {
+                    content: none;
                 }
             }
         }
