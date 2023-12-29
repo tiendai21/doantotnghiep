@@ -133,7 +133,7 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-add_filter('pre_get_posts', 'custom_posts_per_page');
+//add_filter('pre_get_posts', 'custom_posts_per_page');
 
 function custom_pagination($numpages = '', $pagerange = '', $paged = '', $pageName = '')
 {
