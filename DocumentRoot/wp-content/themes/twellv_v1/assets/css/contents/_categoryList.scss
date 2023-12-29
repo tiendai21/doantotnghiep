@@ -8,11 +8,7 @@
     */
     #banner_category{
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         margin-bottom: 38px;
         @include pc{
@@ -287,11 +283,7 @@
             margin-bottom: get_sp(28.59);
         }
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         .tlt_section{
 
@@ -475,11 +467,7 @@
     */
     #broadcast_schedule{
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         .tlt_section {
             margin: 0 auto 36px;
@@ -565,11 +553,7 @@
             margin-bottom: get_sp(45);
         }
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         .tlt_section{
             @include sp{
@@ -609,11 +593,7 @@
             margin-bottom: get_sp(32);
         }
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         .tlt_section{
             @include sp{
@@ -648,11 +628,7 @@
             margin-bottom: get_sp(40);
         }
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         .tlt_section{
             @include sp {
@@ -891,10 +867,8 @@
     */
     #customer_voice {
         .inner {
-            max-width: 1920px;
             margin: 0 auto 55px;
             @include pc {
-                max-width: get_pc(1920);
                 margin: 0 auto get_pc(55);
             }
             @include sp {

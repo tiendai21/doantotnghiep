@@ -5,11 +5,9 @@
 
     #banner {
         .inner {
-            max-width: 1920px;
             margin: 0 auto 69px;
 
             @include pc {
-                max-width: get_pc(1920);
                 margin: 0 auto get_pc(69);
             }
 

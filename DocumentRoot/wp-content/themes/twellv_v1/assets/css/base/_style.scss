@@ -624,7 +624,6 @@
     }
 
     .content_ranking {
-        width: 1847px;
         margin: 0 auto 31px;
         border-radius: 67px;
         background-color: #f2f2f2;
@@ -632,7 +631,6 @@
         position: relative;
 
         @include pc {
-            width: get_pc(1847);
             border-radius: get_pc(67);
             margin: 0 auto get_pc(31);
             padding: get_pc(20) 0 0 0;
