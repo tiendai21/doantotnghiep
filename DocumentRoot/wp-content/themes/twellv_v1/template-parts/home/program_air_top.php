@@ -259,7 +259,7 @@ if (is_array($nowonair_data_array["programs"])) {
 <div class="item_slide">
     <a href="{$url}">
         <div class="thumb">
-        <img src="{$picture}" width="338" height="198" alt="{$title}のサムネイル">
+        <img src="{$picture}" loading="lazy" width="338" height="198" alt="{$title}のサムネイル">
     </div>
     </a>
 </div>        
