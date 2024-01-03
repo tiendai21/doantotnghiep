@@ -724,11 +724,7 @@
             margin-bottom: get_sp(22);
         }
         .inner {
-            max-width: 1920px;
             margin: 0 auto;
-            @include pc {
-                max-width: get_pc(1920);
-            }
         }
         .tlt_section{
             margin: 0 auto 50px;

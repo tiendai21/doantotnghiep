@@ -1563,14 +1563,14 @@ a {
     ranking
 */
 #ranking, #ranking_section {
-    margin-bottom: 70px;
+    margin: 0 36px 70px;
 
     @include pc {
-        margin-bottom: get_pc(70);
+        margin: 0 get_pc(36) get_pc(70);
     }
 
     @include sp {
-        margin-bottom: get_sp(29);
+        margin: 0 0 get_sp(29);
     }
 
     .inner {
@@ -1583,13 +1583,13 @@ a {
         margin: 0 auto;
         border-radius: 67px;
         background-color: #f2f2f2;
-        padding: 20px 0 0 0;
+        padding: 20px 20px 0 0;
         position: relative;
         overflow: hidden;
 
         @include pc {
             border-radius: get_pc(67);
-            padding: get_pc(20) 0 0 0;
+            padding: get_pc(20) get_pc(20) 0 0;
         }
 
         @include sp {
@@ -1752,7 +1752,24 @@ a {
                 }
             }
         }
-
+        .item_slide[data-slick-index = '0'] {
+            padding-left: 22px;
+            @include pc {
+                padding-left: get_pc(22);
+            }
+            @include sp {
+                padding-left: initial;
+            }
+            .num {
+                left: -18px;
+                @include pc {
+                    left: get_pc(-18);
+                }
+                @include sp {
+                    left: initial;
+                }
+            }
+        }
         .btn_link {
             position: absolute;
             right: 164px;
