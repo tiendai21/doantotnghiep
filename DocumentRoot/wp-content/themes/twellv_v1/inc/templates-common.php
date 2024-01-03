@@ -19,7 +19,7 @@ function get_acf_img_tag( $key, $obj = null, $alt = '', $class = '' ) {
     }
 
 
-    $img_tag = sprintf( '<img src="%s" alt="%s" %s>', $img['url'] ? $img['url'] : get_stylesheet_directory_uri() . '/assets/images/bs12_noimg.jpeg', $alt_str, $class_str );
+    $img_tag = sprintf( '<img loading="lazy" src="%s" alt="%s" %s>', $img['url'] ? $img['url'] : get_stylesheet_directory_uri() . '/assets/images/bs12_noimg.jpeg', $alt_str, $class_str );
     return $img_tag;
 }
 
