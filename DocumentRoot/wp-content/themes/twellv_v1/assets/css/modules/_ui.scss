@@ -1669,6 +1669,7 @@ a {
         .slick-list {
             @include sp {
                 transform: translateX(get_sp(-1));
+                width: 101%;
             }
         }
 
