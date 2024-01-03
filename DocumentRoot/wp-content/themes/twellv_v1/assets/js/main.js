@@ -312,7 +312,7 @@
             speed: 500,
             fade: _fade,
             touchMove: false,
-            slidesToShow: 5,
+            slidesToShow: 4,
             variableWidth: true,
             infinite: true,
             responsive: [
@@ -331,7 +331,7 @@
 
         $(_sliderElm).each(function () {
             if ($(this).attr('class').includes('slide_ranking')) {
-                if ($(this).find(".item_slide").length <= 5) {
+                if ($(this).find(".item_slide").length < 5) {
                     $(this).addClass('no-slide');
                 }
             }

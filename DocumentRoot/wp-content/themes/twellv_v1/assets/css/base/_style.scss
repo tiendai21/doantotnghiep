@@ -712,22 +712,6 @@
                 transform: translateX(get_sp(-1));
             }
         }
-
-        .slick-slider .slick-track {
-            padding-left: 0;
-            margin-left: 40px;
-
-            @include pc {
-                padding-left: 0;
-                margin-left: get_pc(40);
-            }
-
-            @include sp {
-                padding-left: 0;
-                margin-left: get_sp(4);
-            }
-        }
-
         .item_slide {
             position: relative;
             padding-bottom: 150px;
