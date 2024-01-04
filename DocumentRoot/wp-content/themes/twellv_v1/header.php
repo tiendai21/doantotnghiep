@@ -35,9 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
-        rel="preload" as="style">
-    <link  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
-           rel="stylesheet">
+        rel="preload stylesheet" as="style">
     <?php if(get_field('page_css')): ?>
         <!-- [CONTENT CSS] -->
         <style type="text/css">
