@@ -413,19 +413,14 @@
                     }
                 }
             }
-            .thumb {
-                width: 100%;
+            iframe {
+                width: 100% !important;
                 margin-bottom: 24px;
                 @include pc {
                     margin-bottom: get_pc(24);
                 }
                 @include sp {
                     margin-bottom: get_sp(25);
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
                 }
             }
             p {
