@@ -1525,6 +1525,9 @@
             max-width: 100%;
             padding: 0 get_sp(14);
         }
+        .list {
+            width: 100%;
+        }
         .image_text_block {
             display: flex;
             justify-content: space-between;
@@ -1699,12 +1702,12 @@
         }
         .css-old {
             p {
-                font-size: 25px;
-                letter-spacing: 2.5px;
+                font-size: 22px;
+                letter-spacing: 2.2px;
                 color: #000;
                 @include pc {
-                    font-size: get_pc(25);
-                    letter-spacing: get_pc(2.5);
+                    font-size: get_pc(22);
+                    letter-spacing: get_pc(2.2);
                 }
                 @include sp {
                     font-size: get_sp(16);
@@ -1712,14 +1715,14 @@
                 }
                 span {
                     color: #699BD3 !important;
-                    font-size: 35px !important;
-                    letter-spacing: 2px;
-                    line-height: 65px;
+                    font-size: 26px !important;
+                    letter-spacing: 2.6px;
+                    line-height: 30px;
                     font-weight: 700;
                     @include pc {
-                        font-size: get_pc(35) !important;
-                        letter-spacing: get_pc(3.5);
-                        line-height: get_pc(65);
+                        font-size: get_pc(26) !important;
+                        letter-spacing: get_pc(2.6);
+                        line-height: get_pc(30);
                     }
                     @include sp {
                         font-size: get_sp(20) !important;
