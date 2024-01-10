@@ -13,7 +13,6 @@
     scrollInAnime(window, ".anime2", "animated");
     // loading after
     window.onload = function () {
-
         toggleMenuSp();
         toggleMenuFooter();
         toggleSearch();
@@ -566,6 +565,14 @@
         })
     }
 
+    function showBtnTop() {
+        if($(window).scrollTop() > 1056) {
+            $('.btn_to_top').css("display", "flex");
+        } else {
+            $('.btn_to_top').fadeOut();
+        }
+    }
+
     //resize after
     window.onresize = function () {
         _width = $(window).width();
@@ -576,6 +583,7 @@
 
 
     window.onscroll = function () {
+        showBtnTop();
     };
 
     document.addEventListener("DOMContentLoaded", function () {
