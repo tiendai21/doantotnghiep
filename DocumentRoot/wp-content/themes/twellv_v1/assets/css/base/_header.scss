@@ -70,7 +70,7 @@
 
                 @include sp {
                     margin-left: 0;
-                    padding: 0 get_sp(7);
+                    padding: 0 get_sp(5.49);
                     border-right: 1px solid #004898;
                 }
 
@@ -88,11 +88,68 @@
                         @include sp {
                             padding: get_sp(4) get_sp(3) get_sp(5);
                         }
+                        img {
+                            width: 24.25px;
+                            height: 24px;
+                            @include pc {
+                                width: get_pc(24.25);
+                                height: get_pc(24);
+                            }
+                            @include sp {
+                                width: get_sp(13.25);
+                                height: get_sp(13.11);
+                                transform: translateY(get_sp(1));
+                                margin-right: get_sp(1.91);
+                            }
+                        }
                     }
                 }
-
+                &:nth-child(2) {
+                    @include sp {
+                        padding: 0 get_sp(3.71);
+                    }
+                    a img {
+                        width: 31.41px;
+                        height: 20.19px;
+                        @include pc {
+                            width: get_pc(31.41);
+                            height: get_pc(20.19);
+                        }
+                        @include sp {
+                            width: get_sp(14.59);
+                            height: get_sp(21.8);
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    a img {
+                        width: 20px;
+                        height: 22px;
+                        transform: translateY(1px);
+                        @include pc {
+                            width: get_pc(20);
+                            height: get_pc(22);
+                            transform: translateY(get_pc(1));
+                        }
+                        @include sp {
+                            width: get_sp(17.79);
+                            height: get_sp(17.79);
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    a img {
+                        width: 22px;
+                        height: 22px;
+                        @include pc {
+                            width: get_pc(22);
+                            height: get_pc(22);
+                        }
+                    }
+                }
                 a {
-                    display: block;
+                    display: flex;
+                    align-items: center;
                     color: #004898;
                     font-weight: 500;
                     font-size: 25px;
@@ -108,7 +165,21 @@
                     @include sp {
                         font-size: get_sp(12);
                         letter-spacing: 0;
-                        line-height: get_sp(17);
+                        line-height: get_sp(13);
+                    }
+
+                    img {
+                        display: block;
+                        margin-right: 5px;
+                        transform: translateY(2px);
+                        @include pc {
+                            margin-right: get_pc(5);
+                            transform: translateY(get_pc(2));
+                        }
+                        @include sp {
+                            margin-right: get_sp(3.44);
+                            transform: initial;
+                        }
                     }
 
                     span {
@@ -242,7 +313,7 @@
 
         .box_search_sp {
             @include sp {
-                padding-left: get_sp(8.5);
+                padding-left: get_sp(5.5);
             }
 
             &.active {
@@ -254,11 +325,13 @@
                     width: get_sp(16);
                     height: get_sp(16);
                     margin: 0 auto;
+                    transform: translateY(get_sp(-3));
                 }
             }
 
             span {
                 @include sp {
+                    display: block;
                     font-size: get_sp(11);
                     line-height: get_sp(16);
                     color: #004898;

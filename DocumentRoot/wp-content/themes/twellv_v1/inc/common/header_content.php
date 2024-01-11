@@ -10,31 +10,58 @@
                 <div class="util_pc">
                     <ul>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/program_schedule/'))?>">番組表</a>
+                            <a href="<?php echo esc_url(home_url('/program_schedule/'))?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/calendar_icon.svg' ?>" width="28" height="28" alt="番組表">
+                                番組表
+                            </a>
                         </li>
 
                         <li>
-                            <a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a>
+                            <a href="<?php echo esc_url(home_url('/program/'))?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/video_icon.svg' ?>" width="31" height="20" alt="番組一覧">
+                                番組一覧
+                            </a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/present_event/'))?>">視聴者プレゼント</a>
+                            <a href="<?php echo esc_url(home_url('/present_event/'))?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/gift_icon.svg' ?>" width="19" height="22" alt="視聴者プレゼント">
+                                視聴者プレゼント
+                            </a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/howtowatch/'))?>">無料視聴方法</a>
+                            <a href="<?php echo esc_url(home_url('/howtowatch/'))?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/question_icon.svg' ?>" width="22" height="22" alt="視聴方法">
+                                視聴方法
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="util_sp">
                     <ul>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/program_schedule/'))?>">番組表</a>
+                            <a href="<?php echo esc_url(home_url('/program_schedule/'))?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/calendar_icon.svg' ?>" width="28" height="28" alt="番組表">
+                                番組表
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#">生活エンタ＆<span>知っトク</span></a>
+                            <a href="#">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/light_icon.svg' ?>" width="14" height="21" alt="生活エンタ＆知っトク">
+                                <div class="topic">
+                                    <span>生活エンタ</span>
+                                    <span>＆知っトク</span>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/howtowatch/'))?>">無料視聴 <span>方法</span></a>
+                            <a href="<?php echo esc_url(home_url('/howtowatch/'))?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/question_icon.svg' ?>" width="22" height="22" alt="視聴方法">
+                                <div class="topic">
+                                    <span>視聴</span>
+                                    <span>方法</span>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +71,7 @@
                 <div class="util_sp">
                     <div class="box_search_sp">
                         <div class="thumb">
-                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_search.svg' ?>" width="750" height="573" alt="icon search">
+                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_search_sp.svg' ?>" width="17" height="17" alt="icon search">
                         </div>
                         <span>検索</span>
                     </div>
@@ -103,7 +130,7 @@
                         <li><a href="<?php echo esc_url(home_url('/program_schedule/'))?>">番組表</a></li>
                         <li><a href="<?php echo esc_url(home_url('/program/'))?>">番組一覧</a></li>
                         <li><a href="<?php echo esc_url(home_url('/present_event/'))?>">視聴者プレゼント</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/howtowatch/'))?>">無料視聴方法</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/howtowatch/'))?>">視聴方法</a></li>
                     </ul>
                 </div>
                 <div class="end_nav">

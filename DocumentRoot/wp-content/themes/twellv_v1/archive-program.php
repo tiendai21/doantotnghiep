@@ -97,7 +97,12 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
         <!-- Broadcast schedule -->
         <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => false)); ?>
         <!-- /Broadcast schedule -->
-
+        <div class="btn_watch">
+            <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
+                <span></span>
+                <span>無料で見られる！BS12の視聴方法</span>
+            </a>
+        </div>
         <!-- ranking -->
         <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
         <!-- /ranking -->

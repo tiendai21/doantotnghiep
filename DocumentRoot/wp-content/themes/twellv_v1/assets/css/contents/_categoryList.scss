@@ -894,9 +894,9 @@
             background: unset;
             padding: 0;
             border: 0;
-            margin-bottom: 20px;
+            margin-bottom: 54.85px;
             @include pc {
-                margin-bottom: get_pc(20);
+                margin-bottom: get_pc(54.85);
             }
             @include sp {
                 margin-bottom: get_sp(17);

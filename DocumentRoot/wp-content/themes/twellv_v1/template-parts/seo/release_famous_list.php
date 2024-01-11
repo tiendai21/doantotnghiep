@@ -7,7 +7,7 @@
         <li><a href="/program/tabi/">旅・グルメ</a></li>
         <li><a href="/program/anime/">アニメ</a></li>
         <li><a href="/program/variety/">バラエティ</a></li>
-        <li><a href="/program/china/">ライフスタイル</a></li>
+        <li><a href="/program/china/">生活エンタ</a></li>
         <li><a href="/program/qvc/qvc-jp/">通販</a></li>
     </ul>
 </div>
