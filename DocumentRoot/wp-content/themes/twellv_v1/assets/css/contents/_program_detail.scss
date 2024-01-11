@@ -1732,7 +1732,7 @@
                 }
             }
         }
-        .imgtxt-box  {
+        .imgtxt-box {
             width: initial;
             justify-content: center;
             .description {
@@ -2013,10 +2013,32 @@
                 border-radius: get_sp(10);
             }
         }
-        ul {
-            &:nth-child(3) {
+        .social_link{
+            text-align: center;
+            span {
+                display: block;
+                color: #134898;
+                font-weight: 800;
+                font-size: 20px;
+                letter-spacing: 2px;
+                line-height: 29px;
+                margin-bottom: 25px;
+                @include pc {
+                    font-size: get_pc(20);
+                    letter-spacing: get_pc(2);
+                    line-height: get_pc(29);
+                    margin-bottom: get_pc(25);
+                }
+                @include sp {
+                    font-size: get_sp(16);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(24);
+                    margin-bottom: get_sp(12);
+                }
+            }
+            ul {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
                 align-items: center;
                 margin-bottom: 100px;
                 @include pc {
