@@ -1021,6 +1021,14 @@
         }
     }
 
+    .tlt_section {
+        justify-content: space-between;
+        h2 {
+            position: initial;
+            transform: initial;
+        }
+    }
+
     .section_content {
         display: flex;
         justify-content: center;
@@ -1040,6 +1048,7 @@
 
         .tlt_section {
             width: auto;
+            justify-content: space-between;
 
             @include sp {
                 padding: 0;
