@@ -137,9 +137,6 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
     <?php
     get_template_part('template-parts/ranking/ranking', null, array('cat' => $category_term->slug, 'title' => $category_term->name . 'ランキング', 'sns' => false)); ?>
     <!-- /cat ranking -->
-    <!-- ranking -->
-    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
-    <!-- /ranking -->
     <?php get_template_part('template-parts/top', 'recommend-you-programs'); ?>
     <!-- /BS12おすすめ番組 -->
     <!-- other -->

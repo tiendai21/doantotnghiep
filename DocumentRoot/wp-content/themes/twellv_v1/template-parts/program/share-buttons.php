@@ -31,15 +31,18 @@ if (!$isSimple) :
         </ul>
     </div>
 <?php else: ?>
-    <ul class="social_link">
-        <li>
-            <a href="https://twitter.com/share?url=<?php echo $url; ?>" target="_blank"></a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/share.php?u=<?php echo $url; ?>" target="_blank"></a>
-        </li>
-        <li>
-            <a href="http://line.me/R/msg/text/?<?php echo $url; ?>" target="_blank"></a>
-        </li>
-    </ul>
+    <div class="social_link">
+        <span>みんなに教える</span>
+        <ul>
+            <li>
+                <a href="https://twitter.com/share?url=<?php echo $url; ?>" target="_blank"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/share.php?u=<?php echo $url; ?>" target="_blank"></a>
+            </li>
+            <li>
+                <a href="http://line.me/R/msg/text/?<?php echo $url; ?>" target="_blank"></a>
+            </li>
+        </ul>
+    </div>
 <?php endif; ?>
