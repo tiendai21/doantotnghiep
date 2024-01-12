@@ -313,7 +313,12 @@
 
         .box_search_sp {
             @include sp {
+                cursor: pointer;
                 padding-left: get_sp(5.5);
+                transition: all ease 0.3s;
+                &:hover {
+                    opacity: 0.7;
+                }
             }
 
             &.active {
@@ -657,7 +662,12 @@
     .close_search {
         display: none;
         position: absolute;
+        transition: all ease 0.3s;
+        cursor: pointer;
         top: 28%;
+        &:hover {
+            opacity: 0.7;
+        }
         @include sp {
             right: get_sp(36);
             width: get_sp(20);
@@ -675,6 +685,11 @@
         z-index: 99999;
         right: get_sp(4.2);
         top: get_sp(14.6);
+        cursor: pointer;
+        transition: all ease 0.3s;
+        &:hover {
+            opacity: 0.7;
+        }
 
         .line {
             display: flex;
