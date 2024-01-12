@@ -2003,6 +2003,133 @@ a {
     }
 }
 
+// close btn modal
+.close {
+    width: 51px;
+    height: 51px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 9999;
+    right: 26px;
+    top: 24px;
+    cursor: pointer;
+
+    @include pc {
+        width: get_pc(51);
+        height: get_pc(51);
+        right: get_pc(26);
+        top: get_pc(24);
+    }
+
+    @include sp {
+        width: get_sp(25.47);
+        height: get_sp(19);
+        right: get_sp(7);
+        top: get_sp(13);
+    }
+
+    .line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            flex-shrink: 0;
+            background-color: #2d4b73;
+            transform-origin: center;
+            transition: all 0.2s linear;
+            border-radius: 999px;
+            width: 51px;
+            height: 51px;
+            margin-bottom: 7px;
+
+            @include pc {
+                width: get_pc(51);
+                height: get_pc(51);
+                margin-bottom: get_pc(7);
+            }
+
+            @include sp {
+                margin-bottom: get_sp(7);
+                width: get_sp(25.47);
+                height: get_sp(2);
+            }
+        }
+
+        &::after {
+            margin-bottom: 0;
+        }
+
+        span {
+            display: block;
+            flex-shrink: 0;
+            background-color: #2d4b73;
+            border-radius: 999px;
+            width: 51px;
+            height: 2px;
+            margin-bottom: 7px;
+
+            @include pc {
+                width: get_pc(51);
+                height: get_pc(2);
+                margin-bottom: get_pc(7);
+            }
+
+            @include sp {
+                width: get_sp(25.47);
+                height: get_sp(2);
+                margin-bottom: get_sp(7);
+            }
+        }
+    }
+
+    &.active {
+        .line {
+            span {
+                opacity: 0;
+            }
+
+            &::before {
+                width: 5px;
+                transform: rotate(45deg) translate(16px, 30px);
+                margin-bottom: 7px;
+
+                @include pc {
+                    width: get_pc(5);
+                    margin-bottom: get_pc(7);
+                    transform: rotate(45deg) translate(get_pc(16), get_pc(30));
+                }
+
+                @include sp {
+                    width: get_sp(20);
+                    margin-bottom: get_sp(7);
+                    transform: rotate(45deg) translate(get_sp(7), get_sp(7));
+                }
+            }
+
+            &::after {
+                width: 5px;
+                transform: rotate(-45deg) translate(17px, -31px);
+
+                @include pc {
+                    width: get_pc(5);
+                    transform: rotate(-45deg) translate(get_pc(17), get_pc(-31));
+                }
+
+                @include sp {
+                    width: get_sp(20);
+                    transform: rotate(-45deg) translate(get_sp(6), get_sp(-6));
+                }
+            }
+        }
+    }
+}
+
 /*
     pr
 */

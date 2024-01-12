@@ -78,13 +78,16 @@
                 </div>
             </div>
             <div class="util_sp">
+                <div class="close_search">
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/close_search_icon.svg' ?>" width="20" height="20" alt="exit">
+                </div>
                 <div class="hamburger">
                     <div class="line"><span></span></div>
                 </div>
             </div>
         </div>
         <div class="end_header section-hidden">
-            <nav class="slick-disabled nav_list edge_left">
+            <nav class="nav_list edge_left util_pc">
                 <ul class="side_header">
                     <li>
                         <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
@@ -120,6 +123,49 @@
                         <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
                     </li>
                 </ul>
+            </nav>
+            <nav class="nav_list edge_left util_sp">
+                <h2>カテゴリ一覧<span>（韓国・中国ドラマ、映画、アニメなど)</span></h2>
+                <div class="modal">
+                    <ul>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/korea/'))?>">韓国・韓流ドラマ</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/china/'))?>">中国・アジアドラマ</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/tabi/'))?>">旅・グルメ</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・<span>ドキュメンタリー</span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組 <span>(演歌・歌謡)</span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・<span>BS12 知っ得</span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
+                        </li>
+                    </ul>
+                    <div class="close active">
+                        <div class="line"><span></span></div>
+                    </div>
+                </div>
             </nav>
         </div>
         <nav class="nav_sp util_sp">
