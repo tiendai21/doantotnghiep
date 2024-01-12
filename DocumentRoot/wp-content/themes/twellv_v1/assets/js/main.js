@@ -26,7 +26,6 @@
         scrollAnimation(".broadcast_schedule a", 100);
         scrollAnimation(".list_year ul li a", 167);
         scrollAnimation(".list_brand a", 167);
-        // scrollAnimation(".list_brand ul li a", 167);
         handleSlide(".slide_top", false, false, true, true);
         slideBrand(".slide_brand ul", false);
         slideProgram(".slide_air", false, false);
@@ -49,11 +48,11 @@
         slideProgram(".brand_anime", false, false);
         slideProgram(".brand_entertainment", false, false);
         slideProgram(".brand_qvc", false, false);
-        slideNavList(".side_header", false, false);
         slideList(".slide_list", false, false);
         voiceList(".voice_list", false, false);
         synopsisList(".synopsis_list", false, false);
         showPopUp();
+        modalHeader();
         toggleReadMore();
         //pagination limited rewards
         limitRewardsPaging();
@@ -101,6 +100,23 @@
     }
 
     /*
+    Handle modal header sp
+     */
+
+    function modalHeader() {
+        if(_width <= _spmode) {
+            $(".end_header h2").on('click', function () {
+                $(".nav_list .modal").fadeIn();
+                $('body').css("overflow", "hidden");
+            });
+            $(".end_header .close").on('click', function () {
+                $(".nav_list .modal").fadeOut();
+                $('body').css("overflow", "initial");
+            });
+        }
+    }
+
+    /*
     *   Handle HomePage modal
     * */
     function showPopUp() {
@@ -122,14 +138,16 @@
                 $(this).addClass("active");
                 $("#___gcse_0").toggle("slide");
                 $(".header_link ul").addClass("active");
+                $(".close_search").fadeIn();
             });
-            $(document).click(function (event) {
-                if ($(event.target).closest("#___gcse_0").length === 0 && $("#___gcse_0 input").val() !== "") {
+            $(".close_search").click(function (event) {
+                // if ($(event.target).closest("#___gcse_0").length === 0 && $("#___gcse_0 input").val() !== "") {
                     $(".box_search_sp").removeClass("active");
                     $("#___gcse_0").toggle("slide");
                     $(".header_link ul").removeClass("active");
                     $("#___gcse_0 input").val("");
-                }
+                    $(this).fadeOut();
+                // }
             });
         }
     }
@@ -577,7 +595,7 @@
     window.onresize = function () {
         _width = $(window).width();
         if (_width <= _spmode) {
-            slideNavList(".side_header", false, false);
+            // slideNavList(".side_header", false, false);
         }
     };
 
