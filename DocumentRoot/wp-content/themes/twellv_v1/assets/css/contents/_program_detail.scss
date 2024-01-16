@@ -330,6 +330,7 @@
                 background-color: #C2D9F4;
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 @include sp {
                     display: block;
                     padding-bottom: get_sp(2);
@@ -351,15 +352,27 @@
                         line-height: get_sp(25);
                     }
                 }
+                >span {
+                    flex-basis: 100%;
+                    text-align: center;
+                    padding: 44px 0 25px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #16345A;
+                    @include pc {
+                        padding: get_pc(44) 0 get_pc(25);
+                        font-size: get_pc(30);
+                    }
+                }
                 .brand_left {
                     width: 1288px;
-                    padding: 25px 0 25px 238px;
+                    padding: 25px 0 58px 238px;
                     display: flex;
                     align-items: center;
                     transition: all .3s;
                     @include pc {
                         width: get_pc(1288);
-                        padding: get_pc(25) 0 get_pc(25) get_pc(238);
+                        padding: get_pc(25) 0 get_pc(58) get_pc(238);
                     }
 
                     @include sp {

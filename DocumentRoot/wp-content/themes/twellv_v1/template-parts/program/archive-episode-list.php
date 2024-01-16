@@ -49,7 +49,7 @@ if ($the_query->have_posts()) :
             </ul>
         </div>
         <div class="btn_all">
-            <span>もっと見る</span>
+            <span>ラインアップ一覧</span>
         </div>
     </div>
 </section>

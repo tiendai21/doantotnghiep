@@ -38,6 +38,7 @@ $args['meta_query'] = [
         $movietag = get_field('next_program_movietag');
         ?>
         <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null ?>">
+            <span>次回予告</span>
             <div class="brand_left">
                 <?php
                 if ($movietag) {
@@ -95,10 +96,10 @@ $args['meta_query'] = [
     if ($the_query->have_posts()) : ?>
 
         <div class="broadcast_schedule util_pc">
-            <a href="#episode">放送ラインアップ</a>
+            <a href="#episode">これまでの放送</a>
         </div>
         <div class="broadcast_schedule util_sp">
-            <a href="#episode">放送ラインアップ</a>
+            <a href="#episode">これまでの放送</a>
         </div>
     <?php endif; ?>
 </div>

@@ -56,12 +56,6 @@ foreach ($terms as $t) {
             <li>
                 <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
             </li>
-            <?php
-            if ($term_list_object->slug === 'korea' || $term_list_object->slug === 'china' || $term_list_object->slug === 'drama'): ?>
-                <li>
-                    <a href="<?php echo esc_url(home_url('/program/drama')) ?>">ドラマ・映画</a>
-                </li>
-            <?php endif; ?>
             <li>
                 <span><?php echo $term_list_object->name ?></span>
             </li>
