@@ -57,10 +57,13 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
             <div class="caution">
                 <p>ただいまページ移行作業中につき、表示が崩れている場合がございます。<br>大変申し訳ありませんが今しばらくお待ちください。</p>
             </div>
-        <?php } ?>
+        <?php }
+        $archive_bullet_design = get_field('archive_bullet_design', $archive_term);
+        if ($archive_bullet_design) :
+        ?>
         <h2 class="heading-title_lv1"><?php echo $archive_term->name; ?></h2>
-
         <?php
+        endif;
         // WYSIWYG
         $archive_top_text = get_field('archive_top_text', $archive_term);
         if ($archive_top_text) {
@@ -101,20 +104,25 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                 } else {
                     // ↑↑【ザ・カセットテープ・ミュージック】番組ページ改修 リスト表示デザイン変更処理 add 20200214 yanagi
                     ?>
-                    <section class="section" id="episode">
+                    <section class="section" id="archive-episode">
                         <div class="inner">
                             <div class="list_episode">
                                 <ul>
                                     <?php
                                     while (have_posts()) {
                                         the_post();
-                                        get_template_part('template-parts/program/lineup', 'item');
+                                        get_template_part('template-parts/program/archive-lineup', 'item');
                                     }
                                     ?>
                                 </ul>
-                            </div>
-                            <div class="btn_all">
-                                <span>もっと見る</span>
+                                <!--       Paging             -->
+                                <?php
+                                $total_pages = $the_query->max_num_pages;
+                                if (function_exists('custom_pagination')) :
+                                    custom_pagination($total_pages, 1, $paged);
+                                endif;
+                                ?>
+                                <!--       /Paging             -->
                             </div>
                         </div>
                     </section>
