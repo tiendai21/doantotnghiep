@@ -2367,69 +2367,134 @@ a {
 }
 
 .social_link {
-    li {
-        border-radius: 50%;
-        a {
-            &::before {
-                content: '';
-                display: inline-block;
+    text-align: center;
+    span {
+        display: block;
+        color: #134898;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 29px;
+        margin-bottom: 25px;
+        @include pc {
+            font-size: get_pc(20);
+            letter-spacing: get_pc(2);
+            line-height: get_pc(29);
+            margin-bottom: get_pc(25);
+        }
+        @include sp {
+            font-size: get_sp(16);
+            letter-spacing: get_sp(1.6);
+            line-height: get_sp(24);
+            margin-bottom: get_sp(12);
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+        @include pc {
+            margin-bottom: get_pc(100);
+        }
+        @include sp {
+            justify-content: space-between;
+            margin-bottom: get_sp(34);
+            padding: 0 get_sp(72);
+        }
+        li {
+            border-radius: 50%;
+            a {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 83px;
+                    height: 83px;
+                    transition: all ease 0.3s;
+                    @include pc {
+                        width: get_pc(83);
+                        height: get_pc(83);
+                    }
+                    @include sp {
+                        width: get_sp(50);
+                        height: get_sp(50);
+                    }
+                }
+            }
+        }
+        li:first-child {
+            a {
+                &::before {
+                    content: "";
+                    @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
+                }
+            }
+        }
+        li:nth-child(2) {
+            a {
+                &::before {
+                    content: "";
+                    @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
+                }
+            }
+        }
+        li:last-child {
+            a {
+                &:last-child {
+                    &::before {
+                        content: "";
+                        @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
+                    }
+                }
+            }
+        }
+        li:hover {
+            a {
+                opacity: initial;
+            }
+            &:first-child {
+                a::before {
+                    @include bgsetup("../images/logo_x_hover.png", center center, 100% auto, no-repeat);
+                }
+            }
+            &:nth-child(2) {
+                a::before {
+                    @include bgsetup("../images/logo_fb_hover.png", center center, 100% auto, no-repeat);
+                }
+            }
+            &:last-child {
+                a::before {
+                    @include bgsetup("../images/logo_line_hover.png", center center, 100% auto, no-repeat);
+                }
+            }
+        }
+        li {
+            &:not(:last-child) {
+                margin-right: 61px;
+                @include pc {
+                    margin-right: get_pc(61);
+                }
+                @include sp {
+                    margin-right: 0;
+                }
+            }
+            a {
+                display: block;
                 width: 83px;
                 height: 83px;
-                transition: all ease 0.3s;
                 @include pc {
                     width: get_pc(83);
                     height: get_pc(83);
                 }
                 @include sp {
-                    width: get_sp(50);
-                    height: get_sp(50);
+                    width: get_sp(51);
+                    height: get_sp(51);
                 }
-            }
-        }
-    }
-    li:first-child {
-        a {
-            &::before {
-                content: "";
-                @include bgsetup("../images/logo_x.png", center center, 100% auto, no-repeat);
-            }
-        }
-    }
-    li:nth-child(2) {
-        a {
-            &::before {
-                content: "";
-                @include bgsetup("../images/logo_fb.png", center center, 100% auto, no-repeat);
-            }
-        }
-    }
-    li:last-child {
-        a {
-            &:last-child {
-                &::before {
-                    content: "";
-                    @include bgsetup("../images/logo_line.png", center center, 100% auto, no-repeat);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
-            }
-        }
-    }
-    li:hover {
-        a {
-            opacity: initial;
-        }
-        &:first-child {
-            a::before {
-                @include bgsetup("../images/logo_x_hover.png", center center, 100% auto, no-repeat);
-            }
-        }
-        &:nth-child(2) {
-            a::before {
-                @include bgsetup("../images/logo_fb_hover.png", center center, 100% auto, no-repeat);
-            }
-        }
-        &:last-child {
-            a::before {
-                @include bgsetup("../images/logo_line_hover.png", center center, 100% auto, no-repeat);
             }
         }
     }

@@ -314,7 +314,7 @@
         .box_search_sp {
             @include sp {
                 cursor: pointer;
-                padding-left: get_sp(5.5);
+                padding-left: get_sp(4.4);
                 transition: all ease 0.3s;
                 &:hover {
                     opacity: 0.7;
@@ -329,7 +329,8 @@
                 @include sp {
                     width: get_sp(16);
                     height: get_sp(16);
-                    margin: 0 auto;
+                    margin: 0 auto get_sp(1);
+                    transform: translateY(get_sp(-2));
                 }
                 img {
                     width: 100%;
