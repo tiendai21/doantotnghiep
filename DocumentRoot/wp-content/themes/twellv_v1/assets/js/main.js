@@ -584,10 +584,18 @@
     }
 
     function showBtnTop() {
-        if($(window).scrollTop() > 1056) {
-            $('.btn_to_top').css("display", "flex");
+        if (_width > 960) {
+            if($(window).scrollTop() > 1056) {
+                $('.btn_to_top').css("display", "flex");
+            } else {
+                $('.btn_to_top').fadeOut();
+            }
         } else {
-            $('.btn_to_top').fadeOut();
+            if($(window).scrollTop() > 550) {
+                $('.btn_to_top').css("display", "flex");
+            } else {
+                $('.btn_to_top').fadeOut();
+            }
         }
     }
 

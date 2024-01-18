@@ -47,10 +47,10 @@
 
                         <li>
                             <a href="#">
-                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/light_icon.svg' ?>" width="14" height="21" alt="生活エンタ＆知っトク">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/light_icon.svg' ?>" width="14" height="21" alt="生活エンタ＆知っ得">
                                 <div class="topic">
                                     <span>生活エンタ</span>
-                                    <span>＆知っトク</span>
+                                    <span>＆知っ得</span>
                                 </div>
                             </a>
                         </li>
