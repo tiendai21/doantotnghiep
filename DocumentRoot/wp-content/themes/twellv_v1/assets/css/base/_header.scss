@@ -314,7 +314,7 @@
         .box_search_sp {
             @include sp {
                 cursor: pointer;
-                padding-left: get_sp(1.4);
+                padding-left: get_sp(3);
                 transition: all ease 0.3s;
                 &:hover {
                     opacity: 0.7;
