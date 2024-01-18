@@ -38,6 +38,7 @@ $args['meta_query'] = [
         $movietag = get_field('next_program_movietag');
         ?>
         <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null ?>">
+            <span class="util_pc">次回予告</span>
             <div class="brand_left">
                 <?php
                 if ($movietag) {
@@ -54,6 +55,7 @@ $args['meta_query'] = [
                 <?php } ?>
                 <div class="txt_desp">
                     <a href="<?php the_permalink() ?>">
+                        <span class="util_sp">次回予告</span>
                         <h2><?php the_title(); ?></h2>
                     </a>
                     <p><?php echo get_field('onairtime'); ?>
@@ -95,10 +97,10 @@ $args['meta_query'] = [
     if ($the_query->have_posts()) : ?>
 
         <div class="broadcast_schedule util_pc">
-            <a href="#episode">放送ラインアップ</a>
+            <a href="#episode">これまでの放送</a>
         </div>
         <div class="broadcast_schedule util_sp">
-            <a href="#episode">放送ラインアップ</a>
+            <a href="#episode">これまでの放送</a>
         </div>
     <?php endif; ?>
 </div>

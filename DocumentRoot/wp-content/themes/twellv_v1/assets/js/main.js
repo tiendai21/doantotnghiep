@@ -153,11 +153,11 @@
     }
 
     function toggleReadMore() {
-        const liElement = $(".list_episode ul li");
+        const liElement = $("#episode .list_episode ul li");
         if(liElement.length < 6) {
             $("#episode .btn_all").hide();
         }
-        $(".list_episode ul li:nth-child(-n + 5)").addClass('active');
+        $("#episode .list_episode ul li:nth-child(-n + 5)").addClass('active');
         $("#episode .btn_all").click(function () {
             var count = 0;
             liElement.each(function () {
@@ -166,7 +166,7 @@
                     count++;
                 }
             });
-            const liElementActive = $(".list_episode ul .active");
+            const liElementActive = $("#episode .list_episode ul .active");
             if (liElement.length === liElementActive.length) {
                 $(this).fadeIn(1000).hide();
             }
@@ -554,7 +554,7 @@
     }
 
     function limitRewardsPaging() {
-        $("body").on("click", "#pagination ul li a", function (e) {
+        $("body").on("click", "#limited_rewards #pagination ul li a", function (e) {
             e.preventDefault();
             const url = $(this).attr('href');
             $.ajax({

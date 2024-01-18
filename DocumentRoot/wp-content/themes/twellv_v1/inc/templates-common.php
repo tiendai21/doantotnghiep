@@ -103,7 +103,7 @@ function change_posts_per_page($query) {
         $code = get_field( 'code',  $query->term );
         // 番組内アーカイブ・放送スケジュール等(番組トップと番組大カテゴリ一覧: ドラマ、スポーツ等以外)
         if ( $code == '' && $query->parent !== 0){
-            $query->set( 'posts_per_page', '21' );//上記クエリ条件の変更（ページネーション設置につき21件表示）
+            $query->set( 'posts_per_page', '15' );//上記クエリ条件の変更（ページネーション設置につき21件表示）
         } else {
             // 番組トップと番組大カテゴリ一覧: ドラマ、スポーツ等
             $query->set( 'posts_per_page', '-1' );
