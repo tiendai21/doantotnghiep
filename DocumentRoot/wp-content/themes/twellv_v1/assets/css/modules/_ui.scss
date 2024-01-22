@@ -2837,3 +2837,12 @@ a {
         }
     }
 }
+
+.hide_prev {
+    &:before {
+        display: none;
+    }
+    .slick-prev {
+        visibility: hidden;
+    }
+}
