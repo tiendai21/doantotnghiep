@@ -5,12 +5,12 @@
     var list_content = $('.content_section');
     var list_title = list_day.find('.inner h3');
     var max_index = list_title.length;
-    var item = list_content.toArray().reduce((pre, cur, index)=>{
+    var item = list_content.toArray().reduce((pre, cur, index) => {
         var temp = $(cur).find('.item_content');
         return [...pre, temp];
-    },[])
-    $('.prev_day').on('click', function(){
-        if(current_index - 1 > 0){
+    }, [])
+    $('.prev_day').on('click', function () {
+        if (current_index - 1 > 0) {
             prev_index = current_index;
             current_index -= 1;
             //
@@ -26,8 +26,8 @@
 
         }
     });
-    $('.next_day').on('click', function(){
-        if(current_index + 1 < max_index){
+    $('.next_day').on('click', function () {
+        if (current_index + 1 < max_index) {
             prev_index = current_index;
             current_index += 1;
 
@@ -43,7 +43,14 @@
 
         }
     });
-
+    $("#schedule .main_body").ready(function () {
+        $("body,html").animate(
+            {
+                scrollTop: 0,
+            },
+            500
+        );
+    })
 
 })(jQuery);
 

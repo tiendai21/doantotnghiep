@@ -26,7 +26,7 @@
         scrollAnimation(".broadcast_schedule a", 100);
         scrollAnimation(".list_year ul li a", 167);
         scrollAnimation(".list_brand a", 167);
-        handleSlide(".slide_top", false, false, true, true);
+        handleSlide(".slide_top", false, true, true, true);
         slideBrand(".slide_brand ul", false);
         slideProgram(".slide_air", false, false);
         slideProgram(".slide_history", false, false);
