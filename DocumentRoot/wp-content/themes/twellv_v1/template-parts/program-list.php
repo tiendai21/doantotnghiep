@@ -158,21 +158,6 @@ foreach ($terms as $t) {
                         ?>
                     </div>
                 </div>
-                <div class="dramas_slide_bottom">
-                    <div class="program_slide dramas_bottom">
-                        <?php
-                        if (!empty($programs_arr[2])) {
-                            $za_arr = $programs_arr[2];
-                            usort($za_arr, function($a, $b) {
-                                return strcmp($a->name, $b->name);
-                            });
-                            foreach ($za_arr as $t) {
-                                tpl_program_list_item($t);
-                            }
-                        }
-                        ?>
-                    </div>
-                </div>
             </div>
             <?php get_template_part('template-parts/home/modal_category', null, array('title' => $term_list_object_name, 'modal' => $dramas_on_air_modal)); ?>
         </div>

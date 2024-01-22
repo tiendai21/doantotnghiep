@@ -342,6 +342,11 @@
             ],
             // initialSlide: 1,
         });
+        $('.slide_news').one('beforeChange', function(event, slick, currentSlide, nextSlide){
+            if (currentSlide === 0) {
+                $(this).removeClass('hide_prev');
+            }
+        });
         $(".slick-next").click(function () {
             $(this).siblings(".slick-prev").addClass("active");
         });

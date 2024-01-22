@@ -646,7 +646,13 @@
             }
         }
     }
-
+    #schedule {
+        height: 90vh;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
     #other {
         .tlt_section {
             background-color: unset;
