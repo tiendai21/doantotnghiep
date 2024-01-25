@@ -476,6 +476,23 @@
                                     padding: 0;
                                     margin-bottom: 0;
                                 }
+                                .reair {
+                                    color: white;
+                                    background-color: #335683;
+                                    border-radius: 5px;
+                                    padding: 3px 4px 4px 6px;
+                                    font-size: 14px;
+                                    font-weight: normal;
+                                    vertical-align: bottom;
+                                    @include pc {
+                                        padding: get_pc(3) get_pc(4) get_pc(4) get_pc(6);
+                                        font-size: get_pc(14);
+                                    }
+                                    @include sp {
+                                        padding: get_sp(2) get_sp(4) get_sp(3) get_sp(5);
+                                        font-size: get_sp(11);
+                                    }
+                                }
                             }
                         }
                     }
