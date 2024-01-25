@@ -262,6 +262,8 @@
                 fade: _fade,
                 slidesToShow: 2,
                 focusOnSelect: true,
+                pauseOnFocus: false,
+                pauseOnHover: false,
                 speed: 500,
                 centerMode: _mode,
                 centerPadding: "10.5%",

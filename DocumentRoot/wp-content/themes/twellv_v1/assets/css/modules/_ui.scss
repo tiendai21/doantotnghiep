@@ -1862,16 +1862,18 @@ a {
 
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
-            margin: 0 -21px;
+            margin: 0 auto;
+            width: 1284px;
             flex-wrap: wrap;
 
             @include pc {
-                margin: 0 get_pc(-21);
+                width: get_pc(1284);
             }
 
             @include sp {
+                width: initial;
                 margin: 0 get_sp(-2);
                 justify-content: space-between;
                 padding: 0 get_sp(2);
@@ -1880,7 +1882,12 @@ a {
             li {
                 padding: 0 21px;
                 margin-bottom: 14px;
-
+                &:nth-child(3n + 1) {
+                  padding-left: 0;
+                }
+                &:nth-child(3n) {
+                    padding-right: 0;
+                }
                 @include pc {
                     padding: 0 get_pc(21);
                     margin-bottom: get_pc(14);
@@ -1930,7 +1937,7 @@ a {
                         border-radius: get_sp(49);
                         padding: 0 get_sp(10);
                         letter-spacing: 0;
-                        font-size: get_sp(14);
+                        font-size: get_sp(13.5);
                         width: 100%;
                         height: get_sp(44);
                     }
