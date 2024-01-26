@@ -39,18 +39,32 @@ if ($the_query->have_posts()) :
             <ul>
                 <?php
                 if ($the_query->have_posts()) {
+                    $i = 0;
                     while ($the_query->have_posts()) {
+                        $i++;
                         $the_query->the_post();
                         get_template_part('template-parts/program/lineup', 'item');
+                        if ($i === 5) break;
                     }
                 }
                 wp_reset_postdata();
                 ?>
             </ul>
         </div>
-        <div class="btn_all">
-            <span>ラインアップ一覧</span>
-        </div>
+        <?php
+        global $bs12_program_top_parts_arr;
+        $nav = $bs12_program_top_parts_arr['nav'];
+        while (have_rows('navs', $nav->ID)) :
+            the_row();
+            $link = get_sub_field('link');
+            if (str_contains($link, 'archive')) : ?>
+                <a class="btn_all" href=<?php echo $link?>>
+                    <span>ラインアップ一覧</span>
+                </a>
+            <?php
+            endif;
+        endwhile;
+        ?>
     </div>
 </section>
 <?php endif;?>

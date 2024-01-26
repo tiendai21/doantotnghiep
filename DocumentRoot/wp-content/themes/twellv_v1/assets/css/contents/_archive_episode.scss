@@ -81,6 +81,7 @@
             padding-bottom: 26px;
             border-bottom: 3px solid #004898;
             margin-bottom: 50px;
+            text-align: center;
             @include pc {
                 font-size: get_pc(30);
                 letter-spacing: get_pc(3);
@@ -96,7 +97,6 @@
                 padding-bottom: get_sp(11.79);
                 border-bottom: get_sp(2) solid #004898;
                 margin-bottom: get_sp(15.88);
-                text-align: center;
             }
         }
         .thumb {
@@ -394,6 +394,8 @@
             font-size: 28px;
             letter-spacing: 1.4px;
             line-height: 40px;
+            display: block;
+            text-align: center;
             @include pc {
                 font-size: get_pc(28);
                 line-height: get_pc(40);
@@ -403,8 +405,6 @@
                 font-size: get_sp(17);
                 line-height: get_sp(25);
                 letter-spacing: get_sp(0.85);
-                text-align: center;
-                display: block;
             }
         }
     }
