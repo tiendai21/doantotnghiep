@@ -53,7 +53,6 @@
         synopsisList(".synopsis_list", false, false);
         showPopUp();
         modalHeader();
-        toggleReadMore();
         //pagination limited rewards
         limitRewardsPaging();
         // categorry
@@ -150,27 +149,6 @@
                 // }
             });
         }
-    }
-
-    function toggleReadMore() {
-        const liElement = $("#episode .list_episode ul li");
-        if(liElement.length < 6) {
-            $("#episode .btn_all").hide();
-        }
-        $("#episode .list_episode ul li:nth-child(-n + 5)").addClass('active');
-        $("#episode .btn_all").click(function () {
-            var count = 0;
-            liElement.each(function () {
-                if (!$(this).hasClass("active") && count < 5) {
-                    $(this).stop().fadeIn(1000).addClass("active");
-                    count++;
-                }
-            });
-            const liElementActive = $("#episode .list_episode ul .active");
-            if (liElement.length === liElementActive.length) {
-                $(this).fadeIn(1000).hide();
-            }
-        });
     }
 
     function toggleShowAll() {

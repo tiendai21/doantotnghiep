@@ -1,6 +1,6 @@
 <?php
 ?>
-<li>
+<li class="active">
     <div class="tlt">
         <div class="thumb">
             <?php
