@@ -126,10 +126,13 @@ foreach ($terms as $t) {
                 <h2>
                     <?php
                     if ($term_list_object->slug === 'korea') {
+                        $modal_ttl = '放送中の韓国・韓流ドラマ';
                         echo '放送中の韓国・韓流ドラマ';
                     } elseif ($term_list_object->slug === 'china') {
+                        $modal_ttl = '放送中の中国・アジアドラマ';
                         echo '放送中の中国・アジアドラマ';
                     } else {
+                        $modal_ttl = esc_attr($term_list_object_name);
                         echo esc_attr($term_list_object_name);
                     }
                     ?>
@@ -159,7 +162,7 @@ foreach ($terms as $t) {
                     </div>
                 </div>
             </div>
-            <?php get_template_part('template-parts/home/modal_category', null, array('title' => $term_list_object_name, 'modal' => $dramas_on_air_modal)); ?>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => $modal_ttl, 'modal' => $dramas_on_air_modal)); ?>
         </div>
     </section>
 
@@ -222,34 +225,7 @@ foreach ($terms as $t) {
     <?php endif;
     ?>
     <!-- /look at the program -->
-    <!-- Korean dramas scheduled to air -->
-    <?php
-    if (!empty($programs_arr[1])) : ?>
-        <section class="section" id="dramas_scheduled">
-            <div class="inner">
-                <div class="tlt_section">
-                    <h2>放送予定の<?php echo esc_attr($term_list_object_name); ?></h2>
-                    <div class="btn_more">
-                        <span>すべて見る</span>
-                    </div>
-                </div>
-                <div class="program_slide side_brand">
-                    <?php
-                    foreach ($programs_arr[1] as $t) {
-                        ob_start();
-                        get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
-                        $scheduled_modal .= ob_get_contents();
-                        ob_end_clean();
-                        tpl_program_list_item_pre($t);
-                    } ?>
-                </div>
-                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の'. esc_attr($term_list_object_name), 'modal' => $scheduled_modal)); ?>
-            </div>
-        </section>
-    <?php
-    endif;
-    ?>
-    <!-- /Korean dramas scheduled to air -->
+
     <!-- The Korean drama has ended its broadcast -->
     <?php if (preg_match('/korea/', $term_list_object->slug)) : ?>
         <section class="section" id="dramas_ended">
