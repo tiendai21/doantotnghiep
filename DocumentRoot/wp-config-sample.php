@@ -18,6 +18,13 @@
  * @package WordPress
  */
 
+define ('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
+define ('ADMIN_SITEURL', '');
+define ('ADMIN_COOKIE_PATH', FALSE);
+define ('COOKIE_DOMAIN', '');
+
+define('CRXL_CMS_ENABLED', true);
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'database_name_here' );

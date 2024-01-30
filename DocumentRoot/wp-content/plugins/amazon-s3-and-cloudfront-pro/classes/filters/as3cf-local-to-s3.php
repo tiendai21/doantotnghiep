@@ -139,6 +139,12 @@ class AS3CF_Local_To_S3 extends AS3CF_Filter {
 			// Original domain and path.
 			$uploads     = wp_upload_dir();
 			$base_url    = AS3CF_Utils::remove_scheme( $uploads['baseurl'] );
+			
+			// If wp-admin install as separated server
+			if ( CRXL_CMS_ENABLED ) {
+				$base_url = ADMIN_SITEURL;
+			}
+
 			$orig_domain = AS3CF_Utils::parse_url( $base_url, PHP_URL_HOST );
 			$domains[]   = $orig_domain;
 			$base_urls[] = $base_url;
