@@ -19,6 +19,7 @@
  */
 
 define ('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
+define ('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST']);
 define ('ADMIN_SITEURL', '');
 define ('ADMIN_COOKIE_PATH', FALSE);
 define ('COOKIE_DOMAIN', '');
