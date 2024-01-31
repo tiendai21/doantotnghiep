@@ -2580,6 +2580,22 @@
             }
         }
     }
+    .backToList {
+        font-size: 24px;
+        text-align: center;
+        display: block;
+        font-weight: 900;
+        color: #004898;
+        margin-bottom: 40px;
+        @include pc {
+            font-size: get_pc(24);
+            margin-bottom: get_pc(40);
+        }
+        @include sp {
+            font-size: get_sp(20);
+            margin-bottom: get_sp(40);
+        }
+    }
 }
 
 #kboard {
