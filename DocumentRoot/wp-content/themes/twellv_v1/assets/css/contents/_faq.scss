@@ -260,6 +260,7 @@
             padding: 0 0 20px;
             margin: 0 auto 34px;
             border-bottom: 2px solid #fff;
+            justify-content: flex-start;
             @include pc {
                 margin-bottom: get_pc(34);
                 padding: 0 0 get_pc(20);
@@ -273,7 +274,8 @@
             h2 {
                 display: flex;
                 align-items: center;
-
+                position: initial;
+                transform: initial;
                 &:before {
                     content: "";
                     @include bgsetup("../images/icon_faq.svg", center center, 100% auto, no-repeat);

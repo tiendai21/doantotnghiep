@@ -103,7 +103,7 @@
      */
 
     function modalHeader() {
-        if(_width <= _spmode) {
+        if (_width <= _spmode) {
             $(".end_header h2").on('click', function () {
                 $(".nav_list .modal").fadeIn();
                 $('body').css("overflow", "hidden");
@@ -141,11 +141,11 @@
             });
             $(".close_search").click(function (event) {
                 // if ($(event.target).closest("#___gcse_0").length === 0 && $("#___gcse_0 input").val() !== "") {
-                    $(".box_search_sp").removeClass("active");
-                    $("#___gcse_0").toggle("slide");
-                    $(".header_link ul").removeClass("active");
-                    $("#___gcse_0 input").val("");
-                    $(this).fadeOut();
+                $(".box_search_sp").removeClass("active");
+                $("#___gcse_0").toggle("slide");
+                $(".header_link ul").removeClass("active");
+                $("#___gcse_0 input").val("");
+                $(this).fadeOut();
                 // }
             });
         }
@@ -322,7 +322,7 @@
             ],
             // initialSlide: 1,
         });
-        $('.slide_news').one('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.slide_news').one('beforeChange', function (event, slick, currentSlide, nextSlide) {
             if (currentSlide === 0) {
                 $(this).removeClass('hide_prev');
             }
@@ -388,16 +388,18 @@
     }
 
     function synopsisList(_sliderElm, _fade, _centerMode) {
-        if ($(`${_sliderElm} .item_slide`).length > 1) {
-            $(_sliderElm).slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                variableWidth: true,
-            });
-        }
+        $(_sliderElm).each(function () {
+            if ($(this).find(".item_slide").length > 1) {
+                $(this).slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    variableWidth: true,
+                });
+            }
+        });
     }
 
     function voiceList(_sliderElm, _fade, _centerMode) {
@@ -572,13 +574,13 @@
 
     function showBtnTop() {
         if (_width > 960) {
-            if($(window).scrollTop() > 1056) {
+            if ($(window).scrollTop() > 1056) {
                 $('.btn_to_top').css("display", "flex");
             } else {
                 $('.btn_to_top').fadeOut();
             }
         } else {
-            if($(window).scrollTop() > 550) {
+            if ($(window).scrollTop() > 550) {
                 $('.btn_to_top').css("display", "flex");
             } else {
                 $('.btn_to_top').fadeOut();

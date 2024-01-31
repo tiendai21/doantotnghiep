@@ -61,15 +61,30 @@
     #archive_episode {
         .inner {
             max-width: 1469px;
-            margin: 0 auto 82px;
+            margin: 0 auto;
             @include pc {
                 max-width: get_pc(1469);
-                margin: 0 auto get_pc(82);
             }
             @include sp {
                 width: 100%;
                 padding: 0 get_sp(16);
                 margin-bottom: get_sp(16);
+            }
+            .video {
+                text-align: center;
+            }
+            .gray-box {
+                .txtlink-list {
+                    margin-bottom: 0;
+                    align-items: flex-start;
+                    @include sp {
+                        padding: 0;
+                    }
+                    li a {
+                        width: initial;
+                        height: initial;
+                    }
+                }
             }
         }
         h2 {
