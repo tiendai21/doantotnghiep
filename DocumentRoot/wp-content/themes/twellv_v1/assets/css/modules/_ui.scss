@@ -2734,9 +2734,12 @@ a {
 }
 
 .carousel_images_block {
-    margin-bottom: 100px;
+    margin-bottom: 130px;
     @include pc {
-        margin-bottom: get_pc(100);
+        margin-bottom: get_pc(130);
+    }
+    @include sp {
+        margin-bottom: get_sp(60);
     }
     .program_slide {
         display: flex;
