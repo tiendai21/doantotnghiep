@@ -232,3 +232,92 @@ function custom_modify_archive_posts($posts, $query)
 }
 add_filter('the_posts', 'custom_modify_archive_posts', 10, 2);
 
+// Admine clear cache menu
+$crxl_cfi_page = 'Cache Manager';
+$crxl_cfi_slug = 'cf-invalidation';
+function cfi_admin_page_contents()
+{
+}
+
+function cfi_admin_menu()
+{
+    global $crxl_cfi_page, $crxl_cfi_slug;
+    add_menu_page(
+        __($crxl_cfi_page),
+        __($crxl_cfi_page),
+        'manage_options',
+        $crxl_cfi_slug,
+        'cfi_admin_page_contents',
+        'dashicons-schedule',
+    );
+}
+
+add_action('admin_menu', 'cfi_admin_menu');
+
+function cfi_remove_menu_pages()
+{
+    global $crxl_cfi_slug;
+    remove_menu_page($crxl_cfi_slug);
+}
+
+add_action('admin_init', 'cfi_remove_menu_pages');
+
+add_action('admin_init', function () {
+    global $pagenow, $crxl_cfi_slug;
+    if (($pagenow === 'admin.php') && ($_GET['page'] === $crxl_cfi_slug)) {
+        if ($_GET['types']) {
+            $types = explode(',', $_GET['types']);
+            foreach ($types as $type) {
+                if ($type !== 'kusanagi')
+                    exec('aws cloudfront create-invalidation --distribution-id ' . constant('CFI_' . strtoupper($type) . '_ID') . ' --paths ' . CFI_PATHS);
+                else
+                    exec('aws lambda invoke --function-name ' . CFL_FUNCTION_NAME . 'outfile --region' . CFL_REGION);
+            }
+        }
+        wp_redirect(admin_url());
+    }
+});
+
+function cfi_custom_toolbar_link($wp_admin_bar)
+{
+    global $crxl_cfi_page, $crxl_cfi_slug;
+    $args = array(
+        'id' => $crxl_cfi_slug,
+        'title' => $crxl_cfi_page
+    );
+    $wp_admin_bar->add_node($args);
+
+    $args = array(
+        'id' => $crxl_cfi_slug . '-all',
+        'title' => 'Clear All Cache',
+        'href' => admin_url('admin.php?page=' . $crxl_cfi_slug . '&types=web,theme,kusanagi'),
+        'parent' => $crxl_cfi_slug,
+    );
+    $wp_admin_bar->add_node($args);
+
+    $args = array(
+        'id' => $crxl_cfi_slug . '-web',
+        'title' => 'Clear Web Cache',
+        'href' => admin_url('admin.php?page=' . $crxl_cfi_slug . '&types=web'),
+        'parent' => $crxl_cfi_slug,
+    );
+    $wp_admin_bar->add_node($args);
+
+    $args = array(
+        'id' => $crxl_cfi_slug . '-theme',
+        'title' => 'Clear Theme Cache',
+        'href' => admin_url('admin.php?page=' . $crxl_cfi_slug . '&types=theme'),
+        'parent' => $crxl_cfi_slug,
+    );
+    $wp_admin_bar->add_node($args);
+
+    $args = array(
+        'id' => $crxl_cfi_slug . '-kusanagi',
+        'title' => 'Clear Kusanagi Cache',
+        'href' => admin_url('admin.php?page=' . $crxl_cfi_slug . '&types=kusanagi'),
+        'parent' => $crxl_cfi_slug,
+    );
+    $wp_admin_bar->add_node($args);
+}
+
+add_action('admin_bar_menu', 'cfi_custom_toolbar_link', 9999);
