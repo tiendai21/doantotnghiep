@@ -271,8 +271,7 @@ add_action('admin_init', function () {
                 if ($type !== 'kusanagi')
                     exec('aws cloudfront create-invalidation --distribution-id ' . constant('CFI_' . strtoupper($type) . '_ID') . ' --paths ' . CFI_PATHS);
                 else
-                    $base64Payload = base64_encode('{"tagKey": "'. CFL_TAG_KEY .'", "tagValue": "'. CFL_TAG_VALUE .'"}');
-                exec('aws lambda invoke --function-name ' . CFL_FUNCTION_NAME . ' --payload ' . $base64Payload . ' --invocation-type Event ' . CFL_OUTPUT_FILE);
+                    exec('aws lambda invoke --function-name ' . CFL_FUNCTION_NAME . 'outfile --region' . CFL_REGION);
             }
         }
         wp_redirect(admin_url());

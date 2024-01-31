@@ -26,6 +26,13 @@ define ('COOKIE_DOMAIN', '');
 
 define('CRXL_CMS_ENABLED', true);
 
+define('CFL_FUNCTION_NAME', '');
+define('CFL_REGION', 'ap-northeast-1');
+
+define( 'CFI_WEB_ID', '' );
+define( 'CFI_THEME_ID', '' );
+define( 'CFI_PATHS', '"/*"' );
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'database_name_here' );
