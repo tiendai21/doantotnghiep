@@ -278,7 +278,7 @@ foreach ($terms as $t) {
                     }
                     ?>
                 </div>
-                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送終了の韓国ドラマ', 'modal' => $dramas_ended_modal)); ?>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送終了の' . esc_attr($term_list_object_name), 'modal' => $dramas_ended_modal)); ?>
             </div>
         </section>
     <?php endif; ?>

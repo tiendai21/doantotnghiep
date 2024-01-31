@@ -388,14 +388,16 @@
     }
 
     function synopsisList(_sliderElm, _fade, _centerMode) {
-        $(_sliderElm).slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            adaptiveHeight: true,
-            variableWidth: true,
-        });
+        if ($(`${_sliderElm} .item_slide`).length > 1) {
+            $(_sliderElm).slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                variableWidth: true,
+            });
+        }
     }
 
     function voiceList(_sliderElm, _fade, _centerMode) {
@@ -591,7 +593,6 @@
             // slideNavList(".side_header", false, false);
         }
     };
-
 
     window.onscroll = function () {
         showBtnTop();
