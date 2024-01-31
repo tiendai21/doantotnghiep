@@ -2014,6 +2014,25 @@
         .list {
             width: 100%;
         }
+        .gray-box {
+            margin-bottom: 30px;
+            flex-wrap: nowrap;
+            @include pc {
+                margin-bottom: get_pc(30);
+            }
+            @include sp {
+                margin-bottom: get_sp(20);
+            }
+            .link {
+                margin-left: 20px;
+                @include pc {
+                    margin-left: get_pc(20);
+                }
+                @include sp {
+                    margin-left: 0;
+                }
+            }
+        }
         .image_text_block {
             display: flex;
             justify-content: space-between;

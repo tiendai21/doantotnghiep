@@ -254,7 +254,7 @@ function display_program_recommend_by_category_slug($slug)
                         </div>
                     <?php } ?>
                 </div>
-                <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'おすすめ韓国'. $category_term->name, 'modal' => $archive_modal)); ?>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'おすすめ'. $category_term->name, 'modal' => $archive_modal)); ?>
             </div>
         </section>
     <?php

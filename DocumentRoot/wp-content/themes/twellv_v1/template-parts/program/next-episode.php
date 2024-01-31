@@ -11,6 +11,7 @@ $parent_term_object = get_term($parent_term_id);
 $previewURL = get_field('preview_button_url', $parent_term_object);
 $hasLivePreview = get_field('show_preview_button', $parent_term_object);
 $previewBanner = get_field('preview_banner', $parent_term_object);
+$status = (int)get_field('onair', $parent_term_object);
 
 $args['post_type'] = 'program';
 $args['posts_per_page'] = 1;
@@ -37,7 +38,8 @@ $args['meta_query'] = [
         $the_query->the_post();
         $movietag = get_field('next_program_movietag');
         ?>
-        <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null ?>">
+        <?php if($status != 3) : ?>
+            <div class="next-ep <?= $hasLivePreview ? 'live_preview' : null ?>">
             <span class="util_pc">次回予告</span>
             <div class="brand_left">
                 <?php
@@ -77,6 +79,7 @@ $args['meta_query'] = [
                 </div>
             <?php endif; ?>
         </div>
+        <?php endif; ?>
     <?php endwhile;
     ?>
     <?php
