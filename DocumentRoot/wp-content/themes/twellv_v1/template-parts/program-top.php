@@ -121,6 +121,9 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <?php get_template_part('template-parts/home/other_top', null, array('social' => true, 'type' => 'famous')); ?>
         <!-- /other -->
     <?php endif; ?>
+
+    <!--  back to cat  -->
+    <a href=<?php echo get_term_link($parent_term)?> class="backToList"><?php echo $parent_term->name?>に戻る</a>
 </main>
 <!-- /main -->
 

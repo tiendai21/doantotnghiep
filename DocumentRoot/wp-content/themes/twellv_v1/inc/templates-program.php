@@ -514,13 +514,6 @@ function get_term_category_link()
     if (is_singular('program')) {
         $program_term = parent_program_term_object();
     }
-    $category_term  = get_term_by('id', $program_term->parent, 'program_cat');
-    //var_dump($category_term );
-    if($category_term != false){
-    ?>
-    <a href="<?php echo get_term_link($category_term); ?>" class="backToList"><?php echo $category_term->name . "一覧へ戻る" ?></a>
-    <?php
-    }
 }
 
 /**

@@ -132,8 +132,8 @@ foreach ($terms as $t) {
                         $modal_ttl = '放送中の中国・アジアドラマ';
                         echo '放送中の中国・アジアドラマ';
                     } else {
-                        $modal_ttl = esc_attr($term_list_object_name);
-                        echo esc_attr($term_list_object_name);
+                        $modal_ttl = '放送中の'.esc_attr($term_list_object_name);
+                        echo '放送中の' . esc_attr($term_list_object_name);
                     }
                     ?>
                 </h2>

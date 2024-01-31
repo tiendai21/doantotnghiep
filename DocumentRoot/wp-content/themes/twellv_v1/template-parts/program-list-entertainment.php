@@ -105,7 +105,7 @@ foreach ($terms as $t) {
                     </div>
                 </div>
             </div>
-            <?php get_template_part('template-parts/home/modal_category', null, array('title' => 'test', 'modal' => $dramas_on_air_modal)); ?>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => esc_attr( $term_list_object_name ), 'modal' => $dramas_on_air_modal)); ?>
             <div class="btn_watch">
                 <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
                     <span></span>
