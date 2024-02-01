@@ -1596,50 +1596,56 @@
                                 padding: get_sp(23) get_sp(6) get_sp(30);
                                 min-height: get_sp(160);
                             }
-
-                            h4 {
-                                font-size: 25px;
-                                margin-bottom: 19px;
-                                line-height: 37px;
-                                font-weight: bold;
-                                letter-spacing: 2.5px;
-                                color: #004898;
+                            .tlt {
+                                margin-bottom: 15px;
                                 @include pc {
-                                    font-size: get_pc(25);
-                                    margin-bottom: get_pc(19);
-                                    line-height: get_pc(37);
-                                    letter-spacing: get_pc(2.5);
+                                    margin-bottom: get_pc(15);
                                 }
-
                                 @include sp {
-                                    margin-left: get_sp(3);
-                                    font-size: get_sp(18);
-                                    line-height: get_sp(27);
-                                    margin-bottom: get_sp(8);
-                                    letter-spacing: get_sp(1.8);
+                                    margin-bottom: get_sp(5);
                                 }
-                            }
+                                h4 {
+                                    font-size: 25px;
+                                    margin-bottom: 5px;
+                                    line-height: 37px;
+                                    font-weight: bold;
+                                    letter-spacing: 2.5px;
+                                    color: #004898;
+                                    @include pc {
+                                        font-size: get_pc(25);
+                                        margin-bottom: get_pc(5);
+                                        line-height: get_pc(37);
+                                        letter-spacing: get_pc(2.5);
+                                    }
 
-                            span {
-                                font-size: 16px;
-                                line-height: 24px;
-                                font-weight: 400;
-                                color: #000000;
-                                letter-spacing: 0.8px;
-                                display: inline-block;
-
-                                @include pc {
-                                    font-size: get_pc(16);
-                                    margin-bottom: get_pc(24);
-                                    line-height: get_pc(24);
-                                    letter-spacing: get_pc(0.8);
+                                    @include sp {
+                                        margin-left: get_sp(3);
+                                        font-size: get_sp(18);
+                                        line-height: get_sp(27);
+                                        margin-bottom: 0;
+                                        letter-spacing: get_sp(1.8);
+                                    }
                                 }
 
-                                @include sp {
-                                    font-size: get_sp(16);
-                                    margin-bottom: get_sp(0);
-                                    line-height: get_sp(24);
-                                    letter-spacing: get_sp(0.8);
+                                span {
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    font-weight: 900;
+                                    color: #004898;
+                                    letter-spacing: 0.8px;
+                                    display: inline-block;
+
+                                    @include pc {
+                                        font-size: get_pc(18);
+                                        line-height: get_pc(24);
+                                        letter-spacing: get_pc(0.8);
+                                    }
+
+                                    @include sp {
+                                        font-size: get_sp(16);
+                                        line-height: get_sp(24);
+                                        letter-spacing: get_sp(0.8);
+                                    }
                                 }
                             }
 
