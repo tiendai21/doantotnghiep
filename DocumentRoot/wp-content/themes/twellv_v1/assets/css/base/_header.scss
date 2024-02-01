@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 17px 22px 16px 28px;
+        padding: 9.83px 22px 9.83px 24px;
         background-color: $clr-base;
         position: fixed;
         top: 0;
@@ -15,11 +15,11 @@
         z-index: 992;
 
         @include pc {
-            padding: get_pc(17) get_pc(22) get_pc(16) get_pc(28);
+            padding: get_pc(9.83) get_pc(22) get_pc(9.83) get_pc(24);
         }
 
         @include sp {
-            padding: get_sp(8) get_sp(4) get_sp(8) get_sp(5);
+            padding: get_sp(6.31) get_sp(4) get_sp(6.31) get_sp(9.72);
             justify-content: unset;
             height: get_sp(50);
         }
@@ -31,14 +31,16 @@
         .logo {
             a {
                 display: block;
-                width: 283px;
-
+                width: 106.92px;
+                height: 60.33px;
                 @include pc {
-                    width: get_pc(283);
+                    width: get_pc(106.92);
+                    height: get_pc(60.33);
                 }
 
                 @include sp {
-                    width: get_sp(110);
+                    width: get_sp(64.46);
+                    height: get_sp(36.37);
                 }
             }
         }
@@ -46,6 +48,12 @@
         .header_link {
             display: flex;
             align-items: center;
+            @include sp {
+                flex: 1;
+                display: flex;
+                justify-content: end;
+                margin-right: get_sp(34);
+            }
             form {
                 &.gsc-search-box {
                     margin-bottom: 0;

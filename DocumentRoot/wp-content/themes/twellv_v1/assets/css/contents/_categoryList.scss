@@ -275,6 +275,62 @@
         }
     }
 
+    #banner_entertainment {
+        margin-bottom: 47px;
+        @include pc {
+            margin-bottom: get_pc(47);
+        }
+        @include sp {
+            margin-bottom: get_sp(21);
+        }
+        .inner {
+            padding: 54px 172px 48px;
+            background-color: #E8F3FF;
+            @include pc {
+                padding: get_pc(54) get_pc(172) get_pc(48);
+            }
+            @include sp {
+                padding: get_sp(17) get_sp(16) get_sp(35);
+            }
+            h2 {
+                color: #004898;
+                font-size: 35px;
+                letter-spacing: 3.5px;
+                line-height: 52px;
+                font-weight: bold;
+                position: relative;
+                @include pc {
+                    font-size: get_pc(35);
+                    letter-spacing: get_pc(3.5);
+                    line-height: get_pc(52);
+                }
+                @include sp {
+                    font-size: get_sp(20);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(29);
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    left: 0;
+                    right: 0;
+                    bottom: -22.5px;
+                    background-color: #fff;
+                    @include pc {
+                        height: get_pc(3);
+                        bottom: get_pc(-22.5);
+                    }
+                    @include sp {
+                        height: get_sp(2);
+                        bottom: get_sp(-16.38);
+                    }
+                }
+            }
+        }
+    }
+
     /*
         korea dramas on air
     */
@@ -537,6 +593,58 @@
 
             @include sp {
                 margin-bottom: get_sp(22);
+            }
+        }
+    }
+
+    .entertainment {
+        .inner >p {
+            padding-left: 172px;
+            font-size: 25px;
+            letter-spacing: 2.5px;
+            line-height: 36px;
+            margin-bottom: 35px;
+            font-weight: bold;
+            @include pc {
+                padding-left: get_pc(172);
+                font-size: get_pc(25);
+                letter-spacing: get_pc(2.5);
+                line-height: get_pc(36);
+                margin-bottom: get_pc(35);
+            }
+            @include sp {
+                padding: 0 get_sp(14);
+                font-size: get_sp(16);
+                letter-spacing: get_sp(1.6);
+                line-height: get_sp(24);
+                margin-bottom: get_sp(24);
+            }
+        }
+        .tlt_section {
+            justify-content: flex-start;
+            margin-bottom: 72.5px;
+            @include pc {
+                margin-bottom: get_pc(72.5);
+            }
+            @include sp {
+                margin-bottom: get_sp(39.62);
+            }
+            h2 {
+                position: initial;
+                transform: initial;
+                font-size: 35px;
+                letter-spacing: 3.5px;
+                line-height: 52px;
+                @include pc {
+                    font-size: get_pc(35);
+                    letter-spacing: get_pc(3.5);
+                    line-height: get_pc(52);
+                }
+                @include sp {
+                    font-size: get_sp(20);
+                    letter-spacing: get_sp(1.6);
+                    line-height: get_sp(29);
+                }
             }
         }
     }
@@ -816,7 +924,6 @@
             @include sp{
                 margin-bottom: get_sp(17);
             }
-
         }
 
         .program_slide {
