@@ -15,7 +15,7 @@ foreach ($terms as $t) {
         $programs_arr[] = $t;
     }
 }
-// var_dump( $programs_arr );
+//var_dump($programs_arr);
 ?>
 <main id="main">
     <div class="breadcrumb">
@@ -43,24 +43,22 @@ foreach ($terms as $t) {
             <div class="tlt_section">
                 <h2><?php echo ($term_list_object->slug == 'entertainment') ? 'お役立ち情報' : esc_attr($term_list_object_name); ?></h2>
             </div>
-            <div class="dramas_slides">
-                <div class="dramas_slide_top">
-                    <div class="program_slide dramas_top">
-                        <?php
-                        if (!empty($programs_arr)) {
-                            foreach ($programs_arr as $t) {
-                                ob_start();
-                                get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
-                                $dramas_on_air_modal .= ob_get_contents();
-                                ob_end_clean();
-                                tpl_program_list_item($t);
-                            }
+            <div class="dramas_list">
+                <ul>
+                    <?php
+                    if (!empty($programs_arr)) {
+                        foreach ($programs_arr as $t) {
+                            ob_start();
+                            get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
+                            $dramas_on_air_modal .= ob_get_contents();
+                            ob_end_clean();
+                            tpl_program_list_item($t);
                         }
-                        ?>
-                    </div>
-                </div>
+                    }
+                    ?>
+                </ul>
             </div>
-            <?php get_template_part('template-parts/home/modal_category', null, array('title' => esc_attr( $term_list_object_name ), 'modal' => $dramas_on_air_modal)); ?>
+            <?php get_template_part('template-parts/home/modal_category', null, array('title' => esc_attr($term_list_object_name), 'modal' => $dramas_on_air_modal)); ?>
             <div class="btn_watch">
                 <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
                     <span></span>
