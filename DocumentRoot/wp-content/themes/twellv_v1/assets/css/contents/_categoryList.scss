@@ -598,15 +598,22 @@
     }
 
     .entertainment {
+        .inner {
+            padding: 0 172px;
+            @include pc {
+                padding: 0 get_pc(172);
+            }
+            @include sp {
+                padding: 0;
+            }
+        }
         .inner >p {
-            padding-left: 172px;
             font-size: 25px;
             letter-spacing: 2.5px;
             line-height: 36px;
             margin-bottom: 35px;
             font-weight: bold;
             @include pc {
-                padding-left: get_pc(172);
                 font-size: get_pc(25);
                 letter-spacing: get_pc(2.5);
                 line-height: get_pc(36);
@@ -621,13 +628,15 @@
             }
         }
         .tlt_section {
+            padding: 0;
             justify-content: flex-start;
             margin-bottom: 72.5px;
             @include pc {
                 margin-bottom: get_pc(72.5);
             }
             @include sp {
-                margin-bottom: get_sp(39.62);
+                padding: 0 get_sp(14);
+                margin-bottom: get_sp(39.62) !important;
             }
             h2 {
                 position: initial;
@@ -644,6 +653,95 @@
                     font-size: get_sp(20);
                     letter-spacing: get_sp(1.6);
                     line-height: get_sp(29);
+                }
+            }
+        }
+        .dramas_list {
+            display: flex;
+            @include sp {
+                padding: 0 get_sp(3);
+            }
+            ul {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 128px;
+                @include pc {
+                    margin-bottom: get_pc(128);
+                }
+                @include sp {
+                    flex-direction: column;
+                    margin-bottom: get_sp(59.38);
+                }
+            }
+            .item_slide {
+                background-color: #F2F2F2;
+                border-radius: 0 0 32px 32px;
+                width: 384px;
+                @include pc {
+                    width: get_pc(384);
+                    border-radius: 0 0 get_pc(32) get_pc(32);
+                }
+                @include sp {
+                    width: 100%;
+                    border-radius: 0 0 get_sp(32) get_sp(32);
+                    margin-bottom: get_sp(30);
+                }
+                .thumb {
+                    width: 384px;
+                    height: 216px;
+                    @include pc {
+                        width: get_pc(384);
+                        height: get_pc(216);
+                    }
+                    @include sp {
+                        width: get_sp(384);
+                        height: get_sp(216);
+                    }
+                }
+                .content_dramas {
+                    padding: 13px 12.5px 31.84px;
+                    @include pc {
+                        padding: get_pc(13) get_pc(12.5) get_pc(31.84);
+                    }
+                    @include sp {
+                        padding: get_sp(16) get_sp(16) get_sp(38) get_sp(7);
+                    }
+                    h2 {
+                        color: #004898;
+                        font-weight: bold;
+                        font-size: 21px;
+                        letter-spacing: 2.1px;
+                        line-height: 31px;
+                        margin-bottom: 6.17px;
+                        @include pc {
+                            font-size: get_pc(21);
+                            letter-spacing: get_pc(2.1);
+                            line-height: get_pc(31);
+                            margin-bottom: get_pc(6.17);
+                        }
+                        @include sp {
+                            font-size: get_sp(18);
+                            letter-spacing: get_sp(1.8);
+                            line-height: get_sp(27);
+                            margin-bottom: get_sp(8);
+                        }
+                    }
+                    span {
+                        color: #000;
+                        font-size: 16px;
+                        letter-spacing: 0.8px;
+                        line-height: 22px;
+                        @include pc {
+                            font-size: get_pc(16);
+                            letter-spacing: get_pc(0.8);
+                            line-height: get_pc(22);
+                        }
+                        @include sp {
+                            font-size: get_sp(16);
+                            letter-spacing: get_sp(0.8);
+                            line-height: get_sp(24);
+                        }
+                    }
                 }
             }
         }
