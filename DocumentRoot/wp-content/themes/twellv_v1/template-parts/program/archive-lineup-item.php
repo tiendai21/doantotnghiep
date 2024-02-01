@@ -1,4 +1,5 @@
 <?php
+$date = get_field('onairtime');
 ?>
 <li>
     <a href="<?php the_permalink(); ?>">
@@ -11,7 +12,12 @@
             <img class="util_sp" src="<?php echo $img_url; ?>" alt="<?php the_title(); ?>">
         </div>
         <div class="txt_desp">
-            <h4><?php the_title(); ?></h4>
+            <div class="tlt">
+                <h4><?php the_title(); ?></h4>
+                <?php if ($date):?>
+                    <span><?php echo $date?></span>
+                <?php endif;?>
+            </div>
             <div>
                 <p><?php echo get_field('overview'); ?></p>
             </div>
