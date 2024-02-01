@@ -47,10 +47,10 @@
             }
         }
         .content {
-            width: 1230px;
+            width: 1200px;
 
             @include pc {
-                width: get_pc(1230);
+                width: get_pc(1200);
             }
 
             @include sp {

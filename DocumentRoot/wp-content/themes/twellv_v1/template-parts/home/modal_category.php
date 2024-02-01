@@ -1,7 +1,6 @@
 <?php
 $modal_item = $args['modal'];
 $modal_title = $args['title'];
-//var_dump($modal_title);
 ?>
 <div class="wrapper_modal">
     <div class="inner">
@@ -9,6 +8,7 @@ $modal_title = $args['title'];
             <div class="close active">
                 <div class="line"><span></span></div>
             </div>
+            <?php if(!str_contains($modal_title,'放送終了')): ?>
             <div class="tlt">
                 <h2><?php echo $modal_title?></h2>
                 <div class="btn_watch">
@@ -26,6 +26,7 @@ $modal_title = $args['title'];
                     </clipPath>
                 </svg>
             </div>
+            <?php endif; ?>
             <div class="list_watch">
                 <ul>
                     <?php echo $modal_item?>

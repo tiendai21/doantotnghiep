@@ -786,6 +786,22 @@
             }
 
         }
+        .wrapper_modal {
+            .modal_content {
+                @include sp {
+                    padding-top: get_sp(40);
+                }
+            }
+            .list_watch ul {
+                max-height: 900px;
+                @include pc {
+                    max-height: get_pc(900);
+                }
+                @include sp {
+                    max-height: get_sp(800);
+                }
+            }
+        }
     }
 
     /*
