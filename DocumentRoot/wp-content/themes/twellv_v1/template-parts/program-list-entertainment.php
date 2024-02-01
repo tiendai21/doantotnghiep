@@ -2,7 +2,6 @@
 // echo '番組リスト';
 $term_list_object = get_queried_object();
 $term_list_object_name = $term_list_object->name;
-
 $terms = get_terms('program_cat', ['parent' => $term_list_object->term_id]);
 
 usort($terms, 'program_sort_by_term_order');
@@ -22,83 +21,39 @@ foreach ($terms as $t) {
     <div class="breadcrumb">
         <ul>
             <li>
-                <a href="<?php echo esc_url(home_url('/'))?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
+                <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
             </li>
             <li>
-                <span><?php echo esc_attr( $term_list_object_name ); ?></span>
+                <span><?php echo ($term_list_object->slug == 'entertainment') ? 'BS12ガイド' : esc_attr($term_list_object_name); ?></span>
             </li>
         </ul>
     </div>
     <!-- banner catefory -->
-    <section class="section" id="banner_category">
+    <section class="section" id="banner_entertainment">
         <div class="inner">
-            <div class="siler_category_top">
-                <div class="txt_fixed">
-                    <h2><?php echo esc_attr( $term_list_object_name ); ?></h2>
-                </div>
-                <div class="siler_top_content">
-                    <?php if (have_rows('listcategory_field_banner_01', 'option')): ?>
-                        <div class="slide_top_odd">
-                            <?php while (have_rows('listcategory_field_banner_01', 'option')): the_row();
-                                $image = get_sub_field('listcategory_image');
-                                $urlItem = get_sub_field('listcategory_url');
-                                ?>
-                                <a href="<?php echo $urlItem; ?>">
-                                    <div class="thumb">
-                                        <img src="<?php echo $image; ?>" width="448px" height="252px"
-                                             alt="thumb slide top 01">
-                                    </div>
-                                </a>
-                            <?php endwhile; ?>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (have_rows('listcategory_field_banner_02', 'option')): ?>
-                        <div class="slide_top_even">
-                            <?php while (have_rows('listcategory_field_banner_02', 'option')): the_row();
-                                $image = get_sub_field('listcategory_image');
-                                $urlItem = get_sub_field('listcategory_url');
-                                ?>
-                                <a href="<?php echo $urlItem; ?>">
-                                    <div class="thumb">
-                                        <img src="<?php echo $image; ?>" width="448px" height="252px"
-                                             alt="thumb slide top 02">
-                                    </div>
-                                </a>
-                            <?php endwhile; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-            <!-- brand -->
-            <?php get_template_part('template-parts/home/brand_top'); ?>
-            <!-- /brand -->
-            <!--      List brand banners        -->
-            <?php get_template_part('template-parts/home/brand-banner'); ?>
-            <!--      /List brand banners        -->
+            <h2><?php echo ($term_list_object->slug == 'entertainment') ? 'BS12ガイド' : esc_attr($term_list_object_name); ?></h2>
         </div>
     </section>
     <!-- /banner category -->
 
     <!-- Entertainment on air -->
-    <section class="section" id="dramas_ended">
+    <section class="section entertainment" id="dramas_ended">
         <div class="inner">
+            <p>「BS12ガイド」では、BS12で放送中の旬な番組を紹介しています。<br>放送時間は番組表をご確認ください。</p>
             <div class="tlt_section">
-                <h2><?php echo esc_attr( $term_list_object_name ); ?></h2>
-                <div class="btn_more">
-                    <span>すべて見る</span>
-                </div>
+                <h2><?php echo ($term_list_object->slug == 'entertainment') ? 'お役立ち情報' : esc_attr($term_list_object_name); ?></h2>
             </div>
             <div class="dramas_slides">
                 <div class="dramas_slide_top">
                     <div class="program_slide dramas_top">
                         <?php
-                        if ( ! empty( $programs_arr ) ) {
+                        if (!empty($programs_arr)) {
                             foreach ($programs_arr as $t) {
                                 ob_start();
                                 get_template_part('template-parts/home/modal_category_item', null, array('term' => $t));
                                 $dramas_on_air_modal .= ob_get_contents();
                                 ob_end_clean();
-                                tpl_program_list_item( $t );
+                                tpl_program_list_item($t);
                             }
                         }
                         ?>
@@ -123,11 +78,7 @@ foreach ($terms as $t) {
             </svg>
         </div>
     </section>
-
     <!-- /Entertainment on air -->
-
-
-
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
     <!-- /ranking -->
@@ -136,10 +87,10 @@ foreach ($terms as $t) {
     <!-- /Recommended movies -->
     <!-- recommended_program -->
     <!-- recommend -->
-    <?php get_template_part( 'template-parts/home/recommend_top' ); ?>
+    <?php get_template_part('template-parts/home/recommend_top'); ?>
     <!-- /recommend -->
     <!-- /recommended_program -->
     <!-- other -->
-    <?php get_template_part( 'template-parts/home/other_top' ); ?>
+    <?php get_template_part('template-parts/home/other_top'); ?>
     <!-- /other -->
 </main>

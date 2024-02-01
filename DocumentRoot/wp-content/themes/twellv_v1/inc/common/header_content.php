@@ -3,7 +3,7 @@
         <div class="start_header">
             <h1 class="logo">
                 <a href="<?php echo esc_url(home_url('/'))?>">
-                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_bs12.png' ?>" width="283" height="47" alt="BS12 | BS無料放送ならBS12 トゥエルビ">
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_bs12.png' ?>" width="1000" height="566" alt="BS12 | BS無料放送ならBS12 トゥエルビ">
                 </a>
             </h1>
             <div class="header_link">
@@ -42,16 +42,6 @@
                             <a href="<?php echo esc_url(home_url('/program_schedule/'))?>">
                                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/calendar_icon.svg' ?>" width="28" height="28" alt="番組表">
                                 番組表
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/light_icon.svg' ?>" width="14" height="21" alt="生活エンタ＆知っ得">
-                                <div class="topic">
-                                    <span>生活エンタ</span>
-                                    <span>＆知っ得</span>
-                                </div>
                             </a>
                         </li>
                         <li>
@@ -117,7 +107,7 @@
                         <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
                     </li>
                     <li>
-                        <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・<span>BS12 知っ得</span></a>
+                        <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a>
                     </li>
                     <li>
                         <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
@@ -156,7 +146,7 @@
                             <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・<span>BS12 知っ得</span></a>
+                            <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a>
                         </li>
                         <li>
                             <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>

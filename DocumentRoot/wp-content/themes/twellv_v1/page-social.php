@@ -59,7 +59,7 @@ get_header();
                                                     ?>
                                                     <li>
                                                         <a href="<?php echo $twitter_url; ?>">
-                                                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_insta.svg' ?>"
+                                                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_x.png' ?>"
                                                                  width="60"
                                                                  height="60"
                                                                  alt="icon social twitter">

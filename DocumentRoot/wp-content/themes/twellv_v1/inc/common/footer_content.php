@@ -90,7 +90,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・BS12 知っ得</a>
+                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a>
                             </li>
                             <li>
                                 <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
@@ -198,7 +198,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・BS12 知っ得</a>
+                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a>
                             </li>
                             <li>
                                 <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>

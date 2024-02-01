@@ -56,7 +56,7 @@ if(get_sub_field('h_anchorlink_list_display')){
     //タグ出力
     ?>
     <div class="page-index gray-box">
-        <h4 class="heading-title_lv3">放送中</h4>
+        <h4 class="heading-title_lv3">この記事の目次</h4>
         <ul class="txtlink-list anchor">
             <?php foreach($h3_list as $text_arr){ ?>
             <li><a href="#<?php echo $text_arr['id_text']?>"><?php echo $text_arr['h_text']?></a></li>

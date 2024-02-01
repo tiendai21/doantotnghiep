@@ -567,7 +567,7 @@ foreach ($terms as $t) {
     <section class="section" id="dramas_ended">
         <div class="inner">
             <div class="tlt_section">
-                <h2>放送終了の韓国ドラマ</h2>
+                <h2>放送終了した韓国ドラマ</h2>
                 <div class="btn_more">
                     <span>すべて見る</span>
                 </div>
