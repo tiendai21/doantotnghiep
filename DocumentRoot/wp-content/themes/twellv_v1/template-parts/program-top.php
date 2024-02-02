@@ -122,8 +122,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <!-- /other -->
     <?php endif; ?>
 
-    <!--  back to cat  -->
-    <a href=<?php echo get_term_link($parent_term)?> class="backToList"><?php echo $parent_term->name?>に戻る</a>
+
 </main>
 <!-- /main -->
 

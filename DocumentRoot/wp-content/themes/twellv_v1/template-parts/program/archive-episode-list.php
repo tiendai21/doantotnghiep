@@ -40,6 +40,8 @@ if ($the_query->have_posts()) :
                 <?php
                 if ($the_query->have_posts()) {
                     $i = 0;
+                    $array_rev = array_reverse($the_query->posts);
+                    $the_query->posts = $array_rev;
                     while ($the_query->have_posts()) {
                         $i++;
                         $the_query->the_post();

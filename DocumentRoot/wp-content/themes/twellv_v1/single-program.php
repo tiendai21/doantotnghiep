@@ -144,20 +144,8 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                         }
                     }
                     ?>
-                    <div class="episode-navigation">
-                        <?php
-                        $prev = get_previous_post(true, null, 'program_cat');
-                        $next = get_next_post(true, null, 'program_cat');
-                        ?>
-                        <?php if ($prev): ?>
-                            <a class="prev" href="<?php echo get_permalink($prev); ?>">前へ</a>
-                        <?php endif;
-                        if ($next):
-                            ?>
-                            <a class="next" href="<?php echo get_permalink($next); ?>">次へ</a>
-                        <?php endif; ?>
-                    </div>
                     <?php
+                    get_template_part('template-parts/program/episode-navigation');
                     get_template_part('template-parts/program/share-buttons', null, ['isSimple' => true]);
                     ?>
                 </div>
