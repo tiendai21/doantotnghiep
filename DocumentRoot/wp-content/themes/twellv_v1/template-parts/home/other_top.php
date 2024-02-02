@@ -38,7 +38,7 @@ if ($type === 'all') :
                         <a href="<?php echo esc_url(home_url('/program/anime/')) ?>">アニメ</a>
                     </li>
                     <li>
-                        <a href="<?php echo esc_url(home_url('/program/entertainment/')) ?>">生活エンタ</a>
+                        <a href="<?php echo esc_url(home_url('/program/entertainment/')) ?>">BS12ガイド</a>
                     </li>
                     <li>
                         <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/')) ?>">通販</a>

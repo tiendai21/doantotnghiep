@@ -4,6 +4,7 @@
  * Program detail page
  * */
 $program_term = get_queried_object();
+$parent_term = get_term_by('id', $program_term->parent, 'program_cat');
 
 global $bs12_program_top_parts_arr;
 $top = $bs12_program_top_parts_arr['top'];
@@ -30,7 +31,10 @@ if (have_rows('page_flex_content', $top->ID)) {
             }
             ?>
         </div>
-
+        <!--  back to cat  -->
+        <div class="backToList">
+            <a href='<?php echo get_term_link($parent_term)?>'><?php echo $parent_term->name?>に戻る</a>
+        </div>
     </div>
     <?php
     get_template_part('template-parts/ad/ad-news', 'ad-news'); ?>

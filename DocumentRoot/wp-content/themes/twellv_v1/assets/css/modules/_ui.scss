@@ -2869,6 +2869,9 @@ a {
         width: get_sp(285);
         margin: 0 auto get_sp(40);
     }
+    &.one-nav {
+        justify-content: center;
+    }
     a {
         font-size: 30px;
         letter-spacing: 3px;
@@ -2886,7 +2889,6 @@ a {
             line-height: get_sp(27);
         }
         &.prev {
-            margin-right: auto;
             &:before {
                 content: "";
                 display: inline-block;
@@ -2909,7 +2911,6 @@ a {
             }
         }
         &.next {
-            margin-left: auto;
             &:after {
                 content: "";
                 display: inline-block;
