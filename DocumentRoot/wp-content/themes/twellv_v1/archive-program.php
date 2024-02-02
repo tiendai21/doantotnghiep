@@ -88,25 +88,6 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                 </li>
             </ul>
         </div>
-
-        <!-- program air -->
-        <?php get_template_part('template-parts/program/program-airing'); ?>
-        <!-- /program air -->
-<!--        --><?php //get_template_part('template-parts/add/add_news'); ?>
-<!--        --><?php //get_template_part('template-parts/add/add_news_single'); ?>
-        <!-- Broadcast schedule -->
-        <?php get_template_part('template-parts/program/broadcast_schedule', null, array('hideBrand' => false)); ?>
-        <!-- /Broadcast schedule -->
-        <div class="btn_watch">
-            <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
-                <span></span>
-                <span>無料で見られる！BS12の視聴方法</span>
-            </a>
-        </div>
-        <!-- ranking -->
-        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
-        <!-- /ranking -->
-
         <!-- program list -->
         <?php foreach ($base_terms as $base_t) {
             if (isset($program_cat_lists[$base_t->term_id]) && count($program_cat_lists[$base_t->term_id]) > 0) {
