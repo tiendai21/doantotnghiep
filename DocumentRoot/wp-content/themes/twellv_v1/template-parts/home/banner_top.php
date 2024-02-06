@@ -6,7 +6,7 @@ if( get_field( 'main_visual_list' ) ) : ?>
         <div class="notice_top">
             <a href="<?php echo esc_url(home_url('/howtowatch')) ?>"><span>無料で見られる！BS12の視聴方法</span></a>
         </div>
-        <div class="slide_top">
+        <div class="slide_top is_loading">
             <?php
             while( the_repeater_field( 'main_visual_list' ) ) :
                 $titleSlide = get_sub_field( 'title' );

@@ -10,7 +10,7 @@ if ($history) :
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide slide_history">
+            <div class="program_slide slide_history is_loading">
                 <?php
                 foreach (json_decode($history) as $index => $item) :
                     if ($item->id) :

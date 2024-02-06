@@ -44,7 +44,7 @@ if ( ! empty( $term_query ) && ! is_wp_error( $term_query ) ) :
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide slide_chinese">
+            <div class="program_slide slide_chinese is_loading">
                 <?php foreach ( $term_arr as $term ) :
                     ob_start();
                     get_template_part('template-parts/home/modal_category_item', null, array('term' => $term));

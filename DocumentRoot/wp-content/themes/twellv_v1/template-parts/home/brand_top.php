@@ -26,7 +26,7 @@
 if($the_query->post->banner_0_banner_image != ""): ?>
 <div class="content_bottom">
     <div class="slide_brand">
-        <ul>
+        <ul class="is_loading">
             <?php
             if($the_query->post->banner_0_banner_image != ""): ?>
                 <li>

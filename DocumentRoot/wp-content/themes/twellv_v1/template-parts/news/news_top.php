@@ -21,7 +21,7 @@ $args = [
 ];
 $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) : ?>
-    <div class="program_slide slide_news hide_prev">
+    <div class="program_slide is_loading slide_news hide_prev">
         <?php
         while ( $the_query->have_posts() ) : $the_query->the_post();
             $link_url = get_permalink();
