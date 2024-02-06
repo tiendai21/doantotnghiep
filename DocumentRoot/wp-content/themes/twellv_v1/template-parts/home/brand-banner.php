@@ -1,5 +1,5 @@
 <?php if (have_rows('home_brand_banners', 'option')): ?>
-    <div class="list_brand">
+    <div class="list_brand is_loading">
         <?php while (have_rows('home_brand_banners', 'option')) :
             the_row();
             $banner_img = get_sub_field('banner_image');

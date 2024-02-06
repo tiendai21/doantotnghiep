@@ -316,7 +316,7 @@ foreach ($modal_e_data as $key => $d) {
                 <span>すべて見る</span>
             </div>
         </div>
-        <div class="program_slide slide_air">
+        <div class="program_slide slide_air is_loading">
             <?php echo $html; ?>
         </div>
         <?php

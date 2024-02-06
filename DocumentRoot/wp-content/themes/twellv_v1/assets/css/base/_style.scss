@@ -129,6 +129,28 @@
     }
 
     .slide_top {
+        &.is_loading {
+            position: relative;
+            height: 693px;
+            background: #000000;
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            justify-content: center;
+            @include pc {
+                height: get_pc(693);
+            }
+            @include sp {
+                height: get_sp(411);
+            }
+            .item_slide {
+                width: 32%;
+                opacity: 0.2;
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
         margin-bottom: 16px;
         background: #16345A;
         @include pc {
@@ -529,21 +551,9 @@
         @include sp {
             margin-bottom: get_sp(14);
         }
-        &::before {
-            content: "";
-            opacity: 0.75;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 141px;
-            height: 100%;
-            z-index: 1;
-            background: linear-gradient(91deg, #000, rgba(41, 41, 41, 0.54) 59%, rgba(84, 84, 84, 0) 100%);
-            @include pc {
-                width: get_pc(141);
-            }
-            @include sp {
-                width: get_sp(31);
+        .item_slide {
+            img {
+                object-fit: contain;
             }
         }
         .slick-prev.slick-arrow {
@@ -679,6 +689,15 @@
 
         .program_slide {
             overflow: hidden;
+            &.is_loading {
+                height: 330px;
+                @include pc {
+                    height: get_pc(330);
+                }
+                @include sp {
+                    height: get_sp(156);
+                }
+            }
             &:after {
                 height: 180px;
                 @include pc {
@@ -951,6 +970,15 @@
 #news {
     .inner {
         .program_slide {
+            &.is_loading {
+                height: 322px;
+                @include pc {
+                    height: get_pc(322);
+                }
+                @include sp {
+                    height: get_sp(172);
+                }
+            }
             .item_slide {
                 a {
                     width: 352px;

@@ -236,6 +236,9 @@
     */
     function handleSlide(_sliderElm, _fade, _autoplay, _arrow, _mode) {
         if ($(_sliderElm).length) {
+            $(_sliderElm).on('init', function(event, slick){
+                $(_sliderElm).removeClass("is_loading");
+            });
             $(_sliderElm).slick({
                 fade: _fade,
                 slidesToShow: 2,
@@ -301,6 +304,9 @@
         Slide Slick Program
     */
     function slideProgram(_sliderElm, _fade, _centerMode) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).slick({
             adaptiveHeight: true,
             centerMode: _centerMode,
@@ -471,6 +477,9 @@
        Slide Slick Brand
    */
     function slideBrand(_sliderElm, _fade) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).slick({
             adaptiveHeight: true,
             focusOnSelect: true,
