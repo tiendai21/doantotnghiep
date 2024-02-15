@@ -118,7 +118,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <?php get_template_part('template-parts/top', 'recommend-you-programs'); ?>
         <!-- /BS12おすすめ番組 -->
         <!-- other -->
-        <?php get_template_part('template-parts/home/other_top', null, array('social' => true, 'type' => 'famous')); ?>
+        <?php get_template_part('template-parts/home/other_top', null, array('social' => true, 'type' => 'all')); ?>
         <!-- /other -->
     <?php endif; ?>
 
