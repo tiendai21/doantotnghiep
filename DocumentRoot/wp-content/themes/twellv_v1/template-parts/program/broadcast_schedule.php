@@ -40,7 +40,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
         <div class="inner">
             <div class="bg_gray">
                 <div class="tlt_section">
-                    <h2>放送予定の <?php echo esc_attr($term_list_object_name); ?></h2>
+                    <h2>放送予定の<?php echo esc_attr($term_list_object_name); ?></h2>
                     <div class="btn_more">
                         <span>すべて見る</span>
                     </div>
