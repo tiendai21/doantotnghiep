@@ -218,7 +218,7 @@ foreach ($terms as $t) {
                         ?>
                     <?php endwhile; ?>
                 </div>
-                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '放送予定の', 'modal' => $scheduled_modal)); ?>
+                <?php get_template_part('template-parts/home/modal_category', null, array('title' => '番組のぞき見', 'modal' => $scheduled_modal)); ?>
 
             </div>
         </section>

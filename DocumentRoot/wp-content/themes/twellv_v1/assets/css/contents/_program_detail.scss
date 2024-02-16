@@ -2601,8 +2601,8 @@
         a {
             position: relative;
             border: 2px solid #004898;
-            border-radius: 16px;
-            padding: 13.5px 73px 13.5px 25px;
+            border-radius: 36px;
+            padding: 13.5px 62.35px 13.5px 32.65px;
             font-size: 30px;
             line-height: 45px;
             letter-spacing: 3px;
@@ -2612,56 +2612,43 @@
             color: #004898;
             overflow: hidden;
             @include pc {
-                padding: get_pc(13.5) get_pc(73) get_pc(13.5) get_pc(25);
+                padding: get_pc(13.5) get_pc(62.35) get_pc(13.5) get_pc(32.65);
                 font-size: get_pc(30);
                 line-height: get_pc(45);
                 letter-spacing: get_pc(3);
+                border-radius: get_pc(36);
+                border: get_pc(2) solid #004898;
             }
             @include sp {
-                border-radius: get_sp(9);
+                border-radius: get_sp(20);
+                border: get_sp(2) solid #004898;
                 font-size: get_sp(16);
                 letter-spacing: get_sp(1.6);
                 line-height: get_sp(24);
-                padding: get_sp(8) get_sp(49) get_sp(8) get_sp(13.5);
-            }
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                background-color: #004898;
-                width: 58px;
-                height: 100%;
-                @include pc {
-                    width: get_pc(58);
-                }
-                @include sp {
-                    width: get_sp(32);
-                }
+                padding: get_sp(8) get_sp(35.76) get_sp(8) get_sp(18.5);
             }
             &:after {
                 content: "";
-                background-image: url("../images/btn_arrow_right_l.svg");
+                background-image: url("../images/btn_arrow_right.svg");
                 background-position: center center;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
                 width: 19px;
-                height: 21px;
+                height: 22px;
                 position: absolute;
                 top: 51%;
                 transform: translateY(-50%) rotate(180deg);
-                right: 20px;
+                right: 34.65px;
                 transition: all ease 0.3s;
                 @include pc {
                     width: get_pc(19);
-                    height: get_pc(21);
-                    right: get_pc(20);
+                    height: get_pc(22);
+                    right: get_pc(34.65);
                 }
                 @include sp {
                     width: get_sp(11);
-                    height: get_sp(12);
-                    right: get_sp(12);
+                    height: get_sp(13);
+                    right: get_sp(21.25);
                 }
             }
         }

@@ -10448,8 +10448,8 @@ html > body.search #main #other .list_other {
 .program_detail .backToList a {
   position: relative;
   border: 2px solid #004898;
-  border-radius: 16px;
-  padding: 13.5px 73px 13.5px 25px;
+  border-radius: 36px;
+  padding: 13.5px 62.35px 13.5px 32.65px;
   font-size: 30px;
   line-height: 45px;
   letter-spacing: 3px;
@@ -10461,67 +10461,50 @@ html > body.search #main #other .list_other {
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .program_detail .backToList a {
-    padding: 0.703125vw 3.8020833333vw 0.703125vw 1.3020833333vw;
+    padding: 0.703125vw 3.2473958333vw 0.703125vw 1.7005208333vw;
     font-size: 1.5625vw;
     line-height: 2.34375vw;
     letter-spacing: 0.15625vw;
+    border-radius: 1.875vw;
+    border: 0.1041666667vw solid #004898;
   }
 }
 @media (max-width: 960px) {
   .program_detail .backToList a {
-    border-radius: 2.3076923077vw;
+    border-radius: 5.1282051282vw;
+    border: 0.5128205128vw solid #004898;
     font-size: 4.1025641026vw;
     letter-spacing: 0.4102564103vw;
     line-height: 6.1538461538vw;
-    padding: 2.0512820513vw 12.5641025641vw 2.0512820513vw 3.4615384615vw;
-  }
-}
-.program_detail .backToList a:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #004898;
-  width: 58px;
-  height: 100%;
-}
-@media (max-width: 1920px) and (min-width: 961px) {
-  .program_detail .backToList a:before {
-    width: 3.0208333333vw;
-  }
-}
-@media (max-width: 960px) {
-  .program_detail .backToList a:before {
-    width: 8.2051282051vw;
+    padding: 2.0512820513vw 9.1692307692vw 2.0512820513vw 4.7435897436vw;
   }
 }
 .program_detail .backToList a:after {
   content: "";
-  background-image: url("../images/btn_arrow_right_l.svg");
+  background-image: url("../images/btn_arrow_right.svg");
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 19px;
-  height: 21px;
+  height: 22px;
   position: absolute;
   top: 51%;
   transform: translateY(-50%) rotate(180deg);
-  right: 20px;
+  right: 34.65px;
   transition: all ease 0.3s;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .program_detail .backToList a:after {
     width: 0.9895833333vw;
-    height: 1.09375vw;
-    right: 1.0416666667vw;
+    height: 1.1458333333vw;
+    right: 1.8046875vw;
   }
 }
 @media (max-width: 960px) {
   .program_detail .backToList a:after {
     width: 2.8205128205vw;
-    height: 3.0769230769vw;
-    right: 3.0769230769vw;
+    height: 3.3333333333vw;
+    right: 5.4487179487vw;
   }
 }
 

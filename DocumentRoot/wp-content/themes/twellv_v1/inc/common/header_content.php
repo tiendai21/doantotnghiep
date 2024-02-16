@@ -180,7 +180,7 @@
                         <li><a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ドキュメンタリー </a></li>
                         <li><a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組(演歌・歌謡)</a></li>
                         <li><a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">生活エンタ・BS12 知っ得</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a></li>
                         <li><a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a></li>
                     </ul>
                 </div>
