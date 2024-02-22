@@ -109,10 +109,34 @@ $category_term = get_term_by('id', $program_term->parent, 'program_cat');
                             <div class="list_episode">
                                 <ul>
                                     <?php
-                                    while (have_posts()) {
-                                        the_post();
+                                    if (get_query_var('paged')) {
+                                        $paged = get_query_var('paged');
+                                    } elseif (get_query_var('page')) {
+                                        $paged = get_query_var('page');
+                                    } else {
+                                        $paged = 1;
+                                    }
+                                    $args = array(
+                                        'post_type' => 'program',
+                                        'post_status' => 'publish',
+                                        'paged'=> $paged,
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'program_cat',
+                                                'field' => 'id',
+                                                'terms' => $archive_term->term_id,
+                                            ),
+                                        ),
+                                        'posts_per_page' => 15,
+                                        'orderby' => 'name',
+                                        'order' => 'DESC'
+                                    );
+                                    $the_query = new WP_Query($args);
+                                    while ($the_query->have_posts()) {
+                                        $the_query->the_post();
                                         get_template_part('template-parts/program/archive-lineup', 'item');
                                     }
+                                    wp_reset_postdata();
                                     ?>
                                 </ul>
                                 <!--       Paging             -->

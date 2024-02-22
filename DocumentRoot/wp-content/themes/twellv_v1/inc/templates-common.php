@@ -104,6 +104,7 @@ function change_posts_per_page($query) {
         // 番組内アーカイブ・放送スケジュール等(番組トップと番組大カテゴリ一覧: ドラマ、スポーツ等以外)
         if ( $code == '' && $query->parent !== 0){
             $query->set( 'posts_per_page', '15' );//上記クエリ条件の変更（ページネーション設置につき21件表示）
+            $query->set( 'order', 'ASC' );//上記クエリ条件の変更（ページネーション設置につき21件表示）
         } else {
             // 番組トップと番組大カテゴリ一覧: ドラマ、スポーツ等
             $query->set( 'posts_per_page', '-1' );
@@ -132,12 +133,130 @@ add_action('pre_get_posts','change_posts_per_page');
 /**
  * S3置換ドメイン
  */
-//function as3cf_local_domains( $domains ) {
-//    $domains[] = 'www.twellv.co.jp';
-//    $domains[] = 'edit.twellv.co.jp';
-//
-//    return $domains;
-//}
-//
-//add_filter( 'as3cf_local_domains', 'as3cf_local_domains', 10, 1 );
+function as3cf_local_domains( $domains ) {
+    $domains[] = 'www.twellv.co.jp';
+    $domains[] = 'edit.twellv.co.jp';
+
+    return $domains;
+}
+
+add_filter( 'as3cf_local_domains', 'as3cf_local_domains', 10, 1 );
+
+// アセットURLをCDNへ向ける
+function replacement_asset_url_www($content){
+    $replace = array(
+        'www.twellv.co.jp' => 'ram6vj87.user.webaccel.jp',
+        'live-twellv.s3-ap-northeast-1.amazonaws.com' => 'ram6vj87.user.webaccel.jp',
+        'edit.twellv.co.jp' => 'ram6vj87.user.webaccel.jp',
+        'localhost/twellv-wp/DocumentRoot' => 'ram6vj87.user.webaccel.jp',
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+function replacement_asset_url_edit($content){
+    $replace = array(
+        'edit.twellv.co.jp' => 'ram6vj87.user.webaccel.jp'
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+//For local env
+function replacement_asset_url_www_local($content){
+    $local_url = (TWELLV_LOCAL) ? TWELLV_LOCAL : 'localhost/twellv-wp/DocumentRoot';
+    $replace = array(
+        $local_url => 'ram6vj87.user.webaccel.jp',
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+// PRD環境で発火
+if($_SERVER["HTTP_HOST"]=='www.twellv.co.jp'){
+    add_filter('wp_get_attachment_url', 'replacement_asset_url_www',1);
+}
+// Edit環境で発火
+if($_SERVER["HTTP_HOST"]=='edit.twellv.co.jp'){
+    add_filter('wp_get_attachment_url', 'replacement_asset_url_edit',1);
+}
+// Local environment
+if($_SERVER["HTTP_HOST"]=='localhost' || TWELLV_LOCAL ){
+    add_filter('wp_get_attachment_url', 'replacement_asset_url_www_local',1);
+}
+
+// 20200619 agui add for dev environment
+function replacement_asset_url_dev($content){
+    $replace = array(
+        'dev.twellv.co.jp' => 'intbqdkk.user.webaccel.jp',
+        'live-twellv.s3-ap-northeast-1.amazonaws.com' => 'intbqdkk.user.webaccel.jp'
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+if($_SERVER["HTTP_HOST"]=='dev.twellv.co.jp'){
+    add_filter('wp_get_attachment_url', 'replacement_asset_url_dev',1);
+}
+
 add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+
+function replacement_img_url_dev($content){
+//var_dump($content);
+    $replace = array(
+        'live-twellv.s3-ap-northeast-1.amazonaws.com' => 'intbqdkk.user.webaccel.jp',
+        'src="https://dev.twellv.co.jp/wp-content/uploads/' => 'src="https://intbqdkk.user.webaccel.jp/wp-content/uploads/',
+        '<img src="https://dev.twellv.co.jp/wp-content/uploads/' => '<img src="https://intbqdkk.user.webaccel.jp/wp-content/uploads/',
+        '<img src="/wp-content/uploads/' => '<img src="https://intbqdkk.user.webaccel.jp/wp-content/uploads/',
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+
+if($_SERVER["HTTP_HOST"]=='dev.twellv.co.jp'){
+    add_filter( 'acf_the_content', 'replacement_img_url_dev' );
+    add_filter( 'acf/load_value', 'replacement_img_url_dev' );
+}
+
+function replacement_img_url_edit($content){
+    $replace = array(
+        '<img src="https://edit.twellv.co.jp/wp-content/uploads/' => '<img src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+        '<img src="/wp-content/uploads/' => '<img src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+
+if($_SERVER["HTTP_HOST"]=='edit.twellv.co.jp'){
+    add_filter( 'acf_the_content', 'replacement_img_url_edit' );
+    add_filter( 'acf/load_value', 'replacement_img_url_edit' );
+}
+
+function replacement_img_url_www($content){
+    /*
+        $replace = array(
+            'live-twellv.s3-ap-northeast-1.amazonaws.com' => 'ram6vj87.user.webaccel.jp',
+            'src="https://www.twellv.co.jp/wp-content/uploads/' => 'src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+            'src="https://edit.twellv.co.jp/wp-content/uploads/' => 'src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+            '<img src="https://edit.twellv.co.jp/wp-content/uploads/' => '<img src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+            '<img src="https://www.twellv.co.jp/wp-content/uploads/' => '<img src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+            '<img src="/wp-content/uploads/' => '<img src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+            'src="/wp-content/uploads/' => 'src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+        );
+    */
+    $replace = array(
+        'live-twellv.s3-ap-northeast-1.amazonaws.com' => 'ram6vj87.user.webaccel.jp',
+        'https://edit.twellv.co.jp/wp-content/uploads/' => 'https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+        'https://www.twellv.co.jp/wp-content/uploads/' => 'https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+        '<img src="/wp-content/uploads/' => '<img src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+        'src="/wp-content/uploads/' => 'src="https://ram6vj87.user.webaccel.jp/wp-content/uploads/',
+    );
+    $content = str_replace(array_keys($replace), $replace, $content);
+    return $content;
+}
+
+if($_SERVER["HTTP_HOST"]=='www.twellv.co.jp'){
+    add_filter( 'acf_the_content', 'replacement_img_url_www' );
+    add_filter( 'acf/load_value', 'replacement_img_url_www' );
+}
+// Local environment
+if($_SERVER["HTTP_HOST"]=='localhost' || TWELLV_LOCAL ){
+    add_filter( 'acf_the_content', 'replacement_img_url_www' );
+    add_filter( 'acf/load_value', 'replacement_img_url_www' );
+}

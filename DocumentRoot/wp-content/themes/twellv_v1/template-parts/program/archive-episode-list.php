@@ -46,7 +46,7 @@ if ($the_query->have_posts()) :
                         $i++;
                         $the_query->the_post();
                         get_template_part('template-parts/program/lineup', 'item');
-                        if ($i === 5) break;
+//                        if ($i === 5) break;
                     }
                 }
                 wp_reset_postdata();
