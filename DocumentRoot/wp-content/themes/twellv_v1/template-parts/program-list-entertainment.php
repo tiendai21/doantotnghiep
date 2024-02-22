@@ -35,7 +35,6 @@ foreach ($terms as $t) {
         </div>
     </section>
     <!-- /banner category -->
-
     <!-- Entertainment on air -->
     <section class="section entertainment" id="dramas_ended">
         <div class="inner">
@@ -59,6 +58,7 @@ foreach ($terms as $t) {
                 </ul>
             </div>
             <?php get_template_part('template-parts/home/modal_category', null, array('title' => esc_attr($term_list_object_name), 'modal' => $dramas_on_air_modal)); ?>
+            <?php if ($term_list_object->slug !== 'entertainment'):?>
             <div class="btn_watch">
                 <a href="<?php echo esc_url(home_url('/howtowatch')) ?>">
                     <span></span>
@@ -74,8 +74,23 @@ foreach ($terms as $t) {
                           fill="#c5dbf4"/>
                 </clipPath>
             </svg>
+            <?php endif;?>
         </div>
     </section>
+
+
+    <?php if ($term_list_object->slug == 'entertainment'):?>
+        <!-- recommend -->
+        <?php get_template_part('template-parts/home/recommend_top'); ?>
+        <!-- /recommend -->
+        <!-- news -->
+        <?php get_template_part('template-parts/news/news_top'); ?>
+        <!-- /news -->
+        <!-- other -->
+        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'all')); ?>
+        <!-- /other -->
+    <?php else: ?>
+
     <!-- /Entertainment on air -->
     <!-- ranking -->
     <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
@@ -89,6 +104,7 @@ foreach ($terms as $t) {
     <!-- /recommend -->
     <!-- /recommended_program -->
     <!-- other -->
-    <?php get_template_part('template-parts/home/other_top'); ?>
-    <!-- /other -->
+        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'all')); ?>
+        <!-- /other -->
+    <?php endif; ?>
 </main>
