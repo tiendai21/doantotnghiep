@@ -54,8 +54,10 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
                             function getStringBetween($string, $start, $end)
                             {
                                 $startPos = strpos($string, $start);
-                                $endPos = strpos($string, $end, $startPos + strlen($start));
-                                return ($startPos === false || $endPos === false) ? false : substr($string, $startPos + strlen($start), $endPos - $startPos - strlen($start));
+                                if ($startPos) {
+                                    $endPos = strpos($string, $end, $startPos + strlen($start));
+                                    return ($startPos === false || $endPos === false) ? false : substr($string, $startPos + strlen($start), $endPos - $startPos - strlen($start));
+                                }
                             }
 
                             $og_txt = get_field('pg_text', $term);
