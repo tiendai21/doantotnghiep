@@ -41,6 +41,8 @@ function theme_enqueue_styles()
     }
 }
 
+add_filter( 'auto_update_plugin', '__return_true' );
+
 register_nav_menus(array(
     'main-menu' => 'nav-main',
     'menu-footer' => 'nav-footer',
