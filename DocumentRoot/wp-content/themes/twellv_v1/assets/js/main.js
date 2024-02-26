@@ -270,6 +270,9 @@
     }
 
     function slideScheduled(_sliderElm, _paddingPC, _paddingSP, _rtl) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).slick({
             centerMode: true,
             centerPadding: _paddingPC,
@@ -352,6 +355,9 @@
     }
 
     function slideList(_sliderElm, _fade, _centerMode) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).slick({
             adaptiveHeight: true,
             centerMode: _centerMode,
@@ -376,6 +382,9 @@
     }
 
     function slideBanner(_sliderElm, _padding) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).slick({
             centerMode: true,
             centerPadding: _padding,
@@ -394,6 +403,9 @@
     }
 
     function synopsisList(_sliderElm, _fade, _centerMode) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).each(function () {
             if ($(this).find(".item_slide").length > 1) {
                 $(this).slick({
@@ -409,6 +421,9 @@
     }
 
     function voiceList(_sliderElm, _fade, _centerMode) {
+        $(_sliderElm).on('init', function(event, slick){
+            $(_sliderElm).removeClass("is_loading");
+        });
         $(_sliderElm).slick({
             adaptiveHeight: true,
             centerMode: _centerMode,

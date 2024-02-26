@@ -67,7 +67,7 @@ foreach ($terms as $t) {
         <div class="inner">
             <div class="siler_category_top" <?php echo $cat_bg_color ? "style='background:{$cat_bg_color}'" : null ?>>
                 <div class="txt_fixed">
-                    <h2><?php echo esc_attr($term_list_object_name); ?></h2>
+                    <h2><?php echo str_replace('番組',"", esc_attr($term_list_object_name) ); ?></h2>
                 </div>
                 <div class="siler_top_content">
                     <?php

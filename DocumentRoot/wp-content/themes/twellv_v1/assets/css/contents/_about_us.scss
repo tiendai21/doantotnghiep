@@ -129,15 +129,13 @@
                     }
                 }
                 .thumb {
-                    width: 446px;
-                    height: 595px;
+                    width: 100%;
+                    height: 403px;
                     @include pc {
-                        width: get_pc(446);
-                        height: get_pc(595);
+                        height: get_pc(403);
                     }
                     @include sp {
-                        width: get_sp(137);
-                        height: get_sp(182);
+                        height: get_sp(122);
                     }
                     img {
                         width: 100%;

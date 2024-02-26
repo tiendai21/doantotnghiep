@@ -118,7 +118,7 @@
                         <li><a href="<?php echo esc_url(home_url('/program_schedule'))?>">番組表</a></li>
                         <li><a href="<?php echo esc_url(home_url('/news/whatsnew'))?>">新着情報一覧</a></li>
                         <li><a href="<?php echo esc_url(home_url('/present_event/'))?>">プレゼント・イベント情報一覧</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/social/'))?>">Twitter・Facebook<br>アカウント一覧</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/social/'))?>">Twitter・Facebook・Instagram<br>アカウント一覧</a></li>
                     </ul>
                 </div>
                 <div class="nav_footer util_sp">

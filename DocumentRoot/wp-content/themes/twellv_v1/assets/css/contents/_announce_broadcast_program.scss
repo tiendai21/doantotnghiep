@@ -122,6 +122,54 @@
                         }
                     }
                 }
+                .rowspan {
+                    padding: 0;
+                    height: 181px;
+                    @include pc {
+                        height: get_pc(181);
+                    }
+                    @include sp {
+                        height: get_sp(100);
+                    }
+                    th {
+                        &:first-child{
+                            flex-shrink: 0;
+                            padding: 0 38px 0 20px;
+                            @include pc {
+                                padding: 0 get_pc(38) 0 get_pc(20);
+                            }
+                            @include sp {
+                                padding: 0 get_sp(2);
+                            }
+                        }
+                        &:last-child{
+                            width: 100%;
+                            border-left: 1px solid #FFFFFF;
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                height: 100%;
+                                li {
+                                    height: 90px;
+                                    margin: 0;
+                                    padding: 0 0 0 18px;
+                                    @include pc {
+                                        height: get_pc(90);
+                                        padding: 0 0 0 get_pc(18);
+                                    }
+                                    @include sp {
+                                        height: get_sp(50);
+                                        padding: 0 0 0 get_sp(4);
+                                    }
+                                    &:first-child {
+                                        border-bottom: 1px solid #FFFFFF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
             }
             tbody {
                 width: 927px;
@@ -252,24 +300,6 @@
                     font-weight: bold;
                     text-decoration: underline;
                     color: #004898;
-                    &:after {
-                        content: "";
-                        @include bgsetup("../images/icon_pdf.svg",center center,100% auto,no-repeat);
-                        display: block;
-                        width: 52px;
-                        height: 28px;
-                        margin-left: 10px;
-                        @include pc {
-                            width: get_pc(52);
-                            height: get_pc(28);
-                            margin-left: get_pc(10);
-                        }
-                        @include sp {
-                            width: get_sp(43);
-                            height: get_sp(23);
-                            margin-left: get_sp(5);
-                        }
-                    }
                 }
             }
         }
