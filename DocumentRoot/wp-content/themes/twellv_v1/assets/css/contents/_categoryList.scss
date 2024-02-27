@@ -762,29 +762,26 @@
             margin: 0 auto;
         }
         h3 {
-            font-size: 30px;
-            line-height: 44px;
-            letter-spacing: 3px;
-            padding-bottom: 13.5px;
-            margin-bottom: 23.5px;
-            border-bottom: 3px solid;
-            color: #004898;
-            font-weight: bold;
+            font-size: 25px;
+            line-height: 50px;
+            font-weight: 400;
+            border-bottom: 3px solid #E8F3FF;
+            padding-bottom: 40px;
+          margin-bottom: 40px;
             @include pc {
-                font-size: get_pc(30);
-                line-height: get_pc(44);
-                letter-spacing: get_pc(3);
-                padding-bottom: get_pc(13.5);
-                margin-bottom: get_pc(23.5);
-                border-bottom: get_pc(3) solid;
+                font-size: get_pc(25);
+                line-height: get_pc(50);
+                border-bottom: get_pc(3) solid #E8F3FF;
+                padding-bottom: get_pc(40);
+                margin-bottom: get_pc(40);
             }
             @include sp {
-                font-size: get_sp(18);
-                line-height: get_sp(26);
-                letter-spacing: get_sp(1.8);
-                padding-bottom: get_sp(10);
-                margin-bottom: get_sp(12);
-                border-bottom: get_sp(2) solid;
+                font-size: get_sp(16);
+                line-height: get_sp(25);
+                border-bottom: get_sp(2) solid #E8F3FF;
+                padding-bottom: get_sp(27);
+                margin-bottom: get_sp(40);
+
             }
         }
         .tlt_section{

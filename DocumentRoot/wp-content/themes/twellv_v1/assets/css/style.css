@@ -12629,33 +12629,29 @@ html > body.search #main #other .list_other {
   margin: 0 auto;
 }
 .tax-program_cat #dramas_ended h3 {
-  font-size: 30px;
-  line-height: 44px;
-  letter-spacing: 3px;
-  padding-bottom: 13.5px;
-  margin-bottom: 23.5px;
-  border-bottom: 3px solid;
-  color: #004898;
-  font-weight: bold;
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 400;
+  border-bottom: 3px solid #E8F3FF;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .tax-program_cat #dramas_ended h3 {
-    font-size: 1.5625vw;
-    line-height: 2.2916666667vw;
-    letter-spacing: 0.15625vw;
-    padding-bottom: 0.703125vw;
-    margin-bottom: 1.2239583333vw;
-    border-bottom: 0.15625vw solid;
+    font-size: 1.3020833333vw;
+    line-height: 2.6041666667vw;
+    border-bottom: 0.15625vw solid #E8F3FF;
+    padding-bottom: 2.0833333333vw;
+    margin-bottom: 2.0833333333vw;
   }
 }
 @media (max-width: 960px) {
   .tax-program_cat #dramas_ended h3 {
-    font-size: 4.6153846154vw;
-    line-height: 6.6666666667vw;
-    letter-spacing: 0.4615384615vw;
-    padding-bottom: 2.5641025641vw;
-    margin-bottom: 3.0769230769vw;
-    border-bottom: 0.5128205128vw solid;
+    font-size: 4.1025641026vw;
+    line-height: 6.4102564103vw;
+    border-bottom: 0.5128205128vw solid #E8F3FF;
+    padding-bottom: 6.9230769231vw;
+    margin-bottom: 10.2564102564vw;
   }
 }
 @media (max-width: 960px) {
