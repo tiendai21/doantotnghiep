@@ -233,7 +233,7 @@ function display_program_recommend_by_category_slug($slug)
         <section class="recommended_movies">
             <div class="inner">
                 <div class="tlt_section">
-                    <h2>おすすめ<?php echo $category_term->name; ?></h2>
+                    <h2>おすすめ<?php echo str_replace('無料', '', $category_term->name); ?></h2>
                     <div class="btn_more">
                         <span>すべて見る</span>
                     </div>
