@@ -38,7 +38,7 @@ foreach ($terms as $t) {
     <!-- Entertainment on air -->
     <section class="section entertainment" id="dramas_ended">
         <div class="inner">
-            <p>「BS12ガイド」では、BS12で放送中の旬な番組を紹介しています。<br>放送時間は番組表をご確認ください。</p>
+            <h3>「BS12ガイド」では、BS12で放送中の旬な番組を紹介しています。<br>放送時間は番組表をご確認ください。</h3>
             <div class="tlt_section">
                 <h2><?php echo ($term_list_object->slug == 'entertainment') ? 'お役立ち情報' : esc_attr($term_list_object_name); ?></h2>
             </div>

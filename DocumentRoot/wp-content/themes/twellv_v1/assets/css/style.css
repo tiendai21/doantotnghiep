@@ -12628,6 +12628,36 @@ html > body.search #main #other .list_other {
 .tax-program_cat #dramas_ended .inner {
   margin: 0 auto;
 }
+.tax-program_cat #dramas_ended h3 {
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 3px;
+  padding-bottom: 13.5px;
+  margin-bottom: 23.5px;
+  border-bottom: 3px solid;
+  color: #004898;
+  font-weight: bold;
+}
+@media (max-width: 1920px) and (min-width: 961px) {
+  .tax-program_cat #dramas_ended h3 {
+    font-size: 1.5625vw;
+    line-height: 2.2916666667vw;
+    letter-spacing: 0.15625vw;
+    padding-bottom: 0.703125vw;
+    margin-bottom: 1.2239583333vw;
+    border-bottom: 0.15625vw solid;
+  }
+}
+@media (max-width: 960px) {
+  .tax-program_cat #dramas_ended h3 {
+    font-size: 4.6153846154vw;
+    line-height: 6.6666666667vw;
+    letter-spacing: 0.4615384615vw;
+    padding-bottom: 2.5641025641vw;
+    margin-bottom: 3.0769230769vw;
+    border-bottom: 0.5128205128vw solid;
+  }
+}
 @media (max-width: 960px) {
   .tax-program_cat #dramas_ended .tlt_section {
     margin-bottom: 5.641025641vw;
@@ -27420,6 +27450,7 @@ html > body.search #main #other .list_other {
   .recruit #hiring_banner .content {
     width: 100%;
     padding: 0 3.3333333333vw;
+    margin-bottom: 15.1282051282vw;
   }
 }
 .recruit #hiring_banner .information_hiring h2 {
