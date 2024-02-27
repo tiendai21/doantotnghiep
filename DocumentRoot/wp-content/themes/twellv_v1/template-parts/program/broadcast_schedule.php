@@ -2,7 +2,7 @@
     <!-- BS12おすすめ番組 -->
 <?php
 $term_list_object = get_queried_object();
-$term_list_object_name = $term_list_object->name;
+$term_list_object_name = str_replace('無料', '', $term_list_object->name);
 $hideBrandBanner = $args['hideBrand'];
 $term = $args['term'];
 $modal = "";

@@ -2,7 +2,7 @@
 // echo '番組リスト';
 $term_list_object = get_queried_object();
 //var_dump($term_list_object);
-$term_list_object_name = $term_list_object->name;
+$term_list_object_name = str_replace('無料', '', $term_list_object->name);
 
 $terms = get_terms('program_cat');
 usort($terms, 'program_sort_by_term_order');
@@ -57,7 +57,7 @@ foreach ($terms as $t) {
                 <a href="<?php echo esc_url(home_url('/')) ?>">BS12 | BS無料放送ならBS12 トゥエルビ</a>
             </li>
             <li>
-                <span><?php echo $term_list_object->name ?></span>
+                <span><?php echo str_replace('無料', '', $term_list_object->name) ?></span>
             </li>
         </ul>
     </div>
@@ -67,7 +67,7 @@ foreach ($terms as $t) {
         <div class="inner">
             <div class="siler_category_top" <?php echo $cat_bg_color ? "style='background:{$cat_bg_color}'" : null ?>>
                 <div class="txt_fixed">
-                    <h2><?php echo str_replace('番組',"", esc_attr($term_list_object_name) ); ?></h2>
+                    <h2><?php echo str_replace(['番組', '無料'],"", esc_attr($term_list_object_name) ); ?></h2>
                 </div>
                 <div class="siler_top_content">
                     <?php
@@ -186,7 +186,7 @@ foreach ($terms as $t) {
         </clipPath>
     </svg>
     <!-- ranking -->
-    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => $term_list_object->name . 'ランキング', 'sns' => false)); ?>
+    <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $term_list_object->slug, 'title' => $term_list_object_name . 'ランキング', 'sns' => false)); ?>
     <!-- /ranking -->
     <!-- Recommended movies -->
     <?php display_program_recommend_by_category_slug($term_list_object->slug); ?>
