@@ -215,7 +215,7 @@
                             <li><a href="<?php echo esc_url(home_url('/corporate/program_council'))?>">BS12 トゥエルビ放送番組審議会</a></li>
                             <li><a href="<?php echo esc_url(home_url('/corporate/program_standard2'))?>">放送番組の編集基準</a></li>
                             <li><a href="<?php echo esc_url(home_url('/corporate/program_standard'))?>">BS12 トゥエルビ放送番組の種別基準</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/corporate/%e6%8e%a1%e7%94%a8%e6%83%85%e5%a0%b1/'))?>">採用情報</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/corporate/recruit/'))?>">採用情報</a></li>
                             <li><a href="<?php echo esc_url(home_url('/corporate/youth'))?>">青少年に見てもらいたい番組</a></li>
                             <li><a href="<?php echo esc_url(home_url('/news/release'))?>">ニュースリリース</a></li>
                             <li><a href="<?php echo esc_url(home_url('/corporate/privacy_policy/'))?>">プライバシーポリシー</a></li>
