@@ -14,7 +14,7 @@ $args = array(
             'terms' => get_term_children($archive_term->term_id, 'program_cat')[0],
         ),
     ),
-    'posts_per_page' => -1
+    'posts_per_page' => 5
 );
 $the_query = new WP_Query($args);
 foreach ($the_query->posts as $i => $post) {
