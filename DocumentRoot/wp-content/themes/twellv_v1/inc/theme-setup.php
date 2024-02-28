@@ -617,12 +617,12 @@ add_filter( 'pre_handle_404', 'outsite404_exclude' );
 /**
  * Offload MediaでS3にアップする際のCacheControlの条件を変更
  */
-function as3cf_cache_control($args, $post_id, $image_size){
-
-	$args['CacheControl'] = "max-age=0,s-maxage=3600";
-	unset($args['Expires']);
-	return $args;
-}
-add_filter( 'as3cf_object_meta', 'as3cf_cache_control', 10, 3);
+//function as3cf_cache_control($args, $post_id, $image_size){
+//
+//	$args['CacheControl'] = "max-age=0,s-maxage=3600";
+//	unset($args['Expires']);
+//	return $args;
+//}
+//add_filter( 'as3cf_object_meta', 'as3cf_cache_control', 10, 3);
 
 
