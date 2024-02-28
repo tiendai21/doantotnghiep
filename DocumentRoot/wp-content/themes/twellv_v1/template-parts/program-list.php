@@ -143,7 +143,7 @@ foreach ($terms as $t) {
             </div>
             <div class="dramas_slides">
                 <div class="dramas_slide_top">
-                    <div class="program_slide dramas_top">
+                    <div class="program_slide is_loading dramas_top">
                         <?php
                         $az_arr = $programs_arr[2];
                         usort($az_arr, function($a, $b) {
@@ -236,7 +236,7 @@ foreach ($terms as $t) {
                         <span>すべて見る</span>
                     </div>
                 </div>
-                <div class="program_slide side_brand">
+                <div class="program_slide is_loading side_brand">
                     <?php
                     if (!empty($programs_arr[3])) {
                         foreach ($programs_arr[3] as $t) {
@@ -262,7 +262,7 @@ foreach ($terms as $t) {
                         <span>すべて見る</span>
                     </div>
                 </div>
-                <div class="program_slide side_brand">
+                <div class="program_slide is_loading side_brand">
                     <?php
                     if (!empty($programs_arr[3])) {
                         $i = 0;

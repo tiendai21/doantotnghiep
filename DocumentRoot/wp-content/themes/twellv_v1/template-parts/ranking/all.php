@@ -1,5 +1,5 @@
 <?php /* 総合アクセスランキング */ ?>
-<div class="program_slide slide_ranking">
+<div class="program_slide is_loading slide_ranking">
     <?php
     $args = [
         'post_type' => 'ranking',

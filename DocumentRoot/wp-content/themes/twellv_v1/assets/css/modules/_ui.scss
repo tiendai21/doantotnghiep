@@ -198,10 +198,10 @@ a {
     @include sp {
         margin-bottom: get_sp(26);
     }
-    &.is_loading {
+    &.is_loading{
         position: relative;
         height: 180px;
-        background: #000000;
+        background: #000000 !important;
         display: flex;
         overflow: hidden;
         flex-wrap: nowrap;
@@ -2988,5 +2988,14 @@ a {
                 }
             }
         }
+    }
+}
+.is_loading {
+    height: 200px;
+    background-color: #000000;
+    //opacity: 0.8;
+    position: relative;
+    .item_slide {
+        opacity: 0.2;
     }
 }

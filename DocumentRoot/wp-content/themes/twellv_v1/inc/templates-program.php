@@ -238,7 +238,7 @@ function display_program_recommend_by_category_slug($slug)
                         <span>すべて見る</span>
                     </div>
                 </div>
-                <div class="program_slide side_brand">
+                <div class="program_slide is_loading side_brand">
                     <?php
                     $archive_modal = "";
                     foreach ($term_arr as $term) {
@@ -541,7 +541,7 @@ function display_program_voice_by_category_slug($slug)
                 <div class="tlt_section">
                     <h2>お客様の声</h2>
                 </div>
-                <div class="program_slide voice_list">
+                <div class="program_slide is_loading voice_list">
                     <?php
                     while ($the_query->have_posts()) {
                         $the_query->the_post(); ?>

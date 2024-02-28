@@ -235,7 +235,7 @@ a:focus {
 .program_slide.is_loading {
   position: relative;
   height: 180px;
-  background: #000000;
+  background: #000000 !important;
   display: flex;
   overflow: hidden;
   flex-wrap: nowrap;
@@ -3348,6 +3348,15 @@ a.pdf {
     height: 2.5641025641vw;
     margin-left: 1.2820512821vw;
   }
+}
+
+.is_loading {
+  height: 200px;
+  background-color: #000000;
+  position: relative;
+}
+.is_loading .item_slide {
+  opacity: 0.2;
 }
 
 @keyframes fadeInUp {

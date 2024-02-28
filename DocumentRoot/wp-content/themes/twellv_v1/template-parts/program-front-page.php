@@ -33,7 +33,7 @@ if (have_rows('page_flex_content', $top->ID)) {
         </div>
         <!--  back to cat  -->
         <div class="backToList">
-            <a href='<?php echo get_term_link($parent_term)?>'><?php echo $parent_term->name?>に戻る</a>
+            <a href='<?php echo get_term_link($parent_term)?>'><?php echo str_replace('無料', '', $parent_term->name)?>に戻る</a>
         </div>
     </div>
     <?php

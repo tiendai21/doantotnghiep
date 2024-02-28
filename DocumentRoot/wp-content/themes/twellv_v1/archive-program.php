@@ -104,7 +104,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                                 <span>すべて見る</span>
                             </div>
                         </div>
-                        <div class="program_slide <?php echo 'brand_' . $base_t->slug; ?>">
+                        <div class="program_slide is_loading <?php echo 'brand_' . $base_t->slug; ?>">
                             <?php
                             foreach ($program_cat_lists[$base_t->term_id] as $t) :
                                 ob_start();

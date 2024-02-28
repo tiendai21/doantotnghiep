@@ -327,10 +327,10 @@ foreach ($modal_e_data as $key => $d) {
                 <span>すべて見る</span>
             </div>
         </div>
-        <div class="program_slide slide_list">
+        <div class="program_slide is_loading slide_list">
             <?php echo $html?>
         </div>
-        <div class="program_slide slide_list">
+        <div class="program_slide is_loading slide_list">
             <?php echo $html_r?>
         </div>
         <?php get_template_part('template-parts/home/modal_category', null, array('modal' => $modal)); ?>

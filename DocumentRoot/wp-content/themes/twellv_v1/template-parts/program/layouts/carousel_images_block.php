@@ -2,7 +2,7 @@
 if (get_sub_field('carousel_images_list')) :
     ?>
     <div class="carousel_images_block">
-        <div class="program_slide synopsis_list">
+        <div class="program_slide is_loading synopsis_list">
             <?php
             while (the_repeater_field('carousel_images_list')) :
                 $image = get_sub_field('image');

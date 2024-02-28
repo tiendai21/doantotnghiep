@@ -109,7 +109,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) {
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide side_brand">
+            <div class="program_slide is_loading side_brand">
                 <?php
                 $total = 0;
                 // for slide

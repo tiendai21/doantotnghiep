@@ -45,7 +45,7 @@ if (!empty($term_query) && !is_wp_error($term_query)) :
                         <span>すべて見る</span>
                     </div>
                 </div>
-                <div class="program_slide brand_schedule">
+                <div class="program_slide is_loading brand_schedule">
                     <?php
                     foreach ($term_arr as $term) :
                         ob_start();

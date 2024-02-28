@@ -187,7 +187,7 @@ foreach ($terms as $t) {
             </div>
             <div class="dramas_slides">
                 <div class="dramas_slide_top">
-                    <div class="program_slide dramas_top">
+                    <div class="program_slide is_loading dramas_top">
                         <div class="item_slide">
                             <a href="">
                                 <img src="assets/images/img_1.jpg" width="320px" height="180px" alt="韓国ドラマ「悪の花」">
@@ -261,7 +261,7 @@ foreach ($terms as $t) {
                     </div>
                 </div>
                 <div class="dramas_slide_bottom">
-                    <div class="program_slide dramas_bottom">
+                    <div class="program_slide is_loading dramas_bottom">
                         <div class="item_slide">
                             <a href="">
                                 <img src="assets/images/img_1.jpg" width="320px" height="180px" alt="韓国ドラマ「悪の花」">
@@ -352,7 +352,7 @@ foreach ($terms as $t) {
                 <div class="tlt_section">
                     <h2>韓国・韓流ドラマランキング</h2>
                 </div>
-                <div class="program_slide slide_ranking">
+                <div class="program_slide is_loading slide_ranking">
                     <div class="item_slide">
                         <a href="#">
                             <img src="assets/images/img_program.jpg" width="338" height="198" alt="program slide">
@@ -406,7 +406,7 @@ foreach ($terms as $t) {
                 <div class="tlt_section">
                     <h2>ランキング</h2>
                 </div>
-                <div class="program_slide slide_ranking">
+                <div class="program_slide is_loading slide_ranking">
                     <div class="item_slide">
                         <a href="#">
                             <img src="assets/images/img_program.jpg" width="338" height="198" alt="program slide">
@@ -462,7 +462,7 @@ foreach ($terms as $t) {
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide side_brand">
+            <div class="program_slide is_loading side_brand">
                 <div class="item_slide">
                     <a href="#">
                         <img src="https://dummyimage.com/320x180/000000/fff" alt="">
@@ -528,7 +528,7 @@ foreach ($terms as $t) {
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide side_brand">
+            <div class="program_slide is_loading side_brand">
                 <div class="item_slide">
                     <a href="#">
                         <img src="https://dummyimage.com/320x180/000000/fff" alt="">
@@ -572,7 +572,7 @@ foreach ($terms as $t) {
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide side_brand">
+            <div class="program_slide is_loading side_brand">
                 <div class="item_slide">
                     <a href="#">
                         <img src="https://dummyimage.com/320x180/000000/fff" alt="">
@@ -613,7 +613,7 @@ foreach ($terms as $t) {
             <div class="tlt_section">
                 <h2>お客様の声</h2>
             </div>
-            <div class="program_slide voice_list">
+            <div class="program_slide is_loading voice_list">
                 <div class="item_slide">
                     <a href="#">
                         <span class="date">2022/12/17</span>
@@ -690,7 +690,7 @@ foreach ($terms as $t) {
                     <span>すべて見る</span>
                 </div>
             </div>
-            <div class="program_slide side_brand">
+            <div class="program_slide is_loading side_brand">
                 <div class="item_slide">
                     <a href="#">
                         <img src="https://dummyimage.com/320x180/000000/fff" alt="">
