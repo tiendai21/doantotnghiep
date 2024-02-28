@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+@mixin transi($value:0.15s) {
+	transition: $value;
+}
+@mixin scale($value:1.10) {
+	transform: scale($value);
+}
+@mixin translate($x:-50%,$y:-50%) {
+	transform: translate($x,$y);
+}
+@mixin rotate($value:0deg) {
+	transform: rotate($value);
+}
+@function vw($size, $viewport:750){
+	$rate: 100 / $viewport;
+	@return $rate * $size * 1vw;
+}
+@mixin fz($font_size:10){
+	font-size: $font_size * 1px;
+	font-size: vw($font_size);
+}
+
+
+@mixin naname(){
+	transform: skewX(-10deg);
+}

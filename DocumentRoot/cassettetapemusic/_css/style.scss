@@ -1,0 +1,630 @@
+@charset "UTF-8";
+
+@import 'reset';
+@import 'util';
+@import 'mixin';
+
+// 本ファイルはwordpressの固定ページ。
+
+html {
+	box-sizing: content-box;
+}
+body{
+	box-sizing: border-box;
+	line-height: 2;
+}
+body * {
+	box-sizing: border-box;
+	font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro","Meiryo","Osaka", "MS P Gothic",Verdana,Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+a{
+	color: currentColor;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+.cassetteWrap{
+	overflow: hidden;
+}
+
+.inner{
+	position: relative;
+	width: 1000px;
+	margin: auto;
+
+	@media screen and (max-width: 750px){
+		width: 100%;
+
+	}
+}
+
+//-------------------------------------------
+
+.mv{
+	img{
+		width: 100%;
+	}
+}
+
+.sec-main{
+	position: relative;
+	background: #fbf875;
+
+	.main-ttl{
+		position: absolute;
+		top: -150px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media screen and (max-width: 750px){
+			top: vw(-120);
+			width: vw(602);
+			img{width: 100%;}
+		}
+	}
+
+	.main-cont{
+		padding-top: 50px;
+		padding-bottom: 225px;
+
+		@media screen and (max-width: 750px){
+			padding-top: vw(180);
+			padding-bottom: vw(30);
+		}
+
+		.main-img{
+			position: relative;
+			width: 660px;
+
+			@media screen and (max-width: 750px){
+				width: vw(660);
+				margin-right: auto;
+				margin-left: 4%;
+				img{width: 100%;}
+			}
+
+			img{
+				position: relative;
+				z-index: 1;
+			}
+
+			&:before{
+				// obj1
+				position: absolute;
+				z-index: 0;
+				display: block;
+				top: 0;
+				left: 0;
+				content: '';
+				background: url('../_img/obj1.png') 0 0 no-repeat;
+				background-size: contain;
+				min-width: 107px;
+				width: 107px;
+				height: 106px;
+				@include translate(-60%,-50%);
+
+				@media screen and (max-width: 750px){
+					min-width: vw(107);
+					width: vw(107);
+					height: vw(108);
+				}
+			}
+
+			&:after{
+				// うしろ
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #e0db23;
+				@include translate(30px,30px);
+
+				@media screen and (max-width: 750px){
+					@include translate(#{vw(30)},#{vw(30)});
+				}
+			}
+
+			img{
+				position: relative;
+			}
+		}
+
+		.main-txt{
+			position: relative;
+			z-index: 1;
+
+			@media screen and (min-width: 751px){
+				position: absolute;
+				top: 225px;
+				left: 435px;
+				width: 632px;
+				height: 632px;
+				background: #fbf875;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				padding: 120px 100px;
+
+				&:before{
+					// obj3
+					content: '';
+					display: block;
+					position: absolute;
+					top: 30px;
+					left: 430px;
+					background: url('../_img/obj3.png') 0 0 no-repeat;
+					background-size: contain;
+					min-width: 182px;
+					width: 182px;
+					height: 181px;
+				}
+
+				&:after{
+					// obj4
+					content: '';
+					display: block;
+					position: absolute;
+					top: 190px;
+					right: -460px;
+					background: url('../_img/obj4.png') 0 0 no-repeat;
+					background-size: contain;
+					min-width: 477px;
+					width: 477px;
+					height: 477px;
+				}
+			}
+
+			@media screen and (max-width: 750px){
+				padding: 0 4%;
+				margin-top: vw(40);
+			}
+
+			p{
+				position: relative;
+				font-size: 18px;
+				font-weight: 900;
+
+				@media screen and (max-width: 750px){
+					@include fz(28);
+				}
+
+				span{
+					background: linear-gradient(transparent 50%, #fff 50%);
+				}
+			}
+		}
+	}
+
+}
+
+
+.box{
+	// PCのときは.boxが白、SPのときはarticleが白。
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	padding-bottom: 50px;
+
+	@media screen and (max-width: 750px){
+		background: none;
+		padding-bottom: 0;
+	}
+
+	&-inner{
+		padding: 0 50px;
+
+		@media screen and (max-width: 750px){
+			padding: 0 4%;
+		}
+	}
+}
+
+
+.sec-article{
+	padding-top: 80px;
+	background: url('../_img/bg.png') 50% 0;
+	padding-bottom: 180px;
+
+	@media screen and (max-width: 750px){
+		padding-top: vw(160);
+		padding-bottom: vw(200);
+	}
+
+	.article-ttl{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		letter-spacing: -0.08em;
+		padding-left: 85px;
+
+		@media screen and (max-width: 750px){
+			padding-left: vw(60);
+			padding-bottom: vw(14);
+		}
+
+
+		>div{
+			// 見出しの文字スタイル
+			line-height: (48/34);
+			font-weight: 900;
+			font-size: 34px;
+			position: absolute;
+			top: calc(50% - 4px);
+			transform: translateY(-50%);
+
+			*{
+				color: #fff;
+			}
+
+			@media screen and (max-width: 750px){
+				top: calc(50% - #{vw(8)});
+				line-height: (50/38);
+				@include fz(38);
+			}
+
+			span{
+				display: inline-block;
+				@include naname;
+			}
+
+			.year{
+				display: inline;
+				font-size: 0.6em;
+			}
+
+			&:after{
+				// 線
+				content: '';
+				display: block;
+				background: #fff;
+				height: 3px;
+				width: 100%;
+				margin-top: 0.2em;
+
+				@media screen and (max-width: 750px){
+					height: 2px;
+				}
+			}
+		}
+	}
+
+	article{
+		&:nth-child(2n+1) .article-ttl{
+			width: 972px;
+			height: 180px;
+			background: url('../_img/midasi1.png') 0 0 no-repeat;
+			background-size: contain;
+			transform: translate(-22px,-26px);
+
+			@media screen and (max-width: 750px){
+				min-width: vw(719);
+				width: vw(719);
+				height: vw(210);
+				background: url('../_img/midasi1_sp.png') 0 0 no-repeat;
+				background-size: contain;
+				transform: translate(0,#{vw(-120)});
+			}
+		}
+		&:nth-child(2n) .article-ttl{
+			width: 971px;
+			margin-left: auto;
+			margin-right: 0;
+			height: 180px;
+			background: url('../_img/midasi2.png') 0 0 no-repeat;
+			background-size: contain;
+			transform: translate(22px,-26px);
+
+			@media screen and (max-width: 750px){
+				min-width: vw(719);
+				width: vw(719);
+				height: vw(230);
+				background: url('../_img/midasi2_sp.png') 0 0 no-repeat;
+				background-size: contain;
+				transform: translate(0,#{vw(-120)});
+			}
+		}
+	}
+
+
+
+	article{
+		// PCのときは.boxが白、SPのときはarticleが白。
+
+		@media screen and (max-width: 750px){
+			background: #fff;
+			padding-bottom: vw(100);
+		}
+
+		+article{
+			margin-top: 125px;
+
+			@media screen and (max-width: 750px){
+				margin-top: vw(170);
+			}
+		}
+
+		p{
+			// 通常の文章
+			margin-top: 2em;
+
+			@media screen and (max-width: 750px){
+				@include fz(26);
+				margin-top: 1.4em;
+			}
+		}
+
+		.article-ttl+*>p,
+		.article-ttl+.article-img{
+			margin-top: 0;
+
+			@media screen and (max-width: 750px){
+				margin-top: vw(-90);
+			}
+		}
+	}
+
+	.article-img{
+		max-width: 100%;
+		margin: auto;
+		margin-top: 2em;
+
+		img{width: 100%;}
+
+		@media screen and (max-width: 750px){
+			margin-top: 1.4em;
+			padding: 0 4%;
+		}
+	}
+}
+
+
+.sec-next{
+	margin-top: 40px;
+	padding: 0 4%;
+
+	@media screen and (max-width: 750px){
+		margin-top: vw(50);
+	}
+
+	.next-box{
+		background: #fff;
+
+
+		.next-date{
+			position: relative;
+			font-size: 20px;
+			font-weight: 900;
+			color: #fff;
+			background: #68ac56;
+			padding: 10px 0;
+			padding-left: 140px;
+			padding-right: 20px;
+
+			@media screen and (max-width: 750px){
+				@include fz(30);
+				padding: vw(16) 0;
+				padding-left: vw(200);
+				padding-right: vw(20);
+			}
+
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 3px;
+				left: 19px;
+				background: url('../_img/nextonair.png') 0 0 no-repeat;
+				background-size: contain;
+				width: 103px;
+				height: 103px;
+
+				@media screen and (max-width: 750px){
+					background: url('../_img/nextonair_sp.png') 0 0 no-repeat;
+					background-size: contain;
+					width: vw(164);
+					height: vw(162);
+					top: vw(10);
+					left: vw(20);
+				}
+			}
+		}
+
+		.next-cont{
+			display: flex;
+			flex-wrap: wrap;
+			padding: 50px 20px 0;
+			padding-left: 40px;
+			padding-bottom: 30px;
+
+			@media screen and (min-width: 751px){
+				min-height: 207px;
+			}
+
+			@media screen and (max-width: 750px){
+				padding: 0 8%;
+				padding-top: vw(90);
+				padding-bottom: vw(70);
+			}
+		}
+
+		.next-txt{
+			width: 500px;
+
+			@media screen and (max-width: 750px){
+				width: 100%;
+				@include fz(26);
+			}
+		}
+
+		.next-ttl{
+			font-size: 24px;
+			font-weight: 500;
+			text-align: center;
+			line-height: 1.3;
+			margin-bottom: 1em;
+
+			@media screen and (max-width: 750px){
+				@include fz(34);
+			}
+		}
+
+		.next-img{
+			@media screen and (min-width: 751px){
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 20px;
+				width: 370px;
+			}
+
+			@media screen and (max-width: 750px){
+				position: relative;
+				width: vw(594);
+				transform: translateX(#{vw(20)});
+				margin-top: 1.5em;
+			}
+
+			img{
+				position: relative;
+				width: 100%;
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: rgba(#393939,0.25);
+				@include translate(-12px,12px);
+
+				@media screen and (max-width: 750px){
+					@include translate(#{vw(-20)},#{vw(20)});
+				}
+			}
+		}
+	}
+}
+
+
+.sec-goalbtn{
+	@media screen and (max-width: 750px){
+		padding: 0 vw(90);
+	}
+
+	.goalbtn-list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media screen and (max-width: 750px){
+			display: block;
+		}
+
+		li{
+			+li{
+				margin-left: 30px;
+
+				@media screen and (max-width: 750px){
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.goalbtn{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 400px;
+		height: 54px;
+		background: #333;
+		margin-top: 30px;
+
+		@media screen and (max-width: 750px){
+			width: 100%;
+			height: vw(90);
+		}
+
+		>div{
+			color: #fff;
+			font-weight: 900;
+			font-size: 18px;
+			text-indent: -1em;
+
+			@media screen and (max-width: 750px){
+				@include fz(26);
+			}
+		}
+
+		&:before,&:after{
+			position: absolute;
+			content: '';
+			display: block;
+			background: #fff;
+			width: 3px;
+			height: 10px;
+
+			@media screen and (max-width: 750px){
+				width: vw(4);
+				height: vw(14);
+			}
+		}
+
+		&:before{
+			transform: translateY(-50%) rotate(-45deg);
+			top: calc(50% - 3px);
+			right: 23px;
+
+			@media screen and (max-width: 750px){
+				right: vw(45);
+				top: calc(50% - #{vw(4)});
+			}
+		}
+
+		&:after{
+			transform: translateY(-50%) rotate(45deg);
+			top: calc(50% + 3px);
+			right: 23px;
+
+			@media screen and (max-width: 750px){
+				right: vw(45);
+				top: calc(50% + #{vw(4)});
+			}
+		}
+	}
+}
+
+
+footer{
+	margin-top: 100px;
+
+	@media screen and (max-width: 750px){
+		margin-top: vw(120);
+	}
+
+	small{
+		display: block;
+		text-align: center;
+		font-size: 14px;
+
+		@media screen and (max-width: 750px){
+			@include fz(24);
+		}
+	}
+}
+
+
+
+
+

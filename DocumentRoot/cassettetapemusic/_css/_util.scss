@@ -1,0 +1,35 @@
+@charset "utf-8";
+html ,body {
+	// height: 100%;
+}
+// @media print, screen and (max-width: 450px) {
+// body {
+// 	min-width: initial;
+// 	min-width: auto;
+// }
+// }
+div ,a {
+	outline:none;
+}
+a {
+	text-decoration: underline;
+	color: #333;
+}
+a:hover {
+	text-decoration: none;
+}
+::selection {
+	background-color: #aaa;
+	color: #fff;
+}
+
+@media all and (min-width: 751px) {
+.SP {
+	display: none!important;
+}
+}
+@media screen and (max-width: 750px) {
+.PC {
+	display: none!important;
+}
+}
