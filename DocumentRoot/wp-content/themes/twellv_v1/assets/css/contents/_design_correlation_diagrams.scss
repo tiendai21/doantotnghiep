@@ -108,9 +108,14 @@
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 35px;
+                @include pc {
+                    padding: get_pc(35);
+                }
                 @include sp {
                     display: block;
-                    padding-bottom: get_sp(2);
+                    padding: 0 0 get_sp(2);
                 }
                 p {
                     font-size: 20px;
@@ -142,16 +147,9 @@
                     }
                 }
                 .brand_left {
-                    width: 1288px;
-                    padding: 25px 0 58px 238px;
                     display: flex;
                     align-items: center;
                     transition: all .3s;
-                    @include pc {
-                        width: get_pc(1288);
-                        padding: get_pc(25) 0 get_pc(58) get_pc(238);
-                    }
-
                     @include sp {
                         width: 100%;
                         padding: get_sp(14) get_sp(26.5) get_sp(14) get_sp(19);
@@ -319,7 +317,7 @@
                         }
 
                         @include sp {
-                            font-size: get_sp(18);
+                            font-size: get_sp(16);
                             line-height: get_sp(26);
                             letter-spacing: get_sp(1.8);
                             border: get_sp(1) solid #E8C816;
@@ -353,9 +351,9 @@
             }
             &.next-ep.live_preview {
                 .txt_desp {
-                    width: 561px;
+                    width: 500px;
                     @include pc {
-                        width: get_pc(561);
+                        width: get_pc(500);
                     }
                     @include sp {
                         width: 100%;

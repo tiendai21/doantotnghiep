@@ -33192,11 +33192,18 @@ html > body.search #main #other .list_other {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 35px;
+}
+@media (max-width: 1920px) and (min-width: 961px) {
+  .correlation_diagrams #correlation_diagrams .one_program_block.next-ep {
+    padding: 1.8229166667vw;
+  }
 }
 @media (max-width: 960px) {
   .correlation_diagrams #correlation_diagrams .one_program_block.next-ep {
     display: block;
-    padding-bottom: 0.5128205128vw;
+    padding: 0 0 0.5128205128vw;
   }
 }
 .correlation_diagrams #correlation_diagrams .one_program_block.next-ep p {
@@ -33235,17 +33242,9 @@ html > body.search #main #other .list_other {
   }
 }
 .correlation_diagrams #correlation_diagrams .one_program_block.next-ep .brand_left {
-  width: 1288px;
-  padding: 25px 0 58px 238px;
   display: flex;
   align-items: center;
   transition: all 0.3s;
-}
-@media (max-width: 1920px) and (min-width: 961px) {
-  .correlation_diagrams #correlation_diagrams .one_program_block.next-ep .brand_left {
-    width: 67.0833333333vw;
-    padding: 1.3020833333vw 0 3.0208333333vw 12.3958333333vw;
-  }
 }
 @media (max-width: 960px) {
   .correlation_diagrams #correlation_diagrams .one_program_block.next-ep .brand_left {
@@ -33430,7 +33429,7 @@ html > body.search #main #other .list_other {
 }
 @media (max-width: 960px) {
   .correlation_diagrams #correlation_diagrams .one_program_block.next-ep .brand_right h4 {
-    font-size: 4.6153846154vw;
+    font-size: 4.1025641026vw;
     line-height: 6.6666666667vw;
     letter-spacing: 0.4615384615vw;
     border: 0.2564102564vw solid #E8C816;
@@ -33468,11 +33467,11 @@ html > body.search #main #other .list_other {
   }
 }
 .correlation_diagrams #correlation_diagrams .one_program_block.next-ep.live_preview .txt_desp {
-  width: 561px;
+  width: 500px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
   .correlation_diagrams #correlation_diagrams .one_program_block.next-ep.live_preview .txt_desp {
-    width: 29.21875vw;
+    width: 26.0416666667vw;
   }
 }
 @media (max-width: 960px) {
