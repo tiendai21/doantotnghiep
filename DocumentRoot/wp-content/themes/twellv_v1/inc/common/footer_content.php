@@ -16,86 +16,37 @@
                 <div class="nav_footer util_pc">
                     <h3>ジャンル別</h3>
                     <div class="nav_list">
+                        <?php
+                        $args = array(
+                            'post_type' => 'footer_program',
+                            'post_status' => 'publish',
+                        );
+                        $the_query = new WP_Query( $args );
+                        if ( $the_query->have_posts() ) :
+                            while ( $the_query->have_posts() ) :
+                            $the_query->the_post();
+                            $parent_term_slug = get_field('display_category');
+                        ?>
                         <ul>
                             <li>
-                                <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
+                                <a href="<?= esc_url(home_url('/program/' . $parent_term_slug))?>"><?php the_title()?></a>
+                                <?php if(have_rows('footer_program_list' ,get_the_ID())) :?>
                                 <ul>
-                                    <li><a href="<?php echo esc_url(home_url('/program/drama/umechan'))?>">連続テレビ小説「梅ちゃん先生」</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/drama/doyou-youga/'))?>">土曜洋画劇場（海外映画テレビ番組）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/drama/fridayskiller'))?>">金曜キラー通り（無料海外ドラマ）</a></li>
+                                        <?php while (have_rows('footer_program_list', get_the_ID())):
+                                            the_row();
+                                            $term = get_term(get_sub_field('footer_program'));
+                                        ?>
+                                        <li><a href="<?php echo get_term_link($term->term_id)?>"><?= $term->name?></a></li>
+                                    <?php
+                                    endwhile;?>
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('//program/korea/'))?>">韓国・韓流ドラマ</a>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(home_url('/program/korea/chimera/'))?>">韓国ドラマ「キマイラ」</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/korea/aono-pianist/'))?>">韓国ドラマ「蒼のピアニスト」</a></li>
-                                </ul>
+                                <?php endif;?>
                             </li>
                         </ul>
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('//program/china/'))?>">中国・アジアドラマ</a>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/storm-eye/'))?>">中国ドラマ「暴風眼－特命捜査官－」　（日曜アジアドラマ）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/tora-tairiku/'))?>">中国ドラマ「斗羅大陸～7つの光と武　魂の謎～」（金曜アジアドラマ）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/kouranden/'))?>">中国ドラマ「コウラン伝 始皇帝の母」（月・火アジアドラマ）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/gyokushorei/'))?>">中国ファンタジー時代劇「玉昭令」</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/sports/baseball/'))?>">プロ野球中継</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/tabi/'))?>">旅・グルメ</a>
-                                <ul>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/tabi/hawakoi3/'))?>">ハワイに恋して！</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/tabi/next-trip/'))?>">NEXT TRIP</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ドキュメンタリー</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組(演歌・歌謡)</a>
-                                <ul>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/music/cassettetapemusic/'))?>">ザ・カセットテープ・ミュージック</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
-                                <ul>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/anime/anime26'))?>">アニメ26</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/anime/sunday-animation/'))?>">日曜アニメ劇場</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
-                            </li>
-                        </ul>
+                        <?php
+                            endwhile;
+                        endif;
+                        ?>
                     </div>
                 </div>
                 <div class="nav_footer util_sp">
@@ -124,86 +75,37 @@
                 <div class="nav_footer util_sp">
                     <h3>ジャンル別</h3>
                     <div class="nav_list">
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/drama/'))?>">ドラマ・映画</a>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(home_url('/program/drama/umechan'))?>">連続テレビ小説「梅ちゃん先生」</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/drama/doyou-youga/'))?>">土曜洋画劇場（海外映画テレビ番組）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/drama/fridayskiller'))?>">金曜キラー通り（無料海外ドラマ）</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('//program/korea/'))?>">韓国・韓流ドラマ</a>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(home_url('/program/korea/chimera/'))?>">韓国ドラマ「キマイラ」</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/korea/aono-pianist/'))?>">韓国ドラマ「蒼のピアニスト」</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('//program/china/'))?>">中国・アジアドラマ</a>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/storm-eye/'))?>">中国ドラマ「暴風眼－特命捜査官－」　（日曜アジアドラマ）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/tora-tairiku/'))?>">中国ドラマ「斗羅大陸～7つの光と武　魂の謎～」（金曜アジアドラマ）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/kouranden/'))?>">中国ドラマ「コウラン伝 始皇帝の母」（月・火アジアドラマ）</a></li>
-                                    <li><a href="<?php echo esc_url(home_url('/program/china/gyokushorei/'))?>">中国ファンタジー時代劇「玉昭令」</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/sports/'))?>">スポーツ</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/sports/baseball/'))?>">プロ野球中継</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/tabi/'))?>">旅・グルメ</a>
+                        <?php
+                        $args = array(
+                            'post_type' => 'footer_program',
+                            'post_status' => 'publish',
+                        );
+                        $the_query = new WP_Query( $args );
+                        if ( $the_query->have_posts() ) :
+                            while ( $the_query->have_posts() ) :
+                                $the_query->the_post();
+                                $parent_term_slug = get_field('display_category');
+                                ?>
                                 <ul>
                                     <li>
-                                        <a href="<?php echo esc_url(home_url('/program/tabi/hawakoi3/'))?>">ハワイに恋して！</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/tabi/next-trip/'))?>">NEXT TRIP</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/variety/'))?>">バラエティ</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/documentary/'))?>">情報・ドキュメンタリー</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/music/'))?>">音楽番組(演歌・歌謡)</a>
-                                <ul>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/music/cassettetapemusic/'))?>">ザ・カセットテープ・ミュージック</a>
+                                        <a href="<?= esc_url(home_url('/program/' . $parent_term_slug))?>"><?php the_title()?></a>
+                                        <?php if(have_rows('footer_program_list' ,get_the_ID())) :?>
+                                            <ul>
+                                                <?php while (have_rows('footer_program_list', get_the_ID())):
+                                                    the_row();
+                                                    $term = get_term(get_sub_field('footer_program'));
+                                                    ?>
+                                                    <li><a href="<?php echo get_term_link($term->term_id)?>"><?= $term->name?></a></li>
+                                                <?php
+                                                endwhile;?>
+                                            </ul>
+                                        <?php endif;?>
                                     </li>
                                 </ul>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/anime/'))?>">アニメ</a>
-                                <ul>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/anime/anime26'))?>">アニメ26</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo esc_url(home_url('/program/anime/sunday-animation/'))?>">日曜アニメ劇場</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/entertainment/'))?>">BS12ガイド</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(home_url('/program/qvc/qvc-jp/'))?>">通販</a>
-                            </li>
-                        </ul>
+                            <?php
+                            endwhile;
+                        endif;
+                        ?>
                     </div>
                 </div>
                 <div class="nav_footer">
@@ -240,11 +142,11 @@
                     </div>
                 </div>
                 <div class="social_footer">
-                    <a href="">
+                    <a href="https://twitter.com/bs12_twellv">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_x.svg' ?>" width="49" height="49" alt="twitter">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_x_dark.svg' ?>" width="49" height="49" alt="twitter">
                     </a>
-                    <a href="">
+                    <a href="https://www.facebook.com/bs12ch">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_fb.svg' ?>" width="48" height="47" alt="facebook">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icon_fb_top.svg' ?>" width="48" height="47" alt="facebook">
                     </a>

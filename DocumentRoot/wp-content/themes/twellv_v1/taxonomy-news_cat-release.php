@@ -66,9 +66,9 @@ if ( $the_query->have_posts() ) {
                             <li id="<?php echo $year; ?>">
                                 <h3><?php echo $year; ?>年</h3>
                                 <ul>
-                                    <?php foreach( $items as $item ) : ?>
+                                    <?php foreach( $items as $item ) :?>
                                         <li>
-                                            <a href="<?php the_permalink(); ?>">
+                                            <a>
                                                 <span><?php echo $item['date']; ?></span>
                                                 <p><?php echo $item['title_link_tag']; ?></p>
                                             </a>
