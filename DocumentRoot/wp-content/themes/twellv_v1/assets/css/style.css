@@ -220,6 +220,8 @@ a:focus {
     Program SLide
 */
 .program_slide {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 66px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
@@ -302,6 +304,7 @@ a:focus {
   display: none;
 }
 .program_slide .item_slide {
+  height: auto;
   margin-right: 10px;
 }
 @media (max-width: 1920px) and (min-width: 961px) {
@@ -388,6 +391,7 @@ a:focus {
   }
 }
 .program_slide .item_slide a .txt_desp {
+  height: 100%;
   padding: 14px 20px 7px 12px;
   background-color: #f2f2f2;
 }

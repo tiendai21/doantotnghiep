@@ -189,6 +189,8 @@ a {
 */
 
 .program_slide {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 66px;
 
     @include pc {
@@ -258,6 +260,7 @@ a {
         }
     }
     .item_slide {
+        height: auto;
         margin-right: 10px;
         @include pc {
             margin-right: get_pc(10);
@@ -323,6 +326,7 @@ a {
             }
 
             .txt_desp {
+                height: 100%;
                 padding: 14px 20px 7px 12px;
                 background-color: #f2f2f2;
 
