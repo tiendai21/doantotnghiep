@@ -89,7 +89,7 @@
             p {
                 color: #004898;
                 font-size: 16px;
-                line-height: 26px;
+                line-height: 24px;
                 letter-spacing: 0.8px;
                 font-weight: 400;
                 padding-bottom: 6px;
@@ -98,7 +98,7 @@
                 @include txtClamp(1);
                 @include pc {
                     font-size: get_pc(16);
-                    line-height: get_pc(26);
+                    line-height: get_pc(24);
                     padding-bottom: get_pc(6);
                     margin-bottom: get_pc(5);
                     border-bottom: get_pc(2) solid #004898;
