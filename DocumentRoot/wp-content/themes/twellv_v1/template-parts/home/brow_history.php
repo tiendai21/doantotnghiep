@@ -15,6 +15,7 @@ if ($history) :
                 foreach (json_decode($history) as $index => $item) :
                     if ($item->id) :
                         $post = get_post($item->id);
+                        $title = $post->post_title;
                         $term = get_the_terms($post->ID, "program_cat")[0];
                         $term_parent_id = wp_get_term_taxonomy_parent_id($term->term_id, 'program_cat');
                         $term_parent = get_term($term_parent_id, "program_cat");
@@ -31,8 +32,15 @@ if ($history) :
                         ob_end_clean();
                         ?>
                         <div class="item_slide">
-                            <a href="<?php echo $history_args['url'] ?>">
-                                <?php echo get_acf_img_tag('list_thumb', $term_parent, $term->name . 'のサムネイル'); ?>
+                            <a href="<?php echo get_permalink($post) ?>">
+                                <div class="thumb">
+                                    <?php echo get_acf_img_tag('list_thumb', $term_parent, $term->name . 'のサムネイル'); ?>
+                                </div>
+                                <div class="txt_desp">
+                                    <h4><?php echo $title ?></h4>
+                                    <p><?php echo get_field('pg_text', $term_parent) ?></p>
+                                    <span><?php echo date('Y年m月d日 ', strtotime(get_field('display_date', $term_parent))) ?>放送</span>
+                                </div>
                             </a>
                         </div>
                     <?php endif;

@@ -383,12 +383,12 @@
                             padding: 0 0 0 get_sp(8);
                         }
                         td {
-                            width: 341px;
+                            margin-right: 22px;
                             @include pc {
-                                width: get_pc(341);
+                                margin-right: get_pc(22);
                             }
                             @include sp {
-                                width: get_sp(181);
+                                margin-right: get_sp(12);
                                 padding: get_sp(11) 0 get_sp(27) 0;
                             }
                         }

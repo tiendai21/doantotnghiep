@@ -39,7 +39,6 @@ if( get_field( 'main_visual_list' ) ) : ?>
                         <img src="<?php echo $image; ?>" width="750" height="573" alt="<?php echo $title;  ?>のトップイメージ">
                     </div>
                     <div class="txt_desp">
-                        <span><?php echo $title; ?></span>
                         <h3><?php echo $titleSlide; ?></h3>
                         <p><?php  echo $description; ?></p>
                     </div>

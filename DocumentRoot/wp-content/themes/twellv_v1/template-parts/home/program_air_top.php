@@ -259,8 +259,13 @@ if (is_array($nowonair_data_array["programs"])) {
 <div class="item_slide">
     <a href="{$url}">
         <div class="thumb">
-        <img src="{$picture}" loading="lazy" width="338" height="198" alt="{$title}のサムネイル">
-    </div>
+            <img src="{$picture}" width="338" height="198" alt="{$title}のサムネイル">
+        </div>
+        <div class="txt_desp">
+            <h4>{$title}</h4>
+            <p>{$description}</p>
+            <span>{$modal_item_time}放送</span>
+        </div>
     </a>
 </div>        
 
