@@ -89,7 +89,7 @@
             p {
                 color: #004898;
                 font-size: 16px;
-                line-height: 26px;
+                line-height: 24px;
                 letter-spacing: 0.8px;
                 font-weight: 400;
                 padding-bottom: 6px;
@@ -98,7 +98,7 @@
                 @include txtClamp(1);
                 @include pc {
                     font-size: get_pc(16);
-                    line-height: get_pc(26);
+                    line-height: get_pc(24);
                     padding-bottom: get_pc(6);
                     margin-bottom: get_pc(5);
                     border-bottom: get_pc(2) solid #004898;
@@ -366,7 +366,7 @@
                     padding: get_sp(7) get_sp(5) get_sp(11) get_sp(6);
                 }
 
-                span {
+                h3 {
                     letter-spacing: 1.8px;
                     font-size: 18px;
                     line-height: 26px;
@@ -385,7 +385,7 @@
                     }
                 }
 
-                h3 {
+                span {
                     letter-spacing: 2.5px;
                     font-size: 25px;
                     line-height: 36px;

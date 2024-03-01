@@ -105,6 +105,10 @@ get_header();
         <!-- ranking -->
         <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => 'all', 'title' => 'ランキング', 'sns' => false)); ?>
         <!-- /ranking -->
+
+        <!-- other -->
+        <?php get_template_part('template-parts/home/other_top', null, array('type' => 'all')); ?>
+        <!-- /other -->
     </main>
     <!-- /main -->
 
