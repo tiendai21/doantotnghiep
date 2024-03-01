@@ -318,6 +318,7 @@ footer {
         .social_footer {
             margin: 0 -12px;
             padding-top: 60px;
+            display: flex;
             @include pc {
                 margin: 0 get_pc(-12);
                 padding-top: get_pc(60);
@@ -326,7 +327,6 @@ footer {
             @include sp {
                 padding-top: get_sp(13);
                 justify-content: center;
-                display: flex;
                 margin: 0;
             }
 
