@@ -11,8 +11,9 @@ if ($the_query->have_posts()) {
             <?php
             while ($the_query->have_posts()) {
                 $the_query->the_post();
+                $type = get_field("notice-type")
             ?>
-                <div class="emergency-notice">
+                <div class="<?= $type?>">
                     <span><?php echo get_field('notice_text'); ?></span>
                 </div>
             <?php
