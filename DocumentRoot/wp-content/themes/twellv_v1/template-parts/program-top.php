@@ -46,49 +46,51 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <section class="section" id="banner">
             <div class="inner">
                 <div class="banner" style="background-color: <?php echo get_field('bg_color', $term) ? get_field('bg_color', $term) : '#630307'?> ">
-                    <div class="txt_desp">
-                        <h2><?php echo $term->name; ?></h2>
-                        <div class="date">
-                            <h4><?php echo get_field('onairtime', $term); ?></h4>
-                            <?php
-                            function getStringBetween($string, $start, $end)
-                            {
-                                $startPos = strpos($string, $start);
-                                if ($startPos) {
-                                    $endPos = strpos($string, $end, $startPos + strlen($start));
-                                    return ($startPos === false || $endPos === false) ? false : substr($string, $startPos + strlen($start), $endPos - $startPos - strlen($start));
+                    <div class="wrapper">
+                        <div class="txt_desp">
+                            <h2><?php echo $term->name; ?></h2>
+                            <div class="date">
+                                <h4><?php echo get_field('onairtime', $term); ?></h4>
+                                <?php
+                                function getStringBetween($string, $start, $end)
+                                {
+                                    $startPos = strpos($string, $start);
+                                    if ($startPos) {
+                                        $endPos = strpos($string, $end, $startPos + strlen($start));
+                                        return ($startPos === false || $endPos === false) ? false : substr($string, $startPos + strlen($start), $endPos - $startPos - strlen($start));
+                                    }
                                 }
-                            }
 
-                            $og_txt = get_field('pg_text', $term);
-                            $mod_txt = $og_txt;
+                                $og_txt = get_field('pg_text', $term);
+                                $mod_txt = $og_txt;
 
-                            $genre_str = explode('ジャンル：', $og_txt)[1];
-                            if ($genre_str) {
-                                $genre_arr = explode('、', $genre_str);
-                                foreach ($genre_arr as $index => $genre) {
-                                    $genre_arr[$index] = "<a target='_blank' href=" . esc_url(home_url('/')) . "search/?q={$genre}'>" . $genre . "</a>";
+                                $genre_str = explode('ジャンル：', $og_txt)[1];
+                                if ($genre_str) {
+                                    $genre_arr = explode('、', $genre_str);
+                                    foreach ($genre_arr as $index => $genre) {
+                                        $genre_arr[$index] = "<a target='_blank' href=" . esc_url(home_url('/')) . "search/?q={$genre}'>" . $genre . "</a>";
+                                    }
+                                    $mod_txt = str_replace('ジャンル：' . $genre_str, 'ジャンル：' . implode('、', $genre_arr), $mod_txt);
                                 }
-                                $mod_txt = str_replace('ジャンル：' . $genre_str, 'ジャンル：' . implode('、', $genre_arr), $mod_txt);
-                            }
 
 
-                            $actor_str = getStringBetween($og_txt, '出演：', "<br />");
-                            if ($actor_str) {
-                                $actor_arr = explode('、', $actor_str);
-                                foreach ($actor_arr as $index => $actor) {
-                                    $actor_arr[$index] = "<a target='_blank' href=" . esc_url(home_url('/')) . "search/?q={$actor}'>" . $actor . "</a>";
+                                $actor_str = getStringBetween($og_txt, '出演：', "<br />");
+                                if ($actor_str) {
+                                    $actor_arr = explode('、', $actor_str);
+                                    foreach ($actor_arr as $index => $actor) {
+                                        $actor_arr[$index] = "<a target='_blank' href=" . esc_url(home_url('/')) . "search/?q={$actor}'>" . $actor . "</a>";
+                                    }
+                                    $mod_txt = str_replace('出演：' . $actor_str, '出演：' . implode('、', $actor_arr), $mod_txt);
                                 }
-                                $mod_txt = str_replace('出演：' . $actor_str, '出演：' . implode('、', $actor_arr), $mod_txt);
-                            }
 
-                            ?>
-                            <p class="util_pc"><?php echo $mod_txt ?></p>
+                                ?>
+                                <p class="util_pc"><?php echo $mod_txt ?></p>
+                            </div>
+                            <?php get_template_part('template-parts/program/share', 'buttons'); ?>
                         </div>
-                        <?php get_template_part('template-parts/program/share', 'buttons'); ?>
-                    </div>
-                    <div class="thumb">
-                        <?php echo get_program_thumbnail($term, 'top'); ?>
+                        <div class="thumb">
+                            <?php echo get_program_thumbnail($term, 'top'); ?>
+                        </div>
                     </div>
                 </div>
                 <?php get_template_part('template-parts/program-nav'); ?>

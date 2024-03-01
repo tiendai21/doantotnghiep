@@ -37,41 +37,43 @@
             }
         }
         .items_link {
-            padding: 28px 0 28px 236px;
-            @include pc {
-                padding: get_pc(28) 0 get_pc(28)get_pc(236);
-            }
-            @include sp {
-                padding: get_sp(8) 0;
-            }
-            li {
-                padding: 19px 12px;
-                margin: 0 7px 0 0;
+            ul {
+                padding: 28px 0 28px 236px;
                 @include pc {
-                    padding: get_pc(19) get_pc(12);
-                    margin: 0 get_pc(7) 0 0;
+                    padding: get_pc(28) 0 get_pc(28)get_pc(236);
                 }
                 @include sp {
-                    padding: get_sp(10) get_sp(3);
-                    margin-right: 0;
+                    padding: get_sp(8) 0;
                 }
-                &:nth-child(-n + 5) {
-                    margin-bottom: 10px;
+                li {
+                    padding: 19px 12px;
+                    margin: 0 7px 0 0;
                     @include pc {
-                        margin-bottom: get_pc(10);
+                        padding: get_pc(19) get_pc(12);
+                        margin: 0 get_pc(7) 0 0;
                     }
                     @include sp {
-                        margin-bottom:0;
+                        padding: get_sp(10) get_sp(3);
+                        margin-right: 0;
                     }
-                }
-                &:not(:last-child) {
-                    @include sp {
-                        margin-bottom: get_sp(5);
+                    &:nth-child(-n + 5) {
+                        margin-bottom: 10px;
+                        @include pc {
+                            margin-bottom: get_pc(10);
+                        }
+                        @include sp {
+                            margin-bottom:0;
+                        }
                     }
-                }
-                &:nth-child(even),&:first-child {
-                    @include sp {
-                        margin-right: get_sp(5);
+                    &:not(:last-child) {
+                        @include sp {
+                            margin-bottom: get_sp(5);
+                        }
+                    }
+                    &:nth-child(even),&:first-child {
+                        @include sp {
+                            margin-right: get_sp(5);
+                        }
                     }
                 }
             }

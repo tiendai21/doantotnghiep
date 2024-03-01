@@ -67,13 +67,6 @@ if ($relate_program) {
                     <span><?php echo get_field('display_date'); ?></span>
                     <p><?php the_title(); ?></p>
                 </div>
-                <?php $thumb = get_field("thumbnail");
-                if ($thumb) :
-                    ?>
-                    <div class="thumb">
-                        <img src="<?php echo $thumb["url"] ?>" alt="<?php echo $thumb["title"] ?>">
-                    </div>
-                <?php endif; ?>
                 <div class="content">
                     <?php
                     $content = get_field('content_text');

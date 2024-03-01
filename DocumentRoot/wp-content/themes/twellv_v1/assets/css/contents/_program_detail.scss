@@ -14,12 +14,14 @@
             @include sp {
                 margin-bottom: get_sp(17.33);
             }
-            .banner {
+            .banner .wrapper {
                 display: flex;
                 text-align: left;
                 align-items: center;
                 justify-content: space-between;
                 padding-left: 234px;
+                max-width: 1920px;
+                margin: 0 auto;
                 @include pc {
                     padding-left: get_pc(234);
                 }

@@ -292,22 +292,24 @@ function display_program_navi($term)
     }
     if ($nav_id > 0 &&  have_rows('navs', $nav_id)) {
     ?>
-        <ul class="items_link">
-        <?php
-        while (have_rows('navs', $nav_id)) {
-            the_row();
-            $ttl = get_sub_field('ttl');
-            $link = get_sub_field('link');
-            $target_blank = get_sub_field('target_blank') ? ' target="_blank" ' : '';
-            $isActive = (str_replace('/twellv-wp/DocumentRoot', '', $_SERVER['REQUEST_URI'] ) === $link) ? 'class="active"' : null;
-            ?>
-            <li <?php echo $isActive?>>
-                <a href="<?php echo esc_url($link); ?>" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a>
-            </li>
-            <?php
-        }
-        ?>
-        </ul>
+        <div class="items_link">
+            <ul>
+                <?php
+                while (have_rows('navs', $nav_id)) {
+                    the_row();
+                    $ttl = get_sub_field('ttl');
+                    $link = get_sub_field('link');
+                    $target_blank = get_sub_field('target_blank') ? ' target="_blank" ' : '';
+                    $isActive = (str_replace('/twellv-wp/DocumentRoot', '', $_SERVER['REQUEST_URI'] ) === $link) ? 'class="active"' : null;
+                    ?>
+                    <li <?php echo $isActive?>>
+                        <a href="<?php echo esc_url($link); ?>" <?php echo $target_blank; ?>><?php echo esc_attr($ttl); ?></a>
+                    </li>
+                    <?php
+                }
+                ?>
+            </ul>
+        </div>
     <?php
     }
 }

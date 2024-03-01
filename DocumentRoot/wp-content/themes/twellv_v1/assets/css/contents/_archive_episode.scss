@@ -44,13 +44,15 @@
             }
         }
         .items_link {
-            padding: 20px 0 20px 222px;
-            @include pc {
-                padding: get_pc(20) 0 get_pc(20) get_pc(222);
-            }
-            @include sp {
-                margin-bottom: get_sp(24.33);
-                padding: get_sp(10) 0 get_sp(9);
+            ul {
+                padding: 20px 0 20px 222px;
+                @include pc {
+                    padding: get_pc(20) 0 get_pc(20) get_pc(222);
+                }
+                @include sp {
+                    margin-bottom: get_sp(24.33);
+                    padding: get_sp(10) 0 get_sp(9);
+                }
             }
         }
     }

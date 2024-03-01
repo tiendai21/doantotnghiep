@@ -243,6 +243,184 @@
             }
         }
     }
+    #emergency {
+        .standard-notice {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s;
+            background-color: #0079FF;
+            @include pc {
+                height: get_pc(80);
+            }
+
+            @include sp {
+                height: get_sp(50);
+            }
+            span {
+                color: #ffffff;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 36px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(36);
+                }
+
+                @include sp {
+                    font-size: get_sp(12);
+                    letter-spacing: get_sp(1.2);
+                    line-height: get_sp(17);
+                }
+
+                &:before {
+                    content: "";
+                    @include bgsetup("../images/icon_hand_standard.svg", center center, 100% auto, no-repeat);
+                    width: 85px;
+                    height: 60px;
+                    display: inline-block;
+                    vertical-align: text-bottom;
+                    margin-right: 10px;
+
+                    @include pc {
+                        width: get_pc(85);
+                        height: get_pc(60);
+                        margin-right: get_pc(10);
+                    }
+
+                    @include sp {
+                        width: get_sp(50);
+                        height: get_sp(35);
+                        margin-right: get_sp(4);
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    @include bgsetup("../images/icon_notice_top_w.svg", center center, 100% auto, no-repeat);
+                    width: 17px;
+                    height: 21px;
+                    display: inline-block;
+                    margin-left: 4px;
+
+                    @include pc {
+                        width: get_pc(17);
+                        height: get_pc(21);
+                        margin-left: get_pc(4);
+                    }
+
+                    @include sp {
+                        width: get_sp(9);
+                        height: get_sp(11);
+                        margin-left: get_sp(4);
+                    }
+                }
+                p {
+                    @include sp {
+                        max-width: get_sp(236);
+                        @include txtClamp(1);
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+        .emergency-notice {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s;
+            @include bgsetup("../images/notice_emer.svg", center center, 100% auto, no-repeat);
+            @include pc {
+                height: get_pc(80);
+            }
+
+            @include sp {
+                @include bgsetup("../images/notice_emer_sp.png", center center, 100% auto, no-repeat);
+                height: get_sp(50);
+            }
+            span {
+                color: #ffffff;
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                line-height: 36px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include pc {
+                    font-size: get_pc(25);
+                    letter-spacing: get_pc(2.5);
+                    line-height: get_pc(36);
+                }
+
+                @include sp {
+                    font-size: get_sp(12);
+                    letter-spacing: get_sp(1.2);
+                    line-height: get_sp(17);
+                }
+
+                &:before {
+                    content: "";
+                    @include bgsetup("../images/icon_speaker.svg", center center, 100% auto, no-repeat);
+                    width: 51px;
+                    height: 48px;
+                    display: inline-block;
+                    vertical-align: text-bottom;
+                    margin-right: 10px;
+
+                    @include pc {
+                        width: get_pc(51);
+                        height: get_pc(48);
+                        margin-right: get_pc(10);
+                    }
+
+                    @include sp {
+                        width: get_sp(29);
+                        height: get_sp(25);
+                        margin-right: get_sp(4);
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    @include bgsetup("../images/icon_notice_top_w.svg", center center, 100% auto, no-repeat);
+                    width: 17px;
+                    height: 21px;
+                    display: inline-block;
+                    margin-left: 4px;
+
+                    @include pc {
+                        width: get_pc(17);
+                        height: get_pc(21);
+                        margin-left: get_pc(4);
+                    }
+
+                    @include sp {
+                        width: get_sp(9);
+                        height: get_sp(11);
+                        margin-left: get_sp(4);
+                    }
+                }
+                p {
+                    @include sp {
+                        max-width: get_sp(236);
+                        @include txtClamp(1);
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+
 
     .slide_top {
         &.is_loading {
