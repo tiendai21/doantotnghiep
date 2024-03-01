@@ -17,6 +17,9 @@
         @include sp{
             margin-bottom: get_sp(17);
         }
+        .thumb img {
+            width: 100%;
+        }
         .siler_category_top{
             background: #004898;
             display: flex;
