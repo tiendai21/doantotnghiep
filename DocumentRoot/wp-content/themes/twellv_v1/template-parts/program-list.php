@@ -237,7 +237,7 @@ foreach ($terms as $t) {
                     </div>
                 </div>
                 <div class="program_slide is_loading side_brand">
-                    <?php
+                    <?php // 1: 放送予定, 2: 放送中, 3: 放送終了
                     if (!empty($programs_arr[3])) {
                         foreach ($programs_arr[3] as $t) {
                             ob_start();
@@ -263,7 +263,7 @@ foreach ($terms as $t) {
                     </div>
                 </div>
                 <div class="program_slide is_loading side_brand">
-                    <?php
+                    <?php // 1: 放送予定, 2: 放送中, 3: 放送終了
                     if (!empty($programs_arr[3])) {
                         $i = 0;
                         foreach ($programs_arr[3] as $t) {
