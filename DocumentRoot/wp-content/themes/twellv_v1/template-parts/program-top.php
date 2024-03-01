@@ -114,7 +114,7 @@ $parent_term = get_term_by('id', $term->parent, 'program_cat');
         <?php get_template_part('template-parts/home/brand-banner'); ?>
         <!-- /brand -->
         <!-- cat ranking -->
-        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $parent_term->slug, 'title' => $parent_term->name . 'ランキング', 'sns' => false)); ?>
+        <?php get_template_part('template-parts/ranking/ranking', null, array('cat' => $parent_term->slug, 'title' =>str_replace('無料', '', $parent_term->name) . 'ランキング', 'sns' => false)); ?>
         <!-- /cat ranking -->
         <!-- BS12おすすめ番組 -->
         <?php get_template_part('template-parts/top', 'recommend-you-programs'); ?>
