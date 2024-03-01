@@ -9947,8 +9947,8 @@ html > body.search #main #other .list_other {
   }
 }
 .program_detail .thumb img {
-  width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
 .program_detail .program-contents-wrap {
   max-width: 1476px;
