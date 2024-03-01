@@ -148,7 +148,7 @@
         margin: 0 auto 63px;
         width: 794px;
         height: 606px;
-
+        display: none;
         @include pc {
           margin: 0 auto get_pc(63);
           width: get_pc(794);
