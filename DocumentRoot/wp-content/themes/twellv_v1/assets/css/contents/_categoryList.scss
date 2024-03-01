@@ -401,6 +401,15 @@
                 }
                 .program_slide {
                     margin: 0;
+                    &:before,&:after {
+                        height: 300px;
+                        @include pc {
+                            height: get_pc(300);
+                        }
+                        @include sp {
+                            height: get_sp(155);
+                        }
+                    }
                     .item_slide{
                         >a{
                             width: 320px;
