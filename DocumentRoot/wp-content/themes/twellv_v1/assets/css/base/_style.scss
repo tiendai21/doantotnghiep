@@ -344,7 +344,7 @@
             }
 
             @include sp {
-                @include bgsetup("../images/notice_emer_sp.png", center center, 100% auto, no-repeat);
+                @include bgsetup("../images/notice_emer_sp.png", center center, 100% 100%, no-repeat);
                 height: get_sp(50);
             }
             span {
