@@ -260,7 +260,6 @@ a {
         }
     }
     .item_slide {
-        height: auto;
         margin-right: 10px;
         @include pc {
             margin-right: get_pc(10);
